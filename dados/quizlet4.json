@@ -1,0 +1,38 @@
+{
+  "titulo": "Quizlet — Quand on est perdu : se raconter des histoires",
+  "palavras": 28,
+  "licoes": 7,
+  "descricao": "Revisão inteligente de erros · Flashcards + Múltipla Escolha",
+  "conteudo": {
+    "cards": [
+      { "termo": "les amis", "definicao": "os amigos", "frase": "Okay les amis", "dificuldade": 1 },
+      { "termo": "s'adresser à", "definicao": "dirigir-se a", "frase": "Il s'adresse aux personnes", "dificuldade": 2 },
+      { "termo": "particulièrement", "definicao": "particularmente", "frase": "Particulièrement aux personnes", "dificuldade": 2 },
+      { "termo": "perdu", "definicao": "perdido", "frase": "Ils sont perdus", "dificuldade": 1 },
+      { "termo": "savoir", "definicao": "saber", "frase": "Tu sais pas où tu vas", "dificuldade": 1 },
+      { "termo": "même si", "definicao": "mesmo que, ainda que", "frase": "Même si tu commences à savoir", "dificuldade": 2 },
+      { "termo": "arriver à", "definicao": "conseguir (fazer algo)", "frase": "Tu arrives pas à t'expliquer", "dificuldade": 2 },
+      { "termo": "expliquer", "definicao": "explicar", "frase": "Expliquer à toi-même", "dificuldade": 1 },
+      { "termo": "quitter", "definicao": "deixar, sair", "frase": "J'ai quitté mon job", "dificuldade": 1 },
+      { "termo": "il y a", "definicao": "há (tempo)", "frase": "Il y a cinq ans", "dificuldade": 2 },
+      { "termo": "en tant que", "definicao": "como (na qualidade de)", "frase": "En tant que salariée", "dificuldade": 2 },
+      { "termo": "boîte", "definicao": "empresa (gíria)", "frase": "Une boîte où je travaillais", "dificuldade": 2 },
+      { "termo": "humilié", "definicao": "humilhado", "frase": "Je me sentais humiliée", "dificuldade": 2 },
+      { "termo": "ancien", "definicao": "antigo, ex-", "frase": "Mon ancien manager", "dificuldade": 1 },
+      { "termo": "ex", "definicao": "ex (companheiro)", "frase": "Mon ex travaillait", "dificuldade": 1 },
+      { "termo": "auparavant", "definicao": "antes, anteriormente", "frase": "Quelques mois auparavant", "dificuldade": 2 },
+      { "termo": "amoureux", "definicao": "apaixonado", "frase": "Il était pas amoureux de moi", "dificuldade": 1 },
+      { "termo": "donc", "definicao": "portanto, então", "frase": "Donc je me sentais humiliée", "dificuldade": 1 },
+      { "termo": "niveau", "definicao": "nível", "frase": "À tous les niveaux", "dificuldade": 1 },
+      { "termo": "pour couronner le tout", "definicao": "para coroar tudo, para completar", "frase": "Pour couronner le tout", "dificuldade": 3 },
+      { "termo": "chaque fois", "definicao": "cada vez", "frase": "À chaque fois qu'on me demandait", "dificuldade": 1 },
+      { "termo": "essayer de", "definicao": "tentar", "frase": "J'essayais de raconter", "dificuldade": 1 },
+      { "termo": "raconter", "definicao": "contar (uma história)", "frase": "Raconter une histoire", "dificuldade": 1 },
+      { "termo": "mettre en valeur", "definicao": "valorizar, pôr em evidência", "frase": "Me mettre en valeur", "dificuldade": 2 },
+      { "termo": "lancer", "definicao": "lançar", "frase": "Je vais lancer une application", "dificuldade": 1 },
+      { "termo": "application", "definicao": "aplicativo", "frase": "Lancer une application", "dificuldade": 1 },
+      { "termo": "incroyable", "definicao": "incrível", "frase": "Ça va être incroyable", "dificuldade": 1 },
+      { "termo": "confiance", "definicao": "confiança", "frase": "J'avais confiance en moi", "dificuldade": 1 }
+    ]
+  }
+}
