@@ -44,6 +44,21 @@
       "thumbnail": "☕",
       "cor": "#e3b341",
       "destaque": true
+    },
+    {
+      "id": 4,
+      "titulo": "Perdu·e ? On se raconte tous des histoires",
+      "subtitulo": "Vulnerabilidade, coragem e recomeços",
+      "descricao": "Nesta aula francês, uma história real e poderosa sobre se sentir perdido, humilhado e a tentativa de se valorizar contando uma história bonita. Perfeito para aprender vocabulário emocional e expressões idiomáticas.",
+      "nivel": "Intermediário (A2-B1)",
+      "duracao": "~5 minutos",
+      "palavras": 28,
+      "licoes": 7,
+      "videoUrl": "https://jonathanbitt.github.io/Tutu/4.mp4",
+      "quizletId": 4,
+      "thumbnail": "😔",
+      "cor": "#f85149",
+      "destaque": true
     }
   ]
 }
