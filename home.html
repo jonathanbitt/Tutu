@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Italiano — Biblioteca de Aulas</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+    --verde: #1a6b4a;
+    --verde-claro: #e8f5ef;
+    --amarelo: #e3b341;
+    --cinza-bg: #f7f6f2;
+    --texto: #1c1c1c;
+    --texto-dim: #6b6b6b;
+    --azul: #58a6ff;
+    --vermelho: #f85149;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cinza-bg);
+    color: var(--texto);
+    min-height: 100vh;
+}
+
+/* HEADER */
+.hero {
+    background: linear-gradient(135deg, #0f1f17 0%, #1a3d2b 100%);
+    padding: 60px 24px 80px;
+    text-align: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "🇮🇹 🍕 🍝 🍷";
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    font-size: 120px;
+    opacity: 0.08;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.2rem, 6vw, 3.5rem);
+    font-weight: 900;
+    margin-bottom: 16px;
+    letter-spacing: -0.02em;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+.hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.hero-stat {
+    text-align: center;
+}
+
+.hero-stat .num {
+    font-size: 2rem;
+    font-weight: 700;
+    display: block;
+    font-family: 'Playfair Display', serif;
+}
+
+.hero-stat .label {
+    font-size: 0.8rem;
+    opacity: 0.7;
+}
+
+/* FILTROS */
+.filtros {
+    max-width: 1200px;
+    margin: -30px auto 0;
+    padding: 0 24px;
+}
+
+.filtros-bar {
+    background: white;
+    border-radius: 60px;
+    padding: 8px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    border: 1px solid #eee;
+}
+
+.filtros-grupo {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.filtro-btn {
+    padding: 8px 20px;
+    border-radius: 30px;
+    border: 1.5px solid #e0e0e0;
+    background: white;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    color: var(--texto-dim);
+}
+
+.filtro-btn:hover {
+    border-color: var(--verde);
+    color: var(--verde);
+}
+
+.filtro-btn.ativo {
+    background: var(--verde);
+    border-color: var(--verde);
+    color: white;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #f5f5f5;
+    padding: 6px 16px;
+    border-radius: 40px;
+}
+
+.search-box input {
+    border: none;
+    background: transparent;
+    padding: 8px 0;
+    font-size: 0.85rem;
+    width: 180px;
+    outline: none;
+}
+
+.search-box span {
+    color: var(--texto-dim);
+}
+
+/* GRADE DE AULAS */
+.grade {
+    max-width: 1200px;
+    margin: 48px auto;
+    padding: 0 24px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 28px;
+}
+
+/* CARD DA AULA */
+.card-aula {
+    background: white;
+    border-radius: 24px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    border: 1px solid #eee;
+    position: relative;
+}
+
+.card-aula:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+}
+
+.card-aula.destaque {
+    border: 2px solid var(--amarelo);
+}
+
+.badge-destaque {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: var(--amarelo);
+    color: #1c1c1c;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    z-index: 1;
+}
+
+.card-thumb {
+    background: linear-gradient(135deg, #0f1f17 0%, #1a3d2b 100%);
+    padding: 32px 24px;
+    text-align: center;
+    font-size: 4rem;
+    position: relative;
+}
+
+.card-thumb .emoji {
+    font-size: 4rem;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
+}
+
+.card-thumb .nivel {
+    position: absolute;
+    bottom: 12px;
+    right: 16px;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(4px);
+    padding: 2px 10px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    color: white;
+}
+
+.card-conteudo {
+    padding: 20px;
+}
+
+.card-conteudo h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    margin-bottom: 6px;
+    color: var(--verde);
+}
+
+.card-conteudo .subtitulo {
+    font-size: 0.8rem;
+    color: var(--texto-dim);
+    margin-bottom: 12px;
+    display: block;
+}
+
+.card-conteudo .descricao {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: #555;
+    margin-bottom: 16px;
+}
+
+.card-meta {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 16px;
+    font-size: 0.7rem;
+    color: var(--texto-dim);
+}
+
+.card-meta span {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.card-btn {
+    width: 100%;
+    padding: 12px;
+    border-radius: 12px;
+    border: none;
+    background: var(--verde-claro);
+    color: var(--verde);
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.card-btn:hover {
+    background: var(--verde);
+    color: white;
+}
+
+/* SESSÃO VAZIA */
+.sem-resultados {
+    text-align: center;
+    padding: 60px;
+    grid-column: 1 / -1;
+    color: var(--texto-dim);
+}
+
+.sem-resultados .emoji {
+    font-size: 3rem;
+    margin-bottom: 16px;
+    display: block;
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    padding: 40px;
+    color: var(--texto-dim);
+    font-size: 0.8rem;
+    border-top: 1px solid #eee;
+    margin-top: 40px;
+}
+
+/* LOADING */
+.loading {
+    text-align: center;
+    padding: 60px;
+    grid-column: 1 / -1;
+}
+
+.loading .spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid var(--verde-claro);
+    border-top-color: var(--verde);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    margin: 0 auto 16px;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    .hero { padding: 40px 20px 60px; }
+    .hero-stats { gap: 20px; }
+    .hero-stat .num { font-size: 1.5rem; }
+    .filtros-bar { border-radius: 20px; flex-direction: column; align-items: stretch; }
+    .filtros-grupo { justify-content: center; }
+    .search-box { justify-content: center; }
+    .search-box input { width: 100%; }
+    .grade { grid-template-columns: 1fr; gap: 20px; }
+}
+
+/* ANIMAÇÃO */
+.card-aula {
+    animation: fadeInUp 0.5s ease backwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="hero">
+    <h1>📚 Biblioteca de Italiano</h1>
+    <p>Aprenda italiano de forma divertida com vídeos, flashcards interativos e revisão inteligente</p>
+    <div class="hero-stats" id="heroStats">
+        <div class="hero-stat"><span class="num" id="totalAulas">0</span><span class="label">aulas</span></div>
+        <div class="hero-stat"><span class="num" id="totalPalavras">0</span><span class="label">palavras</span></div>
+        <div class="hero-stat"><span class="num" id="totalLicoes">0</span><span class="label">lições</span></div>
+    </div>
+</div>
+
+<div class="filtros">
+    <div class="filtros-bar">
+        <div class="filtros-grupo" id="filtrosNivel">
+            <button class="filtro-btn ativo" data-nivel="todos">📚 Todos</button>
+            <button class="filtro-btn" data-nivel="Iniciante">🌱 Iniciante</button>
+            <button class="filtro-btn" data-nivel="Intermediário">⭐ Intermediário</button>
+        </div>
+        <div class="search-box">
+            <span>🔍</span>
+            <input type="text" id="searchInput" placeholder="Buscar aula...">
+        </div>
+    </div>
+</div>
+
+<div class="grade" id="gradeAulas">
+    <div class="loading">
+        <div class="spinner"></div>
+        <p>Carregando aulas...</p>
+    </div>
+</div>
+
+<div class="footer">
+    <p>🇮🇹 Aprenda italiano com vídeos interativos e flashcards inteligentes</p>
+    <p style="margin-top: 8px; font-size: 0.7rem;">Seu progresso é salvo automaticamente</p>
+</div>
+
+<script>
+let aulas = [];
+let nivelAtual = "todos";
+let buscaAtual = "";
+
+// Carregar catálogo de aulas
+async function carregarCatalogo() {
+    try {
+        const response = await fetch('dados/aulas.json');
+        const data = await response.json();
+        aulas = data.aulas;
+        
+        // Atualizar stats
+        document.getElementById('totalAulas').textContent = aulas.length;
+        document.getElementById('totalPalavras').textContent = aulas.reduce((sum, a) => sum + (a.palavras || 0), 0);
+        document.getElementById('totalLicoes').textContent = aulas.reduce((sum, a) => sum + (a.licoes || 0), 0);
+        
+        renderizarAulas();
+    } catch (error) {
+        console.error('Erro ao carregar aulas:', error);
+        document.getElementById('gradeAulas').innerHTML = `
+            <div class="sem-resultados">
+                <span class="emoji">❌</span>
+                <h3>Erro ao carregar aulas</h3>
+                <p>Verifique se o arquivo dados/aulas.json existe</p>
+            </div>
+        `;
+    }
+}
+
+// Renderizar cards
+function renderizarAulas() {
+    const container = document.getElementById('gradeAulas');
+    
+    let filtradas = aulas.filter(aula => {
+        // Filtro por nível
+        if (nivelAtual !== "todos" && aula.nivel !== nivelAtual) return false;
+        
+        // Filtro por busca
+        if (buscaAtual) {
+            const termo = buscaAtual.toLowerCase();
+            return aula.titulo.toLowerCase().includes(termo) ||
+                   aula.subtitulo.toLowerCase().includes(termo) ||
+                   aula.descricao.toLowerCase().includes(termo);
+        }
+        
+        return true;
+    });
+    
+    if (filtradas.length === 0) {
+        container.innerHTML = `
+            <div class="sem-resultados">
+                <span class="emoji">🔍</span>
+                <h3>Nenhuma aula encontrada</h3>
+                <p>Tente outro filtro ou termo de busca</p>
+            </div>
+        `;
+        return;
+    }
+    
+    container.innerHTML = filtradas.map((aula, index) => `
+        <div class="card-aula ${aula.destaque ? 'destaque' : ''}" style="animation-delay: ${index * 0.05}s" data-id="${aula.id}">
+            ${aula.destaque ? '<div class="badge-destaque">⭐ Destaque</div>' : ''}
+            <div class="card-thumb" style="background: linear-gradient(135deg, ${aula.cor || '#1a6b4a'}20 0%, ${aula.cor || '#1a6b4a'}40 100%);">
+                <span class="emoji">${aula.thumbnail || '📚'}</span>
+                <span class="nivel">${aula.nivel || 'Iniciante'}</span>
+            </div>
+            <div class="card-conteudo">
+                <h3>${aula.titulo}</h3>
+                <span class="subtitulo">${aula.subtitulo || ''}</span>
+                <p class="descricao">${aula.descricao || ''}</p>
+                <div class="card-meta">
+                    <span>⏱️ ${aula.duracao || '~1 min'}</span>
+                    <span>📚 ${aula.palavras || 0} palavras</span>
+                    <span>📖 ${aula.licoes || 0} lições</span>
+                </div>
+                <button class="card-btn" onclick="iniciarAula(${aula.id})">
+                    ▶ Começar aula
+                    <span>→</span>
+                </button>
+            </div>
+        </div>
+    `).join('');
+}
+
+// Iniciar aula
+function iniciarAula(aulaId) {
+    window.location.href = `index.html?aula=${aulaId}`;
+}
+
+// Event listeners
+document.querySelectorAll('.filtro-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        document.querySelectorAll('.filtro-btn').forEach(b => b.classList.remove('ativo'));
+        btn.classList.add('ativo');
+        nivelAtual = btn.getAttribute('data-nivel');
+        renderizarAulas();
+    });
+});
+
+document.getElementById('searchInput').addEventListener('input', (e) => {
+    buscaAtual = e.target.value;
+    renderizarAulas();
+});
+
+// Iniciar
+carregarCatalogo();
+</script>
+</body>
+</html>
