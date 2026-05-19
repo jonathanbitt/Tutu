@@ -1,0 +1,42 @@
+{
+  "titulo": "Quizlet — Il caffè letterario di Italiano con Amore",
+  "palavras": 32,
+  "licoes": 7,
+  "descricao": "Revisão inteligente de erros · Flashcards + Múltipla Escolha",
+  "conteudo": {
+    "cards": [
+      { "termo": "stare cercando", "definicao": "estar procurando", "frase": "Se state cercando un posto", "dificuldade": 2 },
+      { "termo": "sorseggiare", "definicao": "sorver, beber devagar", "frase": "Sorseggiare qualcosa di buono", "dificuldade": 2 },
+      { "termo": "magari", "definicao": "quem sabe, talvez", "frase": "E magari leggere un libro", "dificuldade": 2 },
+      { "termo": "compagnia", "definicao": "companhia", "frase": "In buona compagnia", "dificuldade": 1 },
+      { "termo": "posto", "definicao": "lugar", "frase": "Il posto che fa per voi", "dificuldade": 1 },
+      { "termo": "spiegare", "definicao": "explicar", "frase": "Vi spiego tutto", "dificuldade": 1 },
+      { "termo": "caffetteria", "definicao": "cafeteria", "frase": "Una caffetteria virtuale", "dificuldade": 1 },
+      { "termo": "virtuale", "definicao": "virtual", "frase": "Caffetteria virtuale", "dificuldade": 2 },
+      { "termo": "maggio", "definicao": "maio", "frase": "A maggio, il primo maggio", "dificuldade": 1 },
+      { "termo": "trasformarsi", "definicao": "transformar-se", "frase": "Si trasforma in caffè letterario", "dificuldade": 2 },
+      { "termo": "letterario", "definicao": "literário", "frase": "Caffè letterario", "dificuldade": 2 },
+      { "termo": "funzionare", "definicao": "funcionar", "frase": "Come funziona", "dificuldade": 1 },
+      { "termo": "area", "definicao": "área", "frase": "Un'area del sito", "dificuldade": 1 },
+      { "termo": "profumo", "definicao": "perfume, cheiro", "frase": "Il profumo di cappuccino", "dificuldade": 1 },
+      { "termo": "bonus", "definicao": "bônus", "frase": "Tutti i bonus del podcast", "dificuldade": 2 },
+      { "termo": "trascrizione", "definicao": "transcrição", "frase": "Un pdf con le trascrizioni", "dificuldade": 2 },
+      { "termo": "gioco", "definicao": "jogo", "frase": "I giochi", "dificuldade": 1 },
+      { "termo": "approfondimento", "definicao": "aprofundamento", "frase": "Gli approfondimenti", "dificuldade": 2 },
+      { "termo": "incontrarsi", "definicao": "encontrar-se", "frase": "Ci incontriamo", "dificuldade": 2 },
+      { "termo": "chiacchierare", "definicao": "conversar, bater papo", "frase": "Chiacchieriamo una volta al mese", "dificuldade": 2 },
+      { "termo": "proprio", "definicao": "mesmo, exatamente", "frase": "Proprio una volta al mese", "dificuldade": 2 },
+      { "termo": "esclusivo", "definicao": "exclusivo", "frase": "Il caffè con Amore esclusivo", "dificuldade": 2 },
+      { "termo": "diventare", "definicao": "tornar-se", "frase": "Questo caffè diventa letterario", "dificuldade": 1 },
+      { "termo": "leggere", "definicao": "ler", "frase": "Leggiamo un libro insieme", "dificuldade": 1 },
+      { "termo": "guidare", "definicao": "guiar", "frase": "Vi guido nella lettura", "dificuldade": 2 },
+      { "termo": "calendario", "definicao": "calendário", "frase": "Un calendario di lettura", "dificuldade": 1 },
+      { "termo": "chiacchierata", "definicao": "conversa, bate-papo", "frase": "Una chiacchierata letteraria", "dificuldade": 2 },
+      { "termo": "scoprire", "definicao": "descobrir", "frase": "Dobbiamo scoprire", "dificuldade": 1 },
+      { "termo": "partecipare", "definicao": "participar", "frase": "Come fare per partecipare", "dificuldade": 2 },
+      { "termo": "seguire", "definicao": "seguir", "frase": "Seguite il profumo", "dificuldade": 1 },
+      { "termo": "cliccare", "definicao": "clicar", "frase": "Cliccate sul link", "dificuldade": 1 },
+      { "termo": "sogno", "definicao": "sonho", "frase": "Il sogno della macchina da cucire", "dificuldade": 1 }
+    ]
+  }
+}
