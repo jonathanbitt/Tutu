@@ -1,0 +1,49 @@
+{
+  "aulas": [
+    {
+      "id": 1,
+      "titulo": "Storia della Pizza",
+      "subtitulo": "A história da pizza em italiano",
+      "descricao": "Aprenda sobre a origem da pizza Margherita enquanto pratica vocabulário básico do italiano. Uma história divertida sobre hábitos e preferências na pizzaria.",
+      "nivel": "Iniciante (A1-A2)",
+      "duracao": "~1 minuto",
+      "palavras": 63,
+      "licoes": 7,
+      "videoUrl": "https://jonathanbitt.github.io/Tutu/1.mp4",
+      "quizletId": 1,
+      "thumbnail": "🍕",
+      "cor": "#1a6b4a",
+      "destaque": true
+    },
+    {
+      "id": 2,
+      "titulo": "Al Ristorante",
+      "subtitulo": "No restaurante italiano",
+      "descricao": "Aprenda como pedir comida em um restaurante italiano, fazer reservas e interagir com garçons. Perfeito para viagens à Itália!",
+      "nivel": "Iniciante (A1-A2)",
+      "duracao": "~1 minuto",
+      "palavras": 58,
+      "licoes": 6,
+      "videoUrl": "https://jonathanbitt.github.io/Cursos/Restaurante.mp4",
+      "quizletId": 2,
+      "thumbnail": "🍝",
+      "cor": "#e3b341",
+      "destaque": true
+    },
+    {
+      "id": 3,
+      "titulo": "In Vacanza",
+      "subtitulo": "Férias na Itália",
+      "descricao": "Vocabulário essencial para suas férias: hotéis, transportes, pontos turísticos e emergências.",
+      "nivel": "Intermediário (A2-B1)",
+      "duracao": "~1 minuto",
+      "palavras": 72,
+      "licoes": 8,
+      "videoUrl": "https://exemplo.com/video3.mp4",
+      "quizletId": 3,
+      "thumbnail": "✈️",
+      "cor": "#58a6ff",
+      "destaque": false
+    }
+  ]
+}

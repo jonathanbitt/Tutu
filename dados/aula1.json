@@ -1,0 +1,107 @@
+{
+  "titulo": "Italiano — Storia della Pizza",
+  "videoUrl": "https://jonathanbitt.github.io/Tutu/1.mp4",
+  "quizletUrl": "quizlet.html?quizlet=1",
+  "blocos": [
+    {
+      "start": 0,
+      "italiano": "Ciao, come stai? Oggi ti racconto una piccola storia in italiano, così puoi imparare delle",
+      "traducao": "Olá, como você está? Hoje vou te contar uma pequena história em italiano, para que você possa aprender algumas",
+      "dica": "<strong>\"Così\"</strong> significa \"assim\" ou \"para que\". Muito usado para conectar ideias — equivalente ao nosso \"assim você pode aprender\".",
+      "miniAula": {
+        "titulo": "Saudações e Verbos",
+        "conteudo": "<p><strong>\"Ciao\"</strong> é a saudação mais usada no italiano informal — serve tanto para \"olá\" quanto para \"tchau\".</p><p style=\"margin-top:10px\"><strong>\"Come stai?\"</strong> = Como você está? (informal). Para situações formais: <em>\"Come sta?\"</em>.</p><p style=\"margin-top:10px\"><strong>\"Ti racconto\"</strong> vem do verbo <em>raccontare</em> (contar/narrar). O prefixo <em>ti</em> indica \"para você\".</p><div class=\"exemplo\">Ciao! Come stai? → Olá! Como vai você?<br>Ti racconto una storia. → Vou te contar uma história.</div>"
+      }
+    },
+    {
+      "start": 8,
+      "italiano": "parole nuove e puoi fare pratica con l'ascolto. Allora, sto per uscire, infatti stasera andrò",
+      "traducao": "palavras novas e possa praticar a escuta. Então, estou prestes a sair, na verdade esta noite irei",
+      "dica": "<strong>\"Allora\"</strong> é um dos conectores mais versáteis do italiano: \"então\", \"bom\", \"bem\" ou \"portanto\" dependendo do contexto. <strong>\"Infatti\"</strong> = na verdade / de fato.",
+      "miniAula": {
+        "titulo": "\"Sto per\" + Infinitivo",
+        "conteudo": "<p><strong>\"Sto per uscire\"</strong> = estou prestes a sair. A estrutura <em>stare per + infinitivo</em> indica que algo acontecerá em instantes.</p><p style=\"margin-top:10px\"><strong>\"Fare pratica\"</strong> = fazer prática / praticar. Expressão muito comum no estudo de idiomas.</p><div class=\"exemplo\">Sto per partire. → Estou prestes a partir.<br>Sto per mangiare. → Estou prestes a comer.<br>Fare pratica con l'italiano. → Praticar o italiano.</div>"
+      }
+    },
+    {
+      "start": 18,
+      "italiano": "in una pizzeria con degli amici per mangiare la pizza, ma ho un problema, perché tutte le volte",
+      "traducao": "a uma pizzaria com alguns amigos para comer pizza, mas eu tenho um problema, porque todas as vezes",
+      "dica": "<strong>\"Ho un problema\"</strong> vem de <em>avere</em> (ter). Em italiano, usamos <em>avere</em> onde em português usamos \"estar\": <em>ho fame</em> = estou com fome; <em>ho freddo</em> = estou com frio.",
+      "miniAula": {
+        "titulo": "Artigos Partitivos e \"Tutte le volte\"",
+        "conteudo": "<p><strong>\"Degli amici\"</strong> — <em>degli</em> é o artigo partitivo masculino plural (de + gli), para indicar \"alguns\" de forma indefinida.</p><p style=\"margin-top:10px\">Tabela dos artigos partitivos:</p><div class=\"exemplo\">del (masc. sing.) → del vino (um pouco de vinho)<br>della (fem. sing.) → della pizza (um pouco de pizza)<br>degli (masc. pl.) → degli amici (alguns amigos)<br>delle (fem. pl.) → delle ragazze (algumas garotas)</div><p style=\"margin-top:10px\"><strong>\"Tutte le volte\"</strong> = todas as vezes. Equivalente a \"sempre que\" em contexto.</p>"
+      }
+    },
+    {
+      "start": 28,
+      "italiano": "che vado in pizzeria, anche quando vado in pizzerie molto famose, io ordino sempre la",
+      "traducao": "que vou à pizzaria, mesmo quando vou a pizzarias muito famosas, eu sempre peço a",
+      "dica": "Note o plural <strong>\"pizzerie\"</strong> — palavras em <em>-ia</em> fazem plural em <em>-ie</em>: pizzeria → pizzerie; gelateria → gelaterie; pasticceria → pasticcerie.",
+      "miniAula": {
+        "titulo": "\"Anche quando\" e Advérbios de Frequência",
+        "conteudo": "<p><strong>\"Anche quando\"</strong> = mesmo quando. <em>Anche</em> reforça inclusão ou surpresa.</p><p style=\"margin-top:10px\">Advérbios de frequência:</p><div class=\"exemplo\">sempre → sempre · spesso → frequentemente<br>a volte → às vezes · raramente → raramente<br>mai → nunca</div><p style=\"margin-top:10px\"><strong>\"Ordino\"</strong> vem de <em>ordinare</em> (pedir/encomendar). 1ª pessoa: io ordino.</p>"
+      }
+    },
+    {
+      "start": 37,
+      "italiano": "stessa cosa, ordino sempre la pizza margherita. E quando arrivo in pizzeria, di solito guardo il",
+      "traducao": "mesma coisa, sempre peço a pizza margherita. E quando chego à pizzaria, normalmente olho o",
+      "dica": "A <strong>Pizza Margherita</strong> foi criada em 1889 em homenagem à Rainha Margherita di Savoia. As cores (tomate, mozzarella, manjericão) representam a bandeira italiana — <em>il tricolore</em>.",
+      "miniAula": {
+        "titulo": "\"La stessa cosa\" e \"Di solito\"",
+        "conteudo": "<p><strong>\"La stessa cosa\"</strong> = a mesma coisa. <em>Stesso/stessa</em> concorda em gênero:</p><div class=\"exemplo\">lo stesso libro → o mesmo livro<br>la stessa pizza → a mesma pizza<br>gli stessi amici → os mesmos amigos<br>le stesse parole → as mesmas palavras</div><p style=\"margin-top:10px\"><strong>\"Di solito\"</strong> = normalmente / geralmente / de costume.</p>"
+      }
+    },
+    {
+      "start": 47,
+      "italiano": "menù, leggo pizze diverse e alla fine però ordino sempre la stessa pizza, la pizza margherita.",
+      "traducao": "cardápio, leio pizzas diferentes e no final acabo sempre pedindo a mesma pizza, a pizza margherita.",
+      "dica": "<strong>\"Menù\"</strong> é de origem francesa, usado com acento no <em>ù</em>. Alternativa: <strong>\"la carta\"</strong>. Nos restaurantes: <em>\"Posso avere il menù?\"</em> = Posso ver o cardápio?",
+      "miniAula": {
+        "titulo": "\"Alla fine\" e o uso de \"Però\"",
+        "conteudo": "<p><strong>\"Alla fine\"</strong> = no final / no fim das contas.</p><p style=\"margin-top:10px\"><strong>\"Però\"</strong> = porém / mas / no entanto. Conector adversativo que introduz ideia contrária.</p><div class=\"exemplo\">Alla fine ho deciso. → No final decidi.<br>Mi piace, però è caro. → Eu gosto, porém é caro.</div><p style=\"margin-top:10px\"><strong>\"Leggo\"</strong> vem de <em>leggere</em> (ler) — verbo irregular muito comum.</p>"
+      }
+    },
+    {
+      "start": 58,
+      "italiano": "Il problema è che io so che la pizza margherita è la mia preferita, perché è semplice, perché è buona",
+      "traducao": "O problema é que eu sei que a pizza margherita é a minha preferida, porque é simples, porque é boa",
+      "dica": "<strong>Dica cultural:</strong> Na Itália, \"semplice\" (simples) é um elogio! Os italianos valorizam qualidade sem exageros — <em>la semplicità</em> é virtude culinária. Menos é mais: <em>meno è meglio</em>.",
+      "miniAula": {
+        "titulo": "Pronomes Possessivos e \"Perché\"",
+        "conteudo": "<p><strong>\"La mia preferita\"</strong> — os possessivos concordam em gênero e número com o objeto possuído:</p><div class=\"exemplo\">il mio libro → meu livro · la mia pizza → minha pizza<br>i miei amici → meus amigos · le mie amiche → minhas amigas</div><p style=\"margin-top:10px\"><strong>\"Perché\"</strong> = \"porque\" (explicação) ou \"por quê?\" (pergunta), conforme contexto.</p><p style=\"margin-top:10px\"><strong>\"So\"</strong> vem de <em>sapere</em> (saber): io so, tu sai, lui/lei sa...</p>"
+      }
+    },
+    {
+      "start": 68,
+      "italiano": "e quindi ordino sempre la stessa cosa. Vabbè, magari stasera sarà la volta buona, stasera",
+      "traducao": "e então sempre peço a mesma coisa. Bem, talvez esta noite seja a vez certa, esta noite",
+      "dica": "<strong>\"Quindi\"</strong> = então / portanto / logo. Indica consequência. Compare: <em>quindi</em> (consequência) vs. <em>però</em> (contraste) vs. <em>invece</em> (ao invés disso).",
+      "miniAula": {
+        "titulo": "\"Vabbè\" e Linguagem Coloquial",
+        "conteudo": "<p><strong>\"Vabbè\"</strong> é contração coloquial de <em>\"Va bene\"</em> (tudo bem / está bem).</p><p style=\"margin-top:10px\">Outras contrações comuns:</p><div class=\"exemplo\">Mo' → Adesso (agora) — uso regional<br>Po' → Un poco (um pouco)<br>Devo → Io devo (eu devo/preciso)</div><p style=\"margin-top:10px\"><strong>\"Sarà\"</strong> = futuro de <em>essere</em>: será. <strong>\"La volta buona\"</strong> = a vez certa — expressão idiomática muito usada.</p>"
+      }
+    },
+    {
+      "start": 77,
+      "italiano": "magari proverò qualcosa di diverso. Tu di solito ordini sempre la stessa cosa o ti piace provare",
+      "traducao": "talvez eu experimente algo diferente. Você normalmente pede sempre a mesma coisa ou gosta de experimentar",
+      "dica": "<strong>\"Qualcosa di diverso\"</strong> = algo diferente. Estrutura: <em>qualcosa/qualcuno + di + adjetivo</em>. Ex: <em>qualcosa di buono</em> (algo bom), <em>qualcosa di speciale</em> (algo especial).",
+      "miniAula": {
+        "titulo": "\"Magari\", \"Ti piace\" e Futuro Simples",
+        "conteudo": "<p><strong>\"Magari\"</strong> — muito expressivo. Pode significar:</p><div class=\"exemplo\">Magari! → Tomara! / Quem me dera!<br>Magari domani. → Talvez amanhã.<br>Vieni? Magari. → Você vem? Talvez.</div><p style=\"margin-top:10px\"><strong>\"Ti piace\"</strong> = você gosta. <em>Piacere</em> funciona invertido: <em>mi piace</em> (eu gosto), <em>ti piace</em> (você gosta), <em>gli piace</em> (ele gosta).</p><p style=\"margin-top:10px\"><strong>\"Proverò\"</strong> = vou experimentar. Futuro de <em>provare</em>: terminações -ò, -ai, -à, -emo, -ete, -anno.</p>"
+      }
+    },
+    {
+      "start": 87,
+      "italiano": "cose diverse.",
+      "traducao": "coisas diferentes.",
+      "dica": "<strong>Desafio:</strong> Responda em italiano à pergunta do áudio — <em>\"Tu di solito ordini sempre la stessa cosa o ti piace provare cose diverse?\"</em> Use: <em>Di solito ordino... / A volte mi piace provare... / Magari provo...</em>",
+      "miniAula": {
+        "titulo": "Vocabulário do Restaurante",
+        "conteudo": "<p>Vocabulário útil em <strong>restaurantes italianos</strong>:</p><div class=\"exemplo\">il menù → o cardápio<br>ordinare → pedir / encomendar<br>il cameriere / la cameriera → o garçom / a garçonete<br>il conto → a conta · la prenotazione → a reserva<br>Un tavolo per due, per favore. → Uma mesa para dois, por favor.<br>Cosa mi consiglia? → O que você me recomenda?<br>Il conto, per favore! → A conta, por favor!</div>"
+      }
+    }
+  ]
+}
