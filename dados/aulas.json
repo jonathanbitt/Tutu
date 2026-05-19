@@ -29,6 +29,21 @@
       "thumbnail": "🎓",
       "cor": "#a371f7",
       "destaque": false
+    },
+    {
+      "id": 3,
+      "titulo": "Caffè letterario virtuale",
+      "subtitulo": "Aprenda italiano lendo e conversando",
+      "descricao": "Venha descobrir o 'Caffè di Italiano con Amore', uma cafeteria virtual onde você pode praticar italiano, ler livros e participar de encontros literários. Perfeito para quem ama a língua e a cultura italiana!",
+      "nivel": "Iniciante (A1-A2)",
+      "duracao": "~8 minutos",
+      "palavras": 32,
+      "licoes": 7,
+      "videoUrl": "https://jonathanbitt.github.io/Tutu/3.mp4",
+      "quizletId": 3,
+      "thumbnail": "☕",
+      "cor": "#e3b341",
+      "destaque": true
     }
   ]
 }
