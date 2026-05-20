@@ -293,6 +293,73 @@ details[open] summary::after{ transform:rotate(180deg); }
     border: none;
     display: block;
 }
+
+/* Botão voltar para home */
+.btn-home {
+    background: #58a6ff;
+}
+
+.btn-home:hover {
+    background: #1f6feb;
+}
+
+/* ===== BOTÃO MICROFONE ===== */
+.mic-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    margin-top: 6px;
+    margin-right: 4px;
+    padding: 3px 8px;
+    border-radius: 20px;
+    border: 1.5px solid #c7a0d8;
+    cursor: pointer;
+    font-size: 0.68rem;
+    font-weight: 700;
+    background: transparent;
+    color: #7a3fa0;
+    transition: all 0.2s;
+    font-family: 'DM Sans', sans-serif;
+    line-height: 1.4;
+}
+.mic-btn:hover { background: #f5eaff; }
+.mic-btn.gravando {
+    background: #ffeaea;
+    border-color: #e05c5c;
+    color: #c0392b;
+    animation: pulso 1s infinite;
+}
+@keyframes pulso {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(224,92,92,0.4); }
+    50% { box-shadow: 0 0 0 6px rgba(224,92,92,0); }
+}
+
+.mic-resultado {
+    margin-top: 8px;
+    padding: 8px 10px;
+    border-radius: 10px;
+    font-size: 0.82rem;
+    line-height: 1.5;
+    display: none;
+}
+.mic-resultado.acerto {
+    background: #e8f5ef;
+    border: 1px solid #5cb85c;
+    color: #1a6b3a;
+    display: block;
+}
+.mic-resultado.erro {
+    background: #fff0f0;
+    border: 1px solid #e05c5c;
+    color: #8b1a1a;
+    display: block;
+}
+.mic-resultado.parcial {
+    background: #fffbea;
+    border: 1px solid #e0c93a;
+    color: #5a4a00;
+    display: block;
+}
 </style>
 </head>
 <body>
@@ -337,11 +404,11 @@ details[open] summary::after{ transform:rotate(180deg); }
         <option value="1.25">1.25x</option>
         <option value="1.5">1.5x</option>
     </select>
+    <button onclick="voltarHome()" title="Biblioteca de aulas" class="btn-home">📚</button>
 </div>
 
 <script>
-// ========== TODAS AS SUAS FUNÇÕES ORIGINAIS, ADAPTADAS ==========
-
+// ========== VARIÁVEIS GLOBAIS ==========
 const video = document.getElementById("video");
 const videoSource = document.getElementById("videoSource");
 const blocosContainer = document.getElementById("blocosContainer");
@@ -350,9 +417,101 @@ const progressoLabel = document.getElementById("progressoLabel");
 let autoScroll = true;
 let currentBlockIndex = 0;
 let lastActiveIndex = -1;
-let quizletUrl = '';
+let quizletUrlGlobal = '';
 
-// Carregar aula do JSON
+// ========== FUNÇÕES GLOBAIS (acessíveis pelo onclick) ==========
+
+// Função para abrir o modal do Quizlet (GLOBAL)
+window.abrirQuizlet = function() {
+    const modal = document.getElementById('quizletModal');
+    const iframe = document.getElementById('quizletFrame');
+    
+    if (quizletUrlGlobal) {
+        iframe.src = quizletUrlGlobal;
+    } else {
+        console.error('Quizlet URL não definida');
+        iframe.src = 'quizlet.html?quizlet=1';
+    }
+    
+    modal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+}
+
+// Função para fechar o modal (GLOBAL)
+window.fecharQuizlet = function() {
+    const modal = document.getElementById('quizletModal');
+    modal.style.display = 'none';
+    document.body.style.overflow = '';
+}
+
+// Função para voltar para a home (GLOBAL)
+window.voltarHome = function() {
+    window.location.href = 'home.html';
+}
+
+// Função toggle item (GLOBAL)
+window.toggleItem = function(btn) {
+    const bloco = btn.closest('.bloco');
+    const tBtns = [...bloco.querySelectorAll('.toggle-btn')];
+    const cols = [...bloco.querySelectorAll('.colapsavel')];
+    const idx = tBtns.indexOf(btn);
+    const alvo = cols[idx];
+    if (!alvo) return;
+    const aberto = alvo.classList.contains('aberto');
+    alvo.classList.toggle('aberto', !aberto);
+    btn.classList.toggle('aberto', !aberto);
+}
+
+// Função toggle todos (GLOBAL)
+window.toggleTodos = function(tipo) {
+    const isTrad = tipo === 'trad';
+    const colClass = isTrad ? 'trad-col' : 'dica-col';
+    const btnClass = isTrad ? 'trad-btn' : 'dica-btn';
+    const globalId = isTrad ? 'btnTodasTrad' : 'btnTodasDica';
+    
+    const cols = [...document.querySelectorAll('.' + colClass)];
+    const btns = [...document.querySelectorAll('.' + btnClass)];
+    const btnGlobal = document.getElementById(globalId);
+    
+    const algumFechado = cols.some(c => !c.classList.contains('aberto'));
+    
+    cols.forEach(c => c.classList.toggle('aberto', algumFechado));
+    btns.forEach(b => b.classList.toggle('aberto', algumFechado));
+    
+    if (isTrad) {
+        btnGlobal.textContent = algumFechado ? '🌐 Ocultar todas as traduções' : '🌐 Ver todas as traduções';
+    } else {
+        btnGlobal.textContent = algumFechado ? '💡 Ocultar todas as dicas' : '💡 Ver todas as dicas';
+    }
+}
+
+// Funções de scroll (GLOBAL)
+window.toggleAutoScroll = function() {
+    autoScroll = !autoScroll;
+    document.getElementById("toggleScrollBtn").innerHTML = autoScroll ? "🔒 Auto" : "🔓 Livre";
+}
+
+window.nextParagraph = function() {
+    autoScroll = false;
+    document.getElementById("toggleScrollBtn").innerHTML = "🔓 Livre";
+    const blocos = document.querySelectorAll(".bloco");
+    if (currentBlockIndex < blocos.length - 1) {
+        currentBlockIndex++;
+        blocos[currentBlockIndex].scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+}
+
+window.previousParagraph = function() {
+    autoScroll = false;
+    document.getElementById("toggleScrollBtn").innerHTML = "🔓 Livre";
+    if (currentBlockIndex > 0) {
+        currentBlockIndex--;
+        const blocos = document.querySelectorAll(".bloco");
+        blocos[currentBlockIndex].scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+}
+
+// ========== CARREGAR AULA DO JSON ==========
 async function carregarAula() {
     const urlParams = new URLSearchParams(window.location.search);
     const aulaId = urlParams.get('aula') || '1';
@@ -367,7 +526,8 @@ async function carregarAula() {
         videoSource.src = data.videoUrl;
         video.load();
         
-        quizletUrl = data.quizletUrl;
+        // Armazenar a URL do Quizlet GLOBALMENTE
+        quizletUrlGlobal = data.quizletUrl;
         
         renderizarBlocos(data.blocos);
         
@@ -377,7 +537,7 @@ async function carregarAula() {
     }
 }
 
-// Renderizar blocos (igual ao original, mas dinâmico)
+// Renderizar blocos
 function renderizarBlocos(blocos) {
     blocosContainer.innerHTML = '';
     
@@ -397,12 +557,14 @@ function renderizarBlocos(blocos) {
             </div>
             <button class="toggle-btn trad-btn" onclick="toggleItem(this)">🌐 Tradução <span class="seta">▾</span></button>
             <button class="toggle-btn dica-btn" onclick="toggleItem(this)">💡 Dica <span class="seta">▾</span></button>
+            <button class="mic-btn" onclick="iniciarPratica(this)">🎙️ Praticar fala</button>
             <div class="colapsavel trad-col">
                 <div class="traducao">${bloco.traducao}</div>
             </div>
             <div class="colapsavel dica-col">
                 <div class="dica">${bloco.dica}</div>
             </div>
+            <div class="mic-resultado"></div>
             ${bloco.miniAula ? `
                 <details>
                     <summary>📘 Mini Aula — ${bloco.miniAula.titulo}</summary>
@@ -414,7 +576,7 @@ function renderizarBlocos(blocos) {
         blocosContainer.appendChild(blocoDiv);
     });
     
-    // Adicionar CTA do Quizlet
+    // Adicionar CTA do Quizlet com onclick direto para a função GLOBAL
     const ctaDiv = document.createElement('div');
     ctaDiv.className = 'quizlet-cta';
     ctaDiv.innerHTML = `
@@ -444,7 +606,7 @@ function renderizarBlocos(blocos) {
     iniciarDestaque();
 }
 
-// Sistema de destaque (igual ao original)
+// Sistema de destaque
 function iniciarDestaque() {
     const blocos = document.querySelectorAll(".bloco");
     progressoLabel.textContent = `Parágrafo 1 de ${blocos.length}`;
@@ -454,102 +616,121 @@ function iniciarDestaque() {
         blocos.forEach((bloco, i) => {
             const ini = parseFloat(bloco.dataset.start);
             const fim = blocos[i+1] ? parseFloat(blocos[i+1].dataset.start) : Infinity;
-            if(t >= ini && t < fim){
+            if (t >= ini && t < fim) {
                 currentBlockIndex = i;
-                if(lastActiveIndex !== i){
+                if (lastActiveIndex !== i) {
                     lastActiveIndex = i;
                     blocos.forEach(b => b.classList.remove("ativo"));
                     bloco.classList.add("ativo");
                     progressoLabel.textContent = `Parágrafo ${i+1} de ${blocos.length}`;
-                    if(autoScroll) bloco.scrollIntoView({ behavior:"smooth", block:"center" });
+                    if (autoScroll) bloco.scrollIntoView({ behavior: "smooth", block: "center" });
                 }
             }
         });
     });
 }
 
-// TOGGLE (exatamente igual ao original)
-function toggleItem(btn){
-    const bloco = btn.closest('.bloco');
-    const tBtns = [...bloco.querySelectorAll('.toggle-btn')];
-    const cols = [...bloco.querySelectorAll('.colapsavel')];
-    const idx = tBtns.indexOf(btn);
-    const alvo = cols[idx];
-    if(!alvo) return;
-    const aberto = alvo.classList.contains('aberto');
-    alvo.classList.toggle('aberto', !aberto);
-    btn.classList.toggle('aberto', !aberto);
-}
-
-function toggleTodos(tipo){
-    const isTrad = tipo === 'trad';
-    const colClass = isTrad ? 'trad-col' : 'dica-col';
-    const btnClass = isTrad ? 'trad-btn' : 'dica-btn';
-    const globalId = isTrad ? 'btnTodasTrad' : 'btnTodasDica';
-    const cols = [...document.querySelectorAll('.' + colClass)];
-    const btns = [...document.querySelectorAll('.' + btnClass)];
-    const btnGlobal = document.getElementById(globalId);
-    const algumFechado = cols.some(c => !c.classList.contains('aberto'));
-    cols.forEach(c => c.classList.toggle('aberto', algumFechado));
-    btns.forEach(b => b.classList.toggle('aberto', algumFechado));
-    btnGlobal.textContent = isTrad 
-        ? (algumFechado ? '🌐 Ocultar todas as traduções' : '🌐 Ver todas as traduções')
-        : (algumFechado ? '💡 Ocultar todas as dicas' : '💡 Ver todas as dicas');
-}
-
-// Controles (exatamente iguais)
-function toggleAutoScroll(){
-    autoScroll = !autoScroll;
-    document.getElementById("toggleScrollBtn").innerHTML = autoScroll ? "🔒 Auto" : "🔓 Livre";
-}
-
-function nextParagraph(){
-    autoScroll = false;
-    document.getElementById("toggleScrollBtn").innerHTML = "🔓 Livre";
-    const blocos = document.querySelectorAll(".bloco");
-    if(currentBlockIndex < blocos.length - 1){
-        currentBlockIndex++;
-        blocos[currentBlockIndex].scrollIntoView({ behavior:"smooth", block:"center" });
-    }
-}
-
-function previousParagraph(){
-    autoScroll = false;
-    document.getElementById("toggleScrollBtn").innerHTML = "🔓 Livre";
-    if(currentBlockIndex > 0){
-        currentBlockIndex--;
-        const blocos = document.querySelectorAll(".bloco");
-        blocos[currentBlockIndex].scrollIntoView({ behavior:"smooth", block:"center" });
-    }
-}
-
 // Velocidade
-document.getElementById("speedControl").addEventListener("change", function(){
+document.getElementById("speedControl").addEventListener("change", function() {
     video.playbackRate = parseFloat(this.value);
 });
 
-// Modal Quizlet
-function abrirQuizlet(){
-    const modal = document.getElementById('quizletModal');
-    const iframe = document.getElementById('quizletFrame');
-    iframe.src = quizletUrl;
-    modal.style.display = 'flex';
-    document.body.style.overflow = 'hidden';
-}
-
-function fecharQuizlet(){
-    const modal = document.getElementById('quizletModal');
-    modal.style.display = 'none';
-    document.body.style.overflow = '';
-}
-
-document.addEventListener('keydown', function(e){
-    if(e.key === 'Escape') fecharQuizlet();
+// Escape para fechar modal
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') fecharQuizlet();
 });
 
-// Iniciar
+// Configurar botões globais
 document.getElementById('btnTodasTrad').onclick = () => toggleTodos('trad');
 document.getElementById('btnTodasDica').onclick = () => toggleTodos('dica');
+
+// ========== PRÁTICA DE FALA ==========
+let recognitionAtiva = null;
+
+window.iniciarPratica = function(btn) {
+    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+    if (!SpeechRecognition) {
+        alert('Seu navegador não suporta reconhecimento de voz.\nTente Google Chrome.');
+        return;
+    }
+
+    // Se já está gravando neste botão, para
+    if (btn.classList.contains('gravando')) {
+        if (recognitionAtiva) recognitionAtiva.stop();
+        return;
+    }
+
+    // Para qualquer gravação anterior
+    if (recognitionAtiva) recognitionAtiva.stop();
+
+    const bloco = btn.closest('.bloco');
+    const textoItalianoEl = bloco.querySelector('.italiano');
+    // Pega o texto limpo (sem o timestamp)
+    const textoCompleto = textoItalianoEl.innerText.replace(/\(\d+:\d+\)\s*/,'').trim().toLowerCase();
+
+    const resultado = bloco.querySelector('.mic-resultado');
+
+    const recognition = new SpeechRecognition();
+    recognition.lang = 'it-IT';
+    recognition.interimResults = false;
+    recognition.maxAlternatives = 3;
+    recognitionAtiva = recognition;
+
+    btn.classList.add('gravando');
+    btn.innerHTML = '⏹️ Parar';
+    resultado.className = 'mic-resultado';
+    resultado.style.display = 'none';
+
+    recognition.onresult = function(event) {
+        const alternativas = [...event.results[0]].map(a => a.transcript.toLowerCase().trim());
+        const melhor = alternativas[0];
+
+        // Normaliza para comparação (remove pontuação)
+        const normalizar = t => t.replace(/[.,!?;:"""'']/g,'').trim();
+        const textoNorm = normalizar(textoCompleto);
+        const melhorNorm = normalizar(melhor);
+
+        // Conta palavras em comum
+        const palavrasTexto = textoNorm.split(/\s+/);
+        const palavrasFala = melhorNorm.split(/\s+/);
+        const emComum = palavrasTexto.filter(p => palavrasFala.includes(p)).length;
+        const pct = emComum / palavrasTexto.length;
+
+        resultado.style.display = 'block';
+        if (pct >= 0.85) {
+            resultado.className = 'mic-resultado acerto';
+            resultado.innerHTML = `✅ <strong>Muito bem!</strong> Você disse:<br><em>"${melhor}"</em>`;
+        } else if (pct >= 0.5) {
+            resultado.className = 'mic-resultado parcial';
+            resultado.innerHTML = `🟡 <strong>Quase lá!</strong> Você disse:<br><em>"${melhor}"</em><br><span style="font-size:0.78rem;opacity:0.75">Texto esperado: "${textoCompleto}"</span>`;
+        } else {
+            resultado.className = 'mic-resultado erro';
+            resultado.innerHTML = `❌ <strong>Tente novamente.</strong> Você disse:<br><em>"${melhor}"</em><br><span style="font-size:0.78rem;opacity:0.75">Texto esperado: "${textoCompleto}"</span>`;
+        }
+    };
+
+    recognition.onerror = function(event) {
+        resultado.style.display = 'block';
+        resultado.className = 'mic-resultado erro';
+        if (event.error === 'no-speech') {
+            resultado.innerHTML = '🎙️ Nenhuma fala detectada. Tente novamente.';
+        } else if (event.error === 'not-allowed') {
+            resultado.innerHTML = '🔒 Permissão de microfone negada. Verifique as configurações do navegador.';
+        } else {
+            resultado.innerHTML = `⚠️ Erro: ${event.error}`;
+        }
+    };
+
+    recognition.onend = function() {
+        btn.classList.remove('gravando');
+        btn.innerHTML = '🎙️ Praticar fala';
+        recognitionAtiva = null;
+    };
+
+    recognition.start();
+};
+
+// Iniciar
 carregarAula();
 </script>
 </body>
