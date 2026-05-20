@@ -1,186 +1,116 @@
 {
-  "titulo": "Inglês — Escolher a si mesmo: coragem, verdade e liberdade",
+  "titulo": "Inglês — Ser público, expectativas sociais e a coragem de mudar de ideia",
   "videoUrl": "https://jonathanbitt.github.io/Tutu/6.mp4",
   "quizletUrl": "quizlet.html?quizlet=6",
   "blocos": [
     {
       "start": 0,
-      "italiano": "It's how bite-sized the world can make your life or your experiences when you are a public person.",
-      "traducao": "É o quão reduzido (em pedaços pequenos) o mundo pode tornar sua vida ou suas experiências quando você é uma pessoa pública.",
-      "dica": "<strong>\"Bite-sized\"</strong> — literalmente \"tamanho de uma mordida\", figuradamente \"reduzido, simplificado\". <strong>\"Public person\"</strong> — \"pessoa pública / figura pública\".",
+      "italiano": "It's interesting how bite-sized the world wants to make your life or your experiences",
+      "traducao": "É interessante como o mundo quer tornar sua vida ou suas experiências em pedaços pequenos",
+      "dica": "<strong>\"Bite-sized\"</strong> — literalmente \"do tamanho de uma mordida\", figuradamente \"simplificado, reduzido\". <strong>\"Wants to make\"</strong> — quer tornar/fazer ser.",
       "miniAula": {
         "titulo": "Bite-sized (adjetivo composto)",
-        "conteudo": "<p><strong>Bite-sized</strong> — adjetivo composto que descreve algo pequeno, fácil de digerir (literal ou metaforicamente).</p><div class=\"exemplo\">Cut the food into <strong>bite-sized</strong> pieces → Corte a comida em pedaços <strong>do tamanho de uma mordida</strong><br>The course is divided into <strong>bite-sized</strong> lessons → O curso é dividido em lições <strong>pequenas/fáceis de digerir</strong></div><p style=\"margin-top:10px\"><strong>\"How + adjetivo\" em frases exclamativas</strong> — estrutura para expressar ênfase sobre uma qualidade.</p><div class=\"exemplo\"><strong>How beautiful</strong> she is! → <strong>Como</strong> ela é <strong>bonita</strong>!<br><strong>How small</strong> the world can make you → <strong>O quão pequeno</strong> o mundo pode te fazer</div>"
+        "conteudo": "<p><strong>Bite-sized</strong> — formado por <em>bite</em> (mordida) + <em>sized</em> (tamanho). Muito usado para conteúdo simplificado.</p><div class=\"exemplo\"><strong>Bite-sized</strong> lessons → Lições <strong>pequenas/fáceis de digerir</strong><br>The world wants your life to be <strong>bite-sized</strong> → O mundo quer sua vida <strong>reduzida a pedacinhos</strong></div><p style=\"margin-top:10px\"><strong>\"How + adjetivo\" (exclamação/observação)</strong> — estrutura para expressar surpresa ou opinião.</p><div class=\"exemplo\"><strong>How interesting</strong>! → <strong>Que interessante</strong>!<br><strong>How strange</strong> that he left → <strong>Que estranho</strong> ele ter ido embora</div>"
       }
     },
     {
-      "start": 10,
-      "italiano": "demand to be small, but not so small to do, you have. How dare you have a career? Kids?",
-      "traducao": "exigem que você seja pequena, mas não tão pequena a ponto de... você tem. Como ousa ter uma carreira? Filhos?",
-      "dica": "<strong>\"Demand to be small\"</strong> — \"exigem que você seja pequena\". <strong>\"How dare you?\"</strong> — expressão indignada \"como ousa?\".",
+      "start": 9,
+      "italiano": "when you are a public person. The thing that people didn't see behind the scenes",
+      "traducao": "quando você é uma pessoa pública. A coisa que as pessoas não viam nos bastidores",
+      "dica": "<strong>\"Public person\"</strong> — \"pessoa pública\" (figura conhecida). <strong>\"Behind the scenes\"</strong> — expressão \"nos bastidores\" (do mundo do entretenimento).",
       "miniAula": {
-        "titulo": "How dare you? (expressão de indignação)",
-        "conteudo": "<p><strong>How dare you + infinitivo</strong> — usada para expressar choque, indignação ou raiva diante de uma ação ousada/inapropriada.</p><div class=\"exemplo\"><strong>How dare you</strong> speak to me like that! → <strong>Como ousa</strong> falar comigo assim!<br><strong>How dare she</strong> show up late again! → <strong>Como ela ousa</strong> chegar atrasada de novo!</div><p style=\"margin-top:10px\"><strong>\"Not so small to do\" (estrutura truncada)</strong> — fala coloquial com elipse. O sentido é \"pequena demais para fazer algo que você tem que fazer\".</p><div class=\"exemplo\">She is <strong>not so small to</strong> give up → Ela <strong>não é pequena demais para</strong> desistir<br>You are <strong>not so weak to</strong> accept that → Você <strong>não é fraco demais para</strong> aceitar isso</div>"
+        "titulo": "Behind the scenes (expressão fixa)",
+        "conteudo": "<p><strong>Behind the scenes</strong> — originalmente do teatro/cinema. Figuradamente, \"o que acontece em particular, fora dos holofotes\".</p><div class=\"exemplo\">A lot of work happens <strong>behind the scenes</strong> → Muito trabalho acontece <strong>nos bastidores</strong><br><strong>Behind-the-scenes</strong> footage → Imagens <strong>dos bastidores</strong></div><p style=\"margin-top:10px\"><strong>\"The thing that\" (estrutura de ênfase)</strong> — usado para destacar um elemento específico.</p><div class=\"exemplo\"><strong>The thing that</strong> matters most is love → <strong>A coisa que</strong> mais importa é o amor<br>That's <strong>the thing that</strong> bothers me → Isso é <strong>a coisa que</strong> me incomoda</div>"
       }
     },
     {
-      "start": 15,
-      "italiano": "You don't know until to me and to say that. How to deal with the shame and the kind of embarrassment wrong and wrong really publicly.",
-      "traducao": "Você não sabe até... para mim e para dizer isso. Como lidar com a vergonha e o tipo de constrangimento, errado e errado realmente publicamente.",
-      "dica": "<strong>\"Deal with\"</strong> — phrasal verb \"lidar com\". <strong>\"Shame\" vs \"Embarrassment\"</strong> — shame é vergonha moral/profunda; embarrassment é constrangimento momentâneo.",
+      "start": 17,
+      "italiano": "was the journey to get there and the vest wasn't just about identity, the vest was about",
+      "traducao": "era a jornada para chegar lá e o colete não era apenas sobre identidade, o colete era sobre",
+      "dica": "<strong>\"The journey to get there\"</strong> — \"a jornada para chegar lá\". <strong>\"The vest\"</strong> — \"o colete\" (símbolo/metáfora no contexto).",
       "miniAula": {
-        "titulo": "Shame vs. Embarrassment",
-        "conteudo": "<p><strong>Shame</strong> — vergonha mais profunda, associada a culpa moral. <strong>Embarrassment</strong> — constrangimento passageiro, menor.</p><div class=\"exemplo\">He felt <strong>shame</strong> for lying → Ele sentiu <strong>vergonha</strong> por mentir<br>She felt <strong>embarrassment</strong> when she tripped → Ela sentiu <strong>constrangimento</strong> quando tropeçou</div><p style=\"margin-top:10px\"><strong>Deal with (phrasal verb)</strong> — significa \"lidar com, enfrentar\" (problemas, emoções, situações).</p><div class=\"exemplo\">I don't know how to <strong>deal with</strong> stress → Não sei como <strong>lidar com</strong> o estresse<br>She <strong>dealt with</strong> the situation calmly → Ela <strong>lidou com</strong> a situação calmamente</div>"
+        "titulo": "\"To get there\" (expressão de objetivo)",
+        "conteudo": "<p><strong>Get there</strong> — significa \"chegar lá\" (literal ou figuradamente: alcançar um objetivo).</p><div class=\"exemplo\">It took years <strong>to get there</strong> → Levou anos <strong>para chegar lá</strong><br>We'll <strong>get there</strong> eventually → Nós <strong>chegaremos lá</strong> eventualmente</div><p style=\"margin-top:10px\"><strong>\"About\" como preposição de tópico</strong> — \"sobre, a respeito de\".</p><div class=\"exemplo\">This book is <strong>about</strong> love → Este livro é <strong>sobre</strong> amor<br>What is the movie <strong>about</strong>? → <strong>Sobre o que</strong> é o filme?</div>"
       }
     },
     {
-      "start": 22,
-      "italiano": "In the most way I knew crazy. I knew I wasn't doing rash.",
-      "traducao": "Da forma mais... eu sabia louca. Eu sabia que não estava agindo precipitadamente.",
-      "dica": "<strong>\"Rash\"</strong> — adjetivo \"precipitado, impulsivo, sem pensar\". <strong>\"In the most way\"</strong> — fala fragmentada, típica de discurso emocional.",
+      "start": 25,
+      "italiano": "society. The vest was about the expectation on women, the exhausting demand to be small but",
+      "traducao": "sociedade. O colete era sobre a expectativa sobre as mulheres, a demanda exaustiva de ser pequena mas",
+      "dica": "<strong>\"Expectation on women\"</strong> — \"expectativa sobre as mulheres\". <strong>\"Exhausting demand\"</strong> — \"demanda exaustiva\". <strong>\"To be small\"</strong> — metáfora para \"ocupar pouco espaço, não se destacar\".",
       "miniAula": {
-        "titulo": "Rash (adjetivo de comportamento)",
-        "conteudo": "<p><strong>Rash</strong> — descreve uma ação feita sem pensar nas consequências, impulsiva.</p><div class=\"exemplo\">It was a <strong>rash</strong> decision to quit → Foi uma decisão <strong>precipitada</strong> pedir demissão<br>Don't be <strong>rash</strong> — think first! → Não seja <strong>impulsivo</strong> — pense primeiro!</div><p style=\"margin-top:10px\"><strong>\"Wasn't doing rash\" (informal/incorreto)</strong> — o correto seria \"wasn't being rash\" (não estava sendo precipitada). Fala coloquial.</p><div class=\"exemplo\">I knew I <strong>wasn't being</strong> rash → Eu sabia que <strong>não estava sendo</strong> precipitada<br>You <strong>are being</strong> foolish → Você <strong>está sendo</strong> tolo</div>"
+        "titulo": "Expectation on / Expectation of",
+        "conteudo": "<p><strong>Expectation on + grupo</strong> — expectativas impostas a um grupo social. <strong>Expectation of + algo</strong> — expectativa sobre um evento/coisa.</p><div class=\"exemplo\">Society places many <strong>expectations on women</strong> → A sociedade coloca muitas <strong>expectativas sobre as mulheres</strong><br>We have high <strong>expectations of</strong> success → Temos altas <strong>expectativas de</strong> sucesso</div><p style=\"margin-top:10px\"><strong>\"To be small\" (metafórico)</strong> — não literalmente pequeno, mas \"não incomodar, não ocupar espaço, ser discreta\".</p><div class=\"exemplo\">Women are often told <strong>to be small</strong> → Às mulheres é dito frequentemente <strong>para serem discretas/pequenas</strong><br>She refused <strong>to be small</strong> anymore → Ela se recusou a <strong>ser pequena</strong> (discreta) por mais tempo</div>"
       }
     },
     {
-      "start": 26,
-      "italiano": "I knew I'd exhausted option to, every I'd done homework, and I had to just say...",
-      "traducao": "Eu sabia que tinha esgotado opções para, tudo que eu tinha feito o dever de casa, e eu tinha que simplesmente dizer...",
-      "dica": "<strong>\"Exhausted options\"</strong> — \"esgotado as opções\". <strong>\"Done homework\"</strong> — metaforicamente, \"feito o dever de casa / pesquisado / me preparado\".",
+      "start": 33,
+      "italiano": "not so small to no matter what you do, you have a career, how dare you not have kids? You have kids,",
+      "traducao": "não tão pequena a ponto de não importar o que você faça, você tem uma carreira, como ousa não ter filhos? Você tem filhos,",
+      "dica": "<strong>\"No matter what you do\"</strong> — expressão \"não importa o que você faça\". <strong>\"How dare you\"</strong> — expressão de indignação \"como ousa / como se atreve\".",
       "miniAula": {
-        "titulo": "Exhaust (verbo com duplo sentido)",
-        "conteudo": "<p><strong>Exhaust</strong> — 1) cansar fisicamente; 2) esgotar/consumir completamente (recursos, opções, paciência).</p><div class=\"exemplo\">The long walk <strong>exhausted</strong> me → A longa caminhada me <strong>esgotou/exauriu</strong><br>We <strong>exhausted</strong> all possibilities → Nós <strong>esgotamos</strong> todas as possibilidades</div><p style=\"margin-top:10px\"><strong>\"Had to just say\" (infinitivo de obrigação)</strong> — had to + verbo indica obrigação/necessidade no passado.</p><div class=\"exemplo\">I <strong>had to</strong> leave early → Eu <strong>tive que</strong> sair mais cedo<br>She <strong>had to</strong> tell the truth → Ela <strong>teve que</strong> contar a verdade</div>"
+        "titulo": "How dare you (expressão de indignação)",
+        "conteudo": "<p><strong>How dare you + infinitivo</strong> — usado para expressar raiva ou choque diante de uma ação ousada/inapropriada.</p><div class=\"exemplo\"><strong>How dare you</strong> speak to me like that! → <strong>Como ousa</strong> falar comigo assim!<br><strong>How dare</strong> she lie! → <strong>Como ela se atreve</strong> a mentir!</div><p style=\"margin-top:10px\"><strong>\"No matter what\" (concessão)</strong> — \"independentemente de, não importa o quê\".</p><div class=\"exemplo\"><strong>No matter what</strong> happens, I'll be there → <strong>Não importa o que</strong> aconteça, estarei lá<br>She loves him <strong>no matter what</strong> → Ela o ama <strong>não importa o quê</strong></div>"
       }
     },
     {
-      "start": 32,
-      "italiano": "I can't make myself miserable anymore to make other people comfortable.",
-      "traducao": "Não posso mais me tornar miserável para fazer outras pessoas se sentirem confortáveis.",
-      "dica": "<strong>\"Make myself miserable\"</strong> — \"tornar-me miserável / fazer eu mesma infeliz\". <strong>\"Make other people comfortable\"</strong> — \"deixar outras pessoas confortáveis\".",
+      "start": 39,
+      "italiano": "how dare you not have a career? I didn't know until it happened to me and I didn't know how",
+      "traducao": "como ousa não ter uma carreira? Eu não sabia até acontecer comigo e eu não sabia como",
+      "dica": "<strong>\"How dare you not\"</strong> — dupla negativa na indignação. <strong>\"Until it happened to me\"</strong> — \"até acontecer comigo\" (ênfase na experiência pessoal).",
       "miniAula": {
-        "titulo": "Make + pessoa + adjetivo (causativo)",
-        "conteudo": "<p><strong>Make someone + adjetivo</strong> — estrutura causativa que significa \"deixar/tornar alguém (sentir-se) algo\".</p><div class=\"exemplo\">You <strong>make</strong> me <strong>happy</strong> → Você me <strong>deixa feliz</strong><br>Don't <strong>make</strong> yourself <strong>miserable</strong> → Não se <strong>torne</strong> <strong>miserável</strong></div><p style=\"margin-top:10px\"><strong>\"Anymore\" (mudança de estado)</strong> — usado com negativa para indicar que algo que acontecia antes não acontece mais.</p><div class=\"exemplo\">I don't live there <strong>anymore</strong> → Não moro mais lá<br>She doesn't cry <strong>anymore</strong> → Ela não chora mais</div>"
+        "titulo": "Until + passado (tempo)",
+        "conteudo": "<p><strong>Until / Till</strong> — indicam o ponto no tempo em que algo muda ou acontece.</p><div class=\"exemplo\">I didn't understand <strong>until</strong> I tried → Eu não entendi <strong>até</strong> tentar<br>Wait <strong>until</strong> I come back → Espere <strong>até</strong> eu voltar</div><p style=\"margin-top:10px\"><strong>\"Happen to someone\" (experiência pessoal)</strong> — \"acontecer com alguém\", frequentemente algo inesperado.</p><div class=\"exemplo\">A strange thing <strong>happened to me</strong> → Uma coisa estranha <strong>aconteceu comigo</strong><br>You never know until it <strong>happens to you</strong> → Você nunca sabe até <strong>acontecer com você</strong></div>"
       }
     },
     {
-      "start": 37,
-      "italiano": "And when that became my north star, the fear went away.",
-      "traducao": "E quando isso se tornou minha estrela norte, o medo foi embora.",
-      "dica": "<strong>\"North star\"</strong> — metáfora para \"guia, princípio fundamental, direção fixa\". <strong>\"Went away\"</strong> — phrasal verb \"foi embora, desapareceu\".",
+      "start": 44,
+      "italiano": "to say that.\nI didn't know how to deal with the shame and the kind of embarrassment that I'd been",
+      "traducao": "dizer isso.\nEu não sabia como lidar com a vergonha e o tipo de constrangimento que eu tinha sido",
+      "dica": "<strong>\"Deal with\"</strong> — phrasal verb \"lidar com\". <strong>\"Shame\" vs \"Embarrassment\"</strong> — vergonha (mais profunda) vs constrangimento (mais superficial/social).",
       "miniAula": {
-        "titulo": "North star (metáfora)",
-        "conteudo": "<p><strong>North star / guiding star</strong> — metáfora para um princípio, objetivo ou valor que guia todas as decisões.</p><div class=\"exemplo\">Customer satisfaction is our <strong>north star</strong> → Satisfação do cliente é nossa <strong>estrela guia</strong><br>Let kindness be your <strong>north star</strong> → Que a bondade seja sua <strong>estrela norte</strong></div><p style=\"margin-top:10px\"><strong>Go away (phrasal verb)</strong> — pode ser literal (ir embora) ou figurado (desaparecer).</p><div class=\"exemplo\">The pain <strong>went away</strong> after a while → A dor <strong>foi embora</strong> depois de um tempo<br>Just <strong>go away</strong>! → Apenas <strong>vá embora</strong>!</div>"
+        "titulo": "Deal with (phrasal verb)",
+        "conteudo": "<p><strong>Deal with</strong> — pode significar \"lidar com um problema\" ou \"tratar de um assunto\".</p><div class=\"exemplo\">I don't know how to <strong>deal with</strong> this situation → Não sei como <strong>lidar com</strong> esta situação<br>The article <strong>deals with</strong> climate change → O artigo <strong>trata de</strong> mudanças climáticas</div><p style=\"margin-top:10px\"><strong>Shame vs. Embarrassment (diferença sutil)</strong> — <em>shame</em> é mais profundo, sobre o valor próprio; <em>embarrassment</em> é mais social, sobre o que os outros pensam.</p><div class=\"exemplo\">He felt <strong>shame</strong> for lying → Ele sentiu <strong>vergonha</strong> (moral) por mentir<br>She felt <strong>embarrassment</strong> when she tripped → Ela sentiu <strong>constrangimento</strong> quando tropeçou</div>"
       }
     },
     {
-      "start": 41,
-      "italiano": "And what's interesting to me is that when you choose yourself, when you choose honesty...",
-      "traducao": "E o que é interessante para mim é que quando você escolhe a si mesmo, quando você escolhe a honestidade...",
-      "dica": "<strong>\"What's interesting to me is that\"</strong> — estrutura enfática \"o que é interessante para mim é que\". <strong>\"Choose yourself\"</strong> — expressão moderna \"escolher a si mesmo (priorizar o próprio bem-estar)\".",
+      "start": 48,
+      "italiano": "wrong and that I'd been wrong really publicly. In the most profound way, I knew I wasn't crazy,",
+      "traducao": "errada e que eu tinha estado errada de forma realmente pública. Da forma mais profunda, eu sabia que não estava louca,",
+      "dica": "<strong>\"Really publicly\"</strong> — \"realmente publicamente\" (ênfase na exposição pública). <strong>\"In the most profound way\"</strong> — expressão \"da forma mais profunda / no mais profundo do ser\".",
       "miniAula": {
-        "titulo": "What's + adjetivo + is that (estrutura enfática)",
-        "conteudo": "<p><strong>What's + adjetivo + is that + oração</strong> — usada para destacar um ponto específico como importante/surpreendente.</p><div class=\"exemplo\"><strong>What's amazing is that</strong> she never gave up → <strong>O que é incrível é que</strong> ela nunca desistiu<br><strong>What's sad is that</strong> nobody helped → <strong>O que é triste é que</strong> ninguém ajudou</div><p style=\"margin-top:10px\"><strong>Choose yourself (expressão de auto-cuidado)</strong> — priorizar suas próprias necessidades, saúde mental e felicidade.</p><div class=\"exemplo\">Sometimes you have to <strong>choose yourself</strong> → Às vezes você tem que <strong>escolher a si mesmo</strong><br><strong>Choosing yourself</strong> isn't selfish → <strong>Escolher a si mesmo</strong> não é egoísta</div>"
+        "titulo": "Profound vs. Deep",
+        "conteudo": "<p><strong>Profound</strong> — mais intenso e intelectual que <em>deep</em>. Usado para sentimentos, ideias, significados.</p><div class=\"exemplo\">A <strong>profound</strong> sense of loss → Um <strong>profundo</strong> sentimento de perda<br><strong>Profound</strong> wisdom → Sabedoria <strong>profunda</strong></div><p style=\"margin-top:10px\"><strong>\"I wasn't crazy\" (coloquial)</strong> — expressão para afirmar sanidade/apelo à razão. \"Não estou louco\" = \"sei que tenho razão\".</p><div class=\"exemplo\">I know I'm not <strong>crazy</strong>; this really happened → Eu sei que não estou <strong>louca</strong>; isso realmente aconteceu<br>You're not <strong>crazy</strong> for feeling that way → Você não é <strong>louco</strong> por se sentir assim</div>"
       }
     },
     {
-      "start": 46,
-      "italiano": "people get very uncomfortable, because it forces them to look at their own lives.",
-      "traducao": "as pessoas ficam muito desconfortáveis, porque isso as força a olhar para suas próprias vidas.",
-      "dica": "<strong>\"Get uncomfortable\"</strong> — \"tornar-se/focar desconfortável\". <strong>\"Forces them to look at\"</strong> — \"força-os a olhar para\".",
+      "start": 56,
+      "italiano": "I knew I wasn't doing something rash, I knew I'd literally exhausted every option,",
+      "traducao": "eu sabia que não estava fazendo algo precipitado, eu sabia que tinha literalmente esgotado todas as opções,",
+      "dica": "<strong>\"Rash\"</strong> — \"precipitado, impulsivo, sem pensar\". <strong>\"Exhausted every option\"</strong> — expressão \"esgotado todas as opções\".",
       "miniAula": {
-        "titulo": "Get + adjetivo (mudança de estado)",
-        "conteudo": "<p><strong>Get + adjetivo</strong> — usado para indicar mudança de estado ou condição. Muito comum na fala informal.</p><div class=\"exemplo\">It's <strong>getting dark</strong> → Está <strong>ficando escuro</strong><br>I <strong>got angry</strong> when I heard → Eu <strong>fiquei com raiva</strong> quando ouvi</div><p style=\"margin-top:10px\"><strong>Force someone to do something</strong> — obrigar alguém a fazer algo (pode ser positivo ou negativo).</p><div class=\"exemplo\">The situation <strong>forced me to</strong> change → A situação <strong>me forçou a</strong> mudar<br>Don't <strong>force</strong> him <strong>to</strong> go → Não <strong>force</strong> ele <strong>a</strong> ir</div>"
-      }
-    },
-    {
-      "start": 51,
-      "italiano": "It forces them to ask: \"Am I happy? Am I being honest with myself?\"",
-      "traducao": "Isso os força a perguntar: \"Estou feliz? Estou sendo honesto comigo mesmo?\"",
-      "dica": "<strong>\"Am I happy?\"</strong> — pergunta existencial direta. <strong>\"Being honest with myself\"</strong> — expressão \"ser honesto consigo mesmo\".",
-      "miniAula": {
-        "titulo": "Be honest with (preposição fixa)",
-        "conteudo": "<p><strong>Be honest with + pessoa</strong> — a preposição correta é <em>with</em> para a pessoa com quem se é honesto.</p><div class=\"exemplo\">You need to <strong>be honest with</strong> yourself → Você precisa <strong>ser honesto consigo</strong> mesmo<br>She was <strong>honest with</strong> me → Ela foi <strong>honesta comigo</strong></div><p style=\"margin-top:10px\"><strong>Am I + adjetivo (perguntas de auto-avaliação)</strong> — estrutura comum para introspecção.</p><div class=\"exemplo\"><strong>Am I</strong> doing the right thing? → <strong>Estou</strong> fazendo a coisa certa?<br><strong>Am I</strong> good enough? → <strong>Sou</strong> bom o suficiente?</div>"
-      }
-    },
-    {
-      "start": 55,
-      "italiano": "And a lot of times, the anger that people throw at you...",
-      "traducao": "E muitas vezes, a raiva que as pessoas jogam em você...",
-      "dica": "<strong>\"A lot of times\"</strong> — expressão coloquial \"muitas vezes\". <strong>\"Throw anger at\"</strong> — metáfora \"jogar raiva em/direcionar raiva a\".",
-      "miniAula": {
-        "titulo": "A lot of times vs. Often",
-        "conteudo": "<p><strong>A lot of times / many times</strong> — formas coloquiais para indicar frequência. <strong>Often</strong> é mais formal.</p><div class=\"exemplo\"><strong>A lot of times</strong>, I forget → <strong>Muitas vezes</strong>, eu esqueço<br>I <strong>often</strong> forget → Eu <strong>frequentemente</strong> esqueço</div><p style=\"margin-top:10px\"><strong>Throw at (metáfora emocional)</strong> — usado com emoções negativas: anger, blame, criticism.</p><div class=\"exemplo\">Don't <strong>throw blame at</strong> me → Não <strong>jogue a culpa em</strong> mim<br>He <strong>throws his anger at</strong> everyone → Ele <strong>desconta sua raiva em</strong> todos</div>"
-      }
-    },
-    {
-      "start": 59,
-      "italiano": "is not actually about you at all. It's about their own fear.",
-      "traducao": "não é realmente sobre você de forma alguma. É sobre o medo deles mesmos.",
-      "dica": "<strong>\"Not about you at all\"</strong> — ênfase: \"nada sobre você\". <strong>\"Their own fear\"</strong> — \"o próprio medo deles\" (own para ênfase).",
-      "miniAula": {
-        "titulo": "At all (enfatizando negação)",
-        "conteudo": "<p><strong>Not... at all</strong> — usada para enfatizar uma negação, significando \"absolutamente não / de forma alguma\".</p><div class=\"exemplo\">I don't like it <strong>at all</strong> → Não gosto disso <strong>nem um pouco</strong><br>She wasn't tired <strong>at all</strong> → Ela não estava cansada <strong>de forma alguma</strong></div><p style=\"margin-top:10px\"><strong>Own (adjetivo enfático)</strong> — usado depois de pronomes possessivos para enfatizar posse ou individualidade.</p><div class=\"exemplo\">I saw it with <strong>my own</strong> eyes → Vi com <strong>meus próprios</strong> olhos<br>It's <strong>their own</strong> problem → É <strong>problema deles mesmos</strong></div>"
+        "titulo": "Rash (adjetivo)",
+        "conteudo": "<p><strong>Rash</strong> — decisão ou ação feita sem pensar nas consequências. Sinônimos: impulsive, hasty.</p><div class=\"exemplo\">Don't make a <strong>rash</strong> decision → Não tome uma decisão <strong>precipitada</strong><br>It was a <strong>rash</strong> promise to make → Foi uma promessa <strong>impulsiva</strong> de se fazer</div><p style=\"margin-top:10px\"><strong>\"Exhaust every option\" (expressão fixa)</strong> — tentar absolutamente tudo antes de desistir.</p><div class=\"exemplo\">We <strong>exhausted every option</strong> before giving up → Nós <strong>esgotamos todas as opções</strong> antes de desistir<br>I have <strong>exhausted</strong> all possibilities → Eu <strong>esgotei</strong> todas as possibilidades</div>"
       }
     },
     {
       "start": 63,
-      "italiano": "So for anyone out there who is in that place right now, where you feel like you have to choose...",
-      "traducao": "Então, para qualquer pessoa lá fora que está nesse lugar agora, onde você sente que tem que escolher...",
-      "dica": "<strong>\"Anyone out there\"</strong> — expressão inclusiva \"qualquer pessoa lá fora (no mundo)\". <strong>\"In that place\"</strong> — metáfora \"nessa situação / nesse estado emocional\".",
+      "italiano": "I'd gone to every therapy, I'd done every bit of the homework and I had to just say,",
+      "traducao": "eu tinha ido a todas as terapias, tinha feito cada pedaço da lição de casa e eu só tinha que dizer,",
+      "dica": "<strong>\"Every bit of\"</strong> — expressão \"cada pedaço de / absolutamente tudo\". <strong>\"Had to just say\"</strong> — \"tinha que simplesmente dizer\".",
       "miniAula": {
-        "titulo": "Out there (expressão de alcance geral)",
-        "conteudo": "<p><strong>Out there</strong> — usada para se referir ao mundo fora de si, às outras pessoas de forma geral.</p><div class=\"exemplo\">Be careful <strong>out there</strong> → Tenha cuidado <strong>lá fora</strong><br>To all the dreamers <strong>out there</strong> → A todos os sonhadores <strong>por aí</strong></div><p style=\"margin-top:10px\"><strong>Feel like + oração (sensação/percepção)</strong> — \"sentir que\" (não confundir com \"feel like + gerund\" = querer fazer algo).</p><div class=\"exemplo\">I <strong>feel like</strong> something is wrong → Eu <strong>sinto que</strong> algo está errado<br>Do you <strong>feel like</strong> you belong? → Você <strong>sente que</strong> pertence?</div>"
+        "titulo": "Every bit of (ênfase em totalidade)",
+        "conteudo": "<p><strong>Every bit of + substantivo</strong> — enfatiza que 100% de algo foi feito/incluído.</p><div class=\"exemplo\">I did <strong>every bit of</strong> the work → Eu fiz <strong>cada pedaço do</strong> trabalho<br>She enjoyed <strong>every bit of</strong> the journey → Ela aproveitou <strong>cada momento da</strong> jornada</div><p style=\"margin-top:10px\"><strong>\"Had to\" (obrigação no passado)</strong> — passado de <em>have to</em>, indica necessidade ou obrigação em um momento passado.</p><div class=\"exemplo\">I <strong>had to</strong> leave early → Eu <strong>tive que</strong> sair mais cedo<br>She <strong>had to</strong> admit she was wrong → Ela <strong>teve que</strong> admitir que estava errada</div>"
       }
     },
     {
       "start": 69,
-      "italiano": "between your own truth and everyone else's expectations...",
-      "traducao": "entre sua própria verdade e as expectativas de todos os outros...",
-      "dica": "<strong>\"Your own truth\"</strong> — expressão moderna \"sua própria verdade (o que é real para você)\". <strong>\"Everyone else's\"</strong> — genitivo com \"everyone else\" (todos os outros).",
+      "italiano": "it's okay to change your mind, it's okay to learn something",
+      "traducao": "tudo bem mudar de ideia, tudo bem aprender algo",
+      "dica": "<strong>\"Change your mind\"</strong> — expressão \"mudar de ideia\". <strong>\"It's okay to\"</strong> — \"tudo bem / não há problema em\" + infinitivo.",
       "miniAula": {
-        "titulo": "Everyone else (pronome inclusivo)",
-        "conteudo": "<p><strong>Everyone else</strong> — significa \"todos os outros\", excluindo a si mesmo ou o grupo de que se fala.</p><div class=\"exemplo\">I finished, but <strong>everyone else</strong> is still working → Eu terminei, mas <strong>todos os outros</strong> ainda estão trabalhando<br>Why are you different from <strong>everyone else</strong>? → Por que você é diferente de <strong>todos os outros</strong>?</div><p style=\"margin-top:10px\"><strong>Genitivo com 's (apóstrofo + s)</strong> — usado para posse, inclusive com pronomes indefinidos.</p><div class=\"exemplo\"><strong>Everyone else's</strong> opinion → A opinião de <strong>todos os outros</strong><br><strong>Someone's</strong> car → O carro de <strong>alguém</strong></div>"
-      }
-    },
-    {
-      "start": 73,
-      "italiano": "I just want to tell you that on the other side of that fear...",
-      "traducao": "Eu só quero te dizer que do outro lado daquele medo...",
-      "dica": "<strong>\"On the other side of\"</strong> — expressão metafórica \"do outro lado de\" (superação). <strong>\"I just want to tell you\"</strong> — abertura suave e pessoal.",
-      "miniAula": {
-        "titulo": "On the other side of (metáfora de superação)",
-        "conteudo": "<p><strong>On the other side of + dificuldade</strong> — usada para descrever o que vem depois de passar por algo difícil.</p><div class=\"exemplo\"><strong>On the other side of</strong> hardship is growth → <strong>Do outro lado</strong> da dificuldade está o crescimento<br>There is hope <strong>on the other side of</strong> fear → Há esperança <strong>do outro lado</strong> do medo</div><p style=\"margin-top:10px\"><strong>Just (advérbio suavizador)</strong> — usado para tornar pedidos ou afirmações menos diretos/mais suaves.</p><div class=\"exemplo\">I <strong>just</strong> want to help → Eu <strong>só</strong> quero ajudar<br><strong>Just</strong> tell me the truth → <strong>Apenas</strong> me diga a verdade</div>"
-      }
-    },
-    {
-      "start": 77,
-      "italiano": "is so much freedom. There is so much peace.",
-      "traducao": "há tanta liberdade. Há tanta paz.",
-      "dica": "<strong>\"So much\"</strong> — ênfase em quantidade (tanto/tanta). <strong>\"Freedom\" e \"Peace\"</strong> — substantivos abstratos, incontáveis em inglês.",
-      "miniAula": {
-        "titulo": "So much / So many (quantidade enfática)",
-        "conteudo": "<p><strong>So much</strong> — usado com substantivos incontáveis (water, freedom, peace, love). <strong>So many</strong> — com contáveis (people, days, options).</p><div class=\"exemplo\">There is <strong>so much</strong> work to do → Há <strong>tanto</strong> trabalho para fazer<br>There are <strong>so many</strong> reasons → Há <strong>tantas</strong> razões</div><p style=\"margin-top:10px\"><strong>There is + incontável (singular)</strong> — substantivos incontáveis usam <em>there is</em>, nunca <em>there are</em>.</p><div class=\"exemplo\"><strong>There is so much</strong> peace → <strong>Há tanta</strong> paz<br><strong>There is</strong> freedom here → <strong>Há</strong> liberdade aqui</div>"
-      }
-    },
-    {
-      "start": 81,
-      "italiano": "You just have to be brave enough to take that first step.",
-      "traducao": "Você só precisa ser corajoso o suficiente para dar aquele primeiro passo.",
-      "dica": "<strong>\"Brave enough\"</strong> — \"corajoso o suficiente\". <strong>\"Take that first step\"</strong> — expressão clássica \"dar o primeiro passo\".",
-      "miniAula": {
-        "titulo": "Adjetivo + enough + to (suficiência)",
-        "conteudo": "<p><strong>Adjetivo + enough + to + verbo</strong> — estrutura para expressar que alguém/algo tem qualidade suficiente para fazer algo.</p><div class=\"exemplo\">She is <strong>tall enough to</strong> reach the shelf → Ela é <strong>alta o suficiente para</strong> alcançar a prateleira<br>He isn't <strong>brave enough to</strong> try → Ele não é <strong>corajoso o suficiente para</strong> tentar</div><p style=\"margin-top:10px\"><strong>Take a step (literal e figurado)</strong> — \"dar um passo\", muito usado em contextos de mudança e progresso.</p><div class=\"exemplo\">She <strong>took a step</strong> forward → Ela <strong>deu um passo</strong> à frente<br>The <strong>first step</strong> is the hardest → O <strong>primeiro passo</strong> é o mais difícil</div>"
-      }
-    },
-    {
-      "start": 85,
-      "italiano": "And trust that you will catch yourself.",
-      "traducao": "E confie que você se pegará (se recuperará / estará lá para si mesmo).",
-      "dica": "<strong>\"Catch yourself\"</strong> — expressão \"pegar a si mesmo\" (evitar uma queda, se recuperar, estar lá para si). <strong>\"Trust that\"</strong> — \"confiar que\".",
-      "miniAula": {
-        "titulo": "Catch yourself (duplo sentido)",
-        "conteudo": "<p><strong>Catch yourself</strong> — 1) evitar uma queda física; 2) perceber os próprios erros; 3) estar lá para si mesmo emocionalmente.</p><div class=\"exemplo\">He tripped but <strong>caught himself</strong> → Ele tropeçou mas <strong>se segurou</strong><br>You need to learn to <strong>catch yourself</strong> when you fall → Você precisa aprender a <strong>se recuperar</strong> quando cair</div><p style=\"margin-top:10px\"><strong>Trust + that (oração substantiva)</strong> — o verbo <em>trust</em> pode ser seguido por <em>that</em> introduzindo uma crença/certeza.</p><div class=\"exemplo\">I <strong>trust that</strong> you will do the right thing → Eu <strong>confio que</strong> você fará a coisa certa<br>She <strong>trusts that</strong> everything will be okay → Ela <strong>confia que</strong> tudo ficará bem</div>"
+        "titulo": "Change your mind (expressão idiomática)",
+        "conteudo": "<p><strong>Change your mind</strong> — alterar uma decisão ou opinião anterior. Muito comum no dia a dia.</p><div class=\"exemplo\">I was going to go, but I <strong>changed my mind</strong> → Eu ia, mas <strong>mudei de ideia</strong><br>You can always <strong>change your mind</strong> later → Você pode sempre <strong>mudar de ideia</strong> depois</div><p style=\"margin-top:10px\"><strong>\"It's okay to + infinitivo\" (permissão/aceitação)</strong> — estrutura para dizer que algo é aceitável, não é errado.</p><div class=\"exemplo\"><strong>It's okay to</strong> make mistakes → <strong>Tudo bem cometer</strong> erros<br><strong>It's okay to</strong> say no → <strong>Não há problema em</strong> dizer não</div>"
       }
     }
   ]
