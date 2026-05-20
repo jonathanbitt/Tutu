@@ -59,6 +59,21 @@
       "thumbnail": "😔",
       "cor": "#f85149",
       "destaque": true
+    },
+    {
+      "id": 5,
+      "titulo": "Proverbs 24: Timeless Wisdom",
+      "subtitulo": "Sabedoria, justiça e perseverança",
+      "descricao": "Explore Provérbios 24 em inglês: um capítulo rico em ensinamentos sobre sabedoria, justiça, não invejar os maus, a importância do conselho e o perigo da preguiça. Aula para estudantes de nível intermediário.",
+      "nivel": "Intermediário (A2-B1)",
+      "duracao": "~9 minutos",
+      "palavras": 42,
+      "licoes": 7,
+      "videoUrl": "https://jonathanbitt.github.io/Tutu/5.mp4",
+      "quizletId": 5,
+      "thumbnail": "📖",
+      "cor": "#1a6b4a",
+      "destaque": true
     }
   ]
 }
