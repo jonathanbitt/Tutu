@@ -360,6 +360,268 @@ details[open] summary::after{ transform:rotate(180deg); }
     color: #5a4a00;
     display: block;
 }
+
+/* ===== BOTÃO EXERCÍCIOS ===== */
+.ex-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    margin-top: 6px;
+    margin-right: 4px;
+    padding: 3px 8px;
+    border-radius: 20px;
+    border: 1.5px solid #a0c4f8;
+    cursor: pointer;
+    font-size: 0.68rem;
+    font-weight: 700;
+    background: transparent;
+    color: #1a56a0;
+    transition: all 0.2s;
+    font-family: 'DM Sans', sans-serif;
+    line-height: 1.4;
+}
+.ex-btn:hover { background: #e8f0fe; }
+
+/* ===== MODAL EXERCÍCIOS ===== */
+.exmodal {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    animation: fadeIn 0.2s ease;
+}
+.exmodal-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+    backdrop-filter: blur(3px);
+}
+.exmodal-box {
+    position: relative;
+    width: 100%;
+    max-width: 680px;
+    max-height: 88vh;
+    background: #fff;
+    border-radius: 24px 24px 0 0;
+    overflow-y: auto;
+    box-shadow: 0 -8px 40px rgba(0,0,0,0.25);
+    animation: slideUpEx 0.32s cubic-bezier(.4,0,.2,1);
+    padding: 24px 20px 32px;
+}
+@keyframes slideUpEx {
+    from { transform: translateY(60px); opacity: 0; }
+    to   { transform: translateY(0);    opacity: 1; }
+}
+.exmodal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 6px;
+}
+.exmodal-titulo {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #1a56a0;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+.exmodal-close {
+    background: #f0f0f0;
+    border: none;
+    width: 30px; height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 0.9rem;
+    display: flex; align-items: center; justify-content: center;
+    transition: background 0.2s;
+}
+.exmodal-close:hover { background: #e0e0e0; }
+
+.ex-progresso {
+    font-size: 0.7rem;
+    color: #999;
+    margin-bottom: 16px;
+}
+.ex-progresso-bar {
+    height: 4px;
+    background: #eee;
+    border-radius: 4px;
+    margin-bottom: 18px;
+    overflow: hidden;
+}
+.ex-progresso-fill {
+    height: 100%;
+    background: var(--verde);
+    border-radius: 4px;
+    transition: width 0.4s ease;
+}
+
+.ex-tipo-badge {
+    display: inline-block;
+    font-size: 0.62rem;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.badge-multipla  { background: #e8f0fe; color: #1a56a0; }
+.badge-lacuna    { background: #fce8ff; color: #7a1fa0; }
+.badge-ordenar   { background: #fff3cd; color: #7a5500; }
+.badge-traduzir  { background: #e8f5ef; color: #1a6b4a; }
+
+.ex-pergunta {
+    font-family: 'Lora', serif;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: #1c1c1c;
+    margin-bottom: 18px;
+}
+.ex-pergunta em { color: var(--verde); font-style: normal; font-weight: 600; }
+
+/* Múltipla escolha */
+.ex-opcoes { display: flex; flex-direction: column; gap: 8px; }
+.ex-opcao {
+    padding: 10px 14px;
+    border-radius: 12px;
+    border: 1.5px solid #ddd;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.18s;
+    background: #fafafa;
+    text-align: left;
+    font-family: 'DM Sans', sans-serif;
+}
+.ex-opcao:hover:not(:disabled) { border-color: #a0c4f8; background: #e8f0fe; }
+.ex-opcao.certa  { background: #e8f5ef; border-color: #5cb85c; color: #1a6b3a; font-weight: 700; }
+.ex-opcao.errada { background: #fff0f0; border-color: #e05c5c; color: #8b1a1a; }
+.ex-opcao:disabled { cursor: default; }
+
+/* Preencher lacuna */
+.ex-lacuna-wrap { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+.ex-lacuna-input {
+    border: none;
+    border-bottom: 2px solid #a0c4f8;
+    outline: none;
+    font-size: 1rem;
+    font-family: 'Lora', serif;
+    padding: 2px 4px;
+    width: 140px;
+    text-align: center;
+    background: transparent;
+    color: #1c1c1c;
+    transition: border-color 0.2s;
+}
+.ex-lacuna-input:focus { border-color: #1a56a0; }
+.ex-lacuna-input.certa { border-color: #5cb85c; color: #1a6b3a; font-weight: 700; }
+.ex-lacuna-input.errada { border-color: #e05c5c; color: #8b1a1a; }
+
+/* Ordenar palavras */
+.ex-palavras-area { display: flex; flex-wrap: wrap; gap: 6px; min-height: 44px; margin-bottom: 10px; }
+.ex-palavra-banco { display: flex; flex-wrap: wrap; gap: 6px; padding: 10px; background: #f5f5f5; border-radius: 12px; min-height: 44px; }
+.ex-palavra {
+    padding: 5px 10px;
+    border-radius: 8px;
+    border: 1.5px solid #ccc;
+    background: white;
+    cursor: pointer;
+    font-family: 'Lora', serif;
+    font-size: 0.9rem;
+    transition: all 0.15s;
+    user-select: none;
+}
+.ex-palavra:hover { border-color: #a0c4f8; background: #e8f0fe; }
+.ex-palavra.usada { opacity: 0.3; cursor: default; pointer-events: none; }
+.ex-palavra.selecionada { background: #e8f0fe; border-color: #1a56a0; }
+.ex-area-label { font-size: 0.7rem; color: #999; margin-bottom: 4px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.03em; }
+
+/* Traduzir */
+.ex-textarea {
+    width: 100%;
+    border: 1.5px solid #ddd;
+    border-radius: 12px;
+    padding: 10px 12px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.92rem;
+    resize: none;
+    outline: none;
+    line-height: 1.5;
+    transition: border-color 0.2s;
+    color: #1c1c1c;
+}
+.ex-textarea:focus { border-color: #a0c4f8; }
+
+/* Feedback */
+.ex-feedback {
+    margin-top: 14px;
+    padding: 10px 12px;
+    border-radius: 10px;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    display: none;
+}
+.ex-feedback.certa  { background: #e8f5ef; border: 1px solid #5cb85c; color: #1a6b3a; display: block; }
+.ex-feedback.errada { background: #fff0f0; border: 1px solid #e05c5c; color: #8b1a1a; display: block; }
+
+/* Botões de ação */
+.ex-acoes { display: flex; gap: 8px; margin-top: 16px; flex-wrap: wrap; }
+.ex-confirmar {
+    flex: 1;
+    padding: 10px 16px;
+    border-radius: 12px;
+    border: none;
+    background: #1a56a0;
+    color: white;
+    font-weight: 700;
+    font-size: 0.88rem;
+    cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    transition: background 0.2s;
+}
+.ex-confirmar:hover { background: #1244820; }
+.ex-confirmar:disabled { background: #bbb; cursor: default; }
+.ex-proximo {
+    flex: 1;
+    padding: 10px 16px;
+    border-radius: 12px;
+    border: 1.5px solid var(--verde);
+    background: transparent;
+    color: var(--verde);
+    font-weight: 700;
+    font-size: 0.88rem;
+    cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    transition: all 0.2s;
+    display: none;
+}
+.ex-proximo:hover { background: var(--verde-claro); }
+
+/* Placar final */
+.ex-placar {
+    text-align: center;
+    padding: 20px 0;
+}
+.ex-placar-emoji { font-size: 3rem; margin-bottom: 8px; }
+.ex-placar-titulo { font-size: 1.2rem; font-weight: 700; margin-bottom: 6px; color: #1c1c1c; }
+.ex-placar-sub { font-size: 0.85rem; color: #666; }
+.ex-placar-score { font-size: 2rem; font-weight: 700; color: var(--verde); margin: 12px 0; }
+.ex-reiniciar {
+    margin-top: 16px;
+    padding: 10px 24px;
+    border-radius: 12px;
+    border: none;
+    background: var(--verde);
+    color: white;
+    font-weight: 700;
+    font-size: 0.9rem;
+    cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    transition: background 0.2s;
+}
+.ex-reiniciar:hover { background: #145c3d; }
 </style>
 </head>
 <body>
@@ -378,6 +640,20 @@ details[open] summary::after{ transform:rotate(180deg); }
             <button class="global-btn dica-g" id="btnTodasDica">💡 Ver todas as dicas</button>
         </div>
         <div id="blocosContainer"></div>
+    </div>
+</div>
+
+<!-- MODAL EXERCÍCIOS -->
+<div id="exModal" class="exmodal" style="display:none">
+    <div class="exmodal-overlay" onclick="fecharExercicios()"></div>
+    <div class="exmodal-box">
+        <div class="exmodal-header">
+            <span class="exmodal-titulo">✏️ Exercícios</span>
+            <button class="exmodal-close" onclick="fecharExercicios()">✕</button>
+        </div>
+        <div class="ex-progresso" id="exProgresso">Questão 1 de 4</div>
+        <div class="ex-progresso-bar"><div class="ex-progresso-fill" id="exProgressoFill" style="width:0%"></div></div>
+        <div id="exCorpo"></div>
     </div>
 </div>
 
@@ -558,6 +834,7 @@ function renderizarBlocos(blocos) {
             <button class="toggle-btn trad-btn" onclick="toggleItem(this)">🌐 Tradução <span class="seta">▾</span></button>
             <button class="toggle-btn dica-btn" onclick="toggleItem(this)">💡 Dica <span class="seta">▾</span></button>
             <button class="mic-btn" onclick="iniciarPratica(this)">🎙️ Praticar fala</button>
+            <button class="ex-btn" onclick="abrirExercicios(this, ${index})">✏️ Exercícios</button>
             <div class="colapsavel trad-col">
                 <div class="traducao">${bloco.traducao}</div>
             </div>
@@ -732,6 +1009,284 @@ window.iniciarPratica = function(btn) {
 
 // Iniciar
 carregarAula();
+
+// ========== SISTEMA DE EXERCÍCIOS ==========
+let exDados = [];          // todos os exercícios do bloco atual
+let exFila = [];           // fila embaralhada para a sessão
+let exAtual = 0;           // índice na fila
+let exAcertos = 0;
+let exRespondido = false;
+let exOrdenarSelecionadas = []; // palavras escolhidas no exercício ordenar
+
+// Abre o modal carregando exercícios do JSON
+window.abrirExercicios = async function(btn, blocoIndex) {
+    const aulaId = new URLSearchParams(window.location.search).get('aula') || '1';
+    try {
+        const res = await fetch(`dados/exercicios_aula${aulaId}.json`);
+        const data = await res.json();
+        const paragrafo = data.paragrafos[blocoIndex];
+        if (!paragrafo || !paragrafo.exercicios || paragrafo.exercicios.length === 0) {
+            alert('Nenhum exercício disponível para este parágrafo ainda.');
+            return;
+        }
+        exDados = paragrafo.exercicios;
+        iniciarSessaoExercicios();
+    } catch(e) {
+        alert('Erro ao carregar exercícios. Verifique se o arquivo JSON existe.');
+        console.error(e);
+    }
+    document.getElementById('exModal').style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+};
+
+window.fecharExercicios = function() {
+    document.getElementById('exModal').style.display = 'none';
+    document.body.style.overflow = '';
+};
+
+function iniciarSessaoExercicios() {
+    // Embaralha e pega até 5 por sessão
+    exFila = embaralhar([...exDados]).slice(0, 5);
+    exAtual = 0;
+    exAcertos = 0;
+    renderizarExercicio();
+}
+
+function embaralhar(arr) {
+    for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    return arr;
+}
+
+function atualizarProgresso() {
+    const total = exFila.length;
+    const atual = exAtual + 1;
+    document.getElementById('exProgresso').textContent = `Questão ${atual} de ${total}`;
+    document.getElementById('exProgressoFill').style.width = `${(exAtual / total) * 100}%`;
+}
+
+function renderizarExercicio() {
+    if (exAtual >= exFila.length) {
+        mostrarPlacar();
+        return;
+    }
+    exRespondido = false;
+    exOrdenarSelecionadas = [];
+    atualizarProgresso();
+    const ex = exFila[exAtual];
+    const corpo = document.getElementById('exCorpo');
+
+    const badgeClasse = {
+        'multipla': 'badge-multipla',
+        'lacuna':   'badge-lacuna',
+        'ordenar':  'badge-ordenar',
+        'traduzir': 'badge-traduzir'
+    }[ex.tipo] || 'badge-multipla';
+
+    const badgeLabel = {
+        'multipla': '🔵 Múltipla escolha',
+        'lacuna':   '🟣 Preencher lacuna',
+        'ordenar':  '🟡 Ordenar palavras',
+        'traduzir': '🟢 Traduzir'
+    }[ex.tipo] || ex.tipo;
+
+    let htmlInterativo = '';
+
+    if (ex.tipo === 'multipla') {
+        const opcoes = embaralhar([...ex.opcoes]);
+        htmlInterativo = `<div class="ex-opcoes">
+            ${opcoes.map(op => `<button class="ex-opcao" onclick="responderMultipla(this, '${escapar(op)}', '${escapar(ex.resposta)}')">${op}</button>`).join('')}
+        </div>`;
+
+    } else if (ex.tipo === 'lacuna') {
+        // Divide a pergunta em partes: texto antes e depois de ___
+        const partes = ex.pergunta.split('___');
+        htmlInterativo = `
+            <div class="ex-lacuna-wrap">
+                <span>${partes[0]}</span>
+                <input class="ex-lacuna-input" id="exLacunaInput" type="text" placeholder="..." autocomplete="off" autocorrect="off" spellcheck="false" />
+                <span>${partes[1] || ''}</span>
+            </div>`;
+
+    } else if (ex.tipo === 'ordenar') {
+        const palavras = embaralhar([...ex.palavras]);
+        htmlInterativo = `
+            <div class="ex-area-label">Sua resposta</div>
+            <div class="ex-palavras-area" id="exOrdenarArea"></div>
+            <div class="ex-area-label" style="margin-top:10px">Palavras disponíveis</div>
+            <div class="ex-palavra-banco" id="exPalavraBanco">
+                ${palavras.map((p, i) => `<button class="ex-palavra" data-idx="${i}" data-palavra="${escapar(p)}" onclick="selecionarPalavra(this)">${p}</button>`).join('')}
+            </div>`;
+
+    } else if (ex.tipo === 'traduzir') {
+        htmlInterativo = `<textarea class="ex-textarea" id="exTraduzirInput" rows="3" placeholder="Digite sua tradução em português..."></textarea>`;
+    }
+
+    // Monta pergunta (para lacuna, a pergunta já tem ___ embutido — não duplicamos)
+    const perguntaHTML = ex.tipo === 'lacuna'
+        ? `<div class="ex-pergunta">${ex.enunciado || 'Complete a frase:'}</div>`
+        : `<div class="ex-pergunta">${ex.pergunta}</div>`;
+
+    corpo.innerHTML = `
+        <span class="ex-tipo-badge ${badgeClasse}">${badgeLabel}</span>
+        ${perguntaHTML}
+        ${htmlInterativo}
+        <div class="ex-feedback" id="exFeedback"></div>
+        <div class="ex-acoes">
+            <button class="ex-confirmar" id="exConfirmar" onclick="confirmarResposta()">Confirmar</button>
+            <button class="ex-proximo" id="exProximo" onclick="proximoExercicio()">Próximo →</button>
+        </div>
+    `;
+
+    // Focus automático nos inputs
+    if (ex.tipo === 'lacuna') {
+        setTimeout(() => document.getElementById('exLacunaInput')?.focus(), 100);
+        document.getElementById('exLacunaInput').addEventListener('keydown', e => {
+            if (e.key === 'Enter' && !exRespondido) confirmarResposta();
+        });
+    }
+    if (ex.tipo === 'traduzir') {
+        setTimeout(() => document.getElementById('exTraduzirInput')?.focus(), 100);
+    }
+}
+
+// Selecionar palavra (exercício ordenar)
+window.selecionarPalavra = function(btn) {
+    if (exRespondido) return;
+    const palavra = btn.dataset.palavra;
+    exOrdenarSelecionadas.push(palavra);
+    btn.classList.add('usada');
+    const area = document.getElementById('exOrdenarArea');
+    const chip = document.createElement('button');
+    chip.className = 'ex-palavra selecionada';
+    chip.textContent = palavra;
+    chip.dataset.palavra = palavra;
+    chip.dataset.bancoIdx = btn.dataset.idx;
+    chip.onclick = function() {
+        if (exRespondido) return;
+        // Devolve ao banco
+        exOrdenarSelecionadas = exOrdenarSelecionadas.filter((_, i, arr) => {
+            const last = arr.lastIndexOf(palavra);
+            if (i === last) { arr.splice(last, 1); return false; }
+            return true;
+        });
+        // Versão mais simples: remove a última ocorrência
+        const idx = exOrdenarSelecionadas.lastIndexOf(palavra);
+        if (idx !== -1) exOrdenarSelecionadas.splice(idx, 1);
+        // reativa botão no banco
+        document.querySelector(`.ex-palavra-banco .ex-palavra[data-idx="${btn.dataset.idx}"]`)?.classList.remove('usada');
+        chip.remove();
+    };
+    area.appendChild(chip);
+};
+
+// Confirmar resposta
+window.confirmarResposta = function() {
+    if (exRespondido) return;
+    const ex = exFila[exAtual];
+    let certa = false;
+    let feedbackExtra = '';
+
+    if (ex.tipo === 'multipla') {
+        // já tratado no click de cada opção — aqui não faz nada extra
+        return;
+    }
+
+    if (ex.tipo === 'lacuna') {
+        const input = document.getElementById('exLacunaInput');
+        const resposta = input.value.trim().toLowerCase();
+        const esperada = ex.resposta.toLowerCase();
+        certa = resposta === esperada || ex.alternativas?.map(a => a.toLowerCase()).includes(resposta);
+        input.classList.add(certa ? 'certa' : 'errada');
+        if (!certa) feedbackExtra = `<br>Resposta correta: <strong>${ex.resposta}</strong>`;
+    }
+
+    if (ex.tipo === 'ordenar') {
+        const frase = exOrdenarSelecionadas.join(' ').toLowerCase().trim();
+        const esperada = ex.resposta.toLowerCase().trim();
+        certa = frase === esperada;
+        if (!certa) feedbackExtra = `<br>Resposta correta: <strong>${ex.resposta}</strong>`;
+        // Colore as palavras na área
+        document.querySelectorAll('#exOrdenarArea .ex-palavra').forEach(p => {
+            p.style.borderColor = certa ? '#5cb85c' : '#e05c5c';
+            p.style.background = certa ? '#e8f5ef' : '#fff0f0';
+        });
+    }
+
+    if (ex.tipo === 'traduzir') {
+        const input = document.getElementById('exTraduzirInput');
+        const resposta = input.value.trim().toLowerCase();
+        // Comparação flexível: verifica palavras-chave
+        const palavrasChave = ex.palavrasChave || ex.resposta.toLowerCase().split(/\s+/).filter(p => p.length > 3);
+        const acertos = palavrasChave.filter(p => resposta.includes(p)).length;
+        certa = acertos >= Math.ceil(palavrasChave.length * 0.6);
+        input.style.borderColor = certa ? '#5cb85c' : '#e05c5c';
+        feedbackExtra = `<br>Uma resposta válida: <em>${ex.resposta}</em>`;
+    }
+
+    mostrarFeedback(certa, ex.explicacao, feedbackExtra);
+    if (certa) exAcertos++;
+    exRespondido = true;
+    document.getElementById('exConfirmar').style.display = 'none';
+    document.getElementById('exProximo').style.display = 'block';
+};
+
+// Responder múltipla escolha (tratado direto no click)
+window.responderMultipla = function(btn, opcao, resposta) {
+    if (exRespondido) return;
+    exRespondido = true;
+    const certa = opcao === resposta;
+    if (certa) exAcertos++;
+
+    document.querySelectorAll('.ex-opcao').forEach(b => {
+        b.disabled = true;
+        if (b.dataset && b.textContent.trim() === resposta) b.classList.add('certa');
+    });
+    btn.classList.add(certa ? 'certa' : 'errada');
+
+    const ex = exFila[exAtual];
+    mostrarFeedback(certa, ex.explicacao, certa ? '' : `<br>Resposta correta: <strong>${resposta}</strong>`);
+    document.getElementById('exConfirmar').style.display = 'none';
+    document.getElementById('exProximo').style.display = 'block';
+};
+
+function mostrarFeedback(certa, explicacao, extra) {
+    const fb = document.getElementById('exFeedback');
+    fb.className = 'ex-feedback ' + (certa ? 'certa' : 'errada');
+    fb.innerHTML = (certa ? '✅ <strong>Correto!</strong>' : '❌ <strong>Incorreto.</strong>') +
+        (extra || '') +
+        (explicacao ? `<br><span style="opacity:0.8;font-size:0.8rem">${explicacao}</span>` : '');
+}
+
+window.proximoExercicio = function() {
+    exAtual++;
+    renderizarExercicio();
+};
+
+function mostrarPlacar() {
+    const total = exFila.length;
+    const pct = Math.round((exAcertos / total) * 100);
+    const emoji = pct >= 80 ? '🏆' : pct >= 50 ? '👍' : '💪';
+    const msg = pct >= 80 ? 'Excelente trabalho!' : pct >= 50 ? 'Bom progresso!' : 'Continue praticando!';
+
+    document.getElementById('exProgresso').textContent = 'Resultado final';
+    document.getElementById('exProgressoFill').style.width = '100%';
+    document.getElementById('exCorpo').innerHTML = `
+        <div class="ex-placar">
+            <div class="ex-placar-emoji">${emoji}</div>
+            <div class="ex-placar-titulo">${msg}</div>
+            <div class="ex-placar-score">${exAcertos}/${total} <span style="font-size:1rem;color:#999">(${pct}%)</span></div>
+            <div class="ex-placar-sub">Quer tentar de novo com novas questões?</div>
+            <button class="ex-reiniciar" onclick="iniciarSessaoExercicios()">🔄 Praticar novamente</button>
+        </div>
+    `;
+}
+
+function escapar(str) {
+    return (str || '').replace(/'/g, "\\'").replace(/"/g, '&quot;');
+}
 </script>
 </body>
 </html>
