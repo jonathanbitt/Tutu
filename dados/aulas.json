@@ -74,6 +74,21 @@
       "thumbnail": "📖",
       "cor": "#1a6b4a",
       "destaque": true
+    },
+    {
+      "id": 6,
+      "titulo": "Choose Yourself",
+      "subtitulo": "Coragem, honestidade e liberdade",
+      "descricao": "Sophia Bush fala sobre a coragem de escolher a si mesmo em vez de viver para as expectativas alheias. Uma aula poderosa sobre medo, vergonha, honestidade e a liberdade que vem do outro lado da coragem. Nível intermediário.",
+      "nivel": "Intermediário (A2-B1)",
+      "duracao": "~6 minutos",
+      "palavras": 35,
+      "licoes": 7,
+      "videoUrl": "https://jonathanbitt.github.io/Tutu/6.mp4",
+      "quizletId": 6,
+      "thumbnail": "🦋",
+      "cor": "#58a6ff",
+      "destaque": true
     }
   ]
 }
