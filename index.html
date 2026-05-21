@@ -361,6 +361,265 @@ details[open] summary::after{ transform:rotate(180deg); }
     display: block;
 }
 
+/* ===== BOTÃO ANOTAÇÕES ===== */
+.nota-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    margin-top: 6px;
+    margin-right: 4px;
+    padding: 3px 8px;
+    border-radius: 20px;
+    border: 1.5px solid #f0a050;
+    cursor: pointer;
+    font-size: 0.68rem;
+    font-weight: 700;
+    background: transparent;
+    color: #b05000;
+    transition: all 0.2s;
+    font-family: 'DM Sans', sans-serif;
+    line-height: 1.4;
+    position: relative;
+}
+.nota-btn:hover { background: #fff5e8; }
+.nota-btn.tem-nota { background: #fff5e8; border-color: #e07010; }
+.nota-btn .nota-badge {
+    position: absolute;
+    top: -5px; right: -5px;
+    background: #e07010;
+    color: white;
+    border-radius: 50%;
+    width: 14px; height: 14px;
+    font-size: 0.55rem;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 700;
+}
+
+/* ===== MODAL ANOTAÇÕES ===== */
+.nota-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 99998;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    animation: fadeIn 0.2s ease;
+}
+.nota-modal-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(3px);
+}
+.nota-modal-box {
+    position: relative;
+    width: 100%;
+    max-width: 680px;
+    max-height: 90vh;
+    background: #fffdf8;
+    border-radius: 24px 24px 0 0;
+    overflow-y: auto;
+    box-shadow: 0 -8px 40px rgba(0,0,0,0.2);
+    animation: slideUpEx 0.32s cubic-bezier(.4,0,.2,1);
+    display: flex;
+    flex-direction: column;
+}
+.nota-modal-header {
+    padding: 18px 20px 12px;
+    border-bottom: 1px solid #f0e8d8;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0;
+    position: sticky;
+    top: 0;
+    background: #fffdf8;
+    z-index: 2;
+}
+.nota-modal-titulo {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #b05000;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+.nota-modal-ref {
+    font-size: 0.72rem;
+    color: #999;
+    font-style: italic;
+    margin-top: 2px;
+    max-width: 80%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.nota-modal-close {
+    background: #f0e8d8;
+    border: none;
+    width: 30px; height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 0.9rem;
+    display: flex; align-items: center; justify-content: center;
+    transition: background 0.2s;
+    flex-shrink: 0;
+}
+.nota-modal-close:hover { background: #e0d0b8; }
+
+/* Lista de anotações */
+.nota-lista {
+    flex: 1;
+    padding: 14px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.nota-item {
+    background: white;
+    border: 1px solid #f0e0c8;
+    border-radius: 14px;
+    padding: 12px 14px;
+    position: relative;
+}
+.nota-item-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 6px;
+}
+.nota-item-data {
+    font-size: 0.65rem;
+    color: #bbb;
+    font-style: italic;
+}
+.nota-item-tipo {
+    font-size: 0.62rem;
+    font-weight: 700;
+    padding: 2px 7px;
+    border-radius: 20px;
+    text-transform: uppercase;
+}
+.tipo-texto  { background: #fff5e8; color: #b05000; }
+.tipo-link   { background: #e8f0fe; color: #1a56a0; }
+.tipo-video  { background: #ffeaea; color: #c0392b; }
+
+.nota-item-conteudo {
+    font-size: 0.88rem;
+    line-height: 1.6;
+    color: #333;
+    word-break: break-word;
+}
+.nota-item-conteudo a {
+    color: #1a56a0;
+    word-break: break-all;
+}
+.nota-item-conteudo .yt-embed {
+    margin-top: 8px;
+    border-radius: 10px;
+    overflow: hidden;
+    aspect-ratio: 16/9;
+    background: #000;
+}
+.nota-item-conteudo .yt-embed iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+}
+.nota-item-apagar {
+    position: absolute;
+    top: 10px; right: 10px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 0.8rem;
+    opacity: 0.35;
+    transition: opacity 0.2s;
+    padding: 2px 4px;
+}
+.nota-item-apagar:hover { opacity: 1; color: #e05c5c; }
+
+.nota-vazia {
+    text-align: center;
+    color: #ccc;
+    font-size: 0.85rem;
+    padding: 30px 0;
+}
+.nota-vazia span { font-size: 2rem; display: block; margin-bottom: 8px; }
+
+/* Formulário nova anotação */
+.nota-form {
+    padding: 14px 20px 20px;
+    border-top: 1px solid #f0e8d8;
+    background: #fffdf8;
+    flex-shrink: 0;
+    position: sticky;
+    bottom: 0;
+}
+.nota-form-tabs {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 10px;
+}
+.nota-tab {
+    flex: 1;
+    padding: 6px 8px;
+    border-radius: 10px;
+    border: 1.5px solid #e0d0b8;
+    background: transparent;
+    font-size: 0.72rem;
+    font-weight: 700;
+    cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    color: #999;
+    transition: all 0.18s;
+}
+.nota-tab.ativo { background: #fff5e8; border-color: #f0a050; color: #b05000; }
+
+.nota-form-campo {
+    display: none;
+    flex-direction: column;
+    gap: 8px;
+}
+.nota-form-campo.ativo { display: flex; }
+
+.nota-input, .nota-textarea {
+    width: 100%;
+    border: 1.5px solid #e0d0b8;
+    border-radius: 10px;
+    padding: 9px 12px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.88rem;
+    outline: none;
+    background: white;
+    color: #1c1c1c;
+    transition: border-color 0.2s;
+    resize: none;
+}
+.nota-input:focus, .nota-textarea:focus { border-color: #f0a050; }
+.nota-textarea { min-height: 80px; line-height: 1.5; }
+
+.nota-form-hint {
+    font-size: 0.68rem;
+    color: #bbb;
+    margin-top: -4px;
+}
+.nota-salvar {
+    width: 100%;
+    padding: 10px;
+    border-radius: 12px;
+    border: none;
+    background: #e07010;
+    color: white;
+    font-weight: 700;
+    font-size: 0.88rem;
+    cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    transition: background 0.2s;
+    margin-top: 4px;
+}
+.nota-salvar:hover { background: #c06000; }
+
 /* ===== BOTÃO EXERCÍCIOS ===== */
 .ex-btn {
     display: inline-flex;
@@ -643,6 +902,44 @@ details[open] summary::after{ transform:rotate(180deg); }
     </div>
 </div>
 
+<!-- MODAL ANOTAÇÕES -->
+<div id="notaModal" class="nota-modal" style="display:none">
+    <div class="nota-modal-overlay" onclick="fecharNotas()"></div>
+    <div class="nota-modal-box">
+        <div class="nota-modal-header">
+            <div>
+                <div class="nota-modal-titulo">📝 Anotações</div>
+                <div class="nota-modal-ref" id="notaModalRef"></div>
+            </div>
+            <button class="nota-modal-close" onclick="fecharNotas()">✕</button>
+        </div>
+        <div class="nota-lista" id="notaLista"></div>
+        <div class="nota-form">
+            <div class="nota-form-tabs">
+                <button class="nota-tab ativo" onclick="trocarTabNota('texto', this)">📝 Texto</button>
+                <button class="nota-tab" onclick="trocarTabNota('link', this)">🔗 Link</button>
+                <button class="nota-tab" onclick="trocarTabNota('video', this)">▶️ YouTube</button>
+            </div>
+            <!-- Texto -->
+            <div class="nota-form-campo ativo" id="nota-campo-texto">
+                <textarea class="nota-textarea" id="nota-input-texto" placeholder="Escreva sua anotação..." rows="3"></textarea>
+            </div>
+            <!-- Link -->
+            <div class="nota-form-campo" id="nota-campo-link">
+                <input class="nota-input" id="nota-input-link-url" type="url" placeholder="https://..." />
+                <input class="nota-input" id="nota-input-link-label" type="text" placeholder="Descrição (opcional)" />
+                <div class="nota-form-hint">Cole a URL e adicione uma descrição para identificar o link.</div>
+            </div>
+            <!-- YouTube -->
+            <div class="nota-form-campo" id="nota-campo-video">
+                <input class="nota-input" id="nota-input-yt" type="url" placeholder="https://youtube.com/watch?v=..." />
+                <div class="nota-form-hint">Cole o link do YouTube — o vídeo será incorporado diretamente.</div>
+            </div>
+            <button class="nota-salvar" onclick="salvarNota()">+ Salvar anotação</button>
+        </div>
+    </div>
+</div>
+
 <!-- MODAL EXERCÍCIOS -->
 <div id="exModal" class="exmodal" style="display:none">
     <div class="exmodal-overlay" onclick="fecharExercicios()"></div>
@@ -835,6 +1132,7 @@ function renderizarBlocos(blocos) {
             <button class="toggle-btn dica-btn" onclick="toggleItem(this)">💡 Dica <span class="seta">▾</span></button>
             <button class="mic-btn" onclick="iniciarPratica(this)">🎙️ Praticar fala</button>
             <button class="ex-btn" onclick="abrirExercicios(this, ${index})">✏️ Exercícios</button>
+            <button class="nota-btn" id="nota-btn-${index}" onclick="abrirNotas(${index})">📝 Anotações</button>
             <div class="colapsavel trad-col">
                 <div class="traducao">${bloco.traducao}</div>
             </div>
@@ -881,6 +1179,9 @@ function renderizarBlocos(blocos) {
     
     // Reiniciar sistema de destaque
     iniciarDestaque();
+
+    // Atualizar badges de anotações
+    if (typeof atualizarTodosOsBotoesNota === 'function') atualizarTodosOsBotoesNota();
 }
 
 // Sistema de destaque
@@ -1006,6 +1307,208 @@ window.iniciarPratica = function(btn) {
 
     recognition.start();
 };
+
+};
+
+// ========== SISTEMA DE ANOTAÇÕES ==========
+// Objeto Storage — troque apenas estas funções ao migrar para Firebase
+const NOTAS_KEY = 'italiano_notas';
+
+const Storage = {
+    getAll() {
+        try { return JSON.parse(localStorage.getItem(NOTAS_KEY)) || {}; }
+        catch { return {}; }
+    },
+    getBloco(key) { return this.getAll()[key] || []; },
+    add(key, nota) {
+        const all = this.getAll();
+        if (!all[key]) all[key] = [];
+        all[key].unshift(nota);
+        localStorage.setItem(NOTAS_KEY, JSON.stringify(all));
+    },
+    remove(key, notaId) {
+        const all = this.getAll();
+        if (!all[key]) return;
+        all[key] = all[key].filter(n => n.id !== notaId);
+        localStorage.setItem(NOTAS_KEY, JSON.stringify(all));
+    },
+    count(key) { return (this.getAll()[key] || []).length; }
+};
+
+let notaBlocoAtual = null;
+let notaTabAtual = 'texto';
+
+function notaBlocoKey(index) {
+    const aulaId = new URLSearchParams(window.location.search).get('aula') || '1';
+    return 'aula' + aulaId + '_bloco' + index;
+}
+
+window.abrirNotas = function(index) {
+    notaBlocoAtual = index;
+    const key = notaBlocoKey(index);
+    // Pega referência do texto do bloco
+    const blocoEls = document.querySelectorAll('.bloco');
+    const textoEl = blocoEls[index] ? blocoEls[index].querySelector('.italiano') : null;
+    const ref = textoEl
+        ? textoEl.innerText.replace(/\(\d+:\d+\)\s*/, '').substring(0, 50) + '\u2026'
+        : ('Par\u00e1grafo ' + (index + 1));
+    document.getElementById('notaModalRef').textContent = ref;
+    limparFormNota();
+    renderizarNotas(key);
+    document.getElementById('notaModal').style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+};
+
+window.fecharNotas = function() {
+    document.getElementById('notaModal').style.display = 'none';
+    document.body.style.overflow = '';
+};
+
+window.trocarTabNota = function(tipo, tabBtn) {
+    notaTabAtual = tipo;
+    document.querySelectorAll('.nota-tab').forEach(function(t) { t.classList.remove('ativo'); });
+    document.querySelectorAll('.nota-form-campo').forEach(function(c) { c.classList.remove('ativo'); });
+    tabBtn.classList.add('ativo');
+    document.getElementById('nota-campo-' + tipo).classList.add('ativo');
+};
+
+window.salvarNota = function() {
+    if (notaBlocoAtual === null) return;
+    const key = notaBlocoKey(notaBlocoAtual);
+    var nota = null;
+
+    if (notaTabAtual === 'texto') {
+        var texto = document.getElementById('nota-input-texto').value.trim();
+        if (!texto) { document.getElementById('nota-input-texto').focus(); return; }
+        nota = { id: Date.now(), tipo: 'texto', conteudo: texto, data: dataFormatada() };
+
+    } else if (notaTabAtual === 'link') {
+        var url = document.getElementById('nota-input-link-url').value.trim();
+        var label = document.getElementById('nota-input-link-label').value.trim() || url;
+        if (!url) { document.getElementById('nota-input-link-url').focus(); return; }
+        nota = { id: Date.now(), tipo: 'link', url: url, label: label, data: dataFormatada() };
+
+    } else if (notaTabAtual === 'video') {
+        var ytUrl = document.getElementById('nota-input-yt').value.trim();
+        var videoId = extrairYouTubeId(ytUrl);
+        if (!videoId) {
+            var inp = document.getElementById('nota-input-yt');
+            inp.style.borderColor = '#e05c5c';
+            setTimeout(function() { inp.style.borderColor = ''; }, 1500);
+            return;
+        }
+        nota = { id: Date.now(), tipo: 'video', videoId: videoId, url: ytUrl, data: dataFormatada() };
+    }
+
+    if (!nota) return;
+    Storage.add(key, nota);
+    limparFormNota();
+    renderizarNotas(key);
+    atualizarBotaoNota(notaBlocoAtual);
+};
+
+window.apagarNota = function(notaId) {
+    if (notaBlocoAtual === null) return;
+    const key = notaBlocoKey(notaBlocoAtual);
+    Storage.remove(key, notaId);
+    renderizarNotas(key);
+    atualizarBotaoNota(notaBlocoAtual);
+};
+
+function renderizarNotas(key) {
+    const lista = document.getElementById('notaLista');
+    const notas = Storage.getBloco(key);
+
+    if (notas.length === 0) {
+        lista.innerHTML = '<div class="nota-vazia"><span>\uD83D\uDCDD</span>Nenhuma anota\u00e7\u00e3o ainda.<br>Use os bot\u00f5es abaixo para adicionar.</div>';
+        return;
+    }
+
+    lista.innerHTML = notas.map(function(n) {
+        var corpo = '';
+        if (n.tipo === 'texto') {
+            corpo = escHtml(n.conteudo).replace(/\n/g, '<br>');
+        } else if (n.tipo === 'link') {
+            corpo = '<a href="' + escHtml(n.url) + '" target="_blank" rel="noopener">' + escHtml(n.label) + '</a>';
+        } else if (n.tipo === 'video') {
+            corpo = '<div class="yt-embed"><iframe src="https://www.youtube.com/embed/' + escHtml(n.videoId) + '" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>';
+        }
+        var badgeMap = { texto: 'tipo-texto', link: 'tipo-link', video: 'tipo-video' };
+        var labelMap  = { texto: '\uD83D\uDCDD Texto', link: '\uD83D\uDD17 Link', video: '\u25B6\uFE0F V\u00EDdeo' };
+        var badgeClasse = badgeMap[n.tipo] || 'tipo-texto';
+        var badgeLabel  = labelMap[n.tipo]  || n.tipo;
+
+        return '<div class="nota-item">'
+            + '<div class="nota-item-header">'
+            + '<span class="nota-item-tipo ' + badgeClasse + '">' + badgeLabel + '</span>'
+            + '<span class="nota-item-data">' + escHtml(n.data) + '</span>'
+            + '</div>'
+            + '<div class="nota-item-conteudo">' + corpo + '</div>'
+            + '<button class="nota-item-apagar" onclick="apagarNota(' + n.id + ')" title="Apagar">\uD83D\uDDD1</button>'
+            + '</div>';
+    }).join('');
+}
+
+function atualizarBotaoNota(index) {
+    var btn = document.getElementById('nota-btn-' + index);
+    if (!btn) return;
+    var count = Storage.count(notaBlocoKey(index));
+    btn.classList.toggle('tem-nota', count > 0);
+    var badge = btn.querySelector('.nota-badge');
+    if (count > 0) {
+        if (badge) { badge.textContent = count; }
+        else {
+            var sp = document.createElement('span');
+            sp.className = 'nota-badge';
+            sp.textContent = count;
+            btn.appendChild(sp);
+        }
+    } else if (badge) {
+        badge.parentNode.removeChild(badge);
+    }
+}
+
+window.atualizarTodosOsBotoesNota = function() {
+    document.querySelectorAll('.bloco').forEach(function(_, i) {
+        atualizarBotaoNota(i);
+    });
+};
+
+function limparFormNota() {
+    ['nota-input-texto','nota-input-link-url','nota-input-link-label','nota-input-yt'].forEach(function(id) {
+        var el = document.getElementById(id);
+        if (el) el.value = '';
+    });
+}
+
+function extrairYouTubeId(url) {
+    var patterns = [
+        /youtube\.com\/watch\?v=([a-zA-Z0-9_-]{11})/,
+        /youtu\.be\/([a-zA-Z0-9_-]{11})/,
+        /youtube\.com\/embed\/([a-zA-Z0-9_-]{11})/,
+        /youtube\.com\/shorts\/([a-zA-Z0-9_-]{11})/
+    ];
+    for (var i = 0; i < patterns.length; i++) {
+        var m = url.match(patterns[i]);
+        if (m) return m[1];
+    }
+    return null;
+}
+
+function dataFormatada() {
+    return new Date().toLocaleDateString('pt-BR', {
+        day: '2-digit', month: 'short', year: 'numeric',
+        hour: '2-digit', minute: '2-digit'
+    });
+}
+
+function escHtml(str) {
+    return String(str || '')
+        .replace(/&/g,'&amp;')
+        .replace(/</g,'&lt;')
+        .replace(/>/g,'&gt;')
+        .replace(/"/g,'&quot;');
+}
 
 // Iniciar
 carregarAula();
