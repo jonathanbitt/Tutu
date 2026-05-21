@@ -1,0 +1,147 @@
+{
+  "titulo": "Français — Préparer une salade",
+  "videoUrl": "https://jonathanbitt.github.io/Tutu/7.mp4",
+  "quizletUrl": "quizlet.html?quizlet=7",
+  "blocos": [
+    {
+      "start": 0,
+      "italiano": "Faire une salade en français",
+      "traducao": "Fazer uma salada em francês",
+      "dica": "<strong>\"Faire\"</strong> — verbo que significa 'fazer', usado para muitas atividades, incluindo cozinhar. <strong>\"Salade\"</strong> — palavra feminina para 'salada', um prato muito comum na culinária francesa.",
+      "miniAula": {
+        "titulo": "O verbo FAIRE para atividades",
+        "conteudo": "<p><strong>\"Faire\"</strong> — um dos verbos mais versáteis do francês. Não é usado só para fabricar objetos, mas também para atividades cotidianas, esportes e, como neste caso, receitas.</p><div class=\"exemplo\">faire la cuisine → fazer a comida<br>faire du sport → fazer esporte</div><p style=\"margin-top:10px\"><strong>\"En français\"</strong> — use a preposição <em>en</em> para idiomas. É diferente do português, que usa 'em' mas sem artigo.</p><div class=\"exemplo\">Parler en anglais → Falar em inglês<br>Une chanson en italien → Uma música em italiano</div>"
+      }
+    },
+    {
+      "start": 3,
+      "italiano": "Pour commencer, je prends les ingrédients dans le frigo",
+      "traducao": "Para começar, eu pego os ingredientes na geladeira",
+      "dica": "<strong>\"Pour commencer\"</strong> — expressão de transição que organiza as etapas de uma receita. <strong>\"Le frigo\"</strong> — forma abreviada e muito comum de <em>réfrigérateur</strong> (geladeira), equivalente ao nosso 'frigo' ou 'geladeira'.",
+      "miniAula": {
+        "titulo": "O verbo PRENDRE (pegar/tomar)",
+        "conteudo": "<p><strong>\"Prendre\"</strong> — verbo irregular de 3º grupo. Conjugação no presente: <em>je prends, tu prends, il/elle/on prend, nous prenons, vous prenez, ils/elles prennent</em>.</p><div class=\"exemplo\">Je prends le bus → Eu pego o ônibus<br>Je prends un café → Eu tomo um café</div><p style=\"margin-top:10px\"><strong>\"Dans le frigo\"</strong> — preposição <em>dans</em> para 'dentro de' um espaço fechado.</p><div class=\"exemplo\">C'est dans le tiroir → Está na gaveta<br>Il est dans la voiture → Ele está dentro do carro</div>"
+      }
+    },
+    {
+      "start": 8,
+      "italiano": "Ensuite, je lave les légumes et je les égoutte",
+      "traducao": "Em seguida, eu lavo os legumes e os escorro",
+      "dica": "<strong>\"Lave\"</strong> — do verbo <em>laver</em> (lavar), essencial em receitas. <strong>\"Les\" antes de 'égoutte'</strong> — pronome objeto direto que substitui 'les légumes' para evitar repetição.",
+      "miniAula": {
+        "titulo": "Pronomes OBJETO DIRETO (le, la, les)",
+        "conteudo": "<p><strong>\"Je les égoutte\"</strong> — <em>les</em> substitui <em>les légumes</em> (masculino plural). Os pronomes diretos são: <strong>me, te, le/la, nous, vous, les</strong>. Eles vêm ANTES do verbo.</p><div class=\"exemplo\">Je lave la salade → Je la lave (Eu lavo a salada → Eu a lavo)<br>Tu prends les tomates → Tu les prends (Você pega os tomates → Você os pega)</div>"
+      }
+    },
+    {
+      "start": 13,
+      "italiano": "Je sèche aussi les légumes avec un torchon",
+      "traducao": "Eu também seco os legumes com um pano de prato",
+      "dica": "<strong>\"Sèche\"</strong> — do verbo <em>sécher</em> (secar). <strong>\"Torchon\"</strong> — palavra específica para o pano usado na cozinha, diferente de <em>serviette</em> (toalha de banho).",
+      "miniAula": {
+        "titulo": "A posição de AUSSI",
+        "conteudo": "<p><strong>\"Aussi\"</strong> — advérbio que significa 'também'. Diferente do português, ele geralmente vem logo após o verbo conjugado.</p><div class=\"exemplo\">Je suis aussi fatigué → Eu também estou cansado<br>Elle aime aussi le chocolat → Ela também gosta de chocolate</div><p style=\"margin-top:10px\"><strong>\"Avec un torchon\"</strong> — <em>avec</em> (com) + artigo indefinido <em>un</em> (um).</p><div class=\"exemplo\">Je coupe avec un couteau → Eu corto com uma faca</div>"
+      }
+    },
+    {
+      "start": 18,
+      "italiano": "Ici, j'épluche le concombre",
+      "traducao": "Aqui, eu descasco o pepino",
+      "dica": "<strong>\"J'épluche\"</strong> — verbo específico para descascar legumes ou frutas com casca fina. <strong>\"Le concombre\"</strong> — palavra masculina, muito usado em saladas francesas.",
+      "miniAula": {
+        "titulo": "Verbos para 'descascar'",
+        "conteudo": "<p><strong>\"Éplucher\"</strong> — usado para legumes (batata, cenoura, pepino) ou frutas com casca fina (maçã, pêra). Para frutas cítricas (laranja), usa-se <em>peler</em>.</p><div class=\"exemplo\">J'épluche une pomme → Eu descasco uma maçã<br>Tu pèles une orange → Você descasca uma laranja</div>"
+      }
+    },
+    {
+      "start": 20,
+      "italiano": "et là, je le coupe en lamelles",
+      "traducao": "e aqui, eu o corto em fatias finas",
+      "dica": "<strong>\"Je le coupe\"</strong> — pronome <em>le</em> substituindo 'le concombre' (pepino). <strong>\"En lamelles\"</strong> — expressão para cortar em fatias finas, diferente de <em>en dés</em> (em cubos).",
+      "miniAula": {
+        "titulo": "CORTES na culinária",
+        "conteudo": "<p>Vocabulário essencial de cortes em francês:<br>✔ <strong>en lamelles</strong> → em fatias finas (como papel)<br>✔ <strong>en dés</strong> → em cubos pequenos<br>✔ <strong>en rondelles</strong> → em rodelas (como de cenoura)<br>✔ <strong>émincé</strong> → em tiras finas (carne ou cebola)</p><div class=\"exemplo\">Couper l'oignon en rondelles → Cortar a cebola em rodelas<br>Couper le jambon en lamelles → Cortar o presunto em tiras finas</div>"
+      }
+    },
+    {
+      "start": 24,
+      "italiano": "Après cela, je sors le fromage de son emballage",
+      "traducao": "Depois disso, eu tiro o queijo da sua embalagem",
+      "dica": "<strong>\"Après cela\"</strong> — transição formal para 'depois disso'. <strong>\"Son emballage\"</strong> — uso do possessivo <em>son</em> (seu/sua) com objeto inanimado, comum em francês.",
+      "miniAula": {
+        "titulo": "Os possessivos SON / SA / SES",
+        "conteudo": "<p><strong>\"Son\"</strong> é usado antes de substantivo masculino singular (emballage). <strong>\"Sa\"</strong> antes de feminino singular (sa voiture). <strong>\"Ses\"</strong> para plural.</p><div class=\"exemplo\">Le fromage → son emballage (a embalagem DELE)<br>La salade → sa vinaigrette (o vinagrete DELA)<br>Les légumes → ses couleurs (as cores DELES)</div><p style=\"margin-top:10px\">Em português, diríamos apenas 'a embalagem', mas em francês o possessivo é obrigatório com partes ou pertences do objeto.</p>"
+      }
+    },
+    {
+      "start": 29,
+      "italiano": "et je le coupe en dés",
+      "traducao": "e eu o corto em cubos",
+      "dica": "<strong>\"Le\"</strong> — novamente substitui 'le fromage'. <strong>\"En dés\"</strong> — corte em cubos pequenos, muito usado para queijo, batata ou carne.",
+      "miniAula": {
+        "titulo": "Mais sobre o verbo COUPER",
+        "conteudo": "<p><strong>\"Couper\"</strong> — verbo regular do 1º grupo (terminação -ER). Conjugação: <em>je coupe, tu coupes, il/elle/on coupe, nous coupons, vous coupez, ils/elles coupent</em>.</p><div class=\"exemplo\">Nous coupons les tomates en dés → Nós cortamos os tomates em cubos<br>Vous coupez le pain ? → Vocês cortam o pão?</div>"
+      }
+    },
+    {
+      "start": 33,
+      "italiano": "Je verse les légumes et le fromage dans mon récipient",
+      "traducao": "Eu coloco os legumes e o queijo no meu recipiente",
+      "dica": "<strong>\"Verse\"</strong> — verbo <em>verser</em> (despejar/colocar), usado para líquidos ou sólidos pequenos. <strong>\"Récipient\"</strong> — palavra formal para tigela, pote ou recipiente.",
+      "miniAula": {
+        "titulo": "O verbo VERSER vs. METTRE",
+        "conteudo": "<p><strong>Verser</strong> → despejar algo que flui (líquido, grãos, cubos). <strong>Mettre</strong> → colocar em geral, sem ênfase no movimento fluido.</p><div class=\"exemplo\">Je verse le lait dans le verre → Eu despejo o leite no copo<br>Je mets le livre sur la table → Eu coloco o livro na mesa</div><p style=\"margin-top:10px\"><strong>\"Mon récipient\"</strong> — possessivo <em>mon</em> (meu) no masculino singular.</p>"
+      }
+    },
+    {
+      "start": 38,
+      "italiano": "J'ajoute à ma salade un filet d'huile d'olive",
+      "traducao": "Eu adiciono à minha salada um fio de azeite de oliva",
+      "dica": "<strong>\"Un filet\"</strong> — literalmente 'um fio', expressão culinária para uma pequena quantidade de líquido. <strong>\"Huile d'olive\"</strong> — azeite de oliva, base da cozinha provençal.",
+      "miniAula": {
+        "titulo": "Expressões de quantidade culinária",
+        "conteudo": "<p>Maneiras de medir 'a olho' em francês:<br>✔ <strong>un filet</strong> → um fio (líquido: azeite, limão)<br>✔ <strong>une pincée</strong> → uma pitada (sal, especiarias)<br>✔ <strong>une noix de beurre</strong> → uma noz de manteiga</p><div class=\"exemplo\">Ajoutez une pincée de sel → Adicione uma pitada de sal<br>Mettez une noix de beurre dans la poêle → Coloque uma noz de manteiga na frigideira</div>"
+      }
+    },
+    {
+      "start": 43,
+      "italiano": "mais aussi du sel, du poivre et des herbes de Provence",
+      "traducao": "mas também sal, pimenta e ervas da Provença",
+      "dica": "<strong>\"Du, des\"</strong> — artigos partitivos para quantidades indefinidas. <strong>\"Herbes de Provence\"</strong> — mistura típica de alecrim, tomilho, orégano, manjerona, muito usado no sul da França.",
+      "miniAula": {
+        "titulo": "Artigos PARTITIVOS (du, de la, des)",
+        "conteudo": "<p>Use o partitivo para quantidades que não podem ser contadas: <strong>du</strong> (masculino), <strong>de la</strong> (feminino), <strong>de l'</strong> (vogal), <strong>des</strong> (plural).</p><div class=\"exemplo\">Je prends du pain → Eu como (um pouco de) pão<br>Elle met de la confiture → Ela coloca (um pouco de) geleia<br>Il y a des légumes → Há (uns) legumes</div>"
+      }
+    },
+    {
+      "start": 49,
+      "italiano": "Je presse également un demi-citron",
+      "traducao": "Eu também espremo meio limão",
+      "dica": "<strong>\"Presse\"</strong> — verbo <em>presser</em> (espremer). <strong>\"Un demi-citron\"</strong> — uso de <em>demi</em> antes do substantivo para 'metade de', diferente de <em>moitié</em> (a metade como substantivo).",
+      "miniAula": {
+        "titulo": "DEMI, MOITIÉ, À MOITIÉ",
+        "conteudo": "<p><strong>Demi</strong> → adjetivo invariável que vem ANTES do substantivo (demi-heure, demi-litre). <strong>La moitié</strong> → substantivo (a metade). <strong>À moitié</strong> → expressão adverbial (pela metade).</p><div class=\"exemplo\">Une demi-heure → Meia hora<br>La moitié de la classe → A metade da turma<br>Il est à moitié vide → Está pela metade vazio</div>"
+      }
+    },
+    {
+      "start": 53,
+      "italiano": "Enfin, je concasse quelques noix",
+      "traducao": "Finalmente, eu quebro algumas nozes",
+      "dica": "<strong>\"Concasse\"</strong> — verbo <em>concasser</em>, que significa quebrar grosseiramente (nozes, amêndoas, gelo). <strong>\"Noix\"</strong> — palavra feminina que termina com -x, invariável no singular/plural.",
+      "miniAula": {
+        "titulo": "Vocabulário de NOZES e FRUTOS SECOS",
+        "conteudo": "<p>Fruits à coque (frutos com casca dura):<br>✔ <strong>noix</strong> (noz)<br>✔ <strong>noisette</strong> (avelã)<br>✔ <strong>amande</strong> (amêndoa)<br>✔ <strong>cacahuète / arachide</strong> (amendoim)</p><div class=\"exemplo\">Je concasse des noisettes pour la tarte → Eu quebro avelãs para a torta<br>Tu aimes les amandes ? → Você gosta de amêndoas?</div>"
+      }
+    },
+    {
+      "start": 57,
+      "italiano": "Puis je secoue le tout pour bien mélanger les ingrédients",
+      "traducao": "Então eu agito tudo para misturar bem os ingredientes",
+      "dica": "<strong>\"Secoue\"</strong> — verbo <em>secouer</em> (sacudir/agitar), usado para misturar sem colher. <strong>\"Le tout\"</strong> — expressão que significa 'tudo', referindo-se ao conjunto de ingredientes.",
+      "miniAula": {
+        "titulo": "MÉLANGER, MIXER, REMUER",
+        "conteudo": "<p>Verbos para misturar em francês:<br>✔ <strong>mélanger</strong> → misturar (geral, com colher ou agitando)<br>✔ <strong>remuer</strong> → mexer (com colher, em círculos)<br>✔ <strong>secouer</strong> → agitar (movimento de vai-e-vem)<br>✔ <strong>mixer</strong> → bater no liquidificador</p><div class=\"exemplo\">Mélangez la farine et les œufs → Misture a farinha e os ovos<br>Remuez la soupe avec une cuillère → Mexa a sopa com uma colher</div>"
+      }
+    }
+  ]
+}
