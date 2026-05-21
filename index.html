@@ -840,7 +840,7 @@ details[open] summary::after{ transform:rotate(180deg); }
     font-family: 'DM Sans', sans-serif;
     transition: background 0.2s;
 }
-.ex-confirmar:hover { background: #1244820; }
+.ex-confirmar:hover { background: #124482; }
 .ex-confirmar:disabled { background: #bbb; cursor: default; }
 .ex-proximo {
     flex: 1;
@@ -1309,7 +1309,6 @@ window.iniciarPratica = function(btn) {
 };
 
 
-
 // ========== SISTEMA DE ANOTAÇÕES ==========
 // Objeto Storage — troque apenas estas funções ao migrar para Firebase
 const NOTAS_KEY = 'italiano_notas';
@@ -1379,32 +1378,66 @@ window.salvarNota = function() {
 
     if (notaTabAtual === 'texto') {
         var texto = document.getElementById('nota-input-texto').value.trim();
-        if (!texto) { document.getElementById('nota-input-texto').focus(); return; }
+        if (!texto) { 
+            alert('Digite um texto para a anotação.');
+            document.getElementById('nota-input-texto').focus(); 
+            return; 
+        }
         nota = { id: Date.now(), tipo: 'texto', conteudo: texto, data: dataFormatada() };
 
     } else if (notaTabAtual === 'link') {
         var url = document.getElementById('nota-input-link-url').value.trim();
         var label = document.getElementById('nota-input-link-label').value.trim() || url;
-        if (!url) { document.getElementById('nota-input-link-url').focus(); return; }
+        if (!url) { 
+            alert('Digite uma URL válida.');
+            document.getElementById('nota-input-link-url').focus(); 
+            return; 
+        }
+        // Valida se é uma URL válida
+        if (!url.startsWith('http://') && !url.startsWith('https://')) {
+            url = 'https://' + url;
+        }
         nota = { id: Date.now(), tipo: 'link', url: url, label: label, data: dataFormatada() };
 
     } else if (notaTabAtual === 'video') {
         var ytUrl = document.getElementById('nota-input-yt').value.trim();
-        var videoId = extrairYouTubeId(ytUrl);
-        if (!videoId) {
-            var inp = document.getElementById('nota-input-yt');
-            inp.style.borderColor = '#e05c5c';
-            setTimeout(function() { inp.style.borderColor = ''; }, 1500);
+        if (!ytUrl) {
+            alert('Digite um link do YouTube.');
+            document.getElementById('nota-input-yt').focus();
             return;
         }
-        nota = { id: Date.now(), tipo: 'video', videoId: videoId, url: ytUrl, data: dataFormatada() };
+        
+        var videoId = extrairYouTubeId(ytUrl);
+        if (!videoId) {
+            alert('Link do YouTube inválido!\n\nUse formatos como:\n• https://youtube.com/watch?v=XXXXX\n• https://youtu.be/XXXXX\n• https://youtube.com/shorts/XXXXX');
+            var inp = document.getElementById('nota-input-yt');
+            inp.style.borderColor = '#e05c5c';
+            inp.style.backgroundColor = '#fff0f0';
+            setTimeout(function() { 
+                inp.style.borderColor = ''; 
+                inp.style.backgroundColor = '';
+            }, 3000);
+            return;
+        }
+        
+        nota = { 
+            id: Date.now(), 
+            tipo: 'video', 
+            videoId: videoId, 
+            url: ytUrl, 
+            data: dataFormatada() 
+        };
     }
 
     if (!nota) return;
+    
     Storage.add(key, nota);
     limparFormNota();
     renderizarNotas(key);
     atualizarBotaoNota(notaBlocoAtual);
+    
+    // Feedback de sucesso
+    alert('✅ Anotação salva com sucesso!');
 };
 
 window.apagarNota = function(notaId) {
@@ -1482,16 +1515,25 @@ function limparFormNota() {
 }
 
 function extrairYouTubeId(url) {
+    if (!url) return null;
+    
+    // Limpa a URL
+    url = url.trim();
+    
+    // Padrões mais abrangentes para YouTube
     var patterns = [
-        /youtube\.com\/watch\?v=([a-zA-Z0-9_-]{11})/,
-        /youtu\.be\/([a-zA-Z0-9_-]{11})/,
-        /youtube\.com\/embed\/([a-zA-Z0-9_-]{11})/,
-        /youtube\.com\/shorts\/([a-zA-Z0-9_-]{11})/
+        /(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/|youtube\.com\/shorts\/)([a-zA-Z0-9_-]{11})/,
+        /youtube\.com\/watch\?.*[&?]v=([a-zA-Z0-9_-]{11})/,
+        /^([a-zA-Z0-9_-]{11})$/ // ID direto
     ];
+    
     for (var i = 0; i < patterns.length; i++) {
         var m = url.match(patterns[i]);
-        if (m) return m[1];
+        if (m && m[1]) {
+            return m[1];
+        }
     }
+    
     return null;
 }
 
