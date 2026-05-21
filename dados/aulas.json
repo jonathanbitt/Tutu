@@ -89,6 +89,21 @@
       "thumbnail": "🦋",
       "cor": "#58a6ff",
       "destaque": true
+    },
+    {
+      "id": 7,
+      "titulo": "Na cozinha francesa",
+      "subtitulo": "Prepare uma salada como um chef",
+      "descricao": "Aprenda o vocabulário essencial de culinária em francês enquanto acompanha uma receita completa de salada. Você vai dominar verbos como éplucher, couper e mélanger, além dos artigos partitivos (du, de la, des). Perfeito para quem quer cozinhar e falar francês ao mesmo tempo!",
+      "nivel": "Iniciante (A1-A2)",
+      "duracao": "~14 minutos",
+      "palavras": 38,
+      "licoes": 7,
+      "videoUrl": "https://jonathanbitt.github.io/Tutu/7.mp4",
+      "quizletId": 7,
+      "thumbnail": "🥗",
+      "cor": "#4CAF50",
+      "destaque": false
     }
   ]
 }
