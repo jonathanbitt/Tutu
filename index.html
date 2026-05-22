@@ -36,7 +36,12 @@ body{ font-family:'DM Sans',sans-serif; background:var(--cinza-bg); color:var(--
     justify-content:center;
     gap:6px;
     border-bottom:3px solid var(--verde);
+    transition: all 0.3s ease;
 }
+.video-area.oculto {
+    display: none;
+}
+
 video{ 
     width:100%; 
     height:auto;
@@ -61,6 +66,11 @@ video{
     font-size:17px;
     line-height:1.85;
     scroll-behavior:smooth;
+    transition: all 0.3s ease;
+}
+.texto-area.expandido {
+    flex: 1;
+    height: 100vh;
 }
 .texto-area::-webkit-scrollbar{ width:5px; }
 .texto-area::-webkit-scrollbar-track{ background:#f0f0f0; }
@@ -88,6 +98,8 @@ video{
 .global-btn.trad:hover{ background:#e8f5ef; }
 .global-btn.dica-g{ color:#7a6200; border-color:#e0c93a; }
 .global-btn.dica-g:hover{ background:#fffbea; }
+.global-btn.video-toggle { color: #1a6b4a; border-color: #1a6b4a; background: transparent; }
+.global-btn.video-toggle:hover { background: #e8f5ef; }
 
 .bloco{ margin-bottom:20px; padding:14px 16px; border-radius:14px; transition:all 0.35s ease; border:1.5px solid #ebebeb; background:white; }
 .bloco.ativo{ background:var(--amarelo); border-color:#e0c93a; box-shadow:0 4px 20px rgba(224,201,58,0.25); transform:scale(1.01); }
@@ -897,6 +909,7 @@ details[open] summary::after{ transform:rotate(180deg); }
         <div class="global-toggles">
             <button class="global-btn trad" id="btnTodasTrad">🌐 Ver todas as traduções</button>
             <button class="global-btn dica-g" id="btnTodasDica">💡 Ver todas as dicas</button>
+            <button class="global-btn video-toggle" id="btnToggleVideo">🎥 Ocultar vídeo</button>
         </div>
         <div id="blocosContainer"></div>
     </div>
@@ -1084,6 +1097,62 @@ window.previousParagraph = function() {
     }
 }
 
+// ========== FUNÇÃO PARA OCULTAR/MOSTRAR VÍDEO ==========
+window.toggleVideo = function() {
+    const videoArea = document.querySelector('.video-area');
+    const textoArea = document.querySelector('.texto-area');
+    const btn = document.getElementById('btnToggleVideo');
+    const container = document.querySelector('.container');
+    
+    if (videoArea.classList.contains('oculto')) {
+        // Mostrar vídeo
+        videoArea.classList.remove('oculto');
+        textoArea.classList.remove('expandido');
+        btn.innerHTML = '🎥 Ocultar vídeo';
+        
+        // Restaurar altura original do container
+        container.style.height = '100vh';
+        
+        // Salvar preferência
+        localStorage.setItem('videoOculto', 'false');
+    } else {
+        // Ocultar vídeo
+        videoArea.classList.add('oculto');
+        textoArea.classList.add('expandido');
+        btn.innerHTML = '🎥 Mostrar vídeo';
+        
+        // Ajustar container para ocupar tela cheia
+        container.style.height = '100vh';
+        
+        // Salvar preferência
+        localStorage.setItem('videoOculto', 'true');
+        
+        // Pausar vídeo quando ocultar
+        const video = document.getElementById('video');
+        if (video && !video.paused) {
+            video.pause();
+        }
+    }
+}
+
+// Carregar preferência salva do vídeo
+function carregarPreferenciaVideo() {
+    const videoOculto = localStorage.getItem('videoOculto');
+    if (videoOculto === 'true') {
+        const videoArea = document.querySelector('.video-area');
+        const textoArea = document.querySelector('.texto-area');
+        const btn = document.getElementById('btnToggleVideo');
+        const container = document.querySelector('.container');
+        
+        if (videoArea && textoArea && btn) {
+            videoArea.classList.add('oculto');
+            textoArea.classList.add('expandido');
+            btn.innerHTML = '🎥 Mostrar vídeo';
+            container.style.height = '100vh';
+        }
+    }
+}
+
 // ========== CARREGAR AULA DO JSON ==========
 async function carregarAula() {
     const urlParams = new URLSearchParams(window.location.search);
@@ -1222,6 +1291,15 @@ document.addEventListener('keydown', function(e) {
 document.getElementById('btnTodasTrad').onclick = () => toggleTodos('trad');
 document.getElementById('btnTodasDica').onclick = () => toggleTodos('dica');
 
+// Configurar botão toggle vídeo
+const btnToggleVideo = document.getElementById('btnToggleVideo');
+if (btnToggleVideo) {
+    btnToggleVideo.onclick = () => toggleVideo();
+}
+
+// Carregar preferência ao iniciar
+carregarPreferenciaVideo();
+
 // ========== PRÁTICA DE FALA ==========
 let recognitionAtiva = null;
 
@@ -1308,7 +1386,6 @@ window.iniciarPratica = function(btn) {
     recognition.start();
 };
 
-
 // ========== SISTEMA DE ANOTAÇÕES ==========
 // Objeto Storage — troque apenas estas funções ao migrar para Firebase
 const NOTAS_KEY = 'italiano_notas';
@@ -1393,7 +1470,6 @@ window.salvarNota = function() {
             document.getElementById('nota-input-link-url').focus(); 
             return; 
         }
-        // Valida se é uma URL válida
         if (!url.startsWith('http://') && !url.startsWith('https://')) {
             url = 'https://' + url;
         }
@@ -1430,13 +1506,10 @@ window.salvarNota = function() {
     }
 
     if (!nota) return;
-    
     Storage.add(key, nota);
     limparFormNota();
     renderizarNotas(key);
     atualizarBotaoNota(notaBlocoAtual);
-    
-    // Feedback de sucesso
     alert('✅ Anotação salva com sucesso!');
 };
 
@@ -1517,14 +1590,12 @@ function limparFormNota() {
 function extrairYouTubeId(url) {
     if (!url) return null;
     
-    // Limpa a URL
     url = url.trim();
     
-    // Padrões mais abrangentes para YouTube
     var patterns = [
         /(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/|youtube\.com\/shorts\/)([a-zA-Z0-9_-]{11})/,
         /youtube\.com\/watch\?.*[&?]v=([a-zA-Z0-9_-]{11})/,
-        /^([a-zA-Z0-9_-]{11})$/ // ID direto
+        /^([a-zA-Z0-9_-]{11})$/
     ];
     
     for (var i = 0; i < patterns.length; i++) {
@@ -1556,14 +1627,13 @@ function escHtml(str) {
 carregarAula();
 
 // ========== SISTEMA DE EXERCÍCIOS ==========
-let exDados = [];          // todos os exercícios do bloco atual
-let exFila = [];           // fila embaralhada para a sessão
-let exAtual = 0;           // índice na fila
+let exDados = [];
+let exFila = [];
+let exAtual = 0;
 let exAcertos = 0;
 let exRespondido = false;
-let exOrdenarSelecionadas = []; // palavras escolhidas no exercício ordenar
+let exOrdenarSelecionadas = [];
 
-// Abre o modal carregando exercícios do JSON
 window.abrirExercicios = async function(btn, blocoIndex) {
     const aulaId = new URLSearchParams(window.location.search).get('aula') || '1';
     try {
@@ -1590,7 +1660,6 @@ window.fecharExercicios = function() {
 };
 
 function iniciarSessaoExercicios() {
-    // Embaralha e pega até 5 por sessão
     exFila = embaralhar([...exDados]).slice(0, 5);
     exAtual = 0;
     exAcertos = 0;
@@ -1646,7 +1715,6 @@ function renderizarExercicio() {
         </div>`;
 
     } else if (ex.tipo === 'lacuna') {
-        // Divide a pergunta em partes: texto antes e depois de ___
         const partes = ex.pergunta.split('___');
         htmlInterativo = `
             <div class="ex-lacuna-wrap">
@@ -1669,7 +1737,6 @@ function renderizarExercicio() {
         htmlInterativo = `<textarea class="ex-textarea" id="exTraduzirInput" rows="3" placeholder="Digite sua tradução em português..."></textarea>`;
     }
 
-    // Monta pergunta (para lacuna, a pergunta já tem ___ embutido — não duplicamos)
     const perguntaHTML = ex.tipo === 'lacuna'
         ? `<div class="ex-pergunta">${ex.enunciado || 'Complete a frase:'}</div>`
         : `<div class="ex-pergunta">${ex.pergunta}</div>`;
@@ -1685,7 +1752,6 @@ function renderizarExercicio() {
         </div>
     `;
 
-    // Focus automático nos inputs
     if (ex.tipo === 'lacuna') {
         setTimeout(() => document.getElementById('exLacunaInput')?.focus(), 100);
         document.getElementById('exLacunaInput').addEventListener('keydown', e => {
@@ -1697,7 +1763,6 @@ function renderizarExercicio() {
     }
 }
 
-// Selecionar palavra (exercício ordenar)
 window.selecionarPalavra = function(btn) {
     if (exRespondido) return;
     const palavra = btn.dataset.palavra;
@@ -1711,23 +1776,16 @@ window.selecionarPalavra = function(btn) {
     chip.dataset.bancoIdx = btn.dataset.idx;
     chip.onclick = function() {
         if (exRespondido) return;
-        // Devolve ao banco
-        exOrdenarSelecionadas = exOrdenarSelecionadas.filter((_, i, arr) => {
-            const last = arr.lastIndexOf(palavra);
-            if (i === last) { arr.splice(last, 1); return false; }
-            return true;
-        });
-        // Versão mais simples: remove a última ocorrência
-        const idx = exOrdenarSelecionadas.lastIndexOf(palavra);
-        if (idx !== -1) exOrdenarSelecionadas.splice(idx, 1);
-        // reativa botão no banco
+        const lastIndex = exOrdenarSelecionadas.lastIndexOf(palavra);
+        if (lastIndex !== -1) {
+            exOrdenarSelecionadas.splice(lastIndex, 1);
+        }
         document.querySelector(`.ex-palavra-banco .ex-palavra[data-idx="${btn.dataset.idx}"]`)?.classList.remove('usada');
         chip.remove();
     };
     area.appendChild(chip);
 };
 
-// Confirmar resposta
 window.confirmarResposta = function() {
     if (exRespondido) return;
     const ex = exFila[exAtual];
@@ -1735,7 +1793,6 @@ window.confirmarResposta = function() {
     let feedbackExtra = '';
 
     if (ex.tipo === 'multipla') {
-        // já tratado no click de cada opção — aqui não faz nada extra
         return;
     }
 
@@ -1753,7 +1810,6 @@ window.confirmarResposta = function() {
         const esperada = ex.resposta.toLowerCase().trim();
         certa = frase === esperada;
         if (!certa) feedbackExtra = `<br>Resposta correta: <strong>${ex.resposta}</strong>`;
-        // Colore as palavras na área
         document.querySelectorAll('#exOrdenarArea .ex-palavra').forEach(p => {
             p.style.borderColor = certa ? '#5cb85c' : '#e05c5c';
             p.style.background = certa ? '#e8f5ef' : '#fff0f0';
@@ -1763,7 +1819,6 @@ window.confirmarResposta = function() {
     if (ex.tipo === 'traduzir') {
         const input = document.getElementById('exTraduzirInput');
         const resposta = input.value.trim().toLowerCase();
-        // Comparação flexível: verifica palavras-chave
         const palavrasChave = ex.palavrasChave || ex.resposta.toLowerCase().split(/\s+/).filter(p => p.length > 3);
         const acertos = palavrasChave.filter(p => resposta.includes(p)).length;
         certa = acertos >= Math.ceil(palavrasChave.length * 0.6);
@@ -1778,7 +1833,6 @@ window.confirmarResposta = function() {
     document.getElementById('exProximo').style.display = 'block';
 };
 
-// Responder múltipla escolha (tratado direto no click)
 window.responderMultipla = function(btn, opcao, resposta) {
     if (exRespondido) return;
     exRespondido = true;
@@ -1787,7 +1841,7 @@ window.responderMultipla = function(btn, opcao, resposta) {
 
     document.querySelectorAll('.ex-opcao').forEach(b => {
         b.disabled = true;
-        if (b.dataset && b.textContent.trim() === resposta) b.classList.add('certa');
+        if (b.textContent.trim() === resposta) b.classList.add('certa');
     });
     btn.classList.add(certa ? 'certa' : 'errada');
 
