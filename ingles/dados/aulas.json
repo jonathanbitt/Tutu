@@ -1,0 +1,19 @@
+{
+  "lessons": [
+    {
+    "id": 1,
+      "titulo": "Os Três C's da Vida: Escolhas, Oportunidades e Mudanças",
+      "subtitulo": "Aprenda vocabulário motivacional e estruturas condicionais em inglês",
+      "descricao": "Nesta aula inspiradora, você vai aprender expressões idiomáticas essenciais como 'take a chance', 'stay still', 'scale a business' e como usar o first conditional para falar sobre mudanças. Perfeito para quem quer levar o inglês para o próximo nível!",
+      "nivel": "Intermediário (A2-B1)",
+      "duracao": "~15 minutos",
+      "palavras": 17,
+      "licoes": 7,
+      "videoUrl": "https://jonathanbitt.github.io/Tutu/1.mp4",
+      "quizletId": 1,
+      "thumbnail": "🎯",
+      "cor": "#4A90E2",
+      "destaque": true
+    }
+  ]
+}
