@@ -408,21 +408,21 @@ body {
 </div>
 
 <script>
-let lessons = [];
-let currentLevel = "all";
-let currentSearch = "";
+let aulas = [];  // ← VARIÁVEL CORRIGIDA
+let nivelAtual = "all";
+let buscaAtual = "";
 
 // Load lesson catalog
 async function carregarCatalogo() {
     try {
-        const response = await fetch('dados/aulas.json');
+        const response = await fetch('dados/aulas.json');  // ← CORRIGIDO: aulas.json
         const data = await response.json();
-        lessons = data.lessons;
+        aulas = data.aulas;  // ← CORRIGIDO: data.aulas
         
         // Update stats
         document.getElementById('totalLessons').textContent = aulas.length;
-        document.getElementById('totalWords').textContent = aulas.reduce((sum, l) => sum + (l.words || 0), 0);
-        document.getElementById('totalModules').textContent = aulas.reduce((sum, l) => sum + (l.modules || 0), 0);
+        document.getElementById('totalWords').textContent = aulas.reduce((sum, a) => sum + (a.words || 0), 0);
+        document.getElementById('totalModules').textContent = aulas.reduce((sum, a) => sum + (a.modules || 0), 0);
         
         renderizarAulas();
     } catch (error) {
@@ -441,22 +441,22 @@ async function carregarCatalogo() {
 function renderizarAulas() {
     const container = document.getElementById('gradeAulas');
     
-    let filtered = aulas.filter(lesson => {
+    let filtradas = aulas.filter(aula => {
         // Filter by level
-        if (currentLevel !== "all" && lesson.level !== currentLevel) return false;
+        if (nivelAtual !== "all" && aula.level !== nivelAtual) return false;
         
         // Filter by search
-        if (currentSearch) {
-            const term = currentSearch.toLowerCase();
-            return lesson.title.toLowerCase().includes(term) ||
-                   lesson.subtitle.toLowerCase().includes(term) ||
-                   lesson.description.toLowerCase().includes(term);
+        if (buscaAtual) {
+            const termo = buscaAtual.toLowerCase();
+            return aula.title.toLowerCase().includes(termo) ||
+                   aula.subtitle.toLowerCase().includes(termo) ||
+                   aula.description.toLowerCase().includes(termo);
         }
         
         return true;
     });
     
-    if (filtered.length === 0) {
+    if (filtradas.length === 0) {
         container.innerHTML = `
             <div class="sem-resultados">
                 <span class="emoji">🔍</span>
@@ -467,23 +467,23 @@ function renderizarAulas() {
         return;
     }
     
-    container.innerHTML = filtered.map((lesson, index) => `
-        <div class="card-aula ${lesson.featured ? 'destaque' : ''}" style="animation-delay: ${index * 0.05}s" data-id="${lesson.id}">
-            ${lesson.featured ? '<div class="badge-destaque">⭐ Featured</div>' : ''}
-            <div class="card-thumb" style="background: linear-gradient(135deg, ${lesson.color || '#1a6b4a'}20 0%, ${lesson.color || '#1a6b4a'}40 100%);">
-                <span class="emoji">${lesson.thumbnail || '📚'}</span>
-                <span class="nivel">${lesson.level || 'Beginner'}</span>
+    container.innerHTML = filtradas.map((aula, index) => `
+        <div class="card-aula ${aula.featured ? 'destaque' : ''}" style="animation-delay: ${index * 0.05}s" data-id="${aula.id}">
+            ${aula.featured ? '<div class="badge-destaque">⭐ Featured</div>' : ''}
+            <div class="card-thumb" style="background: linear-gradient(135deg, ${aula.color || '#1a6b4a'}20 0%, ${aula.color || '#1a6b4a'}40 100%);">
+                <span class="emoji">${aula.thumbnail || '📚'}</span>
+                <span class="nivel">${aula.level || 'Beginner'}</span>
             </div>
             <div class="card-conteudo">
-                <h3>${lesson.title}</h3>
-                <span class="subtitulo">${lesson.subtitle || ''}</span>
-                <p class="descricao">${lesson.description || ''}</p>
+                <h3>${aula.title}</h3>
+                <span class="subtitulo">${aula.subtitle || ''}</span>
+                <p class="descricao">${aula.description || ''}</p>
                 <div class="card-meta">
-                    <span>⏱️ ${lesson.duration || '~1 min'}</span>
-                    <span>📚 ${lesson.words || 0} words</span>
-                    <span>📖 ${lesson.modules || 0} modules</span>
+                    <span>⏱️ ${aula.duration || '~1 min'}</span>
+                    <span>📚 ${aula.words || 0} words</span>
+                    <span>📖 ${aula.modules || 0} modules</span>
                 </div>
-                <button class="card-btn" onclick="startLesson(${lesson.id})">
+                <button class="card-btn" onclick="startLesson(${aula.id})">
                     ▶ Start lesson
                     <span>→</span>
                 </button>
@@ -502,13 +502,13 @@ document.querySelectorAll('.filtro-btn').forEach(btn => {
     btn.addEventListener('click', () => {
         document.querySelectorAll('.filtro-btn').forEach(b => b.classList.remove('ativo'));
         btn.classList.add('ativo');
-        currentLevel = btn.getAttribute('data-level');
+        nivelAtual = btn.getAttribute('data-level');
         renderizarAulas();
     });
 });
 
 document.getElementById('searchInput').addEventListener('input', (e) => {
-    currentSearch = e.target.value;
+    buscaAtual = e.target.value;
     renderizarAulas();
 });
 
