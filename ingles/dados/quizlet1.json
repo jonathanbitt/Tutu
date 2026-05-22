@@ -1,0 +1,27 @@
+{
+  "titulo": "Quizlet — The Three C's of Life",
+  "palavras": 17,
+  "licoes": 7,
+  "descricao": "Revisão inteligente de erros · Flashcards + Múltipla Escolha",
+  "conteudo": {
+    "cards": [
+      { "termo": "choice", "definicao": "escolha", "frase": "Life is made of choices.", "dificuldade": 1 },
+      { "termo": "chance", "definicao": "oportunidade / risco calculado", "frase": "You have to take a chance.", "dificuldade": 2 },
+      { "termo": "change", "definicao": "mudança", "frase": "Nothing will change if you stay still.", "dificuldade": 1 },
+      { "termo": "to take a chance", "definicao": "arriscar", "frase": "You have to take a chance to grow.", "dificuldade": 2 },
+      { "termo": "to stay still", "definicao": "ficar parado / inerte", "frase": "Nothing changes if you stay still.", "dificuldade": 2 },
+      { "termo": "business", "definicao": "negócios / mundo corporativo", "frase": "In business, this is everything.", "dificuldade": 1 },
+      { "termo": "everything", "definicao": "tudo (ênfase: o mais importante)", "frase": "For her, family is everything.", "dificuldade": 2 },
+      { "termo": "to start a company", "definicao": "abrir uma empresa", "frase": "Starting a company is a choice.", "dificuldade": 2 },
+      { "termo": "stable job", "definicao": "emprego estável", "frase": "Leaving a stable job is scary.", "dificuldade": 2 },
+      { "termo": "to scale", "definicao": "expandir / crescer (negócios)", "frase": "We need to scale our operations.", "dificuldade": 3 },
+      { "termo": "next level", "definicao": "próximo patamar / nível superior", "frase": "Take your English to the next level.", "dificuldade": 2 },
+      { "termo": "here's the thing", "definicao": "a questão é / o negócio é o seguinte", "frase": "Here's the thing: I don't agree.", "dificuldade": 3 },
+      { "termo": "most people", "definicao": "a maioria das pessoas", "frase": "Most people wait too long.", "dificuldade": 1 },
+      { "termo": "perfect moment", "definicao": "momento perfeito", "frase": "Don't wait for the perfect moment.", "dificuldade": 2 },
+      { "termo": "to reward", "definicao": "recompensar", "frase": "Hard work rewards you.", "dificuldade": 2 },
+      { "termo": "to avoid", "definicao": "evitar", "frase": "What are you avoiding?", "dificuldade": 2 },
+      { "termo": "right now", "definicao": "agora mesmo / neste momento", "frase": "Do it right now!", "dificuldade": 1 }
+    ]
+  }
+}
