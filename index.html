@@ -6,7 +6,7 @@
 <title id="pageTitle">Italiano — Aula</title>
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
-/* ========== TODOS OS SEUS ESTILOS ORIGINAIS ========== */
+/* ========== TODOS OS ESTILOS ========== */
 :root{
     --verde:#1a6b4a;
     --verde-claro:#e8f5ef;
@@ -38,9 +38,7 @@ body{ font-family:'DM Sans',sans-serif; background:var(--cinza-bg); color:var(--
     border-bottom:3px solid var(--verde);
     transition: all 0.3s ease;
 }
-.video-area.oculto {
-    display: none;
-}
+.video-area.oculto { display: none; }
 
 video{ 
     width:100%; 
@@ -68,17 +66,10 @@ video{
     scroll-behavior:smooth;
     transition: all 0.3s ease;
 }
-.texto-area.expandido {
-    flex: 1;
-    height: 100vh;
-}
+.texto-area.expandido { flex: 1; height: 100vh; }
 .texto-area::-webkit-scrollbar{ width:5px; }
 .texto-area::-webkit-scrollbar-track{ background:#f0f0f0; }
 .texto-area::-webkit-scrollbar-thumb{ background:#b5d4c5; border-radius:4px; }
-
-.texto-header{
-    display:none;
-}
 
 .global-toggles{ 
     display:flex; 
@@ -98,7 +89,7 @@ video{
 .global-btn.trad:hover{ background:#e8f5ef; }
 .global-btn.dica-g{ color:#7a6200; border-color:#e0c93a; }
 .global-btn.dica-g:hover{ background:#fffbea; }
-.global-btn.video-toggle { color: #1a6b4a; border-color: #1a6b4a; background: transparent; }
+.global-btn.video-toggle { color: #1a6b4a; border-color: #1a6b4a; }
 .global-btn.video-toggle:hover { background: #e8f5ef; }
 
 .bloco{ margin-bottom:20px; padding:14px 16px; border-radius:14px; transition:all 0.35s ease; border:1.5px solid #ebebeb; background:white; }
@@ -129,19 +120,13 @@ video{
     padding:8px 10px; border-radius:10px;
     font-size:0.88rem; border-left:3px solid #b5d4c5;
 }
-
 .dica{
     background:#fffbea; border:1px solid #f0e060;
     border-radius:10px; padding:8px 10px;
     font-size:0.82rem; color:#4a3f00; line-height:1.55;
 }
 
-details{ 
-    border-radius:10px; 
-    margin-top:8px; 
-    overflow:hidden; 
-    border:1px solid #e2ede8; 
-}
+details{ border-radius:10px; margin-top:8px; overflow:hidden; border:1px solid #e2ede8; }
 summary{
     cursor:pointer; font-weight:700; font-size:0.82rem;
     padding:8px 12px; background:#eaf4ef; color:var(--verde);
@@ -151,19 +136,8 @@ summary{
 summary:hover{ background:#d6ede3; }
 summary::after{ content:'▾'; margin-left:auto; font-size:0.9rem; transition:transform 0.3s; }
 details[open] summary::after{ transform:rotate(180deg); }
-.mini-aula-corpo{ 
-    padding:10px 12px; 
-    background:#f9fdf9; 
-    font-size:0.85rem; 
-    line-height:1.65; 
-    color:#2a2a2a; 
-}
+.mini-aula-corpo{ padding:10px 12px; background:#f9fdf9; font-size:0.85rem; line-height:1.65; color:#2a2a2a; }
 .mini-aula-corpo strong{ color:var(--verde); }
-.mini-aula-corpo .exemplo{
-    background:#e8f5ef; border-radius:8px; padding:8px 12px;
-    margin-top:8px; font-style:italic; font-size:0.82rem;
-    border-left:3px solid var(--verde);
-}
 
 .timestamp{
     color:var(--verde); cursor:pointer; font-weight:700;
@@ -236,7 +210,6 @@ details[open] summary::after{ transform:rotate(180deg); }
     cursor: pointer;
     white-space: nowrap;
     transition: all 0.2s;
-    letter-spacing: 0.01em;
     flex-shrink: 0;
 }
 .quizlet-btn:hover{
@@ -245,6 +218,7 @@ details[open] summary::after{ transform:rotate(180deg); }
     box-shadow: 0 6px 20px rgba(63,185,80,0.35);
 }
 
+/* Modais */
 .qmodal{
     position: fixed;
     inset: 0;
@@ -306,16 +280,10 @@ details[open] summary::after{ transform:rotate(180deg); }
     display: block;
 }
 
-/* Botão voltar para home */
-.btn-home {
-    background: #58a6ff;
-}
+.btn-home { background: #58a6ff; }
+.btn-home:hover { background: #1f6feb; }
 
-.btn-home:hover {
-    background: #1f6feb;
-}
-
-/* ===== BOTÃO MICROFONE ===== */
+/* Botão microfone */
 .mic-btn {
     display: inline-flex;
     align-items: center;
@@ -354,26 +322,11 @@ details[open] summary::after{ transform:rotate(180deg); }
     line-height: 1.5;
     display: none;
 }
-.mic-resultado.acerto {
-    background: #e8f5ef;
-    border: 1px solid #5cb85c;
-    color: #1a6b3a;
-    display: block;
-}
-.mic-resultado.erro {
-    background: #fff0f0;
-    border: 1px solid #e05c5c;
-    color: #8b1a1a;
-    display: block;
-}
-.mic-resultado.parcial {
-    background: #fffbea;
-    border: 1px solid #e0c93a;
-    color: #5a4a00;
-    display: block;
-}
+.mic-resultado.acerto { background: #e8f5ef; border: 1px solid #5cb85c; color: #1a6b3a; display: block; }
+.mic-resultado.erro { background: #fff0f0; border: 1px solid #e05c5c; color: #8b1a1a; display: block; }
+.mic-resultado.parcial { background: #fffbea; border: 1px solid #e0c93a; color: #5a4a00; display: block; }
 
-/* ===== BOTÃO ANOTAÇÕES ===== */
+/* Anotações */
 .nota-btn {
     display: inline-flex;
     align-items: center;
@@ -407,7 +360,6 @@ details[open] summary::after{ transform:rotate(180deg); }
     font-weight: 700;
 }
 
-/* ===== MODAL ANOTAÇÕES ===== */
 .nota-modal {
     position: fixed;
     inset: 0;
@@ -448,191 +400,41 @@ details[open] summary::after{ transform:rotate(180deg); }
     background: #fffdf8;
     z-index: 2;
 }
-.nota-modal-titulo {
-    font-size: 0.78rem;
-    font-weight: 700;
-    color: #b05000;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-}
-.nota-modal-ref {
-    font-size: 0.72rem;
-    color: #999;
-    font-style: italic;
-    margin-top: 2px;
-    max-width: 80%;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-.nota-modal-close {
-    background: #f0e8d8;
-    border: none;
-    width: 30px; height: 30px;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 0.9rem;
-    display: flex; align-items: center; justify-content: center;
-    transition: background 0.2s;
-    flex-shrink: 0;
-}
+.nota-modal-titulo { font-size: 0.78rem; font-weight: 700; color: #b05000; text-transform: uppercase; letter-spacing: 0.05em; }
+.nota-modal-ref { font-size: 0.72rem; color: #999; font-style: italic; margin-top: 2px; max-width: 80%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.nota-modal-close { background: #f0e8d8; border: none; width: 30px; height: 30px; border-radius: 50%; cursor: pointer; font-size: 0.9rem; display: flex; align-items: center; justify-content: center; transition: background 0.2s; flex-shrink: 0; }
 .nota-modal-close:hover { background: #e0d0b8; }
 
-/* Lista de anotações */
-.nota-lista {
-    flex: 1;
-    padding: 14px 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-.nota-item {
-    background: white;
-    border: 1px solid #f0e0c8;
-    border-radius: 14px;
-    padding: 12px 14px;
-    position: relative;
-}
-.nota-item-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 6px;
-}
-.nota-item-data {
-    font-size: 0.65rem;
-    color: #bbb;
-    font-style: italic;
-}
-.nota-item-tipo {
-    font-size: 0.62rem;
-    font-weight: 700;
-    padding: 2px 7px;
-    border-radius: 20px;
-    text-transform: uppercase;
-}
+.nota-lista { flex: 1; padding: 14px 20px; display: flex; flex-direction: column; gap: 10px; }
+.nota-item { background: white; border: 1px solid #f0e0c8; border-radius: 14px; padding: 12px 14px; position: relative; }
+.nota-item-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px; }
+.nota-item-data { font-size: 0.65rem; color: #bbb; font-style: italic; }
+.nota-item-tipo { font-size: 0.62rem; font-weight: 700; padding: 2px 7px; border-radius: 20px; text-transform: uppercase; }
 .tipo-texto  { background: #fff5e8; color: #b05000; }
 .tipo-link   { background: #e8f0fe; color: #1a56a0; }
 .tipo-video  { background: #ffeaea; color: #c0392b; }
-
-.nota-item-conteudo {
-    font-size: 0.88rem;
-    line-height: 1.6;
-    color: #333;
-    word-break: break-word;
-}
-.nota-item-conteudo a {
-    color: #1a56a0;
-    word-break: break-all;
-}
-.nota-item-conteudo .yt-embed {
-    margin-top: 8px;
-    border-radius: 10px;
-    overflow: hidden;
-    aspect-ratio: 16/9;
-    background: #000;
-}
-.nota-item-conteudo .yt-embed iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-    display: block;
-}
-.nota-item-apagar {
-    position: absolute;
-    top: 10px; right: 10px;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    font-size: 0.8rem;
-    opacity: 0.35;
-    transition: opacity 0.2s;
-    padding: 2px 4px;
-}
+.nota-item-conteudo { font-size: 0.88rem; line-height: 1.6; color: #333; word-break: break-word; }
+.nota-item-conteudo .yt-embed { margin-top: 8px; border-radius: 10px; overflow: hidden; aspect-ratio: 16/9; background: #000; }
+.nota-item-conteudo .yt-embed iframe { width: 100%; height: 100%; border: none; display: block; }
+.nota-item-apagar { position: absolute; top: 10px; right: 10px; background: transparent; border: none; cursor: pointer; font-size: 0.8rem; opacity: 0.35; transition: opacity 0.2s; padding: 2px 4px; }
 .nota-item-apagar:hover { opacity: 1; color: #e05c5c; }
-
-.nota-vazia {
-    text-align: center;
-    color: #ccc;
-    font-size: 0.85rem;
-    padding: 30px 0;
-}
+.nota-vazia { text-align: center; color: #ccc; font-size: 0.85rem; padding: 30px 0; }
 .nota-vazia span { font-size: 2rem; display: block; margin-bottom: 8px; }
 
-/* Formulário nova anotação */
-.nota-form {
-    padding: 14px 20px 20px;
-    border-top: 1px solid #f0e8d8;
-    background: #fffdf8;
-    flex-shrink: 0;
-    position: sticky;
-    bottom: 0;
-}
-.nota-form-tabs {
-    display: flex;
-    gap: 6px;
-    margin-bottom: 10px;
-}
-.nota-tab {
-    flex: 1;
-    padding: 6px 8px;
-    border-radius: 10px;
-    border: 1.5px solid #e0d0b8;
-    background: transparent;
-    font-size: 0.72rem;
-    font-weight: 700;
-    cursor: pointer;
-    font-family: 'DM Sans', sans-serif;
-    color: #999;
-    transition: all 0.18s;
-}
+.nota-form { padding: 14px 20px 20px; border-top: 1px solid #f0e8d8; background: #fffdf8; flex-shrink: 0; position: sticky; bottom: 0; }
+.nota-form-tabs { display: flex; gap: 6px; margin-bottom: 10px; }
+.nota-tab { flex: 1; padding: 6px 8px; border-radius: 10px; border: 1.5px solid #e0d0b8; background: transparent; font-size: 0.72rem; font-weight: 700; cursor: pointer; font-family: 'DM Sans', sans-serif; color: #999; transition: all 0.18s; }
 .nota-tab.ativo { background: #fff5e8; border-color: #f0a050; color: #b05000; }
-
-.nota-form-campo {
-    display: none;
-    flex-direction: column;
-    gap: 8px;
-}
+.nota-form-campo { display: none; flex-direction: column; gap: 8px; }
 .nota-form-campo.ativo { display: flex; }
-
-.nota-input, .nota-textarea {
-    width: 100%;
-    border: 1.5px solid #e0d0b8;
-    border-radius: 10px;
-    padding: 9px 12px;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.88rem;
-    outline: none;
-    background: white;
-    color: #1c1c1c;
-    transition: border-color 0.2s;
-    resize: none;
-}
+.nota-input, .nota-textarea { width: 100%; border: 1.5px solid #e0d0b8; border-radius: 10px; padding: 9px 12px; font-family: 'DM Sans', sans-serif; font-size: 0.88rem; outline: none; background: white; color: #1c1c1c; transition: border-color 0.2s; resize: none; }
 .nota-input:focus, .nota-textarea:focus { border-color: #f0a050; }
 .nota-textarea { min-height: 80px; line-height: 1.5; }
-
-.nota-form-hint {
-    font-size: 0.68rem;
-    color: #bbb;
-    margin-top: -4px;
-}
-.nota-salvar {
-    width: 100%;
-    padding: 10px;
-    border-radius: 12px;
-    border: none;
-    background: #e07010;
-    color: white;
-    font-weight: 700;
-    font-size: 0.88rem;
-    cursor: pointer;
-    font-family: 'DM Sans', sans-serif;
-    transition: background 0.2s;
-    margin-top: 4px;
-}
+.nota-form-hint { font-size: 0.68rem; color: #bbb; margin-top: -4px; }
+.nota-salvar { width: 100%; padding: 10px; border-radius: 12px; border: none; background: #e07010; color: white; font-weight: 700; font-size: 0.88rem; cursor: pointer; font-family: 'DM Sans', sans-serif; transition: background 0.2s; margin-top: 4px; }
 .nota-salvar:hover { background: #c06000; }
 
-/* ===== BOTÃO EXERCÍCIOS ===== */
+/* Exercícios */
 .ex-btn {
     display: inline-flex;
     align-items: center;
@@ -653,7 +455,6 @@ details[open] summary::after{ transform:rotate(180deg); }
 }
 .ex-btn:hover { background: #e8f0fe; }
 
-/* ===== MODAL EXERCÍCIOS ===== */
 .exmodal {
     position: fixed;
     inset: 0;
@@ -685,49 +486,14 @@ details[open] summary::after{ transform:rotate(180deg); }
     from { transform: translateY(60px); opacity: 0; }
     to   { transform: translateY(0);    opacity: 1; }
 }
-.exmodal-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 6px;
-}
-.exmodal-titulo {
-    font-size: 0.78rem;
-    font-weight: 700;
-    color: #1a56a0;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-}
-.exmodal-close {
-    background: #f0f0f0;
-    border: none;
-    width: 30px; height: 30px;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 0.9rem;
-    display: flex; align-items: center; justify-content: center;
-    transition: background 0.2s;
-}
+.exmodal-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px; }
+.exmodal-titulo { font-size: 0.78rem; font-weight: 700; color: #1a56a0; text-transform: uppercase; letter-spacing: 0.05em; }
+.exmodal-close { background: #f0f0f0; border: none; width: 30px; height: 30px; border-radius: 50%; cursor: pointer; font-size: 0.9rem; display: flex; align-items: center; justify-content: center; transition: background 0.2s; }
 .exmodal-close:hover { background: #e0e0e0; }
 
-.ex-progresso {
-    font-size: 0.7rem;
-    color: #999;
-    margin-bottom: 16px;
-}
-.ex-progresso-bar {
-    height: 4px;
-    background: #eee;
-    border-radius: 4px;
-    margin-bottom: 18px;
-    overflow: hidden;
-}
-.ex-progresso-fill {
-    height: 100%;
-    background: var(--verde);
-    border-radius: 4px;
-    transition: width 0.4s ease;
-}
+.ex-progresso { font-size: 0.7rem; color: #999; margin-bottom: 16px; }
+.ex-progresso-bar { height: 4px; background: #eee; border-radius: 4px; margin-bottom: 18px; overflow: hidden; }
+.ex-progresso-fill { height: 100%; background: var(--verde); border-radius: 4px; transition: width 0.4s ease; }
 
 .ex-tipo-badge {
     display: inline-block;
@@ -743,17 +509,69 @@ details[open] summary::after{ transform:rotate(180deg); }
 .badge-lacuna    { background: #fce8ff; color: #7a1fa0; }
 .badge-ordenar   { background: #fff3cd; color: #7a5500; }
 .badge-traduzir  { background: #e8f5ef; color: #1a6b4a; }
+.badge-pronuncia { background: #f0e6ff; color: #6a1a9e; }
 
-.ex-pergunta {
-    font-family: 'Lora', serif;
-    font-size: 1.05rem;
-    line-height: 1.6;
-    color: #1c1c1c;
-    margin-bottom: 18px;
-}
+.ex-pergunta { font-family: 'Lora', serif; font-size: 1.05rem; line-height: 1.6; color: #1c1c1c; margin-bottom: 18px; }
 .ex-pergunta em { color: var(--verde); font-style: normal; font-weight: 600; }
 
-/* Múltipla escolha */
+/* Pronúncia */
+.ex-pronuncia-area {
+    text-align: center;
+    padding: 20px;
+    background: #f9f6ff;
+    border-radius: 16px;
+    margin: 10px 0;
+}
+.ex-palavra-destaque {
+    font-family: 'Lora', serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #6a1a9e;
+    margin-bottom: 20px;
+    padding: 15px;
+    background: white;
+    border-radius: 12px;
+    border: 2px solid #d4b8ff;
+    display: inline-block;
+    width: 100%;
+}
+.ex-pronuncia-botoes {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin: 15px 0;
+}
+.ex-ouvir-btn {
+    background: #6a1a9e;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 700;
+    font-family: 'DM Sans', sans-serif;
+    transition: all 0.2s;
+}
+.ex-ouvir-btn:hover { background: #8b3ac4; transform: scale(1.02); }
+.ex-gravar-btn {
+    background: #4a4a4a;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 700;
+    font-family: 'DM Sans', sans-serif;
+    transition: all 0.2s;
+}
+.ex-gravar-btn.gravando {
+    background: #e05c5c;
+    animation: pulso 1s infinite;
+}
+.ex-gravar-btn:hover { background: #666; }
+
 .ex-opcoes { display: flex; flex-direction: column; gap: 8px; }
 .ex-opcao {
     padding: 10px 14px;
@@ -771,7 +589,6 @@ details[open] summary::after{ transform:rotate(180deg); }
 .ex-opcao.errada { background: #fff0f0; border-color: #e05c5c; color: #8b1a1a; }
 .ex-opcao:disabled { cursor: default; }
 
-/* Preencher lacuna */
 .ex-lacuna-wrap { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
 .ex-lacuna-input {
     border: none;
@@ -790,7 +607,6 @@ details[open] summary::after{ transform:rotate(180deg); }
 .ex-lacuna-input.certa { border-color: #5cb85c; color: #1a6b3a; font-weight: 700; }
 .ex-lacuna-input.errada { border-color: #e05c5c; color: #8b1a1a; }
 
-/* Ordenar palavras */
 .ex-palavras-area { display: flex; flex-wrap: wrap; gap: 6px; min-height: 44px; margin-bottom: 10px; }
 .ex-palavra-banco { display: flex; flex-wrap: wrap; gap: 6px; padding: 10px; background: #f5f5f5; border-radius: 12px; min-height: 44px; }
 .ex-palavra {
@@ -809,7 +625,6 @@ details[open] summary::after{ transform:rotate(180deg); }
 .ex-palavra.selecionada { background: #e8f0fe; border-color: #1a56a0; }
 .ex-area-label { font-size: 0.7rem; color: #999; margin-bottom: 4px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.03em; }
 
-/* Traduzir */
 .ex-textarea {
     width: 100%;
     border: 1.5px solid #ddd;
@@ -825,7 +640,6 @@ details[open] summary::after{ transform:rotate(180deg); }
 }
 .ex-textarea:focus { border-color: #a0c4f8; }
 
-/* Feedback */
 .ex-feedback {
     margin-top: 14px;
     padding: 10px 12px;
@@ -837,7 +651,6 @@ details[open] summary::after{ transform:rotate(180deg); }
 .ex-feedback.certa  { background: #e8f5ef; border: 1px solid #5cb85c; color: #1a6b3a; display: block; }
 .ex-feedback.errada { background: #fff0f0; border: 1px solid #e05c5c; color: #8b1a1a; display: block; }
 
-/* Botões de ação */
 .ex-acoes { display: flex; gap: 8px; margin-top: 16px; flex-wrap: wrap; }
 .ex-confirmar {
     flex: 1;
@@ -870,28 +683,12 @@ details[open] summary::after{ transform:rotate(180deg); }
 }
 .ex-proximo:hover { background: var(--verde-claro); }
 
-/* Placar final */
-.ex-placar {
-    text-align: center;
-    padding: 20px 0;
-}
+.ex-placar { text-align: center; padding: 20px 0; }
 .ex-placar-emoji { font-size: 3rem; margin-bottom: 8px; }
 .ex-placar-titulo { font-size: 1.2rem; font-weight: 700; margin-bottom: 6px; color: #1c1c1c; }
 .ex-placar-sub { font-size: 0.85rem; color: #666; }
 .ex-placar-score { font-size: 2rem; font-weight: 700; color: var(--verde); margin: 12px 0; }
-.ex-reiniciar {
-    margin-top: 16px;
-    padding: 10px 24px;
-    border-radius: 12px;
-    border: none;
-    background: var(--verde);
-    color: white;
-    font-weight: 700;
-    font-size: 0.9rem;
-    cursor: pointer;
-    font-family: 'DM Sans', sans-serif;
-    transition: background 0.2s;
-}
+.ex-reiniciar { margin-top: 16px; padding: 10px 24px; border-radius: 12px; border: none; background: var(--verde); color: white; font-weight: 700; font-size: 0.9rem; cursor: pointer; font-family: 'DM Sans', sans-serif; transition: background 0.2s; }
 .ex-reiniciar:hover { background: #145c3d; }
 </style>
 </head>
@@ -933,17 +730,14 @@ details[open] summary::after{ transform:rotate(180deg); }
                 <button class="nota-tab" onclick="trocarTabNota('link', this)">🔗 Link</button>
                 <button class="nota-tab" onclick="trocarTabNota('video', this)">▶️ YouTube</button>
             </div>
-            <!-- Texto -->
             <div class="nota-form-campo ativo" id="nota-campo-texto">
                 <textarea class="nota-textarea" id="nota-input-texto" placeholder="Escreva sua anotação..." rows="3"></textarea>
             </div>
-            <!-- Link -->
             <div class="nota-form-campo" id="nota-campo-link">
                 <input class="nota-input" id="nota-input-link-url" type="url" placeholder="https://..." />
                 <input class="nota-input" id="nota-input-link-label" type="text" placeholder="Descrição (opcional)" />
                 <div class="nota-form-hint">Cole a URL e adicione uma descrição para identificar o link.</div>
             </div>
-            <!-- YouTube -->
             <div class="nota-form-campo" id="nota-campo-video">
                 <input class="nota-input" id="nota-input-yt" type="url" placeholder="https://youtube.com/watch?v=..." />
                 <div class="nota-form-hint">Cole o link do YouTube — o vídeo será incorporado diretamente.</div>
@@ -1005,37 +799,20 @@ let currentBlockIndex = 0;
 let lastActiveIndex = -1;
 let quizletUrlGlobal = '';
 
-// ========== FUNÇÕES GLOBAIS (acessíveis pelo onclick) ==========
-
-// Função para abrir o modal do Quizlet (GLOBAL)
+// ========== FUNÇÕES GLOBAIS ==========
 window.abrirQuizlet = function() {
     const modal = document.getElementById('quizletModal');
     const iframe = document.getElementById('quizletFrame');
-    
-    if (quizletUrlGlobal) {
-        iframe.src = quizletUrlGlobal;
-    } else {
-        console.error('Quizlet URL não definida');
-        iframe.src = 'quizlet.html?quizlet=1';
-    }
-    
+    if (quizletUrlGlobal) { iframe.src = quizletUrlGlobal; }
+    else { iframe.src = 'quizlet.html?quizlet=1'; }
     modal.style.display = 'flex';
     document.body.style.overflow = 'hidden';
 }
-
-// Função para fechar o modal (GLOBAL)
 window.fecharQuizlet = function() {
-    const modal = document.getElementById('quizletModal');
-    modal.style.display = 'none';
+    document.getElementById('quizletModal').style.display = 'none';
     document.body.style.overflow = '';
 }
-
-// Função para voltar para a home (GLOBAL)
-window.voltarHome = function() {
-    window.location.href = 'home.html';
-}
-
-// Função toggle item (GLOBAL)
+window.voltarHome = function() { window.location.href = 'home.html'; }
 window.toggleItem = function(btn) {
     const bloco = btn.closest('.bloco');
     const tBtns = [...bloco.querySelectorAll('.toggle-btn')];
@@ -1047,36 +824,24 @@ window.toggleItem = function(btn) {
     alvo.classList.toggle('aberto', !aberto);
     btn.classList.toggle('aberto', !aberto);
 }
-
-// Função toggle todos (GLOBAL)
 window.toggleTodos = function(tipo) {
     const isTrad = tipo === 'trad';
     const colClass = isTrad ? 'trad-col' : 'dica-col';
     const btnClass = isTrad ? 'trad-btn' : 'dica-btn';
     const globalId = isTrad ? 'btnTodasTrad' : 'btnTodasDica';
-    
     const cols = [...document.querySelectorAll('.' + colClass)];
     const btns = [...document.querySelectorAll('.' + btnClass)];
     const btnGlobal = document.getElementById(globalId);
-    
     const algumFechado = cols.some(c => !c.classList.contains('aberto'));
-    
     cols.forEach(c => c.classList.toggle('aberto', algumFechado));
     btns.forEach(b => b.classList.toggle('aberto', algumFechado));
-    
-    if (isTrad) {
-        btnGlobal.textContent = algumFechado ? '🌐 Ocultar todas as traduções' : '🌐 Ver todas as traduções';
-    } else {
-        btnGlobal.textContent = algumFechado ? '💡 Ocultar todas as dicas' : '💡 Ver todas as dicas';
-    }
+    if (isTrad) { btnGlobal.textContent = algumFechado ? '🌐 Ocultar todas as traduções' : '🌐 Ver todas as traduções'; }
+    else { btnGlobal.textContent = algumFechado ? '💡 Ocultar todas as dicas' : '💡 Ver todas as dicas'; }
 }
-
-// Funções de scroll (GLOBAL)
 window.toggleAutoScroll = function() {
     autoScroll = !autoScroll;
     document.getElementById("toggleScrollBtn").innerHTML = autoScroll ? "🔒 Auto" : "🔓 Livre";
 }
-
 window.nextParagraph = function() {
     autoScroll = false;
     document.getElementById("toggleScrollBtn").innerHTML = "🔓 Livre";
@@ -1086,7 +851,6 @@ window.nextParagraph = function() {
         blocos[currentBlockIndex].scrollIntoView({ behavior: "smooth", block: "center" });
     }
 }
-
 window.previousParagraph = function() {
     autoScroll = false;
     document.getElementById("toggleScrollBtn").innerHTML = "🔓 Livre";
@@ -1097,101 +861,60 @@ window.previousParagraph = function() {
     }
 }
 
-// ========== FUNÇÃO PARA OCULTAR/MOSTRAR VÍDEO ==========
+// Ocultar/Mostrar vídeo
 window.toggleVideo = function() {
     const videoArea = document.querySelector('.video-area');
     const textoArea = document.querySelector('.texto-area');
     const btn = document.getElementById('btnToggleVideo');
-    const container = document.querySelector('.container');
-    
     if (videoArea.classList.contains('oculto')) {
-        // Mostrar vídeo
         videoArea.classList.remove('oculto');
         textoArea.classList.remove('expandido');
         btn.innerHTML = '🎥 Ocultar vídeo';
-        
-        // Restaurar altura original do container
-        container.style.height = '100vh';
-        
-        // Salvar preferência
         localStorage.setItem('videoOculto', 'false');
     } else {
-        // Ocultar vídeo
         videoArea.classList.add('oculto');
         textoArea.classList.add('expandido');
         btn.innerHTML = '🎥 Mostrar vídeo';
-        
-        // Ajustar container para ocupar tela cheia
-        container.style.height = '100vh';
-        
-        // Salvar preferência
         localStorage.setItem('videoOculto', 'true');
-        
-        // Pausar vídeo quando ocultar
-        const video = document.getElementById('video');
-        if (video && !video.paused) {
-            video.pause();
-        }
+        if (video && !video.paused) video.pause();
     }
 }
-
-// Carregar preferência salva do vídeo
 function carregarPreferenciaVideo() {
-    const videoOculto = localStorage.getItem('videoOculto');
-    if (videoOculto === 'true') {
-        const videoArea = document.querySelector('.video-area');
-        const textoArea = document.querySelector('.texto-area');
-        const btn = document.getElementById('btnToggleVideo');
-        const container = document.querySelector('.container');
-        
-        if (videoArea && textoArea && btn) {
-            videoArea.classList.add('oculto');
-            textoArea.classList.add('expandido');
-            btn.innerHTML = '🎥 Mostrar vídeo';
-            container.style.height = '100vh';
-        }
+    if (localStorage.getItem('videoOculto') === 'true') {
+        document.querySelector('.video-area')?.classList.add('oculto');
+        document.querySelector('.texto-area')?.classList.add('expandido');
+        document.getElementById('btnToggleVideo').innerHTML = '🎥 Mostrar vídeo';
     }
 }
 
-// ========== CARREGAR AULA DO JSON ==========
+// ========== CARREGAR AULA ==========
 async function carregarAula() {
     const urlParams = new URLSearchParams(window.location.search);
     const aulaId = urlParams.get('aula') || '1';
-    
     try {
         const response = await fetch(`dados/aula${aulaId}.json`);
         const data = await response.json();
-        
         document.title = data.titulo;
         document.getElementById('pageTitle').textContent = data.titulo;
-        
         videoSource.src = data.videoUrl;
         video.load();
-        
-        // Armazenar a URL do Quizlet GLOBALMENTE
         quizletUrlGlobal = data.quizletUrl;
-        
         renderizarBlocos(data.blocos);
-        
     } catch (error) {
         console.error('Erro:', error);
         blocosContainer.innerHTML = '<p style="color:red;text-align:center;">Erro ao carregar aula</p>';
     }
 }
 
-// Renderizar blocos
 function renderizarBlocos(blocos) {
     blocosContainer.innerHTML = '';
-    
     blocos.forEach((bloco, index) => {
         const blocoDiv = document.createElement('div');
         blocoDiv.className = 'bloco';
         blocoDiv.dataset.start = bloco.start;
-        
         const mins = Math.floor(bloco.start / 60);
         const secs = bloco.start % 60;
         const tempo = `${mins}:${secs.toString().padStart(2,'0')}`;
-        
         blocoDiv.innerHTML = `
             <div class="italiano">
                 <span class="timestamp" data-time="${tempo}">(${tempo})</span>
@@ -1202,42 +925,17 @@ function renderizarBlocos(blocos) {
             <button class="mic-btn" onclick="iniciarPratica(this)">🎙️ Praticar fala</button>
             <button class="ex-btn" onclick="abrirExercicios(this, ${index})">✏️ Exercícios</button>
             <button class="nota-btn" id="nota-btn-${index}" onclick="abrirNotas(${index})">📝 Anotações</button>
-            <div class="colapsavel trad-col">
-                <div class="traducao">${bloco.traducao}</div>
-            </div>
-            <div class="colapsavel dica-col">
-                <div class="dica">${bloco.dica}</div>
-            </div>
+            <div class="colapsavel trad-col"><div class="traducao">${bloco.traducao}</div></div>
+            <div class="colapsavel dica-col"><div class="dica">${bloco.dica}</div></div>
             <div class="mic-resultado"></div>
-            ${bloco.miniAula ? `
-                <details>
-                    <summary>📘 Mini Aula — ${bloco.miniAula.titulo}</summary>
-                    <div class="mini-aula-corpo">${bloco.miniAula.conteudo}</div>
-                </details>
-            ` : ''}
+            ${bloco.miniAula ? `<details><summary>📘 Mini Aula — ${bloco.miniAula.titulo}</summary><div class="mini-aula-corpo">${bloco.miniAula.conteudo}</div></details>` : ''}
         `;
-        
         blocosContainer.appendChild(blocoDiv);
     });
-    
-    // Adicionar CTA do Quizlet com onclick direto para a função GLOBAL
     const ctaDiv = document.createElement('div');
     ctaDiv.className = 'quizlet-cta';
-    ctaDiv.innerHTML = `
-        <div class="quizlet-cta-inner">
-            <div class="quizlet-cta-text">
-                <span class="quizlet-cta-icon">🎯</span>
-                <div>
-                    <strong>Pronto para praticar?</strong>
-                    <p>Vocabulário completo da aula</p>
-                </div>
-            </div>
-            <button class="quizlet-btn" onclick="abrirQuizlet()">Abrir Quizlet →</button>
-        </div>
-    `;
+    ctaDiv.innerHTML = `<div class="quizlet-cta-inner"><div class="quizlet-cta-text"><span class="quizlet-cta-icon">🎯</span><div><strong>Pronto para praticar?</strong><p>Vocabulário completo da aula</p></div></div><button class="quizlet-btn" onclick="abrirQuizlet()">Abrir Quizlet →</button></div>`;
     blocosContainer.appendChild(ctaDiv);
-    
-    // Reaplicar eventos dos timestamps
     document.querySelectorAll(".timestamp").forEach(el => {
         el.addEventListener("click", () => {
             const t = el.dataset.time.split(":");
@@ -1245,19 +943,13 @@ function renderizarBlocos(blocos) {
             video.play();
         });
     });
-    
-    // Reiniciar sistema de destaque
     iniciarDestaque();
-
-    // Atualizar badges de anotações
     if (typeof atualizarTodosOsBotoesNota === 'function') atualizarTodosOsBotoesNota();
 }
 
-// Sistema de destaque
 function iniciarDestaque() {
     const blocos = document.querySelectorAll(".bloco");
     progressoLabel.textContent = `Parágrafo 1 de ${blocos.length}`;
-    
     video.addEventListener("timeupdate", () => {
         const t = video.currentTime;
         blocos.forEach((bloco, i) => {
@@ -1277,81 +969,43 @@ function iniciarDestaque() {
     });
 }
 
-// Velocidade
-document.getElementById("speedControl").addEventListener("change", function() {
-    video.playbackRate = parseFloat(this.value);
-});
-
-// Escape para fechar modal
-document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') fecharQuizlet();
-});
-
-// Configurar botões globais
+document.getElementById("speedControl").addEventListener("change", function() { video.playbackRate = parseFloat(this.value); });
+document.addEventListener('keydown', function(e) { if (e.key === 'Escape') fecharQuizlet(); });
 document.getElementById('btnTodasTrad').onclick = () => toggleTodos('trad');
 document.getElementById('btnTodasDica').onclick = () => toggleTodos('dica');
-
-// Configurar botão toggle vídeo
-const btnToggleVideo = document.getElementById('btnToggleVideo');
-if (btnToggleVideo) {
-    btnToggleVideo.onclick = () => toggleVideo();
-}
-
-// Carregar preferência ao iniciar
+document.getElementById('btnToggleVideo').onclick = () => toggleVideo();
 carregarPreferenciaVideo();
 
 // ========== PRÁTICA DE FALA ==========
 let recognitionAtiva = null;
-
 window.iniciarPratica = function(btn) {
     const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-    if (!SpeechRecognition) {
-        alert('Seu navegador não suporta reconhecimento de voz.\nTente Google Chrome.');
-        return;
-    }
-
-    // Se já está gravando neste botão, para
-    if (btn.classList.contains('gravando')) {
-        if (recognitionAtiva) recognitionAtiva.stop();
-        return;
-    }
-
-    // Para qualquer gravação anterior
+    if (!SpeechRecognition) { alert('Seu navegador não suporta reconhecimento de voz.\nTente Google Chrome.'); return; }
+    if (btn.classList.contains('gravando')) { if (recognitionAtiva) recognitionAtiva.stop(); return; }
     if (recognitionAtiva) recognitionAtiva.stop();
-
     const bloco = btn.closest('.bloco');
     const textoItalianoEl = bloco.querySelector('.italiano');
-    // Pega o texto limpo (sem o timestamp)
     const textoCompleto = textoItalianoEl.innerText.replace(/\(\d+:\d+\)\s*/,'').trim().toLowerCase();
-
     const resultado = bloco.querySelector('.mic-resultado');
-
     const recognition = new SpeechRecognition();
     recognition.lang = 'it-IT';
     recognition.interimResults = false;
     recognition.maxAlternatives = 3;
     recognitionAtiva = recognition;
-
     btn.classList.add('gravando');
     btn.innerHTML = '⏹️ Parar';
     resultado.className = 'mic-resultado';
     resultado.style.display = 'none';
-
     recognition.onresult = function(event) {
         const alternativas = [...event.results[0]].map(a => a.transcript.toLowerCase().trim());
         const melhor = alternativas[0];
-
-        // Normaliza para comparação (remove pontuação)
         const normalizar = t => t.replace(/[.,!?;:"""'']/g,'').trim();
         const textoNorm = normalizar(textoCompleto);
         const melhorNorm = normalizar(melhor);
-
-        // Conta palavras em comum
         const palavrasTexto = textoNorm.split(/\s+/);
         const palavrasFala = melhorNorm.split(/\s+/);
         const emComum = palavrasTexto.filter(p => palavrasFala.includes(p)).length;
         const pct = emComum / palavrasTexto.length;
-
         resultado.style.display = 'block';
         if (pct >= 0.85) {
             resultado.className = 'mic-resultado acerto';
@@ -1364,275 +1018,119 @@ window.iniciarPratica = function(btn) {
             resultado.innerHTML = `❌ <strong>Tente novamente.</strong> Você disse:<br><em>"${melhor}"</em><br><span style="font-size:0.78rem;opacity:0.75">Texto esperado: "${textoCompleto}"</span>`;
         }
     };
-
     recognition.onerror = function(event) {
         resultado.style.display = 'block';
         resultado.className = 'mic-resultado erro';
-        if (event.error === 'no-speech') {
-            resultado.innerHTML = '🎙️ Nenhuma fala detectada. Tente novamente.';
-        } else if (event.error === 'not-allowed') {
-            resultado.innerHTML = '🔒 Permissão de microfone negada. Verifique as configurações do navegador.';
-        } else {
-            resultado.innerHTML = `⚠️ Erro: ${event.error}`;
-        }
+        if (event.error === 'no-speech') resultado.innerHTML = '🎙️ Nenhuma fala detectada. Tente novamente.';
+        else if (event.error === 'not-allowed') resultado.innerHTML = '🔒 Permissão de microfone negada.';
+        else resultado.innerHTML = `⚠️ Erro: ${event.error}`;
     };
-
-    recognition.onend = function() {
-        btn.classList.remove('gravando');
-        btn.innerHTML = '🎙️ Praticar fala';
-        recognitionAtiva = null;
-    };
-
+    recognition.onend = function() { btn.classList.remove('gravando'); btn.innerHTML = '🎙️ Praticar fala'; recognitionAtiva = null; };
     recognition.start();
 };
 
-// ========== SISTEMA DE ANOTAÇÕES ==========
-// Objeto Storage — troque apenas estas funções ao migrar para Firebase
+// ========== ANOTAÇÕES ==========
 const NOTAS_KEY = 'italiano_notas';
-
 const Storage = {
-    getAll() {
-        try { return JSON.parse(localStorage.getItem(NOTAS_KEY)) || {}; }
-        catch { return {}; }
-    },
+    getAll() { try { return JSON.parse(localStorage.getItem(NOTAS_KEY)) || {}; } catch { return {}; } },
     getBloco(key) { return this.getAll()[key] || []; },
-    add(key, nota) {
-        const all = this.getAll();
-        if (!all[key]) all[key] = [];
-        all[key].unshift(nota);
-        localStorage.setItem(NOTAS_KEY, JSON.stringify(all));
-    },
-    remove(key, notaId) {
-        const all = this.getAll();
-        if (!all[key]) return;
-        all[key] = all[key].filter(n => n.id !== notaId);
-        localStorage.setItem(NOTAS_KEY, JSON.stringify(all));
-    },
+    add(key, nota) { const all = this.getAll(); if (!all[key]) all[key] = []; all[key].unshift(nota); localStorage.setItem(NOTAS_KEY, JSON.stringify(all)); },
+    remove(key, notaId) { const all = this.getAll(); if (!all[key]) return; all[key] = all[key].filter(n => n.id !== notaId); localStorage.setItem(NOTAS_KEY, JSON.stringify(all)); },
     count(key) { return (this.getAll()[key] || []).length; }
 };
-
-let notaBlocoAtual = null;
-let notaTabAtual = 'texto';
-
-function notaBlocoKey(index) {
-    const aulaId = new URLSearchParams(window.location.search).get('aula') || '1';
-    return 'aula' + aulaId + '_bloco' + index;
-}
-
+let notaBlocoAtual = null, notaTabAtual = 'texto';
+function notaBlocoKey(index) { const aulaId = new URLSearchParams(window.location.search).get('aula') || '1'; return 'aula' + aulaId + '_bloco' + index; }
 window.abrirNotas = function(index) {
     notaBlocoAtual = index;
     const key = notaBlocoKey(index);
-    // Pega referência do texto do bloco
     const blocoEls = document.querySelectorAll('.bloco');
     const textoEl = blocoEls[index] ? blocoEls[index].querySelector('.italiano') : null;
-    const ref = textoEl
-        ? textoEl.innerText.replace(/\(\d+:\d+\)\s*/, '').substring(0, 50) + '\u2026'
-        : ('Par\u00e1grafo ' + (index + 1));
+    const ref = textoEl ? textoEl.innerText.replace(/\(\d+:\d+\)\s*/, '').substring(0, 50) + '…' : ('Parágrafo ' + (index + 1));
     document.getElementById('notaModalRef').textContent = ref;
     limparFormNota();
     renderizarNotas(key);
     document.getElementById('notaModal').style.display = 'flex';
     document.body.style.overflow = 'hidden';
 };
-
-window.fecharNotas = function() {
-    document.getElementById('notaModal').style.display = 'none';
-    document.body.style.overflow = '';
-};
-
+window.fecharNotas = function() { document.getElementById('notaModal').style.display = 'none'; document.body.style.overflow = ''; };
 window.trocarTabNota = function(tipo, tabBtn) {
     notaTabAtual = tipo;
-    document.querySelectorAll('.nota-tab').forEach(function(t) { t.classList.remove('ativo'); });
-    document.querySelectorAll('.nota-form-campo').forEach(function(c) { c.classList.remove('ativo'); });
+    document.querySelectorAll('.nota-tab').forEach(t => t.classList.remove('ativo'));
+    document.querySelectorAll('.nota-form-campo').forEach(c => c.classList.remove('ativo'));
     tabBtn.classList.add('ativo');
     document.getElementById('nota-campo-' + tipo).classList.add('ativo');
 };
-
 window.salvarNota = function() {
     if (notaBlocoAtual === null) return;
     const key = notaBlocoKey(notaBlocoAtual);
-    var nota = null;
-
+    let nota = null;
     if (notaTabAtual === 'texto') {
-        var texto = document.getElementById('nota-input-texto').value.trim();
-        if (!texto) { 
-            alert('Digite um texto para a anotação.');
-            document.getElementById('nota-input-texto').focus(); 
-            return; 
-        }
+        let texto = document.getElementById('nota-input-texto').value.trim();
+        if (!texto) { alert('Digite um texto.'); return; }
         nota = { id: Date.now(), tipo: 'texto', conteudo: texto, data: dataFormatada() };
-
     } else if (notaTabAtual === 'link') {
-        var url = document.getElementById('nota-input-link-url').value.trim();
-        var label = document.getElementById('nota-input-link-label').value.trim() || url;
-        if (!url) { 
-            alert('Digite uma URL válida.');
-            document.getElementById('nota-input-link-url').focus(); 
-            return; 
-        }
-        if (!url.startsWith('http://') && !url.startsWith('https://')) {
-            url = 'https://' + url;
-        }
+        let url = document.getElementById('nota-input-link-url').value.trim();
+        let label = document.getElementById('nota-input-link-label').value.trim() || url;
+        if (!url) { alert('Digite uma URL.'); return; }
+        if (!url.startsWith('http')) url = 'https://' + url;
         nota = { id: Date.now(), tipo: 'link', url: url, label: label, data: dataFormatada() };
-
     } else if (notaTabAtual === 'video') {
-        var ytUrl = document.getElementById('nota-input-yt').value.trim();
-        if (!ytUrl) {
-            alert('Digite um link do YouTube.');
-            document.getElementById('nota-input-yt').focus();
-            return;
-        }
-        
-        var videoId = extrairYouTubeId(ytUrl);
-        if (!videoId) {
-            alert('Link do YouTube inválido!\n\nUse formatos como:\n• https://youtube.com/watch?v=XXXXX\n• https://youtu.be/XXXXX\n• https://youtube.com/shorts/XXXXX');
-            var inp = document.getElementById('nota-input-yt');
-            inp.style.borderColor = '#e05c5c';
-            inp.style.backgroundColor = '#fff0f0';
-            setTimeout(function() { 
-                inp.style.borderColor = ''; 
-                inp.style.backgroundColor = '';
-            }, 3000);
-            return;
-        }
-        
-        nota = { 
-            id: Date.now(), 
-            tipo: 'video', 
-            videoId: videoId, 
-            url: ytUrl, 
-            data: dataFormatada() 
-        };
+        let ytUrl = document.getElementById('nota-input-yt').value.trim();
+        if (!ytUrl) { alert('Digite um link do YouTube.'); return; }
+        let videoId = extrairYouTubeId(ytUrl);
+        if (!videoId) { alert('Link do YouTube inválido!'); return; }
+        nota = { id: Date.now(), tipo: 'video', videoId: videoId, url: ytUrl, data: dataFormatada() };
     }
-
     if (!nota) return;
     Storage.add(key, nota);
     limparFormNota();
     renderizarNotas(key);
     atualizarBotaoNota(notaBlocoAtual);
-    alert('✅ Anotação salva com sucesso!');
+    alert('✅ Anotação salva!');
 };
-
 window.apagarNota = function(notaId) {
     if (notaBlocoAtual === null) return;
-    const key = notaBlocoKey(notaBlocoAtual);
-    Storage.remove(key, notaId);
-    renderizarNotas(key);
+    Storage.remove(notaBlocoKey(notaBlocoAtual), notaId);
+    renderizarNotas(notaBlocoKey(notaBlocoAtual));
     atualizarBotaoNota(notaBlocoAtual);
 };
-
 function renderizarNotas(key) {
     const lista = document.getElementById('notaLista');
     const notas = Storage.getBloco(key);
-
-    if (notas.length === 0) {
-        lista.innerHTML = '<div class="nota-vazia"><span>\uD83D\uDCDD</span>Nenhuma anota\u00e7\u00e3o ainda.<br>Use os bot\u00f5es abaixo para adicionar.</div>';
-        return;
-    }
-
-    lista.innerHTML = notas.map(function(n) {
-        var corpo = '';
-        if (n.tipo === 'texto') {
-            corpo = escHtml(n.conteudo).replace(/\n/g, '<br>');
-        } else if (n.tipo === 'link') {
-            corpo = '<a href="' + escHtml(n.url) + '" target="_blank" rel="noopener">' + escHtml(n.label) + '</a>';
-        } else if (n.tipo === 'video') {
-            corpo = '<div class="yt-embed"><iframe src="https://www.youtube.com/embed/' + escHtml(n.videoId) + '" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>';
-        }
-        var badgeMap = { texto: 'tipo-texto', link: 'tipo-link', video: 'tipo-video' };
-        var labelMap  = { texto: '\uD83D\uDCDD Texto', link: '\uD83D\uDD17 Link', video: '\u25B6\uFE0F V\u00EDdeo' };
-        var badgeClasse = badgeMap[n.tipo] || 'tipo-texto';
-        var badgeLabel  = labelMap[n.tipo]  || n.tipo;
-
-        return '<div class="nota-item">'
-            + '<div class="nota-item-header">'
-            + '<span class="nota-item-tipo ' + badgeClasse + '">' + badgeLabel + '</span>'
-            + '<span class="nota-item-data">' + escHtml(n.data) + '</span>'
-            + '</div>'
-            + '<div class="nota-item-conteudo">' + corpo + '</div>'
-            + '<button class="nota-item-apagar" onclick="apagarNota(' + n.id + ')" title="Apagar">\uD83D\uDDD1</button>'
-            + '</div>';
+    if (notas.length === 0) { lista.innerHTML = '<div class="nota-vazia"><span>📝</span>Nenhuma anotação ainda.</div>'; return; }
+    lista.innerHTML = notas.map(n => {
+        let corpo = '';
+        if (n.tipo === 'texto') corpo = escHtml(n.conteudo).replace(/\n/g, '<br>');
+        else if (n.tipo === 'link') corpo = '<a href="' + escHtml(n.url) + '" target="_blank">' + escHtml(n.label) + '</a>';
+        else if (n.tipo === 'video') corpo = '<div class="yt-embed"><iframe src="https://www.youtube.com/embed/' + escHtml(n.videoId) + '" allowfullscreen loading="lazy"></iframe></div>';
+        const badgeMap = { texto: 'tipo-texto', link: 'tipo-link', video: 'tipo-video' };
+        const labelMap = { texto: '📝 Texto', link: '🔗 Link', video: '▶️ Vídeo' };
+        return `<div class="nota-item"><div class="nota-item-header"><span class="nota-item-tipo ${badgeMap[n.tipo]}">${labelMap[n.tipo]}</span><span class="nota-item-data">${escHtml(n.data)}</span></div><div class="nota-item-conteudo">${corpo}</div><button class="nota-item-apagar" onclick="apagarNota(${n.id})">🗑</button></div>`;
     }).join('');
 }
-
 function atualizarBotaoNota(index) {
-    var btn = document.getElementById('nota-btn-' + index);
+    let btn = document.getElementById('nota-btn-' + index);
     if (!btn) return;
-    var count = Storage.count(notaBlocoKey(index));
+    let count = Storage.count(notaBlocoKey(index));
     btn.classList.toggle('tem-nota', count > 0);
-    var badge = btn.querySelector('.nota-badge');
-    if (count > 0) {
-        if (badge) { badge.textContent = count; }
-        else {
-            var sp = document.createElement('span');
-            sp.className = 'nota-badge';
-            sp.textContent = count;
-            btn.appendChild(sp);
-        }
-    } else if (badge) {
-        badge.parentNode.removeChild(badge);
-    }
+    let badge = btn.querySelector('.nota-badge');
+    if (count > 0) { if (badge) badge.textContent = count; else { let sp = document.createElement('span'); sp.className = 'nota-badge'; sp.textContent = count; btn.appendChild(sp); } }
+    else if (badge) badge.remove();
 }
-
-window.atualizarTodosOsBotoesNota = function() {
-    document.querySelectorAll('.bloco').forEach(function(_, i) {
-        atualizarBotaoNota(i);
-    });
-};
-
-function limparFormNota() {
-    ['nota-input-texto','nota-input-link-url','nota-input-link-label','nota-input-yt'].forEach(function(id) {
-        var el = document.getElementById(id);
-        if (el) el.value = '';
-    });
-}
-
+window.atualizarTodosOsBotoesNota = function() { document.querySelectorAll('.bloco').forEach((_, i) => atualizarBotaoNota(i)); };
+function limparFormNota() { ['nota-input-texto','nota-input-link-url','nota-input-link-label','nota-input-yt'].forEach(id => { let el = document.getElementById(id); if (el) el.value = ''; }); }
 function extrairYouTubeId(url) {
     if (!url) return null;
-    
     url = url.trim();
-    
-    var patterns = [
-        /(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/|youtube\.com\/shorts\/)([a-zA-Z0-9_-]{11})/,
-        /youtube\.com\/watch\?.*[&?]v=([a-zA-Z0-9_-]{11})/,
-        /^([a-zA-Z0-9_-]{11})$/
-    ];
-    
-    for (var i = 0; i < patterns.length; i++) {
-        var m = url.match(patterns[i]);
-        if (m && m[1]) {
-            return m[1];
-        }
-    }
-    
+    let patterns = [/(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/|youtube\.com\/shorts\/)([a-zA-Z0-9_-]{11})/, /youtube\.com\/watch\?.*[&?]v=([a-zA-Z0-9_-]{11})/, /^([a-zA-Z0-9_-]{11})$/];
+    for (let p of patterns) { let m = url.match(p); if (m && m[1]) return m[1]; }
     return null;
 }
+function dataFormatada() { return new Date().toLocaleDateString('pt-BR', { day: '2-digit', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit' }); }
+function escHtml(str) { return String(str || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
 
-function dataFormatada() {
-    return new Date().toLocaleDateString('pt-BR', {
-        day: '2-digit', month: 'short', year: 'numeric',
-        hour: '2-digit', minute: '2-digit'
-    });
-}
-
-function escHtml(str) {
-    return String(str || '')
-        .replace(/&/g,'&amp;')
-        .replace(/</g,'&lt;')
-        .replace(/>/g,'&gt;')
-        .replace(/"/g,'&quot;');
-}
-
-// Iniciar
-carregarAula();
-
-// ========== SISTEMA DE EXERCÍCIOS ==========
-let exDados = [];
-let exFila = [];
-let exAtual = 0;
-let exAcertos = 0;
-let exRespondido = false;
-let exOrdenarSelecionadas = [];
+// ========== EXERCÍCIOS COM PRONÚNCIA ==========
+let exDados = [], exFila = [], exAtual = 0, exAcertos = 0, exRespondido = false, exOrdenarSelecionadas = [], exPronunciaRecognition = null;
 
 window.abrirExercicios = async function(btn, blocoIndex) {
     const aulaId = new URLSearchParams(window.location.search).get('aula') || '1';
@@ -1640,128 +1138,104 @@ window.abrirExercicios = async function(btn, blocoIndex) {
         const res = await fetch(`dados/exercicios_aula${aulaId}.json`);
         const data = await res.json();
         const paragrafo = data.paragrafos[blocoIndex];
-        if (!paragrafo || !paragrafo.exercicios || paragrafo.exercicios.length === 0) {
-            alert('Nenhum exercício disponível para este parágrafo ainda.');
-            return;
-        }
+        if (!paragrafo || !paragrafo.exercicios || paragrafo.exercicios.length === 0) { alert('Nenhum exercício disponível para este parágrafo.'); return; }
         exDados = paragrafo.exercicios;
         iniciarSessaoExercicios();
-    } catch(e) {
-        alert('Erro ao carregar exercícios. Verifique se o arquivo JSON existe.');
-        console.error(e);
-    }
+    } catch(e) { alert('Erro ao carregar exercícios.'); console.error(e); }
     document.getElementById('exModal').style.display = 'flex';
     document.body.style.overflow = 'hidden';
 };
-
-window.fecharExercicios = function() {
-    document.getElementById('exModal').style.display = 'none';
-    document.body.style.overflow = '';
-};
-
-function iniciarSessaoExercicios() {
-    exFila = embaralhar([...exDados]).slice(0, 5);
-    exAtual = 0;
-    exAcertos = 0;
-    renderizarExercicio();
-}
-
-function embaralhar(arr) {
-    for (let i = arr.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [arr[i], arr[j]] = [arr[j], arr[i]];
-    }
-    return arr;
-}
-
-function atualizarProgresso() {
-    const total = exFila.length;
-    const atual = exAtual + 1;
-    document.getElementById('exProgresso').textContent = `Questão ${atual} de ${total}`;
-    document.getElementById('exProgressoFill').style.width = `${(exAtual / total) * 100}%`;
-}
+window.fecharExercicios = function() { document.getElementById('exModal').style.display = 'none'; document.body.style.overflow = ''; };
+function iniciarSessaoExercicios() { exFila = embaralhar([...exDados]).slice(0, 5); exAtual = 0; exAcertos = 0; renderizarExercicio(); }
+function embaralhar(arr) { for (let i = arr.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [arr[i], arr[j]] = [arr[j], arr[i]]; } return arr; }
+function atualizarProgresso() { const total = exFila.length; document.getElementById('exProgresso').textContent = `Questão ${exAtual + 1} de ${total}`; document.getElementById('exProgressoFill').style.width = `${(exAtual / total) * 100}%`; }
 
 function renderizarExercicio() {
-    if (exAtual >= exFila.length) {
-        mostrarPlacar();
-        return;
-    }
+    if (exAtual >= exFila.length) { mostrarPlacar(); return; }
     exRespondido = false;
     exOrdenarSelecionadas = [];
     atualizarProgresso();
     const ex = exFila[exAtual];
     const corpo = document.getElementById('exCorpo');
-
-    const badgeClasse = {
-        'multipla': 'badge-multipla',
-        'lacuna':   'badge-lacuna',
-        'ordenar':  'badge-ordenar',
-        'traduzir': 'badge-traduzir'
-    }[ex.tipo] || 'badge-multipla';
-
-    const badgeLabel = {
-        'multipla': '🔵 Múltipla escolha',
-        'lacuna':   '🟣 Preencher lacuna',
-        'ordenar':  '🟡 Ordenar palavras',
-        'traduzir': '🟢 Traduzir'
-    }[ex.tipo] || ex.tipo;
-
+    const badgeClasse = { 'multipla': 'badge-multipla', 'lacuna': 'badge-lacuna', 'ordenar': 'badge-ordenar', 'traduzir': 'badge-traduzir', 'pronuncia': 'badge-pronuncia' }[ex.tipo] || 'badge-multipla';
+    const badgeLabel = { 'multipla': '🔵 Múltipla escolha', 'lacuna': '🟣 Preencher lacuna', 'ordenar': '🟡 Ordenar palavras', 'traduzir': '🟢 Traduzir', 'pronuncia': '🎤 Pronúncia' }[ex.tipo] || ex.tipo;
     let htmlInterativo = '';
 
     if (ex.tipo === 'multipla') {
         const opcoes = embaralhar([...ex.opcoes]);
-        htmlInterativo = `<div class="ex-opcoes">
-            ${opcoes.map(op => `<button class="ex-opcao" onclick="responderMultipla(this, '${escapar(op)}', '${escapar(ex.resposta)}')">${op}</button>`).join('')}
-        </div>`;
-
+        htmlInterativo = `<div class="ex-opcoes">${opcoes.map(op => `<button class="ex-opcao" onclick="responderMultipla(this, '${escapar(op)}', '${escapar(ex.resposta)}')">${op}</button>`).join('')}</div>`;
     } else if (ex.tipo === 'lacuna') {
         const partes = ex.pergunta.split('___');
-        htmlInterativo = `
-            <div class="ex-lacuna-wrap">
-                <span>${partes[0]}</span>
-                <input class="ex-lacuna-input" id="exLacunaInput" type="text" placeholder="..." autocomplete="off" autocorrect="off" spellcheck="false" />
-                <span>${partes[1] || ''}</span>
-            </div>`;
-
+        htmlInterativo = `<div class="ex-lacuna-wrap"><span>${partes[0]}</span><input class="ex-lacuna-input" id="exLacunaInput" type="text" placeholder="..." autocomplete="off" /><span>${partes[1] || ''}</span></div>`;
     } else if (ex.tipo === 'ordenar') {
         const palavras = embaralhar([...ex.palavras]);
-        htmlInterativo = `
-            <div class="ex-area-label">Sua resposta</div>
-            <div class="ex-palavras-area" id="exOrdenarArea"></div>
-            <div class="ex-area-label" style="margin-top:10px">Palavras disponíveis</div>
-            <div class="ex-palavra-banco" id="exPalavraBanco">
-                ${palavras.map((p, i) => `<button class="ex-palavra" data-idx="${i}" data-palavra="${escapar(p)}" onclick="selecionarPalavra(this)">${p}</button>`).join('')}
-            </div>`;
-
+        htmlInterativo = `<div class="ex-area-label">Sua resposta</div><div class="ex-palavras-area" id="exOrdenarArea"></div><div class="ex-area-label" style="margin-top:10px">Palavras disponíveis</div><div class="ex-palavra-banco" id="exPalavraBanco">${palavras.map((p, i) => `<button class="ex-palavra" data-idx="${i}" data-palavra="${escapar(p)}" onclick="selecionarPalavra(this)">${p}</button>`).join('')}</div>`;
     } else if (ex.tipo === 'traduzir') {
         htmlInterativo = `<textarea class="ex-textarea" id="exTraduzirInput" rows="3" placeholder="Digite sua tradução em português..."></textarea>`;
+    } else if (ex.tipo === 'pronuncia') {
+        const palavras = ex.palavras || [ex.resposta];
+        htmlInterativo = `
+            <div class="ex-pronuncia-area">
+                <div class="ex-palavra-destaque">${palavras.map(p => `<span class="pronuncia-word">${p}</span>`).join(' · ')}</div>
+                <div class="ex-pronuncia-botoes">
+                    <button class="ex-ouvir-btn" onclick="ouvirPronuncia('${escapar(ex.resposta)}')">🔊 Ouvir pronúncia</button>
+                    <button class="ex-gravar-btn" id="exGravarBtn" onclick="gravarPronuncia(this, '${escapar(ex.resposta)}')">🎙️ Gravar minha pronúncia</button>
+                </div>
+                <div class="mic-resultado" id="exPronunciaResultado" style="display:none"></div>
+            </div>`;
     }
 
-    const perguntaHTML = ex.tipo === 'lacuna'
-        ? `<div class="ex-pergunta">${ex.enunciado || 'Complete a frase:'}</div>`
-        : `<div class="ex-pergunta">${ex.pergunta}</div>`;
-
-    corpo.innerHTML = `
-        <span class="ex-tipo-badge ${badgeClasse}">${badgeLabel}</span>
-        ${perguntaHTML}
-        ${htmlInterativo}
-        <div class="ex-feedback" id="exFeedback"></div>
-        <div class="ex-acoes">
-            <button class="ex-confirmar" id="exConfirmar" onclick="confirmarResposta()">Confirmar</button>
-            <button class="ex-proximo" id="exProximo" onclick="proximoExercicio()">Próximo →</button>
-        </div>
-    `;
-
-    if (ex.tipo === 'lacuna') {
-        setTimeout(() => document.getElementById('exLacunaInput')?.focus(), 100);
-        document.getElementById('exLacunaInput').addEventListener('keydown', e => {
-            if (e.key === 'Enter' && !exRespondido) confirmarResposta();
-        });
-    }
-    if (ex.tipo === 'traduzir') {
-        setTimeout(() => document.getElementById('exTraduzirInput')?.focus(), 100);
-    }
+    const perguntaHTML = ex.tipo === 'lacuna' ? `<div class="ex-pergunta">${ex.enunciado || 'Complete a frase:'}</div>` : `<div class="ex-pergunta">${ex.pergunta || 'Pratique a pronúncia:'}</div>`;
+    corpo.innerHTML = `<span class="ex-tipo-badge ${badgeClasse}">${badgeLabel}</span>${perguntaHTML}${htmlInterativo}<div class="ex-feedback" id="exFeedback"></div><div class="ex-acoes"><button class="ex-confirmar" id="exConfirmar" onclick="confirmarResposta()">Confirmar</button><button class="ex-proximo" id="exProximo" onclick="proximoExercicio()">Próximo →</button></div>`;
+    
+    if (ex.tipo === 'lacuna') { setTimeout(() => document.getElementById('exLacunaInput')?.focus(), 100); document.getElementById('exLacunaInput').addEventListener('keydown', e => { if (e.key === 'Enter' && !exRespondido) confirmarResposta(); }); }
+    if (ex.tipo === 'traduzir') setTimeout(() => document.getElementById('exTraduzirInput')?.focus(), 100);
 }
+
+window.ouvirPronuncia = function(texto) {
+    const utterance = new SpeechSynthesisUtterance(texto);
+    utterance.lang = 'it-IT';
+    utterance.rate = 0.8;
+    speechSynthesis.cancel();
+    speechSynthesis.speak(utterance);
+};
+
+window.gravarPronuncia = function(btn, textoEsperado) {
+    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+    if (!SpeechRecognition) { alert('Seu navegador não suporta reconhecimento de voz.'); return; }
+    if (btn.classList.contains('gravando')) { if (exPronunciaRecognition) exPronunciaRecognition.stop(); return; }
+    if (exPronunciaRecognition) exPronunciaRecognition.stop();
+    const resultado = document.getElementById('exPronunciaResultado');
+    const recognition = new SpeechRecognition();
+    recognition.lang = 'it-IT';
+    recognition.interimResults = false;
+    exPronunciaRecognition = recognition;
+    btn.classList.add('gravando');
+    btn.innerHTML = '⏹️ Parar';
+    resultado.style.display = 'none';
+    recognition.onresult = function(event) {
+        const falado = event.results[0][0].transcript.toLowerCase().trim();
+        const normalizar = t => t.replace(/[.,!?;:"""'']/g,'').trim().toLowerCase();
+        const esperadoNorm = normalizar(textoEsperado);
+        const faladoNorm = normalizar(falado);
+        const pct = faladoNorm === esperadoNorm ? 1 : (faladoNorm.includes(esperadoNorm) || esperadoNorm.includes(faladoNorm) ? 0.7 : 0.3);
+        resultado.style.display = 'block';
+        if (pct >= 0.8) {
+            resultado.className = 'mic-resultado acerto';
+            resultado.innerHTML = `✅ Ótimo! Você disse: "${falado}"<br>🎉 Pronúncia correta!`;
+            document.getElementById('exConfirmar').click();
+        } else if (pct >= 0.5) {
+            resultado.className = 'mic-resultado parcial';
+            resultado.innerHTML = `🟡 Quase lá! Você disse: "${falado}"<br>Esperado: "${textoEsperado}"`;
+        } else {
+            resultado.className = 'mic-resultado erro';
+            resultado.innerHTML = `❌ Tente novamente. Você disse: "${falado}"<br>Esperado: "${textoEsperado}"`;
+        }
+    };
+    recognition.onerror = function() { resultado.style.display = 'block'; resultado.className = 'mic-resultado erro'; resultado.innerHTML = 'Erro no microfone. Tente novamente.'; };
+    recognition.onend = function() { btn.classList.remove('gravando'); btn.innerHTML = '🎙️ Gravar minha pronúncia'; exPronunciaRecognition = null; };
+    recognition.start();
+};
 
 window.selecionarPalavra = function(btn) {
     if (exRespondido) return;
@@ -1772,14 +1246,10 @@ window.selecionarPalavra = function(btn) {
     const chip = document.createElement('button');
     chip.className = 'ex-palavra selecionada';
     chip.textContent = palavra;
-    chip.dataset.palavra = palavra;
-    chip.dataset.bancoIdx = btn.dataset.idx;
     chip.onclick = function() {
         if (exRespondido) return;
-        const lastIndex = exOrdenarSelecionadas.lastIndexOf(palavra);
-        if (lastIndex !== -1) {
-            exOrdenarSelecionadas.splice(lastIndex, 1);
-        }
+        const idx = exOrdenarSelecionadas.lastIndexOf(palavra);
+        if (idx !== -1) exOrdenarSelecionadas.splice(idx, 1);
         document.querySelector(`.ex-palavra-banco .ex-palavra[data-idx="${btn.dataset.idx}"]`)?.classList.remove('usada');
         chip.remove();
     };
@@ -1789,34 +1259,22 @@ window.selecionarPalavra = function(btn) {
 window.confirmarResposta = function() {
     if (exRespondido) return;
     const ex = exFila[exAtual];
-    let certa = false;
-    let feedbackExtra = '';
-
-    if (ex.tipo === 'multipla') {
-        return;
-    }
-
+    let certa = false, feedbackExtra = '';
+    if (ex.tipo === 'multipla') return;
     if (ex.tipo === 'lacuna') {
         const input = document.getElementById('exLacunaInput');
         const resposta = input.value.trim().toLowerCase();
         const esperada = ex.resposta.toLowerCase();
-        certa = resposta === esperada || ex.alternativas?.map(a => a.toLowerCase()).includes(resposta);
+        certa = resposta === esperada || (ex.alternativas || []).map(a => a.toLowerCase()).includes(resposta);
         input.classList.add(certa ? 'certa' : 'errada');
         if (!certa) feedbackExtra = `<br>Resposta correta: <strong>${ex.resposta}</strong>`;
-    }
-
-    if (ex.tipo === 'ordenar') {
+    } else if (ex.tipo === 'ordenar') {
         const frase = exOrdenarSelecionadas.join(' ').toLowerCase().trim();
         const esperada = ex.resposta.toLowerCase().trim();
         certa = frase === esperada;
         if (!certa) feedbackExtra = `<br>Resposta correta: <strong>${ex.resposta}</strong>`;
-        document.querySelectorAll('#exOrdenarArea .ex-palavra').forEach(p => {
-            p.style.borderColor = certa ? '#5cb85c' : '#e05c5c';
-            p.style.background = certa ? '#e8f5ef' : '#fff0f0';
-        });
-    }
-
-    if (ex.tipo === 'traduzir') {
+        document.querySelectorAll('#exOrdenarArea .ex-palavra').forEach(p => { p.style.borderColor = certa ? '#5cb85c' : '#e05c5c'; p.style.background = certa ? '#e8f5ef' : '#fff0f0'; });
+    } else if (ex.tipo === 'traduzir') {
         const input = document.getElementById('exTraduzirInput');
         const resposta = input.value.trim().toLowerCase();
         const palavrasChave = ex.palavrasChave || ex.resposta.toLowerCase().split(/\s+/).filter(p => p.length > 3);
@@ -1824,8 +1282,9 @@ window.confirmarResposta = function() {
         certa = acertos >= Math.ceil(palavrasChave.length * 0.6);
         input.style.borderColor = certa ? '#5cb85c' : '#e05c5c';
         feedbackExtra = `<br>Uma resposta válida: <em>${ex.resposta}</em>`;
+    } else if (ex.tipo === 'pronuncia') {
+        certa = true;
     }
-
     mostrarFeedback(certa, ex.explicacao, feedbackExtra);
     if (certa) exAcertos++;
     exRespondido = true;
@@ -1838,13 +1297,8 @@ window.responderMultipla = function(btn, opcao, resposta) {
     exRespondido = true;
     const certa = opcao === resposta;
     if (certa) exAcertos++;
-
-    document.querySelectorAll('.ex-opcao').forEach(b => {
-        b.disabled = true;
-        if (b.textContent.trim() === resposta) b.classList.add('certa');
-    });
+    document.querySelectorAll('.ex-opcao').forEach(b => { b.disabled = true; if (b.textContent.trim() === resposta) b.classList.add('certa'); });
     btn.classList.add(certa ? 'certa' : 'errada');
-
     const ex = exFila[exAtual];
     mostrarFeedback(certa, ex.explicacao, certa ? '' : `<br>Resposta correta: <strong>${resposta}</strong>`);
     document.getElementById('exConfirmar').style.display = 'none';
@@ -1854,38 +1308,21 @@ window.responderMultipla = function(btn, opcao, resposta) {
 function mostrarFeedback(certa, explicacao, extra) {
     const fb = document.getElementById('exFeedback');
     fb.className = 'ex-feedback ' + (certa ? 'certa' : 'errada');
-    fb.innerHTML = (certa ? '✅ <strong>Correto!</strong>' : '❌ <strong>Incorreto.</strong>') +
-        (extra || '') +
-        (explicacao ? `<br><span style="opacity:0.8;font-size:0.8rem">${explicacao}</span>` : '');
+    fb.innerHTML = (certa ? '✅ Correto!' : '❌ Incorreto.') + (extra || '') + (explicacao ? `<br><span style="opacity:0.8;font-size:0.8rem">${explicacao}</span>` : '');
 }
 
-window.proximoExercicio = function() {
-    exAtual++;
-    renderizarExercicio();
-};
-
+window.proximoExercicio = function() { exAtual++; renderizarExercicio(); };
 function mostrarPlacar() {
-    const total = exFila.length;
-    const pct = Math.round((exAcertos / total) * 100);
+    const total = exFila.length, pct = Math.round((exAcertos / total) * 100);
     const emoji = pct >= 80 ? '🏆' : pct >= 50 ? '👍' : '💪';
     const msg = pct >= 80 ? 'Excelente trabalho!' : pct >= 50 ? 'Bom progresso!' : 'Continue praticando!';
-
     document.getElementById('exProgresso').textContent = 'Resultado final';
     document.getElementById('exProgressoFill').style.width = '100%';
-    document.getElementById('exCorpo').innerHTML = `
-        <div class="ex-placar">
-            <div class="ex-placar-emoji">${emoji}</div>
-            <div class="ex-placar-titulo">${msg}</div>
-            <div class="ex-placar-score">${exAcertos}/${total} <span style="font-size:1rem;color:#999">(${pct}%)</span></div>
-            <div class="ex-placar-sub">Quer tentar de novo com novas questões?</div>
-            <button class="ex-reiniciar" onclick="iniciarSessaoExercicios()">🔄 Praticar novamente</button>
-        </div>
-    `;
+    document.getElementById('exCorpo').innerHTML = `<div class="ex-placar"><div class="ex-placar-emoji">${emoji}</div><div class="ex-placar-titulo">${msg}</div><div class="ex-placar-score">${exAcertos}/${total} <span style="font-size:1rem;color:#999">(${pct}%)</span></div><div class="ex-placar-sub">Quer tentar de novo?</div><button class="ex-reiniciar" onclick="iniciarSessaoExercicios()">🔄 Praticar novamente</button></div>`;
 }
+function escapar(str) { return (str || '').replace(/'/g, "\\'").replace(/"/g, '&quot;'); }
 
-function escapar(str) {
-    return (str || '').replace(/'/g, "\\'").replace(/"/g, '&quot;');
-}
+carregarAula();
 </script>
 </body>
 </html>
