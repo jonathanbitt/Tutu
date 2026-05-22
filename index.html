@@ -571,6 +571,12 @@ details[open] summary::after{ transform:rotate(180deg); }
     animation: pulso 1s infinite;
 }
 .ex-gravar-btn:hover { background: #666; }
+.ex-dica-pronuncia {
+    margin-top: 10px;
+    font-size: 0.8rem;
+    color: #666;
+    text-align: center;
+}
 
 .ex-opcoes { display: flex; flex-direction: column; gap: 8px; }
 .ex-opcao {
@@ -1129,7 +1135,7 @@ function extrairYouTubeId(url) {
 function dataFormatada() { return new Date().toLocaleDateString('pt-BR', { day: '2-digit', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit' }); }
 function escHtml(str) { return String(str || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
 
-// ========== EXERCÍCIOS COM PRONÚNCIA ==========
+// ========== EXERCÍCIOS COM PRONÚNCIA CORRIGIDOS ==========
 let exDados = [], exFila = [], exAtual = 0, exAcertos = 0, exRespondido = false, exOrdenarSelecionadas = [], exPronunciaRecognition = null;
 
 window.abrirExercicios = async function(btn, blocoIndex) {
@@ -1152,27 +1158,55 @@ function atualizarProgresso() { const total = exFila.length; document.getElement
 
 function renderizarExercicio() {
     if (exAtual >= exFila.length) { mostrarPlacar(); return; }
+    
+    // Limpar estado anterior
     exRespondido = false;
     exOrdenarSelecionadas = [];
+    
+    // Se houver reconhecimento de voz ativo, parar
+    if (exPronunciaRecognition) {
+        exPronunciaRecognition.stop();
+        exPronunciaRecognition = null;
+    }
+    
     atualizarProgresso();
     const ex = exFila[exAtual];
     const corpo = document.getElementById('exCorpo');
-    const badgeClasse = { 'multipla': 'badge-multipla', 'lacuna': 'badge-lacuna', 'ordenar': 'badge-ordenar', 'traduzir': 'badge-traduzir', 'pronuncia': 'badge-pronuncia' }[ex.tipo] || 'badge-multipla';
-    const badgeLabel = { 'multipla': '🔵 Múltipla escolha', 'lacuna': '🟣 Preencher lacuna', 'ordenar': '🟡 Ordenar palavras', 'traduzir': '🟢 Traduzir', 'pronuncia': '🎤 Pronúncia' }[ex.tipo] || ex.tipo;
+    
+    const badgeClasse = { 
+        'multipla': 'badge-multipla', 
+        'lacuna': 'badge-lacuna', 
+        'ordenar': 'badge-ordenar', 
+        'traduzir': 'badge-traduzir', 
+        'pronuncia': 'badge-pronuncia' 
+    }[ex.tipo] || 'badge-multipla';
+    
+    const badgeLabel = { 
+        'multipla': '🔵 Múltipla escolha', 
+        'lacuna': '🟣 Preencher lacuna', 
+        'ordenar': '🟡 Ordenar palavras', 
+        'traduzir': '🟢 Traduzir', 
+        'pronuncia': '🎤 Pronúncia' 
+    }[ex.tipo] || ex.tipo;
+    
     let htmlInterativo = '';
 
     if (ex.tipo === 'multipla') {
         const opcoes = embaralhar([...ex.opcoes]);
         htmlInterativo = `<div class="ex-opcoes">${opcoes.map(op => `<button class="ex-opcao" onclick="responderMultipla(this, '${escapar(op)}', '${escapar(ex.resposta)}')">${op}</button>`).join('')}</div>`;
-    } else if (ex.tipo === 'lacuna') {
+    } 
+    else if (ex.tipo === 'lacuna') {
         const partes = ex.pergunta.split('___');
         htmlInterativo = `<div class="ex-lacuna-wrap"><span>${partes[0]}</span><input class="ex-lacuna-input" id="exLacunaInput" type="text" placeholder="..." autocomplete="off" /><span>${partes[1] || ''}</span></div>`;
-    } else if (ex.tipo === 'ordenar') {
+    } 
+    else if (ex.tipo === 'ordenar') {
         const palavras = embaralhar([...ex.palavras]);
         htmlInterativo = `<div class="ex-area-label">Sua resposta</div><div class="ex-palavras-area" id="exOrdenarArea"></div><div class="ex-area-label" style="margin-top:10px">Palavras disponíveis</div><div class="ex-palavra-banco" id="exPalavraBanco">${palavras.map((p, i) => `<button class="ex-palavra" data-idx="${i}" data-palavra="${escapar(p)}" onclick="selecionarPalavra(this)">${p}</button>`).join('')}</div>`;
-    } else if (ex.tipo === 'traduzir') {
+    } 
+    else if (ex.tipo === 'traduzir') {
         htmlInterativo = `<textarea class="ex-textarea" id="exTraduzirInput" rows="3" placeholder="Digite sua tradução em português..."></textarea>`;
-    } else if (ex.tipo === 'pronuncia') {
+    } 
+    else if (ex.tipo === 'pronuncia') {
         const palavras = ex.palavras || [ex.resposta];
         htmlInterativo = `
             <div class="ex-pronuncia-area">
@@ -1182,14 +1216,32 @@ function renderizarExercicio() {
                     <button class="ex-gravar-btn" id="exGravarBtn" onclick="gravarPronuncia(this, '${escapar(ex.resposta)}')">🎙️ Gravar minha pronúncia</button>
                 </div>
                 <div class="mic-resultado" id="exPronunciaResultado" style="display:none"></div>
+                <div class="ex-dica-pronuncia">
+                    💡 Dica: Fale claramente e em um ambiente silencioso para melhor reconhecimento.
+                </div>
             </div>`;
     }
 
     const perguntaHTML = ex.tipo === 'lacuna' ? `<div class="ex-pergunta">${ex.enunciado || 'Complete a frase:'}</div>` : `<div class="ex-pergunta">${ex.pergunta || 'Pratique a pronúncia:'}</div>`;
+    
     corpo.innerHTML = `<span class="ex-tipo-badge ${badgeClasse}">${badgeLabel}</span>${perguntaHTML}${htmlInterativo}<div class="ex-feedback" id="exFeedback"></div><div class="ex-acoes"><button class="ex-confirmar" id="exConfirmar" onclick="confirmarResposta()">Confirmar</button><button class="ex-proximo" id="exProximo" onclick="proximoExercicio()">Próximo →</button></div>`;
     
-    if (ex.tipo === 'lacuna') { setTimeout(() => document.getElementById('exLacunaInput')?.focus(), 100); document.getElementById('exLacunaInput').addEventListener('keydown', e => { if (e.key === 'Enter' && !exRespondido) confirmarResposta(); }); }
-    if (ex.tipo === 'traduzir') setTimeout(() => document.getElementById('exTraduzirInput')?.focus(), 100);
+    if (ex.tipo === 'lacuna') { 
+        setTimeout(() => document.getElementById('exLacunaInput')?.focus(), 100); 
+        document.getElementById('exLacunaInput').addEventListener('keydown', e => { 
+            if (e.key === 'Enter' && !exRespondido) confirmarResposta(); 
+        }); 
+    }
+    if (ex.tipo === 'traduzir') {
+        setTimeout(() => document.getElementById('exTraduzirInput')?.focus(), 100);
+    }
+    if (ex.tipo === 'pronuncia') {
+        // Esconder botão confirmar para pronúncia
+        setTimeout(() => {
+            const confirmBtn = document.getElementById('exConfirmar');
+            if (confirmBtn) confirmBtn.style.display = 'none';
+        }, 100);
+    }
 }
 
 window.ouvirPronuncia = function(texto) {
@@ -1203,37 +1255,70 @@ window.ouvirPronuncia = function(texto) {
 window.gravarPronuncia = function(btn, textoEsperado) {
     const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
     if (!SpeechRecognition) { alert('Seu navegador não suporta reconhecimento de voz.'); return; }
-    if (btn.classList.contains('gravando')) { if (exPronunciaRecognition) exPronunciaRecognition.stop(); return; }
+    
+    if (btn.classList.contains('gravando')) { 
+        if (exPronunciaRecognition) exPronunciaRecognition.stop(); 
+        return; 
+    }
+    
     if (exPronunciaRecognition) exPronunciaRecognition.stop();
+    
     const resultado = document.getElementById('exPronunciaResultado');
     const recognition = new SpeechRecognition();
     recognition.lang = 'it-IT';
     recognition.interimResults = false;
     exPronunciaRecognition = recognition;
+    
     btn.classList.add('gravando');
     btn.innerHTML = '⏹️ Parar';
     resultado.style.display = 'none';
+    resultado.className = 'mic-resultado';
+    
     recognition.onresult = function(event) {
         const falado = event.results[0][0].transcript.toLowerCase().trim();
         const normalizar = t => t.replace(/[.,!?;:"""'']/g,'').trim().toLowerCase();
         const esperadoNorm = normalizar(textoEsperado);
         const faladoNorm = normalizar(falado);
-        const pct = faladoNorm === esperadoNorm ? 1 : (faladoNorm.includes(esperadoNorm) || esperadoNorm.includes(faladoNorm) ? 0.7 : 0.3);
+        
+        // Calcula similaridade
+        const palavrasEsperadas = esperadoNorm.split(/\s+/);
+        const palavrasFaladas = faladoNorm.split(/\s+/);
+        const emComum = palavrasEsperadas.filter(p => palavrasFaladas.includes(p)).length;
+        const pct = emComum / palavrasEsperadas.length;
+        
         resultado.style.display = 'block';
+        
         if (pct >= 0.8) {
             resultado.className = 'mic-resultado acerto';
             resultado.innerHTML = `✅ Ótimo! Você disse: "${falado}"<br>🎉 Pronúncia correta!`;
-            document.getElementById('exConfirmar').click();
+            // Marcar como acertado e habilitar próximo
+            if (!exRespondido) {
+                exAcertos++;
+                exRespondido = true;
+                document.getElementById('exConfirmar').style.display = 'none';
+                document.getElementById('exProximo').style.display = 'block';
+            }
         } else if (pct >= 0.5) {
             resultado.className = 'mic-resultado parcial';
-            resultado.innerHTML = `🟡 Quase lá! Você disse: "${falado}"<br>Esperado: "${textoEsperado}"`;
+            resultado.innerHTML = `🟡 Quase lá! Você disse: "${falado}"<br>Esperado: "${textoEsperado}"<br>Tente novamente!`;
         } else {
             resultado.className = 'mic-resultado erro';
-            resultado.innerHTML = `❌ Tente novamente. Você disse: "${falado}"<br>Esperado: "${textoEsperado}"`;
+            resultado.innerHTML = `❌ Tente novamente. Você disse: "${falado}"<br>Esperado: "${textoEsperado}"<br>🔁 Clique no microfone para tentar de novo.`;
         }
     };
-    recognition.onerror = function() { resultado.style.display = 'block'; resultado.className = 'mic-resultado erro'; resultado.innerHTML = 'Erro no microfone. Tente novamente.'; };
-    recognition.onend = function() { btn.classList.remove('gravando'); btn.innerHTML = '🎙️ Gravar minha pronúncia'; exPronunciaRecognition = null; };
+    
+    recognition.onerror = function() {
+        resultado.style.display = 'block';
+        resultado.className = 'mic-resultado erro';
+        resultado.innerHTML = '❌ Erro no microfone. Tente novamente.';
+    };
+    
+    recognition.onend = function() {
+        btn.classList.remove('gravando');
+        btn.innerHTML = '🎙️ Gravar minha pronúncia';
+        exPronunciaRecognition = null;
+    };
+    
     recognition.start();
 };
 
@@ -1259,8 +1344,13 @@ window.selecionarPalavra = function(btn) {
 window.confirmarResposta = function() {
     if (exRespondido) return;
     const ex = exFila[exAtual];
-    let certa = false, feedbackExtra = '';
-    if (ex.tipo === 'multipla') return;
+    let certa = false;
+    let feedbackExtra = '';
+    
+    if (ex.tipo === 'multipla') {
+        return;
+    }
+    
     if (ex.tipo === 'lacuna') {
         const input = document.getElementById('exLacunaInput');
         const resposta = input.value.trim().toLowerCase();
@@ -1268,13 +1358,22 @@ window.confirmarResposta = function() {
         certa = resposta === esperada || (ex.alternativas || []).map(a => a.toLowerCase()).includes(resposta);
         input.classList.add(certa ? 'certa' : 'errada');
         if (!certa) feedbackExtra = `<br>Resposta correta: <strong>${ex.resposta}</strong>`;
-    } else if (ex.tipo === 'ordenar') {
+        if (certa) exAcertos++;
+        exRespondido = true;
+    } 
+    else if (ex.tipo === 'ordenar') {
         const frase = exOrdenarSelecionadas.join(' ').toLowerCase().trim();
         const esperada = ex.resposta.toLowerCase().trim();
         certa = frase === esperada;
         if (!certa) feedbackExtra = `<br>Resposta correta: <strong>${ex.resposta}</strong>`;
-        document.querySelectorAll('#exOrdenarArea .ex-palavra').forEach(p => { p.style.borderColor = certa ? '#5cb85c' : '#e05c5c'; p.style.background = certa ? '#e8f5ef' : '#fff0f0'; });
-    } else if (ex.tipo === 'traduzir') {
+        if (certa) exAcertos++;
+        exRespondido = true;
+        document.querySelectorAll('#exOrdenarArea .ex-palavra').forEach(p => {
+            p.style.borderColor = certa ? '#5cb85c' : '#e05c5c';
+            p.style.background = certa ? '#e8f5ef' : '#fff0f0';
+        });
+    } 
+    else if (ex.tipo === 'traduzir') {
         const input = document.getElementById('exTraduzirInput');
         const resposta = input.value.trim().toLowerCase();
         const palavrasChave = ex.palavrasChave || ex.resposta.toLowerCase().split(/\s+/).filter(p => p.length > 3);
@@ -1282,14 +1381,29 @@ window.confirmarResposta = function() {
         certa = acertos >= Math.ceil(palavrasChave.length * 0.6);
         input.style.borderColor = certa ? '#5cb85c' : '#e05c5c';
         feedbackExtra = `<br>Uma resposta válida: <em>${ex.resposta}</em>`;
-    } else if (ex.tipo === 'pronuncia') {
-        certa = true;
+        if (certa) exAcertos++;
+        exRespondido = true;
+    } 
+    else if (ex.tipo === 'pronuncia') {
+        // Para pronúncia, NÃO contamos acerto aqui
+        // O acerto já foi contado na função gravarPronuncia quando acertou
+        if (!exRespondido) {
+            feedbackExtra = `<br>⚠️ Você precisa gravar sua pronúncia primeiro! Clique no microfone 🎙️ e tente falar a palavra.`;
+            mostrarFeedback(false, ex.explicacao, feedbackExtra);
+            return;
+        }
+        mostrarFeedback(true, ex.explicacao, '');
+        document.getElementById('exConfirmar').style.display = 'none';
+        document.getElementById('exProximo').style.display = 'block';
+        return;
     }
+    
     mostrarFeedback(certa, ex.explicacao, feedbackExtra);
-    if (certa) exAcertos++;
-    exRespondido = true;
-    document.getElementById('exConfirmar').style.display = 'none';
-    document.getElementById('exProximo').style.display = 'block';
+    
+    if (exRespondido) {
+        document.getElementById('exConfirmar').style.display = 'none';
+        document.getElementById('exProximo').style.display = 'block';
+    }
 };
 
 window.responderMultipla = function(btn, opcao, resposta) {
