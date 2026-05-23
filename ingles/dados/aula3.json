@@ -1,127 +1,504 @@
 {
+  "aula": 3,
   "titulo": "INGLÊS — The Poem of Connection",
-  "videoUrl": "https://jonathanbitt.github.io/Tutu/ingles/dados/videos/video3.mp4",
-  "quizletUrl": "quizlet.html?quizlet=3",
-  "blocos": [
+  "paragrafos": [
     {
-      "start": 0,
-      "english": "So this morning I watched a video of a man named Dr. Malcolm Geat sharing a short poem he wrote about God and it gave me chills.",
-      "translation": "Então esta manhã eu assisti a um vídeo de um homem chamado Dr. Malcolm Geat compartilhando um pequeno poema que ele escreveu sobre Deus, e isso me arrepiava.",
-      "tip": "<strong>\"gave me chills\"</strong> — Expressão idiomática que significa 'me arrepiava' (emoção forte, seja medo ou admiração). <strong>\"so this morning\"</strong> — 'So' no início da frase funciona como conectivo conversacional, não como 'então' conclusivo.",
-      "miniLesson": {
-        "title": "Expressões com 'Chill' e o Conectivo 'So'",
-        "content": "<p><strong>\"gave me chills\" / \"gave me goosebumps\"</strong> — Ambas expressam arrepios. 'Chills' pode ser de emoção (positiva ou negativa). 'It gave me chills' = algo impactante.</p><div class=\"exemplo\">That speech gave me chills. → Aquele discurso me arrepiou.</div><p style=\"margin-top:10px\"><strong>'So' como marcador discursivo</strong> — No início de uma conversa ou vídeo, 'so' suaviza a entrada no tópico. Não significa 'therefore' aqui.</p><div class=\"exemplo\">So, let me tell you a story. → Então, deixe-me contar uma história.</div>"
-      }
+      "indice": 0,
+      "referencia": "So this morning I watched a video... and it gave me chills.",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "O que significa a expressão <em>it gave me chills</em>?",
+          "opcoes": ["Me deu frio", "Me arrepiava / causou forte emoção", "Me assustou", "Me deixou entediado"],
+          "resposta": "Me arrepiava / causou forte emoção",
+          "explicacao": "'Give someone chills' significa causar uma forte reação emocional (admiração, medo, emoção) que causa arrepios."
+        },
+        {
+          "tipo": "multipla",
+          "pergunta": "Qual a função do 'So' no início da frase <em>So this morning I watched...</em>?",
+          "opcoes": ["Expressar consequência", "Marcador discursivo/conversacional", "Comparar ideias", "Expressar causa"],
+          "resposta": "Marcador discursivo/conversacional",
+          "explicacao": "'So' no início de uma fala ou vídeo é um marcador discursivo para suavizar a entrada no tópico, não significa 'portanto'."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete a expressão:",
+          "pergunta": "That speech ___ me chills.",
+          "resposta": "gave",
+          "alternativas": ["Gave", "gave"],
+          "explicacao": "A expressão é 'give someone chills' (passado: gave)."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza: <em>It gave me chills</em>",
+          "resposta": "Isso me arrepiava / Isso me deu arrepios",
+          "palavrasChave": ["arrepios", "arrepiava"],
+          "explicacao": "Pode ser passado (deu arrepios) ou imperfeito (arrepiava)."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique:",
+          "palavras": ["gave", "me", "chills"],
+          "resposta": "gave me chills",
+          "explicacao": "'Gave' (gêiv) - 'a' como 'êi', 'chills' (tchíus) - 'ch' como 'tch', 'i' curto, 'lls' como 'us'."
+        }
+      ]
     },
     {
-      "start": 8,
-      "english": "It was so profound, so beautiful, I have to share it with you.",
-      "translation": "Era tão profundo, tão lindo, que eu tenho que compartilhar com vocês.",
-      "tip": "<strong>\"so profound, so beautiful\"</strong> — Repetição do 'so' para ênfase (tão... tão...). <strong>\"I have to share\"</strong> — 'Have to' expressa forte necessidade/obrigação sentida pelo falante.",
-      "miniLesson": {
-        "title": "Repetição Enfática com 'So' e 'Have to'",
-        "content": "<p><strong>\"so + adjetivo\" repetido</strong> — Essa estrutura cria ritmo e intensifica a emoção. É comum em narrativas pessoais e discursos.</p><div class=\"exemplo\">It was so sad, so unfair. → Foi tão triste, tão injusto.</div><p style=\"margin-top:10px\"><strong>'Have to' vs 'Must'</strong> — 'Have to' é mais comum em conversação e expressa necessidade externa ou sentida. 'Must' é mais forte e formal.</p><div class=\"exemplo\">I have to tell you something. → Tenho que te contar algo.</div>"
-      }
+      "indice": 1,
+      "referencia": "It was so profound, so beautiful, I have to share it with you.",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "O que significa <em>profound</em>?",
+          "opcoes": ["Profundo (no sentido intelectual/emocional)", "Comprido", "Confuso", "Simples"],
+          "resposta": "Profundo (no sentido intelectual/emocional)",
+          "explicacao": "'Profound' significa algo com grande profundidade de significado, emocionalmente impactante ou intelectualmente denso."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete a frase com a estrutura repetitiva:",
+          "pergunta": "It was so sad, so ___.",
+          "resposta": "unfair",
+          "alternativas": ["Unfair", "unfair", "sad"],
+          "explicacao": "A estrutura 'so + adjetivo, so + adjetivo' usa dois adjetivos diferentes para ênfase."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene:",
+          "palavras": ["have", "share", "it", "to", "with", "i", "you"],
+          "resposta": "i have to share it with you",
+          "explicacao": "'I have to' (obrigação) + 'share it with you'."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza: <em>It was so profound, so beautiful</em>",
+          "resposta": "Era tão profundo, tão lindo",
+          "palavrasChave": ["tão", "profundo", "lindo"],
+          "explicacao": "O 'so' repetido traduz-se como 'tão' em ambos os casos."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique:",
+          "palavras": ["profound", "beautiful"],
+          "resposta": "profound beautiful",
+          "explicacao": "'Profound' (profáund) - 'pro' como 'pro', 'found' como 'fáund'. 'Beautiful' (biútiful) - 3 sílabas."
+        }
+      ]
     },
     {
-      "start": 16,
-      "english": "Here it is.",
-      "translation": "Aqui está.",
-      "tip": "<strong>\"Here it is\"</strong> — Frase muito comum ao apresentar algo (um objeto, um poema, uma ideia). 'Here you are' seria ao entregar algo a alguém.",
-      "miniLesson": {
-        "title": "Aqui Está / Aqui Estão — 'Here it is' vs 'Here they are'",
-        "content": "<p><strong>\"Here it is\"</strong> — Usado para um objeto singular ou algo imaterial (um poema). 'Here they are' para plural.</p><div class=\"exemplo\">Where's my phone? Here it is. → Cadê meu celular? Aqui está.</div><p style=\"margin-top:10px\"><strong>Não confundir com 'Here you are'</strong> — 'Here you are' se usa ao entregar algo fisicamente a alguém.</p><div class=\"exemplo\">Here you are, your coffee. → Aqui está seu café.</div>"
-      }
+      "indice": 2,
+      "referencia": "I cannot think unless I have been thought, nor can I speak unless I have been spoken.",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "O que significa <em>unless</em>?",
+          "opcoes": ["Se", "A menos que", "Porque", "Enquanto"],
+          "resposta": "A menos que",
+          "explicacao": "'Unless' expressa uma condição negativa. 'Unless you try' = 'se você não tentar' ou 'a menos que tente'."
+        },
+        {
+          "tipo": "multipla",
+          "pergunta": "O que a estrutura <em>nor can I speak</em> significa?",
+          "opcoes": ["Nem eu posso falar", "Eu também posso falar", "Portanto eu falo", "Se eu falar"],
+          "resposta": "Nem eu posso falar",
+          "explicacao": "'Nor' + inversão (can I) significa 'e também não' / 'nem'. 'Nor can I speak' = 'nem posso falar'."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com 'unless' ou 'if not':",
+          "pergunta": "You won't succeed ___ you try.",
+          "resposta": "unless",
+          "alternativas": ["Unless", "unless"],
+          "explicacao": "'Unless' é equivalente a 'if not'. Ambas funcionariam, mas 'unless' é mais direta."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene a frase com 'nor':",
+          "palavras": ["i", "speak", "nor", "can"],
+          "resposta": "nor can i speak",
+          "explicacao": "'Nor' + verbo auxiliar (can) + sujeito (I) + verbo principal (speak)."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza: <em>unless I have been thought</em>",
+          "resposta": "a menos que eu tenha sido pensado",
+          "palavrasChave": ["menos", "pensado"],
+          "explicacao": "Voz passiva no presente perfeito: 'have been thought'."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique:",
+          "palavras": ["unless", "thought", "spoken"],
+          "resposta": "unless thought spoken",
+          "explicacao": "'Unless' (anlés) - 'un' como 'an', 'less' como 'lés'. 'Thought' (thót) - 'th' surdo. 'Spoken' (spôuken) - 'spo' como 'spôu'."
+        }
+      ]
     },
     {
-      "start": 20,
-      "english": "I cannot think unless I have been thought, nor can I speak unless I have been spoken.",
-      "translation": "Não posso pensar a menos que tenha sido pensado, nem posso falar a menos que tenha sido falado.",
-      "tip": "<strong>\"unless\"</strong> — Significa 'a menos que' (condição negativa). É mais forte que 'if not'. <strong>\"nor can I\"</strong> — 'Nor' + inversão do sujeito-verbo significa 'nem posso eu'. Uso poético/formal.",
-      "miniLesson": {
-        "title": "'Unless' para Condições Negativas e 'Nor' com Inversão",
-        "content": "<p><strong>'unless' = 'if not'</strong> — Usamos 'unless' para condições que impedem algo. É mais direto que 'if not'.</p><div class=\"exemplo\">You won't succeed unless you try. → Você não vai ter sucesso a menos que tente.</div><p style=\"margin-top:10px\"><strong>'nor' + inversão</strong> — Em inglês formal/poético, 'nor' é seguido por verbo + sujeito. 'Nor can I speak' = 'e eu também não posso falar'.</p><div class=\"exemplo\">He doesn't smoke, nor does he drink. → Ele não fuma, nem bebe.</div>"
-      }
+      "indice": 3,
+      "referencia": "I cannot teach except as I am taught, or break the bread except as I am broken.",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "O que significa <em>except as</em> neste contexto poético?",
+          "opcoes": ["Exceto quando / a não ser que", "Além de", "Menos que", "Porque"],
+          "resposta": "Exceto quando / a não ser que",
+          "explicacao": "'Except as' tem função similar a 'unless', mas é mais literário/poético. Significa 'exceto quando' ou 'a não ser que'."
+        },
+        {
+          "tipo": "multipla",
+          "pergunta": "Qual é o tempo verbal de <em>I am broken</em>?",
+          "opcoes": ["Passado simples", "Presente do indicativo", "Voz passiva (presente simples)", "Futuro"],
+          "resposta": "Voz passiva (presente simples)",
+          "explicacao": "'I am broken' = 'sou partido' (passivo). O agente (Deus) está implícito. 'Broken' é o particípio passado."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com a forma passiva correta:",
+          "pergunta": "As I ___ loved, I love.",
+          "resposta": "am",
+          "alternativas": ["Am", "am"],
+          "explicacao": "'As I am loved' = 'assim como sou amado' (presente simples passivo: am + particípio)."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene a estrutura passiva:",
+          "palavras": ["taught", "i", "am", "as"],
+          "resposta": "as i am taught",
+          "explicacao": "'As' (conjunção) + sujeito 'I' + verbo 'am' + particípio 'taught'."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza: <em>except as I am broken</em>",
+          "resposta": "a não ser que eu seja partido",
+          "palavrasChave": ["partido", "ser"],
+          "explicacao": "Voz passiva em português: 'seja partido' (subjuntivo) ou 'sou partido' (indicativo)."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique:",
+          "palavras": ["taught", "broken"],
+          "resposta": "taught broken",
+          "explicacao": "'Taught' (tót) - 'au' como 'ó', 'ght' mudo. 'Broken' (brôuken) - 'bro' como 'brôu', 'ken' como 'ken'."
+        }
+      ]
     },
     {
-      "start": 28,
-      "english": "I cannot teach except as I am taught, or break the bread except as I am broken.",
-      "translation": "Não posso ensinar a não ser que seja ensinado, nem partir o pão a não ser que seja partido.",
-      "tip": "<strong>\"except as\"</strong> — Significa 'a não ser que / exceto quando'. Estrutura mais poética que 'unless'. <strong>\"break the bread\"</strong> — Expressão com eucarística/espiritual (compartilhar, servir). <strong>\"as I am broken\"</strong> — Voz passiva: 'sou partido' (no sentido de ser humilhado/transformado).",
-      "miniLesson": {
-        "title": "'Except as' em Contexto Poético e Voz Passiva",
-        "content": "<p><strong>'except as' vs 'unless'</strong> — Ambos expressam condição negativa. 'Except as' é mais literário e muitas vezes seguido por 'I am + particípio'.</p><div class=\"exemplo\">I cannot rest except as I am tired. → Não posso descansar a não ser que esteja cansado.</div><p style=\"margin-top:10px\"><strong>Voz passiva no poema</strong> — 'As I am taught' (sou ensinado), 'as I am broken' (sou partido). Deus é o agente implícito.</p><div class=\"exemplo\">As I am loved, I love. → Assim como sou amado, eu amo.</div>"
-      }
+      "indice": 4,
+      "referencia": "A mind behind the mind through which I seek, a light within the light with which I see...",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "Qual é o nome da figura de linguagem que repete a estrutura 'a X preposição the X'?",
+          "opcoes": ["Metáfora", "Paralelismo (parallelism)", "Ironia", "Hipérbole"],
+          "resposta": "Paralelismo (parallelism)",
+          "explicacao": "O paralelismo é a repetição de estruturas gramaticais similares para criar ritmo e ênfase. Aqui: 'a mind behind the mind', 'a light within the light'."
+        },
+        {
+          "tipo": "multipla",
+          "pergunta": "O que <em>through which</em> significa?",
+          "opcoes": ["Através do qual", "Com o qual", "Para o qual", "Sobre o qual"],
+          "resposta": "Através do qual",
+          "explicacao": "'Through' = através de. 'Which' refere-se a 'mind'. 'Through which I seek' = 'através da qual eu busco'."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com a preposição correta:",
+          "pergunta": "The love ___ which she cares is real.",
+          "resposta": "with",
+          "alternativas": ["With", "with"],
+          "explicacao": "'Care with' não é comum. O correto seria 'the love with which she cares' (o amor com o qual ela cuida)."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene a frase:",
+          "palavras": ["i", "which", "through", "seek", "mind", "a"],
+          "resposta": "a mind through which i seek",
+          "explicacao": "'A mind' + 'through which' (preposição + relativo) + 'I seek'."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza: <em>a light within the light with which I see</em>",
+          "resposta": "uma luz dentro da luz com a qual eu vejo",
+          "palavrasChave": ["luz", "dentro", "qual", "vejo"],
+          "explicacao": "Mantenha a preposição 'with' no início: 'com a qual'."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique:",
+          "palavras": ["through", "which", "seek"],
+          "resposta": "through which seek",
+          "explicacao": "'Through' (thrú) - 'th' sonoro, 'r' suave. 'Which' (uítch) - 'wh' como 'u', 'ich' como 'ítch'. 'Seek' (sík) - 'ee' como 'í' longo."
+        }
+      ]
     },
     {
-      "start": 37,
-      "english": "A mind behind the mind through which I seek, a light within the light with which I see, a word beneath the words with which I speak.",
-      "translation": "Uma mente por trás da mente através da qual eu busco, uma luz dentro da luz com a qual eu vejo, uma palavra abaixo das palavras com as quais eu falo.",
-      "tip": "<strong>\"a mind behind the mind\"</strong> — Estrutura paralelística (mente/mente, luz/luz, palavra/palavras). <strong>\"through which / with which\"</strong> — Preposições + pronome relativo 'which' (referindo-se a 'mind', 'light', 'word').",
-      "miniLesson": {
-        "title": "Estruturas Paralelísticas e Preposições com 'Which'",
-        "content": "<p><strong>Paralelismo (parallelism)</strong> — Repetição da estrutura 'a X [preposição] the X [relativo] I [verbo]'. Isso cria ritmo poético e memorabilidade.</p><div class=\"exemplo\">A hand behind the hand that guides me, a voice within the voice that calls me. → Uma mão por trás da mão que me guia, uma voz dentro da voz que me chama.</div><p style=\"margin-top:10px\"><strong>Preposição + which</strong> — Em inglês formal, a preposição vem antes de 'which': 'through which' (através da qual), 'with which' (com a qual), 'beneath which' (abaixo da qual).</p><div class=\"exemplo\">The love with which she cares for them is real. → O amor com o qual ela cuida deles é real.</div>"
-      }
+      "indice": 5,
+      "referencia": "O founding, unfound wisdom, finding me.",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "Qual o efeito do prefixo 'un-' em <em>unfound</em>?",
+          "opcoes": ["Repetir o som", "Criar um significado oposto (não encontrada / não fundada)", "Tornar a palavra mais longa", "Indicar passado"],
+          "resposta": "Criar um significado oposto (não encontrada / não fundada)",
+          "explicacao": "O prefixo 'un-' adiciona sentido de negação. 'Unfound' = 'não encontrada' ou 'não fundada' (jogo de palavras com 'founding')."
+        },
+        {
+          "tipo": "multipla",
+          "pergunta": "Qual a função do gerúndio <em>finding me</em> no final do poema?",
+          "opcoes": ["Indicar ação contínua e ativa da sabedoria", "Ser um erro gramatical", "Substituir o verbo principal", "Formar uma pergunta"],
+          "resposta": "Indicar ação contínua e ativa da sabedoria",
+          "explicacao": "O poema termina com um gerúndio que age como ação contínua: a sabedoria está 'me encontrando' ativamente."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com o prefixo 'un-':",
+          "pergunta": "This path is ___known to me.",
+          "resposta": "unknown",
+          "alternativas": ["Unknown", "unknown"],
+          "explicacao": "'Known' + 'un-' = 'unknown' (desconhecido)."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene a frase final:",
+          "palavras": ["finding", "wisdom", "me", "unfound", "founding"],
+          "resposta": "founding unfound wisdom finding me",
+          "explicacao": "A ordem original: 'O founding, unfound wisdom, finding me' - com vírgulas para pausa poética."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza: <em>finding me</em>",
+          "resposta": "encontrando-me / me encontrando",
+          "palavrasChave": ["encontrando", "me"],
+          "explicacao": "Gerúndio em português: 'encontrando-me' (ênclise) ou 'me encontrando' (próclise)."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique:",
+          "palavras": ["founding", "unfound", "finding"],
+          "resposta": "founding unfound finding",
+          "explicacao": "Três palavras com som semelhante: 'founding' (fáundin), 'unfound' (anfáund), 'finding' (fáindin). Atenção às vogais."
+        }
+      ]
     },
     {
-      "start": 47,
-      "english": "O founding, unfound wisdom, finding me.",
-      "translation": "Ó sabedoria fundadora, não encontrada, encontrando-me.",
-      "tip": "<strong>\"founding, unfound\"</strong> — Jogo de palavras com prefixo 'un-' (não). 'Founding' (que funda) vs 'unfound' (não encontrada / não fundada). <strong>\"finding me\"</strong> — Gerúndio final com sentido ativo: a sabedoria me encontra.",
-      "miniLesson": {
-        "title": "Prefixos Negativos 'Un-' e o Gerúndio como Fecho Poético",
-        "content": "<p><strong>Prefixo 'un-'</strong> — Adicionado a adjetivos ou particípios para formar o oposto. 'Unfound' = 'não encontrado' ou 'não fundado' (jogo de duplo sentido).</p><div class=\"exemplo\">This path is unknown to me. → Este caminho é desconhecido para mim.</div><p style=\"margin-top:10px\"><strong>Gerúndio 'finding me'</strong> — O poema termina com um gerúndio que age como verbo principal implícito. É uma construção poética que sugere ação contínua.</p><div class=\"exemplo\">The light, the truth, setting me free. → A luz, a verdade, libertando-me.</div>"
-      }
+      "indice": 6,
+      "referencia": "When I heard this, I felt like I needed to read the poem over and over again because every line just hit differently.",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "O que significa a gíria <em>hit differently</em>?",
+          "opcoes": ["Bater diferente fisicamente", "Impactar/ressoar de forma única emocionalmente", "Ser mais forte", "Mudar de opinião"],
+          "resposta": "Impactar/ressoar de forma única emocionalmente",
+          "explicacao": "'Hit differently' é gíria moderna que significa que algo causa um impacto emocional único, diferente do usual, ressoa de maneira especial."
+        },
+        {
+          "tipo": "multipla",
+          "pergunta": "O que <em>felt like</em> significa nesta frase?",
+          "opcoes": ["Sentiu como se fosse (comparação)", "Sentiu que (opinião/necessidade)", "Parecia um", "Tocou como"],
+          "resposta": "Sentiu que (opinião/necessidade)",
+          "explicacao": "'Felt like I needed' = 'senti que precisava'. Não é comparação ('senti como se fosse'), e sim expressão de opinião/necessidade."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com 'felt like' + frase:",
+          "pergunta": "I ___ I should apologize.",
+          "resposta": "felt like",
+          "alternativas": ["Felt like", "felt like"],
+          "explicacao": "'Felt like I should' = 'senti que deveria'."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene a expressão de repetição:",
+          "palavras": ["again", "over", "and", "over"],
+          "resposta": "over and over again",
+          "explicacao": "Expressão fixa: 'over and over again' = 'repetidas vezes'."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza: <em>every line just hit differently</em>",
+          "resposta": "cada verso simplesmente impactava de forma diferente",
+          "palavrasChave": ["verso", "impactava", "diferente"],
+          "explicacao": "'Just' suaviza ('simplesmente'), 'hit differently' = impacto/resposta emocional única."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a gíria:",
+          "palavras": ["hit", "differently"],
+          "resposta": "hit differently",
+          "explicacao": "'Hit' (rít) - 'h' aspirado, 'i' curto. 'Differently' (dífrentli) - 3 sílabas, ênfase em 'dif'."
+        }
+      ]
     },
     {
-      "start": 58,
-      "english": "When I heard this, I felt like I needed to read the poem over and over again because every line just hit differently.",
-      "translation": "Quando ouvi isso, senti que precisava ler o poema repetidas vezes porque cada verso simplesmente impactava de forma diferente.",
-      "tip": "<strong>\"felt like\"</strong> — Expressão muito comum que significa 'sentiu que' (não literalmente 'sentiu como se fosse'). <strong>\"hit differently\"</strong> — Gíria moderna que significa 'impacta de forma única / ressoa de maneira especial'.",
-      "miniLesson": {
-        "title": "'Felt Like' e a Gíria 'Hit Differently'",
-        "content": "<p><strong>'felt like + frase'</strong> — 'Felt like I needed' = 'senti que precisava'. Cuidado: 'felt like + substantivo' seria literal ('felt like a failure' = sentiu-se um fracasso).</p><div class=\"exemplo\">I felt like I should go. → Senti que deveria ir.</div><p style=\"margin-top:10px\"><strong>'hit differently'</strong> — Gíria atual (desde ~2018) que expressa que algo causa um impacto emocional único, diferente do usual.</p><div class=\"exemplo\">This song hits differently after what happened. → Essa música impacta diferente depois do que aconteceu.</div>"
-      }
+      "indice": 7,
+      "referencia": "And the more I sit with it, the more it reminds me of how deeply connected we are with God...",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "Qual a estrutura gramatical de <em>the more I sit with it, the more it reminds me</em>?",
+          "opcoes": ["Comparativo de igualdade", "Estrutura 'the + comparativo, the + comparativo' (quanto mais..., mais...)", "Superlativo", "Condicional"],
+          "resposta": "Estrutura 'the + comparativo, the + comparativo' (quanto mais..., mais...)",
+          "explicacao": "Essa estrutura expressa correlação proporcional: 'The more X, the more Y' = 'quanto mais X, mais Y'."
+        },
+        {
+          "tipo": "multipla",
+          "pergunta": "O que significa a expressão <em>to sit with something</em>?",
+          "opcoes": ["Sentar-se ao lado de algo", "Refletir/processar internamente", "Aceitar passivamente", "Ignorar"],
+          "resposta": "Refletir/processar internamente",
+          "explicacao": "'Sit with something' é uma expressão idiomática que significa 'refletir sobre', 'permanecer com um pensamento ou emoção para processá-lo'."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete a estrutura 'the + comparativo, the + comparativo':",
+          "pergunta": "___ more you practice, ___ better you get.",
+          "resposta": "the",
+          "alternativas": ["The", "the"],
+          "explicacao": "Ambos os 'the' são obrigatórios: 'The more you practice, the better you get.'"
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene a expressão 'the more..., the more...':",
+          "palavras": ["it", "the", "with", "i", "more", "sit"],
+          "resposta": "the more i sit with it",
+          "explicacao": "'The more' + sujeito 'I' + verbo 'sit' + 'with it'."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza: <em>the more I sit with it</em>",
+          "resposta": "quanto mais eu reflito sobre isso",
+          "palavrasChave": ["mais", "reflito"],
+          "explicacao": "'Sit with it' traduzido idiomaticamente como 'refletir sobre isso'."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a estrutura:",
+          "palavras": ["the", "more", "sit"],
+          "resposta": "the more sit",
+          "explicacao": "'The' (dâ) - schwa. 'More' (mór) - 'o' aberto. 'Sit' (sít) - 'i' curto."
+        }
+      ]
     },
     {
-      "start": 66,
-      "english": "And the more I sit with it, the more it reminds me of how deeply connected we are with God in even the smallest parts of life.",
-      "translation": "E quanto mais eu reflito sobre isso, mais me lembra de quão profundamente conectados somos com Deus até nas menores partes da vida.",
-      "tip": "<strong>\"the more I sit with it, the more\"</strong> — Estrutura 'the + comparativo, the + comparativo' (quanto mais..., mais...). <strong>\"sit with it\"</strong> — Expressão idiomática que significa 'refletir sobre', 'processar internamente'.",
-      "miniLesson": {
-        "title": "Estrutura 'The + Comparativo, The + Comparativo'",
-        "content": "<p><strong>'The more X, the more Y'</strong> — Esta estrutura expressa correlação proporcional. 'The more I practice, the better I get' (Quanto mais pratico, melhor fico).</p><div class=\"exemplo\">The longer you wait, the harder it becomes. → Quanto mais você espera, mais difícil fica.</div><p style=\"margin-top:10px\"><strong>'sit with something'</strong> — Expressão idiomática que significa 'refletir sobre', 'permanecer com um pensamento/emoção para processá-lo'.</p><div class=\"exemplo\">Give me time to sit with this idea. → Me dê tempo para refletir sobre essa ideia.</div>"
-      }
+      "indice": 8,
+      "referencia": "I would genuinely love to hear how this poem lands in your heart.",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "Qual a diferença entre <em>I would love</em> e <em>I want</em>?",
+          "opcoes": ["São idênticos", "'Would love' é mais educado/cortês", "'Want' é mais educado", "'Would love' é passado"],
+          "resposta": "'Would love' é mais educado/cortês",
+          "explicacao": "'I would love to' expressa desejo de forma educada e entusiástica. 'I want' pode soar mais direto ou exigente."
+        },
+        {
+          "tipo": "multipla",
+          "pergunta": "O que significa o verbo <em>lands</em> em <em>how this poem lands in your heart</em>?",
+          "opcoes": ["Pousa", "É recebido / ressoa / impacta emocionalmente", "Escreve", "Voa"],
+          "resposta": "É recebido / ressoa / impacta emocionalmente",
+          "explicacao": "Uso metafórico de 'land' (aterrissar) para significar 'chegar', 'ser recebido', 'causar impacto emocional'."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com a forma educada:",
+          "pergunta": "I ___ to hear your opinion.",
+          "resposta": "would love",
+          "alternativas": ["Would love", "would love"],
+          "explicacao": "'I would love to' é a forma educada e entusiástica de expressar desejo."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene a frase com 'how':",
+          "palavras": ["your", "poem", "in", "lands", "heart", "how", "this"],
+          "resposta": "how this poem lands in your heart",
+          "explicacao": "'How' + sujeito 'this poem' + verbo 'lands' + 'in your heart'."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza: <em>how this poem lands in your heart</em>",
+          "resposta": "como este poema ressoa / chega em seu coração",
+          "palavrasChave": ["ressoa", "coração"],
+          "explicacao": "Tradução idiomática: 'lands' como 'ressoa', 'chega', 'encontra eco'."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique:",
+          "palavras": ["would", "love", "genuinely"],
+          "resposta": "would love genuinely",
+          "explicacao": "'Would' (úd) - 'w' mudo, 'ou' como 'u'. 'Genuinely' (djénuínli) - 'g' como 'dj', 4 sílabas."
+        }
+      ]
     },
     {
-      "start": 75,
-      "english": "It just feels so honest and true in a way that's hard to explain.",
-      "translation": "Simplesmente parece tão honesto e verdadeiro de uma maneira difícil de explicar.",
-      "tip": "<strong>\"It just feels\"</strong> — 'Just' suaviza a afirmação (simplesmente). 'Feels' = 'parece' (sentido subjetivo). <strong>\"in a way that's hard to explain\"</strong> — Cláusula relativa com 'that' descrevendo 'a way'.",
-      "miniLesson": {
-        "title": "O Uso de 'Just' como Atenuador e 'That's' em Cláusulas Relativas",
-        "content": "<p><strong>'Just' como advérbio atenuador</strong> — 'Just' pode significar 'simplesmente', 'apenas', suavizando uma afirmação para não soar muito forte ou dogmático.</p><div class=\"exemplo\">It just feels right to me. → Simplesmente me parece certo.</div><p style=\"margin-top:10px\"><strong>'in a way that is' contraído para 'in a way that's'</strong> — Estrutura relativa muito comum. 'That' substitui 'which' para coisas.</p><div class=\"exemplo\">He has a voice that's unforgettable. → Ele tem uma voz que é inesquecível.</div>"
-      }
-    },
-    {
-      "start": 81,
-      "english": "I would genuinely love to hear how this poem lands in your heart.",
-      "translation": "Eu amaria genuinamente saber como este poema ressoa no seu coração.",
-      "tip": "<strong>\"I would love\"</strong> — Forma educada e gentil de expressar desejo. <strong>\"lands in your heart\"</strong> — Metáfora: 'land' (aterrissar) como 'chegar/ressoar' emocionalmente.",
-      "miniLesson": {
-        "title": "'Would Love' para Expressar Desejo Cortês e a Metáfora 'Land In'",
-        "content": "<p><strong>'I would love to + verbo'</strong> — Mais educado que 'I want to'. Expressa entusiasmo sem ser impositivo.</p><div class=\"exemplo\">I would love to hear your opinion. → Eu adoraria ouvir sua opinião.</div><p style=\"margin-top:10px\"><strong>'how this lands'</strong> — Verbo 'land' usado metaforicamente como 'chegar', 'ser recebido'. 'How something lands with someone' = qual o impacto/reação emocional.</p><div class=\"exemplo\">I'm not sure how that joke will land. → Não sei como aquela piada vai ser recebida.</div>"
-      }
-    },
-    {
-      "start": 86,
-      "english": "I look forward to reading your comments. I wish you a blessed day and shine your light.",
-      "translation": "Aguardo ansiosamente para ler seus comentários. Desejo a vocês um dia abençoado e que vocês brilhem sua luz.",
-      "tip": "<strong>\"look forward to\"</strong> — Expressão fixa: 'to' é preposição, seguida de gerúndio (-ing). <strong>\"shine your light\"</strong> — Expressão idiomática de encorajamento: compartilhe sua positividade, seja sua melhor versão.",
-      "miniLesson": {
-        "title": "'Look Forward To' + Gerúndio e a Expressão 'Shine Your Light'",
-        "content": "<p><strong>'look forward to + gerund'</strong> — Muita gente erra usando infinitivo. 'To' aqui é preposição, não parte do verbo. Ex: 'I look forward to seeing you' (não 'to see').</p><div class=\"exemplo\">We look forward to hearing from you. → Aguardamos ansiosamente seu contato.</div><p style=\"margin-top:10px\"><strong>'shine your light'</strong> — Expressão que vem de contexto espiritual/ motivacional. Significa 'brilhe', 'compartilhe sua energia positiva', 'seja autêntico e ilumine os outros'.</p><div class=\"exemplo\">Don't be afraid to shine your light. → Não tenha medo de brilhar sua luz.</div>"
-      }
+      "indice": 9,
+      "referencia": "I look forward to reading your comments. I wish you a blessed day and shine your light.",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "Por que usamos <em>reading</em> (gerúndio) e não <em>to read</em> após <em>look forward to</em>?",
+          "opcoes": ["Porque 'to' é preposição aqui, não parte do verbo", "Porque é uma exceção", "Porque é futuro", "Porque é passado"],
+          "resposta": "Porque 'to' é preposição aqui, não parte do verbo",
+          "explicacao": "'Look forward to' é uma expressão fixa onde 'to' é preposição. Preposições em inglês são seguidas por gerúndio (-ing)."
+        },
+        {
+          "tipo": "multipla",
+          "pergunta": "O que significa a expressão <em>shine your light</em>?",
+          "opcoes": ["Acender uma lâmpada", "Brilhar / ser sua melhor versão e compartilhar positividade", "Esconder-se", "Iluminar um cômodo"],
+          "resposta": "Brilhar / ser sua melhor versão e compartilhar positividade",
+          "explicacao": "'Shine your light' é uma expressão motivacional/espiritual que significa 'seja autêntico', 'compartilhe sua energia positiva', 'ilumine os outros com sua presença'."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete a expressão 'look forward to' com a forma correta:",
+          "pergunta": "I look forward to ___ you soon.",
+          "resposta": "seeing",
+          "alternativas": ["Seeing", "seeing"],
+          "explicacao": "Após 'to' (preposição), use gerúndio: 'to seeing you' (não 'to see')."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com 'to' ou 'too':",
+          "pergunta": "I look forward ___ hearing from you.",
+          "resposta": "to",
+          "alternativas": ["To", "to"],
+          "explicacao": "A preposição é 'to' (não confundir com 'too' = também)."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene:",
+          "palavras": ["to", "comments", "forward", "reading", "i", "look", "your"],
+          "resposta": "i look forward to reading your comments",
+          "explicacao": "'I look forward to' + gerúndio 'reading' + objeto 'your comments'."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza: <em>I look forward to reading your comments</em>",
+          "resposta": "Aguardo ansiosamente para ler seus comentários",
+          "palavrasChave": ["aguardo", "ansiosamente", "comentários"],
+          "explicacao": "Expressão idiomática: 'look forward to' = 'aguardar ansiosamente / com expectativa'."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza: <em>shine your light</em>",
+          "resposta": "brilhe sua luz",
+          "palavrasChave": ["brilhe", "luz"],
+          "explicacao": "Expressão motivacional: seja sua melhor versão e inspire os outros."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique 'look forward to':",
+          "palavras": ["look", "forward", "to"],
+          "resposta": "look forward to",
+          "explicacao": "'Look' (lúk) - 'oo' como 'u'. 'Forward' (fórruord) - 'for' como 'fór', 'ward' como 'ruord'. 'To' (tâ) - schwa reduzido."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique 'shine your light':",
+          "palavras": ["shine", "your", "light"],
+          "resposta": "shine your light",
+          "explicacao": "'Shine' (cháin) - 'sh' como 'ch', 'i' como 'ái'. 'Light' (láit) - 'l' claro, 'igh' como 'ai'."
+        }
+      ]
     }
   ]
 }
