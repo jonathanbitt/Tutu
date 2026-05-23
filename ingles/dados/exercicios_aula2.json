@@ -5,7 +5,7 @@
     {
       "indice": 0,
       "referencia": "When David, the shepherd boy, stood before Goliath...",
-      "exercicios": [
+      "exercises": [
         {
           "tipo": "multipla",
           "pergunta": "O que significa o verbo <em>stood</em> nesta frase?",
@@ -97,7 +97,7 @@
     {
       "indice": 1,
       "referencia": "Let me read it to you. It's in 1 Samuel...",
-      "exercicios": [
+      "exercises": [
         {
           "tipo": "multipla",
           "pergunta": "O que significa o advérbio <em>boldly</em>?",
@@ -189,7 +189,7 @@
     {
       "indice": 2,
       "referencia": "What amazes me about this is that David spoke...",
-      "exercicios": [
+      "exercises": [
         {
           "tipo": "multipla",
           "pergunta": "Qual é a função de <em>What amazes me</em> na frase?",
@@ -281,7 +281,7 @@
     {
       "indice": 3,
       "referencia": "Goliath had the sword. David had a sling...",
-      "exercicios": [
+      "exercises": [
         {
           "tipo": "multipla",
           "pergunta": "Por que usamos <em>the</em> antes de <em>sword</em> e <em>a</em> antes de <em>sling</em>?",
@@ -373,7 +373,7 @@
     {
       "indice": 4,
       "referencia": "David was speaking victory before he had the weapon...",
-      "exercicios": [
+      "exercises": [
         {
           "tipo": "multipla",
           "pergunta": "Qual tempo verbal é usado em <em>was speaking</em> e <em>was believing</em>?",
@@ -465,12 +465,12 @@
     {
       "indice": 5,
       "referencia": "And when the moment came, God made a way...",
-      "exercicios": [
+      "exercises": [
         {
           "tipo": "multipla",
           "pergunta": "O que significa a expressão <em>made a way</em>?",
           "opcoes": ["Fez um caminho (literalmente)", "Abriu um caminho / criou uma solução", "Construiu uma estrada", "Perdeu o caminho"],
-          "resposta": "Abrir um caminho / criou uma solução",
+          "resposta": "Abriu um caminho / criou uma solução",
           "explicacao": "'Make a way' é uma expressão idiomática que significa criar uma solução onde parecia impossível."
         },
         {
@@ -557,7 +557,7 @@
     {
       "indice": 6,
       "referencia": "What the enemy meant for harm became the very tool...",
-      "exercicios": [
+      "exercises": [
         {
           "tipo": "multipla",
           "pergunta": "Qual é o significado do verbo <em>meant</em> nesta frase?",
@@ -649,7 +649,7 @@
     {
       "indice": 7,
       "referencia": "Maybe right now you feel unequipped or outmatched...",
-      "exercicios": [
+      "exercises": [
         {
           "tipo": "multipla",
           "pergunta": "O que significa o prefixo 'un-' em <em>unequipped</em>?",
@@ -741,7 +741,7 @@
     {
       "indice": 8,
       "referencia": "This is telling us that no matter the circumstance...",
-      "exercicios": [
+      "exercises": [
         {
           "tipo": "multipla",
           "pergunta": "O que significa a expressão <em>no matter the circumstance</em>?",
@@ -833,7 +833,7 @@
     {
       "indice": 9,
       "referencia": "Keep declaring what God has said because the same God...",
-      "exercicios": [
+      "exercises": [
         {
           "tipo": "multipla",
           "pergunta": "Qual estrutura é usada em <em>keep declaring</em>?",
@@ -925,7 +925,7 @@
     {
       "indice": 10,
       "referencia": "Your victory is already in motion even if the sword...",
-      "exercicios": [
+      "exercises": [
         {
           "tipo": "multipla",
           "pergunta": "Qual a diferença entre <em>even if</em> e <em>even though</em>?",
