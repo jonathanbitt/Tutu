@@ -896,9 +896,9 @@ function carregarPreferenciaVideo() {
 // ========== CARREGAR AULA ==========
 async function carregarAula() {
     const urlParams = new URLSearchParams(window.location.search);
-    const aulaId = urlParams.get('aula') || '1';
+    const aulaId = urlParams.get('aula') || '1';  // ← AGORA USA 'aula'
     try {
-        const response = await fetch(`dados/aula${aulaId}.json`);
+        const response = await fetch(`dados/aula${aulaId}.json`);  // ← BUSCA aulaX.json
         const data = await response.json();
         document.title = data.titulo;
         document.getElementById('pageTitle').textContent = data.titulo;
@@ -1139,11 +1139,11 @@ function escHtml(str) { return String(str || '').replace(/&/g,'&amp;').replace(/
 let exDados = [], exFila = [], exAtual = 0, exAcertos = 0, exRespondido = false, exOrdenarSelecionadas = [], exPronunciaRecognition = null;
 
 window.abrirExercicios = async function(btn, blocoIndex) {
-    const aulaId = new URLSearchParams(window.location.search).get('aula') || '1';
+    const aulaId = new URLSearchParams(window.location.search).get('aula') || '1';  // ← 'aula'
     try {
-        const res = await fetch(`dados/exercicios_aula${aulaId}.json`);
+       const res = await fetch(`dados/exercicios_aula${aulaId}.json`);  // ← CORRETO
         const data = await res.json();
-        const paragrafo = data.paragraphs[blocoIndex];
+        const paragrafo = data.paragrafos[blocoIndex];  // ← 'paragrafos' (português)
         if (!paragrafo || !paragrafo.exercises || paragrafo.exercises.length === 0) { alert('No exercises available for this paragraph.'); return; }
         exDados = paragrafo.exercises;
         iniciarSessaoExercicios();
