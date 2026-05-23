@@ -1,11 +1,7 @@
 {
-  "aula": 1,
-  "titulo": "INGLÊS — The Three C's of Life",
-  "paragrafos": [
+  "paragraphs": [
     {
-      "indice": 0,
-      "referencia": "Life is made of three C's choices, chances and changes.",
-      "exercicios": [
+      "exercises": [
         {
           "tipo": "multipla",
           "pergunta": "O que significa a expressão <em>is made of</em>?",
@@ -95,9 +91,7 @@
       ]
     },
     {
-      "indice": 1,
-      "referencia": "If you want your life to change, you have to make a choice to take a chance...",
-      "exercicios": [
+      "exercises": [
         {
           "tipo": "multipla",
           "pergunta": "O que significa a expressão <em>to take a chance</em> no contexto?",
@@ -187,9 +181,7 @@
       ]
     },
     {
-      "indice": 2,
-      "referencia": "In business, this is everything.",
-      "exercicios": [
+      "exercises": [
         {
           "tipo": "multipla",
           "pergunta": "O que significa a expressão <em>this is everything</em> neste contexto?",
@@ -228,32 +220,11 @@
           "explicacao": "A frase original é 'In business, this is everything' - a vírgula é opcional na ordenação."
         },
         {
-          "tipo": "ordenar",
-          "pergunta": "Ordene para formar uma frase similar:",
-          "palavras": ["family", "her", "is", "everything", "for"],
-          "resposta": "for her family is everything",
-          "explicacao": "'For her' (para ela) + sujeito 'family' + 'is everything'."
-        },
-        {
           "tipo": "traduzir",
           "pergunta": "Traduza: <em>This is everything</em> (contexto de ênfase)",
           "resposta": "Isto é tudo",
           "palavrasChave": ["isto", "tudo"],
           "explicacao": "No contexto idiomático, 'tudo' significa 'o mais importante', não literalmente todos os objetos existentes."
-        },
-        {
-          "tipo": "traduzir",
-          "pergunta": "Traduza para o inglês: <em>Para ele, o dinheiro é tudo</em>",
-          "resposta": "for him money is everything",
-          "palavrasChave": ["him", "money", "everything"],
-          "explicacao": "Use 'for him' + sujeito 'money' + 'is everything' - sem artigo antes de 'money'."
-        },
-        {
-          "tipo": "pronuncia",
-          "pergunta": "Pratique:",
-          "palavras": ["in"],
-          "resposta": "in",
-          "explicacao": "'In' tem som de 'ín' - 'i' curto e 'n' alveolar. É uma preposição muito comum."
         },
         {
           "tipo": "pronuncia",
@@ -265,13 +236,6 @@
         {
           "tipo": "pronuncia",
           "pergunta": "Pratique:",
-          "palavras": ["this", "is"],
-          "resposta": "this is",
-          "explicacao": "'This' (dhis) - o 'th' sonoro (língua entre os dentes, vibração). 'Is' (ís) - 'i' curto, 's' com som de 'z'."
-        },
-        {
-          "tipo": "pronuncia",
-          "pergunta": "Pratique a palavra final:",
           "palavras": ["everything"],
           "resposta": "everything",
           "explicacao": "'Everything' (évrithing) - 3 sílabas: 'e-very-thing'. O 'e' inicial é aberto, 'very' com 'v' e 'r' suave."
@@ -279,9 +243,7 @@
       ]
     },
     {
-      "indice": 3,
-      "referencia": "Starting a company, a choice.",
-      "exercicios": [
+      "exercises": [
         {
           "tipo": "multipla",
           "pergunta": "Por que usamos o gerúndio <em>Starting</em> (com -ing) como primeira palavra?",
@@ -301,23 +263,8 @@
           "enunciado": "Complete com a forma correta do verbo:",
           "pergunta": "___ a company requires courage.",
           "resposta": "starting",
-          "alternativas": ["Starting", "starting", "To start"],
+          "alternativas": ["Starting", "starting"],
           "explicacao": "Quando o verbo é o sujeito da frase, usamos o gerúndio (-ing) em inglês. 'Starting' aqui significa 'o ato de abrir'."
-        },
-        {
-          "tipo": "lacuna",
-          "enunciado": "Complete a frase elíptica (omitindo o verbo):",
-          "pergunta": "Winning, everything. Losing, ___.",
-          "resposta": "nothing",
-          "alternativas": ["Nothing", "nothing"],
-          "explicacao": "A construção elíptica omite o verbo 'is'. 'Losing is nothing' → 'Losing, nothing'."
-        },
-        {
-          "tipo": "ordenar",
-          "pergunta": "Ordene a forma completa da frase (com o verbo 'is'):",
-          "palavras": ["choice", "a", "company", "a", "is", "starting"],
-          "resposta": "starting a company is a choice",
-          "explicacao": "'Starting a company' (gerund as subject) + 'is' + 'a choice'."
         },
         {
           "tipo": "ordenar",
@@ -334,46 +281,16 @@
           "explicacao": "O sujeito em gerúndio 'Starting a company' é traduzido como infinitivo 'Abrir uma empresa' em português."
         },
         {
-          "tipo": "traduzir",
-          "pergunta": "Traduza para o inglês (usando gerúndio como sujeito): <em>Correr é saudável</em>",
-          "resposta": "running is healthy",
-          "palavrasChave": ["running", "healthy"],
-          "explicacao": "Em inglês, 'Running' (gerúndio) é o sujeito. Em português, usamos o infinitivo 'Correr'."
-        },
-        {
           "tipo": "pronuncia",
           "pergunta": "Pratique:",
-          "palavras": ["starting"],
-          "resposta": "starting",
-          "explicacao": "'Starting' (stártin) - 'star' como 'stár' (a aberto), 'ting' reduzido para 'tin'."
-        },
-        {
-          "tipo": "pronuncia",
-          "pergunta": "Pratique:",
-          "palavras": ["company"],
-          "resposta": "company",
-          "explicacao": "'Company' (câmpni) - 2 sílabas: 'comp' (câmp) + 'ny' (ni). Ênfase na primeira sílaba."
-        },
-        {
-          "tipo": "pronuncia",
-          "pergunta": "Pratique a frase curta:",
-          "palavras": ["a", "choice"],
-          "resposta": "a choice",
-          "explicacao": "'A' (â) - schwa reduzido. 'Choice' (tchóis) - 'ch' como 'tch', 'oi' como em 'dois'."
-        },
-        {
-          "tipo": "pronuncia",
-          "pergunta": "Pratique:",
-          "palavras": ["starting", "a", "company"],
-          "resposta": "starting a company",
-          "explicacao": "Encadeie as palavras: 'starting-a-company' - o 'a' schwa se conecta naturalmente."
+          "palavras": ["starting", "company"],
+          "resposta": "starting company",
+          "explicacao": "'Starting' (stártin) - 'star' como 'stár' (a aberto). 'Company' (câmpni) - 2 sílabas: 'comp' (câmp) + 'ny' (ni)."
         }
       ]
     },
     {
-      "indice": 4,
-      "referencia": "Leaving a stable job, a chance.",
-      "exercicios": [
+      "exercises": [
         {
           "tipo": "multipla",
           "pergunta": "Qual a diferença entre <em>leave</em>, <em>quit</em> e <em>resign</em> um emprego?",
@@ -389,29 +306,6 @@
           "explicacao": "No contexto do discurso, 'chance' significa uma oportunidade que envolve risco - deixar a segurança do emprego estável é um risco calculado."
         },
         {
-          "tipo": "lacuna",
-          "enunciado": "Complete com a palavra correta:",
-          "pergunta": "She ___ her job to travel the world.",
-          "resposta": "left",
-          "alternativas": ["Left", "left", "leaved"],
-          "explicacao": "'Leave' é um verbo irregular: leave - left - left. O passado é 'left'."
-        },
-        {
-          "tipo": "lacuna",
-          "enunciado": "Complete a expressão idiomática:",
-          "pergunta": "Take a ___! You might succeed.",
-          "resposta": "chance",
-          "alternativas": ["Chance", "chance"],
-          "explicacao": "'Take a chance' é a expressão completa. Significa 'arrisque'."
-        },
-        {
-          "tipo": "ordenar",
-          "pergunta": "Ordene a frase completa (com 'is'):",
-          "palavras": ["a", "job", "a", "is", "stable", "chance", "leaving"],
-          "resposta": "leaving a stable job is a chance",
-          "explicacao": "Sujeito: 'Leaving a stable job' (gerund) + verbo 'is' + complemento 'a chance'."
-        },
-        {
           "tipo": "ordenar",
           "pergunta": "Ordene a versão elíptica:",
           "palavras": ["chance", "a", "stable", "job", "leaving", "a"],
@@ -424,84 +318,24 @@
           "resposta": "Deixar um emprego estável é uma oportunidade (arriscada)",
           "palavrasChave": ["deixar", "emprego", "estável", "oportunidade"],
           "explicacao": "'Chance' aqui carrega o sentido de 'oportunidade que envolve risco'."
-        },
-        {
-          "tipo": "traduzir",
-          "pergunta": "Traduza para o inglês: <em>Ela pediu demissão do emprego</em> (formal)",
-          "resposta": "she resigned from her job",
-          "palavrasChave": ["resigned", "job"],
-          "explicacao": "'Resign' é a forma formal. 'Resign from' é a estrutura correta."
-        },
-        {
-          "tipo": "pronuncia",
-          "pergunta": "Pratique:",
-          "palavras": ["leaving"],
-          "resposta": "leaving",
-          "explicacao": "'Leaving' (lívin) - 'lea' como 'lí' (i longo), 'ving' como 'vin' (v curto)."
-        },
-        {
-          "tipo": "pronuncia",
-          "pergunta": "Pratique:",
-          "palavras": ["stable", "job"],
-          "resposta": "stable job",
-          "explicacao": "'Stable' (stêibol) - 'sta' como 'stêi', 'ble' como 'bol'. 'Job' (djáb) - 'o' aberto, 'j' com som de 'dj'."
-        },
-        {
-          "tipo": "pronuncia",
-          "pergunta": "Pratique:",
-          "palavras": ["leaving", "a", "stable", "job"],
-          "resposta": "leaving a stable job",
-          "explicacao": "Frase completa: 'leaving-a-stable-job' - conecte o 'a' schwa ('â') à palavra anterior."
-        },
-        {
-          "tipo": "pronuncia",
-          "pergunta": "Pratique a palavra-chave:",
-          "palavras": ["chance"],
-          "resposta": "chance",
-          "explicacao": "'Chance' (tcháns) - 'ch' como 'tch', 'a' aberto como em 'cama', 'n' alveolar, 'ce' como 's'."
         }
       ]
     },
     {
-      "indice": 5,
-      "referencia": "Scaling to the next level, that's change.",
-      "exercicios": [
+      "exercises": [
         {
           "tipo": "multipla",
           "pergunta": "O que significa <em>to scale</em> no contexto de negócios?",
           "opcoes": ["Medir algo", "Descer de nível", "Crescer de forma sustentável (expandir operações)", "Mudar de endereço"],
           "resposta": "Crescer de forma sustentável (expandir operações)",
-          "explicacao": "'To scale a business' significa crescer de maneira que o aumento de receita supere o aumento de custos. Uma empresa 'scaleable' pode crescer sem perder qualidade."
+          "explicacao": "'To scale a business' significa crescer de maneira que o aumento de receita supere o aumento de custos."
         },
         {
           "tipo": "multipla",
           "pergunta": "O que significa <em>next level</em>?",
           "opcoes": ["Próximo andar", "Próximo patamar/nível superior", "Próxima fase do jogo", "Próxima experiência"],
           "resposta": "Próximo patamar/nível superior",
-          "explicacao": "'Next level' é uma expressão idiomática que vem de jogos (passar de fase), mas hoje significa 'nível superior' ou 'próximo patamar' em qualquer contexto."
-        },
-        {
-          "tipo": "lacuna",
-          "enunciado": "Complete a frase:",
-          "pergunta": "We need to ___ our marketing efforts.",
-          "resposta": "scale",
-          "alternativas": ["Scale", "scale"],
-          "explicacao": "'Scale our marketing efforts' significa expandir/dimensionar nossos esforços de marketing de forma sustentável."
-        },
-        {
-          "tipo": "lacuna",
-          "enunciado": "Complete:",
-          "pergunta": "Take your English to the next ___.",
-          "resposta": "level",
-          "alternativas": ["Level", "level"],
-          "explicacao": "'Next level' é a expressão fixa para indicar progresso a um estágio superior."
-        },
-        {
-          "tipo": "ordenar",
-          "pergunta": "Ordene a frase:",
-          "palavras": ["next", "the", "to", "scaling", "level"],
-          "resposta": "scaling to the next level",
-          "explicacao": "O gerúndio 'Scaling' + 'to the next level' (complemento) - a preposição 'to' conecta o verbo ao alvo."
+          "explicacao": "'Next level' é uma expressão idiomática que significa 'nível superior' ou 'próximo patamar'."
         },
         {
           "tipo": "ordenar",
@@ -516,77 +350,25 @@
           "resposta": "Precisamos expandir nossas operações (de forma sustentável)",
           "palavrasChave": ["expandir", "operações", "sustentável"],
           "explicacao": "'To scale' carrega a nuance de 'crescimento sustentável' - não apenas 'aumentar'."
-        },
-        {
-          "tipo": "traduzir",
-          "pergunta": "Traduza para o inglês: <em>Leve seu negócio para o próximo nível</em>",
-          "resposta": "take your business to the next level",
-          "palavrasChave": ["take", "business", "next", "level"],
-          "explicacao": "'Take to the next level' é a expressão completa. Use 'take' (levar/conduzir)."
-        },
-        {
-          "tipo": "pronuncia",
-          "pergunta": "Pratique:",
-          "palavras": ["scaling"],
-          "resposta": "scaling",
-          "explicacao": "'Scaling' (skêiling) - 'sc' como 'sk', 'a' como 'êi', 'ling' como 'lin'."
-        },
-        {
-          "tipo": "pronuncia",
-          "pergunta": "Pratique:",
-          "palavras": ["next", "level"],
-          "resposta": "next level",
-          "explicacao": "'Next' (nékst) - 'e' aberto, 'x' como 'ks'. 'Level' (lévol) - 'le' como 'lé', 'vel' como 'vol'."
-        },
-        {
-          "tipo": "pronuncia",
-          "pergunta": "Pratique a contração:",
-          "palavras": ["that's"],
-          "resposta": "that's",
-          "explicacao": "'That's' é a contração de 'that is'. Pronuncia-se 'dháts' - 'th' sonoro, 'a' aberto, 'ts' como em 'cats'."
-        },
-        {
-          "tipo": "pronuncia",
-          "pergunta": "Pratique a frase completa (4 palavras):",
-          "palavras": ["scaling", "next", "level", "change"],
-          "resposta": "scaling next level change",
-          "explicacao": "Versão simplificada: 'scaling' (skêilin) + 'next' (nékst) + 'level' (lévol) + 'change' (tchêindj)."
         }
       ]
     },
     {
-      "indice": 6,
-      "referencia": "And here's the thing.",
-      "exercicios": [
+      "exercises": [
         {
           "tipo": "multipla",
           "pergunta": "O que significa a expressão <em>here's the thing</em>?",
           "opcoes": ["Aqui está a coisa", "O negócio é o seguinte / a questão é", "Este é o objeto", "Aqui está o problema"],
           "resposta": "O negócio é o seguinte / a questão é",
-          "explicacao": "'Here's the thing' é uma expressão idiomática usada para introduzir um ponto importante, uma opinião ou um contraste."
-        },
-        {
-          "tipo": "multipla",
-          "pergunta": "Qual das opções NÃO é equivalente a <em>here's the thing</em>?",
-          "opcoes": ["The point is", "Here's the deal", "The bottom line is", "Good morning"],
-          "resposta": "Good morning",
-          "explicacao": "'Good morning' é uma saudação, não introduz um ponto importante. As outras três são equivalentes."
+          "explicacao": "'Here's the thing' é uma expressão idiomática usada para introduzir um ponto importante."
         },
         {
           "tipo": "lacuna",
           "enunciado": "Complete a expressão:",
           "pergunta": "___ the thing, I don't agree with you.",
           "resposta": "here's",
-          "alternativas": ["Here's", "here's", "Heres"],
-          "explicacao": "A expressão é 'Here's the thing' (contração de 'here is'). O apóstrofo é obrigatório."
-        },
-        {
-          "tipo": "lacuna",
-          "enunciado": "Complete a frase:",
-          "pergunta": "The ___ is we need more money.",
-          "resposta": "bottom line",
-          "alternativas": ["Bottom line", "bottom line"],
-          "explicacao": "'The bottom line' significa 'o ponto principal', 'a conclusão mais importante' (vem de finanças - última linha do balanço)."
+          "alternativas": ["Here's", "here's"],
+          "explicacao": "A expressão é 'Here's the thing' (contração de 'here is')."
         },
         {
           "tipo": "ordenar",
@@ -596,66 +378,22 @@
           "explicacao": "A ordem do áudio: 'And here's the thing' - 'and' conectivo + 'here's the thing'."
         },
         {
-          "tipo": "ordenar",
-          "pergunta": "Ordene uma variação equivalente:",
-          "palavras": ["is", "the", "point", "here"],
-          "resposta": "here is the point",
-          "explicacao": "'Here is the point' é uma forma mais literal de dizer 'here's the thing'."
-        },
-        {
           "tipo": "traduzir",
           "pergunta": "Traduza naturalmente para o português: <em>Here's the thing</em>",
           "resposta": "O negócio é o seguinte",
           "palavrasChave": ["negócio", "seguinte"],
-          "explicacao": "A tradução mais natural depende do contexto. 'O negócio é o seguinte', 'A questão é', 'Olha só'."
-        },
-        {
-          "tipo": "traduzir",
-          "pergunta": "Traduza para o inglês (usando expressão equivalente): <em>A verdade é que eu não sei</em>",
-          "resposta": "the thing is i don't know",
-          "palavrasChave": ["thing", "don't", "know"],
-          "explicacao": "'The thing is' é equivalente a 'Here's the thing' - ambas introduzem um ponto importante."
-        },
-        {
-          "tipo": "pronuncia",
-          "pergunta": "Pratique:",
-          "palavras": ["and"],
-          "resposta": "and",
-          "explicacao": "'And' (énd) - o 'a' tem som de 'é', o 'd' final muitas vezes é reduzido ou omitido em fala rápida."
-        },
-        {
-          "tipo": "pronuncia",
-          "pergunta": "Pratique a contração:",
-          "palavras": ["here's"],
-          "resposta": "here's",
-          "explicacao": "'Here's' (rírs) - 'here' como 'rír' (r suave), 's' com som de 'z' porque é a contração de 'is'."
-        },
-        {
-          "tipo": "pronuncia",
-          "pergunta": "Pratique a palavra 'thing':",
-          "palavras": ["thing"],
-          "resposta": "thing",
-          "explicacao": "'Thing' (tín) - o 'th' inicial é surdo (língua entre dentes, soprando), 'ing' reduzido para 'in'."
-        },
-        {
-          "tipo": "pronuncia",
-          "pergunta": "Pratique a expressão completa:",
-          "palavras": ["here's", "the", "thing"],
-          "resposta": "here's the thing",
-          "explicacao": "Encadeamento: 'here's-the-thing' - o 's' de 'here's' se conecta ao 'the' (dâ), e 'the' se conecta ao 'thing'."
+          "explicacao": "A tradução mais natural depende do contexto. 'O negócio é o seguinte', 'A questão é'."
         }
       ]
     },
     {
-      "indice": 7,
-      "referencia": "Most people wait for the perfect moment, but change doesn't wait.",
-      "exercicios": [
+      "exercises": [
         {
           "tipo": "multipla",
           "pergunta": "O que significa a frase <em>change doesn't wait</em>?",
           "opcoes": ["A mudança é impaciente", "A mudança não espera por ninguém", "A mudança é rápida", "A mudança não tem tempo"],
           "resposta": "A mudança não espera por ninguém",
-          "explicacao": "É uma personificação (personification) - a 'mudança' é tratada como uma entidade ativa que decide esperar ou não. Significa que oportunidades passam se você não agir."
+          "explicacao": "É uma personificação (personification) - a 'mudança' é tratada como uma entidade ativa."
         },
         {
           "tipo": "multipla",
@@ -665,22 +403,6 @@
           "explicacao": "'Most people' significa 'a maioria das pessoas (em geral)'. 'The most people' significaria 'o maior número possível de pessoas'."
         },
         {
-          "tipo": "lacuna",
-          "enunciado": "Complete a frase:",
-          "pergunta": "Most ___ wait too long.",
-          "resposta": "people",
-          "alternativas": ["People", "people"],
-          "explicacao": "'Most people' é a expressão para 'a maioria das pessoas' - 'people' sem artigo."
-        },
-        {
-          "tipo": "lacuna",
-          "enunciado": "Complete com a forma negativa correta:",
-          "pergunta": "Change ___ wait.",
-          "resposta": "doesn't",
-          "alternativas": ["Doesn't", "doesn't", "does not"],
-          "explicacao": "Para negar o verbo 'wait' com o sujeito 'change' (3ª pessoa singular), usamos 'does not' ou 'doesn't'."
-        },
-        {
           "tipo": "ordenar",
           "pergunta": "Ordene a frase:",
           "palavras": ["wait", "moment", "perfect", "the", "for", "people", "most"],
@@ -688,96 +410,29 @@
           "explicacao": "Sujeito 'Most people' + verbo 'wait' + preposição 'for' + objeto 'the perfect moment'."
         },
         {
-          "tipo": "ordenar",
-          "pergunta": "Ordene a segunda parte:",
-          "palavras": ["doesn't", "change", "but", "wait"],
-          "resposta": "but change doesn't wait",
-          "explicacao": "'But' (conectivo de contraste) + sujeito 'change' + 'doesn't wait'."
-        },
-        {
           "tipo": "traduzir",
           "pergunta": "Traduza: <em>Most people wait for the perfect moment</em>",
           "resposta": "A maioria das pessoas espera pelo momento perfeito",
           "palavrasChave": ["maioria", "pessoas", "espera", "perfeito"],
           "explicacao": "'Most people' sem 'the' = 'a maioria das pessoas em geral'."
-        },
-        {
-          "tipo": "traduzir",
-          "pergunta": "Traduza para o inglês: <em>O tempo não espera ninguém</em> (personificação similar)",
-          "resposta": "time doesn't wait for anyone",
-          "palavrasChave": ["time", "doesn't", "wait", "anyone"],
-          "explicacao": "Use a mesma estrutura: sujeito abstrato ('time') + 'doesn't wait' + 'for anyone'."
-        },
-        {
-          "tipo": "pronuncia",
-          "pergunta": "Pratique:",
-          "palavras": ["most"],
-          "resposta": "most",
-          "explicacao": "'Most' (môust) - o 'o' tem som de 'ôu' (ditongo), 'st' final como em 'post'."
-        },
-        {
-          "tipo": "pronuncia",
-          "pergunta": "Pratique:",
-          "palavras": ["people"],
-          "resposta": "people",
-          "explicacao": "'People' (pípou) - 2 sílabas: 'pee' (pí) + 'ple' (pou). O 'l' final é escuro (língua no céu da boca)."
-        },
-        {
-          "tipo": "pronuncia",
-          "pergunta": "Pratique a contração negativa:",
-          "palavras": ["doesn't"],
-          "resposta": "doesn't",
-          "explicacao": "'Doesn't' (dâzânt) - 'does' como 'dâz' (u schwa), 'n't' como 'nâ t' com o 't' quase mudo."
-        },
-        {
-          "tipo": "pronuncia",
-          "pergunta": "Pratique a frase completa:",
-          "palavras": ["change", "doesn't", "wait"],
-          "resposta": "change doesn't wait",
-          "explicacao": "Encadeie: 'change-doesn't-wait' - o 't' de 'doesn't' se conecta ao 'wait' como 't-wait'."
         }
       ]
     },
     {
-      "indice": 8,
-      "referencia": "It rewards the one who decides, who leaves, who risks something to gain everything.",
-      "exercicios": [
+      "exercises": [
         {
           "tipo": "multipla",
           "pergunta": "O que significa <em>the one who</em> nesta frase?",
           "opcoes": ["Aquele que", "O número um que", "A única pessoa que", "O indivíduo que (qualquer pessoa com aquela característica)"],
           "resposta": "Aquele que (qualquer pessoa com aquela característica)",
-          "explicacao": "'The one who' é um pronome indefinido que se refere a 'a pessoa que' tem determinada característica. Não é exclusivamente 'a única', mas 'qualquer pessoa que'."
+          "explicacao": "'The one who' é um pronome indefinido que se refere a 'a pessoa que' tem determinada característica."
         },
         {
           "tipo": "multipla",
           "pergunta": "Qual é o efeito da repetição de <em>who decides, who leaves, who risks</em>?",
           "opcoes": ["É um erro gramatical", "Cria um ritmo crescente (tricolon) para ênfase", "Mostra incerteza do falante", "É uma lista aleatória"],
           "resposta": "Cria um ritmo crescente (tricolon) para ênfase",
-          "explicacao": "A repetição de 'who + verbo' três vezes é um recurso retórico chamado 'tricolon', que cria ritmo, ênfase e impacto."
-        },
-        {
-          "tipo": "lacuna",
-          "enunciado": "Complete com o pronome relativo correto:",
-          "pergunta": "She is the one ___ helped me.",
-          "resposta": "who",
-          "alternativas": ["Who", "who", "that"],
-          "explicacao": "Usamos 'who' para pessoas. 'That' também seria aceito, mas 'who' é mais específico para pessoas."
-        },
-        {
-          "tipo": "lacuna",
-          "enunciado": "Complete a frase com o verbo correto:",
-          "pergunta": "Success comes to those who ___ (to persist).",
-          "resposta": "persist",
-          "alternativas": ["Persist", "persist", "persists"],
-          "explicacao": "Após 'who' com sujeito 'those' (plural), o verbo fica sem 's' - 'who persist'."
-        },
-        {
-          "tipo": "ordenar",
-          "pergunta": "Ordene a oração relativa:",
-          "palavras": ["the", "who", "one", "rewards", "it"],
-          "resposta": "it rewards the one who",
-          "explicacao": "Sujeito 'It' + verbo 'rewards' + objeto 'the one who' (a pessoa que)."
+          "explicacao": "A repetição de 'who + verbo' três vezes é um recurso retórico chamado 'tricolon'."
         },
         {
           "tipo": "ordenar",
@@ -792,84 +447,24 @@
           "resposta": "Ela (a mudança) recompensa aquele que decide",
           "palavrasChave": ["recompensa", "aquele", "decide"],
           "explicacao": "'It' se refere a 'change' (mudança) - em português, 'ela' (a mudança)."
-        },
-        {
-          "tipo": "traduzir",
-          "pergunta": "Traduza para o inglês (com 'who' repetido): <em>Aqueles que trabalham, que persistem, que nunca desistem</em>",
-          "resposta": "those who work, who persist, who never give up",
-          "palavrasChave": ["those", "work", "persist", "give"],
-          "explicacao": "Mantenha a repetição de 'who' para criar o mesmo efeito retórico."
-        },
-        {
-          "tipo": "pronuncia",
-          "pergunta": "Pratique:",
-          "palavras": ["rewards"],
-          "resposta": "rewards",
-          "explicacao": "'Rewards' (riuórdz) - 're' como 'rri' (r enrolado), 'wards' como 'uórdz' com 'dz' final."
-        },
-        {
-          "tipo": "pronuncia",
-          "pergunta": "Pratique os verbos:",
-          "palavras": ["decides", "leaves"],
-          "resposta": "decides leaves",
-          "explicacao": "'Decides' (dissáidz) - 'de' como 'dí', 'cides' como 'sáidz'. 'Leaves' (lívz) - 'lea' como 'lí', 'ves' como 'vz'."
-        },
-        {
-          "tipo": "pronuncia",
-          "pergunta": "Pratique:",
-          "palavras": ["risks", "gain"],
-          "resposta": "risks gain",
-          "explicacao": "'Risks' (rískz) - 'ris' como 'rís', 'ks' como 'ks', 's' final sonoro 'z'. 'Gain' (gêin) - 'g' duro, 'ai' como 'êi'."
-        },
-        {
-          "tipo": "pronuncia",
-          "pergunta": "Pratique a frase final:",
-          "palavras": ["something", "everything"],
-          "resposta": "something everything",
-          "explicacao": "'Something' (sâmfin) - 'some' como 'sâm', 'thing' como 'fin'. 'Everything' (évrithin) - 'every' como 'évri', 'thing' como 'thin'."
         }
       ]
     },
     {
-      "indice": 9,
-      "referencia": "So ask yourself, what choice are you avoiding right now that could change everything for your future?",
-      "exercicios": [
+      "exercises": [
         {
           "tipo": "multipla",
           "pergunta": "Qual é a função do pronome reflexivo <em>yourself</em> em <em>ask yourself</em>?",
           "opcoes": ["Enfatizar o sujeito", "Indicar que a ação volta para o sujeito (perguntar a si mesmo)", "Substituir o objeto direto", "Formar uma pergunta"],
           "resposta": "Indicar que a ação volta para o sujeito (perguntar a si mesmo)",
-          "explicacao": "Pronomes reflexivos (myself, yourself, himself etc.) indicam que a ação do verbo recai sobre o próprio sujeito. 'Ask yourself' = pergunte a você mesmo."
+          "explicacao": "Pronomes reflexivos indicam que a ação do verbo recai sobre o próprio sujeito. 'Ask yourself' = pergunte a você mesmo."
         },
         {
           "tipo": "multipla",
           "pergunta": "Qual a diferença entre <em>could change</em> e <em>can change</em> nesta frase?",
           "opcoes": ["São idênticos", "'Could' expressa possibilidade (mais incerto), 'can' expressa capacidade", "'Could' é passado de 'can'", "'Could' é mais formal"],
           "resposta": "'Could' expressa possibilidade (mais incerto), 'can' expressa capacidade",
-          "explicacao": "'Could' aqui expressa potencial ou possibilidade hipotética. 'Can change' seria 'tem capacidade de mudar' (certeza de capacidade). 'Could change' é 'poderia mudar' (talvez sim, talvez não)."
-        },
-        {
-          "tipo": "lacuna",
-          "enunciado": "Complete com o pronome reflexivo correto:",
-          "pergunta": "Take care of ___.",
-          "resposta": "yourself",
-          "alternativas": ["Yourself", "yourself"],
-          "explicacao": "'Take care of yourself' = cuide de si mesmo. O pronome reflexivo concorda com o sujeito implícito 'you'."
-        },
-        {
-          "tipo": "lacuna",
-          "enunciado": "Complete com o modal correto:",
-          "pergunta": "This opportunity ___ change your life (possibilidade, incerto).",
-          "resposta": "could",
-          "alternativas": ["Could", "could"],
-          "explicacao": "'Could' expressa possibilidade. 'Can' expressaria capacidade. Para incerteza, use 'could'."
-        },
-        {
-          "tipo": "ordenar",
-          "pergunta": "Ordene a pergunta reflexiva:",
-          "palavras": ["so", "ask", "yourself"],
-          "resposta": "so ask yourself",
-          "explicacao": "'So' (conectivo conclusivo) + 'ask yourself' (verbo + pronome reflexivo)."
+          "explicacao": "'Could' aqui expressa potencial ou possibilidade hipotética. 'Could change' é 'poderia mudar' (talvez sim, talvez não)."
         },
         {
           "tipo": "ordenar",
@@ -884,41 +479,6 @@
           "resposta": "Pergunte a si mesmo que escolha você está evitando agora",
           "palavrasChave": ["pergunte", "si", "mesmo", "escolha", "evitando"],
           "explicacao": "'Yourself' = 'a si mesmo' (reflexivo). 'Right now' = 'agora mesmo / neste momento'."
-        },
-        {
-          "tipo": "traduzir",
-          "pergunta": "Traduza para o inglês usando 'could': <em>Isso poderia resolver tudo</em>",
-          "resposta": "this could solve everything",
-          "palavrasChave": ["this", "could", "solve", "everything"],
-          "explicacao": "Use 'could' para expressar possibilidade (poderia, talvez resolva). 'Can solve' seria 'pode resolver' (capacidade)."
-        },
-        {
-          "tipo": "pronuncia",
-          "pergunta": "Pratique:",
-          "palavras": ["so"],
-          "resposta": "so",
-          "explicacao": "'So' (sôu) - o 's' é sonoro (como 'z'), 'o' tem som de 'ôu' (ditongo)."
-        },
-        {
-          "tipo": "pronuncia",
-          "pergunta": "Pratique:",
-          "palavras": ["yourself"],
-          "resposta": "yourself",
-          "explicacao": "'Yourself' (iurrélf) - 'your' como 'iur' (r enrolado), 'self' como 'rélf' (sílaba tônica)."
-        },
-        {
-          "tipo": "pronuncia",
-          "pergunta": "Pratique as palavras-chave da pergunta:",
-          "palavras": ["avoiding", "right", "now"],
-          "resposta": "avoiding right now",
-          "explicacao": "'Avoiding' (evóidin) - 'a' como 'é', 'v' sonoro. 'Right now' (ráit náu) - 'r' enrolado, 'now' como 'náu'."
-        },
-        {
-          "tipo": "pronuncia",
-          "pergunta": "Pratique a palavra final:",
-          "palavras": ["future"],
-          "resposta": "future",
-          "explicacao": "'Future' (fiútchur) - 'fu' como 'fiú', 'ture' como 'tchur' - o 't' vira 'tch' antes de 'u'."
         }
       ]
     }
