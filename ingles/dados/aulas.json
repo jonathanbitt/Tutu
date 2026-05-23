@@ -17,18 +17,18 @@
     },
     {
       "id": 2,
-      "titulo": "A Coragem de Davi: Falando Vitória Antes da Arma",
-      "subtitulo": "Aprenda vocabulário de superação e estruturas condicionais em inglês",
-      "descricao": "Nesta aula inspiradora baseada na história de Davi e Golias, você vai aprender expressões idiomáticas como 'make a way', 'stand firm', prefixos negativos 'un-' e 'out-', e como usar 'even if' vs 'even though'. Perfeito para quem quer fortalecer o vocabulário de motivação e superação!",
-      "nivel": "Intermediário (A2-B1)",
-      "duracao": "~16 minutos",
-      "palavras": 16,
-      "licoes": 11,
+      "title": "A Coragem de Davi: Falando Vitória Antes da Arma",
+      "subtitle": "Aprenda vocabulário de superação e estruturas condicionais em inglês",
+      "description": "Nesta aula inspiradora baseada na história de Davi e Golias, você vai aprender expressões idiomáticas como 'make a way', 'stand firm', prefixos negativos 'un-' e 'out-', e como usar 'even if' vs 'even though'. Perfeito para quem quer fortalecer o vocabulário de motivação e superação!",
+      "level": "Intermediate",
+      "duration": "~16 min",
+      "words": 16,
+      "modules": 11,
       "videoUrl": "https://jonathanbitt.github.io/Tutu/2.mp4",
       "quizletId": 2,
       "thumbnail": "⚔️",
-      "cor": "#D4A017",
-      "destaque": false
+      "color": "#D4A017",
+      "featured": false
     }
   ]
 }
