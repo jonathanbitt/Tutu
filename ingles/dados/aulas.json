@@ -32,18 +32,18 @@
     },
     {
       "id": 3,
-      "titulo": "O Poema da Conexão: Mente, Luz e Sabedoria",
-      "subtitulo": "Explore um poema profundo sobre espiritualidade e conexão com Deus",
-      "descricao": "Nesta aula poética, você vai aprender estruturas como 'unless', 'except as', voz passiva com 'as I am', paralelismo, preposições com pronomes relativos ('through which', 'with which'), prefixo 'un-', e expressões idiomáticas modernas como 'hit differently' e 'shine your light'. Uma aula para quem quer levar o inglês a um nível mais profundo e expressivo!",
-      "nivel": "Intermediário-Avançado (B1-B2)",
-      "duracao": "~14 minutos",
-      "palavras": 16,
-      "licoes": 10,
+      "title": "O Poema da Conexão: Mente, Luz e Sabedoria",
+      "subtitle": "Explore um poema profundo sobre espiritualidade e conexão com Deus",
+      "description": "Nesta aula poética, você vai aprender estruturas como 'unless', 'except as', voz passiva com 'as I am', paralelismo, preposições com pronomes relativos ('through which', 'with which'), prefixo 'un-', e expressões idiomáticas modernas como 'hit differently' e 'shine your light'. Uma aula para quem quer levar o inglês a um nível mais profundo e expressivo!",
+      "level": "Intermediate-Advanced (B1-B2)",
+      "duration": "~14 min",
+      "words": 16,
+      "modules": 10,
       "videoUrl": "https://jonathanbitt.github.io/Tutu/3.mp4",
       "quizletId": 3,
       "thumbnail": "🕯️",
-      "cor": "#6A5ACD",
-      "destaque": true
+      "color": "#6A5ACD",
+      "featured": true
     }
   ]
 }
