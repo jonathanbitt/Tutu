@@ -1,0 +1,26 @@
+{
+  "titulo": "Quizlet — A Coragem de Davi",
+  "palavras": 16,
+  "licoes": 7,
+  "descricao": "Revisão inteligente de erros · Flashcards + Múltipla Escolha",
+  "conteudo": {
+    "cards": [
+      { "termo": "shepherd", "definicao": "pastor (de ovelhas)", "frase": "David was a shepherd boy.", "dificuldade": 1 },
+      { "termo": "giant", "definicao": "gigante", "frase": "Goliath was a giant.", "dificuldade": 1 },
+      { "termo": "boldly", "definicao": "com ousadia, corajosamente", "frase": "David boldly declared his victory.", "dificuldade": 2 },
+      { "termo": "to strike down", "definicao": "derrubar (com um golpe)", "frase": "I will strike you down.", "dificuldade": 2 },
+      { "termo": "to cut off", "definicao": "cortar fora", "frase": "He cut off Goliath's head.", "dificuldade": 2 },
+      { "termo": "sling", "definicao": "funda (arma)", "frase": "David had a sling and five stones.", "dificuldade": 2 },
+      { "termo": "weapon", "definicao": "arma", "frase": "He spoke before he had a weapon.", "dificuldade": 1 },
+      { "termo": "victory", "definicao": "vitória", "frase": "Your victory is in motion.", "dificuldade": 1 },
+      { "termo": "promise", "definicao": "promessa", "frase": "He believed in God's promise.", "dificuldade": 1 },
+      { "termo": "provision", "definicao": "provisão, suprimento", "frase": "He saw the provision.", "dificuldade": 2 },
+      { "termo": "harm", "definicao": "mal, dano", "frase": "What the enemy meant for harm.", "dificuldade": 2 },
+      { "termo": "tool", "definicao": "ferramenta", "frase": "It became the tool of victory.", "dificuldade": 1 },
+      { "termo": "unequipped", "definicao": "despreparado", "frase": "You feel unequipped.", "dificuldade": 3 },
+      { "termo": "outmatched", "definicao": "em desvantagem, superado", "frase": "You feel outmatched.", "dificuldade": 3 },
+      { "termo": "circumstance", "definicao": "circunstância", "frase": "No matter the circumstance.", "dificuldade": 2 },
+      { "termo": "courageous", "definicao": "corajoso", "frase": "Be strong and courageous.", "dificuldade": 2 }
+    ]
+  }
+}

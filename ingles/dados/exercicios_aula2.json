@@ -1,0 +1,1018 @@
+{
+  "aula": 2,
+  "titulo": "INGLÊS — A Coragem de Davi: Falando Vitória Antes da Arma",
+  "paragrafos": [
+    {
+      "indice": 0,
+      "referencia": "When David, the shepherd boy, stood before Goliath...",
+      "exercicios": [
+        {
+          "tipo": "multipla",
+          "pergunta": "O que significa o verbo <em>stood</em> nesta frase?",
+          "opcoes": ["Sentou-se", "Ficou de pé / posicionou-se", "Correu", "Escondeu-se"],
+          "resposta": "Ficou de pé / posicionou-se",
+          "explicacao": "'Stood' é o passado de 'stand' (ficar de pé). No contexto, significa que Davi se posicionou diante de Golias."
+        },
+        {
+          "tipo": "multipla",
+          "pergunta": "Qual é a função gramatical de <em>shepherd</em> em <em>the shepherd boy</em>?",
+          "opcoes": ["Substantivo", "Adjetivo (atuando como complemento do nome)", "Verbo no particípio", "Advérbio"],
+          "resposta": "Adjetivo (atuando como complemento do nome)",
+          "explicacao": "'Shepherd' é um substantivo que está sendo usado como adjetivo para descrever o tipo de 'boy' (um menino que é pastor)."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete a frase com a forma correta do verbo 'stand' no passado:",
+          "pergunta": "Yesterday, I ___ in line for an hour.",
+          "resposta": "stood",
+          "alternativas": ["Stood", "standed"],
+          "explicacao": "'Stand' é um verbo irregular. O passado é 'stood'. 'Standed' não existe."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete a frase com a palavra que falta:",
+          "pergunta": "Do you know what he ___?",
+          "resposta": "said",
+          "alternativas": ["Said", "say", "told"],
+          "explicacao": "'Said' é o passado de 'say' (dizer). 'What he said' = 'o que ele disse'."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene as palavras para formar a pergunta que aparece no áudio:",
+          "palavras": ["know", "he", "what", "said", "you", "do"],
+          "resposta": "do you know what he said",
+          "explicacao": "A estrutura da pergunta indireta: 'Do you know' + 'what he said' (sem inversão após 'what')."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene a frase sobre Davi:",
+          "palavras": ["the", "boy", "shepherd", "david", "was"],
+          "resposta": "david was the shepherd boy",
+          "explicacao": "Sujeito 'David' + verbo 'was' + complemento 'the shepherd boy'."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza para o português: <em>When David stood before Goliath</em>",
+          "resposta": "Quando Davi se posicionou diante de Golias",
+          "palavrasChave": ["quando", "davi", "posicionou", "golias"],
+          "explicacao": "'Stood before' significa 'posicionou-se diante de', indicando posição de enfrentamento."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza para o inglês (usando o passado de 'stand'): <em>Ela ficou em pé na porta</em>",
+          "resposta": "she stood at the door",
+          "palavrasChave": ["she", "stood", "door"],
+          "explicacao": "Use 'stood' (passado de 'stand') + 'at the door' (na porta)."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a pronúncia em inglês:",
+          "palavras": ["stood"],
+          "resposta": "stood",
+          "explicacao": "'Stood' se pronuncia /stʊd/. O 'oo' tem som de 'u' curto, como em 'livro' (diferente de 'stool' /stuːl/ que tem som longo)."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a pronúncia destas palavras:",
+          "palavras": ["shepherd", "boy"],
+          "resposta": "shepherd boy",
+          "explicacao": "'Shepherd' (chépêrd) - o 'sh' como 'ch', 'herd' como 'rêrd'. 'Boy' (bói) - ditongo 'oy' como em 'dois'."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a pronúncia:",
+          "palavras": ["before"],
+          "resposta": "before",
+          "explicacao": "'Before' (bifór) - 'be' como 'bi', 'fore' como 'fór'. O 'r' final é pronunciado (inglês americano)."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a frase curta:",
+          "palavras": ["stood", "before"],
+          "resposta": "stood before",
+          "explicacao": "Encadeie: 'stood-before' - o 'd' de 'stood' se conecta ao 'b' de 'before'."
+        }
+      ]
+    },
+    {
+      "indice": 1,
+      "referencia": "Let me read it to you. It's in 1 Samuel...",
+      "exercicios": [
+        {
+          "tipo": "multipla",
+          "pergunta": "O que significa o advérbio <em>boldly</em>?",
+          "opcoes": ["Timidamente", "Com ousadia", "Rapidamente", "Silenciosamente"],
+          "resposta": "Com ousadia",
+          "explicacao": "'Boldly' vem de 'bold' (ousado). O sufixo '-ly' forma advérbios de modo."
+        },
+        {
+          "tipo": "multipla",
+          "pergunta": "Qual é a função de <em>will</em> na frase <em>the Lord will deliver you</em>?",
+          "opcoes": ["Verbo principal", "Verbo modal indicando futuro", "Substantivo", "Preposição"],
+          "resposta": "Verbo modal indicando futuro",
+          "explicacao": "'Will' é um verbo modal usado para formar o futuro simples (Simple Future). Indica uma ação que acontecerá."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com a forma contraída de 'will not':",
+          "pergunta": "I promise I ___ forget you.",
+          "resposta": "won't",
+          "alternativas": ["Won't", "will not"],
+          "explicacao": "'Won't' é a contração de 'will not'. É muito usada na fala e na escrita informal."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com a preposição correta (phrasal verb):",
+          "pergunta": "He cut ___ his hair before the interview.",
+          "resposta": "off",
+          "alternativas": ["Off", "down", "up"],
+          "explicacao": "'Cut off' significa 'cortar fora'. 'Cut off his hair' = 'cortou o cabelo'."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene as palavras para formar a declaração de Davi:",
+          "palavras": ["head", "off", "your", "cut", "i'll"],
+          "resposta": "i'll cut off your head",
+          "explicacao": "Sujeito 'I'll' (I will) + verbo 'cut' + partícula 'off' + objeto 'your head'."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene a pergunta do áudio:",
+          "palavras": ["you", "read", "me", "to", "it", "let"],
+          "resposta": "let me read it to you",
+          "explicacao": "Estrutura imperativa com 'let' (permissão/pedido): 'Let me' + verbo + objeto."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza para o português: <em>I'll strike you down</em>",
+          "resposta": "Eu te derrubarei",
+          "palavrasChave": ["derrubarei", "golpe"],
+          "explicacao": "'Strike down' significa 'derrubar com um golpe', 'abatir'."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza para o inglês usando 'will': <em>Nós venceremos amanhã</em>",
+          "resposta": "we will win tomorrow",
+          "palavrasChave": ["we", "will", "win", "tomorrow"],
+          "explicacao": "'Will' + verbo principal forma o futuro. 'Win' é o verbo para 'vencer'."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a pronúncia:",
+          "palavras": ["boldly"],
+          "resposta": "boldly",
+          "explicacao": "'Boldly' (bôuldli) - 'bold' como 'bôuld', 'ly' como 'li'. O 'd' é pronunciado antes do 'l'."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a contração:",
+          "palavras": ["i'll"],
+          "resposta": "i'll",
+          "explicacao": "'I'll' (áil) - uma sílaba. É a contração de 'I will'. O som é como 'ail' em inglês."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique o phrasal verb:",
+          "palavras": ["cut", "off"],
+          "resposta": "cut off",
+          "explicacao": "'Cut' (kát) - 'u' como em 'mato'. 'Off' (óf) - 'o' aberto, 'f' final surdo."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a frase curta:",
+          "palavras": ["strike", "down"],
+          "resposta": "strike down",
+          "explicacao": "'Strike' (stráik) - 'i' como 'ai' (ditongo). 'Down' (dáun) - 'ow' como 'au'."
+        }
+      ]
+    },
+    {
+      "indice": 2,
+      "referencia": "What amazes me about this is that David spoke...",
+      "exercicios": [
+        {
+          "tipo": "multipla",
+          "pergunta": "Qual é a função de <em>What amazes me</em> na frase?",
+          "opcoes": ["Objeto direto", "Sujeito da oração principal", "Advérbio", "Complemento nominal"],
+          "resposta": "Sujeito da oração principal",
+          "explicacao": "'What amazes me' é uma clause (oração) que funciona como sujeito do verbo 'is'."
+        },
+        {
+          "tipo": "multipla",
+          "pergunta": "Qual palavra ou expressão daria ênfase à surpresa na frase negativa <em>he didn't have a sword</em>?",
+          "opcoes": ["too", "very", "even", "so"],
+          "resposta": "even",
+          "explicacao": "'Even' antes do verbo principal ('even have') dá ênfase, significando 'nem mesmo'."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com a estrutura 'What + verbo' como sujeito:",
+          "pergunta": "___ I need is a good rest.",
+          "resposta": "what",
+          "alternativas": ["What", "That", "Which"],
+          "explicacao": "'What I need' = 'O que eu preciso'. 'What' introduz a oração substantiva que é o sujeito de 'is'."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete a frase no passado negativo:",
+          "pergunta": "She ___ (not/call) me back.",
+          "resposta": "didn't call",
+          "alternativas": ["Didn't call", "did not call"],
+          "explicacao": "No passado simples negativo, usamos 'did not' (didn't) + verbo na forma base."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene a frase que expressa surpresa com 'even':",
+          "palavras": ["have", "didn't", "even", "sword", "a", "he"],
+          "resposta": "he didn't even have a sword",
+          "explicacao": "Sujeito 'he' + 'didn't even' (negativa com ênfase) + 'have a sword'."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene a estrutura com 'What' como sujeito:",
+          "palavras": ["me", "this", "about", "amazes", "what"],
+          "resposta": "what amazes me about this",
+          "explicacao": "'What' + verbo 'amazes' + objeto 'me' + complemento 'about this'."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza para o português: <em>What I saw surprised me</em>",
+          "resposta": "O que eu vi me surpreendeu",
+          "palavrasChave": ["vi", "surpreendeu"],
+          "explicacao": "'What I saw' é o sujeito ('O que eu vi'). O verbo 'surprised' concorda no singular."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza para o inglês usando 'even': <em>Ele nem mesmo abriu a porta</em>",
+          "resposta": "he didn't even open the door",
+          "palavrasChave": ["didn't", "even", "open", "door"],
+          "explicacao": "Coloque 'even' entre o auxiliar 'didn't' e o verbo principal 'open'."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a pronúncia:",
+          "palavras": ["amazes"],
+          "resposta": "amazes",
+          "explicacao": "'Amazes' (amêiziz) - 3 sílabas: 'a-mai-zes'. O 'a' inicial é schwa (fraco)."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique:",
+          "palavras": ["spoke"],
+          "resposta": "spoke",
+          "explicacao": "'Spoke' (spôuk) - 'o' longo como em 'pouco'. É o passado de 'speak' (falar)."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a palavra negativa:",
+          "palavras": ["didn't"],
+          "resposta": "didn't",
+          "explicacao": "'Didn't' (dí dânt) - 'di' com 'i' curto, 'dn't' como 'dânt' com 't' quase mudo."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a palavra-chave:",
+          "palavras": ["sword"],
+          "resposta": "sword",
+          "explicacao": "'Sword' (sórd) - atenção: o 'w' é mudo! Não se pronuncia o 'w' nesta palavra."
+        }
+      ]
+    },
+    {
+      "indice": 3,
+      "referencia": "Goliath had the sword. David had a sling...",
+      "exercicios": [
+        {
+          "tipo": "multipla",
+          "pergunta": "Por que usamos <em>the</em> antes de <em>sword</em> e <em>a</em> antes de <em>sling</em>?",
+          "opcoes": ["Porque 'sword' é masculino e 'sling' é feminino", "Porque 'the' se refere à espada específica de Golias, e 'a' a uma funda qualquer", "Porque 'sling' começa com consoante", "Porque o falante esqueceu o artigo correto"],
+          "resposta": "Porque 'the' se refere à espada específica de Golias, e 'a' a uma funda qualquer",
+          "explicacao": "Usamos 'the' (definido) para algo já conhecido/específico. Usamos 'a' (indefinido) para algo mencionado pela primeira vez."
+        },
+        {
+          "tipo": "multipla",
+          "pergunta": "O que significa o possessivo <em>shepherd's</em> em <em>shepherd's bag</em>?",
+          "opcoes": ["A bolsa do pastor", "A bolsa dos pastores", "A bolsa é pastor", "Pastor da bolsa"],
+          "resposta": "A bolsa do pastor",
+          "explicacao": "O apóstrofo + s ('s) indica posse: 'a bolsa que pertence ao pastor'."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com o artigo correto (a/an/the):",
+          "pergunta": "I saw ___ movie yesterday. ___ movie was great.",
+          "resposta": "a the",
+          "alternativas": ["a the", "an the"],
+          "explicacao": "Primeira menção: 'a movie'. Segunda menção (específico): 'the movie'."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com a forma possessiva correta:",
+          "pergunta": "That is my ___ car.",
+          "resposta": "father's",
+          "alternativas": ["Father's", "fathers"],
+          "explicacao": "'My father's car' = o carro do meu pai. O apóstrofo indica posse."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene a frase sobre Davi e Golias:",
+          "palavras": ["the", "goliath", "sword", "had"],
+          "resposta": "goliath had the sword",
+          "explicacao": "Sujeito 'Goliath' + verbo 'had' + objeto 'the sword'."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene a frase sobre Davi:",
+          "palavras": ["bag", "stones", "david", "his", "in", "had", "small"],
+          "resposta": "david had small stones in his bag",
+          "explicacao": "Sujeito 'David' + 'had' + 'small stones' + lugar 'in his bag'."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza para o português: <em>David had a sling and five stones</em>",
+          "resposta": "Davi tinha uma funda e cinco pedras",
+          "palavrasChave": ["davi", "funda", "pedras"],
+          "explicacao": "'Sling' é a arma tradicional (funda). 'Stones' são pedras pequenas."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza para o inglês (usando possessivo): <em>A bolsa da minha irmã é azul</em>",
+          "resposta": "my sister's bag is blue",
+          "palavrasChave": ["sister's", "bag", "blue"],
+          "explicacao": "'My sister's bag' = a bolsa da minha irmã. O possessivo vem antes do objeto possuído."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a pronúncia:",
+          "palavras": ["sling"],
+          "resposta": "sling",
+          "explicacao": "'Sling' (slin) - o 'i' é curto como em 'sino'. O 'ng' final é como em 'linguiça'."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a palavra:",
+          "palavras": ["stones"],
+          "resposta": "stones",
+          "explicacao": "'Stones' (stôunz) - 'o' longo como 'ôu', 'nes' como 'nz' (z final sonoro)."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique o possessivo:",
+          "palavras": ["shepherd's"],
+          "resposta": "shepherd's",
+          "explicacao": "'Shepherd's' (chépêrds) - 'shep' como 'chép', 'herd' como 'rêrd', o 's' final é sonoro (z)."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a frase:",
+          "palavras": ["five", "small", "stones"],
+          "resposta": "five small stones",
+          "explicacao": "'Five' (fáiv), 'small' (smól), 'stones' (stôunz) - encadeie: 'five-small-stones'."
+        }
+      ]
+    },
+    {
+      "indice": 4,
+      "referencia": "David was speaking victory before he had the weapon...",
+      "exercicios": [
+        {
+          "tipo": "multipla",
+          "pergunta": "Qual tempo verbal é usado em <em>was speaking</em> e <em>was believing</em>?",
+          "opcoes": ["Simple Past", "Past Continuous (Passado Contínuo)", "Present Perfect", "Past Perfect"],
+          "resposta": "Past Continuous (Passado Contínuo)",
+          "explicacao": "O Past Continuous (was/were + verbo-ing) descreve ações que estavam em progresso no passado."
+        },
+        {
+          "tipo": "multipla",
+          "pergunta": "Qual a diferença entre 'didn't need to know' e 'didn't know'?",
+          "opcoes": ["São sinônimos", "'Didn't need to know' significa 'não precisava saber' (não era necessário), 'didn't know' significa 'não sabia'", "'Didn't need to know' é passado de 'need to know'", "Ambos expressam ignorância"],
+          "resposta": "'Didn't need to know' significa 'não precisava saber' (não era necessário), 'didn't know' significa 'não sabia'",
+          "explicacao": "'Didn't need to' indica falta de necessidade. 'Didn't know' indica falta de conhecimento/fato."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com a forma correta do Past Continuous:",
+          "pergunta": "Yesterday at 8 PM, I ___ (watch) TV.",
+          "resposta": "was watching",
+          "alternativas": ["Was watching", "were watching"],
+          "explicacao": "Para 'I' (primeira pessoa singular), usamos 'was' + verbo-ing."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com 'didn't need to' ou 'didn't have to':",
+          "pergunta": "We had plenty of time. We ___ rush.",
+          "resposta": "didn't need to",
+          "alternativas": ["Didn't need to", "didn't have to"],
+          "explicacao": "Ambas são possíveis. 'Didn't need to' enfatiza a ausência de necessidade."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene a frase no Past Continuous:",
+          "palavras": ["victory", "speaking", "david", "was"],
+          "resposta": "david was speaking victory",
+          "explicacao": "Sujeito 'David' + 'was' + verbo-ing 'speaking' + objeto 'victory'."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene a oração com 'before':",
+          "palavras": ["had", "the", "he", "weapon", "before"],
+          "resposta": "before he had the weapon",
+          "explicacao": "'Before' + sujeito 'he' + verbo 'had' + objeto 'the weapon'."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza para o português: <em>He was believing in God's promise</em>",
+          "resposta": "Ele estava acreditando na promessa de Deus",
+          "palavrasChave": ["estava", "acreditando", "promessa", "deus"],
+          "explicacao": "O Past Continuous ('was believing') enfatiza a ação contínua/em progresso."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza para o inglês (usando 'didn't need to'): <em>Você não precisava trazer nada</em>",
+          "resposta": "you didn't need to bring anything",
+          "palavrasChave": ["didn't", "need", "bring", "anything"],
+          "explicacao": "'Didn't need to' + verbo base = 'não precisava + verbo'."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a pronúncia:",
+          "palavras": ["victory"],
+          "resposta": "victory",
+          "explicacao": "'Victory' (víctôri) - 3 sílabas: 'vic-to-ry'. O 'c' tem som de 'k'."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique:",
+          "palavras": ["weapon"],
+          "resposta": "weapon",
+          "explicacao": "'Weapon' (uépôn) - 'wea' como 'ué', 'pon' como 'pôn'. O 'a' é reduzido (schwa)."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a palavra:",
+          "palavras": ["promise"],
+          "resposta": "promise",
+          "explicacao": "'Promise' (prômisse) - 'pro' como 'prô', 'mise' como 'misse' (i curto)."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique:",
+          "palavras": ["provision"],
+          "resposta": "provision",
+          "explicacao": "'Pro-vision' (pruvíjion) - 3 sílabas: 'pro' fraco, 'vision' como 'víjion' (s de 'z' + 'j')."
+        }
+      ]
+    },
+    {
+      "indice": 5,
+      "referencia": "And when the moment came, God made a way...",
+      "exercicios": [
+        {
+          "tipo": "multipla",
+          "pergunta": "O que significa a expressão <em>made a way</em>?",
+          "opcoes": ["Fez um caminho (literalmente)", "Abriu um caminho / criou uma solução", "Construiu uma estrada", "Perdeu o caminho"],
+          "resposta": "Abrir um caminho / criou uma solução",
+          "explicacao": "'Make a way' é uma expressão idiomática que significa criar uma solução onde parecia impossível."
+        },
+        {
+          "tipo": "multipla",
+          "pergunta": "Qual o efeito de usar <em>own</em> em <em>Goliath's own sword</em>?",
+          "opcoes": ["Indica que a espada é nova", "Enfatiza que a espada pertencia ao próprio Golias (ironia)", "Mostra que Davi comprou a espada", "Indica que a espada é falsa"],
+          "resposta": "Enfatiza que a espada pertencia ao próprio Golias (ironia)",
+          "explicacao": "'Own' depois de um possessivo enfatiza posse exclusiva. É irônico: a arma do inimigo foi usada contra ele."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com a expressão 'make a way' no passado:",
+          "pergunta": "When everything seemed impossible, God ___ for us.",
+          "resposta": "made a way",
+          "alternativas": ["Made a way", "made the way"],
+          "explicacao": "'Made a way' é a forma passada da expressão. O artigo 'a' é o mais comum."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com 'own' para dar ênfase:",
+          "pergunta": "I saw it with my ___ eyes.",
+          "resposta": "own",
+          "alternativas": ["Own", "very"],
+          "explicacao": "'My own eyes' = 'meus próprios olhos'. 'Own' vem depois do possessivo."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene a frase sobre Deus e Davi:",
+          "palavras": ["god", "way", "made", "a"],
+          "resposta": "god made a way",
+          "explicacao": "Sujeito 'God' + verbo 'made' + objeto 'a way'."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene a frase com 'own':",
+          "palavras": ["used", "sword", "david", "goliath's", "own"],
+          "resposta": "david used goliath's own sword",
+          "explicacao": "Sujeito 'David' + verbo 'used' + objeto 'Goliath's own sword'."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza para o português: <em>David used Goliath's own sword to finish him</em>",
+          "resposta": "Davi usou a própria espada de Golias para acabar com ele",
+          "palavrasChave": ["própria", "espada", "acabar", "golias"],
+          "explicacao": "'Own' dá ênfase à posse. 'To finish him' = 'para acabar com ele'."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza para o inglês (com 'own'): <em>Esta é a minha própria ideia</em>",
+          "resposta": "this is my own idea",
+          "palavrasChave": ["my", "own", "idea"],
+          "explicacao": "Coloque 'own' depois do possessivo 'my' e antes do substantivo 'idea'."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a pronúncia:",
+          "palavras": ["moment"],
+          "resposta": "moment",
+          "explicacao": "'Moment' (môument) - 'mo' como 'môu', 'ment' como 'ment' (e fraco)."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a palavra:",
+          "palavras": ["used"],
+          "resposta": "used",
+          "explicacao": "'Used' (iúzd) - 'u' como 'iú', 'sed' como 'zd' (z sonoro). O 's' soa como 'z'."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique:",
+          "palavras": ["finish"],
+          "resposta": "finish",
+          "explicacao": "'Finish' (fínich) - 'fi' como 'fi', 'nish' como 'nich' (i curto, 'sh' como 'ch' enfraquecido)."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a expressão:",
+          "palavras": ["made", "a", "way"],
+          "resposta": "made a way",
+          "explicacao": "Encadeie: 'made-a-way' - o 'a' schwa (â) se conecta naturalmente."
+        }
+      ]
+    },
+    {
+      "indice": 6,
+      "referencia": "What the enemy meant for harm became the very tool...",
+      "exercicios": [
+        {
+          "tipo": "multipla",
+          "pergunta": "Qual é o significado do verbo <em>meant</em> nesta frase?",
+          "opcoes": ["Significava", "Planejou / intencionou", "Mencionou", "Lembrou"],
+          "resposta": "Planejou / intencionou",
+          "explicacao": "'Meant' aqui é o passado de 'mean' no sentido de 'intencionar', 'ter a intenção de'."
+        },
+        {
+          "tipo": "multipla",
+          "pergunta": "Qual a função de <em>very</em> em <em>the very tool</em>?",
+          "opcoes": ["Advérbio de intensidade", "Adjetivo de ênfase (exatamente aquele)", "Substantivo", "Preposição"],
+          "resposta": "Adjetivo de ênfase (exatamente aquele)",
+          "explicacao": "'Very' + substantivo significa 'exatamente aquele', 'o próprio'. Não é um advérbio aqui."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com o passado de 'mean' (intencionar):",
+          "pergunta": "I ___ to call you, but I forgot.",
+          "resposta": "meant",
+          "alternativas": ["Meant", "meaned"],
+          "explicacao": "'Mean' é irregular: mean - meant - meant. 'Meant' serve para passado e particípio."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com 'very' + substantivo para ênfase:",
+          "pergunta": "That's the ___ book I was looking for.",
+          "resposta": "very",
+          "alternativas": ["Very"],
+          "explicacao": "'The very book' = 'exatamente o livro', 'o próprio livro'."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene a frase:",
+          "palavras": ["enemy", "the", "for", "meant", "harm", "what"],
+          "resposta": "what the enemy meant for harm",
+          "explicacao": "'What' (sujeito) + 'the enemy' + 'meant for harm' (intencionou para o mal)."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene a frase:",
+          "palavras": ["became", "victory", "tool", "the", "very", "of"],
+          "resposta": "became the very tool of victory",
+          "explicacao": "Verbo 'became' + sujeito implícito + 'the very tool of victory'."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza: <em>What the enemy meant for harm became the very tool of victory</em>",
+          "resposta": "O que o inimigo planejou para o mal se tornou a própria ferramenta da vitória",
+          "palavrasChave": ["inimigo", "planejou", "própria", "ferramenta", "vitória"],
+          "explicacao": "Estrutura: 'What' (o que) + sujeito 'the enemy' + 'meant for harm' + 'became' (tornou-se)."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza para o inglês (com 'very'): <em>Ele é o próprio especialista</em>",
+          "resposta": "he is the very expert",
+          "palavrasChave": ["the", "very", "expert"],
+          "explicacao": "'The very expert' = 'o próprio especialista' (ênfase)."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a pronúncia:",
+          "palavras": ["meant"],
+          "resposta": "meant",
+          "explicacao": "'Meant' (ment) - o 'ea' tem som de 'é' (como em 'médio'), diferente de 'mean' que tem 'i' longo."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique:",
+          "palavras": ["harm"],
+          "resposta": "harm",
+          "explicacao": "'Harm' (rarm) - o 'a' é aberto, o 'r' é pronunciado (inglês americano)."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a palavra:",
+          "palavras": ["tool"],
+          "resposta": "tool",
+          "explicacao": "'Tool' (tul) - 'oo' tem som de 'u' longo (como em 'lua'), diferente de 'tul' curto."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique:",
+          "palavras": ["became"],
+          "resposta": "became",
+          "explicacao": "'Became' (bikêim) - 'be' como 'bi', 'came' como 'kêim' (ditongo 'ei')."
+        }
+      ]
+    },
+    {
+      "indice": 7,
+      "referencia": "Maybe right now you feel unequipped or outmatched...",
+      "exercicios": [
+        {
+          "tipo": "multipla",
+          "pergunta": "O que significa o prefixo 'un-' em <em>unequipped</em>?",
+          "opcoes": ["Não", "Muito", "De novo", "Contra"],
+          "resposta": "Não",
+          "explicacao": "O prefixo 'un-' adiciona sentido negativo. 'Equipped' (equipado) → 'unequipped' (desequipado/despreparado)."
+        },
+        {
+          "tipo": "multipla",
+          "pergunta": "O que significa o prefixo 'out-' em <em>outmatched</em>?",
+          "opcoes": ["Fora de", "Superar / ir além", "Contra", "Muito"],
+          "resposta": "Superar / ir além",
+          "explicacao": "O prefixo 'out-' em verbos/adjetivos significa 'superar', 'exceder'. Match (igualar) → outmatch (superar)."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com a palavra com prefixo 'un-':",
+          "pergunta": "The problem is ___ (solvable). Nobody can solve it.",
+          "resposta": "unsolvable",
+          "alternativas": ["Unsolvable"],
+          "explicacao": "'Unsolvable' = 'insolúvel', 'que não pode ser resolvido'."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com a palavra com prefixo 'out-':",
+          "pergunta": "Our team ___ (play) the opponents. We were much better.",
+          "resposta": "outplayed",
+          "alternativas": ["Outplayed"],
+          "explicacao": "'Outplayed' = 'superou em jogo', 'jogou melhor que'."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene a frase com 'even when':",
+          "palavras": ["feels", "it", "like", "even", "when", "enemy", "the", "advantage", "has"],
+          "resposta": "even when it feels like the enemy has the advantage",
+          "explicacao": "'Even when' (mesmo quando) + sujeito 'it' + 'feels like' + oração."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene o imperativo:",
+          "palavras": ["this", "but", "hear"],
+          "resposta": "but hear this",
+          "explicacao": "Conjunção 'but' + verbo imperativo 'hear' + objeto 'this'."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza: <em>You feel unequipped or outmatched</em>",
+          "resposta": "Você se sente despreparado ou em desvantagem",
+          "palavrasChave": ["despreparado", "desvantagem"],
+          "explicacao": "'Unequipped' = sem o equipamento necessário (figurado). 'Outmatched' = superado."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza para o inglês (com prefixo 'out-'): <em>Ela sempre supera seus colegas</em>",
+          "resposta": "she always outruns her colleagues",
+          "palavrasChave": ["outruns", "colleagues"],
+          "explicacao": "Use 'out- + verbo' para indicar superação. 'Outrun' = correr mais que."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a pronúncia:",
+          "palavras": ["unequipped"],
+          "resposta": "unequipped",
+          "explicacao": "'Unequipped' (aniquípt) - 3 sílabas: 'un-e-quipped'. O 'quipped' soa como 'quípt'."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique:",
+          "palavras": ["outmatched"],
+          "resposta": "outmatched",
+          "explicacao": "'Outmatched' (autmátcht) - 'out' como 'áut', 'matched' como 'mátcht' (tch no final)."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a palavra:",
+          "palavras": ["advantage"],
+          "resposta": "advantage",
+          "explicacao": "'Advantage' (advântâdj) - 'ad' como 'ad', 'van' como 'vân', 'tage' como 'tâdj'."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a expressão:",
+          "palavras": ["right", "now"],
+          "resposta": "right now",
+          "explicacao": "'Right now' (ráit náu) - 'right' com 'r' enrolado, 'now' com 'au' como em 'pau'."
+        }
+      ]
+    },
+    {
+      "indice": 8,
+      "referencia": "This is telling us that no matter the circumstance...",
+      "exercicios": [
+        {
+          "tipo": "multipla",
+          "pergunta": "O que significa a expressão <em>no matter the circumstance</em>?",
+          "opcoes": ["A circunstância não importa", "Não importa a circunstância / independentemente da situação", "Sem circunstância", "Circunstância nenhuma"],
+          "resposta": "Não importa a circunstância / independentemente da situação",
+          "explicacao": "'No matter + substantivo' significa 'independentemente de', 'não importa qual'."
+        },
+        {
+          "tipo": "multipla",
+          "pergunta": "Qual a função da frase <em>stand firm in your faith</em>?",
+          "opcoes": ["Declaração", "Imperativo (ordem/conselho)", "Pergunta", "Exclamação"],
+          "resposta": "Imperativo (ordem/conselho)",
+          "explicacao": "Frases que começam com o verbo no infinitivo sem 'to' são imperativas, dando ordens, instruções ou conselhos."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com a expressão 'no matter':",
+          "pergunta": "___ the cost, I will do it.",
+          "resposta": "no matter",
+          "alternativas": ["No matter"],
+          "explicacao": "'No matter the cost' = 'independentemente do custo', 'não importa o preço'."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete o imperativo com 'be':",
+          "pergunta": "___ patient. Good things take time.",
+          "resposta": "be",
+          "alternativas": ["Be"],
+          "explicacao": "Imperativos com 'be' dão conselhos/ordens sobre como a pessoa deve ser."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene a frase com 'no matter':",
+          "palavras": ["circumstance", "matter", "no", "the"],
+          "resposta": "no matter the circumstance",
+          "explicacao": "'No matter' + 'the circumstance' - expressão fixa."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene o imperativo:",
+          "palavras": ["faith", "in", "stand", "your", "firm"],
+          "resposta": "stand firm in your faith",
+          "explicacao": "Verbo 'stand' + advérbio 'firm' + complemento 'in your faith'."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza: <em>No matter the circumstance, stand firm</em>",
+          "resposta": "Não importa a circunstância, permaneça firme",
+          "palavrasChave": ["importa", "circunstância", "permaneça", "firme"],
+          "explicacao": "'Stand firm' é um phrasal verb que significa 'permanecer firme', 'não ceder'."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza para o inglês (com 'no matter'): <em>Onde quer que você vá, lembre-se de mim</em>",
+          "resposta": "no matter where you go, remember me",
+          "palavrasChave": ["no matter", "where", "go", "remember"],
+          "explicacao": "'No matter where' = 'não importa onde', 'onde quer que'."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a pronúncia:",
+          "palavras": ["circumstance"],
+          "resposta": "circumstance",
+          "explicacao": "'Circumstance' (sércâmstâns) - 3 sílabas: 'cir-cum-stance'. Ênfase na primeira."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a palavra:",
+          "palavras": ["faith"],
+          "resposta": "faith",
+          "explicacao": "'Faith' (fêit) - o 'ai' tem som de 'ei' (como em 'meia'). O 'th' final é surdo."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique:",
+          "palavras": ["courageous"],
+          "resposta": "courageous",
+          "explicacao": "'Courageous' (corêidjous) - 3 sílabas: 'cou-ra-geous'. Ênfase na segunda."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique o imperativo:",
+          "palavras": ["be", "strong"],
+          "resposta": "be strong",
+          "explicacao": "'Be' (bi) fraco + 'strong' (strông) - o 'o' é fechado como em 'pó'."
+        }
+      ]
+    },
+    {
+      "indice": 9,
+      "referencia": "Keep declaring what God has said because the same God...",
+      "exercicios": [
+        {
+          "tipo": "multipla",
+          "pergunta": "Qual estrutura é usada em <em>keep declaring</em>?",
+          "opcoes": ["Keep + infinitivo", "Keep + verbo-ing", "Keep + adjetivo", "Keep + substantivo"],
+          "resposta": "Keep + verbo-ing",
+          "explicacao": "O verbo 'keep' seguido de outro verbo no gerúndio (-ing) significa 'continuar fazendo algo'."
+        },
+        {
+          "tipo": "multipla",
+          "pergunta": "Qual é a função do pronome relativo <em>that</em> em <em>the same God that armed David</em>?",
+          "opcoes": ["Sujeito da oração relativa", "Objeto direto", "Complemento", "Advérbio"],
+          "resposta": "Sujeito da oração relativa",
+          "explicacao": "'That' se refere a 'God' e é o sujeito do verbo 'armed' (que armou)."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com 'keep' + verbo-ing:",
+          "pergunta": "___ (study) and you will pass.",
+          "resposta": "keep studying",
+          "alternativas": ["Keep studying"],
+          "explicacao": "'Keep studying' = 'continue estudando'. O gerúndio é obrigatório após 'keep' neste sentido."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com o pronome relativo 'that':",
+          "pergunta": "This is the same car ___ I saw yesterday.",
+          "resposta": "that",
+          "alternativas": ["That", "which"],
+          "explicacao": "'That' é o pronome relativo mais comum para coisas. 'Which' também seria possível."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene a frase com 'keep':",
+          "palavras": ["said", "what", "declaring", "keep", "god", "has"],
+          "resposta": "keep declaring what god has said",
+          "explicacao": "'Keep declaring' + oração objeto 'what God has said'."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene a oração com 'the same':",
+          "palavras": ["that", "god", "same", "the", "david", "armed"],
+          "resposta": "the same god that armed david",
+          "explicacao": "'The same God' + 'that armed David' (oração relativa)."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza: <em>Keep declaring what God has said</em>",
+          "resposta": "Continue declarando o que Deus disse",
+          "palavrasChave": ["continue", "declarando", "deus", "disse"],
+          "explicacao": "'Keep -ing' = continue fazendo. 'What God has said' = o que Deus disse."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza para o inglês (com 'keep -ing'): <em>Continue acreditando</em>",
+          "resposta": "keep believing",
+          "palavrasChave": ["keep", "believing"],
+          "explicacao": "'Keep believing' = 'continue acreditando'. O verbo 'believe' vira 'believing'."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a pronúncia:",
+          "palavras": ["keep"],
+          "resposta": "keep",
+          "explicacao": "'Keep' (kip) - o 'ee' tem som de 'i' longo, como em 'vida'."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique:",
+          "palavras": ["declaring"],
+          "resposta": "declaring",
+          "explicacao": "'Declaring' (diclérin) - 'de' como 'di', 'claring' como 'clérin' (a redução do 'g')."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a palavra:",
+          "palavras": ["armed"],
+          "resposta": "armed",
+          "explicacao": "'Armed' (rarmd) - 'ar' como 'rar', 'med' como 'md' (o 'd' é pronunciado)."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique:",
+          "palavras": ["equip"],
+          "resposta": "equip",
+          "explicacao": "'Equip' (icuíp) - 'e' como 'i', 'quip' como 'cuíp' (u rápido)."
+        }
+      ]
+    },
+    {
+      "indice": 10,
+      "referencia": "Your victory is already in motion even if the sword...",
+      "exercicios": [
+        {
+          "tipo": "multipla",
+          "pergunta": "Qual a diferença entre <em>even if</em> e <em>even though</em>?",
+          "opcoes": ["São idênticos", "'Even if' introduz hipótese (mesmo que talvez), 'even though' introduz fato (apesar de)", "'Even if' é mais formal", "'Even though' é usado apenas no futuro"],
+          "resposta": "'Even if' introduz hipótese (mesmo que talvez), 'even though' introduz fato (apesar de)",
+          "explicacao": "'Even if' = mesmo que (algo incerto). 'Even though' = apesar de (algo verdadeiro)."
+        },
+        {
+          "tipo": "multipla",
+          "pergunta": "O que significa a expressão <em>in motion</em>?",
+          "opcoes": ["Em movimento (já começou)", "Emoção", "Em motivação", "Em promessa"],
+          "resposta": "Em movimento (já começou)",
+          "explicacao": "'In motion' significa que algo já está acontecendo, já foi iniciado."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com 'even if' ou 'even though':",
+          "pergunta": "I will go to the party ___ I am tired (não sei se estarei cansado ainda).",
+          "resposta": "even if",
+          "alternativas": ["Even if"],
+          "explicacao": "Use 'even if' para situações hipotéticas/incertas. A fadiga é uma possibilidade, não um fato."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com 'even if' ou 'even though':",
+          "pergunta": "___ he studied hard, he didn't pass the test (fato: ele estudou).",
+          "resposta": "even though",
+          "alternativas": ["Even though"],
+          "explicacao": "Use 'even though' para fatos reais. 'He studied hard' é um fato."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene a frase com 'in motion':",
+          "palavras": ["in", "already", "victory", "your", "motion", "is"],
+          "resposta": "your victory is already in motion",
+          "explicacao": "Sujeito 'Your victory' + verbo 'is' + advérbio 'already' + 'in motion'."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene a frase com 'even if':",
+          "palavras": ["hand", "yet", "your", "in", "sword", "isn't", "the"],
+          "resposta": "the sword isn't in your hand yet",
+          "explicacao": "Sujeito 'The sword' + verbo 'isn't' + lugar 'in your hand' + 'yet'."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza: <em>Your victory is already in motion</em>",
+          "resposta": "Sua vitória já está em movimento",
+          "palavrasChave": ["vitória", "movimento"],
+          "explicacao": "'In motion' = em movimento, já começou a acontecer."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza para o inglês (com 'even if'): <em>Eu vou mesmo que chova</em>",
+          "resposta": "i will go even if it rains",
+          "palavrasChave": ["will", "go", "even", "if", "rains"],
+          "explicacao": "Use 'even if' porque chover é uma possibilidade (hipótese)."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a expressão:",
+          "palavras": ["in", "motion"],
+          "resposta": "in motion",
+          "explicacao": "'In motion' (in môuchion) - 'motion' como 'môuchion' ('t' vira 'ch' antes de 'i')."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a palavra:",
+          "palavras": ["amen"],
+          "resposta": "amen",
+          "explicacao": "'Amen' (âmen) - a primeira sílaba 'a' é schwa (â), 'men' como 'men'."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a frase final:",
+          "palavras": ["shine", "your", "light"],
+          "resposta": "shine your light",
+          "explicacao": "'Shine' (cháin) - 'sh' como 'ch', 'i' como 'ai'. 'Light' (láit) - 'gh' mudo."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a palavra:",
+          "palavras": ["believe"],
+          "resposta": "believe",
+          "explicacao": "'Believe' (bilív) - 'be' como 'bi', 'lieve' como 'lív' (i longo)."
+        }
+      ]
+    }
+  ]
+}
