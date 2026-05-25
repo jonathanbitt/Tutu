@@ -1,0 +1,926 @@
+{
+  "aula": 5,
+  "titulo": "INGLÊS — Eternal: O Deus Eterno como seu Refúgio",
+  "paragrafos": [
+    {
+      "indice": 0,
+      "referencia": "Maybe this message is meant for you today...",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "O que significa a expressão <em>is meant for you</em>?",
+          "opcoes": ["É significativo para você", "É destinado a você / foi preparado para você", "É médio para você", "É maldoso com você"],
+          "resposta": "É destinado a você / foi preparado para você",
+          "explicacao": "'Is meant for you' é a voz passiva de 'mean' no sentido de 'destinar', 'intencionar'. Significa que algo foi planejado/projetado especificamente para aquela pessoa."
+        },
+        {
+          "tipo": "multipla",
+          "pergunta": "Qual é a contração em <em>Let's see</em>?",
+          "opcoes": ["Let is", "Let us", "Let has", "Let was"],
+          "resposta": "Let us",
+          "explicacao": "'Let's' é a contração de 'Let us'. Usado para fazer sugestões que incluem o falante e o ouvinte."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com a forma passiva correta:",
+          "pergunta": "This gift ___ (mean) for you.",
+          "resposta": "was meant",
+          "alternativas": ["Was meant"],
+          "explicacao": "Passiva do Simple Past: was/were + particípio passado. 'Mean' (destinar) é irregular: mean - meant - meant."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com a palavra que falta:",
+          "pergunta": "Let's ___ what happens next.",
+          "resposta": "see",
+          "alternativas": ["See", "to see"],
+          "explicacao": "Após 'let's' (let us), usamos o verbo na forma base (sem 'to'): 'let's see'."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene a frase:",
+          "palavras": ["today", "is", "you", "for", "meant", "message", "this"],
+          "resposta": "this message is meant for you today",
+          "explicacao": "Sujeito 'This message' + verbo 'is meant' + 'for you' + tempo 'today'."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene a contração:",
+          "palavras": ["see", "let's"],
+          "resposta": "let's see",
+          "explicacao": "'Let's' + verbo base 'see'."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza: <em>Maybe this message is meant for you.</em>",
+          "resposta": "Talvez esta mensagem seja destinada a você.",
+          "palavrasChave": ["talvez", "mensagem", "destinada"],
+          "explicacao": "'Is meant for you' expressa destino ou propósito. 'Maybe' = talvez."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza para o inglês (com 'meant for'): <em>Este lugar é feito para famílias.</em>",
+          "resposta": "this place is meant for families",
+          "palavrasChave": ["place", "meant", "families"],
+          "explicacao": "'Is meant for families' = é destinado a/feito para famílias."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a pronúncia:",
+          "palavras": ["meant"],
+          "resposta": "meant",
+          "explicacao": "'Meant' (ment) - o 'ea' tem som de 'é' (como em 'médio'), diferente de 'mean' que tem som de 'i' longo."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique:",
+          "palavras": ["eternal"],
+          "resposta": "eternal",
+          "explicacao": "'Eternal' (itêrnou) - 'e' como 'i' (schwa), 'ternal' como 'têr-nou'."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a contração:",
+          "palavras": ["let's"],
+          "resposta": "let's",
+          "explicacao": "'Let's' (lets) - o 't' é pronunciado, o 's' tem som de 's' surdo."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a frase curta:",
+          "palavras": ["maybe", "this"],
+          "resposta": "maybe this",
+          "explicacao": "'Maybe' (mêibi) - 'may' como 'mêi', 'be' como 'bi'. 'This' (dhis) - o 'th' é sonoro."
+        }
+      ]
+    },
+    {
+      "indice": 1,
+      "referencia": "A Hebrew word meaning everlasting or forever...",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "Qual a diferença entre <em>everlasting</em> e <em>forever</em>?",
+          "opcoes": ["São sinônimos perfeitos", "'Everlasting' é adjetivo, 'forever' é advérbio", "'Forever' é mais formal", "'Everlasting' se usa só para Deus"],
+          "resposta": "'Everlasting' é adjetivo, 'forever' é advérbio",
+          "explicacao": "'Everlasting' é um adjetivo (ex: everlasting arms - braços eternos). 'Forever' é um advérbio (ex: love forever - amar para sempre)."
+        },
+        {
+          "tipo": "multipla",
+          "pergunta": "Qual a classe gramatical das palavras <em>timeless, unchanging, refuge</em>?",
+          "opcoes": ["Todos são adjetivos", "Dois adjetivos e um substantivo", "Todos são substantivos", "Um adjetivo, um verbo e um substantivo"],
+          "resposta": "Dois adjetivos e um substantivo",
+          "explicacao": "'Timeless' (atemporal) e 'unchanging' (imutável) são adjetivos. 'Refuge' (refúgio) é um substantivo."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com a palavra correta:",
+          "pergunta": "A ___ (word meaning 'light' in Greek) is 'phos'.",
+          "resposta": "word",
+          "alternativas": ["Word"],
+          "explicacao": "Estrutura: 'A word meaning X' = 'Uma palavra que significa X'."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com o adjetivo correto com 'un-':",
+          "pergunta": "The rules are ___ (changing). They never change.",
+          "resposta": "unchanging",
+          "alternativas": ["Unchanging"],
+          "explicacao": "O prefixo 'un-' + 'changing' forma 'unchanging' (imutável)."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene a frase:",
+          "palavras": ["a", "eternal", "meaning", "word", "hebrew", "forever"],
+          "resposta": "a hebrew word meaning eternal forever",
+          "explicacao": "'A Hebrew word' + 'meaning' + 'eternal' + 'forever'."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene as palavras-chave:",
+          "palavras": ["refuge", "unchanging", "timeless"],
+          "resposta": "timeless unchanging refuge",
+          "explicacao": "Ordem comum: adjetivos seguidos do substantivo (timeless, unchanging - adjetivos; refuge - substantivo)."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza: <em>Timeless, unchanging, refuge.</em>",
+          "resposta": "Atemporal, imutável, refúgio.",
+          "palavrasChave": ["atemporal", "imutável", "refúgio"],
+          "explicacao": "Três descritores do caráter eterno de Deus."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza para o inglês (com 'meaning'): <em>Uma palavra que significa 'esperança'.</em>",
+          "resposta": "a word meaning 'hope'",
+          "palavrasChave": ["word", "meaning", "hope"],
+          "explicacao": "Use 'a word meaning + palavra' para explicar significado."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a palavra:",
+          "palavras": ["everlasting"],
+          "resposta": "everlasting",
+          "explicacao": "'Everlasting' (êverlástin) - 'ever' como 'êver', 'lasting' como 'lástin'."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique:",
+          "palavras": ["timeless"],
+          "resposta": "timeless",
+          "explicacao": "'Timeless' (táimlés) - 'time' como 'táim', 'less' como 'lés'."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a palavra:",
+          "palavras": ["refuge"],
+          "resposta": "refuge",
+          "explicacao": "'Refuge' (réfiudj) - 'ref' como 'réf', 'uge' como 'iudj' (i+u+ dj)."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique:",
+          "palavras": ["hebrew"],
+          "resposta": "hebrew",
+          "explicacao": "'Hebrew' (ríbru) - 'He' como 'rí', 'brew' como 'bru' (b + r + u)."
+        }
+      ]
+    },
+    {
+      "indice": 2,
+      "referencia": "Eternal reveals God's unbounded nature...",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "O que significa o prefixo 'un-' em <em>unbounded</em>?",
+          "opcoes": ["Não", "Muito", "De novo", "Contra"],
+          "resposta": "Não",
+          "explicacao": "O prefixo 'un-' adiciona sentido negativo. 'Bounded' = limitado → 'unbounded' = ilimitado."
+        },
+        {
+          "tipo": "multipla",
+          "pergunta": "Qual a preposição correta para indicar 'através do tempo / ao longo de'?",
+          "opcoes": ["Through", "Over", "Across", "Along"],
+          "resposta": "Through",
+          "explicacao": "'Through every generation' = através de cada geração. 'Through' indica extensão contínua no tempo."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com a palavra com prefixo 'un-':",
+          "pergunta": "The ocean seems ___ (bounded). We can't see the end.",
+          "resposta": "unbounded",
+          "alternativas": ["Unbounded"],
+          "explicacao": "'Unbounded' = sem limites, ilimitado."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com a preposição correta:",
+          "pergunta": "He remained faithful ___ the years.",
+          "resposta": "through",
+          "alternativas": ["Through"],
+          "explicacao": "'Through the years' = através dos anos, ao longo dos anos."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene a frase:",
+          "palavras": ["unbounded", "eternal", "nature", "reveals", "god's"],
+          "resposta": "eternal reveals god's unbounded nature",
+          "explicacao": "Sujeito 'Eternal' (a palavra) + verbo 'reveals' + objeto 'God's unbounded nature'."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene:",
+          "palavras": ["generation", "faithful", "through", "unchanging", "and", "every"],
+          "resposta": "unchanging and faithful through every generation",
+          "explicacao": "Adjetivos 'unchanging and faithful' + 'through every generation'."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza: <em>Eternal reveals God's unbounded nature.</em>",
+          "resposta": "Eterno revela a natureza ilimitada de Deus.",
+          "palavrasChave": ["revela", "natureza", "ilimitada"],
+          "explicacao": "'Unbounded' = ilimitado/sem fronteiras."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza para o inglês (com 'through'): <em>Através de cada dificuldade, ele permaneceu forte.</em>",
+          "resposta": "through every difficulty, he remained strong",
+          "palavrasChave": ["through", "every", "difficulty", "remained"],
+          "explicacao": "'Through every difficulty' = através de cada dificuldade."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a palavra:",
+          "palavras": ["reveals"],
+          "resposta": "reveals",
+          "explicacao": "'Reveals' (rivíuls) - 're' como 'ri', 'veals' como 'víuls'."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique:",
+          "palavras": ["unbounded"],
+          "resposta": "unbounded",
+          "explicacao": "'Unbounded' (anbáunded) - 'un' como 'an', 'bounded' como 'báunded'."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a palavra:",
+          "palavras": ["generation"],
+          "resposta": "generation",
+          "explicacao": "'Generation' (djenêreichion) - 'gene' como 'djene', 'ration' como 'rêichion'."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique:",
+          "palavras": ["faithful"],
+          "resposta": "faithful",
+          "explicacao": "'Faithful' (fêitful) - 'faith' como 'fêit', 'ful' como 'ful'."
+        }
+      ]
+    },
+    {
+      "indice": 3,
+      "referencia": "We see eternal revealed in Deuteronomy...",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "Qual a função de <em>revealed</em> em <em>eternal revealed</em>?",
+          "opcoes": ["Verbo principal", "Particípio passado funcionando como adjetivo", "Substantivo", "Advérbio"],
+          "resposta": "Particípio passado funcionando como adjetivo",
+          "explicacao": "'Revealed' é o particípio passado de 'reveal', usado aqui como adjetivo após o substantivo 'eternal'."
+        },
+        {
+          "tipo": "multipla",
+          "pergunta": "Como se escreve a abreviação de versículo bíblico em inglês?",
+          "opcoes": ["Deut 33,27", "Deuteronomy 33:27", "Deut.33.27", "Dt 33/27"],
+          "resposta": "Deuteronomy 33:27",
+          "explicacao": "A forma padrão em inglês é: Nome do livro + capítulo + dois pontos + versículo. Ex: John 3:16."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com o particípio passado:",
+          "pergunta": "The truth ___ (reveal) set us free.",
+          "resposta": "revealed",
+          "alternativas": ["Revealed"],
+          "explicacao": "'The truth revealed' = a verdade revelada (particípio como adjetivo)."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete a referência bíblica:",
+          "pergunta": "Psalm 23 ___ 1",
+          "resposta": ":",
+          "alternativas": [":"],
+          "explicacao": "Em inglês, usa-se dois pontos entre capítulo e versículo."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene a referência bíblica:",
+          "palavras": ["33", "deuteronomy", "27", "verse", "chapter"],
+          "resposta": "deuteronomy chapter 33 verse 27",
+          "explicacao": "Nome do livro + 'chapter' + número + 'verse' + número."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene a frase:",
+          "palavras": ["in", "eternal", "revealed", "see", "deuteronomy", "we"],
+          "resposta": "we see eternal revealed in deuteronomy",
+          "explicacao": "Sujeito 'We' + verbo 'see' + objeto 'eternal revealed' + lugar 'in Deuteronomy'."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza: <em>We see eternal revealed in Deuteronomy.</em>",
+          "resposta": "Vemos 'eterno' revelado em Deuteronômio.",
+          "palavrasChave": ["vemos", "revelado", "deuteronômio"],
+          "explicacao": "'Eternal' aparece como termo (substantivo). 'Revealed' = revelado."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza para o inglês: <em>João capítulo 3 versículo 16</em>",
+          "resposta": "john chapter 3 verse 16",
+          "palavrasChave": ["john", "chapter", "verse"],
+          "explicacao": "Use 'chapter' e 'verse' para os números. Ou simplesmente 'John 3:16'."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a palavra:",
+          "palavras": ["deuteronomy"],
+          "resposta": "deuteronomy",
+          "explicacao": "'Deuteronomy' (diutêranômi) - 5 sílabas: 'Deu-te-ro-no-my'."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique o particípio:",
+          "palavras": ["revealed"],
+          "resposta": "revealed",
+          "explicacao": "'Revealed' (rivíuld) - 're' como 'ri', 'vealed' como 'víuld' (d final sonoro)."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a palavra:",
+          "palavras": ["chapter"],
+          "resposta": "chapter",
+          "explicacao": "'Chapter' (cháptêr) - 'chap' como 'cháp', 'ter' como 'têr'."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique:",
+          "palavras": ["verse"],
+          "resposta": "verse",
+          "explicacao": "'Verse' (vêrs) - 'ver' como 'vêr', 'se' como 's' (s surdo)."
+        }
+      ]
+    },
+    {
+      "indice": 4,
+      "referencia": "The eternal God is your refuge...",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "Qual figura de linguagem é usada em <em>underneath are the everlasting arms</em>?",
+          "opcoes": ["Metáfora", "Inversão sujeito-verbo para ênfase poética", "Ironia", "Eufemismo"],
+          "resposta": "Inversão sujeito-verbo para ênfase poética",
+          "explicacao": "A ordem normal seria 'the everlasting arms are underneath'. A inversão dá ênfase dramática e poética."
+        },
+        {
+          "tipo": "multipla",
+          "pergunta": "O que significa <em>refuge</em>?",
+          "opcoes": ["Refúgio, lugar seguro", "Recusa", "Refugo", "Recurso"],
+          "resposta": "Refúgio, lugar seguro",
+          "explicacao": "'Refuge' é um lugar de proteção e segurança contra perigos."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete a frase com inversão:",
+          "pergunta": "Here ___ (come) the sun.",
+          "resposta": "comes",
+          "alternativas": ["Comes"],
+          "explicacao": "Inversão: advérbio 'Here' + verbo 'comes' + sujeito 'the sun'."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com a palavra correta:",
+          "pergunta": "The ___ God is your refuge.",
+          "resposta": "eternal",
+          "alternativas": ["Eternal"],
+          "explicacao": "'The eternal God' = o Deus eterno (adjetivo antes do substantivo)."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene a frase com inversão:",
+          "palavras": ["the", "everlasting", "are", "arms", "underneath"],
+          "resposta": "underneath are the everlasting arms",
+          "explicacao": "Inversão: 'underneath' (complemento) + 'are' (verbo) + sujeito 'the everlasting arms'."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene a frase normal:",
+          "palavras": ["is", "god", "refuge", "your", "eternal", "the"],
+          "resposta": "the eternal god is your refuge",
+          "explicacao": "Sujeito 'The eternal God' + verbo 'is' + complemento 'your refuge'."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza: <em>The eternal God is your refuge.</em>",
+          "resposta": "O Deus eterno é o seu refúgio.",
+          "palavrasChave": ["deus", "eterno", "refúgio"],
+          "explicacao": "Frase direta com verbo 'to be'."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza para o inglês (com inversão poética): <em>Abaixo estão os braços eternos.</em>",
+          "resposta": "underneath are the everlasting arms",
+          "palavrasChave": ["underneath", "everlasting", "arms"],
+          "explicacao": "Inversão para ênfase: complemento + verbo + sujeito."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a palavra:",
+          "palavras": ["refuge"],
+          "resposta": "refuge",
+          "explicacao": "'Refuge' (réfiudj) - ênfase na primeira sílaba."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique:",
+          "palavras": ["underneath"],
+          "resposta": "underneath",
+          "explicacao": "'Underneath' (anderníth) - 'under' como 'ander', 'neath' como 'níth'."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a palavra:",
+          "palavras": ["everlasting"],
+          "resposta": "everlasting",
+          "explicacao": "'Everlasting' (êverlástin) - 'ever' como 'êver', 'lasting' como 'lástin'."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a frase inversa:",
+          "palavras": ["underneath", "are", "the", "arms"],
+          "resposta": "underneath are the arms",
+          "explicacao": "Encadeie: 'underneath-are-the-arms' - conexão natural entre as palavras."
+        }
+      ]
+    },
+    {
+      "indice": 5,
+      "referencia": "Live it out. Let the reality... put your present worries into perspective.",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "O que significa o phrasal verb <em>live it out</em>?",
+          "opcoes": ["Morrer", "Viver na prática / exteriorizar através da vida", "Sobreviver", "Alugar"],
+          "resposta": "Viver na prática / exteriorizar através da vida",
+          "explicacao": "'Live out' significa colocar em prática, viver de acordo com algo, tornar algo real através das ações."
+        },
+        {
+          "tipo": "multipla",
+          "pergunta": "O que significa a expressão <em>put into perspective</em>?",
+          "opcoes": ["Colocar em perspectiva / relativizar", "Colocar em perigo", "Perseguir", "Fotografar"],
+          "resposta": "Colocar em perspectiva / relativizar",
+          "explicacao": "Significa comparar algo com algo maior para que pareça menos importante ou mais compreensível."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com 'live out':",
+          "pergunta": "Don't just dream it. ___!",
+          "resposta": "live it out",
+          "alternativas": ["Live it out"],
+          "explicacao": "Imperativo: 'Live it out' = Viva isso na prática."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete a expressão:",
+          "pergunta": "Traveling puts your daily problems ___ perspective.",
+          "resposta": "into",
+          "alternativas": ["Into"],
+          "explicacao": "Expressão fixa: 'put something into perspective'."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene a frase:",
+          "palavras": ["out", "live", "it"],
+          "resposta": "live it out",
+          "explicacao": "Verbo 'live' + objeto 'it' + partícula 'out'."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene a expressão:",
+          "palavras": ["into", "worries", "perspective", "your", "present", "put"],
+          "resposta": "put your present worries into perspective",
+          "explicacao": "Verbo 'put' + objeto 'your present worries' + 'into perspective'."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza: <em>Live it out. Put your worries into perspective.</em>",
+          "resposta": "Viva isso na prática. Coloque suas preocupações em perspectiva.",
+          "palavrasChave": ["viva", "prática", "preocupações", "perspectiva"],
+          "explicacao": "Dois imperativos motivacionais."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza para o inglês (com 'live out'): <em>Ele vive seus valores todos os dias.</em>",
+          "resposta": "he lives out his values every day",
+          "palavrasChave": ["lives", "out", "values", "every"],
+          "explicacao": "'Lives out' = vive na prática, exterioriza."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique o phrasal verb:",
+          "palavras": ["live", "out"],
+          "resposta": "live out",
+          "explicacao": "'Live' (liv) - 'i' curto. 'Out' (aut) - ditongo 'au'. Encadeie: 'li-vaut'."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a palavra:",
+          "palavras": ["perspective"],
+          "resposta": "perspective",
+          "explicacao": "'Perspective' (pêrspektiv) - 'per' como 'pêr', 'spective' como 'spektiv'."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique:",
+          "palavras": ["worries"],
+          "resposta": "worries",
+          "explicacao": "'Worries' (uôris) - 'wo' como 'uô', 'rries' como 'ris'."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a expressão:",
+          "palavras": ["into", "perspective"],
+          "resposta": "into perspective",
+          "explicacao": "Encadeie: 'in-to-perspective' - o 't' de 'into' se conecta ao 'p' de 'perspective'."
+        }
+      ]
+    },
+    {
+      "indice": 6,
+      "referencia": "Lean into his everlasting arms in prayer...",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "Qual o significado figurado de <em>lean into</em> neste contexto?",
+          "opcoes": ["Inclinar-se fisicamente", "Evitar, fugir", "Confiar plenamente, abraçar sem resistência", "Empurrar"],
+          "resposta": "Confiar plenamente, abraçar sem resistência",
+          "explicacao": "Metaforicamente, 'lean into' significa não resistir a uma situação, mas confiar e se apoiar nela."
+        },
+        {
+          "tipo": "multipla",
+          "pergunta": "Qual a função gramatical de <em>trusting</em> em <em>trusting his care beyond what you can see</em>?",
+          "opcoes": ["Verbo principal", "Gerúndio indicando ação simultânea", "Substantivo", "Infinitivo"],
+          "resposta": "Gerúndio indicando ação simultânea",
+          "explicacao": "O gerúndio 'trusting' descreve uma ação que acontece ao mesmo tempo que a ação principal 'lean'."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com o phrasal verb:",
+          "pergunta": "When you feel scared, ___ the fear and face it.",
+          "resposta": "lean into",
+          "alternativas": ["Lean into"],
+          "explicacao": "'Lean into the fear' = abrace o medo, não fuja dele."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com o gerúndio:",
+          "pergunta": "She walked down the street, ___ (smile).",
+          "resposta": "smiling",
+          "alternativas": ["Smiling"],
+          "explicacao": "Gerúndio para ação simultânea: 'walked... smiling' = andava... sorrindo."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene a frase:",
+          "palavras": ["into", "everlasting", "his", "arms", "lean", "prayer", "in"],
+          "resposta": "lean into his everlasting arms in prayer",
+          "explicacao": "Verbo 'lean' + 'into his everlasting arms' + 'in prayer'."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene a oração com 'beyond':",
+          "palavras": ["see", "can", "you", "what", "beyond"],
+          "resposta": "beyond what you can see",
+          "explicacao": "'Beyond' + 'what you can see' (aquilo que você pode ver)."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza: <em>Lean into his everlasting arms in prayer.</em>",
+          "resposta": "Incline-se sobre seus braços eternos em oração.",
+          "palavrasChave": ["incline-se", "braços", "eternos", "oração"],
+          "explicacao": "'Lean into' no sentido de confiar e se apoiar."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza para o inglês (com 'trusting'): <em>Ele trabalhou, confiando em Deus.</em>",
+          "resposta": "he worked, trusting in god",
+          "palavrasChave": ["worked", "trusting", "god"],
+          "explicacao": "Gerúndio 'trusting' para ação simultânea."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique o phrasal verb:",
+          "palavras": ["lean", "into"],
+          "resposta": "lean into",
+          "explicacao": "'Lean' (lin) - 'ea' tem som de 'i' longo. 'Into' (íntu) - 'in' como 'ín', 'to' como 'tu'."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a palavra:",
+          "palavras": ["prayer"],
+          "resposta": "prayer",
+          "explicacao": "'Prayer' (prér) - 'pray' como 'prêi', 'er' como 'r' (uma sílaba). Diferente de 'pray' (prei)."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique:",
+          "palavras": ["beyond"],
+          "resposta": "beyond",
+          "explicacao": "'Beyond' (biând) - 'be' como 'bi', 'yond' como 'iând' (i + â + nd)."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a frase curta:",
+          "palavras": ["beyond", "what", "you", "see"],
+          "resposta": "beyond what you see",
+          "explicacao": "Encadeie: 'beyond-what-you-see' - o 't' de 'what' se conecta ao 'y' de 'you'."
+        }
+      ]
+    },
+    {
+      "indice": 7,
+      "referencia": "Reflection prayer... Help me rest in his everlasting arms...",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "Qual estrutura é usada em <em>Help me rest</em>?",
+          "opcoes": ["Help + objeto + infinitivo com 'to'", "Help + objeto + verbo base (sem 'to')", "Help + gerúndio", "Help + substantivo"],
+          "resposta": "Help + objeto + verbo base (sem 'to')",
+          "explicacao": "Após 'help' + objeto, o verbo que segue pode ser usado com ou sem 'to'. Sem 'to' é mais comum em orações e linguagem informal."
+        },
+        {
+          "tipo": "multipla",
+          "pergunta": "O que significa a oração <em>when life feels uncertain</em>?",
+          "opcoes": ["Quando a vida é incerta", "Quando a vida parece incerta", "Quando a vida sente incerteza", "Quando a vida está sentindo incerteza"],
+          "resposta": "Quando a vida parece incerta",
+          "explicacao": "'Life feels uncertain' = a vida dá a sensação de ser incerta. 'Feel' + adjetivo expressa percepção."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com 'help' + objeto + verbo base:",
+          "pergunta": "Please help me ___ (understand) this lesson.",
+          "resposta": "understand",
+          "alternativas": ["Understand"],
+          "explicacao": "Após 'help me', usamos o verbo na forma base (sem 'to'): 'help me understand'."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com o adjetivo correto:",
+          "pergunta": "The situation ___ (feel) hopeless.",
+          "resposta": "feels",
+          "alternativas": ["Feels"],
+          "explicacao": "'Feels + adjetivo' = parece estar. 'The situation feels hopeless' = a situação parece desesperadora."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene o pedido em oração:",
+          "palavras": ["rest", "arms", "me", "his", "everlasting", "in", "help"],
+          "resposta": "help me rest in his everlasting arms",
+          "explicacao": "'Help' + objeto 'me' + verbo base 'rest' + lugar 'in his everlasting arms'."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene a oração com 'when':",
+          "palavras": ["uncertain", "life", "feels", "when"],
+          "resposta": "when life feels uncertain",
+          "explicacao": "'When' + sujeito 'life' + verbo 'feels' + adjetivo 'uncertain'."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza: <em>Help me rest in his everlasting arms when life feels uncertain.</em>",
+          "resposta": "Ajude-me a descansar em seus braços eternos quando a vida parecer incerta.",
+          "palavrasChave": ["ajude-me", "descansar", "braços", "eternos", "incerta"],
+          "explicacao": "Estrutura de oração com pedido ('help me') e condição de tempo ('when')."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza para o inglês (com 'thank you that'): <em>Obrigado porque você está aqui.</em>",
+          "resposta": "thank you that you are here",
+          "palavrasChave": ["thank", "that", "here"],
+          "explicacao": "'Thank you that + oração' = agradecer por um fato completo."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a palavra:",
+          "palavras": ["reflection"],
+          "resposta": "reflection",
+          "explicacao": "'Reflection' (riflékchen) - 're' como 'ri', 'flection' como 'flékchen'."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique:",
+          "palavras": ["uncertain"],
+          "resposta": "uncertain",
+          "explicacao": "'Uncertain' (ansêrtên) - 'un' como 'an', 'certain' como 'sêrtên'."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a palavra:",
+          "palavras": ["holy", "spirit"],
+          "resposta": "holy spirit",
+          "explicacao": "'Holy' (hôuli) - 'ho' como 'rô', 'ly' como 'li'. 'Spirit' (spírit) - 'spi' como 'spi', 'rit' como 'rit'."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a frase final da oração:",
+          "palavras": ["in", "jesus", "name", "amen"],
+          "resposta": "in jesus name amen",
+          "explicacao": "'Jesus' (djízous) - 'Je' como 'djí', 'sus' como 'zous'. 'Amen' (âmen)."
+        }
+      ]
+    },
+    {
+      "indice": 8,
+      "referencia": "If you'd like your own copy... comment word and I'll send you the info.",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "O que significa a contração <em>you'd</em> em <em>If you'd like</em>?",
+          "opcoes": ["You had", "You would", "You did", "You could"],
+          "resposta": "You would",
+          "explicacao": "'You'd' é a contração de 'you would'. 'Would like' é uma forma educada de dizer 'want'."
+        },
+        {
+          "tipo": "multipla",
+          "pergunta": "Qual a estrutura usada em <em>comment word and I'll send you the info</em>?",
+          "opcoes": ["Imperativo + and + futuro", "Condicional + futuro", "Presente + futuro", "Passado + futuro"],
+          "resposta": "Imperativo + and + futuro",
+          "explicacao": "Estrutura comum em instruções: imperativo ('comment word') + 'and' + futuro ('I'll send')."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com a contração de 'you would':",
+          "pergunta": "If ___ like, I can help you.",
+          "resposta": "you'd",
+          "alternativas": ["You'd"],
+          "explicacao": "'You'd' = you would. 'If you'd like' = se você quiser (educado)."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete a estrutura imperativo + futuro:",
+          "pergunta": "___ (click) the link and you ___ (get) a discount.",
+          "resposta": "click will get",
+          "alternativas": ["Click will get"],
+          "explicacao": "Imperativo 'click' + 'and' + futuro 'you will get'."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene a frase condicional educada:",
+          "palavras": ["like", "you'd", "if", "copy", "your", "own"],
+          "resposta": "if you'd like your own copy",
+          "explicacao": "'If' + 'you'd like' + objeto 'your own copy'."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene a instrução:",
+          "palavras": ["word", "comment", "info", "you", "send", "i'll", "and"],
+          "resposta": "comment word and i'll send you the info",
+          "explicacao": "Imperativo 'comment word' + 'and' + futuro 'I'll send you the info'."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza: <em>If you'd like your own copy, comment word.</em>",
+          "resposta": "Se você quiser sua própria cópia, comente 'word'.",
+          "palavrasChave": ["quiser", "cópia", "comente"],
+          "explicacao": "'Would like' é mais educado que 'want'. Aqui, instrução de ação."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza para o inglês (com 'you'd like'): <em>Se você quiser (educado), pode sentar aqui.</em>",
+          "resposta": "if you'd like, you can sit here",
+          "palavrasChave": ["you'd", "like", "sit", "here"],
+          "explicacao": "'If you'd like' é uma oferta educada, não uma condicional rígida."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a contração:",
+          "palavras": ["you'd"],
+          "resposta": "you'd",
+          "explicacao": "'You'd' (iúd) - 'you' como 'iú', 'd' final sonoro. Uma sílaba."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a palavra:",
+          "palavras": ["comment"],
+          "resposta": "comment",
+          "explicacao": "'Comment' (kâment) - 'com' como 'kâm', 'ment' como 'ment'."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a contração:",
+          "palavras": ["i'll"],
+          "resposta": "i'll",
+          "explicacao": "'I'll' (áil) - 'I' + 'will' contraído. Uma sílaba como 'ail'."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a frase curta:",
+          "palavras": ["send", "you", "the", "info"],
+          "resposta": "send you the info",
+          "explicacao": "'Send' (send) - 'e' como 'é'. 'Info' (ínfou) - 'in' como 'ín', 'fo' como 'fou'."
+        }
+      ]
+    },
+    {
+      "indice": 9,
+      "referencia": "I wish you a blessed Sunday and shine your light.",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "Qual a estrutura usada em <em>I wish you a blessed Sunday</em>?",
+          "opcoes": ["I wish + that + oração", "I wish + pessoa + substantivo", "I wish + to + verbo", "I wish + for + substantivo"],
+          "resposta": "I wish + pessoa + substantivo",
+          "explicacao": "Para expressar bons desejos, usamos 'wish + pessoa + substantivo'. Ex: I wish you success."
+        },
+        {
+          "tipo": "multipla",
+          "pergunta": "Qual é a função de <em>shine your light</em> no final da aula?",
+          "opcoes": ["Declaração", "Imperativo de encorajamento", "Pergunta", "Exclamação"],
+          "resposta": "Imperativo de encorajamento",
+          "explicacao": "É um imperativo motivacional, uma frase de efeito que se tornou marca registrada das aulas."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com a estrutura de desejo:",
+          "pergunta": "I ___ you a happy birthday.",
+          "resposta": "wish",
+          "alternativas": ["Wish"],
+          "explicacao": "Estrutura: 'I wish you + substantivo'."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com o adjetivo correto:",
+          "pergunta": "Have a ___ (bendito/abençoado) day!",
+          "resposta": "blessed",
+          "alternativas": ["Blessed"],
+          "explicacao": "'Blessed' (abençoado) é o adjetivo. 'A blessed day' = um dia abençoado."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene o desejo:",
+          "palavras": ["wish", "sunday", "blessed", "you", "a", "i"],
+          "resposta": "i wish you a blessed sunday",
+          "explicacao": "Sujeito 'I' + verbo 'wish' + objeto 'you' + 'a blessed Sunday'."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene o imperativo final:",
+          "palavras": ["your", "light", "shine"],
+          "resposta": "shine your light",
+          "explicacao": "Imperativo: verbo 'shine' + objeto 'your light'."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza: <em>I wish you a blessed Sunday and shine your light.</em>",
+          "resposta": "Desejo a você um domingo abençoado e brilhe a sua luz.",
+          "palavrasChave": ["desejo", "domingo", "abençoado", "brilhe", "luz"],
+          "explicacao": "Um desejo (I wish you) seguido de um imperativo de encorajamento."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza para o inglês (com 'I wish you'): <em>Desejo a você muita paz.</em>",
+          "resposta": "i wish you much peace",
+          "palavrasChave": ["wish", "much", "peace"],
+          "explicacao": "'I wish you + substantivo' = desejo a você algo."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a palavra:",
+          "palavras": ["blessed"],
+          "resposta": "blessed",
+          "explicacao": "'Blessed' (bléssed) - duas sílabas: 'bless-ed' (o 'ed' é pronunciado separadamente). Como adjetivo, pode ser 'blest' (uma sílaba) em contextos menos formais."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique:",
+          "palavras": ["sunday"],
+          "resposta": "sunday",
+          "explicacao": "'Sunday' (sândêi) - 'sun' como 'sân', 'day' como 'dêi'."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a expressão final:",
+          "palavras": ["shine", "your", "light"],
+          "resposta": "shine your light",
+          "explicacao": "'Shine' (cháin) - 'sh' como 'ch', 'i' como 'ai'. 'Light' (láit) - 'gh' mudo."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a palavra:",
+          "palavras": ["wish"],
+          "resposta": "wish",
+          "explicacao": "'Wish' (uích) - 'wi' como 'uí', 'sh' como 'ch'."
+        }
+      ]
+    }
+  ]
+}
