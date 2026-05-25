@@ -1,0 +1,26 @@
+{
+  "titulo": "Quizlet — The Poem of Connection",
+  "palavras": 16,
+  "licoes": 10,
+  "descricao": "Vocabulário poético e expressões idiomáticas",
+  "conteudo": {
+    "cards": [
+      { "termo": "to give someone chills", "definicao": "arrepiar alguém / causar forte emoção", "frase": "That speech gave me chills.", "dificuldade": 2 },
+      { "termo": "profound", "definicao": "profundo (emocional/intelectualmente)", "frase": "It was a profound experience.", "dificuldade": 2 },
+      { "termo": "unless", "definicao": "a menos que", "frase": "You won't succeed unless you try.", "dificuldade": 2 },
+      { "termo": "nor + inversão", "definicao": "nem (estrutura formal/poética)", "frase": "Nor can I speak.", "dificuldade": 3 },
+      { "termo": "except as", "definicao": "exceto quando / a não ser que", "frase": "I cannot rest except as I am tired.", "dificuldade": 3 },
+      { "termo": "voz passiva (presente simples)", "definicao": "am/is/are + particípio", "frase": "As I am taught, I teach.", "dificuldade": 2 },
+      { "termo": "through which", "definicao": "através do qual", "frase": "The mind through which I seek.", "dificuldade": 3 },
+      { "termo": "within which", "definicao": "dentro do qual", "frase": "The light within which I see.", "dificuldade": 3 },
+      { "termo": "paralelismo", "definicao": "repetição de estrutura gramatical", "frase": "A mind behind the mind, a light within the light.", "dificuldade": 3 },
+      { "termo": "unfound", "definicao": "não encontrada / não fundada", "frase": "O unfound wisdom.", "dificuldade": 2 },
+      { "termo": "to hit differently", "definicao": "impactar/ressoar de forma única", "frase": "This song hits differently now.", "dificuldade": 3 },
+      { "termo": "over and over again", "definicao": "repetidas vezes", "frase": "I read it over and over again.", "dificuldade": 2 },
+      { "termo": "the more..., the more...", "definicao": "quanto mais..., mais...", "frase": "The more I practice, the better I get.", "dificuldade": 2 },
+      { "termo": "to sit with something", "definicao": "refletir / processar internamente", "frase": "Sit with that feeling for a moment.", "dificuldade": 3 },
+      { "termo": "to look forward to", "definicao": "aguardar ansiosamente", "frase": "I look forward to seeing you.", "dificuldade": 2 },
+      { "termo": "to shine your light", "definicao": "brilhar / ser sua melhor versão", "frase": "Don't be afraid to shine your light.", "dificuldade": 2 }
+    ]
+  }
+}

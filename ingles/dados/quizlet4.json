@@ -1,0 +1,28 @@
+{
+  "titulo": "Quizlet — O Padrão dos Milagres",
+  "palavras": 18,
+  "licoes": 10,
+  "descricao": "Revisão inteligente de erros · Flashcards + Múltipla Escolha",
+  "conteudo": {
+    "cards": [
+      { "termo": "pattern", "definicao": "padrão, recorrência", "frase": "There is a pattern to every miracle.", "dificuldade": 2 },
+      { "termo": "miracle", "definicao": "milagre", "frase": "Every miracle in the Bible follows a pattern.", "dificuldade": 1 },
+      { "termo": "setback", "definicao": "contratempo, revés", "frase": "It changes the way you look at your own setbacks.", "dificuldade": 2 },
+      { "termo": "mountaintop", "definicao": "topo da montanha (fig. momento de sucesso)", "frase": "We pray for the mountaintop moments of fulfillment.", "dificuldade": 2 },
+      { "termo": "fulfillment", "definicao": "realização, cumprimento", "frase": "Mountaintop moments of fulfillment.", "dificuldade": 2 },
+      { "termo": "peak", "definicao": "pico, ponto mais alto", "frase": "The higher the peak, the deeper the foundation.", "dificuldade": 1 },
+      { "termo": "foundation", "definicao": "fundação, base", "frase": "The deeper the foundation has to go.", "dificuldade": 2 },
+      { "termo": "anointing", "definicao": "unção", "frase": "We want the purpose, the strength, the anointing.", "dificuldade": 2 },
+      { "termo": "struggle", "definicao": "luta, esforço difícil", "frase": "We want it without the struggle.", "dificuldade": 1 },
+      { "termo": "breaking", "definicao": "quebrantamento, ruptura (processo doloroso)", "frase": "Without the waiting, without the breaking.", "dificuldade": 3 },
+      { "termo": "to betray", "definicao": "trair", "frase": "Joseph was betrayed and thrown into prison.", "dificuldade": 2 },
+      { "termo": "on the run", "definicao": "em fuga, fugindo", "frase": "David spent years on the run, hiding in caves.", "dificuldade": 3 },
+      { "termo": "infertility", "definicao": "infertilidade", "frase": "Hannah mocked for her infertility.", "dificuldade": 2 },
+      { "termo": "capacity", "definicao": "capacidade", "frase": "He was expanding their capacity to carry what was coming.", "dificuldade": 2 },
+      { "termo": "to crush", "definicao": "esmagar", "frase": "Life is crushing you.", "dificuldade": 2 },
+      { "termo": "bedrock", "definicao": "rocha-mãe, base sólida", "frase": "Digging deep into the bedrock of your soul.", "dificuldade": 3 },
+      { "termo": "to sustain", "definicao": "sustentar, suportar", "frase": "So that you can sustain the height.", "dificuldade": 2 },
+      { "termo": "height", "definicao": "altura", "frase": "Sustain the height that he is calling you to.", "dificuldade": 1 }
+    ]
+  }
+}
