@@ -1,0 +1,18 @@
+{
+  "aulas": [
+    {
+      "id": 1,
+      "title": "Parole Eleganti per Mettere Qualcuno al Suo Posto",
+      "subtitle": "3 palavras sofisticadas para se expressar bem em italiano",
+      "description": "Aprenda três palavras elegantes em italiano para argumentar com classe e precisão: velleitario, pretestuoso e elusivo.",
+      "level": "Intermediário",
+      "thumbnail": "🇮🇹✨",
+      "duration": "~1 min",
+      "words": 17,
+      "modules": 10,
+      "featured": true,
+      "color": "#1a6b4a",
+      "videoUrl": "https://jonathanbitt.github.io/Tutu/italiano/dados/videos/video1.mp4"
+    }
+  ]
+}
