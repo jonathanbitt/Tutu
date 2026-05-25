@@ -5,7 +5,7 @@
     {
       "indice": 0,
       "referencia": "So this morning I watched a video... and it gave me chills.",
-      "exercicios": [
+      "exercises": [
         {
           "tipo": "multipla",
           "pergunta": "O que significa a expressão <em>it gave me chills</em>?",
@@ -47,7 +47,7 @@
     {
       "indice": 1,
       "referencia": "It was so profound, so beautiful, I have to share it with you.",
-      "exercicios": [
+      "exercises": [
         {
           "tipo": "multipla",
           "pergunta": "O que significa <em>profound</em>?",
@@ -89,7 +89,7 @@
     {
       "indice": 2,
       "referencia": "I cannot think unless I have been thought, nor can I speak unless I have been spoken.",
-      "exercicios": [
+      "exercises": [
         {
           "tipo": "multipla",
           "pergunta": "O que significa <em>unless</em>?",
@@ -138,7 +138,7 @@
     {
       "indice": 3,
       "referencia": "I cannot teach except as I am taught, or break the bread except as I am broken.",
-      "exercicios": [
+      "exercises": [
         {
           "tipo": "multipla",
           "pergunta": "O que significa <em>except as</em> neste contexto poético?",
@@ -187,7 +187,7 @@
     {
       "indice": 4,
       "referencia": "A mind behind the mind through which I seek, a light within the light with which I see...",
-      "exercicios": [
+      "exercises": [
         {
           "tipo": "multipla",
           "pergunta": "Qual é o nome da figura de linguagem que repete a estrutura 'a X preposição the X'?",
@@ -236,7 +236,7 @@
     {
       "indice": 5,
       "referencia": "O founding, unfound wisdom, finding me.",
-      "exercicios": [
+      "exercises": [
         {
           "tipo": "multipla",
           "pergunta": "Qual o efeito do prefixo 'un-' em <em>unfound</em>?",
@@ -285,7 +285,7 @@
     {
       "indice": 6,
       "referencia": "When I heard this, I felt like I needed to read the poem over and over again because every line just hit differently.",
-      "exercicios": [
+      "exercises": [
         {
           "tipo": "multipla",
           "pergunta": "O que significa a gíria <em>hit differently</em>?",
@@ -334,7 +334,7 @@
     {
       "indice": 7,
       "referencia": "And the more I sit with it, the more it reminds me of how deeply connected we are with God...",
-      "exercicios": [
+      "exercises": [
         {
           "tipo": "multipla",
           "pergunta": "Qual a estrutura gramatical de <em>the more I sit with it, the more it reminds me</em>?",
@@ -383,7 +383,7 @@
     {
       "indice": 8,
       "referencia": "I would genuinely love to hear how this poem lands in your heart.",
-      "exercicios": [
+      "exercises": [
         {
           "tipo": "multipla",
           "pergunta": "Qual a diferença entre <em>I would love</em> e <em>I want</em>?",
@@ -432,7 +432,7 @@
     {
       "indice": 9,
       "referencia": "I look forward to reading your comments. I wish you a blessed day and shine your light.",
-      "exercicios": [
+      "exercises": [
         {
           "tipo": "multipla",
           "pergunta": "Por que usamos <em>reading</em> (gerúndio) e não <em>to read</em> após <em>look forward to</em>?",
@@ -456,12 +456,12 @@
           "explicacao": "Após 'to' (preposição), use gerúndio: 'to seeing you' (não 'to see')."
         },
         {
-        "tipo": "lacuna",
-        "enunciado": "Complete com 'to' ou 'too':",
-        "pergunta": "I look forward ___ hearing from you.",
-        "resposta": "to",
-        "alternativas": ["To", "to"],
-        "explicacao": "A preposição é 'to' (não confundir com 'too' = também)."
+          "tipo": "lacuna",
+          "enunciado": "Complete com 'to' ou 'too':",
+          "pergunta": "I look forward ___ hearing from you.",
+          "resposta": "to",
+          "alternativas": ["To", "to"],
+          "explicacao": "A preposição é 'to' (não confundir com 'too' = também)."
         },
         {
           "tipo": "ordenar",
