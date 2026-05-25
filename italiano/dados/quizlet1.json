@@ -1,0 +1,25 @@
+{
+  "titulo": "Quizlet — Parole Eleganti Italiane",
+  "palavras": 15,
+  "licoes": 7,
+  "descricao": "Revisão inteligente de erros · Flashcards + Múltipla Escolha",
+  "conteudo": {
+    "cards": [
+      { "termo": "velleitario", "definicao": "velleitário / ilusório / sem chance real de realização", "frase": "Il tuo progetto è velleitario.", "dificuldade": 2 },
+      { "termo": "pretestuoso", "definicao": "pretestuoso / que usa pretexto para esconder intenções", "frase": "Le tue scuse sono pretestuose.", "dificuldade": 2 },
+      { "termo": "elusivo", "definicao": "elusivo / evasivo / que foge de respostas diretas", "frase": "Ha dato una risposta elusiva.", "dificuldade": 2 },
+      { "termo": "pretesto", "definicao": "pretexto / desculpa / justificativa falsa", "frase": "Cercano un pretesto per non lavorare.", "dificuldade": 1 },
+      { "termo": "sminuire", "definicao": "menosprezar / diminuir o valor", "frase": "Non sminuire i suoi sforzi!", "dificuldade": 2 },
+      { "termo": "del tutto", "definicao": "completamente / totalmente", "frase": "Sei del tutto sbagliato.", "dificuldade": 1 },
+      { "termo": "raggiungere", "definicao": "alcançar / atingir (meta, objetivo)", "frase": "Abbiamo raggiunto l'obiettivo.", "dificuldade": 2 },
+      { "termo": "proprie", "definicao": "próprias (posse reflexiva)", "frase": "Ognuno pensa ai propri interessi.", "dificuldade": 2 },
+      { "termo": "scopo", "definicao": "objetivo / propósito / finalidade", "frase": "Qual è il tuo scopo?", "dificuldade": 1 },
+      { "termo": "confronto diretto", "definicao": "confronto direto / discussão aberta", "frase": "Evita un confronto diretto.", "dificuldade": 2 },
+      { "termo": "cercare di", "definicao": "tentar / esforçar-se para", "frase": "Cerco di essere puntuale.", "dificuldade": 2 },
+      { "termo": "mi dispiace", "definicao": "me desculpe / sinto muito", "frase": "Mi dispiace per il ritardo.", "dificuldade": 1 },
+      { "termo": "alla prossima", "definicao": "até a próxima (despedida)", "frase": "Alla prossima, amici!", "dificuldade": 1 },
+      { "termo": "un bacio", "definicao": "um beijo (despedida carinhosa)", "frase": "Ciao, un bacio a tutti!", "dificuldade": 1 },
+      { "termo": "mettere al posto", "definicao": "colocar em seu lugar (responder à altura)", "frase": "L'ha messo al suo posto.", "dificuldade": 3 }
+    ]
+  }
+}

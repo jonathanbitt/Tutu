@@ -1,0 +1,766 @@
+{
+  "aula": 1,
+  "titulo": "ITALIANO — Parole Eleganti",
+  "paragrafos": [
+    {
+      "indice": 0,
+      "referencia": "Tre parole eleganti per mettere qualcuno al suo posto senza alzare la voce.",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "O que significa a expressão <em>mettere qualcuno al suo posto</em>?",
+          "opcoes": [
+            "Colocar alguém no lugar físico correto",
+            "Colocar alguém em seu lugar (responder à altura, com firmeza)",
+            "Convidar alguém para sentar",
+            "Ignorar alguém educadamente"
+          ],
+          "resposta": "Colocar alguém em seu lugar (responder à altura, com firmeza)",
+          "explicacao": "A expressão idiomática significa responder a uma provocação ou falta de respeito de forma assertiva e educada, sem agressividade."
+        },
+        {
+          "tipo": "multipla",
+          "pergunta": "O que <em>senza alzare la voce</em> indica sobre a ação?",
+          "opcoes": [
+            "Que a pessoa está com rouquidão",
+            "Que a ação é feita de forma calma e elegante, sem gritos",
+            "Que a pessoa não pode falar alto",
+            "Que o volume do áudio está baixo"
+          ],
+          "resposta": "Que a ação é feita de forma calma e elegante, sem gritos",
+          "explicacao": "'Sem levantar a voz' enfatiza a elegância e o controle emocional ao colocar alguém em seu lugar."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete a frase:",
+          "pergunta": "Il capo lo ha messo al suo ___ durante la riunione.",
+          "resposta": "posto",
+          "alternativas": ["posto", "Posto"],
+          "explicacao": "A expressão completa é 'mettere al suo posto'. 'Posto' significa lugar."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete:",
+          "pergunta": "Ha risposto ___ alzare la voce.",
+          "resposta": "senza",
+          "alternativas": ["senza", "Senza"],
+          "explicacao": "'Senza' significa 'sem' e é seguido de verbo no gerúndio ('alzare')."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene para formar a frase correta:",
+          "palavras": ["eleganti", "posto", "per", "mettere", "parole", "senza", "qualcuno", "voce", "alzare", "tre", "la", "al", "suo"],
+          "resposta": "tre parole eleganti per mettere qualcuno al suo posto senza alzare la voce",
+          "explicacao": "A ordem correta segue o padrão: número + substantivo + adjetivo, depois o propósito ('per' + verbo) e a maneira ('senza' + verbo)."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza para o português: <em>Tre parole eleganti per mettere qualcuno al suo posto</em>",
+          "resposta": "Três palavras elegantes para colocar alguém em seu lugar",
+          "palavrasChave": ["três", "palavras", "elegantes", "colocar", "lugar"],
+          "explicacao": "'Mettere al posto' traduz-se literalmente como 'colocar no lugar', mas idiomático é 'colocar em seu lugar'."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a pronúncia em italiano:",
+          "palavras": ["posto"],
+          "resposta": "posto",
+          "explicacao": "'Posto' - 'p' explosivo, 'o' aberto, 's' sonoro (como Z entre vogais), 't' alveolar, 'o' fechado."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique:",
+          "palavras": ["alzare", "voce"],
+          "resposta": "alzare voce",
+          "explicacao": "'Alzare' (al-tsá-re) - 'al' como em 'álcool', 'z' como 'ts', 'are' como 'áre'. 'Voce' (vô-tche) - 'v' sonoro, 'o' fechado, 'ce' como 'tche'."
+        }
+      ]
+    },
+    {
+      "indice": 1,
+      "referencia": "La prima parola è velleitario, cioè sterile, illusorio.",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "O que significa <em>velleitario</em>?",
+          "opcoes": [
+            "Algo grandioso e realizável",
+            "Um desejo ou projeto sem condições reais de se realizar (ilusório, estéril)",
+            "Uma pessoa muito inteligente",
+            "Um objeto de valor"
+          ],
+          "resposta": "Um desejo ou projeto sem condições reais de se realizar (ilusório, estéril)",
+          "explicacao": "'Velleitario' vem de 'velleità' (desejo vago). Descreve algo que é sonhado mas não tem base real para acontecer."
+        },
+        {
+          "tipo": "multipla",
+          "pergunta": "O que significa <em>cioè</em>?",
+          "opcoes": [
+            "Portanto",
+            "Ou seja / isto é",
+            "Porque",
+            "Entretanto"
+          ],
+          "resposta": "Ou seja / isto é",
+          "explicacao": "'Cioè' é uma conjunção explicativa usada para reformular ou esclarecer o que foi dito anteriormente."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete:",
+          "pergunta": "Studio lingue, ___ italiano e francese.",
+          "resposta": "cioè",
+          "alternativas": ["cioè", "Cioè"],
+          "explicacao": "'Cioè' é usado para explicar quais línguas são estudadas: 'ou seja, italiano e francês'."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete a definição:",
+          "pergunta": "Un progetto ___ è senza reali possibilità di successo.",
+          "resposta": "velleitario",
+          "alternativas": ["velleitario", "Velleitario"],
+          "explicacao": "Um projeto 'velleitario' é aquele que não tem chances reais de sucesso, é ilusório."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene:",
+          "palavras": ["è", "prima", "parola", "la", "velleitario"],
+          "resposta": "la prima parola è velleitario",
+          "explicacao": "Estrutura: artigo + adjetivo + substantivo + verbo + adjetivo predicativo."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza: <em>Un sogno velleitario</em>",
+          "resposta": "Um sonho ilusório (sem chance de realização)",
+          "palavrasChave": ["sonho", "ilusório"],
+          "explicacao": "'Velleitario' aqui qualifica o sonho como algo bonito mas irrealizável."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique:",
+          "palavras": ["velleitario"],
+          "resposta": "velleitario",
+          "explicacao": "'Velleitario' (vel-le-i-tá-rio) - 'v' sonoro, 'e' aberto, 'll' geminado (dobrado), 'i' curto, 't' alveolar, 'ario' como 'á-rio'."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique:",
+          "palavras": ["cioè"],
+          "resposta": "cioè",
+          "explicacao": "'Cioè' (tcho-é) - 'ci' como 'tcho', 'o' aberto, 'è' aberto com acento."
+        }
+      ]
+    },
+    {
+      "indice": 2,
+      "referencia": "Il tuo tentativo di sminuirmi è del tutto velleitario.",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "O que significa <em>sminuire</em>?",
+          "opcoes": [
+            "Aumentar",
+            "Menosprezar / diminuir o valor de alguém",
+            "Elogiar",
+            "Ignorar"
+          ],
+          "resposta": "Menosprezar / diminuir o valor de alguém",
+          "explicacao": "'Sminuire' é formado por 's-' (negação) + 'minuire' (diminuir) - significa fazer algo ou alguém parecer menor ou menos importante."
+        },
+        {
+          "tipo": "multipla",
+          "pergunta": "O que significa <em>del tutto</em>?",
+          "opcoes": [
+            "De tudo",
+            "Completamente / totalmente",
+            "Do todo",
+            "Em parte"
+          ],
+          "resposta": "Completamente / totalmente",
+          "explicacao": "'Del tutto' é uma locução adverbial que intensifica o adjetivo seguinte, equivalente a 'completamente'."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete:",
+          "pergunta": "Non ___ i suoi sforzi! (Não menospreze os esforços dele!)",
+          "resposta": "sminuire",
+          "alternativas": ["sminuire", "Sminuire"],
+          "explicacao": "O verbo 'sminuire' no imperativo negativo: 'non sminuire'."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete:",
+          "pergunta": "Sei ___ sbagliato. (Você está completamente errado.)",
+          "resposta": "del tutto",
+          "alternativas": ["del tutto", "Del tutto"],
+          "explicacao": "'Del tutto' intensifica 'sbagliato' (errado)."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene:",
+          "palavras": ["tentativo", "sminuirmi", "velleitario", "del", "di", "è", "tutto", "tuo", "il"],
+          "resposta": "il tuo tentativo di sminuirmi è del tutto velleitario",
+          "explicacao": "Artigo + possessivo + substantivo + preposição 'di' + verbo no infinitivo ('sminuirmi') + verbo 'è' + locução 'del tutto' + adjetivo."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza: <em>Non sminuire il suo lavoro</em>",
+          "resposta": "Não menospreze o trabalho dele",
+          "palavrasChave": ["menospreze", "trabalho"],
+          "explicacao": "'Sminuire' = menosprezar, diminuir o valor de."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique:",
+          "palavras": ["sminuirmi"],
+          "resposta": "sminuirmi",
+          "explicacao": "'Sminuirmi' (zmi-nu-ír-mi) - 's' sonoro, 'min' como em 'minuto', 'uir' como 'u-ír', 'mi' final."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique:",
+          "palavras": ["tentativo"],
+          "resposta": "tentativo",
+          "explicacao": "'Tentativo' (ten-ta-tí-vo) - 'e' aberto, 't' aspirado, 'a' aberto, 't' alveolar, 'i' tônico."
+        }
+      ]
+    },
+    {
+      "indice": 3,
+      "referencia": "La seconda parola è una bomba, e cioè pretestuoso.",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "O que significa a expressão <em>una bomba</em> neste contexto?",
+          "opcoes": [
+            "Um artefato explosivo literal",
+            "Algo espetacular, impactante, muito forte",
+            "Uma comida italiana",
+            "Um problema grave"
+          ],
+          "resposta": "Algo espetacular, impactante, muito forte",
+          "explicacao": "Em italiano coloquial, 'una bomba' significa algo incrível, surpreendente ou muito impactante."
+        },
+        {
+          "tipo": "multipla",
+          "pergunta": "O que significa <em>pretestuoso</em>?",
+          "opcoes": [
+            "Algo verdadeiro e honesto",
+            "Algo feito com pretexto, para esconder reais intenções",
+            "Uma pessoa educada",
+            "Um objeto bonito"
+          ],
+          "resposta": "Algo feito com pretexto, para esconder reais intenções",
+          "explicacao": "'Pretestuoso' vem de 'pretesto' (pretexto). Descreve ações ou argumentos que usam uma desculpa para esconder a verdadeira intenção."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete a frase coloquial:",
+          "pergunta": "Questa canzone è una ___! (Essa música é incrível!)",
+          "resposta": "bomba",
+          "alternativas": ["bomba", "Bomba"],
+          "explicacao": "Expressão coloquial 'essere una bomba' = ser incrível/espetacular."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete:",
+          "pergunta": "Una scusa ___ per nascondere le vere intenzioni.",
+          "resposta": "pretestuosa",
+          "alternativas": ["pretestuosa", "Pretestuosa"],
+          "explicacao": "'Scusa pretestuosa' = desculpa que é na verdade um pretexto."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene:",
+          "palavras": ["cioè", "seconda", "bomba", "una", "è", "pretestuoso", "e", "parola", "la"],
+          "resposta": "la seconda parola è una bomba e cioè pretestuoso",
+          "explicacao": "'La seconda parola' + verbo 'è' + 'una bomba' + 'e cioè' (ou seja) + 'pretestuoso'."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza: <em>Un ragionamento pretestuoso</em>",
+          "resposta": "Um raciocínio pretestuoso (baseado em pretexto, escondendo intenções reais)",
+          "palavrasChave": ["raciocínio", "pretestuoso"],
+          "explicacao": "Um argumento que usa um pretexto para justificar algo, mas esconde as verdadeiras motivações."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique:",
+          "palavras": ["pretestuoso"],
+          "resposta": "pretestuoso",
+          "explicacao": "'Pretestuoso' (pre-tes-tu-ó-zo) - 'pre' como em 'preço', 'tes' como 'tés', 'tu' como 'tu', 'oso' como 'ó-zo'."
+        }
+      ]
+    },
+    {
+      "indice": 4,
+      "referencia": "Un pretesto per nascondere le proprie vere intenzioni e raggiungere determinati scopi.",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "O que significa <em>pretesto</em>?",
+          "opcoes": [
+            "Uma verdade absoluta",
+            "Um pretexto, desculpa, justificativa falsa",
+            "Um teste de conhecimento",
+            "Uma festa italiana"
+          ],
+          "resposta": "Um pretexto, desculpa, justificativa falsa",
+          "explicacao": "'Pretesto' é o substantivo que dá origem a 'pretestuoso'. É uma desculpa usada para esconder as reais intenções."
+        },
+        {
+          "tipo": "multipla",
+          "pergunta": "Quando usamos o adjetivo possessivo <em>proprie</em>?",
+          "opcoes": [
+            "Sempre, sem exceção",
+            "Quando o possuidor é o sujeito da frase (evita ambiguidade)",
+            "Apenas no plural",
+            "Nunca, é antigo"
+          ],
+          "resposta": "Quando o possuidor é o sujeito da frase (evita ambiguidade)",
+          "explicacao": "'Proprio/a/i/e' é usado quando o possuidor é o mesmo que o sujeito da frase, para evitar confusão com outros possessivos."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete:",
+          "pergunta": "Cercano un ___ per non lavorare. (Procuram um pretexto para não trabalhar.)",
+          "resposta": "pretesto",
+          "alternativas": ["pretesto", "Pretesto"],
+          "explicacao": "'Pretesto' é a desculpa ou justificativa falsa para evitar algo."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com o possessivo correto:",
+          "pergunta": "Ognuno pensa ai ___ interessi. (Cada um pensa nos próprios interesses.)",
+          "resposta": "propri",
+          "alternativas": ["propri", "Propri"],
+          "explicacao": "'Propri interessi' - 'propri' é o plural masculino de 'proprio' (próprio), usado quando o sujeito é o possuidor."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene:",
+          "palavras": ["scopi", "determinati", "e", "intenzioni", "vere", "nascondere", "un", "proprie", "le", "pretesto", "per", "raggiungere"],
+          "resposta": "un pretesto per nascondere le proprie vere intenzioni e raggiungere determinati scopi",
+          "explicacao": "'Un pretesto' + 'per' + verbo 'nascondere' + objeto 'le proprie vere intenzioni' + 'e' + verbo 'raggiungere' + objeto 'determinati scopi'."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza: <em>Raggiungere i propri obiettivi</em>",
+          "resposta": "Alcançar os próprios objetivos",
+          "palavrasChave": ["alcançar", "próprios", "objetivos"],
+          "explicacao": "'Raggiungere' = alcançar, 'propri' = próprios (reflexivo), 'obiettivi' = objetivos."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique:",
+          "palavras": ["pretesto"],
+          "resposta": "pretesto",
+          "explicacao": "'Pretesto' (pre-tés-to) - 'pre' como em 'preço', 'tes' como 'tés', 'to' com 't' alveolar e 'o' fechado."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique:",
+          "palavras": ["raggiungere"],
+          "resposta": "raggiungere",
+          "explicacao": "'Raggiungere' (rad-djún-dje-re) - 'r' vibrante, 'gg' geminado, 'giu' como 'djú', 'nge' como 'ndje', 're' final."
+        }
+      ]
+    },
+    {
+      "indice": 5,
+      "referencia": "Mi dispiace, ma le tue ragioni sono pretestuose.",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "O que significa <em>mi dispiace</em>?",
+          "opcoes": [
+            "Eu desagrado",
+            "Me desculpe / sinto muito",
+            "Eu discordo",
+            "Eu gosto"
+          ],
+          "resposta": "Me desculpe / sinto muito",
+          "explicacao": "'Mi dispiace' é uma forma educada de pedir desculpas ou expressar pesar. Literalmente 'me desagrada'."
+        },
+        {
+          "tipo": "multipla",
+          "pergunta": "Por que <em>pretestuose</em> termina com 'e'?",
+          "opcoes": [
+            "Porque é masculino plural",
+            "Porque concorda com 'ragioni' (feminino plural)",
+            "Porque é um advérbio",
+            "Porque é exceção"
+          ],
+          "resposta": "Porque concorda com 'ragioni' (feminino plural)",
+          "explicacao": "Em italiano, adjetivos concordam em gênero e número com o substantivo. 'Ragioni' é feminino plural, então o adjetivo termina com '-e'."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete:",
+          "pergunta": "Mi ___ per il ritardo. (Me desculpe pelo atraso.)",
+          "resposta": "dispiace",
+          "alternativas": ["dispiace", "Dispiace"],
+          "explicacao": "A expressão completa é 'mi dispiace' (me desculpe)."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com a forma correta do adjetivo:",
+          "pergunta": "Le tue idee sono ___ . (As suas ideias são brilhantes - feminino plural)",
+          "resposta": "brillanti",
+          "alternativas": ["brillanti", "Brillanti"],
+          "explicacao": "Adjetivos terminados em '-e' no singular ('brillante') ficam '-i' no plural ('brillanti')."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene:",
+          "palavras": ["pretestuose", "ma", "le", "mi", "sono", "tue", "ragioni", "dispiace"],
+          "resposta": "mi dispiace ma le tue ragioni sono pretestuose",
+          "explicacao": "'Mi dispiace' + 'ma' (mas) + sujeito 'le tue ragioni' + verbo 'sono' + adjetivo 'pretestuose'."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza: <em>Le sue scuse sono pretestuose</em>",
+          "resposta": "As desculpas dele/dela são pretestuosas (são pretextos)",
+          "palavrasChave": ["desculpas", "pretestuosas"],
+          "explicacao": "'Scuse' é feminino plural, então o adjetivo 'pretestuose' concorda."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique:",
+          "palavras": ["dispiace"],
+          "resposta": "dispiace",
+          "explicacao": "'Dispiace' (dis-pi-á-tche) - 'dis' como 'dis', 'pia' como 'piá', 'ce' como 'tche'."
+        }
+      ]
+    },
+    {
+      "indice": 6,
+      "referencia": "Bella questa, eh?",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "O que significa a expressão <em>Bella questa, eh?</em>?",
+          "opcoes": [
+            "Esta é bonita, né?",
+            "Essa foi boa, hein? (comentando algo espirituoso/inteligente)",
+            "Bela vista, não é?",
+            "Que mulher bonita"
+          ],
+          "resposta": "Essa foi boa, hein? (comentando algo espirituoso/inteligente)",
+          "explicacao": "Expressão coloquial para comentar algo que foi dito com inteligência ou humor."
+        },
+        {
+          "tipo": "multipla",
+          "pergunta": "O que a interjeição <em>eh</em> indica no final da frase?",
+          "opcoes": [
+            "Raiva",
+            "Dúvida ou busca por concordância do interlocutor",
+            "Surpresa extrema",
+            "Tristeza"
+          ],
+          "resposta": "Dúvida ou busca por concordância do interlocutor",
+          "explicacao": "O 'eh' no final de frase pede confirmação ou concordância, como 'hein?' ou 'né?' em português."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete a expressão coloquial:",
+          "pergunta": "Abbiamo vinto, ___! (Nós ganhamos, hein!)",
+          "resposta": "eh",
+          "alternativas": ["eh", "Eh"],
+          "explicacao": "O 'eh' final adiciona entusiasmo e busca concordância."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete:",
+          "pergunta": "Questa pizza è una ___, eh! (Essa pizza é incrível, hein!)",
+          "resposta": "bomba",
+          "alternativas": ["bomba", "Bomba"],
+          "explicacao": "'Essere una bomba' = ser incrível. O 'eh' final reforça a expressão."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene:",
+          "palavras": ["questa", "eh", "bella"],
+          "resposta": "bella questa eh",
+          "explicacao": "A ordem idiomática: adjetivo ('bella') + demonstrativo ('questa') + interjeição ('eh')."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza naturalmente: <em>Bella questa, eh!</em>",
+          "resposta": "Essa foi boa, hein! / Boa essa, hein!",
+          "palavrasChave": ["boa", "essa", "hein"],
+          "explicacao": "Expressão de aprovação diante de algo espirituoso ou inteligente."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a interjeição:",
+          "palavras": ["eh"],
+          "resposta": "eh",
+          "explicacao": "'Eh' (é) - 'e' aberto como em 'café', som gutural curto. É diferente de 'e' (conjunção 'e')."
+        }
+      ]
+    },
+    {
+      "indice": 7,
+      "referencia": "La terza ed ultima parola è elusivo, che significa evasivo, sfuggente, ambiguo.",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "O que significa <em>elusivo</em>?",
+          "opcoes": [
+            "Que é fácil de entender",
+            "Que evita respostas diretas, evasivo, fugidio",
+            "Que é muito claro",
+            "Que é educado"
+          ],
+          "resposta": "Que evita respostas diretas, evasivo, fugidio",
+          "explicacao": "'Elusivo' descreve alguém que foge de respostas diretas ou algo que é difícil de definir/compreender."
+        },
+        {
+          "tipo": "multipla",
+          "pergunta": "O que a estrutura <em>che significa</em> faz na frase?",
+          "opcoes": [
+            "Introduz uma pergunta",
+            "Introduz uma explicação do significado da palavra",
+            "Introduz uma condição",
+            "Introduz uma negação"
+          ],
+          "resposta": "Introduz uma explicação do significado da palavra",
+          "explicacao": "'Che significa' é usado para explicar o significado de uma palavra, seguido de sinônimos ou definição."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete:",
+          "pergunta": "Ha dato una risposta ___ . (Ele deu uma resposta evasiva.)",
+          "resposta": "elusiva",
+          "alternativas": ["elusiva", "Elusiva"],
+          "explicacao": "'Risposta' é feminino singular, então o adjetivo é 'elusiva' (concordância)."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com a palavra explicativa:",
+          "pergunta": "'Sfuggente' è una parola ___ significa 'difficile da afferrare'.",
+          "resposta": "che",
+          "alternativas": ["che", "Che"],
+          "explicacao": "'Che' é o pronome relativo que liga a palavra à sua explicação."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene:",
+          "palavras": ["significa", "parola", "elusivo", "ultima", "ed", "terza", "che", "evasivo", "è", "la", "sfuggente", "ambiguo"],
+          "resposta": "la terza ed ultima parola è elusivo che significa evasivo sfuggente ambiguo",
+          "explicacao": "Artigo + adjetivo ordinal 'terza' + 'ed ultima' (e última) + 'parola' + verbo 'è' + palavra 'elusivo' + 'che significa' + sinônimos."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza: <em>Un concetto elusivo</em>",
+          "resposta": "Um conceito elusivo (difícil de definir/compreender)",
+          "palavrasChave": ["conceito", "elusivo"],
+          "explicacao": "'Elusivo' aplicado a conceitos significa que são difíceis de definir ou capturar mentalmente."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique:",
+          "palavras": ["elusivo"],
+          "resposta": "elusivo",
+          "explicacao": "'Elusivo' (e-lu-sí-vo) - 'e' aberto, 'lu' como 'lu', 'si' como 'sí', 'vo' com 'v' sonoro."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique o sinônimo:",
+          "palavras": ["sfuggente"],
+          "resposta": "sfuggente",
+          "explicacao": "'Sfuggente' (sfud-djén-te) - 'sf' como 'sf', 'u' curto, 'gg' geminado, 'e' aberto, 'nte' como 'nte'."
+        }
+      ]
+    },
+    {
+      "indice": 8,
+      "referencia": "La tua risposta è elusiva.",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "Por que 'elusiva' termina com 'a'?",
+          "opcoes": [
+            "Porque 'risposta' é masculino",
+            "Porque 'risposta' é feminino singular, e o adjetivo concorda",
+            "Porque é exceção gramatical",
+            "Porque termina em -a no dicionário"
+          ],
+          "resposta": "Porque 'risposta' é feminino singular, e o adjetivo concorda",
+          "explicacao": "Substantivos terminados em '-a' geralmente são femininos. O adjetivo 'elusivo' vira 'elusiva' no feminino singular."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com a forma correta:",
+          "pergunta": "Il tuo comportamento è ___ . (Seu comportamento é estranho - masculino singular)",
+          "resposta": "strano",
+          "alternativas": ["strano", "Strano"],
+          "explicacao": "'Comportamento' é masculino singular, então o adjetivo termina com '-o' ('strano')."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete:",
+          "pergunta": "La tua spiegazione è ___ . (Sua explicação é clara - feminino singular)",
+          "resposta": "chiara",
+          "alternativas": ["chiara", "Chiara"],
+          "explicacao": "'Spiegazione' é feminino singular, então o adjetivo 'chiaro' vira 'chiara'."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene:",
+          "palavras": ["elusiva", "risposta", "tua", "è", "la"],
+          "resposta": "la tua risposta è elusiva",
+          "explicacao": "Artigo 'la' + possessivo 'tua' + substantivo 'risposta' + verbo 'è' + adjetivo 'elusiva'."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza: <em>Un atteggiamento elusivo</em>",
+          "resposta": "Uma atitude elusiva (evasiva, fugidia)",
+          "palavrasChave": ["atitude", "elusiva"],
+          "explicacao": "'Atteggiamento' (masculino) continua 'elusivo' no masculino singular."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a frase curta:",
+          "palavras": ["risposta", "elusiva"],
+          "resposta": "risposta elusiva",
+          "explicacao": "'Risposta' (ris-pós-ta) - 'ri' como 'rri', 'posta' como 'pós-ta'. 'Elusiva' (e-lu-sí-va) - 'e' aberto, 'lu' como 'lu', 'siva' como 'sí-va'."
+        }
+      ]
+    },
+    {
+      "indice": 9,
+      "referencia": "Stai forse cercando di evitare un confronto diretto?",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "Qual é a estrutura do presente progressivo em italiano?",
+          "opcoes": [
+            "Verbo no presente simples",
+            "'Stare' (estar) + gerúndio do verbo principal",
+            "'Avere' + particípio passado",
+            "Infinitivo + pronome"
+          ],
+          "resposta": "'Stare' (estar) + gerúndio do verbo principal",
+          "explicacao": "O presente progressivo ('sto facendo', estou fazendo) é formado por 'stare' (estar) + gerúndio do verbo principal."
+        },
+        {
+          "tipo": "multipla",
+          "pergunta": "O que significa <em>cercare di</em> + infinitivo?",
+          "opcoes": [
+            "Procurar algo fisicamente",
+            "Tentar / esforçar-se para fazer algo",
+            "Gostar de fazer algo",
+            "Parar de fazer algo"
+          ],
+          "resposta": "Tentar / esforçar-se para fazer algo",
+          "explicacao": "'Cercare di' significa 'tentar', 'procurar fazer algo', no sentido de esforço ou tentativa."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com a forma correta do presente progressivo:",
+          "pergunta": "Io ___ imparando l'italiano. (Estou aprendendo italiano.)",
+          "resposta": "sto",
+          "alternativas": ["sto", "Sto"],
+          "explicacao": "'Sto' é a primeira pessoa do singular do verbo 'stare' + gerúndio 'imparando'."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete:",
+          "pergunta": "Cerco di ___ puntuale. (Tento ser pontual.)",
+          "resposta": "essere",
+          "alternativas": ["essere", "Essere"],
+          "explicacao": "'Cercare di' é seguido de verbo no infinitivo: 'cercare di essere'."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene a pergunta:",
+          "palavras": ["diretto", "un", "evitare", "di", "cercando", "forse", "confronto", "stai"],
+          "resposta": "stai forse cercando di evitare un confronto diretto",
+          "explicacao": "Verbo 'stai' + 'forse' (advérbio) + 'cercando di' (gerúndio + preposição) + infinitivo 'evitare' + objeto 'un confronto diretto'."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza: <em>Stai evitando il problema?</em>",
+          "resposta": "Você está evitando o problema?",
+          "palavrasChave": ["está", "evitando", "problema"],
+          "explicacao": "Presente progressivo: 'stai' (você está) + gerúndio 'evitando'."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a pergunta:",
+          "palavras": ["confronto", "diretto"],
+          "resposta": "confronto diretto",
+          "explicacao": "'Confronto' (con-frón-to) - 'con' como 'con', 'fronto' como 'fron-to'. 'Diretto' (di-rét-to) - 'di' como 'di', 'retto' com 't' geminado."
+        }
+      ]
+    },
+    {
+      "indice": 10,
+      "referencia": "Alla prossima, e un bacio!",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "O que significa <em>alla prossima</em>?",
+          "opcoes": [
+            "Até a próxima (despedida informal)",
+            "Para a próxima pessoa",
+            "Na próxima vez que nos vermos",
+            "Amanhã"
+          ],
+          "resposta": "Até a próxima (despedida informal)",
+          "explicacao": "'Alla prossima' é a forma abreviada de 'Arrivederci alla prossima volta' (até a próxima vez)."
+        },
+        {
+          "tipo": "multipla",
+          "pergunta": "Em que contexto se usa <em>un bacio</em> como despedida?",
+          "opcoes": [
+            "Contexto formal, com chefes",
+            "Contexto informal, entre amigos ou em vídeos",
+            "Contexto comercial",
+            "Em situações de raiva"
+          ],
+          "resposta": "Contexto informal, entre amigos ou em vídeos",
+          "explicacao": "'Un bacio' (um beijo) é uma despedida carinhosa usada entre amigos, familiares ou em conteúdos informais."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete a despedida:",
+          "pergunta": "Grazie per la lezione, ___ prossima! (Obrigado pela aula, até a próxima!)",
+          "resposta": "alla",
+          "alternativas": ["alla", "Alla"],
+          "explicacao": "A expressão é 'Alla prossima' (preposição 'a' + artigo 'la' contraídos em 'alla')."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete:",
+          "pergunta": "Ciao a tutti, un ___! (Tchau a todos, um beijo!)",
+          "resposta": "bacio",
+          "alternativas": ["bacio", "Bacio"],
+          "explicacao": "'Un bacio' é a forma comum de despedida carinhosa."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene a despedida:",
+          "palavras": ["un", "e", "prossima", "bacio", "alla"],
+          "resposta": "alla prossima e un bacio",
+          "explicacao": "Primeiro a despedida 'Alla prossima' (até a próxima) + 'e' + 'un bacio' (um beijo)."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza: <em>Ci vediamo, un bacio!</em>",
+          "resposta": "Nos vemos, um beijo!",
+          "palavrasChave": ["vemos", "beijo"],
+          "explicacao": "Outra despedida informal comum em italiano."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a despedida completa:",
+          "palavras": ["prossima", "bacio"],
+          "resposta": "prossima bacio",
+          "explicacao": "'Prossima' (prós-si-ma) - 'pr' explosivo, 'o' aberto, 'ss' geminado, 'ima' como 'í-ma'. 'Bacio' (bá-tcho) - 'b' sonoro, 'a' aberto, 'cio' como 'tcho'."
+        }
+      ]
+    }
+  ]
+}
