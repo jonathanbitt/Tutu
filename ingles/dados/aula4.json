@@ -1,510 +1,187 @@
 {
-  "aula": 4,
   "titulo": "INGLÊS — O Padrão dos Milagres: A Fundação Antes do Topo",
-  "paragrafos": [
+  "videoUrl": "https://jonathanbitt.github.io/Tutu/ingles/dados/videos/video4.mp4",
+  "quizletUrl": "quizlet.html?quizlet=4",
+  "blocos": [
     {
-      "indice": 0,
-      "referencia": "Have you ever noticed that there is a pattern to every miracle in the Bible?",
-      "exercises": [
-        {
-          "tipo": "multipla",
-          "pergunta": "Qual tempo verbal é usado em <em>Have you ever noticed</em>?",
-          "opcoes": ["Simple Past", "Present Perfect", "Past Perfect", "Present Continuous"],
-          "resposta": "Present Perfect",
-          "explicacao": "'Have you ever noticed' é Present Perfect (have/has + particípio). Usado para perguntar sobre experiências em algum momento indefinido da vida até agora."
-        },
-        {
-          "tipo": "multipla",
-          "pergunta": "O que significa a palavra <em>pattern</em> no contexto?",
-          "opcoes": ["Desenho", "Padrão recorrente", "Molde de costura", "Comportamento aleatório"],
-          "resposta": "Padrão recorrente",
-          "explicacao": "'Pattern' significa um arranjo ou sequência que se repete. No contexto bíblico, indica que os milagres seguem uma mesma estrutura recorrente."
-        },
-        {
-          "tipo": "lacuna",
-          "enunciado": "Complete com o particípio passado correto:",
-          "pergunta": "Have you ever ___ (see) that movie?",
-          "resposta": "seen",
-          "alternativas": ["Seen", "saw"],
-          "explicacao": "No Present Perfect, após 'have/has', usamos o particípio passado. 'See' é irregular: see - saw - seen."
-        },
-        {
-          "tipo": "ordenar",
-          "pergunta": "Ordene a pergunta que aparece no áudio:",
-          "palavras": ["you", "ever", "noticed", "have", "that", "pattern", "a", "there", "is"],
-          "resposta": "have you ever noticed that there is a pattern",
-          "explicacao": "Estrutura do Present Perfect em pergunta: 'Have you ever' + particípio + 'that' + oração."
-        },
-        {
-          "tipo": "traduzir",
-          "pergunta": "Traduza: <em>Have you ever noticed the pattern?</em>",
-          "resposta": "Você já reparou no padrão?",
-          "palavrasChave": ["já", "reparou", "padrão"],
-          "explicacao": "'Have you ever' indica experiência de vida até o momento. 'Noticed' = reparou/percebeu. 'Pattern' = padrão."
-        },
-        {
-          "tipo": "pronuncia",
-          "pergunta": "Pratique a pronúncia:",
-          "palavras": ["noticed"],
-          "resposta": "noticed",
-          "explicacao": "'Noticed' (nôutist) - 'no' como 'nôu', 'ticed' como 'tist' (o 'ed' soa como 't' porque o verbo termina com som surdo)."
-        },
-        {
-          "tipo": "pronuncia",
-          "pergunta": "Pratique a palavra:",
-          "palavras": ["pattern"],
-          "resposta": "pattern",
-          "explicacao": "'Pattern' (pátêrn) - 'pa' como 'pá' (schwa), 'ttern' como 'têrn' com o 'r' pronunciado no inglês americano."
-        }
-      ]
+      "start": 0,
+      "english": "Have you ever noticed that there is a pattern to every miracle in the Bible?",
+      "translation": "Você já reparou que existe um padrão para cada milagre na Bíblia?",
+      "tip": "<strong>\"Have you ever noticed\"</strong> — Estrutura do <em>Present Perfect</em> para perguntar sobre experiências de vida (até o momento presente). <strong>\"pattern to every miracle\"</strong> — 'Pattern' = padrão, recorrência. 'To' aqui indica relação: 'padrão para/com relação a cada milagre'.",
+      "miniLesson": {
+        "title": "Present Perfect: Experiências Indefinidas",
+        "content": "<p><strong>\"Have you ever noticed\"</strong> — Usamos o Present Perfect (have/has + particípio) para falar de experiências em um tempo não específico do passado. 'Ever' significa 'alguma vez na vida'.</p><div class=\"exemplo\">Have you ever been to London? → Você já esteve em Londres?</div><div class=\"exemplo\">I have never seen such a thing. → Eu nunca vi tal coisa.</div><p style=\"margin-top:10px\"><strong>\"noticed\"</strong> — Particípio de 'notice' (notar/perceber). Verbos regulares: adicionamos '-ed'.</p><div class=\"exemplo\">She has noticed a change in his behavior. → Ela notou uma mudança no comportamento dele.</div>"
+      }
     },
     {
-      "indice": 1,
-      "referencia": "We all pray for the mountaintop moments of fulfillment, but the higher the peak, the deeper the foundation has to go.",
-      "exercises": [
-        {
-          "tipo": "multipla",
-          "pergunta": "O que significa a expressão <em>mountaintop moments</em>?",
-          "opcoes": ["Momentos no topo da montanha (literalmente)", "Momentos de grande sucesso ou realização", "Momentos de perigo", "Momentos de solidão"],
-          "resposta": "Momentos de grande sucesso ou realização",
-          "explicacao": "'Mountaintop moments' é uma metáfora que representa os picos de conquista, vitória, alegria ou realização máxima."
-        },
-        {
-          "tipo": "multipla",
-          "pergunta": "Qual estrutura gramatical é usada em <em>the higher the peak, the deeper the foundation</em>?",
-          "opcoes": ["Comparativo de igualdade", "Comparativo de superioridade isolado", "Estrutura correlata 'the + comparativo, the + comparativo'", "Superlativo"],
-          "resposta": "Estrutura correlata 'the + comparativo, the + comparativo'",
-          "explicacao": "Esta estrutura expressa que uma coisa varia proporcionalmente à outra: 'quanto mais X, mais Y'."
-        },
-        {
-          "tipo": "lacuna",
-          "enunciado": "Complete a estrutura comparativa:",
-          "pergunta": "___ harder you work, ___ better your results will be.",
-          "resposta": "the the",
-          "alternativas": ["The... the...", "The... then..."],
-          "explicacao": "A estrutura correta é 'The + comparativo, the + comparativo'."
-        },
-        {
-          "tipo": "ordenar",
-          "pergunta": "Ordene a expressão comparativa:",
-          "palavras": ["the", "higher", "the", "deeper", "peak", "foundation"],
-          "resposta": "the higher the peak, the deeper the foundation",
-          "explicacao": "'The higher' + sujeito 'the peak' + vírgula + 'the deeper' + sujeito 'the foundation'."
-        },
-        {
-          "tipo": "traduzir",
-          "pergunta": "Traduza: <em>The higher the peak, the deeper the foundation has to go.</em>",
-          "resposta": "Quanto mais alto o pico, mais profunda a fundação precisa ir.",
-          "palavrasChave": ["mais alto", "pico", "profunda", "fundação"],
-          "explicacao": "Estrutura 'the + comparativo, the + comparativo' + 'has to go' (precisa ir/atingir)."
-        },
-        {
-          "tipo": "pronuncia",
-          "pergunta": "Pratique a palavra:",
-          "palavras": ["mountaintop"],
-          "resposta": "mountaintop",
-          "explicacao": "'Mountaintop' (máuntântop) - 'mountain' como 'máuntân' + 'top' (top)."
-        },
-        {
-          "tipo": "pronuncia",
-          "pergunta": "Pratique:",
-          "palavras": ["foundation"],
-          "resposta": "foundation",
-          "explicacao": "'Foundation' (faundêichion) - 'foun' como 'faun', 'da' como 'dê', 'tion' como 'chion'."
-        }
-      ]
+      "start": 6,
+      "english": "And when you see it, it changes the way you look at your own setbacks.",
+      "translation": "E quando você vê isso, muda a maneira como você olha para seus próprios contratempos.",
+      "tip": "<strong>\"the way you look at\"</strong> — 'The way' (a maneira) + oração sem 'that' (opcional). <strong>\"setbacks\"</strong> — 'Setbacks' = contratempos, revezes, obstáculos (set + back: algo que te 'joga para trás').",
+      "miniLesson": {
+        "title": "Omissão do Pronome Relativo 'That' e Palavras Compostas",
+        "content": "<p><strong>\"the way you look at\"</strong> — Após 'the way', podemos omitir o pronome relativo 'that' ou 'in which'. É muito comum na fala.</p><div class=\"exemplo\">I like the way she smiles. → Eu gosto do jeito que ela sorri.</div><p style=\"margin-top:10px\"><strong>\"setbacks\"</strong> — Palavra composta (set + back). 'To set back' = atrasar, jogar para trás. O substantivo 'setback' é o obstáculo que causa o atraso.</p><div class=\"exemplo\">Despite the setbacks, we finished the project. → Apesar dos contratempos, terminamos o projeto.</div>"
+      }
     },
     {
-      "indice": 2,
-      "referencia": "We want the purpose, the strength, the anointing, but if we're honest, we want it without the struggle, without the waiting, without the breaking.",
-      "exercises": [
-        {
-          "tipo": "multipla",
-          "pergunta": "O que significa a palavra <em>anointing</em> no contexto religioso?",
-          "opcoes": ["Unção", "Anotação", "Anúncio", "Abandono"],
-          "resposta": "Unção",
-          "explicacao": "'Anointing' é o ato de ungir com óleo, um termo religioso que simboliza consagração, capacitação especial por Deus."
-        },
-        {
-          "tipo": "multipla",
-          "pergunta": "Qual é a função do sufixo '-ing' em <em>the breaking</em>?",
-          "opcoes": ["Indica ação contínua", "Transforma o verbo em substantivo (gerúndio substantivado)", "Forma o particípio presente", "Indica futuro"],
-          "resposta": "Transforma o verbo em substantivo (gerúndio substantivado)",
-          "explicacao": "Com o artigo 'the', o gerúndio se torna um substantivo abstrato: 'the breaking' = o processo de quebrar/quebrantamento."
-        },
-        {
-          "tipo": "lacuna",
-          "enunciado": "Complete a frase com 'without':",
-          "pergunta": "He left ___ (say) goodbye.",
-          "resposta": "without saying",
-          "alternativas": ["Without saying"],
-          "explicacao": "Após a preposição 'without', usamos o verbo no gerúndio (-ing). 'Without saying goodbye' = 'sem dizer tchau'."
-        },
-        {
-          "tipo": "ordenar",
-          "pergunta": "Ordene a frase:",
-          "palavras": ["the", "struggle", "want", "we", "without", "it"],
-          "resposta": "we want it without the struggle",
-          "explicacao": "Sujeito 'We' + verbo 'want' + objeto 'it' + 'without the struggle'."
-        },
-        {
-          "tipo": "traduzir",
-          "pergunta": "Traduza: <em>We want it without the waiting.</em>",
-          "resposta": "Nós queremos isso sem a espera.",
-          "palavrasChave": ["queremos", "espera"],
-          "explicacao": "'Without the waiting' - o gerúndio 'waiting' é substantivado pelo artigo 'the'."
-        },
-        {
-          "tipo": "pronuncia",
-          "pergunta": "Pratique a palavra:",
-          "palavras": ["strength"],
-          "resposta": "strength",
-          "explicacao": "'Strength' (strênkth) - 'stre' como 'strê', 'ngth' como 'nkth'."
-        },
-        {
-          "tipo": "pronuncia",
-          "pergunta": "Pratique a palavra:",
-          "palavras": ["honest"],
-          "resposta": "honest",
-          "explicacao": "'Honest' (ânest) - O 'H' é mudo! Começa com som de vogal (schwa)."
-        }
-      ]
+      "start": 11,
+      "english": "We all pray for the mountaintop moments of fulfillment, but the higher the peak, the deeper the foundation has to go.",
+      "translation": "Todos nós oramos pelos momentos no topo da montanha de realização, mas quanto mais alto o pico, mais profunda a fundação precisa ir.",
+      "tip": "<strong>\"mountaintop moments\"</strong> — Metáfora: 'momentos de topo de montanha' = momentos de maior sucesso, vitória. <strong>\"the higher the peak, the deeper the foundation\"</strong> — Estrutura comparativa de correlação: 'the + comparativo..., the + comparativo...' (quanto mais... mais...).",
+      "miniLesson": {
+        "title": "Estrutura 'The + Comparativo, The + Comparativo'",
+        "content": "<p><strong>\"the higher the peak, the deeper the foundation\"</strong> — Esta estrutura expressa uma relação de causa e efeito proporcional. Quanto mais alta uma coisa, mais profunda a outra precisa ser.</p><div class=\"exemplo\">The harder you study, the better your results. → Quanto mais você estuda, melhores são seus resultados.</div><div class=\"exemplo\">The more, the merrier. → Quanto mais, melhor.</div><p style=\"margin-top:10px\"><strong>\"has to go\"</strong> — 'Has to' expressa necessidade/obrigação. 'Go' aqui significa 'alcançar', 'atingir a profundidade de'.</p><div class=\"exemplo\">The rope has to go all the way to the bottom. → A corda precisa chegar até o fundo.</div>"
+      }
     },
     {
-      "indice": 3,
-      "referencia": "Joseph was betrayed and thrown into prison for years before leading an entire nation.",
-      "exercises": [
-        {
-          "tipo": "multipla",
-          "pergunta": "Que voz verbal predomina no trecho sobre José?",
-          "opcoes": ["Voz ativa", "Voz passiva", "Voz reflexiva", "Voz recíproca"],
-          "resposta": "Voz passiva",
-          "explicacao": "'Was betrayed' (foi traído) e 'was thrown' (foi jogado) são construções da voz passiva no Simple Past."
-        },
-        {
-          "tipo": "multipla",
-          "pergunta": "Por que usamos <em>leading</em> (gerúndio) após <em>before</em>?",
-          "opcoes": ["Porque 'before' exige o infinitivo", "Porque 'before' é uma conjunção que exige gerúndio quando o sujeito é o mesmo", "Porque 'before' aqui é uma preposição", "Porque o falante errou"],
-          "resposta": "Porque 'before' aqui é uma preposição",
-          "explicacao": "Quando 'before' é usado como preposição (seguido de substantivo ou gerúndio), o verbo vem com -ing."
-        },
-        {
-          "tipo": "lacuna",
-          "enunciado": "Complete a frase na voz passiva:",
-          "pergunta": "The cake ___ (eat) by the children yesterday.",
-          "resposta": "was eaten",
-          "alternativas": ["Was eaten"],
-          "explicacao": "Passiva do Simple Past: was/were + particípio passado. 'Eat' - ate - eaten."
-        },
-        {
-          "tipo": "ordenar",
-          "pergunta": "Ordene a passiva:",
-          "palavras": ["betrayed", "and", "joseph", "was", "thrown", "prison", "into"],
-          "resposta": "joseph was betrayed and thrown into prison",
-          "explicacao": "Sujeito 'Joseph' + 'was' + dois particípios ('betrayed and thrown') + complemento."
-        },
-        {
-          "tipo": "traduzir",
-          "pergunta": "Traduza: <em>Joseph was thrown into prison for years.</em>",
-          "resposta": "José foi jogado na prisão por anos.",
-          "palavrasChave": ["jogado", "prisão", "anos"],
-          "explicacao": "Voz passiva do Simple Past: 'was thrown' = foi jogado/atirado."
-        },
-        {
-          "tipo": "pronuncia",
-          "pergunta": "Pratique a palavra:",
-          "palavras": ["betrayed"],
-          "resposta": "betrayed",
-          "explicacao": "'Betrayed' (bitrêid) - 'be' como 'bi' (schwa), 'trayed' como 'trêid'."
-        },
-        {
-          "tipo": "pronuncia",
-          "pergunta": "Pratique:",
-          "palavras": ["thrown"],
-          "resposta": "thrown",
-          "explicacao": "'Thrown' (thrôun) - 'th' dental, 'rown' como 'rôun'."
-        }
-      ]
+      "start": 22,
+      "english": "We want the purpose, the strength, the anointing, but if we're honest, we want it without the struggle, without the waiting, without the breaking.",
+      "translation": "Nós queremos o propósito, a força, a unção, mas se formos honestos, queremos isso sem a luta, sem a espera, sem o quebrantamento.",
+      "tip": "<strong>\"anointing\"</strong> — 'Unção' (termo religioso/especial). <strong>\"the breaking\"</strong> — Uso do substantivo gerúndio ('breaking' como substantivo) para descrever um processo doloroso de transformação. 'Breaking' = quebrantamento, ruptura.",
+      "miniLesson": {
+        "title": "Gerúndio como Substantivo e 'Without'",
+        "content": "<p><strong>\"the breaking\"</strong> — O gerúndio (-ing) pode funcionar como um substantivo abstrato, muitas vezes traduzido com 'o/a' + verbo no infinitivo ou substantivo derivado.</p><div class=\"exemplo\">The learning never stops. → O aprendizado nunca para.</div><div class=\"exemplo\">I hate the waiting. → Eu odeio a espera.</div><p style=\"margin-top:10px\"><strong>\"without the struggle\"</strong> — 'Without' (preposição) + substantivo/gerúndio. Indica ausência de algo.</p><div class=\"exemplo\">He left without saying goodbye. → Ele saiu sem dizer tchau.</div>"
+      }
     },
     {
-      "indice": 4,
-      "referencia": "David was anointed king as a teenager, but spent years on the run, hiding in caves before he ever wore the crown.",
-      "exercises": [
-        {
-          "tipo": "multipla",
-          "pergunta": "O que significa a expressão <em>on the run</em>?",
-          "opcoes": ["Correndo (exercício)", "Em fuga / fugindo", "Sobre a corrida", "No comando"],
-          "resposta": "Em fuga / fugindo",
-          "explicacao": "'On the run' é uma expressão idiomática que significa estar fugindo."
-        },
-        {
-          "tipo": "multipla",
-          "pergunta": "Qual é a função de <em>ever</em> em <em>before he ever wore the crown</em>?",
-          "opcoes": ["Indica dúvida", "Dá ênfase ('nem mesmo/sequer')", "Indica frequência", "É um erro gramatical"],
-          "resposta": "Dá ênfase ('nem mesmo/sequer')",
-          "explicacao": "'Ever' após 'before' e antes do verbo reforça que a ação não aconteceu em nenhum momento até então."
-        },
-        {
-          "tipo": "lacuna",
-          "enunciado": "Complete com a expressão 'on the run':",
-          "pergunta": "The criminal is ___ from the police.",
-          "resposta": "on the run",
-          "alternativas": ["On the run"],
-          "explicacao": "'On the run from the police' = fugindo da polícia."
-        },
-        {
-          "tipo": "ordenar",
-          "pergunta": "Ordene a frase:",
-          "palavras": ["was", "a", "as", "david", "teenager", "anointed", "king"],
-          "resposta": "david was anointed king as a teenager",
-          "explicacao": "Sujeito 'David' + passiva 'was anointed king' + 'as a teenager'."
-        },
-        {
-          "tipo": "traduzir",
-          "pergunta": "Traduza: <em>He spent years on the run, hiding in caves.</em>",
-          "resposta": "Ele passou anos fugindo, escondendo-se em cavernas.",
-          "palavrasChave": ["passou", "fugindo", "escondendo", "cavernas"],
-          "explicacao": "'On the run' = em fuga. 'Hiding' = escondendo-se."
-        },
-        {
-          "tipo": "pronuncia",
-          "pergunta": "Pratique a palavra:",
-          "palavras": ["anointed"],
-          "resposta": "anointed",
-          "explicacao": "'Anointed' (anóinted) - 'a' como 'â', 'nointed' como 'nóinted'."
-        },
-        {
-          "tipo": "pronuncia",
-          "pergunta": "Pratique:",
-          "palavras": ["crown"],
-          "resposta": "crown",
-          "explicacao": "'Crown' (kráun) - 'cr' como 'kr', 'own' como 'áun'."
-        }
-      ]
+      "start": 34,
+      "english": "If we look at scripture, in almost every story, there is a pattern.",
+      "translation": "Se olharmos para as escrituras, em quase toda história, há um padrão.",
+      "tip": "<strong>\"If we look at scripture\"</strong> — Oração condicional real (possível). Usa-se o presente do indicativo em ambas as partes. <strong>\"scripture\"</strong> — 'Escritura(s) sagrada(s)'. Pode ser usado no singular (coletivo) ou plural 'scriptures'.",
+      "miniLesson": {
+        "title": "Condicional Real (Zero Conditional)",
+        "content": "<p><strong>\"If we look..., there is...\"</strong> — A <em>Zero Conditional</em> (If + presente, presente) expressa verdades gerais, fatos científicos ou situações sempre verdadeiras.</p><div class=\"exemplo\">If you heat ice, it melts. → Se você aquece gelo, ele derrete.</div><div class=\"exemplo\">If I'm late, my father gets angry. → Se eu me atraso, meu pai fica bravo.</div><p style=\"margin-top:10px\"><strong>\"there is\"</strong> — Estrutura existencial 'there is/are' (haver/existir).</p><div class=\"exemplo\">There is a solution for every problem. → Há uma solução para cada problema.</div>"
+      }
     },
     {
-      "indice": 5,
-      "referencia": "God was not ignoring them. God was forming them.",
-      "exercises": [
-        {
-          "tipo": "multipla",
-          "pergunta": "Por que o autor usa o Past Continuous (<em>was not ignoring / was forming</em>) em vez do Simple Past?",
-          "opcoes": ["Porque as ações aconteceram em um momento específico", "Para enfatizar que eram ações contínuas e em andamento no passado", "Porque ele não sabia o Simple Past", "Para indicar ações futuras no passado"],
-          "resposta": "Para enfatizar que eram ações contínuas e em andamento no passado",
-          "explicacao": "O Past Continuous descreve ações que estavam em progresso durante um período no passado."
-        },
-        {
-          "tipo": "multipla",
-          "pergunta": "Qual é o significado de <em>forming</em> neste contexto?",
-          "opcoes": ["Criando fisicamente", "Moldando o caráter e preparando", "Enviando cartas", "Ignorando"],
-          "resposta": "Moldando o caráter e preparando",
-          "explicacao": "'To form' significa dar forma, moldar. No contexto espiritual, Deus estava moldando o caráter."
-        },
-        {
-          "tipo": "lacuna",
-          "enunciado": "Complete com a forma correta do Past Continuous:",
-          "pergunta": "At 10 PM yesterday, I ___ (sleep).",
-          "resposta": "was sleeping",
-          "alternativas": ["Was sleeping"],
-          "explicacao": "Past Continuous: was/were + verbo-ing. Para 'I', usamos 'was sleeping'."
-        },
-        {
-          "tipo": "ordenar",
-          "pergunta": "Ordene a frase afirmativa:",
-          "palavras": ["forming", "was", "them", "god"],
-          "resposta": "god was forming them",
-          "explicacao": "Sujeito 'God' + 'was' + verbo-ing 'forming' + objeto 'them'."
-        },
-        {
-          "tipo": "traduzir",
-          "pergunta": "Traduza: <em>God was forming them.</em>",
-          "resposta": "Deus os estava formando.",
-          "palavrasChave": ["deus", "estava", "formando"],
-          "explicacao": "Past Continuous: ação em andamento no passado."
-        },
-        {
-          "tipo": "pronuncia",
-          "pergunta": "Pratique a palavra:",
-          "palavras": ["forming"],
-          "resposta": "forming",
-          "explicacao": "'Forming' (fórmiin) - 'for' como 'fór', 'ming' como 'min'."
-        },
-        {
-          "tipo": "pronuncia",
-          "pergunta": "Pratique a frase:",
-          "palavras": ["was", "forming", "them"],
-          "resposta": "was forming them",
-          "explicacao": "Encadeie: 'was-forming-them'."
-        }
-      ]
+      "start": 40,
+      "english": "Joseph was betrayed and thrown into prison for years before leading an entire nation.",
+      "translation": "José foi traído e jogado na prisão por anos antes de liderar uma nação inteira.",
+      "tip": "<strong>\"was betrayed and thrown\"</strong> — Passive Voice (voz passada) no passado: 'was/were + particípio passado'. <strong>\"before leading\"</strong> — Após preposições (before, after, without), o verbo seguinte geralmente fica no gerúndio (-ing).",
+      "miniLesson": {
+        "title": "Voz Passiva no Passado Simples e Gerúndio Após Preposição",
+        "content": "<p><strong>\"was betrayed\"</strong> — A voz passiva é usada quando a ação é mais importante que o agente. 'Betrayed' (particípio de 'betray' = trair).</p><div class=\"exemplo\">The painting was stolen last night. → A pintura foi roubada ontem à noite.</div><p style=\"margin-top:10px\"><strong>\"before leading\"</strong> — 'Before' é uma preposição aqui (não conjunção). Por isso, o verbo seguinte vem com -ing (gerúndio).</p><div class=\"exemplo\">Wash your hands before eating. → Lave as mãos antes de comer.</div>"
+      }
     },
     {
-      "indice": 6,
-      "referencia": "Even Jesus carried the cross before wearing the crown.",
-      "exercises": [
-        {
-          "tipo": "multipla",
-          "pergunta": "O que a palavra <em>Even</em> indica no início da frase <em>Even Jesus carried the cross</em>?",
-          "opcoes": ["Surpresa", "Inclusão de um caso extremo ('até mesmo')", "Comparação", "Concessão"],
-          "resposta": "Inclusão de um caso extremo ('até mesmo')",
-          "explicacao": "'Even Jesus' significa que se até Jesus passou por isso, então ninguém está isento."
-        },
-        {
-          "tipo": "multipla",
-          "pergunta": "Qual a diferença de uso entre 'carried' e 'wearing'?",
-          "opcoes": ["São sinônimos", "'Carried' é passado simples; 'wearing' é gerúndio após preposição 'before'", "'Wearing' indica futuro", "'Carried' é mais formal"],
-          "resposta": "'Carried' é passado simples; 'wearing' é gerúndio após preposição 'before'",
-          "explicacao": "'Before' como preposição exige o gerúndio ('wearing')."
-        },
-        {
-          "tipo": "lacuna",
-          "enunciado": "Complete com 'even' + sujeito:",
-          "pergunta": "___ (my grandmother) knows how to use a smartphone.",
-          "resposta": "even my grandmother",
-          "alternativas": ["Even my grandmother"],
-          "explicacao": "'Even' antes do sujeito para dar ênfase: 'Até minha avó'."
-        },
-        {
-          "tipo": "ordenar",
-          "pergunta": "Ordene a frase:",
-          "palavras": ["cross", "the", "jesus", "carried", "even"],
-          "resposta": "even jesus carried the cross",
-          "explicacao": "'Even Jesus' + verbo 'carried' + objeto 'the cross'."
-        },
-        {
-          "tipo": "traduzir",
-          "pergunta": "Traduza: <em>Even Jesus carried the cross before wearing the crown.</em>",
-          "resposta": "Até Jesus carregou a cruz antes de usar a coroa.",
-          "palavrasChave": ["até", "carregou", "cruz", "usar", "coroa"],
-          "explicacao": "'Even Jesus' = até mesmo Jesus. 'Before wearing' = antes de usar."
-        },
-        {
-          "tipo": "pronuncia",
-          "pergunta": "Pratique a palavra:",
-          "palavras": ["jesus"],
-          "resposta": "jesus",
-          "explicacao": "'Jesus' (djízous) - 'Je' como 'djí', 'sus' como 'zous'."
-        },
-        {
-          "tipo": "pronuncia",
-          "pergunta": "Pratique:",
-          "palavras": ["cross"],
-          "resposta": "cross",
-          "explicacao": "'Cross' (króss) - 'cr' como 'kr', 'oss' como 'róss'."
-        }
-      ]
+      "start": 49,
+      "english": "David was anointed king as a teenager, but spent years on the run, hiding in caves before he ever wore the crown.",
+      "translation": "Davi foi ungido rei ainda adolescente, mas passou anos fugindo, escondendo-se em cavernas antes de sequer usar a coroa.",
+      "tip": "<strong>\"was anointed\"</strong> — Voz passada de 'anoint' (ungir). <strong>\"on the run\"</strong> — Expressão idiomática: 'on the run' = 'fugindo', 'em fuga'. <strong>\"ever wore\"</strong> — 'Ever' aqui dá ênfase a 'antes de qualquer momento', 'sequer'.",
+      "miniLesson": {
+        "title": "Expressão 'On the Run' e Uso Enfático de 'Ever'",
+        "content": "<p><strong>\"on the run\"</strong> — Esta expressão é usada com o verbo 'to be' ou 'to spend time'. Significa estar fugindo ou muito ocupado/correndo de um lado para o outro.</p><div class=\"exemplo\">The criminal has been on the run for two weeks. → O criminoso está foragido há duas semanas.</div><p style=\"margin-top:10px\"><strong>\"before he ever wore\"</strong> — Colocar 'ever' antes do verbo principal, após um 'before/after', dá um tom de 'nem mesmo/sequer uma vez'.</p><div class=\"exemplo\">She succeeded before she ever tried. → Ela teve sucesso antes mesmo de tentar.</div>"
+      }
     },
     {
-      "indice": 7,
-      "referencia": "So if you're in a breaking season right now where you feel like life is crushing you, remember this...",
-      "exercises": [
-        {
-          "tipo": "multipla",
-          "pergunta": "Qual é o tipo de condicional usada em <em>if you're in a breaking season... remember this</em>?",
-          "opcoes": ["First Conditional (futuro)", "Zero Conditional (fato geral)", "Estrutura de conselho/instrução com 'if' + presente + imperativo", "Second Conditional (hipótese irreal)"],
-          "resposta": "Estrutura de conselho/instrução com 'if' + presente + imperativo",
-          "explicacao": "É comum em inglês dar conselhos com 'if + presente' seguido de um imperativo."
-        },
-        {
-          "tipo": "multipla",
-          "pergunta": "O que significa a expressão <em>the bedrock of your soul</em>?",
-          "opcoes": ["A cama da sua alma", "A rocha-mãe, a base mais sólida e profunda da sua alma", "Uma pedra comum", "Um lugar escuro"],
-          "resposta": "A rocha-mãe, a base mais sólida e profunda da sua alma",
-          "explicacao": "'Bedrock' é a camada de rocha sólida abaixo do solo. Metáfora para a parte mais fundamental do ser."
-        },
-        {
-          "tipo": "lacuna",
-          "enunciado": "Complete com 'if' + imperativo (conselho):",
-          "pergunta": "___ (feel) tired, take a rest.",
-          "resposta": "if you feel",
-          "alternativas": ["If you feel"],
-          "explicacao": "Estrutura de conselho: 'If you feel tired' (presente) + 'take a rest' (imperativo)."
-        },
-        {
-          "tipo": "ordenar",
-          "pergunta": "Ordene a frase condicional:",
-          "palavras": ["in", "you're", "season", "breaking", "a", "if"],
-          "resposta": "if you're in a breaking season",
-          "explicacao": "'If' + sujeito 'you're' + complemento 'in a breaking season'."
-        },
-        {
-          "tipo": "traduzir",
-          "pergunta": "Traduza: <em>God may be digging deep into the bedrock of your soul.</em>",
-          "resposta": "Deus pode estar cavando fundo na rocha-mãe da sua alma.",
-          "palavrasChave": ["cavando", "fundo", "rocha-mãe", "alma"],
-          "explicacao": "'May be digging' (pode estar cavando) expressa possibilidade."
-        },
-        {
-          "tipo": "pronuncia",
-          "pergunta": "Pratique a palavra:",
-          "palavras": ["crushing"],
-          "resposta": "crushing",
-          "explicacao": "'Crushing' (cráchin) - 'cru' como 'crâ', 'shing' como 'chin'."
-        },
-        {
-          "tipo": "pronuncia",
-          "pergunta": "Pratique:",
-          "palavras": ["bedrock"],
-          "resposta": "bedrock",
-          "explicacao": "'Bedrock' (bédrrak) - 'be' como 'bé', 'drock' como 'drrak'."
-        }
-      ]
+      "start": 60,
+      "english": "Hannah mocked for her infertility for so many years before her son Samuel was born.",
+      "translation": "Hanna foi zombada por sua infertilidade por tantos anos antes de seu filho Samuel nascer.",
+      "tip": "<strong>\"mocked for her infertility\"</strong> — Voz passada (foi zombada). 'For' indica a razão/causa da zombaria. <strong>\"so many years\"</strong> — 'So many' dá ênfade a 'tantos anos' (mais emocional que 'many').",
+      "miniLesson": {
+        "title": "Passiva sem 'Was' em Contexto Narrativo e 'So' vs 'Very'",
+        "content": "<p><strong>\"Hannah mocked...\"</strong> — Em narrativas rápidas ou títulos, às vezes omitimos o 'was' da passiva, mas aqui está implícito. A forma completa: 'Hannah was mocked'.</p><div class=\"exemplo\">Man arrested for theft. (título de jornal) → Homem preso por roubo.</div><p style=\"margin-top:10px\"><strong>\"so many years\"</strong> — 'So' (tão/tanto) é mais enfático e frequentemente usado com 'that' implícito ou explícito (consequência).</p><div class=\"exemplo\">There were so many people that we couldn't enter. → Havia tanta gente que não conseguimos entrar.</div>"
+      }
     },
     {
-      "indice": 8,
-      "referencia": "Amen. Don't rush it. Don't waste it. Trust him in it. Thank you, Jesus. Let's go. Shine your light.",
-      "exercises": [
-        {
-          "tipo": "multipla",
-          "pergunta": "Como se forma o imperativo negativo em inglês?",
-          "opcoes": ["Not + verbo", "Don't + verbo base", "No + verbo-ing", "Verbo + not"],
-          "resposta": "Don't + verbo base",
-          "explicacao": "Para dar ordens ou conselhos negativos, usamos 'Do not' (Don't) + o verbo na forma base."
-        },
-        {
-          "tipo": "multipla",
-          "pergunta": "O que significa a expressão <em>Shine your light</em>?",
-          "opcoes": ["Acenda sua lanterna", "Seja um exemplo positivo, mostre seu melhor", "Brilhe literalmente", "Apague a luz"],
-          "resposta": "Seja um exemplo positivo, mostre seu melhor",
-          "explicacao": "'Shine your light' é uma metáfora de origem bíblica que significa ser uma influência positiva."
-        },
-        {
-          "tipo": "lacuna",
-          "enunciado": "Complete com o imperativo negativo:",
-          "pergunta": "___ (give up)! Keep trying.",
-          "resposta": "don't give up",
-          "alternativas": ["Don't give up"],
-          "explicacao": "Imperativo negativo: 'Don't give up' = Não desista."
-        },
-        {
-          "tipo": "ordenar",
-          "pergunta": "Ordene o imperativo negativo:",
-          "palavras": ["it", "rush", "don't"],
-          "resposta": "don't rush it",
-          "explicacao": "Imperativo negativo: 'Don't' + verbo 'rush' + objeto 'it'."
-        },
-        {
-          "tipo": "traduzir",
-          "pergunta": "Traduza: <em>Don't waste it. Trust him in it.</em>",
-          "resposta": "Não desperdice isso. Confie nele nisso.",
-          "palavrasChave": ["desperdice", "confie", "nele"],
-          "explicacao": "Imperativos negativos e positivos. 'In it' = nessa situação/processo."
-        },
-        {
-          "tipo": "pronuncia",
-          "pergunta": "Pratique a expressão:",
-          "palavras": ["let's", "go"],
-          "resposta": "let's go",
-          "explicacao": "'Let's' (lets) - 'le' fraco, 't's' como 'ts'. 'Go' (gôu)."
-        },
-        {
-          "tipo": "pronuncia",
-          "pergunta": "Pratique a frase final:",
-          "palavras": ["shine", "your", "light"],
-          "resposta": "shine your light",
-          "explicacao": "'Shine' (cháin) - 'sh' como 'ch', 'i' como 'ai'. 'Light' (láit) - 'gh' mudo."
-        }
-      ]
+      "start": 67,
+      "english": "Moses spent 40 years in the desert as a shepherd before he led God's people to freedom.",
+      "translation": "Moisés passou 40 anos no deserto como pastor antes de liderar o povo de Deus à liberdade.",
+      "tip": "<strong>\"spent 40 years\"</strong> — 'Spent' é o passado de 'spend' (gastar tempo/dinheiro). <strong>\"as a shepherd\"</strong> — 'As' (como, na função de). <strong>\"led ... to freedom\"</strong> — 'Led' (passado de 'lead' = liderar). 'To freedom' = 'à liberdade' (direção/meta).",
+      "miniLesson": {
+        "title": "Verbo 'Spend' + Tempo e 'As' Indicando Função",
+        "content": "<p><strong>\"spent 40 years in the desert\"</strong> — Estrutura: spend + tempo + (in/at/on) + lugar/atividade. É um verbo irregular: spend - spent - spent.</p><div class=\"exemplo\">I spent three hours on that homework. → Eu passei três horas naquela lição de casa.</div><p style=\"margin-top:10px\"><strong>\"as a shepherd\"</strong> — 'As' significa 'na qualidade de', 'sendo'. Diferente de 'like' (como = semelhante a, mas não igual).</p><div class=\"exemplo\">He works as a teacher. (ele é professor) vs He sings like a teacher. (canta igual professor, mas não é)</div>"
+      }
+    },
+    {
+      "start": 76,
+      "english": "The stories are countless and we see them as miracles, but when they lived it, it was painful.",
+      "translation": "As histórias são incontáveis e nós as vemos como milagres, mas quando eles as viveram, foi doloroso.",
+      "tip": "<strong>\"countless\"</strong> — Sufixo '-less' (sem): 'count' (conta) + 'less' = 'sem conta', 'incontáveis'. <strong>\"when they lived it\"</strong> — 'Lived it' = 'viveram aquilo' (a experiência).",
+      "miniLesson": {
+        "title": "Sufixo '-less' para Formar Adjetivos",
+        "content": "<p><strong>\"countless\"</strong> — Adicionar '-less' a um substantivo cria um adjetivo que significa 'sem [substantivo]'. Hope → hopeless (sem esperança). Home → homeless (sem lar).</p><div class=\"exemplo\">This is a worthless object. → Este é um objeto sem valor.</div><p style=\"margin-top:10px\"><strong>Pronome Objeto 'It' Referindo-se a Experiência</strong> — 'It' retoma a ideia de 'viver as histórias' como uma experiência coletiva.</p><div class=\"exemplo\">Life is hard. I know it. → A vida é difícil. Eu sei disso.</div>"
+      }
+    },
+    {
+      "start": 84,
+      "english": "It was a waiting room that probably felt like a prison. And I'm sure they wondered, is God even hearing our cries?",
+      "translation": "Era uma sala de espera que provavelmente parecia uma prisão. E tenho certeza de que eles se perguntavam: Será que Deus está sequer ouvindo nossos clamores?",
+      "tip": "<strong>\"waiting room\"</strong> — 'Sala de espera' (metáfora para período de espera). <strong>\"felt like\"</strong> — 'Felt like' + substantivo = 'parecia (um)' . <strong>\"even hearing\"</strong> — 'Even' + verbo-ing dá ênfase: 'sequer ouvindo'.",
+      "miniLesson": {
+        "title": "\"Felt Like\" para Comparações e Discurso Indireto",
+        "content": "<p><strong>\"felt like a prison\"</strong> — 'Feel like' + substantivo: 'dar a sensação de ser', 'parecer'.</p><div class=\"exemplo\">This bed feels like a cloud. → Esta cama parece uma nuvem.</div><p style=\"margin-top:10px\"><strong>\"they wondered, is God even hearing?\"</strong> — Discurso direto (a pergunta está sendo citada literalmente). Se fosse indireto: 'they wondered if God was even hearing'.</p><div class=\"exemplo\">He thought, \"Will I win?\" (direto) / He thought if he would win. (indireto)</div>"
+      }
+    },
+    {
+      "start": 96,
+      "english": "But God was not ignoring them. God was forming them.",
+      "translation": "Mas Deus não os estava ignorando. Deus os estava formando.",
+      "tip": "<strong>\"was not ignoring / was forming\"</strong> — Past Continuous (passado contínuo) para ações em andamento no passado. Ênfase no processo contínuo da ação de Deus.",
+      "miniLesson": {
+        "title": "Past Continuous para Contraste de Ações",
+        "content": "<p><strong>\"God was not ignoring... God was forming\"</strong> — Usamos o Past Continuous (was/were + -ing) para descrever uma ação contínua em andamento no passado. Aqui, cria um contraste entre o que Deus <strong>não estava fazendo</strong> e o que <strong>estava fazendo</strong>.</p><div class=\"exemplo\">She wasn't sleeping; she was studying all night. → Ela não estava dormindo; estava estudando a noite toda.</div><p style=\"margin-top:10px\"><strong>\"forming\"</strong> — Verbo 'to form' (formar, moldar). No contexto, significa desenvolver o caráter e a capacidade.</p><div class=\"exemplo\">These experiences formed his personality. → Essas experiências formaram a personalidade dele.</div>"
+      }
+    },
+    {
+      "start": 99,
+      "english": "He was expanding their capacity to carry what was coming.",
+      "translation": "Ele estava expandindo a capacidade deles de carregar o que estava por vir.",
+      "tip": "<strong>\"expanding their capacity\"</strong> — 'Expand' = expandir, ampliar. 'Capacity' = capacidade (física ou emocional). <strong>\"to carry\"</strong> — Infinitivo de propósito: 'capacidade para carregar'. <strong>\"what was coming\"</strong> — 'What' = 'aquilo que'. 'Was coming' = 'estava vindo', 'estava por vir'.",
+      "miniLesson": {
+        "title": "Infinitivo de Propósito e 'What' como Sujeito",
+        "content": "<p><strong>\"capacity to carry\"</strong> — Frequentemente, usamos o infinitivo (to + verbo) depois de substantivos abstratos como 'capacity', 'ability', 'opportunity' para expressar propósito ou especificação.</p><div class=\"exemplo\">You have the ability to succeed. → Você tem a habilidade de ter sucesso.</div><p style=\"margin-top:10px\"><strong>\"what was coming\"</strong> — 'What' = 'the thing that' (aquilo que). Funciona como sujeito da oração 'was coming'.</p><div class=\"exemplo\">What happened was a surprise. → O que aconteceu foi uma surpresa.</div>"
+      }
+    },
+    {
+      "start": 105,
+      "english": "God does not delight in our pain. He meets us in it.",
+      "translation": "Deus não tem prazer em nossa dor. Ele nos encontra nela.",
+      "tip": "<strong>\"delight in\"</strong> — Phrasal verb: 'to delight in something' = 'ter prazer em', 'deleitar-se com'. <strong>\"meets us in it\"</strong> — 'Meet' + 'in' = encontrar dentro da experiência (não evitar).",
+      "miniLesson": {
+        "title": "Phrasal Verbs com 'Delight' e 'Meet'",
+        "content": "<p><strong>\"delight in\"</strong> — 'Delight' como verbo: to delight in = ter prazer em. É um verbo de emoção.</p><div class=\"exemplo\">She delights in teaching children. → Ela tem prazer em ensinar crianças.</div><p style=\"margin-top:10px\"><strong>\"meets us in it\"</strong> — Diferente de 'meet with' (encontrar-se com), 'meet in' significa 'encontrar dentro de um contexto/lugar'.</p><div class=\"exemplo\">I will meet you in the challenge. → Eu te encontrarei dentro do desafio (te apoiarei).</div>"
+      }
+    },
+    {
+      "start": 110,
+      "english": "He uses these hard seasons to form us, to form trust, humility, and courage within us.",
+      "translation": "Ele usa estas estações difíceis para nos formar, para formar confiança, humildade e coragem dentro de nós.",
+      "tip": "<strong>\"hard seasons\"</strong> — 'Seasons' (estações) como metáfora para 'períodos da vida'. <strong>\"to form trust, humility, and courage\"</strong> — Lista de três substantivos abstratos (confiança, humildade, coragem).",
+      "miniLesson": {
+        "title": "Listas de Três (Triplets) em Inglês",
+        "content": "<p><strong>\"trust, humility, and courage\"</strong> — A 'lista de três' é uma figura de linguagem muito comum em discursos, especialmente motivacionais e religiosos, para dar ritmo e completude.</p><div class=\"exemplo\">Life, liberty, and the pursuit of happiness. → Vida, liberdade e a busca pela felicidade.</div><p style=\"margin-top:10px\"><strong>\"to form us, to form...\"</strong> — Repetição do verbo 'form' (anáfora) para ênfase e paralelismo.</p><div class=\"exemplo\">I came, I saw, I conquered. → Vim, vi, venci.</div>"
+      }
+    },
+    {
+      "start": 120,
+      "english": "Even Jesus carried the cross before wearing the crown.",
+      "translation": "Até Jesus carregou a cruz antes de usar a coroa.",
+      "tip": "<strong>\"Even Jesus\"</strong> — 'Even' (até mesmo) para incluir o exemplo máximo. <strong>\"carried the cross\" / \"wearing the crown\"</strong> — Metáforas cristãs: a cruz representa sofrimento e sacrifício; a coroa representa vitória e reinado.",
+      "miniLesson": {
+        "title": "Uso Enfático de 'Even' com Sujeitos",
+        "content": "<p><strong>\"Even Jesus\"</strong> — Colocar 'even' antes de um sujeito específico serve para dizer: 'se isso é verdade até para esta pessoa extremamente importante/boa, então certamente é verdade para todos'.</p><div class=\"exemplo\">Even my grandmother knows how to use a smartphone. → Até minha avó sabe usar smartphone.</div><p style=\"margin-top:10px\"><strong>Comparação entre 'carried' e 'wearing'</strong> — 'Carried' (passado simples) vs 'wearing' (gerúndio após preposição 'before').</p><div class=\"exemplo\">He ate dinner before leaving. → Ele jantou antes de sair.</div>"
+      }
+    },
+    {
+      "start": 127,
+      "english": "So if you're in a breaking season right now where you feel like life is crushing you, remember this, right now, God may be digging deep into the bedrock of your soul so that you can sustain the height that he is calling you to.",
+      "translation": "Então, se você está em uma estação de quebrantamento agora, onde você sente que a vida está te esmagando, lembre-se disto: agora mesmo, Deus pode estar cavando fundo na rocha da sua alma para que você possa sustentar a altura que ele está te chamando a alcançar.",
+      "tip": "<strong>\"crushing you\"</strong> — 'Crushing' (esmagando) é uma metáfora forte para pressão extrema. <strong>\"bedrock of your soul\"</strong> — 'Bedrock' = rocha-mãe, base sólida. Metáfora geológica. <strong>\"sustain the height\"</strong> — 'Sustain' = suportar, sustentar. 'Height' (altura) contrasta com 'deep' (profundo).",
+      "miniLesson": {
+        "title": "Frases Condicionais com 'If' + 'May Be' e 'So That'",
+        "content": "<p><strong>\"if you're in a breaking season... remember\"</strong> — Estrutura: 'If' (presente) + imperativo ('remember'). Usada para dar conselhos ou instruções baseados numa condição real.</p><div class=\"exemplo\">If you feel tired, take a break. → Se você se sentir cansado, faça uma pausa.</div><p style=\"margin-top:10px\"><strong>\"so that you can sustain\"</strong> — 'So that' introduz uma oração de propósito/finalidade (para que). Frequentemente acompanhado de 'can/could/will'.</p><div class=\"exemplo\">I left early so that I wouldn't miss the bus. → Eu saí cedo para não perder o ônibus.</div><p style=\"margin-top:10px\"><strong>\"digging deep\" / \"sustain the height\"</strong> — Paralelismo de opostos (profundidade vs altura).</p>"
+      }
+    },
+    {
+      "start": 146,
+      "english": "Amen. Don't rush it. Don't waste it. Trust him in it. Thank you, Jesus. Let's go. Shine your light.",
+      "translation": "Amém. Não apresse isso. Não desperdice isso. Confie nele nisso. Obrigado, Jesus. Vamos lá. Brilhe a sua luz.",
+      "tip": "<strong>\"Don't rush it / waste it\"</strong> — Imperativos negativos (don't + verbo). 'It' se refere ao período/processo. <strong>\"Trust him in it\"</strong> — 'Trust' sem 'in' o objeto direto é a pessoa. 'In it' = dentro dessa situação. <strong>\"Shine your light\"</strong> — Metáfora final de encorajamento.",
+      "miniLesson": {
+        "title": "Imperativos Negativos e Pronomes 'It' Anafóricos",
+        "content": "<p><strong>\"Don't rush it. Don't waste it.\"</strong> — Para formar o negativo do imperativo, use 'do not' (don't) + verbo base. O pronome 'it' se refere ao 'breaking season' mencionado anteriormente.</p><div class=\"exemplo\">Don't give up! → Não desista!</div><p style=\"margin-top:10px\"><strong>\"Trust him in it\"</strong> — Estrutura: verbo 'trust' + objeto (him) + complemento circunstancial (in it). O 'it' novamente se refere ao processo.</p><div class=\"exemplo\">I believe in you in this difficult time. → Eu acredito em você neste momento difícil.</div><p style=\"margin-top:10px\"><strong>\"Let's go\"</strong> — Contração de 'Let us go'. Usado para iniciar uma ação em grupo, dar empurrão motivacional.</p>"
+      }
     }
   ]
 }
