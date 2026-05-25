@@ -1,0 +1,926 @@
+{
+  "aula": 4,
+  "titulo": "INGLÊS — O Padrão dos Milagres: A Fundação Antes do Topo",
+  "paragrafos": [
+    {
+      "indice": 0,
+      "referencia": "Have you ever noticed that there is a pattern...",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "Qual tempo verbal é usado em <em>Have you ever noticed</em>?",
+          "opcoes": ["Simple Past", "Present Perfect", "Past Perfect", "Present Continuous"],
+          "resposta": "Present Perfect",
+          "explicacao": "'Have you ever noticed' é Present Perfect (have/has + particípio). Usado para perguntar sobre experiências em algum momento indefinido da vida até agora."
+        },
+        {
+          "tipo": "multipla",
+          "pergunta": "O que significa a palavra <em>pattern</em> no contexto?",
+          "opcoes": ["Desenho", "Padrão recorrente", "Molde de costura", "Comportamento aleatório"],
+          "resposta": "Padrão recorrente",
+          "explicacao": "'Pattern' significa um arranjo ou sequência que se repete. No contexto bíblico, indica que os milagres seguem uma mesma estrutura recorrrente."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com o particípio passado correto:",
+          "pergunta": "Have you ever ___ (see) that movie?",
+          "resposta": "seen",
+          "alternativas": ["Seen", "saw"],
+          "explicacao": "No Present Perfect, após 'have/has', usamos o particípio passado. 'See' é irregular: see - saw - seen."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com a palavra que falta:",
+          "pergunta": "There is a pattern ___ every miracle.",
+          "resposta": "to",
+          "alternativas": ["To", "for"],
+          "explicacao": "Usamos 'pattern to something' (padrão para/com relação a algo) ou 'pattern of something' (padrão de algo). No áudio, ele diz 'pattern to every miracle'."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene a pergunta que aparece no áudio:",
+          "palavras": ["you", "ever", "noticed", "have", "that", "pattern", "a", "there", "is"],
+          "resposta": "have you ever noticed that there is a pattern",
+          "explicacao": "Estrutura do Present Perfect em pergunta: 'Have you ever' + particípio + 'that' + oração."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene a frase:",
+          "palavras": ["the", "changes", "it", "way", "you", "look", "at", "setbacks", "your"],
+          "resposta": "it changes the way you look at your setbacks",
+          "explicacao": "Sujeito 'it' + verbo 'changes' + objeto 'the way' + oração relativa reduzida 'you look at your setbacks'."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza: <em>Have you ever noticed the pattern?</em>",
+          "resposta": "Você já reparou no padrão?",
+          "palavrasChave": ["já", "reparou", "padrão"],
+          "explicacao": "'Have you ever' indica experiência de vida até o momento. 'Noticed' = reparou/percebeu. 'Pattern' = padrão."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza para o inglês (usando Present Perfect): <em>Ela já viajou para o exterior?</em>",
+          "resposta": "has she ever traveled abroad?",
+          "palavrasChave": ["has", "ever", "traveled", "abroad"],
+          "explicacao": "Present Perfect com 'ever' para perguntar sobre experiência. 'Traveled' é o particípio de 'travel' (regular)."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a pronúncia:",
+          "palavras": ["noticed"],
+          "resposta": "noticed",
+          "explicacao": "'Noticed' (nôutist) - 'no' como 'nôu', 'ticed' como 'tist' (o 'ed' soa como 't' porque o verbo termina com som surdo)."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a palavra:",
+          "palavras": ["pattern"],
+          "resposta": "pattern",
+          "explicacao": "'Pattern' (pátêrn) - 'pa' como 'pá' (schwa), 'ttern' como 'têrn' com o 'r' pronunciado no inglês americano."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a frase curta:",
+          "palavras": ["have", "you", "ever"],
+          "resposta": "have you ever",
+          "explicacao": "Encadeamento: 'have-you-ever' - o 've' de 'have' se conecta ao 'you' (haviu) e o 'you' se conecta ao 'ever' (iuêver)."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a palavra final:",
+          "palavras": ["setbacks"],
+          "resposta": "setbacks",
+          "explicacao": "'Setbacks' (sétbáks) - 'set' como 'sét', 'backs' como 'báks' (b + a aberto + ks)."
+        }
+      ]
+    },
+    {
+      "indice": 1,
+      "referencia": "We all pray for the mountaintop moments...",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "O que significa a expressão <em>mountaintop moments</em>?",
+          "opcoes": ["Momentos no topo da montanha (literalmente)", "Momentos de grande sucesso ou realização", "Momentos de perigo", "Momentos de solidão"],
+          "resposta": "Momentos de grande sucesso ou realização",
+          "explicacao": "'Mountaintop moments' é uma metáfora que representa os picos de conquista, vitória, alegria ou realização máxima."
+        },
+        {
+          "tipo": "multipla",
+          "pergunta": "Qual estrutura gramatical é usada em <em>the higher the peak, the deeper the foundation</em>?",
+          "opcoes": ["Comparativo de igualdade", "Comparativo de superioridade isolado", "Estrutura correlata 'the + comparativo, the + comparativo'", "Superlativo"],
+          "resposta": "Estrutura correlata 'the + comparativo, the + comparativo'",
+          "explicacao": "Esta estrutura expressa que uma coisa varia proporcionalmente à outra: 'quanto mais X, mais Y'."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete a estrutura comparativa:",
+          "pergunta": "___ harder you work, ___ better your results will be.",
+          "resposta": "the the",
+          "alternativas": ["The... the...", "The... then..."],
+          "explicacao": "A estrutura correta é 'The + comparativo, the + comparativo'."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com a palavra correta:",
+          "pergunta": "The foundation has to go deep ___ support the building.",
+          "resposta": "to",
+          "alternativas": ["To", "for"],
+          "explicacao": "Usamos o infinitivo 'to' para expressar propósito: 'deep enough to support' (profunda o suficiente para suportar)."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene a frase:",
+          "palavras": ["pray", "the", "we", "for", "moments", "all", "of", "fulfillment"],
+          "resposta": "we all pray for the moments of fulfillment",
+          "explicacao": "Sujeito 'We all' + verbo 'pray' + 'for the moments of fulfillment'."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene a expressão comparativa:",
+          "palavras": ["the", "higher", "the", "deeper", "peak", "foundation"],
+          "resposta": "the higher the peak, the deeper the foundation",
+          "explicacao": "'The higher' + sujeito 'the peak' + vírgula + 'the deeper' + sujeito 'the foundation'."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza: <em>The higher the peak, the deeper the foundation has to go.</em>",
+          "resposta": "Quanto mais alto o pico, mais profunda a fundação precisa ir.",
+          "palavrasChave": ["mais alto", "pico", "profunda", "fundação"],
+          "explicacao": "Estrutura 'the + comparativo, the + comparativo' + 'has to go' (precisa ir/atingir)."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza para o inglês (usando a estrutura): <em>Quanto mais você estuda, mais você aprende.</em>",
+          "resposta": "the more you study, the more you learn",
+          "palavrasChave": ["the more", "study", "learn"],
+          "explicacao": "Use 'the more' + sujeito + verbo (presente) para ambos os lados da estrutura."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a palavra:",
+          "palavras": ["mountaintop"],
+          "resposta": "mountaintop",
+          "explicacao": "'Mountaintop' (máuntântop) - 'mountain' como 'máuntân' (t com som de t surdo + schwa) + 'top' (top)."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique:",
+          "palavras": ["peak"],
+          "resposta": "peak",
+          "explicacao": "'Peak' (pik) - o 'ea' tem som de 'i' longo (como em 'vida'). É homófono de 'pique' (espírito de luta)."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a palavra:",
+          "palavras": ["foundation"],
+          "resposta": "foundation",
+          "explicacao": "'Foundation' (faundêichion) - 'foun' como 'faun', 'da' como 'dê', 'tion' como 'chion' (som de 'ch' + 'ion')."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a expressão:",
+          "palavras": ["has", "to", "go"],
+          "resposta": "has to go",
+          "explicacao": "'Has to' (hástu) - o 's' soa como 's', o 't' se conecta ao 'u' (to). 'Go' (gôu) som longo."
+        }
+      ]
+    },
+    {
+      "indice": 2,
+      "referencia": "We want the purpose, the strength, the anointing...",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "O que significa a palavra <em>anointing</em> no contexto religioso?",
+          "opcoes": ["Unção", "Anotação", "Anúncio", "Abandono"],
+          "resposta": "Unção",
+          "explicacao": "'Anointing' é o ato de ungir com óleo, um termo religioso que simboliza consagração, capacitação especial por Deus."
+        },
+        {
+          "tipo": "multipla",
+          "pergunta": "Qual é a função do sufixo '-ing' em <em>the breaking</em>?",
+          "opcoes": ["Indica ação contínua", "Transforma o verbo em substantivo (gerúndio substantivado)", "Forma o particípio presente", "Indica futuro"],
+          "resposta": "Transforma o verbo em substantivo (gerúndio substantivado)",
+          "explicacao": "Com o artigo 'the', o gerúndio se torna um substantivo abstrato: 'the breaking' = o processo de quebrar/quebrantamento."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com o gerúndio substantivado:",
+          "pergunta": "The ___ (wait) is the hardest part.",
+          "resposta": "waiting",
+          "alternativas": ["Waiting"],
+          "explicacao": "'The waiting' é um substantivo formado a partir do verbo 'wait'. Muito comum em expressões idiomáticas."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete a frase com 'without':",
+          "pergunta": "He left ___ (say) goodbye.",
+          "resposta": "without saying",
+          "alternativas": ["Without saying"],
+          "explicacao": "Após a preposição 'without', usamos o verbo no gerúndio (-ing). 'Without saying goodbye' = 'sem dizer tchau'."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene a frase:",
+          "palavras": ["the", "struggle", "want", "we", "without", "it"],
+          "resposta": "we want it without the struggle",
+          "explicacao": "Sujeito 'We' + verbo 'want' + objeto 'it' + 'without the struggle'."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene a oração condicional:",
+          "palavras": ["we're", "if", "honest", "but"],
+          "resposta": "but if we're honest",
+          "explicacao": "Conjunção 'but' + 'if we're honest' (se formos honestos)."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza: <em>We want it without the waiting.</em>",
+          "resposta": "Nós queremos isso sem a espera.",
+          "palavrasChave": ["queremos", "espera"],
+          "explicacao": "'Without the waiting' - o gerúndio 'waiting' é substantivado pelo artigo 'the'."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza para o inglês (com gerúndio): <em>O entendimento vem com o tempo.</em>",
+          "resposta": "understanding comes with time",
+          "palavrasChave": ["understanding", "comes", "time"],
+          "explicacao": "Use o gerúndio 'understanding' como sujeito da frase (substantivo)."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a palavra:",
+          "palavras": ["purpose"],
+          "resposta": "purpose",
+          "explicacao": "'Purpose' (pêrpos) - 'pur' como 'pêr', 'pose' como 'pos' (o 'e' final é mudo). Ênfase na primeira sílaba."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique:",
+          "palavras": ["strength"],
+          "resposta": "strength",
+          "explicacao": "'Strength' (strênkth) - é difícil! 'Stre' como 'strê', 'ngth' como 'nkth' (k + t + th dental surdo)."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a palavra:",
+          "palavras": ["honest"],
+          "resposta": "honest",
+          "explicacao": "'Honest' (ânest) - O 'H' é mudo! Começa com som de vogal (schwa). Atenção: 'an honest man' (som de vogal → 'an')."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a palavra chave:",
+          "palavras": ["breaking"],
+          "resposta": "breaking",
+          "explicacao": "'Breaking' (brêikin) - 'brea' como 'brêi', 'king' como 'kin' (k + i curto + n). O 'g' não é pronunciado explicitamente."
+        }
+      ]
+    },
+    {
+      "indice": 3,
+      "referencia": "Joseph was betrayed and thrown into prison...",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "Que voz verbal predomina no trecho sobre José?",
+          "opcoes": ["Voz ativa", "Voz passiva", "Voz reflexiva", "Voz recíproca"],
+          "resposta": "Voz passiva",
+          "explicacao": "'Was betrayed' (foi traído) e 'was thrown' (foi jogado) são construções da voz passiva no Simple Past."
+        },
+        {
+          "tipo": "multipla",
+          "pergunta": "Por que usamos <em>leading</em> (gerúndio) após <em>before</em>?",
+          "opcoes": ["Porque 'before' exige o infinitivo", "Porque 'before' é uma conjunção que exige gerúndio quando o sujeito é o mesmo", "Porque 'before' aqui é uma preposição", "Porque o falante errou"],
+          "resposta": "Porque 'before' aqui é uma preposição",
+          "explicacao": "Quando 'before' é usado como preposição (seguido de substantivo ou gerúndio), o verbo vem com -ing. Como conjunção, 'before' é seguido de oração com sujeito + verbo."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete a frase na voz passiva:",
+          "pergunta": "The cake ___ (eat) by the children yesterday.",
+          "resposta": "was eaten",
+          "alternativas": ["Was eaten"],
+          "explicacao": "Passiva do Simple Past: was/were + particípio passado. 'Eat' - ate - eaten. Sujeito 'cake' (singular) → 'was eaten'."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com a forma correta do verbo após 'before':",
+          "pergunta": "Please, think twice before ___ (speak).",
+          "resposta": "speaking",
+          "alternativas": ["Speaking"],
+          "explicacao": "'Before' como preposição: 'before speaking' = antes de falar. O sujeito é o mesmo (you implícito)."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene a passiva:",
+          "palavras": ["betrayed", "and", "joseph", "was", "thrown", "prison", "into"],
+          "resposta": "joseph was betrayed and thrown into prison",
+          "explicacao": "Sujeito 'Joseph' + 'was' + dois particípios ('betrayed and thrown') + complemento 'into prison'."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene a frase com 'before + gerúndio':",
+          "palavras": ["before", "nation", "a", "leading", "years", "for", "entire"],
+          "resposta": "before leading an entire nation for years",
+          "explicacao": "'Before' + gerúndio 'leading' + objeto 'an entire nation' + tempo 'for years'."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza: <em>Joseph was thrown into prison for years.</em>",
+          "resposta": "José foi jogado na prisão por anos.",
+          "palavrasChave": ["jogado", "prisão", "anos"],
+          "explicacao": "Voz passiva do Simple Past: 'was thrown' = foi jogado/atirado."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza para o inglês (voz passiva): <em>O livro foi escrito por ela.</em>",
+          "resposta": "the book was written by her",
+          "palavrasChave": ["book", "was", "written", "by"],
+          "explicacao": "Passiva: objeto da ativa vira sujeito. 'Write' é irregular: write - wrote - written."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a palavra:",
+          "palavras": ["betrayed"],
+          "resposta": "betrayed",
+          "explicacao": "'Betrayed' (bitrêid) - 'be' como 'bi' (schwa), 'trayed' como 'trêid' (ditongo ei + d)."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique:",
+          "palavras": ["thrown"],
+          "resposta": "thrown",
+          "explicacao": "'Thrown' (thrôun) - 'th' dental, 'rown' como 'rôun' (ditongo ou como em 'pouco' + n)."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique o gerúndio:",
+          "palavras": ["leading"],
+          "resposta": "leading",
+          "explicacao": "'Leading' (lídin) - 'lea' como 'li' (i longo), 'ding' como 'din' (d + i curto + n)."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a palavra:",
+          "palavras": ["entire"],
+          "resposta": "entire",
+          "explicacao": "'Entire' (entáier) - 'en' como 'en', 'tire' como 'táier' (t + ai + schwa + r)."
+        }
+      ]
+    },
+    {
+      "indice": 4,
+      "referencia": "David was anointed king as a teenager...",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "O que significa a expressão <em>on the run</em>?",
+          "opcoes": ["Correndo (exercício)", "Em fuga / fugindo", "Sobre a corrida", "No comando"],
+          "resposta": "Em fuga / fugindo",
+          "explicacao": "'On the run' é uma expressão idiomática que significa estar fugindo da polícia, de inimigos ou simplesmente muito ocupado, sem parar."
+        },
+        {
+          "tipo": "multipla",
+          "pergunta": "Qual é a função de <em>ever</em> em <em>before he ever wore the crown</em>?",
+          "opcoes": ["Indica dúvida", "Dá ênfase ('nem mesmo/sequer')", "Indica frequência", "É um erro gramatical"],
+          "resposta": "Dá ênfase ('nem mesmo/sequer')",
+          "explicacao": "'Ever' após 'before' e antes do verbo reforça que a ação do verbo (usar a coroa) não aconteceu em nenhum momento até então."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com a expressão 'on the run':",
+          "pergunta": "The criminal is ___ from the police.",
+          "resposta": "on the run",
+          "alternativas": ["On the run"],
+          "explicacao": "'On the run from the police' = fugindo da polícia. É uma expressão fixa com o verbo 'to be'."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com 'ever' para dar ênfase:",
+          "pergunta": "This is the best pizza I have ___ eaten.",
+          "resposta": "ever",
+          "alternativas": ["Ever"],
+          "explicacao": "'Ever' em superlativos ou com o Present Perfect dá ênfase a 'em toda minha vida'. 'The best ever' = o melhor de todos os tempos."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene a frase:",
+          "palavras": ["was", "a", "as", "david", "teenager", "anointed", "king"],
+          "resposta": "david was anointed king as a teenager",
+          "explicacao": "Sujeito 'David' + passiva 'was anointed king' + 'as a teenager' (quando adolescente)."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene a frase com 'before ever':",
+          "palavras": ["he", "crown", "wore", "before", "ever", "the"],
+          "resposta": "before he ever wore the crown",
+          "explicacao": "'Before' + sujeito 'he' + 'ever' + verbo 'wore' + objeto 'the crown'."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza: <em>He spent years on the run, hiding in caves.</em>",
+          "resposta": "Ele passou anos fugindo, escondendo-se em cavernas.",
+          "palavrasChave": ["passou", "fugindo", "escondendo", "cavernas"],
+          "explicacao": "'On the run' = em fuga. 'Hiding' = escondendo-se (gerúndio de propósito/forma)."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza para o inglês (com 'ever' enfático): <em>Ele ganhou o prêmio antes mesmo de tentar.</em>",
+          "resposta": "he won the prize before he ever tried",
+          "palavrasChave": ["won", "before", "ever", "tried"],
+          "explicacao": "'Before he ever tried' = antes mesmo de tentar (ênfase na surpresa/ausência de esforço prévio)."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a palavra:",
+          "palavras": ["anointed"],
+          "resposta": "anointed",
+          "explicacao": "'Anointed' (anóinted) - 'a' como 'â' (schwa), 'nointed' como 'nóinted' (n + oi + nt + ed → 'nóinted')."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a expressão:",
+          "palavras": ["on", "the", "run"],
+          "resposta": "on the run",
+          "explicacao": "'On' (ân) fraco + 'the' (th schwa) + 'run' (rân) - o 'u' tem som de 'â' como em 'mãe' em inglês americano."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique:",
+          "palavras": ["hiding"],
+          "resposta": "hiding",
+          "explicacao": "'Hiding' (ráidin) - 'hi' como 'rái' (som de 'rai'), 'ding' como 'din'."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a palavra:",
+          "palavras": ["crown"],
+          "resposta": "crown",
+          "explicacao": "'Crown' (kráun) - 'cr' como 'kr', 'own' como 'áun' (ditongo 'au' com 'n' final)."
+        }
+      ]
+    },
+    {
+      "indice": 5,
+      "referencia": "God was not ignoring them. God was forming them.",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "Por que o autor usa o Past Continuous (<em>was not ignoring / was forming</em>) em vez do Simple Past?",
+          "opcoes": ["Porque as ações aconteceram em um momento específico", "Para enfatizar que eram ações contínuas e em andamento no passado", "Porque ele não sabia o Simple Past", "Para indicar ações futuras no passado"],
+          "resposta": "Para enfatizar que eram ações contínuas e em andamento no passado",
+          "explicacao": "O Past Continuous descreve ações que estavam em progresso durante um período no passado, não ações pontuais. Ênfase no processo contínuo."
+        },
+        {
+          "tipo": "multipla",
+          "pergunta": "Qual é o significado de <em>forming</em> neste contexto?",
+          "opcoes": ["Criando fisicamente", "Moldando o caráter e preparando", "Enviando cartas", "Ignorando"],
+          "resposta": "Moldando o caráter e preparando",
+          "explicacao": "'To form' significa dar forma, moldar. No contexto espiritual, Deus estava moldando o caráter, a fé e a capacidade deles."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com a forma correta do Past Continuous:",
+          "pergunta": "At 10 PM yesterday, I ___ (sleep).",
+          "resposta": "was sleeping",
+          "alternativas": ["Was sleeping"],
+          "explicacao": "Past Continuous: was/were + verbo-ing. Para 'I', usamos 'was sleeping'."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com a forma negativa do Past Continuous:",
+          "pergunta": "They ___ (not / listen) to the teacher.",
+          "resposta": "were not listening",
+          "alternativas": ["Were not listening", "weren't listening"],
+          "explicacao": "Negativa: were not (weren't) + verbo-ing."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene a frase afirmativa:",
+          "palavras": ["forming", "was", "them", "god"],
+          "resposta": "god was forming them",
+          "explicacao": "Sujeito 'God' + 'was' + verbo-ing 'forming' + objeto 'them'."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene a frase negativa:",
+          "palavras": ["ignoring", "them", "was", "not", "god"],
+          "resposta": "god was not ignoring them",
+          "explicacao": "Sujeito 'God' + 'was not' + verbo-ing 'ignoring' + objeto 'them'."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza: <em>God was forming them.</em>",
+          "resposta": "Deus os estava formando.",
+          "palavrasChave": ["deus", "estava", "formando"],
+          "explicacao": "Past Continuous: ação em andamento no passado. 'Them' = 'os' (objeto direto)."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza para o inglês (Past Continuous): <em>Ela estava cantando quando eu cheguei.</em>",
+          "resposta": "she was singing when i arrived",
+          "palavrasChave": ["was", "singing", "when", "arrived"],
+          "explicacao": "Ação longa (was singing) interrompida por ação curta (arrived)."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a palavra:",
+          "palavras": ["ignoring"],
+          "resposta": "ignoring",
+          "explicacao": "'Ignoring' (ignórin) - 'ig' como 'ig', 'no' como 'nó', 'ring' como 'rin' (o 'g' é suave, quase mudo)."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique:",
+          "palavras": ["forming"],
+          "resposta": "forming",
+          "explicacao": "'Forming' (fórmiin) - 'for' como 'fór', 'ming' como 'min' (i curto)."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a contração:",
+          "palavras": ["wasn't"],
+          "resposta": "wasn't",
+          "explicacao": "'Wasn't' (rózânt) - 'was' como 'róz' (z sonoro), 'n't' como 'ânt' (n com schwa + t)."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a frase curta:",
+          "palavras": ["was", "forming", "them"],
+          "resposta": "was forming them",
+          "explicacao": "Encadeie: 'was-forming-them' - o 's' de 'was' se conecta ao 'f', o 'g' de 'forming' se conecta ao 'th' de 'them' (som de 'n' + th)."
+        }
+      ]
+    },
+    {
+      "indice": 6,
+      "referencia": "He was expanding their capacity to carry what was coming.",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "Qual é a função do infinitivo <em>to carry</em> na frase?",
+          "opcoes": ["Complemento do verbo 'expanding'", "Indica propósito ou especificação da capacidade", "Sujeito da oração", "Advérbio de tempo"],
+          "resposta": "Indica propósito ou especificação da capacidade",
+          "explicacao": "Após substantivos abstratos como 'capacity', 'ability', usamos o infinitivo para especificar para que serve aquela capacidade."
+        },
+        {
+          "tipo": "multipla",
+          "pergunta": "O que 'what' substitui em <em>what was coming</em>?",
+          "opcoes": ["Uma pessoa", "Uma coisa indefinida ('aquilo que')", "Um lugar", "Um tempo"],
+          "resposta": "Uma coisa indefinida ('aquilo que')",
+          "explicacao": "'What' funciona como um pronome relativo sem antecedente, significando 'the thing that' (aquilo que)."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com o infinitivo de propósito:",
+          "pergunta": "You have the ability ___ (succeed).",
+          "resposta": "to succeed",
+          "alternativas": ["To succeed"],
+          "explicacao": "Após 'ability', usamos o infinitivo 'to succeed' para expressar o propósito da habilidade."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com 'what' + verbo:",
+          "pergunta": "___ (happen) was a surprise to everyone.",
+          "resposta": "what happened",
+          "alternativas": ["What happened"],
+          "explicacao": "'What happened' = 'o que aconteceu' funciona como sujeito da oração principal."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene a frase:",
+          "palavras": ["expanding", "their", "capacity", "to", "carry", "was", "he"],
+          "resposta": "he was expanding their capacity to carry",
+          "explicacao": "Sujeito 'He' + Past Continuous 'was expanding' + objeto 'their capacity' + infinitivo 'to carry'."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene a oração com 'what':",
+          "palavras": ["what", "coming", "was"],
+          "resposta": "what was coming",
+          "explicacao": "'What' (sujeito) + 'was coming' (Past Continuous)."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza: <em>He was expanding their capacity to carry what was coming.</em>",
+          "resposta": "Ele estava expandindo a capacidade deles de carregar o que estava por vir.",
+          "palavrasChave": ["expandindo", "capacidade", "carregar", "por vir"],
+          "explicacao": "'What was coming' é uma oração substantiva (aquilo que estava vindo/por vir)."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza para o inglês (com 'what'): <em>O que ele disse me deixou feliz.</em>",
+          "resposta": "what he said made me happy",
+          "palavrasChave": ["what", "said", "made", "happy"],
+          "explicacao": "'What he said' (sujeito) + 'made me happy' (verbo + objeto + complemento)."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a palavra:",
+          "palavras": ["expanding"],
+          "resposta": "expanding",
+          "explicacao": "'Expanding' (ikspândin) - 'ex' como 'iks', 'pan' como 'pân', 'ding' como 'din'."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique:",
+          "palavras": ["capacity"],
+          "resposta": "capacity",
+          "explicacao": "'Capacity' (kapásiti) - 4 sílabas: 'ca-pa-ci-ty'. Ênfase na segunda: 'pa'."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a palavra:",
+          "palavras": ["carry"],
+          "resposta": "carry",
+          "explicacao": "'Carry' (kéri) - 'ca' como 'ké', 'rry' como 'ri' (i curto)."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a frase:",
+          "palavras": ["what", "was", "coming"],
+          "resposta": "what was coming",
+          "explicacao": "Encadeie: 'what-was-coming' - o 't' de 'what' se conecta ao 'w' de 'was' (t quase mudo), 's' de 'was' se conecta ao 'c' de 'coming'."
+        }
+      ]
+    },
+    {
+      "indice": 7,
+      "referencia": "Even Jesus carried the cross before wearing the crown.",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "O que a palavra <em>Even</em> indica no início da frase <em>Even Jesus carried the cross</em>?",
+          "opcoes": ["Surpresa", "Inclusão de um caso extremo ('até mesmo')", "Comparação", "Concessão"],
+          "resposta": "Inclusão de um caso extremo ('até mesmo')",
+          "explicacao": "'Even Jesus' significa que se até Jesus, sendo quem era, passou por isso, então ninguém está isento. Reforça a universalidade do padrão."
+        },
+        {
+          "tipo": "multipla",
+          "pergunta": "Qual a diferença de uso entre 'carried' e 'wearing'?",
+          "opcoes": ["São sinônimos", "'Carried' é passado simples; 'wearing' é gerúndio após preposição 'before'", "'Wearing' indica futuro", "'Carried' é mais formal"],
+          "resposta": "'Carried' é passado simples; 'wearing' é gerúndio após preposição 'before'",
+          "explicacao": "'Before' como preposição exige o gerúndio ('wearing'). 'Carried' é o verbo principal da oração no passado simples."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com 'even' + sujeito:",
+          "pergunta": "___ (my grandmother) knows how to use a smartphone.",
+          "resposta": "even my grandmother",
+          "alternativas": ["Even my grandmother"],
+          "explicacao": "'Even' antes do sujeito para dar ênfase: 'Até minha avó'."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com a forma correta do gerúndio após preposição:",
+          "pergunta": "She goes to the gym before ___ (work).",
+          "resposta": "working",
+          "alternativas": ["Working"],
+          "explicacao": "Após a preposição 'before', usamos o gerúndio 'working'."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene a frase:",
+          "palavras": ["cross", "the", "jesus", "carried", "even"],
+          "resposta": "even jesus carried the cross",
+          "explicacao": "'Even Jesus' + verbo 'carried' + objeto 'the cross'."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene a frase com 'before wearing':",
+          "palavras": ["wearing", "crown", "the", "before"],
+          "resposta": "before wearing the crown",
+          "explicacao": "'Before' + gerúndio 'wearing' + objeto 'the crown'."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza: <em>Even Jesus carried the cross before wearing the crown.</em>",
+          "resposta": "Até Jesus carregou a cruz antes de usar a coroa.",
+          "palavrasChave": ["até", "carregou", "cruz", "usar", "coroa"],
+          "explicacao": "'Even Jesus' = até mesmo Jesus. 'Before wearing' = antes de usar (gerúndio após preposição)."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza para o inglês (com 'even'): <em>Até uma criança pode entender isso.</em>",
+          "resposta": "even a child can understand this",
+          "palavrasChave": ["even", "child", "can", "understand"],
+          "explicacao": "'Even a child' = até uma criança. 'Can' (pode) + verbo base 'understand'."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a palavra:",
+          "palavras": ["jesus"],
+          "resposta": "jesus",
+          "explicacao": "'Jesus' (djízous) - 'Je' como 'djí', 'sus' como 'zous' (z + oi + s)."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique:",
+          "palavras": ["cross"],
+          "resposta": "cross",
+          "explicacao": "'Cross' (króss) - 'cr' como 'kr', 'oss' como 'róss' (o aberto + ss)."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a palavra:",
+          "palavras": ["wearing"],
+          "resposta": "wearing",
+          "explicacao": "'Wearing' (uérin) - 'wea' como 'ué', 'ring' como 'rin'."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a palavra final:",
+          "palavras": ["crown"],
+          "resposta": "crown",
+          "explicacao": "'Crown' (kráun) - 'cr' como 'kr', 'own' como 'áun'."
+        }
+      ]
+    },
+    {
+      "indice": 8,
+      "referencia": "So if you're in a breaking season right now...",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "Qual é o tipo de condicional usada em <em>if you're in a breaking season... remember this</em>?",
+          "opcoes": ["First Conditional (futuro)", "Zero Conditional (fato geral)", "Estrutura de conselho/instrução com 'if' + presente + imperativo", "Second Conditional (hipótese irreal)"],
+          "resposta": "Estrutura de conselho/instrução com 'if' + presente + imperativo",
+          "explicacao": "É comum em inglês dar conselhos ou instruções com 'if + presente' seguido de um imperativo. Não é uma condicional pura."
+        },
+        {
+          "tipo": "multipla",
+          "pergunta": "O que significa a expressão <em>the bedrock of your soul</em>?",
+          "opcoes": ["A cama da sua alma", "A rocha-mãe, a base mais sólida e profunda da sua alma", "Uma pedra comum", "Um lugar escuro"],
+          "resposta": "A rocha-mãe, a base mais sólida e profunda da sua alma",
+          "explicacao": "'Bedrock' é a camada de rocha sólida abaixo do solo. Metáfora para a parte mais fundamental e inabalável do ser."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com 'if' + imperativo (conselho):",
+          "pergunta": "___ (feel) tired, take a rest.",
+          "resposta": "if you feel",
+          "alternativas": ["If you feel"],
+          "explicacao": "Estrutura de conselho: 'If you feel tired' (presente) + 'take a rest' (imperativo)."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com a conjunção de propósito:",
+          "pergunta": "I left early ___ I wouldn't be late.",
+          "resposta": "so that",
+          "alternativas": ["So that"],
+          "explicacao": "'So that' introduz uma oração de propósito (finalidade). Geralmente seguida de 'can/could/will/would'."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene a frase condicional:",
+          "palavras": ["in", "you're", "season", "breaking", "a", "if"],
+          "resposta": "if you're in a breaking season",
+          "explicacao": "'If' + sujeito 'you're' + complemento 'in a breaking season'."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene a oração de propósito:",
+          "palavras": ["you", "that", "can", "so", "sustain", "the", "height"],
+          "resposta": "so that you can sustain the height",
+          "explicacao": "'So that' + sujeito 'you' + 'can' + verbo 'sustain' + objeto 'the height'."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza: <em>God may be digging deep into the bedrock of your soul.</em>",
+          "resposta": "Deus pode estar cavando fundo na rocha-mãe da sua alma.",
+          "palavrasChave": ["cavando", "fundo", "rocha-mãe", "alma"],
+          "explicacao": "'May be digging' (pode estar cavando) expressa possibilidade. 'Bedrock' = base sólida."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza para o inglês (com 'so that'): <em>Estude para que você passe no teste.</em>",
+          "resposta": "study so that you can pass the test",
+          "palavrasChave": ["study", "so that", "can", "pass", "test"],
+          "explicacao": "Imperativo 'study' + 'so that' + 'you can pass the test' (propósito)."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a palavra:",
+          "palavras": ["crushing"],
+          "resposta": "crushing",
+          "explicacao": "'Crushing' (cráchin) - 'cru' como 'crâ', 'shing' como 'chin' (ch + i + n)."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique:",
+          "palavras": ["bedrock"],
+          "resposta": "bedrock",
+          "explicacao": "'Bedrock' (bédrrak) - 'be' como 'bé', 'drock' como 'drrak' (a vogal é um 'a' aberto)."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a palavra:",
+          "palavras": ["sustain"],
+          "resposta": "sustain",
+          "explicacao": "'Sustain' (sastêin) - 'sus' como 'sas', 'tain' como 'têin' (t + êi + n)."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a palavra final:",
+          "palavras": ["height"],
+          "resposta": "height",
+          "explicacao": "'Height' (ráit) - O 'eigh' tem som de 'ai' (como em 'day'). O 'h' é aspirado, o 't' é pronunciado. Cuidado para não confundir com 'high' (rai)."
+        }
+      ]
+    },
+    {
+      "indice": 9,
+      "referencia": "Amen. Don't rush it. Don't waste it. Trust him in it. Thank you, Jesus. Let's go. Shine your light.",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "Como se forma o imperativo negativo em inglês?",
+          "opcoes": ["Not + verbo", "Don't + verbo base", "No + verbo-ing", "Verbo + not"],
+          "resposta": "Don't + verbo base",
+          "explicacao": "Para dar ordens ou conselhos negativos, usamos 'Do not' (Don't) + o verbo na forma base."
+        },
+        {
+          "tipo": "multipla",
+          "pergunta": "O que significa a expressão <em>Shine your light</em>?",
+          "opcoes": ["Acenda sua lanterna", "Seja um exemplo positivo, mostre seu melhor", "Brilhe literalmente", "Apague a luz"],
+          "resposta": "Seja um exemplo positivo, mostre seu melhor",
+          "explicacao": "'Shine your light' é uma metáfora de origem bíblica (Mateus 5:16) que significa ser uma influência positiva, mostrar suas qualidades e valores."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com o imperativo negativo:",
+          "pergunta": "___ (give up)! Keep trying.",
+          "resposta": "don't give up",
+          "alternativas": ["Don't give up"],
+          "explicacao": "Imperativo negativo: 'Don't give up' = Não desista."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com 'Let's' + verbo:",
+          "pergunta": "___ (go) to the beach tomorrow!",
+          "resposta": "let's go",
+          "alternativas": ["Let's go"],
+          "explicacao": "'Let's' é a contração de 'Let us' e é usado para fazer sugestões que incluem o falante e o ouvinte."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene o imperativo negativo:",
+          "palavras": ["it", "rush", "don't"],
+          "resposta": "don't rush it",
+          "explicacao": "Imperativo negativo: 'Don't' + verbo 'rush' + objeto 'it'."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene a sugestão:",
+          "palavras": ["go", "let's"],
+          "resposta": "let's go",
+          "explicacao": "Contração de 'Let us go'. Usado para iniciar ação em grupo."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza: <em>Don't waste it. Trust him in it.</em>",
+          "resposta": "Não desperdice isso. Confie nele nisso.",
+          "palavrasChave": ["desperdice", "confie", "nele"],
+          "explicacao": "Imperativos negativos e positivos. 'In it' = nessa situação/processo."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza para o inglês (imperativo): <em>Não tenha medo. Seja corajoso.</em>",
+          "resposta": "don't be afraid. be courageous.",
+          "palavrasChave": ["don't", "afraid", "courageous"],
+          "explicacao": "Imperativo negativo: 'Don't be afraid'. Imperativo positivo: 'Be courageous'."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a palavra:",
+          "palavras": ["rush"],
+          "resposta": "rush",
+          "explicacao": "'Rush' (rach) - 'ru' como 'ra', 'sh' como 'ch' (como em 'chá' mas mais curto)."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique:",
+          "palavras": ["waste"],
+          "resposta": "waste",
+          "explicacao": "'Waste' (uêist) - 'wa' como 'ué', 'ste' como 'ist' (s + t)."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a expressão:",
+          "palavras": ["let's", "go"],
+          "resposta": "let's go",
+          "explicacao": "'Let's' (lets) - 'le' fraco, 't's' como 'ts'. 'Go' (gôu). Encadeie: 'lets-go'."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a frase final:",
+          "palavras": ["shine", "your", "light"],
+          "resposta": "shine your light",
+          "explicacao": "'Shine' (cháin) - 'sh' como 'ch', 'i' como 'ai'. 'Light' (láit) - 'gh' mudo."
+        }
+      ]
+    }
+  ]
+}
