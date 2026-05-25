@@ -44,6 +44,21 @@
       "thumbnail": "🕯️",
       "color": "#6A5ACD",
       "featured": true
+    },
+    {
+      "id": 4,
+      "title": "O Padrão dos Milagres: A Fundação Antes do Topo",
+      "subtitle": "Aprenda o padrão bíblico de preparação e estruturas comparativas em inglês",
+      "description": "Nesta aula inspiradora, você vai aprender o Present Perfect com 'ever' ('Have you ever noticed?'), a estrutura comparativa 'the higher... the deeper...', o uso de gerúndios como substantivos ('the waiting', 'the breaking'), voz passiva no passado, expressões idiomáticas como 'on the run' e 'bedrock of your soul', e a diferença entre 'even if' e 'even though'. Uma aula para quem quer compreender que as maiores vitórias exigem as mais profundas fundações!",
+      "level": "Intermediate",
+      "duration": "~16 min",
+      "words": 18,
+      "modules": 10,
+      "videoUrl": "https://jonathanbitt.github.io/Tutu/4.mp4",
+      "quizletId": 4,
+      "thumbnail": "⛰️",
+      "color": "#2E7D32",
+      "featured": false
     }
   ]
 }
