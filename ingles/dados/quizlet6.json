@@ -1,0 +1,28 @@
+{
+  "titulo": "Quizlet — Clarity Through Obedience",
+  "palavras": 18,
+  "licoes": 8,
+  "descricao": "Revisão inteligente de erros · Flashcards + Múltipla Escolha",
+  "conteudo": {
+    "cards": [
+      { "termo": "clarity", "definicao": "clareza, entendimento completo", "frase": "Clarity comes first, then obedience follows.", "dificuldade": 2 },
+      { "termo": "obedience", "definicao": "obediência", "frase": "Clarity tends to grow through obedience.", "dificuldade": 2 },
+      { "termo": "once", "definicao": "uma vez que, assim que (conjunção)", "frase": "Once I'm completely sure, I'll move.", "dificuldade": 2 },
+      { "termo": "scripture", "definicao": "escritura (sagrada)", "frase": "Scripture shows the opposite.", "dificuldade": 1 },
+      { "termo": "to tend to", "definicao": "tender a, ter a tendência de", "frase": "Clarity tends to grow through obedience.", "dificuldade": 2 },
+      { "termo": "to overlook", "definicao": "ignorar, deixar passar", "frase": "We are overlooking the quiet invitations.", "dificuldade": 2 },
+      { "termo": "nudge", "definicao": "empurrãozinho (impulso sutil)", "frase": "The nudge to start something new.", "dificuldade": 3 },
+      { "termo": "conviction", "definicao": "convicção (forte certeza moral)", "frase": "The conviction to apologize.", "dificuldade": 2 },
+      { "termo": "to apologize", "definicao": "pedir desculpas", "frase": "The feeling to pause before reacting.", "dificuldade": 1 },
+      { "termo": "to pause", "definicao": "pausar, parar momentaneamente", "frase": "Pause before reacting.", "dificuldade": 1 },
+      { "termo": "discernment", "definicao": "discernimento, capacidade de julgar", "frase": "Discernment is less about perfect certainty.", "dificuldade": 3 },
+      { "termo": "certainty", "definicao": "certeza", "frase": "Less about perfect certainty.", "dificuldade": 2 },
+      { "termo": "familiar", "definicao": "familiar, íntimo", "frase": "Becoming deeply familiar with God's character.", "dificuldade": 2 },
+      { "termo": "ahead", "definicao": "à frente, adiante", "frase": "10 steps ahead.", "dificuldade": 1 },
+      { "termo": "lamp", "definicao": "lâmpada", "frase": "Your word is a lamp for my feet.", "dificuldade": 1 },
+      { "termo": "breakthrough", "definicao": "avanço significativo, vitória", "frase": "The breakthrough that you're praying for.", "dificuldade": 2 },
+      { "termo": "faithful", "definicao": "fiel", "frase": "One faithful step forward.", "dificuldade": 2 },
+      { "termo": "to shine your light", "definicao": "brilhar a sua luz (ser exemplo)", "frase": "Shine your light.", "dificuldade": 2 }
+    ]
+  }
+}

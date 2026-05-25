@@ -1,0 +1,728 @@
+{
+  "aula": 6,
+  "titulo": "INGLÊS — Clarity Through Obedience: A Lâmpada para os Pés",
+  "paragrafos": [
+    {
+      "indice": 0,
+      "referencia": "There's this idea that many of us have that clarity comes first...",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "O que significa <em>clarity</em> no contexto da frase?",
+          "opcoes": ["Clareza, entendimento completo", "Limpeza", "Clarão", "Clarificação"],
+          "resposta": "Clareza, entendimento completo",
+          "explicacao": "'Clarity' significa clareza mental, entendimento completo de uma situação antes de agir."
+        },
+        {
+          "tipo": "multipla",
+          "pergunta": "Qual é a função da estrutura <em>There's this idea that</em>?",
+          "opcoes": ["Introduzir um fato científico", "Introduzir uma crença comum que será discutida", "Fazer uma pergunta", "Dar uma ordem"],
+          "resposta": "Introduzir uma crença comum que será discutida",
+          "explicacao": "Esta estrutura é usada para apresentar uma ideia ou crença popular que o autor vai comentar, desafiar ou desenvolver."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete a estrutura:",
+          "pergunta": "There's this ___ that money brings happiness.",
+          "resposta": "idea",
+          "alternativas": ["Idea"],
+          "explicacao": "'There's this idea that' é a estrutura fixa para introduzir um conceito."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com o verbo correto:",
+          "pergunta": "In this process, understanding comes first and action ___ (follow).",
+          "resposta": "follows",
+          "alternativas": ["Follows"],
+          "explicacao": "Presente simples para fatos gerais. 'Follows' (segue) concorda com 'action' (terceira pessoa)."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene a frase:",
+          "palavras": ["idea", "that", "this", "many", "have", "there's", "of", "us"],
+          "resposta": "there's this idea that many of us have",
+          "explicacao": "'There's this idea that' + sujeito 'many of us' + verbo 'have'."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene:",
+          "palavras": ["first", "clarity", "obedience", "then", "comes", "follows"],
+          "resposta": "clarity comes first and then obedience follows",
+          "explicacao": "Paralelismo: 'clarity comes first' + 'and then' + 'obedience follows'."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza: <em>There's this idea that clarity comes first.</em>",
+          "resposta": "Existe esta ideia de que a clareza vem primeiro.",
+          "palavrasChave": ["existe", "ideia", "clareza", "primeiro"],
+          "explicacao": "Estrutura 'There is' + 'this idea that'."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza para o inglês (com 'There's this idea that'): <em>Existe esta ideia de que dinheiro é tudo.</em>",
+          "resposta": "there's this idea that money is everything",
+          "palavrasChave": ["there's", "idea", "money", "everything"],
+          "explicacao": "Use 'There's this idea that' para introduzir a crença popular."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a palavra:",
+          "palavras": ["clarity"],
+          "resposta": "clarity",
+          "explicacao": "'Clarity' (klériti) - 'cla' como 'klé', 'rity' como 'riti' (r + i + ti)."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique:",
+          "palavras": ["obedience"],
+          "resposta": "obedience",
+          "explicacao": "'Obedience' (obídiens) - 'o' como 'o' breve, 'be' como 'bí', 'dience' como 'diens'."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a contração:",
+          "palavras": ["there's"],
+          "resposta": "there's",
+          "explicacao": "'There's' (dérs) - 'the' como 'dér', 're's' como 'rs' (r + s)."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a frase curta:",
+          "palavras": ["comes", "first"],
+          "resposta": "comes first",
+          "explicacao": "Encadeie: 'comes-first' - o 's' de 'comes' se conecta ao 'f' de 'first'."
+        }
+      ]
+    },
+    {
+      "indice": 1,
+      "referencia": "We think, once I'm completely sure that that's God speaking...",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "Qual é o significado da conjunção <em>once</em> nesta frase?",
+          "opcoes": ["Uma vez", "Embora", "Assim que / uma vez que", "Porque"],
+          "resposta": "Assim que / uma vez que",
+          "explicacao": "'Once' como conjunção significa 'assim que', 'no momento em que', 'uma vez que (condição temporal)'."
+        },
+        {
+          "tipo": "multipla",
+          "pergunta": "Por que há dois 'that' em <em>that that's God speaking</em>?",
+          "opcoes": ["É um erro gramatical", "Primeiro 'that' é conjunção, segundo 'that' é pronome demonstrativo ('aquilo')", "Repetição enfática", "Ambos são conjunções"],
+          "resposta": "Primeiro 'that' é conjunção, segundo 'that' é pronome demonstrativo ('aquilo')",
+          "explicacao": "O primeiro 'that' introduz a oração substantiva. O segundo 'that' é o sujeito da oração, significando 'aquilo'."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com a conjunção correta:",
+          "pergunta": "___ you finish your homework, you can watch TV.",
+          "resposta": "once",
+          "alternativas": ["Once"],
+          "explicacao": "'Once' = assim que / uma vez que. Indica que uma ação depende da conclusão de outra."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com a palavra correta:",
+          "pergunta": "I know ___ that's the right answer.",
+          "resposta": "that",
+          "alternativas": ["That"],
+          "explicacao": "Primeiro 'that' é a conjunção. 'That that's' = 'que aquilo é'."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene a frase:",
+          "palavras": ["once", "sure", "completely", "i'm", "speaking", "that's", "god", "that"],
+          "resposta": "once i'm completely sure that that's god speaking",
+          "explicacao": "'Once' + sujeito 'I'm completely sure' + 'that that's God speaking'."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene:",
+          "palavras": ["i'll", "then", "move"],
+          "resposta": "then i'll move",
+          "explicacao": "'Then' + sujeito 'I'll' + verbo 'move'."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza: <em>Once I'm completely sure, I'll move.</em>",
+          "resposta": "Uma vez que eu esteja completamente certo, eu me movo.",
+          "palavrasChave": ["uma vez", "certo", "movo"],
+          "explicacao": "'Once' indica condição temporal. 'I'll move' = eu me movo / agirei."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza para o inglês (com 'once'): <em>Assim que você chegar, me ligue.</em>",
+          "resposta": "once you arrive, call me",
+          "palavrasChave": ["once", "arrive", "call"],
+          "explicacao": "'Once' + presente simples ('you arrive') + imperativo ('call me')."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a palavra:",
+          "palavras": ["once"],
+          "resposta": "once",
+          "explicacao": "'Once' (uáns) - 'on' como 'uán', 'ce' como 's' (s surdo)."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique:",
+          "palavras": ["completely"],
+          "resposta": "completely",
+          "explicacao": "'Completely' (kamplítli) - 'com' como 'kam', 'plete' como 'plít', 'ly' como 'li'."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a sequência:",
+          "palavras": ["that", "that's"],
+          "resposta": "that that's",
+          "explicacao": "'That that's' (dhát dháts) - o primeiro 'that' com 'a' aberto, o segundo 'that's' com 'a' também aberto, conectados."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a frase:",
+          "palavras": ["scripture", "shows", "the", "opposite"],
+          "resposta": "scripture shows the opposite",
+          "explicacao": "'Scripture' (skríptchêr) - 'scri' como 'skrí', 'pture' como 'ptchêr'."
+        }
+      ]
+    },
+    {
+      "indice": 2,
+      "referencia": "Clarity tends to grow through obedience...",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "O que significa a expressão <em>tends to</em>?",
+          "opcoes": ["Tende a, tem a tendência de", "Termina de", "Tenta", "Cuidadosamente"],
+          "resposta": "Tende a, tem a tendência de",
+          "explicacao": "'Tend to' expressa uma tendência geral, algo que acontece na maioria das vezes, mas não é absoluto."
+        },
+        {
+          "tipo": "multipla",
+          "pergunta": "Qual o significado de <em>overlooking</em>?",
+          "opcoes": ["Olhando por cima", "Ignorando, deixando passar", "Supervisionando", "Observando"],
+          "resposta": "Ignorando, deixando passar",
+          "explicacao": "'Overlook' significa não dar atenção a algo, ignorar, deixar passar despercebido."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com 'tend to' + verbo:",
+          "pergunta": "People ___ (gain) weight during the holidays.",
+          "resposta": "tend to gain",
+          "alternativas": ["Tend to gain"],
+          "explicacao": "'Tend to' + verbo base indica tendência. 'Tend to gain' = tendem a ganhar."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com 'every single' para ênfase:",
+          "pergunta": "I drink water ___ day.",
+          "resposta": "every single",
+          "alternativas": ["Every single"],
+          "explicacao": "'Every single day' = todos os dias (sem exceção) - ênfase na totalidade."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene:",
+          "palavras": ["to", "clarity", "obedience", "grow", "tends", "through"],
+          "resposta": "clarity tends to grow through obedience",
+          "explicacao": "Sujeito 'Clarity' + 'tends to grow' + 'through obedience'."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene:",
+          "palavras": ["dramatic", "waiting", "this", "calling", "for", "are", "most", "of", "us"],
+          "resposta": "most of us are waiting for this dramatic calling",
+          "explicacao": "Sujeito 'Most of us' + 'are waiting for' + objeto 'this dramatic calling'."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza: <em>Clarity tends to grow through obedience.</em>",
+          "resposta": "A clareza tende a crescer através da obediência.",
+          "palavrasChave": ["clareza", "tende", "crescer", "obediência"],
+          "explicacao": "'Tends to grow' = tem a tendência de crescer."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza para o inglês (com 'tend to'): <em>Eles tendem a chegar tarde.</em>",
+          "resposta": "they tend to arrive late",
+          "palavrasChave": ["tend", "arrive", "late"],
+          "explicacao": "'Tend to + verbo base' expressa tendência habitual."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a palavra:",
+          "palavras": ["tends"],
+          "resposta": "tends",
+          "explicacao": "'Tends' (tends) - 'ten' como 'ten', 'ds' como 'dz' (d + z)."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique:",
+          "palavras": ["obedience"],
+          "resposta": "obedience",
+          "explicacao": "'Obedience' (obídiens) - 4 sílabas: 'o-be-di-ence'."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a palavra:",
+          "palavras": ["overlooking"],
+          "resposta": "overlooking",
+          "explicacao": "'Overlooking' (ouverlúkin) - 'over' como 'ouver', 'looking' como 'lúkin'."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a expressão:",
+          "palavras": ["every", "single", "day"],
+          "resposta": "every single day",
+          "explicacao": "Encadeie: 'every-single-day' - conexão natural entre as palavras."
+        }
+      ]
+    },
+    {
+      "indice": 3,
+      "referencia": "The nudge to start something new, the conviction to apologize...",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "O que significa <em>nudge</em> no contexto figurado?",
+          "opcoes": ["Empurrão forte", "Empurrãozinho sutil, impulso interior", "Choque", "Golpe"],
+          "resposta": "Empurrãozinho sutil, impulso interior",
+          "explicacao": "'Nudge' é um leve empurrão. Figurativamente, é um impulso sutil, uma pequena inspiração interior."
+        },
+        {
+          "tipo": "multipla",
+          "pergunta": "Por que usamos <em>to apologize</em> (infinitivo) após <em>conviction</em>?",
+          "opcoes": ["Porque 'conviction' exige gerúndio", "Porque substantivos abstratos são frequentemente seguidos de infinitivo para especificar propósito", "Porque é um phrasal verb", "Porque é uma exceção gramatical"],
+          "resposta": "Porque substantivos abstratos são frequentemente seguidos de infinitivo para especificar propósito",
+          "explicacao": "Substantivos como 'nudge', 'conviction', 'feeling' são seguidos de infinitivo ('to + verbo') para explicar qual é a natureza daquele impulso ou sentimento."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com a forma correta:",
+          "pergunta": "I felt a strong desire ___ (travel) the world.",
+          "resposta": "to travel",
+          "alternativas": ["To travel"],
+          "explicacao": "Substantivo 'desire' + infinitivo 'to travel' para especificar o desejo."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com gerúndio após preposição:",
+          "pergunta": "Think before ___ (speak).",
+          "resposta": "speaking",
+          "alternativas": ["Speaking"],
+          "explicacao": "Após a preposição 'before', usamos o gerúndio 'speaking'."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene:",
+          "palavras": ["new", "to", "nudge", "something", "the", "start"],
+          "resposta": "the nudge to start something new",
+          "explicacao": "'The nudge' + infinitivo 'to start' + objeto 'something new'."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene:",
+          "palavras": ["before", "feeling", "pause", "reacting", "the", "to"],
+          "resposta": "the feeling to pause before reacting",
+          "explicacao": "'The feeling' + infinitivo 'to pause' + 'before reacting'."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza: <em>The conviction to apologize.</em>",
+          "resposta": "A convicção para pedir desculpas.",
+          "palavrasChave": ["convicção", "pedir", "desculpas"],
+          "explicacao": "'Conviction to apologize' = forte certeza moral de que se deve pedir desculpas."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza para o inglês (com infinitivo): <em>O desejo de aprender é poderoso.</em>",
+          "resposta": "the desire to learn is powerful",
+          "palavrasChave": ["desire", "learn", "powerful"],
+          "explicacao": "Substantivo 'desire' + infinitivo 'to learn'."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a palavra:",
+          "palavras": ["nudge"],
+          "resposta": "nudge",
+          "explicacao": "'Nudge' (nadj) - 'nu' como 'na', 'dge' como 'dj'."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique:",
+          "palavras": ["conviction"],
+          "resposta": "conviction",
+          "explicacao": "'Conviction' (convíkchen) - 'con' como 'con', 'vic' como 'vík', 'tion' como 'chen'."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a palavra:",
+          "palavras": ["apologize"],
+          "resposta": "apologize",
+          "explicacao": "'Apologize' (apálodjáis) - 'a' como 'â', 'polo' como 'pálo', 'gize' como 'djáis'."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique:",
+          "palavras": ["pause", "before", "reacting"],
+          "resposta": "pause before reacting",
+          "explicacao": "'Pause' (pós) - 'au' como 'ó'. 'Reacting' (riáktin) - 're' como 'ri', 'acting' como 'áktin'."
+        }
+      ]
+    },
+    {
+      "indice": 4,
+      "referencia": "Discernment is less about perfect certainty...",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "O que significa <em>discernment</em>?",
+          "opcoes": ["Discernimento, capacidade de distinguir/julgar bem", "Discernimento, ato de descartar", "Discurso", "Disciplina"],
+          "resposta": "Discernimento, capacidade de distinguir/julgar bem",
+          "explicacao": "'Discernment' é a habilidade de perceber diferenças sutis, julgar bem, ter bom senso espiritual."
+        },
+        {
+          "tipo": "multipla",
+          "pergunta": "Qual estrutura é usada em <em>less about... and more about</em>?",
+          "opcoes": ["Comparativo de igualdade", "Estrutura de contraste para corrigir equívoco", "Superlativo", "Condicional"],
+          "resposta": "Estrutura de contraste para corrigir equívoco",
+          "explicacao": "'Less about X and more about Y' é usado para dizer que algo não é tanto uma coisa, mas sim outra, corrigindo um entendimento comum."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete a estrutura de contraste:",
+          "pergunta": "Success is less ___ talent and more ___ persistence.",
+          "resposta": "about about",
+          "alternativas": ["About about"],
+          "explicacao": "A estrutura fixa é 'less about X and more about Y'."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com a preposição correta:",
+          "pergunta": "I am familiar ___ this topic.",
+          "resposta": "with",
+          "alternativas": ["With"],
+          "explicacao": "A preposição correta após 'familiar' é 'with': 'familiar with'."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene:",
+          "palavras": ["certainty", "less", "about", "perfect", "is", "discernment"],
+          "resposta": "discernment is less about perfect certainty",
+          "explicacao": "Sujeito 'Discernment' + 'is less about' + objeto 'perfect certainty'."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene:",
+          "palavras": ["deeply", "and", "with", "familiar", "about", "more", "god's", "becoming", "character"],
+          "resposta": "and more about becoming deeply familiar with god's character",
+          "explicacao": "'And more about' + 'becoming deeply familiar with' + 'God's character'."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza: <em>Discernment is less about perfect certainty.</em>",
+          "resposta": "Discernimento é menos sobre certeza perfeita.",
+          "palavrasChave": ["discernimento", "menos", "certeza"],
+          "explicacao": "'Less about' = menos sobre / não é tanto sobre."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza para o inglês (com 'less about... more about'): <em>Aprender é menos sobre memorizar e mais sobre entender.</em>",
+          "resposta": "learning is less about memorizing and more about understanding",
+          "palavrasChave": ["learning", "less", "memorizing", "more", "understanding"],
+          "explicacao": "Estrutura de contraste para corrigir um equívoco comum sobre aprendizado."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a palavra:",
+          "palavras": ["discernment"],
+          "resposta": "discernment",
+          "explicacao": "'Discernment' (discêrment) - 'dis' como 'dis', 'cern' como 'sêr', 'ment' como 'ment'."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique:",
+          "palavras": ["certainty"],
+          "resposta": "certainty",
+          "explicacao": "'Certainty' (sêrtânti) - 'cer' como 'sêr', 'tain' como 'tân', 'ty' como 'ti'."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a palavra:",
+          "palavras": ["familiar"],
+          "resposta": "familiar",
+          "explicacao": "'Familiar' (famíliar) - 'fa' como 'fa', 'mi' como 'mí', 'liar' como 'liar'."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a frase:",
+          "palavras": ["becoming", "deeply", "familiar"],
+          "resposta": "becoming deeply familiar",
+          "explicacao": "Encadeie: 'becoming-deeply-familiar' - o 'g' de 'becoming' se conecta ao 'd' de 'deeply'."
+        }
+      ]
+    },
+    {
+      "indice": 5,
+      "referencia": "God rarely gives us 10 steps ahead...",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "Qual a diferença entre <em>lamp</em> e <em>stadium light</em> na metáfora?",
+          "opcoes": ["Uma lâmpada é mais cara", "A lâmpada ilumina apenas o próximo passo; o holofote ilumina todo o futuro", "Ambos iluminam igual", "A lâmpada é para pés, o holofote para mãos"],
+          "resposta": "A lâmpada ilumina apenas o próximo passo; o holofote ilumina todo o futuro",
+          "explicacao": "A metáfora contrasta a orientação passo a passo (lâmpada para os pés) com a visão completa do futuro (holofote de estádio)."
+        },
+        {
+          "tipo": "multipla",
+          "pergunta": "O que significa <em>ahead</em> em <em>10 steps ahead</em>?",
+          "opcoes": ["Atrás", "À frente, adiante", "Acima", "Ao redor"],
+          "resposta": "À frente, adiante",
+          "explicacao": "'Ahead' significa na frente, adiante no espaço ou no tempo."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com a palavra correta:",
+          "pergunta": "Look ___! There's a car coming.",
+          "resposta": "ahead",
+          "alternativas": ["Ahead"],
+          "explicacao": "'Look ahead' = olhe para frente."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete a estrutura 'not X, but Y':",
+          "pergunta": "This is not a problem, ___ an opportunity.",
+          "resposta": "but",
+          "alternativas": ["But"],
+          "explicacao": "Estrutura 'not X, but Y' = não X, mas sim Y."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene:",
+          "palavras": ["us", "ahead", "gives", "10", "steps", "rarely", "god"],
+          "resposta": "god rarely gives us 10 steps ahead",
+          "explicacao": "Sujeito 'God' + advérbio 'rarely' + verbo 'gives' + objeto indireto 'us' + objeto direto '10 steps ahead'."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene a citação:",
+          "palavras": ["my", "feet", "word", "is", "lamp", "a", "for", "your"],
+          "resposta": "your word is a lamp for my feet",
+          "explicacao": "Citação do Salmo 119:105: 'Your word is a lamp for my feet'."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza: <em>Your word is a lamp for my feet.</em>",
+          "resposta": "Tua palavra é lâmpada para os meus pés.",
+          "palavrasChave": ["tua", "palavra", "lâmpada", "pés"],
+          "explicacao": "Versículo bíblico clássico sobre orientação divina."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza para o inglês (com 'ahead'): <em>Ele está sempre um passo à frente.</em>",
+          "resposta": "he is always one step ahead",
+          "palavrasChave": ["step", "ahead"],
+          "explicacao": "'One step ahead' = um passo à frente."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a palavra:",
+          "palavras": ["rarely"],
+          "resposta": "rarely",
+          "explicacao": "'Rarely' (rérli) - 'rare' como 'rér', 'ly' como 'li'."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique:",
+          "palavras": ["ahead"],
+          "resposta": "ahead",
+          "explicacao": "'Ahead' (aréd) - 'a' como 'â', 'head' como 'réd'."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a palavra:",
+          "palavras": ["lamp"],
+          "resposta": "lamp",
+          "explicacao": "'Lamp' (lâmp) - 'la' como 'lâ', 'mp' como 'mp'."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique:",
+          "palavras": ["stadium"],
+          "resposta": "stadium",
+          "explicacao": "'Stadium' (stêidiâm) - 'sta' como 'stê', 'dium' como 'diâm'."
+        }
+      ]
+    },
+    {
+      "indice": 6,
+      "referencia": "Sometimes the breakthrough that you're praying for...",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "O que significa <em>breakthrough</em>?",
+          "opcoes": ["Quebra", "Avanço significativo, descoberta, vitória", "Caminho", "Barreira"],
+          "resposta": "Avanço significativo, descoberta, vitória",
+          "explicacao": "'Breakthrough' é um avanço importante, uma descoberta que quebra uma barreira, uma vitória tão esperada."
+        },
+        {
+          "tipo": "multipla",
+          "pergunta": "Qual a função de <em>that</em> em <em>the breakthrough that you're praying for</em>?",
+          "opcoes": ["Sujeito", "Pronome relativo (objeto da preposição 'for')", "Conjunção", "Advérbio"],
+          "resposta": "Pronome relativo (objeto da preposição 'for')",
+          "explicacao": "'That' se refere a 'breakthrough' e é o objeto da preposição 'for'. Na fala informal, a preposição fica no final."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com a palavra correta:",
+          "pergunta": "Scientists made a major ___ in cancer research.",
+          "resposta": "breakthrough",
+          "alternativas": ["Breakthrough"],
+          "explicacao": "'Breakthrough' = avanço significativo, descoberta importante."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete a expressão:",
+          "pergunta": "Happiness is ___ the other side of fear.",
+          "resposta": "on",
+          "alternativas": ["On"],
+          "explicacao": "Expressão 'on the other side of' = do outro lado de."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene:",
+          "palavras": ["the", "for", "breakthrough", "praying", "you're", "that"],
+          "resposta": "the breakthrough that you're praying for",
+          "explicacao": "Substantivo 'breakthrough' + pronome relativo 'that' + sujeito 'you're' + verbo 'praying for'."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene:",
+          "palavras": ["of", "one", "side", "yes", "on", "simple", "the", "other"],
+          "resposta": "on the other side of one simple yes",
+          "explicacao": "'On the other side of' + 'one simple yes'."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza: <em>The breakthrough is waiting for you.</em>",
+          "resposta": "O breakthrough está esperando por você.",
+          "palavrasChave": ["breakthrough", "esperando"],
+          "explicacao": "'Breakthrough' muitas vezes é mantido em inglês ou traduzido como 'avanço', 'vitória'."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza para o inglês (com 'on the other side of'): <em>A paz está do outro lado do perdão.</em>",
+          "resposta": "peace is on the other side of forgiveness",
+          "palavrasChave": ["peace", "other", "side", "forgiveness"],
+          "explicacao": "Expressão idiomática para indicar que algo é alcançado após passar por algo."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a palavra:",
+          "palavras": ["breakthrough"],
+          "resposta": "breakthrough",
+          "explicacao": "'Breakthrough' (brêikthrôu) - 'break' como 'brêik', 'through' como 'thrôu'."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique:",
+          "palavras": ["waiting"],
+          "resposta": "waiting",
+          "explicacao": "'Waiting' (uêitin) - 'wai' como 'uêi', 'ting' como 'tin'."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a palavra:",
+          "palavras": ["faithful"],
+          "resposta": "faithful",
+          "explicacao": "'Faithful' (fêitful) - 'faith' como 'fêit', 'ful' como 'ful'."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a expressão:",
+          "palavras": ["one", "simple", "yes"],
+          "resposta": "one simple yes",
+          "explicacao": "Encadeie: 'one-simple-yes' - o 'e' de 'one' se conecta ao 's' de 'simple'."
+        }
+      ]
+    },
+    {
+      "indice": 7,
+      "referencia": "Shine your light.",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "Qual é a função de <em>Shine your light</em> no final da aula?",
+          "opcoes": ["Declaração", "Imperativo de encorajamento", "Pergunta", "Exclamação"],
+          "resposta": "Imperativo de encorajamento",
+          "explicacao": "É um imperativo motivacional, uma frase de efeito que se tornou marca registrada das aulas."
+        },
+        {
+          "tipo": "multipla",
+          "pergunta": "Qual a origem da expressão <em>Shine your light</em>?",
+          "opcoes": ["Um filme", "A Bíblia (Mateus 5:16)", "Um livro de autoajuda", "Uma música pop"],
+          "resposta": "A Bíblia (Mateus 5:16)",
+          "explicacao": "A expressão tem origem bíblica: 'Let your light shine before others' (Mateus 5:16)."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete o imperativo:",
+          "pergunta": "Don't hide your talents. ___ your light.",
+          "resposta": "shine",
+          "alternativas": ["Shine"],
+          "explicacao": "'Shine your light' = brilhe sua luz (imperativo)."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com o pronome possessivo:",
+          "pergunta": "Shine ___ light.",
+          "resposta": "your",
+          "alternativas": ["Your"],
+          "explicacao": "'Your light' = sua luz."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene:",
+          "palavras": ["light", "shine", "your"],
+          "resposta": "shine your light",
+          "explicacao": "Imperativo: verbo 'shine' + objeto 'your light'."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza: <em>Shine your light.</em>",
+          "resposta": "Brilhe a sua luz.",
+          "palavrasChave": ["brilhe", "luz"],
+          "explicacao": "Imperativo motivacional, marca registrada das aulas."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza para o inglês: <em>Não tenha medo de brilhar sua luz.</em>",
+          "resposta": "don't be afraid to shine your light",
+          "palavrasChave": ["afraid", "shine", "light"],
+          "explicacao": "'Don't be afraid to' + verbo = não tenha medo de."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a palavra:",
+          "palavras": ["shine"],
+          "resposta": "shine",
+          "explicacao": "'Shine' (cháin) - 'sh' como 'ch', 'i' como 'ai', 'ne' como 'n'."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique:",
+          "palavras": ["light"],
+          "resposta": "light",
+          "explicacao": "'Light' (láit) - 'l' + 'ai' + 't'. O 'gh' é mudo."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a frase final:",
+          "palavras": ["shine", "your", "light"],
+          "resposta": "shine your light",
+          "explicacao": "Encadeie: 'shine-your-light' - o 'n' de 'shine' se conecta ao 'y' de 'your', o 'r' de 'your' se conecta ao 'l' de 'light'."
+        }
+      ]
+    }
+  ]
+}
