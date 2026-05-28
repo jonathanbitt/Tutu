@@ -1,0 +1,42 @@
+{
+  "titulo": "Quizlet — Lasciare Tutto e Ricominciare",
+  "palavras": 32,
+  "licoes": 7,
+  "descricao": "Vocabulário essencial da narrativa de mudança e coragem",
+  "conteudo": {
+    "cards": [
+      { "termo": "è fatta", "definicao": "está feito / a decisão está tomada", "frase": "Ho deciso. È fatta!", "dificuldade": 2 },
+      { "termo": "biglietto di sola andata", "definicao": "passagem só de ida", "frase": "Un biglietto di sola andata per Bangkok.", "dificuldade": 2 },
+      { "termo": "sud-est asiatico", "definicao": "sudeste asiático", "frase": "Parto per il sud-est asiatico.", "dificuldade": 1 },
+      { "termo": "ebbene sì", "definicao": "pois é / sim, é verdade", "frase": "Ebbene sì, è successo.", "dificuldade": 2 },
+      { "termo": "provarci", "definicao": "tentar (fazer algo)", "frase": "Ci ho provato ma non ce l'ho fatta.", "dificuldade": 2 },
+      { "termo": "trapassato prossimo", "definicao": "mais-que-perfeito (tinha feito)", "frase": "Avevo già mangiato.", "dificuldade": 3 },
+      { "termo": "giurare", "definicao": "jurar", "frase": "Vi giuro che è vero.", "dificuldade": 1 },
+      { "termo": "percepire", "definicao": "perceber", "frase": "L'ho percepito come un segno.", "dificuldade": 2 },
+      { "termo": "stretto/a", "definicao": "apertado / sufocante (metafórico)", "frase": "Questa città mi è stretta.", "dificuldade": 2 },
+      { "termo": "laurearsi a pieni voti", "definicao": "formar-se com louvor / notas máximas", "frase": "Si è laureata a pieni voti.", "dificuldade": 2 },
+      { "termo": "essere assunto/a", "definicao": "ser contratado/a", "frase": "Sono stata assunta ieri.", "dificuldade": 2 },
+      { "termo": "eppure", "definicao": "e ainda assim / no entanto", "frase": "Sembra facile, eppure è difficile.", "dificuldade": 2 },
+      { "termo": "pienamente", "definicao": "plenamente / completamente", "frase": "Sono pienamente soddisfatto.", "dificuldade": 2 },
+      { "termo": "scivolare via", "definicao": "escorrer / escapar (tempo)", "frase": "Il tempo scivola via.", "dificuldade": 2 },
+      { "termo": "praticamente", "definicao": "praticamente / quase", "frase": "Praticamente ho finito.", "dificuldade": 1 },
+      { "termo": "rifiutarsi di", "definicao": "recusar-se a", "frase": "Mi rifiuto di obbedire.", "dificuldade": 2 },
+      { "termo": "mettere in discussione", "definicao": "questionar / colocar em xeque", "frase": "Ho messo tutto in discussione.", "dificuldade": 2 },
+      { "termo": "risparmi", "definicao": "economias / poupança", "frase": "Ho speso tutti i risparmi.", "dificuldade": 1 },
+      { "termo": "mettere da parte", "definicao": "guardar (dinheiro) / economizar", "frase": "Metto da parte 100 euro al mese.", "dificuldade": 2 },
+      { "termo": "quattro spicci", "definicao": "quase nada (muito pouco dinheiro)", "frase": "Con quattro spicci non ci compri niente.", "dificuldade": 3 },
+      { "termo": "ci sarà da ridere", "definicao": "vai dar o que rir / vai ser engraçado", "frase": "Se continua così, ci sarà da ridere.", "dificuldade": 3 },
+      { "termo": "manco per sbaglio", "definicao": "nem por acaso / de jeito nenhum", "frase": "Manco per sbaglio lo farei.", "dificuldade": 3 },
+      { "termo": "farsela addosso", "definicao": "morrer de medo / estar apavorado", "frase": "Me la faccio addosso prima dell'esame.", "dificuldade": 3 },
+      { "termo": "palese", "definicao": "óbvio / evidente (interjeição)", "frase": "Certo che è arrabbiato, palese!", "dificuldade": 2 },
+      { "termo": "tormentare", "definicao": "atormentar", "frase": "I dubbi mi tormentano.", "dificuldade": 2 },
+      { "termo": "rimpianto", "definicao": "arrependimento (pelo que não se fez)", "frase": "Meglio fallire che vivere nel rimpianto.", "dificuldade": 2 },
+      { "termo": "per cui", "definicao": "portanto / por isso", "frase": "Non avevo soldi, per cui non sono partito.", "dificuldade": 2 },
+      { "termo": "prima o poi", "definicao": "mais cedo ou mais tarde", "frase": "Prima o poi troverò una soluzione.", "dificuldade": 2 },
+      { "termo": "amen (coloquial)", "definicao": "paciência / que seja / aceitar consequências", "frase": "Non abbiamo alternative, amen.", "dificuldade": 2 },
+      { "termo": "quanto meno", "definicao": "ao menos / pelo menos", "frase": "Quanto meno ci ho provato.", "dificuldade": 2 },
+      { "termo": "infinito passato", "definicao": "infinitivo composto (ter feito)", "frase": "Di aver vissuto.", "dificuldade": 3 },
+      { "termo": "buh", "definicao": "sei lá / não sei (interjeição de incerteza)", "frase": "Buh, non so che dire.", "dificuldade": 2 }
+    ]
+  }
+}

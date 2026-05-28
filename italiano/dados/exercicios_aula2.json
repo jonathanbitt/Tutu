@@ -1,0 +1,652 @@
+{
+  "aula": 2,
+  "titulo": "ITALIANO — Lasciare Tutto e Ricominciare",
+  "paragrafos": [
+    {
+      "indice": 0,
+      "referencia": "Ok, è fatta. Ho appena comprato un biglietto di sola andata per il sud-est asiatico.",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "O que significa a expressão <em>è fatta</em> neste contexto?",
+          "opcoes": [
+            "Está quebrada",
+            "Está feito / a decisão está tomada (não tem mais volta)",
+            "É manufaturada",
+            "É uma farsa"
+          ],
+          "resposta": "Está feito / a decisão está tomada (não tem mais volta)",
+          "explicacao": "'È fatta' é uma expressão idiomática que indica que uma decisão importante foi tomada e não será mudada."
+        },
+        {
+          "tipo": "multipla",
+          "pergunta": "O que simboliza comprar um <em>biglietto di sola andata</em>?",
+          "opcoes": [
+            "Uma viagem curta de férias",
+            "Uma mudança radical, sem plano de voltar",
+            "Uma ida ao cinema",
+            "Um ingresso para um show"
+          ],
+          "resposta": "Uma mudança radical, sem plano de voltar",
+          "explicacao": "Uma passagem só de ida simboliza o compromisso com uma nova vida, sem intenção de retorno."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete a expressão:",
+          "pergunta": "Ho deciso di partire. ___ fatta!",
+          "resposta": "È",
+          "alternativas": ["È", "é", "E"],
+          "explicacao": "A expressão é 'È fatta' (está feito), com o verbo 'essere' na 3ª pessoa."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete:",
+          "pergunta": "Un biglietto di ___ andata per Tokyo.",
+          "resposta": "sola",
+          "alternativas": ["sola", "Sola"],
+          "explicacao": "A expressão correta é 'biglietto di sola andata' (passagem só de ida)."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene a frase:",
+          "palavras": ["sola", "asiatico", "andata", "comprato", "sud-est", "di", "per", "un", "biglietto", "ho", "appena", "il"],
+          "resposta": "ho appena comprato un biglietto di sola andata per il sud-est asiatico",
+          "explicacao": "Estrutura: verbo 'ho comprato' + 'un biglietto di sola andata' + 'per il sud-est asiatico'."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza: <em>Un biglietto di sola andata per Bangkok</em>",
+          "resposta": "Uma passagem só de ida para Bangkok",
+          "palavrasChave": ["passagem", "ida", "Bangkok"],
+          "explicacao": "'Sola andata' = só ida. Oposto de 'andata e ritorno' (ida e volta)."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a expressão principal:",
+          "palavras": ["è", "fatta"],
+          "resposta": "è fatta",
+          "explicacao": "'È fatta' (é fát-ta) - 'è' com 'e' aberta, 'fatta' com 'a' aberta e 'tt' geminado."
+        }
+      ]
+    },
+    {
+      "indice": 1,
+      "referencia": "Ebbene sì, anche se devo dire che questa volta ci avevo provato davvero.",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "O que significa <em>ebbene sì</em>?",
+          "opcoes": [
+            "Bem, não",
+            "Pois é / sim, é verdade",
+            "Quem sabe",
+            "Talvez"
+          ],
+          "resposta": "Pois é / sim, é verdade",
+          "explicacao": "'Ebbene sì' é uma expressão que confirma algo com um tom de 'pois é', 'sim, é verdade'."
+        },
+        {
+          "tipo": "multipla",
+          "pergunta": "O que o 'ci' representa em <em>ci avevo provato</em>?",
+          "opcoes": [
+            "A palavra 'aqui'",
+            "Um pronome que substitui 'a ciò' (nisso)",
+            "A preposição 'com'",
+            "A conjunção 'se'"
+          ],
+          "resposta": "Um pronome que substitui 'a ciò' (nisso)",
+          "explicacao": "'Ci' é pronome partícula que substitui 'a ciò' (nisso, nessa coisa). 'Provarci' = tentar (nisso)."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com a partícula 'ci':",
+          "pergunta": "___ ho provato ma non ce l'ho fatta. (Tentei mas não consegui.)",
+          "resposta": "Ci",
+          "alternativas": ["Ci", "ci"],
+          "explicacao": "'Ci ho provato' = tentei (nisso). 'Ci' é a partícula que indica o objeto da tentativa."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com o verbo no trapassato prossimo:",
+          "pergunta": "Quando sono partita, ___ già provato a restare.",
+          "resposta": "avevo",
+          "alternativas": ["avevo", "Avevo"],
+          "explicacao": "'Avevo provato' = eu tinha tentado (trapassato prossimo de 'provare')."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene:",
+          "palavras": ["ebbene", "sì", "davvero", "avevo", "provato", "ci", "questa", "volta", "anche", "se"],
+          "resposta": "ebbene sì anche se questa volta ci avevo provato davvero",
+          "explicacao": "'Ebbene sì' + 'anche se' + 'questa volta' + 'ci avevo provato' + 'davvero'."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza: <em>Ci ho provato</em>",
+          "resposta": "Eu tentei (nisso)",
+          "palavrasChave": ["tentei"],
+          "explicacao": "'Ci' substitui o objeto indireto (a isso, a essa coisa). 'Provarci' = tentar fazer algo."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique:",
+          "palavras": ["ci", "avevo"],
+          "resposta": "ci avevo",
+          "explicacao": "'Ci avevo' (tchi a-vé-vo) - 'ci' como 'tchi', 'avevo' com 'a' aberta e 'e' fechada."
+        }
+      ]
+    },
+    {
+      "indice": 4,
+      "referencia": "Mi sono laureata a pieni voti, sono stata assunta dall'azienda dei miei sogni, ho tutto ciò che una persona normale potrebbe desiderare.",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "O que significa <em>a pieni voti</em>?",
+          "opcoes": [
+            "Com notas baixas",
+            "Com louvor / notas máximas",
+            "Com muitos votos (eleição)",
+            "Com esforço mínimo"
+          ],
+          "resposta": "Com louvor / notas máximas",
+          "explicacao": "'A pieni voti' significa ter tirado as notas máximas, geralmente 110 com louvor (110 e lode)."
+        },
+        {
+          "tipo": "multipla",
+          "pergunta": "Por que usamos 'essere' como auxiliar em <em>sono stata assunta</em>?",
+          "opcoes": [
+            "Porque é um verbo reflexivo",
+            "Porque está na voz passiva",
+            "Porque é um verbo de movimento",
+            "Porque é um verbo irregular"
+          ],
+          "resposta": "Porque está na voz passiva",
+          "explicacao": "Na voz passiva, usamos 'essere' + particípio passado. 'Sono stata assunta' = fui contratada (voz passiva)."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com a forma correta:",
+          "pergunta": "Mi sono ___ (laurearsi) nel 2020.",
+          "resposta": "laureata",
+          "alternativas": ["laureata", "Laureata"],
+          "explicacao": "Verbos reflexivos usam 'essere' como auxiliar. O particípio concorda com o sujeito feminino: 'laureata'."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete:",
+          "pergunta": "Sono stata ___ (assumere) dall'azienda.",
+          "resposta": "assunta",
+          "alternativas": ["assunta", "Assunta"],
+          "explicacao": "Voz passiva: 'essere' + particípio passado. 'Assunta' concorda com o sujeito feminino."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene:",
+          "palavras": ["sogni", "azienda", "stata", "sono", "assunta", "dei", "dall'", "miei"],
+          "resposta": "sono stata assunta dall'azienda dei miei sogni",
+          "explicacao": "'Sono stata assunta' + 'dall'azienda' + 'dei miei sogni'."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza: <em>Laurearsi a pieni voti</em>",
+          "resposta": "Formar-se com louvor / com notas máximas",
+          "palavrasChave": ["formar", "louvor", "notas"],
+          "explicacao": "Sistema italiano: 110 e lode (110 cum laude) é o máximo."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique:",
+          "palavras": ["laureata", "assunta"],
+          "resposta": "laureata assunta",
+          "explicacao": "'Laureata' (lau-re-á-ta) - 'au' como 'au', 'e' aberta. 'Assunta' (as-sún-ta) - 'a' aberta, 'ss' geminado, 'u' fechada."
+        }
+      ]
+    },
+    {
+      "indice": 6,
+      "referencia": "E io raga mi rifiuto di credere che la vita sia tutta qui.",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "O que significa a expressão <em>rifiutarsi di</em> + infinitivo?",
+          "opcoes": [
+            "Gostar de fazer algo",
+            "Recusar-se a fazer algo (recusa forte e pessoal)",
+            "Esquecer de fazer algo",
+            "Tentar fazer algo"
+          ],
+          "resposta": "Recusar-se a fazer algo (recusa forte e pessoal)",
+          "explicacao": "'Rifiutarsi di' é um verbo reflexivo que expressa uma recusa pessoal e firme, mais forte que 'non volere'."
+        },
+        {
+          "tipo": "multipla",
+          "pergunta": "Por que usamos o congiuntivo <em>sia</em> após <em>credere che</em>?",
+          "opcoes": [
+            "Porque é passado",
+            "Porque expressa incerteza ou opinião subjetiva",
+            "Porque é futuro",
+            "Porque é imperativo"
+          ],
+          "resposta": "Porque expressa incerteza ou opinião subjetiva",
+          "explicacao": "Após verbos como 'credere che' (acreditar que), usamos o congiuntivo (subjuntivo) para expressar incerteza, dúvida ou opinião pessoal."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com o congiuntivo:",
+          "pergunta": "Credo che lui ___ (avere) ragione.",
+          "resposta": "abbia",
+          "alternativas": ["abbia", "Abbia"],
+          "explicacao": "'Credere che' + congiuntivo. 'Abbia' é a 3ª pessoa do presente do congiuntivo de 'avere'."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete:",
+          "pergunta": "Mi ___ di credere che sia tutta qui.",
+          "resposta": "rifiuto",
+          "alternativas": ["rifiuto", "Rifiuto"],
+          "explicacao": "'Mi rifiuto di' (eu me recuso a) - presente do indicativo do verbo reflexivo 'rifiutarsi'."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene:",
+          "palavras": ["qui", "che", "tutta", "la", "credere", "di", "sia", "vita", "mi", "rifiuto"],
+          "resposta": "mi rifiuto di credere che la vita sia tutta qui",
+          "explicacao": "'Mi rifiuto di' + 'credere che' + oração com congiuntivo 'la vita sia tutta qui'."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza: <em>Mi rifiuto di obbedire</em>",
+          "resposta": "Me recuso a obedecer",
+          "palavrasChave": ["recuso", "obedecer"],
+          "explicacao": "Expressa uma recusa forte e pessoal, não apenas uma preferência."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique:",
+          "palavras": ["rifiuto", "credere"],
+          "resposta": "rifiuto credere",
+          "explicacao": "'Rifiuto' (ri-fiú-to) - 'i' curto, 'u' tônico. 'Credere' (kré-de-re) - 'e' aberta."
+        }
+      ]
+    },
+    {
+      "indice": 10,
+      "referencia": "Che sono proprio quattro spicci, ci sarà da ridere.",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "O que significa <em>quattro spicci</em>?",
+          "opcoes": [
+            "Quatro moedas raras",
+            "Quase nada / muito pouco dinheiro",
+            "Quatro trocos (para comprar pão)",
+            "Quatro amigos"
+          ],
+          "resposta": "Quase nada / muito pouco dinheiro",
+          "explicacao": "'Spicci' é gíria para 'moedas pequenas', 'trocados'. 'Quattro spicci' significa quantia irrisória, quase nada."
+        },
+        {
+          "tipo": "multipla",
+          "pergunta": "O que a expressão <em>ci sarà da ridere</em> pode significar neste contexto (autoironia)?",
+          "opcoes": [
+            "Vai ser muito divertido (literalmente)",
+            "Vai dar o que rir / vai ser engraçado (pode ser irônico)",
+            "Vai ser triste",
+            "Vai dar medo"
+          ],
+          "resposta": "Vai dar o que rir / vai ser engraçado (pode ser irônico)",
+          "explicacao": "Pode ser literal ('vai ser divertido') ou irônico ('vai dar problema / vai ser um fracasso engraçado'). No contexto, autoironia."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete a gíria:",
+          "pergunta": "Mi ha pagato con quattro ___.",
+          "resposta": "spicci",
+          "alternativas": ["spicci", "Spicci"],
+          "explicacao": "'Quattro spicci' é a expressão fixa para 'quase nada'."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete a expressão:",
+          "pergunta": "Se continua così, ci sarà da ___.",
+          "resposta": "ridere",
+          "alternativas": ["ridere", "Ridere"],
+          "explicacao": "'Ci sarà da ridere' = vai dar o que rir / vai ser engraçado."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene:",
+          "palavras": ["ridere", "sarà", "spicci", "da", "quattro", "che", "ci", "sono", "proprio"],
+          "resposta": "che sono proprio quattro spicci ci sarà da ridere",
+          "explicacao": "'Che sono proprio quattro spicci' + 'ci sarà da ridere'."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza: <em>Con quattro spicci non ci compri niente</em>",
+          "resposta": "Com quase nada você não compra nada",
+          "palavrasChave": ["quase", "nada", "compra"],
+          "explicacao": "Expressão que enfatiza a pouca quantidade de dinheiro."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique:",
+          "palavras": ["spicci"],
+          "resposta": "spicci",
+          "explicacao": "'Spicci' (spít-tchi) - 'sp' como em 'esporte', 'i' curto, 'cc' geminado como 'tch'."
+        }
+      ]
+    },
+    {
+      "indice": 12,
+      "referencia": "È stato facile, manco per sbaglio.",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "O que significa a expressão <em>manco per sbaglio</em>?",
+          "opcoes": [
+            "Nem por acaso / de jeito nenhum",
+            "Até por engano",
+            "Talvez com sorte",
+            "Com certeza absoluta"
+          ],
+          "resposta": "Nem por acaso / de jeito nenhum",
+          "explicacao": "'Manco per sbaglio' é uma negação forte. Significa 'nem por acaso', 'nem se for por engano', 'de jeito nenhum'."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete a expressão negativa:",
+          "pergunta": "___ morto lo farò. (Nem morto eu farei isso.)",
+          "resposta": "Manco",
+          "alternativas": ["Manco", "manco"],
+          "explicacao": "'Manco' em italiano coloquial substitui 'neanche' (nem). 'Manco morto' = nem morto."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete a frase irônica:",
+          "pergunta": "Sì, certo, ___ per sbaglio! (Sim, claro, nem por acaso!)",
+          "resposta": "manco",
+          "alternativas": ["manco", "Manco"],
+          "explicacao": "Ironia: 'manco per sbaglio' = nem por acaso (ou seja, não foi fácil)."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene:",
+          "palavras": ["facile", "stato", "sbaglio", "manco", "per", "è"],
+          "resposta": "è stato facile manco per sbaglio",
+          "explicacao": "Primeiro 'è stato facile' + expressão 'manco per sbaglio' (nem por acaso)."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza a frase com a expressão: <em>Manco per sbaglio lo farei</em>",
+          "resposta": "Nem por acaso eu faria isso",
+          "palavrasChave": ["nem", "acaso", "faria"],
+          "explicacao": "Expressa recusa ou negação absoluta."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique:",
+          "palavras": ["manco"],
+          "resposta": "manco",
+          "explicacao": "'Manco' (mán-ko) - 'a' aberta, 'n' alveolar, 'co' como 'ko'."
+        }
+      ]
+    },
+    {
+      "indice": 13,
+      "referencia": "Me la sto facendo addosso.",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "O que significa a expressão forte <em>farsela addosso</em>?",
+          "opcoes": [
+            "Estar muito feliz",
+            "Estar morrendo de medo / estar apavorado",
+            "Estar com pressa",
+            "Estar cansado"
+          ],
+          "resposta": "Estar morrendo de medo / estar apavorado",
+          "explicacao": "'Farsela addosso' é uma expressão idiomática forte que significa ter muito medo, a ponto de 'borrar as calças' (figurado)."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com o pronome correto:",
+          "pergunta": "Quando ha visto il ladro, se l'___ fatta addosso.",
+          "resposta": "è",
+          "alternativas": ["è", "é"],
+          "explicacao": "Passato prossimo: 'se l'è fatta addosso' (borrou as calças de medo)."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete a frase:",
+          "pergunta": "Prima dell'esame me la ___ addosso.",
+          "resposta": "faccio",
+          "alternativas": ["faccio", "Faccio"],
+          "explicacao": "'Me la faccio addosso' = morro de medo (presente). 'Faccio' é a 1ª pessoa de 'fare'."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene:",
+          "palavras": ["addosso", "me", "la", "facendo", "sto"],
+          "resposta": "me la sto facendo addosso",
+          "explicacao": "'Me la' (partículas) + 'sto facendo' (presente progressivo) + 'addosso'."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza a expressão em contexto: <em>Me la faccio addosso prima di parlare in pubblico</em>",
+          "resposta": "Morro de medo antes de falar em público",
+          "palavrasChave": ["medo", "público"],
+          "explicacao": "Expressão forte, usada em contextos informais para descrever medo intenso."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a frase:",
+          "palavras": ["addosso"],
+          "resposta": "addosso",
+          "explicacao": "'Addosso' (ad-dós-so) - 'a' aberta, 'dd' e 'ss' geminados (dobrados), 'o' fechada."
+        }
+      ]
+    },
+    {
+      "indice": 16,
+      "referencia": "E se non dovessi mai trovarla, amen.",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "O que a estrutura <em>se non dovessi mai</em> + verbo expressa?",
+          "opcoes": [
+            "Uma certeza absoluta",
+            "Uma hipótese remota no futuro (caso eu venha a não...)",
+            "Uma ordem",
+            "Uma pergunta"
+          ],
+          "resposta": "Uma hipótese remota no futuro (caso eu venha a não...)",
+          "explicacao": "'Se' + congiuntivo imperfetto de 'dovere' (dovessi) expressa uma possibilidade distante, uma hipótese futura incerta."
+        },
+        {
+          "tipo": "multipla",
+          "pergunta": "O que <em>amen</em> significa neste contexto coloquial?",
+          "opcoes": [
+            "Amém (oração)",
+            "Paciência / que seja / aceito as consequências",
+            "Graças a Deus",
+            "Aleluia"
+          ],
+          "resposta": "Paciência / que seja / aceito as consequências",
+          "explicacao": "Além do sentido religioso, 'amen' é usado coloquialmente para expressar aceitação resignada de algo que não se pode controlar."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com o congiuntivo imperfetto:",
+          "pergunta": "Se ___ (dovere) fallire, ricomincerei.",
+          "resposta": "dovessi",
+          "alternativas": ["dovessi", "Dovessi"],
+          "explicacao": "'Se dovessi fallire' = caso eu venha a falhar (hipótese remota)."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com a palavra coloquial:",
+          "pergunta": "Non abbiamo alternative, ___.",
+          "resposta": "amen",
+          "alternativas": ["amen", "Amen"],
+          "explicacao": "'Amen' usado como 'paciência', 'fazer o quê', 'que seja'."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene a frase condicional:",
+          "palavras": ["mai", "amen", "dovessi", "trovarla", "e", "se", "non"],
+          "resposta": "e se non dovessi mai trovarla amen",
+          "explicacao": "'E se' + 'non dovessi mai trovarla' + 'amen'."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza: <em>Se dovessi perdere tutto, amen</em>",
+          "resposta": "Se eu viesse a perder tudo, paciência",
+          "palavrasChave": ["viesse", "perder", "paciência"],
+          "explicacao": "Expressa aceitação de uma possibilidade negativa futura."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique:",
+          "palavras": ["dovessi", "amen"],
+          "resposta": "dovessi amen",
+          "explicacao": "'Dovessi' (do-vés-si) - 'o' fechada, 'e' aberta, 'ss' geminado. 'Amen' (á-men) - 'a' aberta, 'e' fechada."
+        }
+      ]
+    },
+    {
+      "indice": 17,
+      "referencia": "Quanto meno potrò dire di aver vissuto una vita piena provandoci.",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "O que significa a expressão <em>quanto meno</em>?",
+          "opcoes": [
+            "Quanto menos",
+            "Ao menos / pelo menos",
+            "Muito mais",
+            "Nada menos"
+          ],
+          "resposta": "Ao menos / pelo menos",
+          "explicacao": "'Quanto meno' é uma expressão que significa 'ao menos', 'pelo menos', indicando um consolo ou garantia mínima."
+        },
+        {
+          "tipo": "multipla",
+          "pergunta": "O que é o <em>infinito passato</em> em <em>aver vissuto</em>?",
+          "opcoes": [
+            "Um erro gramatical",
+            "Uma forma composta que indica ação completada antes da ação principal",
+            "Um futuro do pretérito",
+            "Um gerúndio"
+          ],
+          "resposta": "Uma forma composta que indica ação completada antes da ação principal",
+          "explicacao": "O infinito passado ('aver vissuto' = ter vivido) indica uma ação que foi completada antes da ação expressa pelo verbo principal ('potrò dire')."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com a expressão correta:",
+          "pergunta": "___ potrò dire di avercela fatta.",
+          "resposta": "Quanto meno",
+          "alternativas": ["quanto meno", "Quanto meno"],
+          "explicacao": "'Quanto meno' = ao menos / pelo menos."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com o infinito passado:",
+          "pergunta": "Sono felice di ___ (incontrare) Maria.",
+          "resposta": "aver incontrato",
+          "alternativas": ["aver incontrato", "Aver incontrato"],
+          "explicacao": "'Di aver incontrato' = de ter encontrado. Infinito passado de 'incontrare'."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene:",
+          "palavras": ["piena", "una", "vissuto", "vita", "di", "provandoci", "potrò", "quanto", "aver", "dire", "meno"],
+          "resposta": "quanto meno potrò dire di aver vissuto una vita piena provandoci",
+          "explicacao": "'Quanto meno' + 'potrò dire' + 'di aver vissuto una vita piena' + gerúndio 'provandoci'."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza: <em>Continua provandoci, non mollare!</em>",
+          "resposta": "Continue tentando, não desista!",
+          "palavrasChave": ["continue", "tentando", "desista"],
+          "explicacao": "'Provandoci' é o gerúndio de 'provarci' (tentar nisso)."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique:",
+          "palavras": ["provandoci"],
+          "resposta": "provandoci",
+          "explicacao": "'Provandoci' (pro-ván-do-tchi) - 'pro' como em 'prova', 'van' com 'a' aberta, 'do' como 'do', 'ci' como 'tchi'."
+        }
+      ]
+    },
+    {
+      "indice": 19,
+      "referencia": "E cosa succederà? Buh, lo scopriremo.",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "O que a interjeição <em>buh</em> expressa?",
+          "opcoes": [
+            "Raiva",
+            "Dúvida, incerteza, mistério (sei lá)",
+            "Alegria",
+            "Surpresa"
+          ],
+          "resposta": "Dúvida, incerteza, mistério (sei lá)",
+          "explicacao": "'Buh' é uma interjeição italiana muito comum em conversas informais para expressar dúvida, incerteza ou que a resposta é desconhecida."
+        },
+        {
+          "tipo": "multipla",
+          "pergunta": "Qual é o tempo verbal de <em>scopriremo</em>?",
+          "opcoes": [
+            "Presente",
+            "Futuro simples",
+            "Passato prossimo",
+            "Imperfeito"
+          ],
+          "resposta": "Futuro simples",
+          "explicacao": "'Scopriremo' é a 1ª pessoa do plural do futuro simples do verbo 'scoprire' (descobrir)."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com a interjeição:",
+          "pergunta": "___, non so cosa risponderti.",
+          "resposta": "Buh",
+          "alternativas": ["Buh", "buh"],
+          "explicacao": "'Buh' = sei lá / não sei / não faço ideia."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com o futuro:",
+          "pergunta": "Chi vincerà? Lo ___ solo alla fine.",
+          "resposta": "scopriremo",
+          "alternativas": ["scopriremo", "Scopriremo"],
+          "explicacao": "'Lo scopriremo' = descobriremos (futuro de 'scoprire')."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene:",
+          "palavras": ["succederà", "buh", "cosa", "scopriremo", "e", "lo"],
+          "resposta": "e cosa succederà buh lo scopriremo",
+          "explicacao": "'E cosa succederà?' + 'Buh' + 'lo scopriremo'."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza: <em>Buh, chi lo sa?</em>",
+          "resposta": "Sei lá, quem sabe?",
+          "palavrasChave": ["sei", "lá", "sabe"],
+          "explicacao": "'Buh' + 'chi lo sa?' = expressão de incerteza total."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique:",
+          "palavras": ["buh", "scopriremo"],
+          "resposta": "buh scopriremo",
+          "explicacao": "'Buh' som gutural curto, 'scopriremo' (sko-pri-ré-mo) - 'e' aberta, 'o' final fechada."
+        }
+      ]
+    }
+  ]
+}

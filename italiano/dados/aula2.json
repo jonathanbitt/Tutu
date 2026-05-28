@@ -1,0 +1,197 @@
+{
+  "titulo": "ITALIANO — Lasciare Tutto e Ricominciare",
+  "videoUrl": "https://jonathanbitt.github.io/Tutu/italiano/dados/videos/video2.mp4",
+  "quizletUrl": "quizlet.html?quizlet=2",
+  "blocos": [
+    {
+      "start": 0,
+      "italian": "Ok, è fatta. Ho appena comprato un biglietto di sola andata per il sud-est asiatico.",
+      "translation": "Ok, está feito. Acabei de comprar uma passagem só de ida para o sudeste asiático.",
+      "tip": "<strong>\"è fatta\"</strong> — Expressão idiomática que significa 'está feito', 'a decisão está tomada', 'não tem mais volta'. <strong>\"di sola andata\"</strong> — 'Só de ida' (sem volta). <strong>\"sud-est asiatico\"</strong> — Sudeste Asiático (Tailândia, Vietnã, etc.).",
+      "miniLesson": {
+        "title": "Expressão 'È Fatta' e 'Sola Andata'",
+        "content": "<p><strong>\"è fatta\"</strong> — Do verbo 'fare' (fazer). No passado prossimo, 'è fatta' (3ª pessoa singular feminino) indica que uma decisão importante foi tomada e não será mudada. É como um 'fechado' ou 'decidido'.</p><div class=\"exemplo\">Ho deciso di partire. È fatta! → Decidi partir. Está feito!</div><p style=\"margin-top:10px\"><strong>\"biglietto di sola andata\"</strong> — 'Sola andata' = só ida. O oposto é 'andata e ritorno' (ida e volta). Comprar uma passagem só de ida simboliza uma mudança radical, sem plano de voltar.</p><div class=\"exemplo\">Un biglietto di sola andata per Tokyo. → Uma passagem só de ida para Tóquio.</div>"
+      }
+    },
+    {
+      "start": 4,
+      "italian": "Ebbene sì, anche se devo dire che questa volta ci avevo provato davvero.",
+      "translation": "Pois é, mesmo que eu deva dizer que desta vez eu tinha tentado de verdade.",
+      "tip": "<strong>\"ebbene sì\"</strong> — Expressão que significa 'pois é', 'sim, é verdade'. <strong>\"ci avevo provato\"</strong> — 'Ci' pronome partícula que indica 'nisso' (tentar algo). 'Avevo provato' é o pretérito mais-que-perfeito (tinha tentado).",
+      "miniLesson": {
+        "title": "'Ci' Partícula e Trapassato Prossimo",
+        "content": "<p><strong>\"ci\" como pronome partícula</strong> — 'Ci' pode substituir 'a ciò' (nisso, nessa coisa). 'Provarci' = tentar (fazer algo). Literalmente 'tentar nisso'.</p><div class=\"exemplo\">Ci ho provato ma non ce l'ho fatta. → Tentei mas não consegui.</div><p style=\"margin-top:10px\"><strong>Trapassato Prossimo (mais-que-perfeito)</strong> — 'Avevo provato' = eu tinha tentado. Usado para ações que aconteceram antes de outra ação no passado.</p><div class=\"exemplo\">Quando sei partita, avevo già provato a restare. → Quando parti, já tinha tentado ficar.</div>"
+      }
+    },
+    {
+      "start": 8,
+      "italian": "Vi giuro che ci ho provato a trovare il mio posto in questa società, ad avere una vita normale, a cercare di farmi andar bene in una città che ho sempre percepito stretta.",
+      "translation": "Juro para vocês que tentei encontrar o meu lugar nesta sociedade, ter uma vida normal, tentar fazer com que me acostumasse em uma cidade que sempre percebi como apertada (pequena demais para mim).",
+      "tip": "<strong>\"vi giuro\"</strong> — 'Juro para vocês'. <strong>\"farmi andar bene\"</strong> — 'Fazer com que me acostume / me adapte'. Literalmente 'fazer-me ir bem'. <strong>\"percepito stretta\"</strong> — 'Percebida como apertada' — a cidade era sufocante, limitada para seus sonhos.",
+      "miniLesson": {
+        "title": "Construção 'Farsi Andar Bene' e Percepção com 'Stretta'",
+        "content": "<p><strong>\"farmi andar bene\"</strong> — Estrutura reflexiva: 'fare' + pronome reflexivo ('mi') + verbo no infinitivo ('andar bene') = fazer com que eu me adapte / aceite. Uso avançado, comum em narrativas pessoais.</p><div class=\"exemplo\">Non riesco a farmi andar bene questa situazione. → Não consigo me acostumar com esta situação.</div><p style=\"margin-top:10px\"><strong>\"percepito stretta\"</strong> — 'Stretta' (apertada) é usada metaforicamente para descrever uma cidade ou ambiente que limita, sufoca. O verbo 'percepire' (perceber) indica uma experiência subjetiva.</p><div class=\"exemplo\">Questa città mi è sempre sembrata stretta. → Esta cidade sempre me pareceu apertada (pequena demais para mim).</div>"
+      }
+    },
+    {
+      "start": 15,
+      "italian": "Mi sono laureata a pieni voti, sono stata assunta dall'azienda dei miei sogni, ho tutto ciò che una persona normale potrebbe desiderare.",
+      "translation": "Me formei com louvor (notas máximas), fui contratada pela empresa dos meus sonhos, tenho tudo o que uma pessoa normal poderia desejar.",
+      "tip": "<strong>\"a pieni voti\"</strong> — 'Com notas máximas', 'com louvor' (110 cum laude). <strong>\"sono stata assunta\"</strong> — Passato prossimo do verbo 'assumere' (contratar), na voz passiva. <strong>\"potrebbe desiderare\"</strong> — 'Poderia desejar' — uso do condicional 'potrebbe' (poderia) para expressar possibilidade.",
+      "miniLesson": {
+        "title": "Passato Prossimo com Verbos de Mudança e Condicional",
+        "content": "<p><strong>\"mi sono laureata\"</strong> — Verbos reflexivos e de movimento usam 'essere' como auxiliar no passato prossimo. 'Laurearsi' (formar-se) é reflexivo.</p><div class=\"exemplo\">Mi sono laureata nel 2020. → Me formei em 2020.</div><p style=\"margin-top:10px\"><strong>\"sono stata assunta\"</strong> — Voz passiva com 'essere' + particípio passado. 'Assunta' (contratada) concorda com o sujeito feminino.</p><div class=\"exemplo\">Sono stata promossa. → Fui promovida.</div><p style=\"margin-top:10px\"><strong>\"potrebbe desiderare\"</strong> — Condicional presente do verbo 'potere' (poder). Indica algo que seria possível, mas não necessariamente real.</p><div class=\"exemplo\">Potrebbe piovere domani. → Poderia chover amanhã.</div>"
+      }
+    },
+    {
+      "start": 21,
+      "italian": "Ho la salute, ho l'amore, eppure raga non riesco ad essere pienamente felice.",
+      "translation": "Tenho saúde, tenho amor, e ainda assim, gente, não consigo ser plenamente feliz.",
+      "tip": "<strong>\"eppure\"</strong> — Conjunção que significa 'e ainda assim', 'no entanto', 'mas mesmo assim'. <strong>\"raga\"</strong> — Abreviação coloquial de 'ragazzi' (gente, pessoal). <strong>\"pienamente felice\"</strong> — 'Plenamente feliz', completamente feliz.",
+      "miniLesson": {
+        "title": "Conjunção 'Eppure' e Vocativo Coloquial 'Raga'",
+        "content": "<p><strong>\"eppure\"</strong> — Conjunção adversativa que introduz um contraste ou surpresa em relação ao que foi dito antes. É mais forte que 'ma' (mas) e mais literário que 'però'.</p><div class=\"exemplo\">Sembra facile, eppure è difficilissimo. → Parece fácil, e ainda assim é dificílimo.</div><p style=\"margin-top:10px\"><strong>\"raga\"</strong> — Forma abreviada e informal de 'ragazzi' (rapazes / pessoal). Usado entre amigos ou em vídeos para se dirigir ao público de forma próxima.</p><div class=\"exemplo\">Raga, guardate questo! → Gente, olhem isso!</div>"
+      }
+    },
+    {
+      "start": 25,
+      "italian": "Sento che il tempo mi scivola via dalle mani, che ogni giornata è uguale all'altra, che passo praticamente l'80% del mio tempo a lavorare.",
+      "translation": "Sinto que o tempo escorre pelas minhas mãos, que cada dia é igual ao outro, que passo praticamente 80% do meu tempo trabalhando.",
+      "tip": "<strong>\"scivola via\"</strong> — 'Escorre', 'desliza para longe' — metáfora do tempo que foge. <strong>\"dalle mani\"</strong> — 'Das mãos' — como se não pudesse segurar o tempo. <strong>\"praticamente\"</strong> — 'Praticamente', 'quase'. <strong>\"a lavorare\"</strong> — Uso da preposição 'a' após 'passo il tempo' (passo o tempo a fazer algo).",
+      "miniLesson": {
+        "title": "Metáfora do Tempo e Estrutura 'Passare Tempo a'",
+        "content": "<p><strong>\"il tempo mi scivola via dalle mani\"</strong> — Metáfora poderosa: o tempo é como areia que escorre entre os dedos. 'Scivolare via' = escorregar para longe, escapar.</p><div class=\"exemplo\">Il tempo vola quando ci si diverte. → O tempo voa quando a gente se diverte.</div><p style=\"margin-top:10px\"><strong>\"passo il tempo a lavorare\"</strong> — Estrutura 'passare + tempo + a + infinitivo' = passar o tempo fazendo algo.</p><div class=\"exemplo\">Passo le giornate a studiare. → Passo os dias estudando.</div>"
+      }
+    },
+    {
+      "start": 32,
+      "italian": "E io raga mi rifiuto di credere che la vita sia tutta qui.",
+      "translation": "E eu, gente, me recuso a acreditar que a vida seja só isso.",
+      "tip": "<strong>\"mi rifiuto di\"</strong> — 'Me recuso a', negação forte e pessoal. <strong>\"sia tutta qui\"</strong> — 'Seja só isso' — uso do congiuntivo (subjuntivo) 'sia' após 'credere che'. <strong>\"tutta qui\"</strong> — Expressão que significa 'apenas isso', 'só isso', 'tudo se resume a isso'.",
+      "miniLesson": {
+        "title": "Verbo 'Rifiutarsi di' e Congiuntivo com 'Credere Che'",
+        "content": "<p><strong>\"rifiutarsi di\" + infinitivo</strong> — Este verbo reflexivo expressa uma recusa pessoal e firme. É mais forte que 'non volere' (não querer).</p><div class=\"exemplo\">Mi rifiuto di obbedire. → Me recuso a obedecer.</div><p style=\"margin-top:10px\"><strong>\"che la vita sia tutta qui\"</strong> — Após 'credere che' (acreditar que), usamos o congiuntivo (subjuntivo) para expressar incerteza ou opinião subjetiva. 'Sia' é a 3ª pessoa do singular do presente do subjuntivo de 'essere'.</p><div class=\"exemplo\">Credo che lui abbia ragione. → Acredito que ele tenha razão.</div>"
+      }
+    },
+    {
+      "start": 34,
+      "italian": "E quindi nulla, ho messo in discussione tutto.",
+      "translation": "E então nada, coloquei tudo em discussão (questionei tudo).",
+      "tip": "<strong>\"nulla\"</strong> — Aqui usado como interjeição: 'e quindi nulla' = 'e então, pronto' / 'e então, é isso'. <strong>\"mettere in discussione\"</strong> — Expressão que significa 'questionar', 'colocar em xeque', 'reavaliar criticamente'.",
+      "miniLesson": {
+        "title": "Expressão 'Mettere in Discussione'",
+        "content": "<p><strong>\"mettere in discussione\"</strong> — Verbo frasal muito comum. Significa duvidar de algo que antes parecia certo, reexaminar crenças, valores ou decisões.</p><div class=\"exemplo\">Dopo la crisi, ho messo in discussione tutta la mia vita. → Depois da crise, questionei toda a minha vida.</div><p style=\"margin-top:10px\"><strong>\"nulla\" como interjeição</strong> — Em italiano coloquial, 'nulla' (nada) pode ser usado como 'e allora?', 'e quindi?' ou para concluir um raciocínio, como um 'enfim' ou 'pronto'.</p><div class=\"exemplo\">Nulla, ho deciso di partire. → Pronto, decidi partir.</div>"
+      }
+    },
+    {
+      "start": 36,
+      "italian": "Ho lasciato il lavoro, ho preso quei quattro risparmi che ero riuscita a mettere da parte.",
+      "translation": "Deixei o trabalho, peguei aquelas poucas economias que tinha conseguido juntar.",
+      "tip": "<strong>\"quattro risparmi\"</strong> — Expressão irônica: 'quatro economias' = pouca coisa, quase nada. <strong>\"ero riuscita a mettere da parte\"</strong> — 'Tinha conseguido juntar' — Trapassato prossimo (mais-que-perfeito) de 'riuscire a' (conseguir) + 'mettere da parte' (guardar dinheiro).",
+      "miniLesson": {
+        "title": "Expressão 'Quattro Risparmi' e 'Mettere da Parte'",
+        "content": "<p><strong>\"quattro risparmi\"</strong> — Uso irônico do número 'quattro' (quatro) para indicar uma quantidade pequena. 'Quattrini' é gíria para dinheiro, mas 'quattro risparmi' = 'quatro economias' = quase nada.</p><div class=\"exemplo\">Ha viaggiato con quattro soldi in tasca. → Viajou com quase nada no bolso.</div><p style=\"margin-top:10px\"><strong>\"mettere da parte\"</strong> — Expressão que significa 'guardar dinheiro', 'economizar', 'colocar de lado'.</p><div class=\"exemplo\">Metto da parte 100 euro al mese. → Guardo 100 euros por mês.</div><p style=\"margin-top:10px\"><strong>\"ero riuscita\"</strong> — Trapassato prossimo (mais-que-perfeito) indica uma ação completada antes de outra no passado ('ho preso').</p>"
+      }
+    },
+    {
+      "start": 40,
+      "italian": "Che sono proprio quattro spicci, ci sarà da ridere.",
+      "translation": "Que são mesmo quatro trocados (muito pouco), vai ser engraçado (vai dar o que rir).",
+      "tip": "<strong>\"spicci\"</strong> — Gíria para 'moedas pequenas', 'trocados', 'dinheiro de pouco valor'. <strong>\"quattro spicci\"</strong> — 'Quatro trocados' = quase nada, valor irrisório. <strong>\"ci sarà da ridere\"</strong> — Expressão: 'vai ter o que rir', 'vai ser engraçado' (pode ser irônico, significando 'vai dar problema' ou literalmente 'vai ser cômico').",
+      "miniLesson": {
+        "title": "Gíria 'Spicci' e Expressão 'Ci Sarà da Ridere'",
+        "content": "<p><strong>\"spicci / spiccioli\"</strong> — Termo coloquial para moedas de pequeno valor ou dinheiro trocado. 'Quattro spicci' é expressão fixa para 'quase nada'.</p><div class=\"exemplo\">Mi ha pagato con quattro spicci. → Me pagou com quase nada.</div><p style=\"margin-top:10px\"><strong>\"ci sarà da ridere\"</strong> — Futuro do verbo 'essere' + 'da ridere' (para rir). Pode ser literal (vai ser divertido) ou irônico (vai dar problema / vai ser um fracasso engraçado). Contexto aqui sugere autoironia.</p><div class=\"exemplo\">Se continua così, ci sarà da ridere. → Se continuar assim, vai dar o que rir (vai dar problema).</div>"
+      }
+    },
+    {
+      "start": 42,
+      "italian": "E via, biglietto di sola andata per Bangkok.",
+      "translation": "E lá vou eu, passagem só de ida para Bangkok.",
+      "tip": "<strong>\"e via\"</strong> — Expressão que significa 'e lá vou eu', 'e vamos nessa', indicando partida ou início de uma ação. <strong>\"Bangkok\"</strong> — Capital da Tailândia, destino comum para mochileiros e pessoas que buscam recomeços.",
+      "miniLesson": {
+        "title": "Expressão 'E Via' e 'Biglietto di Sola Andata' (revisão)",
+        "content": "<p><strong>\"e via\"</strong> — Interjeição que indica impulso para partir. Como um 'e lá vamos nós'. Usada antes de descrever uma partida ou ação decisiva.</p><div class=\"exemplo\">E via, si parte! → E lá vamos, a gente parte!</div><p style=\"margin-top:10px\"><strong>\"biglietto di sola andata\"</strong> — Revisão: passagem só de ida simboliza compromisso com uma nova vida, sem plano de retorno.</p><div class=\"exemplo\">Ha comprato un biglietto di sola andata e non è più tornato. → Comprou uma passagem só de ida e nunca mais voltou.</div>"
+      }
+    },
+    {
+      "start": 44,
+      "italian": "È stato facile, manco per sbaglio.",
+      "translation": "Foi fácil, nem por acaso (não foi nada fácil).",
+      "tip": "<strong>\"manco per sbaglio\"</strong> — Expressão idiomática forte que significa 'nem por acaso', 'de jeito nenhum', 'nem pensar'. 'Manco' é variante coloquial de 'neanche' (nem, nem mesmo). A frase é irônica: não foi fácil, nem por acaso.",
+      "miniLesson": {
+        "title": "Expressão Negativa 'Manco Per Sbaglio'",
+        "content": "<p><strong>\"manco\"</strong> — Em italiano coloquial, 'manco' substitui 'neanche' ou 'nemmeno' (nem, nem mesmo). 'Manco per sbaglio' = nem por acaso, nem se fosse por engano.</p><div class=\"exemplo\">Manco morto lo farò. → Nem morto eu farei isso.</div><p style=\"margin-top:10px\"><strong>Uso irônico</strong> — 'È stato facile, manco per sbaglio.' = Foi fácil? Nem por acaso (ou seja, foi dificílimo). A ironia é clara pelo tom.</p><div class=\"exemplo\">Sì, certo, manco per sbaglio! → Sim, claro, nem por acaso! (ironia)</div>"
+      }
+    },
+    {
+      "start": 45,
+      "italian": "Me la sto facendo addosso.",
+      "translation": "Estou morrendo de medo (literalmente 'estou fazendo nas calças').",
+      "tip": "<strong>\"farsela addosso\"</strong> — Expressão idiomática forte que significa 'estar com muito medo', 'tremer de medo', 'borrar as calças'. Muito coloquial. <strong>\"me la sto facendo\"</strong> — Forma progressiva do verbo reflexivo 'farsela' (fazê-la) + 'addosso' (em cima de si).",
+      "miniLesson": {
+        "title": "Expressão Forte 'Farsela Addosso'",
+        "content": "<p><strong>\"farsela addosso\"</strong> — Verbo pronominal intenso. Literalmente 'fazer (algo) em cima de si mesmo'. Usado quase exclusivamente no sentido figurado de 'estar apavorado'.</p><div class=\"exemplo\">Quando ha visto il ladro, se l'è fatta addosso. → Quando viu o ladrão, borrou as calças de medo.</div><p style=\"margin-top:10px\"><strong>\"me la sto facendo addosso\"</strong> — Presente progressivo: 'sto facendo' + 'me la' (partículas) + 'addosso'. Indica que o medo está acontecendo agora, no momento da partida.</p><div class=\"exemplo\">Prima dell'esame me la faccio addosso. → Antes da prova, morro de medo.</div>"
+      }
+    },
+    {
+      "start": 46,
+      "italian": "Chiaro, l'incertezza economica e le pressioni sociali mi tormentano, palese, ma la paura di vivere nel rimpianto è ancora più forte.",
+      "translation": "Claro, a incerteza econômica e as pressões sociais me atormentam, óbvio, mas o medo de viver no arrependimento é ainda mais forte.",
+      "tip": "<strong>\"palese\"</strong> — Adjetivo usado como interjeição: 'óbvio', 'evidente', 'claro como a luz do dia'. <strong>\"mi tormentano\"</strong> — 'Me atormentam', verbo forte. <strong>\"vivere nel rimpianto\"</strong> — 'Viver no arrependimento' (pior do que fracassar é nunca ter tentado).",
+      "miniLesson": {
+        "title": "Adjetivo 'Palese' como Interjeição e 'Vivere Nel Rimpianto'",
+        "content": "<p><strong>\"palese\"</strong> — Adjetivo que significa 'evidente', 'óbvio'. No falar coloquial, pode ser usado sozinho como interjeção: 'Palese!' = 'óbvio!', 'claríssimo!'.</p><div class=\"exemplo\">Certo che sono arrabbiato, palese! → Claro que estou bravo, óbvio!</div><p style=\"margin-top:10px\"><strong>\"vivere nel rimpianto\"</strong> — Expressão que descreve uma vida cheia de 'e se...' e arrependimentos por oportunidades não aproveitadas. 'Rimpianto' é o arrependimento pelo que não se fez (diferente de 'pentimento' por erro cometido).</p><div class=\"exemplo\">Meglio fallire che vivere nel rimpianto. → Melhor falir do que viver no arrependimento.</div>"
+      }
+    },
+    {
+      "start": 52,
+      "italian": "Per cui, non so che cosa farò con la mia vita, ma so che prima o poi ne troverò un senso, troverò una strada.",
+      "translation": "Portanto, não sei o que farei com minha vida, mas sei que mais cedo ou mais tarde encontrarei um sentido, encontrarei um caminho.",
+      "tip": "<strong>\"per cui\"</strong> — 'Portanto', 'por isso', 'então' (conjunção conclusiva). <strong>\"prima o poi\"</strong> — Expressão que significa 'mais cedo ou mais tarde' (inevitavelmente). <strong>\"ne troverò un senso\"</strong> — 'Ne' pronome partitivo que substitui 'della vita' (disso, da vida). 'Troverò' é o futuro de 'trovare'.",
+      "miniLesson": {
+        "title": "Conjunção 'Per Cui', Expressão 'Prima o Poi' e Pronome 'Ne'",
+        "content": "<p><strong>\"per cui\"</strong> — Conjunção conclusiva muito usada no italiano falado e escrito. Equivalente a 'quindi', 'dunque' (portanto, então).</p><div class=\"exemplo\">Non avevo soldi, per cui non sono partito. → Não tinha dinheiro, portanto não parti.</div><p style=\"margin-top:10px\"><strong>\"prima o poi\"</strong> — Expressão adverbial de tempo que indica certeza de que algo acontecerá, mesmo que não se saiba quando. Otimismo na incerteza.</p><div class=\"exemplo\">Prima o poi troverò un lavoro. → Mais cedo ou mais tarde encontrarei um emprego.</div><p style=\"margin-top:10px\"><strong>\"ne troverò un senso\"</strong> — 'Ne' substitui 'di questa vita'. O pronome partitivo 'ne' indica 'disso', 'dessa coisa'.</p><div class=\"exemplo\">Ne parlerò con lui. → Falarei disso com ele.</div>"
+      }
+    },
+    {
+      "start": 57,
+      "italian": "E se non dovessi mai trovarla, amen.",
+      "translation": "E se eu nunca a encontrasse, amém (paciência, fazer o quê).",
+      "tip": "<strong>\"se non dovessi mai\"</strong> — Estrutura condicional com 'dovere' no congiuntivo imperfetto (caso eu não devesse / caso eu não venha a). 'Mai' reforça a improbabilidade. <strong>\"amen\"</strong> — Usado como 'paciência', 'fazer o quê', 'que seja', 'aceito as consequências'.",
+      "miniLesson": {
+        "title": "Condicional com 'Dovere' no Congiuntivo e 'Amen' Coloquial",
+        "content": "<p><strong>\"se non dovessi mai trovarla\"</strong> — Estrutura de hipótese remota no futuro: 'se' + congiuntivo imperfetto do verbo 'dovere' (dovessi) + 'mai' + verbo principal. Expressa uma possibilidade distante que o falante aceita.</p><div class=\"exemplo\">Se dovessi fallire, ricomincerei. → Se eu viesse a falhar, recomeçaria.</div><p style=\"margin-top:10px\"><strong>\"amen\"</strong> — Além do sentido religioso, 'amen' é usado coloquialmente para expressar aceitação resignada de algo que não se pode controlar. Como um 'paciência' ou 'que seja'.</p><div class=\"exemplo\">Non abbiamo alternative, amen. → Não temos alternativa, paciência.</div>"
+      }
+    },
+    {
+      "start": 59,
+      "italian": "Quanto meno potrò dire di aver vissuto una vita piena provandoci.",
+      "translation": "Ao menos poderei dizer que vivi uma vida plena tentando.",
+      "tip": "<strong>\"quanto meno\"</strong> — Expressão que significa 'ao menos', 'pelo menos'. <strong>\"potrò dire\"</strong> — Futuro do verbo 'potere' (poder). <strong>\"aver vissuto una vita piena\"</strong> — Infinito passado (ter vivido). <strong>\"provandoci\"</strong> — Gerúndio de 'provarci' (tentar) + pronome 'ci' (nisso) = tentando (nisso).",
+      "miniLesson": {
+        "title": "Futuro 'Potrò', Infinito Passado e Gerúndio com Pronome",
+        "content": "<p><strong>\"potrò\"</strong> — Futuro do verbo 'potere' (poder). 'Potrò dire' = poderei dizer. O futuro expressa certeza sobre uma consequência futura da ação presente.</p><div class=\"exemplo\">Un giorno potrò raccontare tutto. → Um dia poderei contar tudo.</div><p style=\"margin-top:10px\"><strong>\"aver vissuto\"</strong> — Infinito passado (ou infinito composto). Indica uma ação completada antes da ação do verbo principal. 'Di aver vissuto' = de ter vivido.</p><div class=\"exemplo\">Sono felice di averlo incontrato. → Estou feliz de tê-lo encontrado.</div><p style=\"margin-top:10px\"><strong>\"provandoci\"</strong> — Gerúndio do verbo 'provare' (tentar) + pronome partícula 'ci' (nisso). 'Provandoci' = tentando (nisso / essa coisa).</p><div class=\"exemplo\">Continua provandoci, non mollare! → Continue tentando, não desista!</div>"
+      }
+    },
+    {
+      "start": 62,
+      "italian": "In tutto questo io cercherò comunque di continuare a portarvi con me in queste pazze avventure, viaggi, cose.",
+      "translation": "Em todo esse processo, eu continuarei de qualquer forma a levar vocês comigo nestas loucas aventuras, viagens, coisas assim.",
+      "tip": "<strong>\"in tutto questo\"</strong> — 'Em todo esse contexto', 'durante todo esse processo'. <strong>\"cercherò comunque di continuare\"</strong> — 'Tentarei de qualquer forma continuar' — futuro de 'cercare di' (tentar). <strong>\"portarvi\"</strong> — 'Portare' + 'vi' (a vocês) = levar vocês. <strong>\"pazze avventure, viaggi, cose\"</strong> — Tom coloquial, lista informal: 'aventuras loucas, viagens, essas coisas'.",
+      "miniLesson": {
+        "title": "Futuro de 'Cercare' e Pronome 'Vi' como Objeto",
+        "content": "<p><strong>\"cercherò\"</strong> — Futuro do verbo 'cercare' (procurar / tentar). 'Cercherò di continuare' = tentarei continuar.</p><div class=\"exemplo\">Cercherò di aiutarti. → Tentarei te ajudar.</div><p style=\"margin-top:10px\"><strong>\"portarvi\"</strong> — O infinitivo 'portare' (levar) + pronome pessoal 'vi' (a vocês) se unem em uma só palavra: 'portarvi' = levar-vos / levar vocês.</p><div class=\"exemplo\">Voglio portarvi al mare. → Quero levar vocês ao mar.</div><p style=\"margin-top:10px\"><strong>\"comunque\"</strong> — Advérbio que significa 'de qualquer forma', 'de todo modo', 'apesar de tudo'.</p><div class=\"exemplo\">Comunque vada, sarò felice. → De qualquer forma que for, serei feliz.</div>"
+      }
+    },
+    {
+      "start": 68,
+      "italian": "E cosa succederà? Buh, lo scopriremo.",
+      "translation": "E o que acontecerá? Buh, descobriremos.",
+      "tip": "<strong>\"buh\"</strong> — Interjeição de incerteza, dúvida ou mistério. Como um 'sei lá' ou 'não sei'. <strong>\"lo scopriremo\"</strong> — Futuro do verbo 'scoprire' (descobrir) + pronome 'lo' (isso). 'Scopriremo' = descobriremos.",
+      "miniLesson": {
+        "title": "Interjeição 'Buh' e Futuro de 'Scoprire'",
+        "content": "<p><strong>\"buh\"</strong> — Interjeição italiana muito comum em conversas informais. Expressa dúvida, incerteza, mistério ou que a resposta é desconhecida. Como um 'bom...', 'sei lá...', 'não faço ideia'.</p><div class=\"exemplo\">Buh, non so cosa risponderti. → Sei lá, não sei o que te responder.</div><p style=\"margin-top:10px\"><strong>\"lo scopriremo\"</strong> — Futuro simples do verbo 'scoprire' (descobrir) + pronome 'lo' (isso). Forma: 'scopriremo' (nós descobriremos). É otimista: o futuro dirá.</p><div class=\"exemplo\">Chi vincerà? Lo scopriremo solo alla fine. → Quem vencerá? Descobriremos só no final.</div>"
+      }
+    }
+  ]
+}
