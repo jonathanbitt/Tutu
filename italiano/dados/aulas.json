@@ -9,10 +9,22 @@
       "thumbnail": "🇮🇹✨",
       "duration": "~1 min",
       "words": 17,
+      "modules": 11,
+      "featured": true,
+      "color": "#1a6b4a"
+    },
+    {
+      "id": 2,
+      "title": "Lasciare Tutto e Ricominciare",
+      "subtitle": "Coragem, incerteza e a busca por uma vida com sentido",
+      "description": "Uma narrativa poderosa sobre deixar um emprego dos sonhos, comprar uma passagem só de ida para o Sudeste Asiático e recomeçar do zero.",
+      "level": "Intermediário",
+      "thumbnail": "✈️🌏",
+      "duration": "~1 min",
+      "words": 32,
       "modules": 10,
       "featured": true,
-      "color": "#1a6b4a",
-      "videoUrl": "https://jonathanbitt.github.io/Tutu/italiano/dados/videos/video1.mp4"
+      "color": "#e3b341"
     }
   ]
 }
