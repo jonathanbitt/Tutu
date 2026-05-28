@@ -1,0 +1,38 @@
+{
+  "titulo": "Quizlet — La Panineria Premiata a Torino",
+  "palavras": 28,
+  "licoes": 7,
+  "descricao": "Vocabulário gastronômico e expressões coloquiais italianas",
+  "conteudo": {
+    "cards": [
+      { "termo": "panineria", "definicao": "loja de sanduíches / paninoteca", "frase": "Vado in panineria a prendere un panino.", "dificuldade": 1 },
+      { "termo": "premiato", "definicao": "premiado", "frase": "Un ristorante premiato.", "dificuldade": 1 },
+      { "termo": "gambero rosso", "definicao": "guia gastronômico italiano (também 'camarão vermelho')", "frase": "Questo locale è premiato Gambero Rosso.", "dificuldade": 2 },
+      { "termo": "provare", "definicao": "provar / experimentar", "frase": "Voglio provare questo piatto.", "dificuldade": 1 },
+      { "termo": "da una vita", "definicao": "há uma vida inteira / há muito tempo", "frase": "Non ti vedo da una vita!", "dificuldade": 2 },
+      { "termo": "a due passi", "definicao": "muito perto / a dois passos", "frase": "Il mare è a due passi.", "dificuldade": 2 },
+      { "termo": "posticino", "definicao": "lugarzinho (diminutivo carinhoso)", "frase": "Un bel posticino tranquillo.", "dificuldade": 2 },
+      { "termo": "altissima qualità", "definicao": "altíssima qualidade", "frase": "Prodotti di altissima qualità.", "dificuldade": 2 },
+      { "termo": "provenienti", "definicao": "provenientes / originários de", "frase": "Merci provenienti dall'estero.", "dificuldade": 2 },
+      { "termo": "piccoli produttori", "definicao": "pequenos produtores (locais, artesanais)", "frase": "Compro da piccoli produttori.", "dificuldade": 2 },
+      { "termo": "si può", "definicao": "pode-se / é possível (forma impessoal)", "frase": "Si può entrare?", "dificuldade": 2 },
+      { "termo": "base", "definicao": "base (da focaccia / do sanduíche)", "frase": "Quattro basi diverse.", "dificuldade": 1 },
+      { "termo": "artigianalmente", "definicao": "artesanalmente", "frase": "Pane fatto artigianalmente.", "dificuldade": 2 },
+      { "termo": "farsi tentare", "definicao": "deixar-se tentar / ceder à tentação", "frase": "Mi sono fatta tentare dal dolce.", "dificuldade": 3 },
+      { "termo": "panino del mese", "definicao": "sanduíche do mês (oferta especial)", "frase": "Oggi provo il panino del mese.", "dificuldade": 2 },
+      { "termo": "focaccia integrale", "definicao": "focaccia integral", "frase": "Focaccia integrale con patate.", "dificuldade": 1 },
+      { "termo": "nocciole", "definicao": "avelãs", "frase": "Le nocciole piemontesi sono famose.", "dificuldade": 1 },
+      { "termo": "versione esagerata", "definicao": "versão exagerada (maior / com mais ingredientes)", "frase": "Ho preso la versione esagerata.", "dificuldade": 2 },
+      { "termo": "scoppiare (metaforico)", "definicao": "explodir (metaforicamente: estar muito cheio)", "frase": "La valigia scoppiava.", "dificuldade": 2 },
+      { "termo": "raccontare una storia", "definicao": "contar uma história (metáfora sobre ingredientes)", "frase": "Ogni ingrediente racconta una storia.", "dificuldade": 2 },
+      { "termo": "freschezza", "definicao": "frescor / qualidade de fresco", "frase": "La freschezza del pesce.", "dificuldade": 2 },
+      { "termo": "buonissimo", "definicao": "muito bom / bomíssimo / delicioso", "frase": "Questa pizza è buonissima!", "dificuldade": 1 },
+      { "termo": "rubare un morso", "definicao": "roubar uma mordida / provar um pedaço (da comida de outro)", "frase": "Posso rubare un morso?", "dificuldade": 2 },
+      { "termo": "spettacolare", "definicao": "espetacular / fantástico", "frase": "La festa è stata spettacolare.", "dificuldade": 1 },
+      { "termo": "stracciatella", "definicao": "queijo fresco em fios (típico da Puglia)", "frase": "Stracciatella e mortadella.", "dificuldade": 2 },
+      { "termo": "stracciata a mano", "definicao": "rasgada à mão (processo artesanal)", "frase": "Mozzarella stracciata a mano.", "dificuldade": 2 },
+      { "termo": "siete mai stati", "definicao": "vocês já estiveram (pergunta sobre experiência)", "frase": "Siete mai stati a Roma?", "dificuldade": 2 },
+      { "termo": "consigliereste", "definicao": "recomendariam (condicional educado)", "frase": "Quale mi consigliereste?", "dificuldade": 2 }
+    ]
+  }
+}

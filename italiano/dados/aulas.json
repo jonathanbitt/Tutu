@@ -25,6 +25,19 @@
       "modules": 10,
       "featured": true,
       "color": "#e3b341"
+    },
+    {
+      "id": 3,
+      "title": "La Panineria Premiata a Torino",
+      "subtitle": "Ingredientes de altíssima qualidade e sabores únicos",
+      "description": "Conheça a única panineria premiada Gambero Rosso em Torino: Mollica. Focacce artigianais, ingredientes selecionados e uma explosão de sabores.",
+      "level": "Intermediário",
+      "thumbnail": "🥖🇮🇹",
+      "duration": "~1 min",
+      "words": 28,
+      "modules": 11,
+      "featured": true,
+      "color": "#c97e2a"
     }
   ]
 }

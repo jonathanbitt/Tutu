@@ -1,0 +1,616 @@
+{
+  "aula": 3,
+  "titulo": "ITALIANO — La Panineria Premiata a Torino",
+  "paragrafos": [
+    {
+      "indice": 0,
+      "referencia": "Provo l'unica panineria premiata gambero rosso a Torino.",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "O que significa o sufixo '-eria' em palavras como 'panineria'?",
+          "opcoes": [
+            "Um diminutivo carinhoso",
+            "Um lugar onde se faz ou vende algo",
+            "Um aumentativo",
+            "Uma ação repetitiva"
+          ],
+          "resposta": "Um lugar onde se faz ou vende algo",
+          "explicacao": "O sufixo '-eria' indica um lugar comercial ou estabelecimento. Exemplos: 'pizzeria', 'gelateria', 'panetteria' (padaria)."
+        },
+        {
+          "tipo": "multipla",
+          "pergunta": "O que é o 'Gambero Rosso' mencionado no vídeo?",
+          "opcoes": [
+            "Um tipo de camarão italiano",
+            "Um importante guia gastronômico e premiação italiana",
+            "Uma cor de tinta",
+            "Um restaurante em Roma"
+          ],
+          "resposta": "Um importante guia gastronômico e premiação italiana",
+          "explicacao": "Gambero Rosso é uma das mais importantes referências gastronômicas da Itália (revista, guia de restaurantes)."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com a palavra correta:",
+          "pergunta": "Vado in ___ a prendere un panino.",
+          "resposta": "panineria",
+          "alternativas": ["panineria", "Panineria"],
+          "explicacao": "'Panineria' é a loja especializada em sanduíches."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete a frase sobre o prêmio:",
+          "pergunta": "Questo ristorante è ___ Gambero Rosso.",
+          "resposta": "premiato",
+          "alternativas": ["premiato", "Premiato"],
+          "explicacao": "'Premiato Gambero Rosso' = premiado pelo Gambero Rosso."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene a frase:",
+          "palavras": ["Torino", "premiata", "l'unica", "a", "gambero", "rosso", "panineria", "provo"],
+          "resposta": "provo l'unica panineria premiata gambero rosso a Torino",
+          "explicacao": "Verbo 'provo' + 'l'unica panineria' + 'premiata gambero rosso' + 'a Torino'."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza: <em>Una panineria premiata</em>",
+          "resposta": "Uma panineria premiada",
+          "palavrasChave": ["panineria", "premiada"],
+          "explicacao": "'Premiata' é o particípio passado de 'premiare' (premiar)."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique:",
+          "palavras": ["panineria"],
+          "resposta": "panineria",
+          "explicacao": "'Panineria' (pa-ni-ne-rí-a) - 'pa' com 'a' aberta, 'ni' e 'ne' com 'e' fechada, 'ria' como 'rí-a'."
+        }
+      ]
+    },
+    {
+      "indice": 2,
+      "referencia": "Sono da Molica, a due passi dalla Mole.",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "O que significa a expressão <em>a due passi</em>?",
+          "opcoes": [
+            "A dois passos (muito perto)",
+            "A dois pés",
+            "A dois passos (literal, medindo passos)",
+            "A dois quilômetros"
+          ],
+          "resposta": "A dois passos (muito perto)",
+          "explicacao": "'A due passi' é uma expressão idiomática que significa 'muito perto', 'a poucos passos de distância'."
+        },
+        {
+          "tipo": "multipla",
+          "pergunta": "Por que usamos a preposição <em>da</em> em <em>sono da Mollica</em>?",
+          "opcoes": [
+            "Porque indica movimento",
+            "Porque indica estar em um estabelecimento comercial ou na casa de alguém",
+            "Porque indica origem",
+            "Porque indica posse"
+          ],
+          "resposta": "Porque indica estar em um estabelecimento comercial ou na casa de alguém",
+          "explicacao": "Em italiano, usa-se a preposição 'da' para indicar que se está em um estabelecimento comercial ou na casa de alguém."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete a expressão de proximidade:",
+          "pergunta": "Il mare è ___ passi da casa mia.",
+          "resposta": "a due",
+          "alternativas": ["a due", "A due"],
+          "explicacao": "A expressão é 'a due passi da' (a dois passos de)."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com a preposição correta:",
+          "pergunta": "Vado ___ dottore.",
+          "resposta": "dal",
+          "alternativas": ["dal", "Dal"],
+          "explicacao": "'Vado dal dottore' = vou ao médico. 'Da' + artigo 'il' = 'dal'."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene:",
+          "palavras": ["Mole", "dalla", "passi", "a", "due", "da", "sono", "Molica"],
+          "resposta": "sono da Molica a due passi dalla Mole",
+          "explicacao": "'Sono da Mollica' + 'a due passi' + 'dalla Mole'."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza: <em>Il Colosseo è a due passi da qui</em>",
+          "resposta": "O Coliseu fica a dois passos daqui",
+          "palavrasChave": ["Coliseu", "passos", "aqui"],
+          "explicacao": "Expressão para indicar grande proximidade."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a expressão:",
+          "palavras": ["a", "due", "passi"],
+          "resposta": "a due passi",
+          "explicacao": "'A due passi' (a dú-e pás-si) - 'a' aberta, 'due' como 'dú-e', 'passi' com 'a' aberta e 'ss' geminado."
+        }
+      ]
+    },
+    {
+      "indice": 5,
+      "referencia": "Ma io non so cosa scegliere.",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "O que significa a estrutura <em>non so cosa + infinitivo</em>?",
+          "opcoes": [
+            "Não sei o que + verbo no infinitivo (expressando indecisão)",
+            "Não sei fazer algo",
+            "Não sei onde ir",
+            "Não sei quem é"
+          ],
+          "resposta": "Não sei o que + verbo no infinitivo (expressando indecisão)",
+          "explicacao": "Esta estrutura é usada para expressar indecisão: 'non so cosa scegliere' = não sei o que escolher."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete a estrutura de indecisão:",
+          "pergunta": "Non so ___ dire.",
+          "resposta": "cosa",
+          "alternativas": ["cosa", "Cosa"],
+          "explicacao": "'Non so cosa dire' = não sei o que dizer."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com o verbo no infinitivo:",
+          "pergunta": "Non so dove ___ (andare).",
+          "resposta": "andare",
+          "alternativas": ["andare", "Andare"],
+          "explicacao": "'Non so dove andare' = não sei onde ir."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene:",
+          "palavras": ["non", "scegliere", "ma", "so", "io", "cosa"],
+          "resposta": "ma io non so cosa scegliere",
+          "explicacao": "'Ma io' + 'non so' + 'cosa' + infinitivo 'scegliere'."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza: <em>Non so chi chiamare</em>",
+          "resposta": "Não sei quem chamar",
+          "palavrasChave": ["sei", "chamar"],
+          "explicacao": "Estrutura similar com 'chi' (quem)."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique:",
+          "palavras": ["scegliere"],
+          "resposta": "scegliere",
+          "explicacao": "'Scegliere' (shé-lie-re) - 'sc' como 'sh', 'e' aberta, 'gl' como 'lh' (palatal), 'ie' como 'ié', 're' como 're'."
+        }
+      ]
+    },
+    {
+      "indice": 6,
+      "referencia": "Si può scegliere fra quattro basi, tutte realizzate artigianalmente da loro.",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "O que significa a forma impessoal <em>si può</em> + infinitivo?",
+          "opcoes": [
+            "Ele/ela pode",
+            "Pode-se / é possível (sentido geral, sem sujeito específico)",
+            "Eles podem",
+            "Nós podemos"
+          ],
+          "resposta": "Pode-se / é possível (sentido geral, sem sujeito específico)",
+          "explicacao": "O 'si' impessoal + 'può' (pode) indica uma possibilidade geral, sem um sujeito definido."
+        },
+        {
+          "tipo": "multipla",
+          "pergunta": "O que significa o advérbio <em>artigianalmente</em>?",
+          "opcoes": [
+            "Industrialmente",
+            "Artesanalmente / feito à mão",
+            "Rapidamente",
+            "Caramente"
+          ],
+          "resposta": "Artesanalmente / feito à mão",
+          "explicacao": "'Artigianalmente' deriva de 'artigianale' (artesanal) e indica que algo é feito à mão, com técnicas tradicionais."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com a forma impessoal:",
+          "pergunta": "___ entrare? (Pode-se entrar?)",
+          "resposta": "si può",
+          "alternativas": ["si può", "Si può"],
+          "explicacao": "'Si può entrare?' é a forma impessoal para perguntar se é possível entrar."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com o advérbio:",
+          "pergunta": "Pane fatto ___ . (Pão feito artesanalmente.)",
+          "resposta": "artigianalmente",
+          "alternativas": ["artigianalmente", "Artigianalmente"],
+          "explicacao": "'Artigianalmente' é o advérbio que indica produção artesanal."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene:",
+          "palavras": ["basi", "fra", "quattro", "realizzate", "artigianalmente", "da", "loro", "tutte", "può", "scegliere", "si"],
+          "resposta": "si può scegliere fra quattro basi tutte realizzate artigianalmente da loro",
+          "explicacao": "'Si può scegliere' + 'fra quattro basi' + 'tutte realizzate artigianalmente da loro'."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza: <em>Prodotti realizzati artigianalmente</em>",
+          "resposta": "Produtos feitos artesanalmente",
+          "palavrasChave": ["produtos", "feitos", "artesanalmente"],
+          "explicacao": "Valoriza a produção manual e não industrial."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique:",
+          "palavras": ["artigianalmente"],
+          "resposta": "artigianalmente",
+          "explicacao": "'Artigianalmente' (ar-ti-ja-nal-mén-te) - 'ar' como 'ar', 'ti' como 'ti', 'gia' como 'ja', 'nal' como 'nal', 'mente' como 'mén-te'."
+        }
+      ]
+    },
+    {
+      "indice": 8,
+      "referencia": "Io però mi son fatta tentare dal panino del mese.",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "O que significa a expressão <em>farsi tentare</em>?",
+          "opcoes": [
+            "Deixar-se tentar / ceder à tentação",
+            "Fazer uma tentativa",
+            "Tentar algo novo",
+            "Recusar uma oferta"
+          ],
+          "resposta": "Deixar-se tentar / ceder à tentação",
+          "explicacao": "'Farsi tentare' é um verbo reflexivo que significa 'deixar-se tentar', 'ceder à tentação'."
+        },
+        {
+          "tipo": "multipla",
+          "pergunta": "O que significa <em>panino del mese</em>?",
+          "opcoes": [
+            "Sanduíche do mês (criação especial que muda mensalmente)",
+            "Sanduíche mensal (assinatura)",
+            "Sanduíche do ano",
+            "Sanduíque do dia"
+          ],
+          "resposta": "Sanduíche do mês (criação especial que muda mensalmente)",
+          "explicacao": "'Del mese' indica uma oferta ou criação especial que muda a cada mês."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com o verbo reflexivo:",
+          "pergunta": "Non mi ___ tentare! (Não me faça tentar!)",
+          "resposta": "fare",
+          "alternativas": ["fare", "Fare"],
+          "explicacao": "A expressão é 'non mi fare tentare' (imperativo negativo)."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete a expressão de oferta mensal:",
+          "pergunta": "La pizza ___ mese è fantastica.",
+          "resposta": "del",
+          "alternativas": ["del", "Del"],
+          "explicacao": "'Del mese' = do mês (preposição 'di' + artigo 'il' = 'del')."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene:",
+          "palavras": ["tentare", "mesi", "fatta", "dal", "però", "del", "son", "mi", "panino", "io"],
+          "resposta": "io però mi son fatta tentare dal panino del mese",
+          "explicacao": "'Io però' + 'mi son fatta tentare' + 'dal panino del mese'."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza: <em>Mi sono fatta tentare dal dolce</em>",
+          "resposta": "Me deixei tentar pela sobremesa",
+          "palavrasChave": ["deixei", "tentar", "sobremesa"],
+          "explicacao": "Expressão comum para admitir que se cedeu à tentação."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique:",
+          "palavras": ["tentare"],
+          "resposta": "tentare",
+          "explicacao": "'Tentare' (ten-tá-re) - 'e' fechada, 'ta' com 't' aspirado, 're' como 're'."
+        }
+      ]
+    },
+    {
+      "indice": 11,
+      "referencia": "Ovviamente ho preso la versione esagerata e, raga, vi giuro, la focaccia scoppiava per quanto era piena.",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "O que significa o verbo <em>scoppiare</em> neste contexto ('la focaccia scoppiava')?",
+          "opcoes": [
+            "A focaccia literalmente explodiu",
+            "A focaccia estava tão cheia que parecia que ia explodir (metáfora)",
+            "A focaccia estourou no forno",
+            "A focaccia foi cortada"
+          ],
+          "resposta": "A focaccia estava tão cheita que parecia que ia explodir (metáfora)",
+          "explicacao": "É um uso metafórico do verbo 'scoppiare' (explodir) para descrever algo extremamente cheio."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com o verbo no imperfeito:",
+          "pergunta": "La valigia ___ per quanto era piena.",
+          "resposta": "scoppiava",
+          "alternativas": ["scoppiava", "Scoppiava"],
+          "explicacao": "Imperfeito descritivo: 'scoppiava' = explodia (de tão cheia)."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete a estrutura causal:",
+          "pergunta": "La focaccia scoppiava ___ quanto era piena.",
+          "resposta": "per",
+          "alternativas": ["per", "Per"],
+          "explicacao": "'Per quanto era piena' = pelo quanto estava cheia (causa da explosão metafórica)."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene:",
+          "palavras": ["era", "scoppiava", "giuro", "ragazzi", "focaccia", "la", "per", "quanto", "piena", "vi", "versione", "e", "esagerata", "ovviamente", "preso", "ho", "la"],
+          "resposta": "ovviamente ho preso la versione esagerata e ragazzi vi giuro la focaccia scoppiava per quanto era piena",
+          "explicacao": "Frase longa com 'ovviamente' + 'ho preso la versione esagerata' + 'e ragazzi vi giuro' + descrição da focaccia."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza: <em>Il piatto scoppiava di cibo</em>",
+          "resposta": "O prato explodia de comida (estava lotado)",
+          "palavrasChave": ["prato", "explodia", "comida"],
+          "explicacao": "Metáfora similar para descrever prato muito cheio."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique:",
+          "palavras": ["scoppiava"],
+          "resposta": "scoppiava",
+          "explicacao": "'Scoppiava' (skop-pi-á-va) - 'sco' como 'skó', 'pp' geminado, 'ia' como 'iá', 'va' como 'va'."
+        }
+      ]
+    },
+    {
+      "indice": 14,
+      "referencia": "Mmh, buonissimo.",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "O que significa o superlativo <em>buonissimo</em>?",
+          "opcoes": [
+            "Bom (normal)",
+            "Muito bom / bomíssimo / delicioso",
+            "Mais ou menos",
+            "Ruim"
+          ],
+          "resposta": "Muito bom / bomíssimo / delicioso",
+          "explicacao": "O sufixo '-issimo' forma o superlativo absoluto. 'Buonissimo' = muito bom, bomíssimo."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com o superlativo:",
+          "pergunta": "Questa pizza è ___! (muito boa)",
+          "resposta": "buonissima",
+          "alternativas": ["buonissima", "Buonissima"],
+          "explicacao": "'Buonissima' é a forma feminina singular do superlativo de 'buono'."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com o sufixo do superlativo:",
+          "pergunta": "Un vino buon___.",
+          "resposta": "issimo",
+          "alternativas": ["issimo", "Issimo"],
+          "explicacao": "O sufixo '-issimo' forma o superlativo: 'buonissimo' (bomíssimo)."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene:",
+          "palavras": ["mmh", "buonissimo"],
+          "resposta": "mmh buonissimo",
+          "explicacao": "Onomatopeia 'mmh' + superlativo 'buonissimo'."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza: <em>Questa pasta è buonissima</em>",
+          "resposta": "Esta massa é muito boa / deliciosa",
+          "palavrasChave": ["massa", "muito", "boa"],
+          "explicacao": "'Buonissima' expressa grande entusiasmo pela comida."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique:",
+          "palavras": ["buonissimo"],
+          "resposta": "buonissimo",
+          "explicacao": "'Buonissimo' (buo-nís-si-mo) - 'buo' como 'buó', 'nis' com 'i' curto, 'ss' geminado, 'mo' como 'mo'."
+        }
+      ]
+    },
+    {
+      "indice": 16,
+      "referencia": "E alla fine ho rubato anche un morso del casaro.",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "O que significa a expressão <em>rubare un morso</em>?",
+          "opcoes": [
+            "Roubar literalmente uma mordida",
+            "Dar uma mordida (no alimento de outra pessoa), provar um pedaço",
+            "Morder alguém",
+            "Comer rapidamente"
+          ],
+          "resposta": "Dar uma mordida (no alimento de outra pessoa), provar um pedaço",
+          "explicacao": "É uma expressão coloquial e brincalhona para dizer que se provou um pedaço da comida de outra pessoa."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete a expressão:",
+          "pergunta": "Posso ___ un morso della tua pizza?",
+          "resposta": "rubare",
+          "alternativas": ["rubare", "Rubare"],
+          "explicacao": "'Posso rubare un morso?' = posso roubar uma mordida? (provar um pedaço)."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete:",
+          "pergunta": "Alla fine ho rubato un morso del suo ___.",
+          "resposta": "panino",
+          "alternativas": ["panino", "Panino"],
+          "explicacao": "Completando com 'panino' (sanduíche) para dar sentido à frase."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene:",
+          "palavras": ["alla", "un", "fine", "rubato", "casaro", "del", "e", "morso", "ho", "anche"],
+          "resposta": "e alla fine ho rubato anche un morso del casaro",
+          "explicacao": "'E alla fine' + 'ho rubato' + 'anche un morso del casaro'."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza: <em>Rubare un morso al tuo gelato</em>",
+          "resposta": "Roubar uma mordida do seu sorvete / provar um pedaço do seu sorvete",
+          "palavrasChave": ["provar", "sorvete"],
+          "explicacao": "Expressão usada entre amigos para provar um pouco da comida do outro."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique:",
+          "palavras": ["morso"],
+          "resposta": "morso",
+          "explicacao": "'Morso' (mór-so) - 'o' aberta, 'r' vibrante, 'so' como 'so'."
+        }
+      ]
+    },
+    {
+      "indice": 18,
+      "referencia": "E voi siete mai stati da mollica?",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "O que a palavra <em>mai</em> indica em perguntas como <em>siete mai stati</em>?",
+          "opcoes": [
+            "Nunca",
+            "Já (perguntando sobre experiência passada)",
+            "Mal",
+            "Melhor"
+          ],
+          "resposta": "Já (perguntando sobre experiência passada)",
+          "explicacao": "'Mai' em perguntas com passato prossimo significa 'já', perguntando se a pessoa teve aquela experiência."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete a pergunta de experiência:",
+          "pergunta": "___ mai stato a Roma? (Você já esteve em Roma?)",
+          "resposta": "sei",
+          "alternativas": ["sei", "Sei"],
+          "explicacao": "'Sei mai stato?' = você já esteve? (verbo 'essere' no passato prossimo)."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com o pronome:",
+          "pergunta": "Siete ___ stati da Mollica?",
+          "resposta": "mai",
+          "alternativas": ["mai", "Mai"],
+          "explicacao": "'Mai' é o advérbio que significa 'já' em perguntas."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene a pergunta:",
+          "palavras": ["mollica", "stati", "mai", "da", "voi", "siete", "e"],
+          "resposta": "e voi siete mai stati da mollica",
+          "explicacao": "'E voi' + 'siete mai stati' + 'da Mollica'."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza: <em>Hai mai mangiato la pizza napoletana?</em>",
+          "resposta": "Você já comeu pizza napolitana?",
+          "palavrasChave": ["já", "comeu"],
+          "explicacao": "Pergunta sobre experiência com 'mai' + passato prossimo."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a pergunta:",
+          "palavras": ["stati"],
+          "resposta": "stati",
+          "explicacao": "'Stati' (stá-ti) - 's' inicial como 'z' (sonoro), 'a' aberta, 'ti' como 'ti'."
+        }
+      ]
+    },
+    {
+      "indice": 19,
+      "referencia": "E quale panino focaccia mi consigliereste?",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "Por que usamos o condicional <em>consigliereste</em> em vez do presente?",
+          "opcoes": [
+            "Porque é passado",
+            "Para tornar o pedido mais educado e menos direto",
+            "Porque é futuro",
+            "Porque é uma ordem"
+          ],
+          "resposta": "Para tornar o pedido mais educado e menos direto",
+          "explicacao": "O condicional é usado em perguntas para fazer pedidos de forma mais educada e cortês."
+        },
+        {
+          "tipo": "multipla",
+          "pergunta": "Qual a diferença entre <em>quale</em> e <em>che</em> nesta pergunta?",
+          "opcoes": [
+            "Não há diferença",
+            "'Quale' é usado quando há um conjunto limitado de opções (cardápio)",
+            "'Che' é mais formal",
+            "'Quale' é plural"
+          ],
+          "resposta": "'Quale' é usado quando há um conjunto limitado de opções (cardápio)",
+          "explicacao": "'Quale' (qual) é usado quando se escolhe entre opções limitadas. 'Che' (que) é mais genérico."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com o condicional:",
+          "pergunta": "Mi ___ aiutare? (Você poderia me ajudar?)",
+          "resposta": "potresti",
+          "alternativas": ["potresti", "Potresti"],
+          "explicacao": "Condicional de 'potere' (poder) para pedido educado."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com o pronome interrogativo:",
+          "pergunta": "___ preferisci? (Qual você prefere? - opções limitadas)",
+          "resposta": "quale",
+          "alternativas": ["quale", "Quale"],
+          "explicacao": "'Quale' (qual) é usado para escolher entre opções limitadas."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene a pergunta educada:",
+          "palavras": ["mi", "e", "panino", "focaccia", "quale", "consigliereste"],
+          "resposta": "e quale panino focaccia mi consigliereste",
+          "explicacao": "'E quale' + 'panino focaccia' + pronome 'mi' + condicional 'consigliereste'."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza: <em>Quale vino mi consigliereste?</em>",
+          "resposta": "Qual vinho vocês me recomendariam?",
+          "palavrasChave": ["qual", "vinho", "recomendariam"],
+          "explicacao": "Pergunta educada sobre escolha entre opções (cardápio de vinhos)."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique o condicional:",
+          "palavras": ["consigliereste"],
+          "resposta": "consigliereste",
+          "explicacao": "'Consigliereste' (kon-si-lie-rés-te) - 'con' como 'kon', 'si' como 'si', 'glie' como 'lie', 'reste' como 'rés-te'."
+        }
+      ]
+    }
+  ]
+}
