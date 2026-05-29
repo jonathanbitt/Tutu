@@ -2,7 +2,7 @@
   "titolo": "ITALIANO — 7 Parole Che Ti Fanno Perdere Rispetto",
   "videoUrl": "https://jonathanbitt.github.io/Tutu/italiano/dados/videos/video6.mp4",
   "quizletUrl": "quizlet.html?quizlet=6",
-  "blocchi": [
+  "blocos": [
     {
       "start": 0,
       "italian": "Stai perdendo rispetto ogni volta che dici queste sette parole.",
@@ -20,14 +20,14 @@
       "tip": "<strong>\"la cosa peggiore\"</strong> — 'A pior coisa' (superlativo relativo de 'cattivo'). <strong>\"la maggior parte delle donne\"</strong> — 'A maioria das mulheres'. <strong>\"le usa\"</strong> — 'As usa' (pronome 'le' referindo-se às palavras). <strong>\"rendersene conto\"</strong> — Expressão reflexiva: 'dar-se conta disso'. 'Se ne rende conto' = se dá conta disso.",
       "miniLesson": {
         "title": "Superlativo 'Peggiore' e Expressão 'Rendersi Conto'",
-        "content": "<p><strong>\"peggiore\" (pior)</strong> — É o comparativo/superlativo de irregularidade de 'cattivo' (mau/ruim). 'La cosa peggiore' = a pior coisa.</p><div class=\"esempio\">Questo è il film peggiore che abbia mai visto. → Este é o pior filme que já vi.</div><p style=\"margin-top:10px\"><strong>\"rendersi conto\"</strong> — Verbo reflexivo que significa 'dar-se conta', 'perceber'. O pronome 'ne' substitui 'di ciò' (disso). 'Rendersene conto' = dar-se conta disso.</p><div class=\"esempio\">Non mi ero reso conto del problema. → Não tinha me dado conta do problema.</div>"
+        "content": "<p><strong>\"peggiore\" (pior)</strong> — É o comparativo/superlativo irregular de 'cattivo' (mau/ruim). 'La cosa peggiore' = a pior coisa.</p><div class=\"esempio\">Questo è il film peggiore che abbia mai visto. → Este é o pior filme que já vi.</div><p style=\"margin-top:10px\"><strong>\"rendersi conto\"</strong> — Verbo reflexivo que significa 'dar-se conta', 'perceber'. O pronome 'ne' substitui 'di ciò' (disso). 'Rendersene conto' = dar-se conta disso.</p><div class=\"esempio\">Non mi ero reso conto del problema. → Não tinha me dado conta do problema.</div>"
       }
     },
     {
       "start": 10,
       "italian": "Solo, scusa, forse, tipo, vabbè, non lo so, più o meno.",
       "translation": "Só (apenas), desculpa, talvez, tipo (como), vabbè (ok/então), não sei, mais ou menos.",
-      "tip": "<strong>Lista das 7 palavras/frases</strong>: <strong>\"solo\"</strong> — 'apenas' (diminui a importância). <strong>\"scusa\"</strong> — 'desculpa' (pedir desculpas desnecessárias). <strong>\"forse\"</strong> — 'talvez' (demonstra incerteza). <strong>\"tipo\"</strong> — 'tipo' (muletilla, vício de linguagem). <strong>\"vabbè\"</strong> — Contracción de 'va bene' (tudo bem / então). <strong>\"non lo so\"</strong> — 'não sei'. <strong>\"più o meno\"</strong> — 'mais ou menos'.",
+      "tip": "<strong>Lista das 7 palavras/frases</strong>: <strong>\"solo\"</strong> — 'apenas' (diminui a importância). <strong>\"scusa\"</strong> — 'desculpa' (pedir desculpas desnecessárias). <strong>\"forse\"</strong> — 'talvez' (demonstra incerteza). <strong>\"tipo\"</strong> — 'tipo' (muletilla, vício de linguagem). <strong>\"vabbè\"</strong> — Contração de 'va bene' (tudo bem / então). <strong>\"non lo so\"</strong> — 'não sei'. <strong>\"più o meno\"</strong> — 'mais ou menos'.",
       "miniLesson": {
         "title": "Palavras Muletilla (Fillers) e Expressões que Demonstram Insegurança",
         "content": "<p><strong>\"vabbè\"</strong> — É a contração coloquial de 'va bene' (tudo bem). Pode significar 'então', 'ok', 'deixa pra lá', e muitas vezes é usado sem necessidade.</p><div class=\"esempio\">Vabbè, non importa. → Deixa pra lá, não importa.</div><p style=\"margin-top:10px\"><strong>\"tipo\"</strong> — Usado como muletilla (vício de linguagem) similar ao 'tipo' ou 'like' em português/inglês. Demonstra hesitação e insegurança na comunicação.</p><div class=\"esempio\">Ero tipo... non so... → Eu estava tipo... não sei...</div><p style=\"margin-top:10px\"><strong>\"più o meno\"</strong> — Expressão que significa 'mais ou menos', indicando imprecisão e falta de convicção.</p><div class=\"esempio\">Più o meno 10 euro. → Mais ou menos 10 euros.</div>"
