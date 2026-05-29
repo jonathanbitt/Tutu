@@ -1,25 +1,25 @@
 {
-  "titolo": "Quizlet — Perché Ti Mancano di Rispetto?",
-  "parole": 15,
-  "lezioni": 7,
-  "descrizione": "Vocabulário sobre relacionamentos, respeito, limites e perdão",
-  "contenuto": {
+  "titulo": "Quizlet — Perché Ti Mancano di Rispetto?",
+  "palavras": 15,
+  "licoes": 7,
+  "descricao": "Vocabulário sobre relacionamentos, respeito, limites e perdão",
+  "conteudo": {
     "cards": [
-      { "termine": "mancare di rispetto", "definizione": "faltar com respeito / desrespeitar", "frase": "Non mi mancare di rispetto.", "difficoltà": 2 },
-      { "termine": "continuare a", "definizione": "continuar a", "frase": "Continua a piovere.", "difficoltà": 2 },
-      { "termine": "troppo buono/a", "definizione": "bom/boa demais (ingênuo)", "frase": "Sei troppo buona.", "difficoltà": 2 },
-      { "termine": "sapere che", "definizione": "saber que", "frase": "So che hai ragione.", "difficoltà": 1 },
-      { "termine": "restare", "definizione": "ficar / permanecer", "frase": "Resto qui.", "difficoltà": 1 },
-      { "termine": "perdonare", "definizione": "perdoar", "frase": "Ti perdono.", "difficoltà": 2 },
-      { "termine": "spiegare", "definizione": "explicar", "frase": "Spiego tutto.", "difficoltà": 1 },
-      { "termine": "dare un'altra possibilità", "definizione": "dar outra chance", "frase": "Ti do un'altra possibilità.", "difficoltà": 2 },
-      { "termine": "perdere (qualcuno)", "definizione": "perder (alguém)", "frase": "Non voglio perderti.", "difficoltà": 2 },
-      { "termine": "possibilità", "definizione": "possibilidade", "frase": "È una possibilità.", "difficoltà": 1 },
-      { "termine": "velocemente", "definizione": "rapidamente", "frase": "Corre velocemente.", "difficoltà": 2 },
-      { "termine": "iniziare a", "definizione": "começar a", "frase": "Inizio a studiare.", "difficoltà": 2 },
-      { "termine": "trattare", "definizione": "tratar", "frase": "Trattare bene qualcuno.", "difficoltà": 2 },
-      { "termine": "in modo diverso", "definizione": "de modo diferente", "frase": "Agisci in modo diverso.", "difficoltà": 2 },
-      { "termine": "il momento in cui", "definizione": "o momento em que", "frase": "Il momento in cui ti ho visto.", "difficoltà": 2 }
+      { "termo": "mancare di rispetto", "definicao": "faltar com respeito / desrespeitar", "frase": "Non mi mancare di rispetto.", "dificuldade": 2 },
+      { "termo": "continuare a", "definicao": "continuar a", "frase": "Continua a piovere.", "dificuldade": 2 },
+      { "termo": "troppo buono/a", "definicao": "bom/boa demais (ingênuo)", "frase": "Sei troppo buona.", "dificuldade": 2 },
+      { "termo": "sapere che", "definicao": "saber que", "frase": "So che hai ragione.", "dificuldade": 1 },
+      { "termo": "restare", "definicao": "ficar / permanecer", "frase": "Resto qui.", "dificuldade": 1 },
+      { "termo": "perdonare", "definicao": "perdoar", "frase": "Ti perdono.", "dificuldade": 2 },
+      { "termo": "spiegare", "definicao": "explicar", "frase": "Spiego tutto.", "dificuldade": 1 },
+      { "termo": "dare un'altra possibilità", "definicao": "dar outra chance", "frase": "Ti do un'altra possibilità.", "dificuldade": 2 },
+      { "termo": "perdere (qualcuno)", "definicao": "perder (alguém)", "frase": "Non voglio perderti.", "dificuldade": 2 },
+      { "termo": "possibilità", "definicao": "possibilidade", "frase": "È una possibilità.", "dificuldade": 1 },
+      { "termo": "velocemente", "definicao": "rapidamente", "frase": "Corre velocemente.", "dificuldade": 2 },
+      { "termo": "iniziare a", "definicao": "começar a", "frase": "Inizio a studiare.", "dificuldade": 2 },
+      { "termo": "trattare", "definicao": "tratar", "frase": "Trattare bene qualcuno.", "dificuldade": 2 },
+      { "termo": "in modo diverso", "definicao": "de modo diferente", "frase": "Agisci in modo diverso.", "dificuldade": 2 },
+      { "termo": "il momento in cui", "definicao": "o momento em que", "frase": "Il momento in cui ti ho visto.", "dificuldade": 2 }
     ]
   }
 }
