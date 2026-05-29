@@ -1,0 +1,585 @@
+{
+  "aula": 4,
+  "titolo": "ITALIANO — Pokè, Sushi e Sconti al Salone del Libro",
+  "paragrafos": [
+    {
+      "indice": 0,
+      "referencia": "Tu gli fai vedere il biglietto del Salone del Libro e loro ti fanno 5 euro di sconto.",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "O que significa o pronome 'gli' na frase 'tu gli fai vedere'?",
+          "opcoes": [
+            "A ele",
+            "A eles / para eles (os funcionários)",
+            "Para ele",
+            "Com ele"
+          ],
+          "resposta": "A eles / para eles (os funcionários)",
+          "explicacao": "'Gli' é um pronome indireto que aqui significa 'a eles' (os funcionários do restaurante)."
+        },
+        {
+          "tipo": "multipla",
+          "pergunta": "O que significa a construção 'fare vedere'?",
+          "opcoes": [
+            "Fazer ver",
+            "Mostrar",
+            "Observar",
+            "Ensinar"
+          ],
+          "resposta": "Mostrar",
+          "explicacao": "'Fare vedere' literalmente 'fazer ver', mas o sentido idiomático é 'mostrar'."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com o pronome correto:",
+          "pergunta": "___ ho detto la verità. (Eu disse a eles a verdade.)",
+          "resposta": "Gli",
+          "alternativas": ["Gli", "gli"],
+          "explicacao": "'Gli' é o pronome indireto para 'a eles' ou 'a ele'."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com o verbo:",
+          "pergunta": "Fammi ___ il biglietto. (Me mostre o ingresso.)",
+          "resposta": "vedere",
+          "alternativas": ["vedere", "Vedere"],
+          "explicacao": "'Fammi vedere' = 'me faça ver' = me mostre."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene a frase:",
+          "palavras": ["sconto", "di", "fanno", "euro", "5", "ti", "loro"],
+          "resposta": "loro ti fanno 5 euro di sconto",
+          "explicacao": "'Loro' (sujeito) + 'ti fanno' + '5 euro di sconto'."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza: <em>Fammi vedere il tuo biglietto</em>",
+          "resposta": "Me mostre seu ingresso",
+          "palavrasChave": ["mostre", "ingresso"],
+          "explicacao": "'Fammi vedere' = mostra-me / me mostre."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique:",
+          "palavras": ["biglietto", "sconto"],
+          "resposta": "biglietto sconto",
+          "explicacao": "'Biglietto' (bi-liét-to) - 'i' curto, 'e' aberta, 'tt' geminado. 'Sconto' (skón-to) - 'o' aberta."
+        }
+      ]
+    },
+    {
+      "indice": 1,
+      "referencia": "A 10 minuti a piedi dal Salone del Libro c'è questo localino molto buono specializzato in tre cose.",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "O que significa o diminutivo 'localino'?",
+          "opcoes": [
+            "Um lugar grande",
+            "Um lugarzinho (pequeno, aconchegante)",
+            "Um local de trabalho",
+            "Um local específico"
+          ],
+          "resposta": "Um lugarzinho (pequeno, aconchegante)",
+          "explicacao": "O sufixo '-ino' adiciona um sentido de pequenez e carinho. 'Localino' = lugarzinho."
+        },
+        {
+          "tipo": "multipla",
+          "pergunta": "Como se mede distância em italiano nesta frase?",
+          "opcoes": [
+            "Em quilômetros",
+            "Em minutos de caminhada",
+            "Em metros",
+            "Em passos"
+          ],
+          "resposta": "Em minutos de caminhada",
+          "explicacao": "'A 10 minuti a piedi' = a 10 minutos a pé. É comum em italiano medir distâncias pelo tempo de caminhada."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com o diminutivo correto:",
+          "pergunta": "Ho scoperto un ___ carinissimo. (Descobri um lugarzinho muito fofo.)",
+          "resposta": "localino",
+          "alternativas": ["localino", "Localino"],
+          "explicacao": "'Localino' é o diminutivo de 'locale' (lugar/estabelecimento)."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete a frase de distância:",
+          "pergunta": "La stazione è a 5 minuti a ___.",
+          "resposta": "piedi",
+          "alternativas": ["piedi", "Piedi"],
+          "explicacao": "'A piedi' = a pé. '5 minuti a piedi' = 5 minutos andando."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene:",
+          "palavras": ["buono", "cose", "in", "tre", "specializzato", "localino", "questo"],
+          "resposta": "questo localino molto buono specializzato in tre cose",
+          "explicacao": "Demonstrativo 'questo' + substantivo 'localino' + adjetivo 'buono' + 'specializzato in tre cose'."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza: <em>Un localino tranquillo</em>",
+          "resposta": "Um lugarzinho tranquilo",
+          "palavrasChave": ["lugarzinho", "tranquilo"],
+          "explicacao": "O diminutivo 'localino' transmite aconchego."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique:",
+          "palavras": ["localino"],
+          "resposta": "localino",
+          "explicacao": "'Localino' (lo-ca-lí-no) - 'lo' aberto, 'ca' como 'ca', 'li' com 'i' curto, 'no' como 'no'."
+        }
+      ]
+    },
+    {
+      "indice": 3,
+      "referencia": "Noi questa volta, oltre alla classica pokè, che è aperta parentesi, secondo me qua a Torino è una delle più buone e generose.",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "O que significa a expressão 'aperta parentesi' (ou 'aprire parentesi')?",
+          "opcoes": [
+            "Abrir um parêntese (fazer um comentário)",
+            "Fechar um parêntese",
+            "Abrir uma discussão",
+            "Abrir uma lista"
+          ],
+          "resposta": "Abrir um parêntese (fazer um comentário)",
+          "explicacao": "'Aprire parentesi' é usado para introduzir um comentário ou observação no meio da fala."
+        },
+        {
+          "tipo": "multipla",
+          "pergunta": "O que significa 'generose' aplicado a porções de comida?",
+          "opcoes": [
+            "Caras",
+            "Fartas / bem servidas / generosas",
+            "Pequenas",
+            "Rápidas"
+          ],
+          "resposta": "Fartas / bem servidas / generosas",
+          "explicacao": "'Generoso' para comida significa 'farto', 'bem servido', 'em boa quantidade'."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete a expressão de opinião:",
+          "pergunta": "___ me hai ragione. (Na minha opinião, você tem razão.)",
+          "resposta": "Secondo",
+          "alternativas": ["Secondo", "secondo"],
+          "explicacao": "'Secondo me' = na minha opinião."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com o adjetivo correto:",
+          "pergunta": "Le porzioni sono molto ___ . (As porções são muito fartas.)",
+          "resposta": "generose",
+          "alternativas": ["generose", "Generose"],
+          "explicacao": "'Generose' é o plural feminino de 'generoso' (farto, bem servido)."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene:",
+          "palavras": ["questa", "noi", "classica", "alla", "oltre", "pokè", "volta"],
+          "resposta": "noi questa volta oltre alla classica pokè",
+          "explicacao": "'Noi' + 'questa volta' + 'oltre alla classica pokè'."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza: <em>Apro parentesi, devo dire che è buono</em>",
+          "resposta": "Abro parênteses, devo dizer que é bom",
+          "palavrasChave": ["parênteses", "dizer", "bom"],
+          "explicacao": "Expressão para introduzir comentário."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique a expressão:",
+          "palavras": ["generose"],
+          "resposta": "generose",
+          "explicacao": "'Generose' (je-ne-ró-se) - 'ge' como 'je', 'ne' como 'ne', 'rose' como 'ró-se'."
+        }
+      ]
+    },
+    {
+      "indice": 5,
+      "referencia": "Il nome è un mix fra Maui, la famosa isola hawaiiana, e Italy, quindi già tutto un programma.",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "O que significa a expressão 'già tutto un programma'?",
+          "opcoes": [
+            "Já é todo um plano",
+            "Já dá pra imaginar o que esperar (algo interessante/exagerado)",
+            "Já está programado",
+            "Já é um programa de TV"
+          ],
+          "resposta": "Já dá pra imaginar o que esperar (algo interessante/exagerado)",
+          "explicacao": "Expressão idiomática usada com humor ou expectativa para indicar que algo promete ser interessante, intenso ou cheio de surpresas."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete a expressão idiomática:",
+          "pergunta": "Una cena da loro è già tutto un ___ .",
+          "resposta": "programma",
+          "alternativas": ["programma", "Programma"],
+          "explicacao": "'Già tutto un programma' = já é todo um programa (promete)."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com a palavra estrangeira:",
+          "pergunta": "Un ___ di sapori. (Uma mistura de sabores.)",
+          "resposta": "mix",
+          "alternativas": ["mix", "Mix"],
+          "explicacao": "'Mix' é um estrangeirismo comum em italiano para 'mistura'."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene:",
+          "palavras": ["quindi", "programma", "già", "un", "tutto"],
+          "resposta": "quindi già tutto un programma",
+          "explicacao": "'Quindi' + 'già tutto un programma'."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza: <em>Questo ristorante è già tutto un programma!</em>",
+          "resposta": "Este restaurante já é todo um programa!",
+          "palavrasChave": ["restaurante", "programa"],
+          "explicacao": "Expressa que a experiência no restaurante será especial/memorável."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique:",
+          "palavras": ["programma"],
+          "resposta": "programma",
+          "explicacao": "'Programma' (pro-grám-ma) - 'o' fechada, 'grá' com 'a' aberta, 'mm' geminado."
+        }
+      ]
+    },
+    {
+      "indice": 7,
+      "referencia": "E poi da condividere questi uramaki, con gambero argentino crudo, tartare di tonno, mayo e granella di pistacchio.",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "O que significa a estrutura 'da condividere'?",
+          "opcoes": [
+            "Para dividir / para compartilhar",
+            "De dividir",
+            "Compartilhado",
+            "Divisor"
+          ],
+          "resposta": "Para dividir / para compartilhar",
+          "explicacao": "'Da' + infinitivo indica finalidade: 'da condividere' = para compartilhar."
+        },
+        {
+          "tipo": "multipla",
+          "pergunta": "O que é 'granella di pistacchio'?",
+          "opcoes": [
+            "Sorvete de pistache",
+            "Granulado de pistache (pistache triturado)",
+            "Creme de pistache",
+            "Folhas de pistache"
+          ],
+          "resposta": "Granulado de pistache (pistache triturado)",
+          "explicacao": "'Granella' indica pedaços pequenos e triturados de algo (nozes, pistache, amêndoas)."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com a estrutura de finalidade:",
+          "pergunta": "Cibo ___ asporto. (Comida para viagem.)",
+          "resposta": "da",
+          "alternativas": ["da", "Da"],
+          "explicacao": "'Da asporto' = para levar (takeaway)."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete:",
+          "pergunta": "Gelato con ___ di nocciole. (Sorvete com granulado de avelãs.)",
+          "resposta": "granella",
+          "alternativas": ["granella", "Granella"],
+          "explicacao": "'Granella di nocciole' = granulado de avelãs."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene:",
+          "palavras": ["questi", "da", "poi", "uramaki", "e", "condividere"],
+          "resposta": "e poi da condividere questi uramaki",
+          "explicacao": "'E poi' + 'da condividere' + 'questi uramaki'."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza: <em>Un piatto da condividere</em>",
+          "resposta": "Um prato para compartilhar",
+          "palavrasChave": ["prato", "compartilhar"],
+          "explicacao": "Estrutura 'da + infinitivo' para indicar finalidade."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique:",
+          "palavras": ["granella", "pistacchio"],
+          "resposta": "granella pistacchio",
+          "explicacao": "'Granella' (gra-nél-la) - 'a' aberta, 'e' fechada, 'll' geminado. 'Pistacchio' (pis-ták-kio) - 'i' curto, 'a' aberta, 'cch' geminado."
+        }
+      ]
+    },
+    {
+      "indice": 9,
+      "referencia": "E se quando vai in cassa e mostri il biglietto del Salone del Libro ti fanno lo sconto di 5 euro su una spesa minima di 30.",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "O que significa 'spesa minima' nesta frase?",
+          "opcoes": [
+            "Gasto mínimo / compra mínima",
+            "Despesa mínima",
+            "Conta mínima",
+            "Preço mínimo"
+          ],
+          "resposta": "Gasto mínimo / compra mínima",
+          "explicacao": "'Spesa minima' é o valor mínimo que se deve gastar para ter direito ao desconto."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete a expressão de condição:",
+          "pergunta": "Mostri il biglietto e ___ lo sconto. (Se você mostrar o ingresso, tem desconto.)",
+          "resposta": "hai",
+          "alternativas": ["hai", "Hai"],
+          "explicacao": "Presente com valor condicional: 'mostri' + 'hai' (se mostrar, tem)."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete a frase promocional:",
+          "pergunta": "Sconto del 10% su una ___ minima di 50 euro.",
+          "resposta": "spesa",
+          "alternativas": ["spesa", "Spesa"],
+          "explicacao": "'Spesa minima' = compra/gasto mínimo."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene:",
+          "palavras": ["quando", "cassa", "e", "vai", "in", "se", "mostri", "e", "biglietto", "il"],
+          "resposta": "e se quando vai in cassa e mostri il biglietto",
+          "explicacao": "'E se' + 'quando vai in cassa' + 'e mostri il biglietto'."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza: <em>Spesa minima 30 euro per lo sconto</em>",
+          "resposta": "Compra mínima de 30 euros para o desconto",
+          "palavrasChave": ["compra", "mínima", "desconto"],
+          "explicacao": "Condição comum em promoções."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique:",
+          "palavras": ["cassa", "spesa"],
+          "resposta": "cassa spesa",
+          "explicacao": "'Cassa' (kás-sa) - 'a' aberta, 'ss' geminado. 'Spesa' (spé-sa) - 'e' aberta, 's' sonora entre vogais."
+        }
+      ]
+    },
+    {
+      "indice": 10,
+      "referencia": "Che alla fine in due tra una cosa e l'altra ci arrivi facile.",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "O que significa o pronome 'ci' em 'ci arrivi'?",
+          "opcoes": [
+            "Aqui",
+            "A isso / a esse valor (à spesa minima)",
+            "Com isso",
+            "Para lá"
+          ],
+          "resposta": "A isso / a esse valor (à spesa minima)",
+          "explicacao": "'Ci' é um pronome que se refere ao objetivo (atingir o valor de 30 euros). 'Arrivarci' = chegar a isso."
+        },
+        {
+          "tipo": "multipla",
+          "pergunta": "O que significa a expressão 'tra una cosa e l'altra'?",
+          "opcoes": [
+            "Entre uma coisa e outra (somando vários itens)",
+            "Entre uma coisa ou outra (escolhendo)",
+            "Uma coisa após a outra",
+            "Coisas variadas"
+          ],
+          "resposta": "Entre uma coisa e outra (somando vários itens)",
+          "explicacao": "Expressão usada para indicar que, somando vários pequenos itens, se atinge um total."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com o pronome 'ci':",
+          "pergunta": "Con 20 euro non ___ arrivi. (Com 20 euros você não chega lá.)",
+          "resposta": "ci",
+          "alternativas": ["ci", "Ci"],
+          "explicacao": "'Non ci arrivi' = você não chega a isso/àquele valor."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete a expressão de soma:",
+          "pergunta": "___ una cosa e l'altra ho speso 100 euro.",
+          "resposta": "Tra",
+          "alternativas": ["Tra", "tra"],
+          "explicacao": "'Tra una cosa e l'altra' = entre uma coisa e outra (somando)."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene:",
+          "palavras": ["ci", "in", "facile", "arrivi", "due", "alla", "fine", "che"],
+          "resposta": "che alla fine in due ci arrivi facile",
+          "explicacao": "'Che alla fine' + 'in due' + 'ci arrivi facile'."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza: <em>Tra una cosa e l'altra, ho speso tutto</em>",
+          "resposta": "Entre uma coisa e outra, gastei tudo",
+          "palavrasChave": ["gastei", "tudo"],
+          "explicacao": "Expressa que várias pequenas compras/gastos se somaram."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique:",
+          "palavras": ["arrivi", "facile"],
+          "resposta": "arrivi facile",
+          "explicacao": "'Arrivi' (ar-rí-vi) - 'a' aberta, 'rr' geminado, 'i' tônico. 'Facile' (fá-tchi-le) - 'a' aberta, 'ci' como 'tchi', 'le' como 'le'."
+        }
+      ]
+    },
+    {
+      "indice": 11,
+      "referencia": "Il posticino si chiama Ex Mahalo, in via Nizza 233.",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "O que significa 'posticino'?",
+          "opcoes": [
+            "Um lugar grande",
+            "Um lugarzinho (diminutivo carinhoso)",
+            "Um cartão postal",
+            "Um poste"
+          ],
+          "resposta": "Um lugarzinho (diminutivo carinhoso)",
+          "explicacao": "'Posticino' é o diminutivo carinhoso de 'posto' (lugar)."
+        },
+        {
+          "tipo": "multipla",
+          "pergunta": "O que significa a palavra 'Mahalo' (parte do nome do restaurante)?",
+          "opcoes": [
+            "Aloha (havaiano)",
+            "Obrigado (havaiano)",
+            "Maui (ilha)",
+            "Itália"
+          ],
+          "resposta": "Obrigado (havaiano)",
+          "explicacao": "'Mahalo' significa 'obrigado' em havaiano, língua do Havaí."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete o diminutivo:",
+          "pergunta": "Un bel ___ tranquillo. (Um belo lugarzinho tranquilo.)",
+          "resposta": "posticino",
+          "alternativas": ["posticino", "Posticino"],
+          "explicacao": "'Posticino' é o diminutivo de 'posto' (lugar)."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete o endereço:",
+          "pergunta": "Abito in ___ Roma 10.",
+          "resposta": "via",
+          "alternativas": ["via", "Via"],
+          "explicacao": "'Via' significa 'rua' em endereços italianos."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene o endereço:",
+          "palavras": ["233", "Nizza", "via", "in", "si", "posticino", "chiama", "il"],
+          "resposta": "il posticino si chiama ex mahalo in via nizza 233",
+          "explicacao": "'Il posticino si chiama Ex Mahalo' + 'in via Nizza 233'."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza: <em>Via Roma 10, Milano</em>",
+          "resposta": "Rua Roma 10, Milão",
+          "palavrasChave": ["Rua", "Roma", "Milão"],
+          "explicacao": "Formato de endereço italiano: via + nome + número."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique o diminutivo:",
+          "palavras": ["posticino"],
+          "resposta": "posticino",
+          "explicacao": "'Posticino' (pos-ti-tchí-no) - 'o' fechada, 'ti' como 'ti', 'ci' como 'tchi', 'no' como 'no'."
+        }
+      ]
+    },
+    {
+      "indice": 12,
+      "referencia": "Salve Ril e seguimi per altre scoperte gastronomiche a Torino e in giro per il mondo.",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "O que significa a forma 'seguimi'?",
+          "opcoes": [
+            "Siga-me / me siga (imperativo + pronome)",
+            "Seguir-me",
+            "Me seguir",
+            "Sigo-me"
+          ],
+          "resposta": "Siga-me / me siga (imperativo + pronome)",
+          "explicacao": "'Seguimi' é o imperativo afirmativo 'segui' (tu) + pronome 'mi' (me), formando 'seguimi' = siga-me."
+        },
+        {
+          "tipo": "multipla",
+          "pergunta": "O que significa a expressão 'in giro per il mondo'?",
+          "opcoes": [
+            "Em volta do mundo",
+            "Pelo mundo afora / ao redor do mundo",
+            "Dentro do mundo",
+            "No mundo inteiro"
+          ],
+          "resposta": "Pelo mundo afora / ao redor do mundo",
+          "explicacao": "'In giro per' significa 'por aí', 'ao redor de'. 'In giro per il mondo' = pelo mundo afora."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com o imperativo:",
+          "pergunta": "___ su Instagram! (Me siga no Instagram!)",
+          "resposta": "Seguimi",
+          "alternativas": ["Seguimi", "seguimi"],
+          "explicacao": "'Seguimi' = imperativo 'segui' + pronome 'mi'."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete a expressão:",
+          "pergunta": "Viaggia in ___ per l'Europa.",
+          "resposta": "giro",
+          "alternativas": ["giro", "Giro"],
+          "explicacao": "'In giro per' = pelos arredores de / por aí."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene a saudação:",
+          "palavras": ["scoperte", "seguimi", "e", "ril", "per", "altre", "salve", "gastronomiche"],
+          "resposta": "salve ril e seguimi per altre scoperte gastronomiche",
+          "explicacao": "'Salve Ril' + 'e seguimi' + 'per altre scoperte gastronomiche'."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza: <em>Seguimi per altri consigli</em>",
+          "resposta": "Me siga para outras dicas",
+          "palavrasChave": ["siga", "dicas"],
+          "explicacao": "Forma comum de encerramento em vídeos/conteúdos."
+        },
+        {
+          "tipo": "pronuncia",
+          "pergunta": "Pratique:",
+          "palavras": ["seguimi"],
+          "resposta": "seguimi",
+          "explicacao": "'Seguimi' (se-guí-mi) - 'se' como 'se', 'gui' com 'u' semivogal, 'mi' como 'mi'."
+        }
+      ]
+    }
+  ]
+}

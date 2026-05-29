@@ -38,6 +38,71 @@
       "modules": 11,
       "featured": true,
       "color": "#c97e2a"
+    },
+    {
+      "id": 4,
+      "title": "Pokè, Sushi e Sconti al Salone del Libro",
+      "subtitle": "Sabores havaianos e japoneses com ingredientes italianos",
+      "description": "Descubra o Ex Mahalo, um localino em Torino especializado em pokè, sushi e burger de peixe. Mostre o ingresso do Salone del Libro e ganhe 5 euros de desconto!",
+      "level": "Intermediário",
+      "thumbnail": "🍣🐟",
+      "duration": "~1 min",
+      "words": 28,
+      "modules": 9,
+      "featured": true,
+      "color": "#2a6b8f"
+    },
+    {
+      "id": 5,
+      "title": "La Mentalità del Mondo e la Verità di Cristo",
+      "subtitle": "Ser escolhido, separado e chamado para levar luz",
+      "description": "Uma reflexão sobre a diferença entre a mentalidade mundana (personalismo, sentimentalismo) e o chamado de Cristo: verdade, luz e paz imperturbável.",
+      "level": "Avançado",
+      "thumbnail": "✝️🌟",
+      "duration": "~1.5 min",
+      "words": 28,
+      "modules": 9,
+      "featured": true,
+      "color": "#6a1a9e"
+    },
+    {
+      "id": 6,
+      "title": "7 Parole Che Ti Fanno Perdere Rispetto",
+      "subtitle": "Comunique-se com mais confiança e autoridade",
+      "description": "Descubra quais são as 7 palavras que as mulheres usam sem perceber e que minam o respeito. Aprenda a se comunicar de forma mais segura e assertiva.",
+      "level": "Intermediário",
+      "thumbnail": "🗣️💪",
+      "duration": "~0.5 min",
+      "words": 18,
+      "modules": 5,
+      "featured": true,
+      "color": "#d43f1a"
+    },
+    {
+      "id": 7,
+      "title": "3 Rituali Wellness Non Negoziali",
+      "subtitle": "Hidratação, proteção solar e detox digital",
+      "description": "Descubra os três rituais de bem-estar que não abro mão: beber água, usar protetor solar FPS 50 todos os dias e deixar o telefone em outro quarto para focar no que importa.",
+      "level": "Iniciante",
+      "thumbnail": "💧☀️📵",
+      "duration": "~0.5 min",
+      "words": 19,
+      "modules": 6,
+      "featured": true,
+      "color": "#3fa7d4"
+    },
+    {
+      "id": 8,
+      "title": "Perché Ti Mancano di Rispetto?",
+      "subtitle": "Sobre limites, perdão e a importância de saber partir",
+      "description": "Uma reflexão poderosa sobre relacionamentos: não é porque você é 'boazinha demais', mas porque as pessoas sabem que você sempre perdoa, sempre explica, sempre dá outra chance. Até que um dia... você se torna uma possibilidade real de perda.",
+      "level": "Intermediário",
+      "thumbnail": "🚪💔",
+      "duration": "~0.5 min",
+      "words": 15,
+      "modules": 5,
+      "featured": true,
+      "color": "#c44569"
     }
   ]
 }

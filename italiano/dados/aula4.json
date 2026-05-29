@@ -1,0 +1,137 @@
+{
+  "titulo": "ITALIANO — Pokè, Sushi e Sconti al Salone del Libro",
+  "videoUrl": "https://jonathanbitt.github.io/Tutu/italiano/dados/videos/video4.mp4",
+  "quizletUrl": "quizlet.html?quizlet=4",
+  "blocos": [
+    {
+      "start": 0,
+      "italian": "Tu gli fai vedere il biglietto del Salone del Libro e loro ti fanno 5 euro di sconto.",
+      "translation": "Você mostra a eles o ingresso do Salone del Libro e eles te fazem 5 euros de desconto.",
+      "tip": "<strong>\"gli\"</strong> — Pronome indireto 'a eles' (a loro). <strong>\"fai vedere\"</strong> — 'Faz ver' = mostra. <strong>\"Salone del Libro\"</strong> — Importante feira do livro em Torino. <strong>\"ti fanno 5 euro di sconto\"</strong> — 'Te fazem 5 euros de desconto'.",
+      "miniLesson": {
+        "title": "Pronomes Indiretos 'Gli' e 'Ti' + Verbo 'Fare'",
+        "content": "<p><strong>\"gli\" como pronome indireto</strong> — 'Gli' pode significar 'a ele' ou 'a eles' (no contexto, 'a eles', os funcionários do restaurante).</p><div class=\"exemplo\">Gli ho detto la verità. → Eu disse a eles/ele a verdade.</div><p style=\"margin-top:10px\"><strong>\"fare vedere\" = mostrar</strong> — Literalmente 'fazer ver'. É uma construção muito comum em italiano para 'mostrar'.</p><div class=\"exemplo\">Fammi vedere il biglietto. → Me mostre o ingresso.</div><p style=\"margin-top:10px\"><strong>\"fare sconto\"</strong> — 'Fazer desconto' (dar desconto). 'Ti fanno 5 euro di sconto' = eles te dão 5 euros de desconto.</p>"
+      }
+    },
+    {
+      "start": 4,
+      "italian": "A 10 minuti a piedi dal Salone del Libro c'è questo localino molto buono specializzato in tre cose.",
+      "translation": "A 10 minutos a pé do Salone del Libro tem este lugarzinho muito bom especializado em três coisas.",
+      "tip": "<strong>\"a 10 minuti a piedi\"</strong> — 'A 10 minutos a pé' (distância medida em tempo de caminhada). <strong>\"localino\"</strong> — Diminutivo de 'locale' (lugar/estabelecimento), carinhoso. <strong>\"specializzato in\"</strong> — 'Especializado em'.",
+      "miniLesson": {
+        "title": "Diminutivo '-ino' em 'Localino' e Medição de Distância",
+        "content": "<p><strong>\"localino\"</strong> — Diminutivo de 'locale' (estabelecimento). Transmite a ideia de um lugar pequeno, aconchegante, familiar.</p><div class=\"exemplo\">Ho scoperto un localino carinissimo. → Descobri um lugarzinho muito fofo.</div><p style=\"margin-top:10px\"><strong>Medir distância em tempo de caminhada</strong> — 'A 10 minuti a piedi' = a 10 minutos andando. É comum em italiano dar distâncias em minutos de caminhada em vez de quilômetros.</p><div class=\"exemplo\">La stazione è a 5 minuti a piedi. → A estação fica a 5 minutos a pé.</div>"
+      }
+    },
+    {
+      "start": 9,
+      "italian": "Pokè, sushi e burger di pesce decisamente particolari.",
+      "translation": "Pokè, sushi e hambúrguer de peixe decididamente particulares (diferentes/únicos).",
+      "tip": "<strong>\"pokè\"</strong> — Prato havaiano (arroz, peixe cru, vegetais). <strong>\"burger di pesce\"</strong> — 'Hambúrguer de peixe'. <strong>\"decisamente particolari\"</strong> — 'Decididamente particulares' (no sentido de 'diferentes', 'únicos', 'fora do comum').",
+      "miniLesson": {
+        "title": "Estrangeirismos 'Pokè' e 'Burger' + Adjetivo 'Particolare'",
+        "content": "<p><strong>Estrangeirismos na culinária italiana</strong> — 'Pokè' (havaiano), 'sushi' (japonês), 'burger' (inglês) são palavras estrangeiras amplamente usadas na Itália.</p><div class=\"exemplo\">Il poke è diventato molto di moda. → O pokè ficou muito na moda.</div><p style=\"margin-top:10px\"><strong>\"particolare\" = diferente/único</strong> — 'Particolare' pode significar 'particular' (específico) ou 'diferente', 'fora do comum', 'especial'. Aqui, 'decisamente particolari' = decididamente diferentes/únicos.</p><div class=\"exemplo\">Ha un gusto particolare. → Tem um gosto diferente/peculiar.</div>"
+      }
+    },
+    {
+      "start": 12,
+      "italian": "Noi questa volta, oltre alla classica pokè, che è aperta parentesi, secondo me qua a Torino è una delle più buone e generose.",
+      "translation": "Nós desta vez, além do pokè clássico, que é, abro parênteses, na minha opinião aqui em Torino é um dos mais bons e generosos.",
+      "tip": "<strong>\"oltre a\"</strong> — 'Além de'. <strong>\"aperta parentesi\"</strong> — Expressão para introduzir um comentário: 'abro parênteses'. <strong>\"secondo me\"</strong> — 'Na minha opinião'. <strong>\"più buone e generose\"</strong> — 'Mais boas e generosas' (no sentido de porções fartas).",
+      "miniLesson": {
+        "title": "Expressão 'Aperta Parentesi' e Opinião com 'Secondo Me'",
+        "content": "<p><strong>\"aperta parentesi\" (aprire parentesi)</strong> — Expressão usada para introduzir um comentário ou uma observação, como um parêntese na fala. 'Chiudo parentesi' fecha o parêntese.</p><div class=\"exemplo\">Apro parentesi, devo dire che... → Abro parênteses, devo dizer que...</div><p style=\"margin-top:10px\"><strong>\"secondo me\"</strong> — Forma muito comum de dar opinião. Equivalente a 'na minha opinião', 'eu acho que'.</p><div class=\"exemplo\">Secondo me hai ragione. → Na minha opinião, você tem razão.</div><p style=\"margin-top:10px\"><strong>\"generose\" (porções fartas)</strong> — 'Generoso' aplicado à comida significa 'farto', 'bem servido', 'em boa quantidade'.</p><div class=\"exemplo\">Le porzioni sono molto generose. → As porções são muito fartas.</div>"
+      }
+    },
+    {
+      "start": 17,
+      "italian": "Abbiamo provato anche il loro Mau Italy.",
+      "translation": "Provamos também o Mau Italy deles.",
+      "tip": "<strong>\"abbiamo provato\"</strong> — Passato prossimo de 'provare' (provar, experimentar). <strong>\"Mau Italy\"</strong> — Nome do prato (jogo de palavras entre 'Maui' e 'Italy').",
+      "miniLesson": {
+        "title": "Nomes Criativos de Pratos e Jogos de Palavras",
+        "content": "<p><strong>\"Mau Italy\"</strong> — Nome criativo que combina 'Maui' (ilha havaiana famosa) e 'Italy' (Itália). Indica uma fusão culinária havaiano-italiana.</p><div class=\"exemplo\">I nomi dei piatti sono spesso giochi di parole. → Os nomes dos pratos são frequentemente jogos de palavras.</div><p style=\"margin-top:10px\"><strong>\"provare\" = experimentar</strong> — 'Provare' significa tanto 'tentar' quanto 'experimentar (comida)'.</p><div class=\"exemplo\">Devi provare questo piatto! → Você precisa experimentar este prato!</div>"
+      }
+    },
+    {
+      "start": 19,
+      "italian": "Il nome è un mix fra Maui, la famosa isola hawaiiana, e Italy, quindi già tutto un programma.",
+      "translation": "O nome é um misto entre Maui, a famosa ilha havaiana, e Italy, então já é todo um programa (já dá pra imaginar o que esperar).",
+      "tip": "<strong>\"mix fra\"</strong> — 'Mistura entre'. <strong>\"isola hawaiiana\"</strong> — 'Ilha havaiana'. <strong>\"già tutto un programma\"</strong> — Expressão idiomática: 'já é todo um programa', 'já dá pra imaginar o que vem por aí' (geralmente algo interessante ou exagerado).",
+      "miniLesson": {
+        "title": "Expressão 'Già Tutto un Programma' e Estrangeirismo 'Mix'",
+        "content": "<p><strong>\"già tutto un programma\"</strong> — Expressão idiomática usada para dizer que algo promete ser interessante, intenso ou cheio de surpresas. Muitas vezes usada com um tom de humor ou expectativa.</p><div class=\"exemplo\">Una cena da loro è già tutto un programma. → Um jantar lá já é todo um programa.</div><p style=\"margin-top:10px\"><strong>\"mix\" (estrangeirismo)</strong> — 'Mix' é amplamente usado em italiano para indicar mistura, combinação.</p><div class=\"exemplo\">Un mix di sapori. → Uma mistura de sabores.</div>"
+      }
+    },
+    {
+      "start": 23,
+      "italian": "Con all'interno tartare di gambero grigliato, cipolle caramellate, pomodori secchi, stracciatella di burrata e pesto al basilico.",
+      "translation": "Com dentro: tartar de camarão grelhado, cebolas caramelizadas, tomates secos, stracciatella de burrata e pesto de manjericão.",
+      "tip": "<strong>\"tartare\"</strong> — Prato de carne ou peixe cru picado. <strong>\"gambero grigliato\"</strong> — 'Camarão grelhado'. <strong>\"cipolle caramellate\"</strong> — 'Cebolas caramelizadas'. <strong>\"pomodori secchi\"</strong> — 'Tomates secos'. <strong>\"stracciatella di burrata\"</strong> — O creme interno da burrata (queijo). <strong>\"pesto al basilico\"</strong> — 'Pesto de manjericão'.",
+      "miniLesson": {
+        "title": "Ingredientes Italianos: Stracciatella, Burrata, Pesto",
+        "content": "<p><strong>\"stracciatella di burrata\"</strong> — A burrata é um queijo fresco recheado com stracciatella (fios de mozzarella com creme). 'Stracciatella' também é um tipo de sorvete e uma sopa de ovos.</p><div class=\"exemplo\">La burrata è ripiena di stracciatella. → A burrata é recheada com stracciatella.</div><p style=\"margin-top:10px\"><strong>\"pesto al basilico\"</strong> — O pesto mais famoso é o genovês, com manjericão (basilico), pinoli (pinhões), parmigiano, olio d'oliva e aglio.</p><div class=\"exemplo\">Pesto alla genovese. → Pesto genovês.</div>"
+      }
+    },
+    {
+      "start": 30,
+      "italian": "E poi da condividere questi uramaki, con gambero argentino crudo, tartare di tonno, mayo e granella di pistacchio.",
+      "translation": "E depois para compartilhar, estes uramaki, com camarão argentino cru, tartar de atum, maionese e granulado de pistache.",
+      "tip": "<strong>\"da condividere\"</strong> — 'Para compartilhar' (prato para dividir). <strong>\"uramaki\"</strong> — Tipo de sushi com arroz por fora e alga por dentro. <strong>\"gambero argentino crudo\"</strong> — 'Camarão argentino cru'. <strong>\"granella di pistacchio\"</strong> — 'Granulado de pistache' (pistache triturado).",
+      "miniLesson": {
+        "title": "Estrutura 'Da + Infinitivo' e Granella di Pistacchio",
+        "content": "<p><strong>\"da condividere\"</strong> — A estrutura 'da' + infinitivo indica finalidade ou propósito: 'prato da condividere' = prato para compartilhar.</p><div class=\"exemplo\">Cibo da asporto. → Comida para viagem (takeaway).</div><p style=\"margin-top:10px\"><strong>\"granella di pistacchio\"</strong> — 'Granella' indica pedaços pequenos, triturados (de pistache, amêndoas, etc.). Muito usado em sobremesas e pratos gourmet.</p><div class=\"exemplo\">Gelato con granella di nocciole. → Sorvete com granulado de avelãs.</div>"
+      }
+    },
+    {
+      "start": 36,
+      "italian": "E infine questo con doppio salmone. Tartare all'interno e scottato all'esterno, avocado, Philadelphia, spicy mayo e chips di patate viola.",
+      "translation": "E finalmente este com salmão duplo. Tartar por dentro e selado (escaldado) por fora, abacate, Philadelphia (cream cheese), maionese picante e chips de batata roxa.",
+      "tip": "<strong>\"doppio salmone\"</strong> — 'Salmão duplo' (preparado de duas formas). <strong>\"scottato all'esterno\"</strong> — 'Selado por fora', 'escaldado superficialmente'. <strong>\"Philadelphia\"</strong> — Cream cheese (marca famosa, usada como nome comum). <strong>\"spicy mayo\"</strong> — Estrangeirismo: maionese picante. <strong>\"chips di patate viola\"</strong> — 'Chips de batata roxa'.",
+      "miniLesson": {
+        "title": "Estrangeirismo 'Spicy Mayo' e 'Philadelphia' como Nome Comum",
+        "content": "<p><strong>\"spicy mayo\"</strong> — Expressão inglesa amplamente usada em menus italianos para indicar maionese temperada com ingredientes picantes (wasabi, sriracha, etc.).</p><div class=\"exemplo\">Questo sushi ha la spicy mayo. → Este sushi tem maionese picante.</div><p style=\"margin-top:10px\"><strong>\"Philadelphia\"</strong> — Marca de cream cheese que se tornou nome comum para o produto, como no Brasil. 'Formaggio spalmabile' é o termo genérico.</p><div class=\"exemplo\">Bagel con salmone e Philadelphia. → Bagel com salmão e cream cheese.</div><p style=\"margin-top:10px\"><strong>\"scottato\" (selado)</strong> — 'Scottare' significa 'escaldar', 'queimar superficialmente'. Na culinária de peixes, indica uma selagem rápida que cozinha apenas a parte externa.</p>"
+      }
+    },
+    {
+      "start": 43,
+      "italian": "E se quando vai in cassa e mostri il biglietto del Salone del Libro ti fanno lo sconto di 5 euro su una spesa minima di 30.",
+      "translation": "E se quando você vai ao caixa e mostra o ingresso do Salone del Libro, eles te fazem o desconto de 5 euros em uma compra mínima de 30.",
+      "tip": "<strong>\"vai in cassa\"</strong> — 'Vai ao caixa'. <strong>\"mostri\"</strong> — 'Mostras' (presente com valor de condição). <strong>\"ti fanno lo sconto\"</strong> — 'Te fazem o desconto'. <strong>\"spesa minima\"</strong> — 'Gasto mínimo', 'compra mínima'.",
+      "miniLesson": {
+        "title": "Presente com Valor Condicional e Expressão 'Spesa Minima'",
+        "content": "<p><strong>Presente com valor de condição</strong> — Em italiano, o presente do indicativo pode ser usado em frases condicionais, especialmente na fala coloquial, no lugar do 'se' + congiuntivo.</p><div class=\"exemplo\">Mostri il biglietto e hai lo sconto. → Se você mostrar o ingresso, tem desconto.</div><p style=\"margin-top:10px\"><strong>\"spesa minima\"</strong> — Expressão comum em promoções: indica o valor mínimo que se deve gastar para ter direito ao benefício.</p><div class=\"exemplo\">Sconto del 10% su una spesa minima di 50 euro. → Desconto de 10% em compra mínima de 50 euros.</div>"
+      }
+    },
+    {
+      "start": 48,
+      "italian": "Che alla fine in due tra una cosa e l'altra ci arrivi facile.",
+      "translation": "Que no final, em dois, entre uma coisa e outra, você chega fácil (ao valor mínimo).",
+      "tip": "<strong>\"in due\"</strong> — 'Em dois' (duas pessoas). <strong>\"tra una cosa e l'altra\"</strong> — Expressão que significa 'entre uma coisa e outra', somando vários itens. <strong>\"ci arrivi facile\"</strong> — 'Você chega fácil' (ao valor de 30 euros). 'Ci' pronome que indica 'a isso' (à spesa minima).",
+      "miniLesson": {
+        "title": "Pronome 'Ci' com 'Arrivarci' e Expressão 'Tra una Cosa e l'Altra'",
+        "content": "<p><strong>\"ci arrivi\" (arrivarci)</strong> — 'Arrivarci' significa 'chegar a isso', 'atingir esse valor/resultado'. 'Ci' é um pronome que se refere ao objetivo (a spesa minima di 30 euro).</p><div class=\"exemplo\">Con 20 euro non ci arrivi. → Com 20 euros você não chega lá (ao valor necessário).</div><p style=\"margin-top:10px\"><strong>\"tra una cosa e l'altra\"</strong> — Expressão usada para dizer que, somando vários itens ou considerando várias pequenas coisas, se atinge um total.</p><div class=\"exemplo\">Tra una cosa e l'altra ho speso 100 euro. → Entre uma coisa e outra, gastei 100 euros.</div>"
+      }
+    },
+    {
+      "start": 50,
+      "italian": "Il posticino si chiama Ex Mahalo, in via Nizza 233.",
+      "translation": "O lugarzinho se chama Ex Mahalo, na rua Nizza 233.",
+      "tip": "<strong>\"posticino\"</strong> — Diminutivo carinhoso de 'posto' (lugar). <strong>\"Ex Mahalo\"</strong> — Nome do restaurante. 'Mahalo' significa 'obrigado' em havaiano. <strong>\"via Nizza 233\"</strong> — Endereço completo.",
+      "miniLesson": {
+        "title": "Nomes de Estabelecimentos com 'Ex' e Uso de 'Via' para Endereços",
+        "content": "<p><strong>\"Ex Mahalo\"</strong> — O prefixo 'Ex' (antigo) no nome de um estabelecimento pode indicar que o local mudou de nome ou que é uma nova versão de algo. 'Mahalo' é uma palavra havaiana que significa 'obrigado' ou 'gratidão'.</p><div class=\"exemplo\">Ex Mahalo, un nome che unisce Hawaii e Italia. → Ex Mahalo, um nome que une Havaí e Itália.</div><p style=\"margin-top:10px\"><strong>\"via\" para endereços</strong> — 'Via' significa 'rua' e é usada em endereços italianos. O número vem depois do nome da rua.</p><div class=\"exemplo\">Abito in via Roma 10. → Moro na rua Roma 10.</div>"
+      }
+    },
+    {
+      "start": 54,
+      "italian": "Salve Ril e seguimi per altre scoperte gastronomiche a Torino e in giro per il mondo.",
+      "translation": "Olá Ril (pessoa/nome) e me sigam para outras descobertas gastronômicas em Turim e ao redor do mundo.",
+      "tip": "<strong>\"Salve Ril\"</strong> — Saudação amigável. 'Ril' pode ser um apelido ou nome da pessoa a quem se dirige (ou do canal). <strong>\"seguimi\"</strong> — Imperativo de 'seguire' (seguir) + pronome 'mi' (me siga). <strong>\"in giro per il mondo\"</strong> — Expressão que significa 'ao redor do mundo', 'pelo mundo afora'.",
+      "miniLesson": {
+        "title": "Imperativo com Pronome 'Seguimi' e Expressão 'In Giro Per'",
+        "content": "<p><strong>\"seguimi\" (imperativo + pronome)</strong> — O imperativo afirmativo de 'seguire' para a segunda pessoa do singular ('tu') é 'segui'. Quando adicionamos o pronome 'mi' (me), ele se anexa: 'seguimi' = siga-me / me siga.</p><div class=\"exemplo\">Seguimi su Instagram! → Me siga no Instagram!</div><p style=\"margin-top:10px\"><strong>\"in giro per\"</strong> — Expressão que significa 'por aí', 'ao redor de', 'pelos arredores de'. 'In giro per il mondo' = pelo mundo afora.</p><div class=\"exemplo\">Viaggia in giro per l'Europa. → Viaja pela Europa afora.</div><p style=\"margin-top:10px\"><strong>\"salve\"</strong> — Saudação informal mas educada, usada em contextos variados. É menos formal de 'buongiorno' mas mais formal que 'ciao'.</p>"
+      }
+    }
+  ]
+}

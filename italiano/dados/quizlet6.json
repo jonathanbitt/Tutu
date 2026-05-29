@@ -1,0 +1,28 @@
+{
+  "titolo": "Quizlet — 7 Parole Che Ti Fanno Perdere Rispetto",
+  "parole": 18,
+  "lezioni": 7,
+  "descrizione": "Vocabulário sobre comunicação, autoconfiança e expressões coloquiais italianas",
+  "contenuto": {
+    "cards": [
+      { "termine": "perdere rispetto", "definizione": "perder respeito", "frase": "Stai perdendo rispetto.", "difficoltà": 2 },
+      { "termine": "ogni volta che", "definizione": "toda vez que", "frase": "Ogni volta che parlo.", "difficoltà": 2 },
+      { "termine": "peggiore", "definizione": "pior", "frase": "La cosa peggiore.", "difficoltà": 2 },
+      { "termine": "la maggior parte delle", "definizione": "a maioria das", "frase": "La maggior parte delle donne.", "difficoltà": 2 },
+      { "termine": "rendersi conto", "definizione": "dar-se conta / perceber", "frase": "Non mi ero reso conto.", "difficoltà": 2 },
+      { "termine": "solo", "definizione": "só / apenas (palavra que mina confiança)", "frase": "Solo un'opinione.", "difficoltà": 1 },
+      { "termine": "scusa", "definizione": "desculpa (pedido desnecessário)", "frase": "Scusa se disturbo.", "difficoltà": 1 },
+      { "termine": "forse", "definizione": "talvez (demonstra incerteza)", "frase": "Forse hai ragione.", "difficoltà": 1 },
+      { "termine": "tipo (muletilla)", "definizione": "tipo (vício de linguagem, hesitação)", "frase": "Ero tipo... non so.", "difficoltà": 2 },
+      { "termine": "vabbè", "definizione": "tudo bem / então / deixa pra lá (contração)", "frase": "Vabbè, non importa.", "difficoltà": 2 },
+      { "termine": "non lo so", "definizione": "não sei", "frase": "Non lo so, davvero.", "difficoltà": 1 },
+      { "termine": "più o meno", "definizione": "mais ou menos (imprecisão)", "frase": "Più o meno 10 euro.", "difficoltà": 2 },
+      { "termine": "sicuro/a", "definizione": "seguro / confiante", "frase": "Una donna sicura.", "difficoltà": 1 },
+      { "termine": "sentire il bisogno di", "definizione": "sentir a necessidade de", "frase": "Non sento il bisogno di spiegarmi.", "difficoltà": 2 },
+      { "termine": "addolcire", "definizione": "suavizar / amenizar (a fala)", "frase": "Non addolcire la verità.", "difficoltà": 2 },
+      { "termine": "ogni singolo/a", "definizione": "cada (ênfase)", "frase": "Ogni singolo giorno.", "difficoltà": 2 },
+      { "termine": "frase", "definizione": "frase", "frase": "Ogni singola frase.", "difficoltà": 1 },
+      { "termine": "comunicazione assertiva", "definizione": "comunicação assertiva", "frase": "Comunicazione senza filtri.", "difficoltà": 2 }
+    ]
+  }
+}

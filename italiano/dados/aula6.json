@@ -1,0 +1,47 @@
+{
+  "titolo": "ITALIANO — 7 Parole Che Ti Fanno Perdere Rispetto",
+  "videoUrl": "https://jonathanbitt.github.io/Tutu/italiano/dados/videos/video6.mp4",
+  "quizletUrl": "quizlet.html?quizlet=6",
+  "blocchi": [
+    {
+      "start": 0,
+      "italian": "Stai perdendo rispetto ogni volta che dici queste sette parole.",
+      "translation": "Você está perdendo respeito toda vez que diz estas sete palavras.",
+      "tip": "<strong>\"stai perdendo\"</strong> — Presente progressivo ('stare' + gerúndio) de 'perdere' (perder). <strong>\"rispetto\"</strong> — 'Respeito'. <strong>\"ogni volta che\"</strong> — Expressão que significa 'toda vez que'.",
+      "miniLesson": {
+        "title": "Presente Progressivo e Expressão 'Ogni Volta Che'",
+        "content": "<p><strong>\"stai perdendo\"</strong> — O presente progressivo em italiano é formado por 'stare' (estar) + gerúndio do verbo principal. 'Stai perdendo' = você está perdendo.</p><div class=\"esempio\">Sto imparando l'italiano. → Estou aprendendo italiano.</div><p style=\"margin-top:10px\"><strong>\"ogni volta che\"</strong> — Expressão temporal que significa 'toda vez que', 'sempre que'. Introduz uma ação recorrente.</p><div class=\"esempio\">Ogni volta che ti vedo, sorrido. → Toda vez que te vejo, sorrio.</div>"
+      }
+    },
+    {
+      "start": 4,
+      "italian": "E la cosa peggiore è che la maggior parte delle donne le usa ogni singolo giorno, senza nemmeno rendersene conto.",
+      "translation": "E a pior coisa é que a maioria das mulheres as usa todos os dias, sem nem sequer se dar conta.",
+      "tip": "<strong>\"la cosa peggiore\"</strong> — 'A pior coisa' (superlativo relativo de 'cattivo'). <strong>\"la maggior parte delle donne\"</strong> — 'A maioria das mulheres'. <strong>\"le usa\"</strong> — 'As usa' (pronome 'le' referindo-se às palavras). <strong>\"rendersene conto\"</strong> — Expressão reflexiva: 'dar-se conta disso'. 'Se ne rende conto' = se dá conta disso.",
+      "miniLesson": {
+        "title": "Superlativo 'Peggiore' e Expressão 'Rendersi Conto'",
+        "content": "<p><strong>\"peggiore\" (pior)</strong> — É o comparativo/superlativo de irregularidade de 'cattivo' (mau/ruim). 'La cosa peggiore' = a pior coisa.</p><div class=\"esempio\">Questo è il film peggiore che abbia mai visto. → Este é o pior filme que já vi.</div><p style=\"margin-top:10px\"><strong>\"rendersi conto\"</strong> — Verbo reflexivo que significa 'dar-se conta', 'perceber'. O pronome 'ne' substitui 'di ciò' (disso). 'Rendersene conto' = dar-se conta disso.</p><div class=\"esempio\">Non mi ero reso conto del problema. → Não tinha me dado conta do problema.</div>"
+      }
+    },
+    {
+      "start": 10,
+      "italian": "Solo, scusa, forse, tipo, vabbè, non lo so, più o meno.",
+      "translation": "Só (apenas), desculpa, talvez, tipo (como), vabbè (ok/então), não sei, mais ou menos.",
+      "tip": "<strong>Lista das 7 palavras/frases</strong>: <strong>\"solo\"</strong> — 'apenas' (diminui a importância). <strong>\"scusa\"</strong> — 'desculpa' (pedir desculpas desnecessárias). <strong>\"forse\"</strong> — 'talvez' (demonstra incerteza). <strong>\"tipo\"</strong> — 'tipo' (muletilla, vício de linguagem). <strong>\"vabbè\"</strong> — Contracción de 'va bene' (tudo bem / então). <strong>\"non lo so\"</strong> — 'não sei'. <strong>\"più o meno\"</strong> — 'mais ou menos'.",
+      "miniLesson": {
+        "title": "Palavras Muletilla (Fillers) e Expressões que Demonstram Insegurança",
+        "content": "<p><strong>\"vabbè\"</strong> — É a contração coloquial de 'va bene' (tudo bem). Pode significar 'então', 'ok', 'deixa pra lá', e muitas vezes é usado sem necessidade.</p><div class=\"esempio\">Vabbè, non importa. → Deixa pra lá, não importa.</div><p style=\"margin-top:10px\"><strong>\"tipo\"</strong> — Usado como muletilla (vício de linguagem) similar ao 'tipo' ou 'like' em português/inglês. Demonstra hesitação e insegurança na comunicação.</p><div class=\"esempio\">Ero tipo... non so... → Eu estava tipo... não sei...</div><p style=\"margin-top:10px\"><strong>\"più o meno\"</strong> — Expressão que significa 'mais ou menos', indicando imprecisão e falta de convicção.</p><div class=\"esempio\">Più o meno 10 euro. → Mais ou menos 10 euros.</div>"
+      }
+    },
+    {
+      "start": 15,
+      "italian": "Le donne sicure non sentono il bisogno di addolcire ogni singola frase.",
+      "translation": "As mulheres seguras (confiantes) não sentem a necessidade de adoçar cada frase.",
+      "tip": "<strong>\"donne sicure\"</strong> — 'Mulheres seguras' (confiantes, com autoestima). <strong>\"non sentono il bisogno\"</strong> — 'Não sentem a necessidade'. <strong>\"addolcire\"</strong> — 'Adoçar', 'suavizar', 'amenizar' (a fala). <strong>\"ogni singola frase\"</strong> — 'Cada frase' (ênfase com 'singola').",
+      "miniLesson": {
+        "title": "Verbo 'Addolcire' e Uso Enfático de 'Singolo'",
+        "content": "<p><strong>\"addolcire\"</strong> — Verbo que significa 'adoçar' (literal) e 'suavizar', 'amenizar' (figurado). 'Addolcire la frase' = suavizar a fala, torná-la menos direta.</p><div class=\"esempio\">Non addolcire la verità. → Não suavize a verdade.</div><p style=\"margin-top:10px\"><strong>\"ogni singola\"</strong> — O adjetivo 'singolo/a' (único, individual) é usado para enfatizar 'cada'. 'Ogni singola frase' = cada frase (sem exceção).</p><div class=\"esempio\">Controlla ogni singolo dettaglio. → Controle cada detalhe.</div>"
+      }
+    }
+  ]
+}

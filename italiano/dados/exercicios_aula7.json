@@ -1,0 +1,407 @@
+{
+  "aula": 7,
+  "titolo": "ITALIANO — 3 Rituali Wellness Non Negoziali",
+  "paragrafi": [
+    {
+      "indice": 0,
+      "riferimento": "I miei tre rituali wellness non negoziabili.",
+      "esercizi": [
+        {
+          "tipo": "multipla",
+          "domanda": "O que significa 'non negoziabile' neste contexto?",
+          "opzioni": [
+            "Que não pode ser negociado (princípio fixo)",
+            "Que é negociável",
+            "Que é barato",
+            "Que é caro"
+          ],
+          "risposta": "Que não pode ser negociado (princípio fixo)",
+          "spiegazione": "'Non negoziabile' significa que é um princípio fixo, que não se abre mão, que não está em discussão."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciato": "Complete com o adjetivo correto:",
+          "domanda": "Questo è un punto non ___.",
+          "risposta": "negoziabile",
+          "alternative": ["negoziabile", "Negoziale"],
+          "spiegazione": "'Non negoziabile' = não negociável."
+        },
+        {
+          "tipo": "traduci",
+          "domanda": "Traduza: <em>Il wellness è una priorità</em>",
+          "risposta": "O bem-estar é uma prioridade",
+          "paroleChiave": ["bem-estar", "prioridade"],
+          "spiegazione": "'Wellness' é um estrangeirismo usado em italiano."
+        }
+      ]
+    },
+    {
+      "indice": 2,
+      "riferimento": "Ho comprato questa borraccia e lo so, sembra puro marketing, ma in realtà mi sta davvero aiutando a bere molto di più durante l'arco della giornata.",
+      "esercizi": [
+        {
+          "tipo": "multipla",
+          "domanda": "O que significa 'borraccia'?",
+          "opzioni": [
+            "Garrafa térmica / garrafa de água reutilizável",
+            "Borracha",
+            "Borracha de apagar",
+            "Borracha elástica"
+          ],
+          "risposta": "Garrafa térmica / garrafa de água reutilizável",
+          "spiegazione": "'Borraccia' é uma garrafa (geralmente térmica) usada para levar água."
+        },
+        {
+          "tipo": "multipla",
+          "domanda": "Como se forma o presente progressivo em 'mi sta aiutando'?",
+          "opzioni": [
+            "'Stare' (estar) + gerúndio do verbo principal",
+            "Presente do indicativo + infinitivo",
+            "Passato prossimo + gerúndio",
+            "Futuro + participio"
+          ],
+          "risposta": "'Stare' (estar) + gerúndio do verbo principal",
+          "spiegazione": "'Mi sta aiutando' = está me ajudando. 'Stare' + gerúndio."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciato": "Complete com a palavra correta:",
+          "domanda": "Ho comprato questa ___ per l'acqua.",
+          "risposta": "borraccia",
+          "alternative": ["borraccia", "Borraccia"],
+          "spiegazione": "'Borraccia' = garrafa de água."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciato": "Complete com a expressão:",
+          "domanda": "Bevo acqua durante l'___ della giornata.",
+          "risposta": "arco",
+          "alternative": ["arco", "Arco"],
+          "spiegazione": "'Durante l'arco della giornata' = ao longo do dia."
+        },
+        {
+          "tipo": "ordina",
+          "domanda": "Ordene:",
+          "parole": ["borraccia", "questa", "comprato", "ho"],
+          "risposta": "ho comprato questa borraccia",
+          "spiegazione": "'Ho comprato' + 'questa borraccia'."
+        },
+        {
+          "tipo": "traduci",
+          "domanda": "Traduza: <em>Mi sta aiutando con l'italiano</em>",
+          "risposta": "Ele/Ela está me ajudando com o italiano",
+          "paroleChiave": ["está", "ajudando", "italiano"],
+          "spiegazione": "Presente progressivo 'sta aiutando'."
+        },
+        {
+          "tipo": "pronuncia",
+          "domanda": "Pratique:",
+          "parole": ["borraccia", "idratazione"],
+          "risposta": "borraccia idratazione",
+          "spiegazione": "'Borraccia' (bor-rát-tcha) - 'o' fechada, 'rr' geminado, 'cc' como 'tch'. 'Idratazione' (i-dra-ta-tsió-ne) - 'i' curto, 'dr' como 'dr', 'zione' como 'tsió-ne'."
+        }
+      ]
+    },
+    {
+      "indice": 4,
+      "riferimento": "Passando molto tempo all'aria aperta tra passeggiate e giornate al sole, sto cercando di essere molto più attenta alla protezione solare.",
+      "esercizi": [
+        {
+          "tipo": "multipla",
+          "domanda": "O que significa 'all'aria aperta'?",
+          "opzioni": [
+            "Ao ar livre",
+            "No ar condicionado",
+            "Na janela aberta",
+            "No vento"
+          ],
+          "risposta": "Ao ar livre",
+          "spiegazione": "'All'aria aperta' significa 'ao ar livre', 'ao ar livre'."
+        },
+        {
+          "tipo": "multipla",
+          "domanda": "O que significa 'SPF 50'?",
+          "opzioni": [
+            "Fator de proteção solar 50",
+            "Cremes hidratantes",
+            "Protetor labial",
+            "Loção pós-sol"
+          ],
+          "risposta": "Fator de proteção solar 50",
+          "spiegazione": "'SPF' = Sun Protection Factor (fator de proteção solar)."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciato": "Complete a expressão:",
+          "domanda": "Mi piace stare all'___ aperta.",
+          "risposta": "aria",
+          "alternative": ["aria", "Aria"],
+          "spiegazione": "'All'aria aperta' = ao ar livre."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciato": "Complete com o verbo no presente progressivo:",
+          "domanda": "___ cercando di migliorare. (Estou tentando melhorar.)",
+          "risposta": "Sto",
+          "alternative": ["Sto", "sto"],
+          "spiegazione": "'Sto cercando' = estou tentando."
+        },
+        {
+          "tipo": "ordina",
+          "domanda": "Ordene:",
+          "parole": ["solare", "alla", "attenta", "protezione", "più", "essere", "cercando", "sto", "di"],
+          "risposta": "sto cercando di essere più attenta alla protezione solare",
+          "spiegazione": "'Sto cercando di essere' + 'più attenta' + 'alla protezione solare'."
+        },
+        {
+          "tipo": "traduci",
+          "domanda": "Traduza: <em>Usa sempre SPF 50 quando vai al mare</em>",
+          "risposta": "Use sempre FPS 50 quando vai ao mar",
+          "paroleChiave": ["Use", "sempre", "mar"],
+          "spiegazione": "'SPF' é a sigla inglesa usada em italiano."
+        },
+        {
+          "tipo": "pronuncia",
+          "domanda": "Pratique:",
+          "parole": ["passeggiate", "protezione"],
+          "risposta": "passeggiate protezione",
+          "spiegazione": "'Passeggiate' (pas-sed-djá-te) - 'a' aberta, 'gg' geminado como 'dj'. 'Protezione' (pro-te-tsió-ne) - 'e' fechada, 'zione' como 'tsió-ne'."
+        }
+      ]
+    },
+    {
+      "indice": 5,
+      "riferimento": "E non solo sul viso, ma anche sul collo e sul petto.",
+      "esercizi": [
+        {
+          "tipo": "multipla",
+          "domanda": "O que significa a estrutura 'non solo... ma anche'?",
+          "opzioni": [
+            "Não só... mas também",
+            "Nem só... mas apenas",
+            "Não somente... mas apenas",
+            "Não apenas... mas somente"
+          ],
+          "risposta": "Não só... mas também",
+          "spiegazione": "'Non solo... ma anche' é uma estrutura correlativa que significa 'não só... mas também'."
+        },
+        {
+          "tipo": "multipla",
+          "domanda": "O que significa 'viso'?",
+          "opzioni": [
+            "Olhos",
+            "Rosto",
+            "Boca",
+            "Testa"
+          ],
+          "risposta": "Rosto",
+          "spiegazione": "'Viso' significa 'rosto' em italiano."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciato": "Complete com a estrutura correlativa:",
+          "domanda": "Non ___ parla italiano, ___ anche francese.",
+          "risposta": "solo ma",
+          "alternative": ["solo ma", "Solo ma"],
+          "spiegazione": "'Non solo... ma anche' = não só... mas também."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciato": "Complete com a preposição articulada:",
+          "domanda": "Il sole è dannoso ___ viso.",
+          "risposta": "sul",
+          "alternative": ["sul", "Sul"],
+          "spiegazione": "'Sul viso' = no rosto (preposição 'su' + artigo 'il' = 'sul')."
+        },
+        {
+          "tipo": "ordina",
+          "domanda": "Ordene:",
+          "parole": ["sul", "solo", "collo", "non", "viso", "anche", "ma", "sul", "e"],
+          "risposta": "e non solo sul viso ma anche sul collo",
+          "spiegazione": "'E non solo sul viso' + 'ma anche sul collo'."
+        },
+        {
+          "tipo": "traduci",
+          "domanda": "Traduza: <em>Non solo sul viso, ma anche sul petto</em>",
+          "risposta": "Não só no rosto, mas também no peito",
+          "paroleChiave": ["Não", "só", "rosto", "peito"],
+          "spiegazione": "Estrutura 'non solo... ma anche'."
+        },
+        {
+          "tipo": "pronuncia",
+          "domanda": "Pratique:",
+          "parole": ["viso", "collo", "petto"],
+          "risposta": "viso collo petto",
+          "spiegazione": "'Viso' (ví-zo) - 'i' tônico, 's' sonoro. 'Collo' (kól-lo) - 'o' aberta, 'll' geminado. 'Petto' (pét-to) - 'e' fechada, 'tt' geminado."
+        }
+      ]
+    },
+    {
+      "indice": 6,
+      "riferimento": "3. Disintossicarmi dal telefono.",
+      "esercizi": [
+        {
+          "tipo": "multipla",
+          "domanda": "O que significa o prefixo 'dis-' em 'disintossicarmi'?",
+          "opzioni": [
+            "Indica repetição",
+            "Indica negação ou remoção",
+            "Indica intensidade",
+            "Indica movimento"
+          ],
+          "risposta": "Indica negação ou remoção",
+          "spiegazione": "O prefixo 'dis-' (do latim) indica negação, separação ou remoção. 'Disintossicare' = remover toxinas."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciato": "Complete com o verbo reflexivo:",
+          "domanda": "Voglio ___ dai social media.",
+          "risposta": "disintossicarmi",
+          "alternative": ["disintossicarmi", "Disintossicarmi"],
+          "spiegazione": "'Disintossicarmi' = desintoxicar-me (infinito reflexivo + pronome 'mi')."
+        },
+        {
+          "tipo": "traduci",
+          "domanda": "Traduza: <em>Disintossicarsi dal telefono</em>",
+          "risposta": "Desintoxicar-se do telefone / desconectar do celular",
+          "paroleChiave": ["desintoxicar", "telefone"],
+          "spiegazione": "Expressão moderna para 'digital detox'."
+        }
+      ]
+    },
+    {
+      "indice": 7,
+      "riferimento": "Ho deciso di lasciarlo proprio in un'altra stanza quando lavoro o quando devo concentrarmi su altro.",
+      "esercizi": [
+        {
+          "tipo": "multipla",
+          "domanda": "Qual é a função do advérbio 'proprio' nesta frase?",
+          "opzioni": [
+            "Indicar posse",
+            "Dar ênfase (exatamente/justamente)",
+            "Indicar o próprio",
+            "Indicar proximidade"
+          ],
+          "risposta": "Dar ênfase (exatamente/justamente)",
+          "spiegazione": "'Proprio' usado como advérbio significa 'exatamente', 'justamente', para dar ênfase."
+        },
+        {
+          "tipo": "multipla",
+          "domanda": "O que significa 'concentrarmi su altro'?",
+          "opzioni": [
+            "Concentrar-me em outra coisa",
+            "Concentrar-me em mim mesmo",
+            "Concentrar-me no outro",
+            "Concentrar-me sobre outros"
+          ],
+          "risposta": "Concentrar-me em outra coisa",
+          "spiegazione": "'Concentrarsi su' = concentrar-se em. 'Altro' = outra coisa."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciato": "Complete com o advérbio enfático:",
+          "domanda": "È ___ quello che volevo. (É exatamente o que eu queria.)",
+          "risposta": "proprio",
+          "alternative": ["proprio", "Proprio"],
+          "spiegazione": "'Proprio' = exatamente / justamente."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciato": "Complete com o verbo reflexivo:",
+          "domanda": "Devo ___ sul lavoro.",
+          "risposta": "concentrarmi",
+          "alternative": ["concentrarmi", "Concentrarmi"],
+          "spiegazione": "'Concentrarmi' = me concentrar (infinito reflexivo + pronome 'mi')."
+        },
+        {
+          "tipo": "ordina",
+          "domanda": "Ordene:",
+          "parole": ["lasciarlo", "proprio", "un'altra", "stanza", "in", "ho", "deciso", "di"],
+          "risposta": "ho deciso di lasciarlo proprio in un'altra stanza",
+          "spiegazione": "'Ho deciso di' + 'lasciarlo' + 'proprio' + 'in un'altra stanza'."
+        },
+        {
+          "tipo": "traduci",
+          "domanda": "Traduza: <em>Devo concentrarmi sullo studio</em>",
+          "risposta": "Preciso me concentrar no estudo",
+          "paroleChiave": ["concentrar", "estudo"],
+          "spiegazione": "'Concentrarmi su' + 'studio'."
+        },
+        {
+          "tipo": "pronuncia",
+          "domanda": "Pratique:",
+          "parole": ["concentrarmi", "lasciarlo"],
+          "risposta": "concentrarmi lasciarlo",
+          "spiegazione": "'Concentrarmi' (kon-chen-trár-mi) - 'con' como 'kon', 'cen' como 'chen', 'trami' como 'trár-mi'. 'Lasciarlo' (la-shár-lo) - 'la' como 'la', 'sci' como 'shi', 'arlo' como 'ár-lo'."
+        }
+      ]
+    },
+    {
+      "indice": 8,
+      "riferimento": "E sinceramente mi sto rendendo conto di quanto questo migliori davvero la concentrazione, la qualità del lavoro e la qualità della vita in generale.",
+      "esercizi": [
+        {
+          "tipo": "multipla",
+          "domanda": "Por que usamos o congiuntivo 'migliori' após 'di quanto'?",
+          "opzioni": [
+            "Porque é passado",
+            "Porque expressa uma percepção ou opinião subjetiva",
+            "Porque é futuro",
+            "Porque é uma pergunta"
+          ],
+          "risposta": "Porque expressa uma percepção ou opinião subjetiva",
+          "spiegazione": "Após expressões como 'di quanto', usa-se o congiuntivo para expressar uma percepção subjetiva ou opinião."
+        },
+        {
+          "tipo": "multipla",
+          "domanda": "O que significa 'mi sto rendendo conto'?",
+          "opzioni": [
+            "Estou me rendendo",
+            "Estou me dando conta / percebendo",
+            "Estou rendendo",
+            "Estou contando"
+          ],
+          "risposta": "Estou me dando conta / percebendo",
+          "spiegazione": "'Rendersi conto' significa 'dar-se conta', 'perceber'. 'Mi sto rendendo conto' é o presente progressivo."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciato": "Complete com o congiuntivo:",
+          "domanda": "Vedi quanto ___ (essere) importante.",
+          "risposta": "sia",
+          "alternative": ["sia", "Sia"],
+          "spiegazione": "Após 'quanto', usa-se o congiuntivo 'sia' (seja)."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciato": "Complete com o presente progressivo reflexivo:",
+          "domanda": "Mi ___ rendendo conto dell'errore.",
+          "risposta": "sto",
+          "alternative": ["sto", "Sto"],
+          "spiegazione": "'Mi sto rendendo conto' = estou me dando conta."
+        },
+        {
+          "tipo": "ordina",
+          "domanda": "Ordene:",
+          "parole": ["quanto", "migliori", "di", "concentrazione", "la", "questo", "sinceramente", "e"],
+          "risposta": "e sinceramente di quanto questo migliori la concentrazione",
+          "spiegacao": "'E sinceramente' + 'di quanto questo migliori' + 'la concentrazione'."
+        },
+        {
+          "tipo": "traduci",
+          "domanda": "Traduza: <em>Mi sto rendendo conto dei miei errori</em>",
+          "risposta": "Estou me dando conta dos meus erros",
+          "paroleChiave": ["dando", "conta", "erros"],
+          "spiegazione": "'Rendersi conto de' = dar-se conta de."
+        },
+        {
+          "tipo": "pronuncia",
+          "domanda": "Pratique:",
+          "parole": ["sinceramente", "concentrazione", "qualità"],
+          "risposta": "sinceramente concentrazione qualità",
+          "spiegazione": "'Sinceramente' (sin-tche-ra-mén-te) - 'sin' como 'sin', 'ce' como 'tche', 'mente' como 'mén-te'. 'Concentrazione' (kon-chen-tra-tsió-ne) - 'con' como 'kon', 'cen' como 'chen', 'zione' como 'tsió-ne'. 'Qualità' (kua-li-tà) - 'qua' como 'kua', 'li' como 'li', 'tà' tônica."
+        }
+      ]
+    }
+  ]
+}

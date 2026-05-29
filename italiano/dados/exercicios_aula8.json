@@ -1,0 +1,207 @@
+{
+  "aula": 8,
+  "titolo": "ITALIANO — Perché Ti Mancano di Rispetto?",
+  "paragrafi": [
+    {
+      "indice": 0,
+      "riferimento": "Vuoi sapere perché alcune persone continuano a mancarti di rispetto?",
+      "esercizi": [
+        {
+          "tipo": "multipla",
+          "domanda": "O que significa a expressão 'mancare di rispetto'?",
+          "opzioni": [
+            "Faltar com respeito / desrespeitar",
+            "Faltar ao respeito",
+            "Ter respeito",
+            "Dar respeito"
+          ],
+          "risposta": "Faltar com respeito / desrespeitar",
+          "spiegazione": "'Mancare di rispetto' significa 'faltar com respeito', 'desrespeitar alguém'."
+        },
+        {
+          "tipo": "multipla",
+          "domanda": "O que indica a estrutura 'continuare a' + infinitivo?",
+          "opzioni": [
+            "Uma ação que começa",
+            "Uma ação que persiste no tempo (continua a fazer)",
+            "Uma ação que termina",
+            "Uma ação que nunca acontece"
+          ],
+          "risposta": "Uma ação que persiste no tempo (continua a fazer)",
+          "spiegazione": "'Continuare a' + infinitivo indica uma ação que continua ocorrendo."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciato": "Complete a expressão:",
+          "domanda": "Non mi ___ di rispetto! (Não me falte com respeito!)",
+          "risposta": "mancare",
+          "alternative": ["mancare", "Mancare"],
+          "spiegazione": "'Non mi mancare di rispetto' = não me falte com respeito (imperativo negativo)."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciato": "Complete com o verbo correto:",
+          "domanda": "Continua a ___ (piovere).",
+          "risposta": "piovere",
+          "alternative": ["piovere", "Piovere"],
+          "spiegazione": "'Continua a piovere' = continua a chover."
+        },
+        {
+          "tipo": "ordina",
+          "domanda": "Ordene a frase:",
+          "parole": ["perché", "alcune", "vuoi", "persone", "a", "mancarti", "di", "sapere", "rispetto", "continuano"],
+          "risposta": "vuoi sapere perché alcune persone continuano a mancarti di rispetto",
+          "spiegazione": "'Vuoi sapere' + 'perché' + 'alcune persone continuano a mancarti di rispetto'."
+        },
+        {
+          "tipo": "traduci",
+          "domanda": "Traduza: <em>Non mancarmi di rispetto</em>",
+          "risposta": "Não me falte com respeito",
+          "paroleChiave": ["falte", "respeito"],
+          "spiegazione": "Imperativo negativo do verbo 'mancare' com pronome 'mi'."
+        },
+        {
+          "tipo": "pronuncia",
+          "domanda": "Pratique:",
+          "parole": ["mancarti", "rispetto"],
+          "risposta": "mancarti rispetto",
+          "spiegazione": "'Mancarti' (man-kár-ti) - 'man' como 'man', 'car' como 'kár', 'ti' como 'ti'. 'Rispetto' (ris-pét-to) - 'i' curto, 'e' aberta, 'tt' geminado."
+        }
+      ]
+    },
+    {
+      "indice": 1,
+      "riferimento": "Non perché sei troppo buona, ma perché sanno che resterai, perdonerai, spiegherai, darai un'altra possibilità e un'altra ancora dopo di questa.",
+      "esercizi": [
+        {
+          "tipo": "multipla",
+          "domanda": "Qual é o tempo verbal de 'resterai', 'perdonerai', 'spiegherai', 'darai'?",
+          "opzioni": [
+            "Presente indicativo",
+            "Futuro simples",
+            "Passato prossimo",
+            "Imperfeito"
+          ],
+          "risposta": "Futuro simples",
+          "spiegazione": "Estes verbos estão no futuro simples, expressando ações que certamente acontecerão."
+        },
+        {
+          "tipo": "multipla",
+          "domanda": "Qual é o efeito da repetição dos verbos no futuro?",
+          "opzioni": [
+            "Mostra dúvida",
+            "Cria ênfase, mostrando um padrão de comportamento previsível",
+            "Mostra arrependimento",
+            "Mostra surpresa"
+          ],
+          "risposta": "Cria ênfase, mostrando um padrão de comportamento previsível",
+          "spiegazione": "A repetição enfatiza o ciclo vicioso: a pessoa sempre perdoa, sempre explica, sempre dá outra chance."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciato": "Complete com o futuro do verbo 'restare':",
+          "domanda": "Tu ___ qui per sempre? (Você ficará aqui para sempre?)",
+          "risposta": "resterai",
+          "alternative": ["resterai", "Resterai"],
+          "spiegazione": "'Restare' no futuro: io resterò, tu resterai..."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciato": "Complete com o futuro do verbo 'perdonare':",
+          "domanda": "Sono sicuro che mi ___ . (Estou seguro de que me perdoará.)",
+          "risposta": "perdonerai",
+          "alternative": ["perdonerai", "Perdonerai"],
+          "spiegazione": "'Perdonare' no futuro: io perdonerò, tu perdonerai..."
+        },
+        {
+          "tipo": "ordina",
+          "domanda": "Ordene a sequência de verbos:",
+          "parole": ["spiegherai", "resterai", "darai", "perdonerai"],
+          "risposta": "resterai perdonerai spiegherai darai",
+          "spiegazione": "A sequência do áudio: resterai, perdonerai, spiegherai, darai."
+        },
+        {
+          "tipo": "traduci",
+          "domanda": "Traduza: <em>Tornerai domani?</em>",
+          "risposta": "Você voltará amanhã?",
+          "paroleChiave": ["voltará", "amanhã"],
+          "spiegazione": "Futuro simples do verbo 'tornare'."
+        },
+        {
+          "tipo": "pronuncia",
+          "domanda": "Pratique os futuros:",
+          "parole": ["resterai", "perdonerai", "spiegherai", "darai"],
+          "risposta": "resterai perdonerai spiegherai darai",
+          "spiegazione": "'Resterai' (re-ste-rái) - 'e' fechada, 'rai' tônico. 'Perdonerai' (per-do-ne-rái) - 'o' aberta, 'ne' como 'ne', 'rai' tônico. 'Spiegherai' (spie-ge-rái) - 'spie' como 'spié', 'ge' como 'je', 'rai' tônico. 'Darai' (da-rái) - 'a' aberta, 'rai' tônico."
+        }
+      ]
+    },
+    {
+      "indice": 2,
+      "riferimento": "Il momento in cui le persone capiscono che perderti è davvero una possibilità, guarda quanto velocemente inizieranno a trattarti in modo diverso.",
+      "esercizi": [
+        {
+          "tipo": "multipla",
+          "domanda": "O que significa 'perderti'?",
+          "opzioni": [
+            "Perder-se",
+            "Te perder (infinito + pronome)",
+            "Perdoar-te",
+            "Esquecer-te"
+          ],
+          "risposta": "Te perder (infinito + pronome)",
+          "spiegazione": "'Perderti' é o infinitivo 'perdere' + pronome 'ti' (te) = te perder."
+        },
+        {
+          "tipo": "multipla",
+          "domanda": "Qual é a função da expressão 'guarda quanto'?",
+          "opzioni": [
+            "Pedir para olhar algo físico",
+            "Chamar atenção para uma consequência (veja o quanto)",
+            "Fazer uma pergunta",
+            "Dar uma ordem"
+          ],
+          "risposta": "Chamar atenção para uma consequência (veja o quanto)",
+          "spiegazione": "'Guarda quanto' é usado para chamar atenção para o resultado/efeito de algo."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciato": "Complete com o infinitivo + pronome:",
+          "domanda": "È difficile ___ (perdoar-te).",
+          "risposta": "perdonarti",
+          "alternative": ["perdonarti", "Perdonarti"],
+          "spiegazione": "'Perdonarti' = infinito 'perdonare' + pronome 'ti'."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciato": "Complete com o futuro:",
+          "domanda": "___ a rispettarti. (Começarão a te respeitar.)",
+          "risposta": "Inizieranno",
+          "alternative": ["Inizieranno", "inizieranno"],
+          "spiegazione": "'Inizieranno' é a 3ª pessoa do plural do futuro de 'iniziare'."
+        },
+        {
+          "tipo": "ordina",
+          "domanda": "Ordene a frase:",
+          "parole": ["perderti", "possibilità", "davvero", "che", "capiscono", "le", "persone", "una", "è", "momento", "in", "cui", "il"],
+          "risposta": "il momento in cui le persone capiscono che perderti è davvero una possibilità",
+          "spiegazione": "'Il momento in cui' + 'le persone capiscono che' + 'perderti è davvero una possibilità'."
+        },
+        {
+          "tipo": "traduci",
+          "domanda": "Traduza: <em>Inizieranno a trattarmi meglio</em>",
+          "risposta": "Começarão a me tratar melhor",
+          "paroleChiave": ["Começarão", "tratar", "melhor"],
+          "spiegazione": "Futuro de 'iniziare' + 'a' + infinitivo 'trattare' + pronome 'mi'."
+        },
+        {
+          "tipo": "pronuncia",
+          "domanda": "Pratique:",
+          "parole": ["perderti", "velocemente", "inizieranno"],
+          "risposta": "perderti velocemente inizieranno",
+          "spiegazione": "'Perderti' (per-dér-ti) - 'e' aberta, 'der' como 'dér'. 'Velocemente' (ve-lo-tche-mén-te) - 've' como 've', 'lo' como 'lo', 'ce' como 'tche', 'mente' como 'mén-te'. 'Inizieranno' (i-ni-tsie-rán-no) - 'i' curto, 'ni' como 'ni', 'zie' como 'tsie', 'ranno' como 'rán-no'."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "titolo": "Quizlet — La Mentalità del Mondo e la Verità di Cristo",
+  "parole": 28,
+  "lezioni": 7,
+  "descrizione": "Vocabulário religioso, filosófico e expressões idiomáticas italianas",
+  "contenuto": {
+    "cards": [
+      { "termine": "seguire", "definizione": "seguir", "frase": "Seguire Gesù.", "difficoltà": 1 },
+      { "termine": "mentalità", "definizione": "mentalidade", "frase": "Cambiare mentalità.", "difficoltà": 2 },
+      { "termine": "essere del mondo", "definizione": "ser do mundo (pertencer à lógica mundana)", "frase": "Chi è del mondo segue le sue regole.", "difficoltà": 2 },
+      { "termine": "scegliere", "definizione": "escolher", "frase": "Vi ho scelti.", "difficoltà": 1 },
+      { "termine": "separare da", "definizione": "separar de", "frase": "Separare il bene dal male.", "difficoltà": 2 },
+      { "termine": "menzognero", "definizione": "mentiroso / enganador (forte)", "frase": "Il diavolo è menzognero.", "difficoltà": 3 },
+      { "termine": "personalismo", "definizione": "personalismo (foco excessivo no próprio eu)", "frase": "Un personalismo che autoafferma se stesso.", "difficoltà": 3 },
+      { "termine": "sentimentalismo", "definizione": "sentimentalismo (valorização excessiva dos sentimentos)", "frase": "Sentimentalismo vuoto.", "difficoltà": 3 },
+      { "termine": "autoaffermare", "definizione": "autoafirmar (afirmar a si mesmo)", "frase": "Autoaffermarsi a tutti i costi.", "difficoltà": 3 },
+      { "termine": "benessere", "definizione": "bem-estar", "frase": "Il proprio benessere.", "difficoltà": 2 },
+      { "termine": "andare al di là", "definizione": "ir além / transcender", "frase": "Andare al di là delle apparenze.", "difficoltà": 2 },
+      { "termine": "non c'entra nulla", "definizione": "não tem nada a ver", "frase": "Questo non c'entra nulla.", "difficoltà": 2 },
+      { "termine": "chiamare", "definizione": "chamar", "frase": "Vi ho chiamati.", "difficoltà": 1 },
+      { "termine": "portare la luce", "definizione": "trazer a luz (trazer verdade/bondade)", "frase": "Portate la luce nel mondo.", "difficoltà": 2 },
+      { "termine": "tenebre", "definizione": "trevas / escuridão espiritual", "frase": "Un mondo di tenebre.", "difficoltà": 2 },
+      { "termine": "condannare", "definizione": "condenar", "frase": "Non condanniamo il mondo.", "difficoltà": 2 },
+      { "termine": "separarsi", "definizione": "separar-se", "frase": "Separiamoci dal male.", "difficoltà": 2 },
+      { "termine": "contrastare", "definizione": "opor-se / contrastar", "frase": "Contrastare le ingiustizie.", "difficoltà": 2 },
+      { "termine": "gioia di Cristo", "definizione": "alegria de Cristo (duradoura)", "frase": "La gioia che viene da Lui.", "difficoltà": 2 },
+      { "termine": "effimero", "definizione": "efêmero / passageiro", "frase": "Piacere effimero.", "difficoltà": 2 },
+      { "termine": "pace di Cristo", "definizione": "paz de Cristo", "frase": "La pace che trascende.", "difficoltà": 2 },
+      { "termine": "fiducia", "definizione": "confiança", "frase": "Fiducia in Cristo.", "difficoltà": 1 },
+      { "termine": "imperturbabilità", "definizione": "imperturbabilidade / serenidade inabalável", "frase": "Una calma imperturbabile.", "difficoltà": 3 },
+      { "termine": "appartenere a", "definizione": "pertencer a", "frase": "Apparteniamo a Cristo.", "difficoltà": 2 },
+      { "termine": "Spirito Santo", "definizione": "Espírito Santo", "frase": "Lo Spirito Santo è in noi.", "difficoltà": 2 },
+      { "termine": "andare avanti", "definizione": "seguir em frente / progredir", "frase": "Andare avanti sereni.", "difficoltà": 2 },
+      { "termine": "sereno", "definizione": "sereno / calmo / tranquilo", "frase": "Sono sereno.", "difficoltà": 1 },
+      { "termine": "col pensiero di", "definizione": "com o pensamento de", "frase": "Vivi col pensiero di Cristo.", "difficoltà": 2 }
+    ]
+  }
+}

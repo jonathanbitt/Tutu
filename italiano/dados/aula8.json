@@ -1,0 +1,37 @@
+{
+  "titolo": "ITALIANO — Perché Ti Mancano di Rispetto?",
+  "videoUrl": "https://jonathanbitt.github.io/Tutu/italiano/dados/videos/video8.mp4",
+  "quizletUrl": "quizlet.html?quizlet=8",
+  "blocchi": [
+    {
+      "start": 0,
+      "italian": "Vuoi sapere perché alcune persone continuano a mancarti di rispetto?",
+      "translation": "Quer saber por que algumas pessoas continuam a te faltar com respeito?",
+      "tip": "<strong>\"vuoi sapere\"</strong> — 'Quer saber' (presente do indicativo de 'volere' + infinitivo). <strong>\"continuano a mancarti di rispetto\"</strong> — 'Continuam a te faltar com respeito' — verbo 'mancare di rispetto' + pronome 'ti' (a te).",
+      "miniLesson": {
+        "title": "Verbo 'Mancare di Rispetto' e Estrutura 'Continuare a'",
+        "content": "<p><strong>\"mancare di rispetto\"</strong> — Expressão que significa 'faltar com respeito', 'desrespeitar'. 'Mancare' (faltar) + 'di rispetto' (de respeito).</p><div class=\"esempio\">Non mi mancare di rispetto! → Não me falte com respeito!</div><p style=\"margin-top:10px\"><strong>\"continuare a\" + infinitivo</strong> — Indica uma ação que persiste no tempo. 'Continuano a mancare' = continuam a faltar.</p><div class=\"esempio\">Continua a piovere. → Continua a chover.</div>"
+      }
+    },
+    {
+      "start": 3,
+      "italian": "Non perché sei troppo buona, ma perché sanno che resterai, perdonerai, spiegherai, darai un'altra possibilità e un'altra ancora dopo di questa.",
+      "translation": "Não porque você é boa demais, mas porque eles sabem que você ficará, perdoará, explicará, dará outra chance e mais outra depois desta.",
+      "tip": "<strong>\"troppo buona\"</strong> — 'Boa demais' (ingênua, que aceita tudo). <strong>\"sanno che\"</strong> — 'Sabem que' (indicativo porque é um fato). <strong>\"resterai, perdonerai, spiegherai, darai\"</strong> — Futuro simples dos verbos 'restare', 'perdonare', 'spiegare', 'dare'. <strong>\"un'altra ancora dopo di questa\"</strong> — 'Mais outra depois desta' (ênfase na repetição infinita).",
+      "miniLesson": {
+        "title": "Futuro Simples e Sequência de Verbos para Ênfase",
+        "content": "<p><strong>Futuro simples</strong> — Usado aqui para expressar ações que certamente acontecerão no futuro (certeza). 'Resterai' (ficarás), 'perdonerai' (perdoarás), 'spiegherai' (explicarás), 'darai' (darás).</p><div class=\"esempio\">Tornerai? → Voltarás?</div><p style=\"margin-top:10px\"><strong>Sequência de verbos no futuro</strong> — A repetição de verbos no futuro cria um efeito de ênfase, mostrando um padrão de comportamento previsível.</p>"
+      }
+    },
+    {
+      "start": 18,
+      "italian": "Il momento in cui le persone capiscono che perderti è davvero una possibilità, guarda quanto velocemente inizieranno a trattarti in modo diverso.",
+      "translation": "O momento em que as pessoas entendem que te perder é realmente uma possibilidade, veja o quão rapidamente começarão a te tratar de modo diferente.",
+      "tip": "<strong>\"perderti\"</strong> — 'Te perder' (infinito 'perdere' + pronome 'ti'). <strong>\"è davvero una possibilità\"</strong> — 'É realmente uma possibilidade' (algo que pode acontecer de fato). <strong>\"guarda quanto velocemente\"</strong> — 'Veja o quão rapidamente'. <strong>\"inizieranno a trattarti\"</strong> — Futuro de 'iniziare' (começar) + 'a trattarti' (a te tratar).",
+      "miniLesson": {
+        "title": "Infinito com Pronome 'Perderti' e Estrutura 'Iniziare a'",
+        "content": "<p><strong>\"perderti\"</strong> — O infinitivo 'perdere' (perder) + pronome 'ti' (te) forma 'perderti' = te perder. A colocação do pronome é obrigatória após o infinitivo.</p><div class=\"esempio\">È difficile perdonarti. → É difícil te perdoar.</div><p style=\"margin-top:10px\"><strong>\"inizieranno a trattarti\"</strong> — Futuro de 'iniziare' (começar) + preposição 'a' + infinitivo 'trattare' + pronome 'ti' (te). 'Iniziare a' = começar a.</p><div class=\"esempio\">Inizieranno a rispettarti. → Começarão a te respeitar.</div><p style=\"margin-top:10px\"><strong>\"guarda quanto\"</strong> — Expressão usada para chamar atenção para uma consequência: 'veja o quanto', 'veja como'.</p>"
+      }
+    }
+  ]
+}

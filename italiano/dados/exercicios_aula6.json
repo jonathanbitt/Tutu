@@ -1,0 +1,274 @@
+{
+  "aula": 6,
+  "titolo": "ITALIANO — 7 Parole Che Ti Fanno Perdere Rispetto",
+  "paragrafi": [
+    {
+      "indice": 0,
+      "riferimento": "Stai perdendo rispetto ogni volta che dici queste sette parole.",
+      "esercizi": [
+        {
+          "tipo": "multipla",
+          "domanda": "Como se forma o presente progressivo em italiano?",
+          "opzioni": [
+            "Verbo no presente + gerúndio",
+            "'Stare' (estar) + gerúndio do verbo principal",
+            "'Avere' + particípio passado",
+            "Infinito + pronome"
+          ],
+          "risposta": "'Stare' (estar) + gerúndio do verbo principal",
+          "spiegazione": "O presente progressivo ('sto facendo', estou fazendo) é formado por 'stare' + gerúndio."
+        },
+        {
+          "tipo": "multipla",
+          "domanda": "O que significa a expressão 'ogni volta che'?",
+          "opzioni": [
+            "Cada volta que",
+            "Toda vez que / sempre que",
+            "Nenhuma vez que",
+            "Alguma vez que"
+          ],
+          "risposta": "Toda vez que / sempre que",
+          "spiegazione": "'Ogni volta che' introduz uma ação recorrente, significando 'toda vez que'."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciato": "Complete com o presente progressivo:",
+          "domanda": "___ imparando l'italiano. (Estou aprendendo italiano.)",
+          "risposta": "Sto",
+          "alternative": ["Sto", "sto"],
+          "spiegazione": "'Sto' é a 1ª pessoa do presente de 'stare' + gerúndio 'imparando'."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciato": "Complete a expressão temporal:",
+          "domanda": "___ volta che ti vedo, sorrido.",
+          "risposta": "Ogni",
+          "alternative": ["Ogni", "ogni"],
+          "spiegazione": "'Ogni volta che' = toda vez que."
+        },
+        {
+          "tipo": "ordina",
+          "domanda": "Ordene a frase:",
+          "parole": ["perdendo", "stai", "ogni", "volta", "rispetto", "che", "parole", "queste", "dici", "sette"],
+          "risposta": "stai perdendo rispetto ogni volta che dici queste sette parole",
+          "spiegazione": "Presente progressivo 'stai perdendo' + objeto 'rispetto' + 'ogni volta che' + 'dici queste sette parole'."
+        },
+        {
+          "tipo": "traduci",
+          "domanda": "Traduza: <em>Ogni volta che parlo, imparo</em>",
+          "risposta": "Toda vez que falo, aprendo",
+          "paroleChiave": ["Toda", "vez", "falo", "aprendo"],
+          "spiegazione": "Expressão de ação recorrente."
+        },
+        {
+          "tipo": "pronuncia",
+          "domanda": "Pratique:",
+          "parole": ["perdendo", "rispetto"],
+          "risposta": "perdendo rispetto",
+          "spiegazione": "'Perdendo' (per-dén-do) - 'e' aberta, 'den' como 'den', 'do' como 'do'. 'Rispetto' (ris-pét-to) - 'i' curto, 'e' aberta, 'tt' geminado."
+        }
+      ]
+    },
+    {
+      "indice": 1,
+      "riferimento": "E la cosa peggiore è che la maggior parte delle donne le usa ogni singolo giorno, senza nemmeno rendersene conto.",
+      "esercizi": [
+        {
+          "tipo": "multipla",
+          "domanda": "Qual é o superlativo irregular de 'cattivo' (mau/ruim)?",
+          "opzioni": [
+            "Cattivissimo",
+            "Peggiore / il peggiore",
+            "Più cattivo",
+            "Malissimo"
+          ],
+          "risposta": "Peggiore / il peggiore",
+          "spiegazione": "'Peggiore' é o comparativo/superlativo irregular de 'cattivo', significando 'pior'."
+        },
+        {
+          "tipo": "multipla",
+          "domanda": "O que significa a expressão 'rendersi conto'?",
+          "opzioni": [
+            "Dar-se conta / perceber",
+            "Render-se",
+            "Contar-se",
+            "Controlar-se"
+          ],
+          "risposta": "Dar-se conta / perceber",
+          "spiegazione": "'Rendersi conto' é um verbo reflexivo que significa 'dar-se conta', 'perceber'."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciato": "Complete com o superlativo:",
+          "domanda": "Questo è il film ___ che abbia mai visto.",
+          "risposta": "peggiore",
+          "alternative": ["peggiore", "Peggiore"],
+          "spiegazione": "'Il film peggiore' = o pior filme."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciato": "Complete a expressão reflexiva:",
+          "domanda": "Non mi ero ___ conto del problema.",
+          "risposta": "reso",
+          "alternative": ["reso", "Reso"],
+          "spiegazione": "'Essere reso conto' = ter-se dado conta. 'Reso' é o particípio passado de 'rendere'."
+        },
+        {
+          "tipo": "ordina",
+          "domanda": "Ordene:",
+          "parole": ["donne", "peggiore", "la", "cosa", "maggior", "parte", "delle", "è", "che", "la", "e"],
+          "risposta": "e la cosa peggiore è che la maggior parte delle donne",
+          "spiegazione": "'E' + 'la cosa peggiore è che' + 'la maggior parte delle donne'."
+        },
+        {
+          "tipo": "traduci",
+          "domanda": "Traduza: <em>Non si rende conto del pericolo</em>",
+          "risposta": "Ele/Ela não se dá conta do perigo",
+          "paroleChiave": ["dá", "conta", "perigo"],
+          "spiegazione": "'Rendersi conto' reflexivo."
+        },
+        {
+          "tipo": "pronuncia",
+          "domanda": "Pratique:",
+          "parole": ["peggiore", "rendersene"],
+          "risposta": "peggiore rendersene",
+          "spiegazione": "'Peggiore' (ped-djó-re) - 'pe' como 'pe', 'ggio' como 'djó', 're' como 're'. 'Rendersene' (ren-der-se-ne) - 'ren' como 'ren', 'der' como 'der', 'sene' como 'se-ne'."
+        }
+      ]
+    },
+    {
+      "indice": 2,
+      "riferimento": "Solo, scusa, forse, tipo, vabbè, non lo so, più o meno.",
+      "esercizi": [
+        {
+          "tipo": "multipla",
+          "domanda": "O que significa a contração coloquial 'vabbè'?",
+          "opzioni": [
+            "Vai bem",
+            "Tudo bem / então / deixa pra lá (contração de 'va bene')",
+            "Vou bem",
+            "Vamos bem"
+          ],
+          "risposta": "Tudo bem / então / deixa pra lá (contração de 'va bene')",
+          "spiegazione": "'Vabbè' é a forma coloquial contraída de 'va bene' (tudo bem), usada como muletilla."
+        },
+        {
+          "tipo": "multipla",
+          "domanda": "Como a palavra 'tipo' é usada como muletilla (vício de linguagem)?",
+          "opzioni": [
+            "Para classificar coisas",
+            "Como 'tipo', 'like', demonstrando hesitação",
+            "Para exemplificar",
+            "Para perguntar"
+          ],
+          "risposta": "Como 'tipo', 'like', demonstrando hesitação",
+          "spiegazione": "'Tipo' é usado como muletilla, similar ao 'tipo' ou 'like' em português/inglês, indicando insegurança na fala."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciato": "Complete com a contração coloquial:",
+          "domanda": "___, non importa. (Deixa pra lá, não importa.)",
+          "risposta": "Vabbè",
+          "alternative": ["Vabbè", "vabbè"],
+          "spiegazione": "'Vabbè' = deixa pra lá / então."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciato": "Complete com a palavra muletilla:",
+          "domanda": "Ero ___, non so... (Eu estava tipo, não sei...)",
+          "risposta": "tipo",
+          "alternative": ["tipo", "Tipo"],
+          "spiegazione": "'Tipo' usado como muletilla de hesitação."
+        },
+        {
+          "tipo": "ordina",
+          "domanda": "Ordene a lista de palavras:",
+          "parole": ["meno", "solo", "scusa", "lo", "più", "so", "non", "vabbè", "tipo", "forse"],
+          "risposta": "solo scusa forse tipo vabbè non lo so più o meno",
+          "spiegazione": "A sequência correta das 7 palavras/frases do vídeo."
+        },
+        {
+          "tipo": "traduci",
+          "domanda": "Traduza: <em>Più o meno 10 euro</em>",
+          "risposta": "Mais ou menos 10 euros",
+          "paroleChiave": ["Mais", "menos", "euros"],
+          "spiegazione": "Expressão de imprecisão."
+        },
+        {
+          "tipo": "pronuncia",
+          "domanda": "Pratique as 7 palavras:",
+          "parole": ["solo", "scusa", "forse", "tipo", "vabbè", "non lo so", "più o meno"],
+          "risposta": "solo scusa forse tipo vabbè non lo so più o meno",
+          "spiegazione": "Pratique cada palavra: 'Solo' (só-lo), 'Scusa' (skú-za), 'Forse' (fór-se), 'Tipo' (tí-po), 'Vabbè' (vab-bé), 'Non lo so' (non lo só), 'Più o meno' (piú o mé-no)."
+        }
+      ]
+    },
+    {
+      "indice": 3,
+      "riferimento": "Le donne sicure non sentono il bisogno di addolcire ogni singola frase.",
+      "esercizi": [
+        {
+          "tipo": "multipla",
+          "domanda": "O que significa o verbo 'addolcire' neste contexto?",
+          "opzioni": [
+            "Adoçar literalmente",
+            "Suavizar / amenizar a fala (torná-la menos direta)",
+            "Endurecer",
+            "Acelerar"
+          ],
+          "risposta": "Suavizar / amenizar a fala (torná-la menos direta)",
+          "spiegazione": "'Addolcire' no sentido figurado significa suavizar, amenizar, tornar a comunicação menos direta para não parecer rude."
+        },
+        {
+          "tipo": "multipla",
+          "domanda": "Qual é o efeito do adjetivo 'singola' em 'ogni singola frase'?",
+          "opzioni": [
+            "Enfatizar que é cada frase (sem exceção)",
+            "Diminuir a importância",
+            "Indicar que é uma frase única",
+            "Indicar que é uma frase curta"
+          ],
+          "risposta": "Enfatizar que é cada frase (sem exceção)",
+          "spiegazione": "'Singolo/a' é usado para enfatizar 'cada' (individualmente, sem exceção)."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciato": "Complete com o verbo no sentido figurado:",
+          "domanda": "Non ___ la verità. (Não suavize a verdade.)",
+          "risposta": "addolcire",
+          "alternative": ["addolcire", "Addolcire"],
+          "spiegazione": "'Addolcire la verità' = suavizar a verdade."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciato": "Complete com o adjetivo enfático:",
+          "domanda": "Controlla ogni ___ dettaglio.",
+          "risposta": "singolo",
+          "alternative": ["singolo", "Singolo"],
+          "spiegazione": "'Ogni singolo dettaglio' = cada detalhe (ênfase)."
+        },
+        {
+          "tipo": "ordina",
+          "domanda": "Ordene a frase:",
+          "parole": ["sicure", "non", "addolcire", "bisogno", "il", "singola", "di", "frase", "le", "sentono", "ogni", "donne"],
+          "risposta": "le donne sicure non sentono il bisogno di addolcire ogni singola frase",
+          "spiegazione": "'Le donne sicure' + 'non sentono il bisogno' + 'di addolcire' + 'ogni singola frase'."
+        },
+        {
+          "tipo": "traduci",
+          "domanda": "Traduza: <em>Una donna sicura non ha bisogno di giustificarsi</em>",
+          "risposta": "Uma mulher segura não precisa se justificar",
+          "paroleChiave": ["mulher", "segura", "justificar"],
+          "spiegazione": "Tema central do vídeo: autoconfiança na comunicação."
+        },
+        {
+          "tipo": "pronuncia",
+          "domanda": "Pratique:",
+          "parole": ["addolcire", "singola"],
+          "risposta": "addolcire singola",
+          "spiegazione": "'Addolcire' (ad-dol-tchí-re) - 'ad' como 'ad', 'dol' como 'dol', 'ci' como 'tchi', 're' como 're'. 'Singola' (sin-gó-la) - 'sin' como 'sin', 'go' como 'gó', 'la' como 'la'."
+        }
+      ]
+    }
+  ]
+}

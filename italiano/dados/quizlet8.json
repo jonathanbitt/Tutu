@@ -1,0 +1,25 @@
+{
+  "titolo": "Quizlet — Perché Ti Mancano di Rispetto?",
+  "parole": 15,
+  "lezioni": 7,
+  "descrizione": "Vocabulário sobre relacionamentos, respeito, limites e perdão",
+  "contenuto": {
+    "cards": [
+      { "termine": "mancare di rispetto", "definizione": "faltar com respeito / desrespeitar", "frase": "Non mi mancare di rispetto.", "difficoltà": 2 },
+      { "termine": "continuare a", "definizione": "continuar a", "frase": "Continua a piovere.", "difficoltà": 2 },
+      { "termine": "troppo buono/a", "definizione": "bom/boa demais (ingênuo)", "frase": "Sei troppo buona.", "difficoltà": 2 },
+      { "termine": "sapere che", "definizione": "saber que", "frase": "So che hai ragione.", "difficoltà": 1 },
+      { "termine": "restare", "definizione": "ficar / permanecer", "frase": "Resto qui.", "difficoltà": 1 },
+      { "termine": "perdonare", "definizione": "perdoar", "frase": "Ti perdono.", "difficoltà": 2 },
+      { "termine": "spiegare", "definizione": "explicar", "frase": "Spiego tutto.", "difficoltà": 1 },
+      { "termine": "dare un'altra possibilità", "definizione": "dar outra chance", "frase": "Ti do un'altra possibilità.", "difficoltà": 2 },
+      { "termine": "perdere (qualcuno)", "definizione": "perder (alguém)", "frase": "Non voglio perderti.", "difficoltà": 2 },
+      { "termine": "possibilità", "definizione": "possibilidade", "frase": "È una possibilità.", "difficoltà": 1 },
+      { "termine": "velocemente", "definizione": "rapidamente", "frase": "Corre velocemente.", "difficoltà": 2 },
+      { "termine": "iniziare a", "definizione": "começar a", "frase": "Inizio a studiare.", "difficoltà": 2 },
+      { "termine": "trattare", "definizione": "tratar", "frase": "Trattare bene qualcuno.", "difficoltà": 2 },
+      { "termine": "in modo diverso", "definizione": "de modo diferente", "frase": "Agisci in modo diverso.", "difficoltà": 2 },
+      { "termine": "il momento in cui", "definizione": "o momento em que", "frase": "Il momento in cui ti ho visto.", "difficoltà": 2 }
+    ]
+  }
+}

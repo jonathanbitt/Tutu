@@ -1,0 +1,97 @@
+{
+  "titolo": "ITALIANO — 3 Rituali Wellness Non Negoziali",
+  "videoUrl": "https://jonathanbitt.github.io/Tutu/italiano/dados/videos/video7.mp4",
+  "quizletUrl": "quizlet.html?quizlet=7",
+  "blocchi": [
+    {
+      "start": 0,
+      "italian": "I miei tre rituali wellness non negoziabili.",
+      "translation": "Meus três rituais de bem-estar não negociáveis.",
+      "tip": "<strong>\"rituali wellness\"</strong> — Estrangeirismo: 'rituais de bem-estar'. <strong>\"non negoziabili\"</strong> — 'Não negociáveis' (indica que são princípios fixos, que não se abrem mão).",
+      "miniLesson": {
+        "title": "Estrangeirismo 'Wellness' e Adjetivo 'Negoziale'",
+        "content": "<p><strong>\"wellness\"</strong> — Estrangeirismo inglês muito usado em italiano no contexto de saúde, bem-estar e estilo de vida. Significa 'bem-estar' (físico e mental).</p><div class=\"esempio\">Il wellness è una priorità. → O bem-estar é uma prioridade.</div><p style=\"margin-top:10px\"><strong>\"negoziabile\" (negociável)</strong> — Derivado de 'negoziare' (negociar). 'Non negoziabile' = não negociável, algo que é um princípio fixo, que não se discute.</p><div class=\"esempio\">Questo è un punto non negoziabile. → Este é um ponto não negociável.</div>"
+      }
+    },
+    {
+      "start": 3,
+      "italian": "Il primo è l'idratazione.",
+      "translation": "O primeiro é a hidratação.",
+      "tip": "<strong>\"idratazione\"</strong> — Substantivo feminino que significa 'hidratação' (ato de beber água suficiente).",
+      "miniLesson": {
+        "title": "Substantivo 'Idratazione' e Suffisso '-zione'",
+        "content": "<p><strong>\"idratazione\"</strong> — Substantivo derivado do verbo 'idratare' (hidratar) + sufixo '-zione' (ação/resultado).</p><div class=\"esempio\">Bere molta acqua è importante per l'idratazione. → Beber muita água é importante para a hidratação.</div>"
+      }
+    },
+    {
+      "start": 4,
+      "italian": "Ho comprato questa borraccia e lo so, sembra puro marketing, ma in realtà mi sta davvero aiutando a bere molto di più durante l'arco della giornata.",
+      "translation": "Comprei esta garrafa e eu sei, parece puro marketing, mas na realidade está realmente me ajudando a beber muito mais durante o decorrer do dia.",
+      "tip": "<strong>\"borraccia\"</strong> — 'Garrafa térmica', 'garrafa de água' (reutilizável). <strong>\"puro marketing\"</strong> — 'Puro marketing' (apenas uma estratégia de vendas). <strong>\"mi sta davvero aiutando\"</strong> — Presente progressivo ('stare' + gerúndio) do verbo 'aiutare'. <strong>\"durante l'arco della giornata\"</strong> — 'Durante o arco do dia', 'ao longo do dia'.",
+      "miniLesson": {
+        "title": "Presente Progressivo 'Sta Aiutando' e Expressão 'Arco della Giornata'",
+        "content": "<p><strong>\"mi sta aiutando\"</strong> — Presente progressivo: 'stare' (está) + gerúndio 'aiutando' (ajudando). Indica uma ação em andamento que começou no passado e continua.</p><div class=\"esempio\">Il professore mi sta aiutando con l'italiano. → O professor está me ajudando com o italiano.</div><p style=\"margin-top:10px\"><strong>\"durante l'arco della giornata\"</strong> — Expressão que significa 'ao longo do dia', 'durante o decorrer do dia'.</p><div class=\"esempio\">Bevo acqua durante l'arco della giornata. → Bebo água ao longo do dia.</div>"
+      }
+    },
+    {
+      "start": 13,
+      "italian": "2. SPF 50 ogni giorno.",
+      "translation": "2. FPS 50 (fator de proteção solar) todos os dias.",
+      "tip": "<strong>\"SPF\"</strong> — Sigla inglesa (Sun Protection Factor). Em italiano também se usa 'SPF' ou 'protezione solare'. <strong>\"ogni giorno\"</strong> — 'Todos os dias'.",
+      "miniLesson": {
+        "title": "Siglas e Expressões de Proteção Solar",
+        "content": "<p><strong>\"SPF 50\"</strong> — Fator de proteção solar 50. É comum em italiano usar a sigla inglesa 'SPF' mesmo em contextos italianos.</p><div class=\"esempio\">Usa sempre SPF 50 quando vai al mare. → Use sempre FPS 50 quando vai ao mar.</div>"
+      }
+    },
+    {
+      "start": 16,
+      "italian": "Passando molto tempo all'aria aperta tra passeggiate e giornate al sole, sto cercando di essere molto più attenta alla protezione solare.",
+      "translation": "Passando muito tempo ao ar livre entre caminhadas e dias ao sol, estou tentando ser muito mais atenta à proteção solar.",
+      "tip": "<strong>\"all'aria aperta\"</strong> — 'Ao ar livre'. <strong>\"passeggiate\"</strong> — 'Caminhadas'. <strong>\"giornate al sole\"</strong> — 'Dias ao sol'. <strong>\"sto cercando di essere\"</strong> — Presente progressivo de 'cercare di' (tentar). <strong>\"attenta a\"</strong> — 'Atenta a', 'cuidadosa com'.",
+      "miniLesson": {
+        "title": "Expressão 'All'Aria Aperta' e Estrutura 'Cercare di Essere'",
+        "content": "<p><strong>\"all'aria aperta\"</strong> — Expressão que significa 'ao ar livre', 'ao ar livre'. Preposição 'a' + artigo 'l'' (elidido antes de vogal) + 'aria aperta'.</p><div class=\"esempio\">Mi piace stare all'aria aperta. → Gosto de ficar ao ar livre.</div><p style=\"margin-top:10px\"><strong>\"sto cercando di essere\"</strong> — Presente progressivo de 'cercare di' (tentar) + infinitivo 'essere' (ser). 'Sto cercando di essere più attenta' = estou tentando ser mais atenta.</p><div class=\"esempio\">Sto cercando di migliorare. → Estou tentando melhorar.</div>"
+      }
+    },
+    {
+      "start": 24,
+      "italian": "E non solo sul viso, ma anche sul collo e sul petto.",
+      "translation": "E não só no rosto, mas também no pescoço e no peito.",
+      "tip": "<strong>\"non solo... ma anche\"</strong> — Estrutura correlativa: 'não só... mas também'. <strong>\"viso\"</strong> — 'Rosto'. <strong>\"collo\"</strong> — 'Pescoço'. <strong>\"petto\"</strong> — 'Peito'.",
+      "miniLesson": {
+        "title": "Estrutura 'Non Solo... Ma Anche' e Partes do Corpo",
+        "content": "<p><strong>\"non solo... ma anche\"</strong> — Estrutura muito comum em italiano para adicionar informação de forma enfática.</p><div class=\"esempio\">Non solo parla italiano, ma anche francese. → Não só fala italiano, mas também francês.</div><p style=\"margin-top:10px\"><strong>Partes do corpo com preposição 'sul'</strong> — 'Sul viso' (no rosto), 'sul collo' (no pescoço), 'sul petto' (no peito). 'Sul' é a preposição articulada 'su' + 'il'.</p>"
+      }
+    },
+    {
+      "start": 27,
+      "italian": "3. Disintossicarmi dal telefono.",
+      "translation": "3. Desintoxicar-me do telefone (desconectar do celular).",
+      "tip": "<strong>\"disintossicarmi\"</strong> — Verbo reflexivo 'disintossicarsi' (desintoxicar-se) + pronome 'mi' (me). <strong>\"dal telefono\"</strong> — 'Do telefone' (preposição 'da' + artigo 'il' = 'dal').",
+      "miniLesson": {
+        "title": "Verbo 'Disintossicarsi' e Prefixo 'Dis-'",
+        "content": "<p><strong>\"disintossicarsi\"</strong> — Verbo reflexivo que significa 'desintoxicar-se', 'livrar-se de algo nocivo'. Prefixo 'dis-' indica negação/remoção + 'tossico' (tóxico).</p><div class=\"esempio\">Voglio disintossicarmi dai social media. → Quero me desintoxicar das redes sociais.</div>"
+      }
+    },
+    {
+      "start": 29,
+      "italian": "Ho deciso di lasciarlo proprio in un'altra stanza quando lavoro o quando devo concentrarmi su altro.",
+      "translation": "Decidi deixá-lo (o telefone) exatamente em outro quarto quando trabalho ou quando preciso me concentrar em outra coisa.",
+      "tip": "<strong>\"lasciarlo\"</strong> — Infinito 'lasciare' (deixar) + pronome 'lo' (o telefone). <strong>\"proprio\"</strong> — 'Exatamente', 'próprio' (enfatizador). <strong>\"in un'altra stanza\"</strong> — 'Em outro quarto'. <strong>\"concentrarmi su altro\"</strong> — 'Concentrar-me em outra coisa'.",
+      "miniLesson": {
+        "title": "Uso Enfático de 'Proprio' e Verbo 'Concentrarsi su'",
+        "content": "<p><strong>\"proprio\" como advérbio</strong> — 'Proprio' pode significar 'exatamente', 'justamente', para dar ênfase. 'Lasciarlo proprio in un'altra stanza' = deixá-lo exatamente em outro quarto.</p><div class=\"esempio\">È proprio quello che volevo. → É exatamente o que eu queria.</div><p style=\"margin-top:10px\"><strong>\"concentrarsi su\"</strong> — Verbo reflexivo que significa 'concentrar-se em'. Seguido da preposição 'su' (em/sobre).</p><div class=\"esempio\">Devo concentrarmi sul lavoro. → Preciso me concentrar no trabalho.</div>"
+      }
+    },
+    {
+      "start": 35,
+      "italian": "E sinceramente mi sto rendendo conto di quanto questo migliori davvero la concentrazione, la qualità del lavoro e la qualità della vita in generale.",
+      "translation": "E sinceramente estou me dando conta de quanto isso realmente melhore a concentração, a qualidade do trabalho e a qualidade da vida em geral.",
+      "tip": "<strong>\"mi sto rendendo conto\"</strong> — Presente progressivo de 'rendersi conto' (dar-se conta). <strong>\"di quanto questo migliori\"</strong> — 'De quanto isso melhore' (uso do congiuntivo 'migliori' após 'di quanto'). <strong>\"in generale\"</strong> — 'Em geral'.",
+      "miniLesson": {
+        "title": "Presente Progressivo 'Mi Sto Rendendo Conto' e Congiuntivo após 'Di Quanto'",
+        "content": "<p><strong>\"mi sto rendendo conto\"</strong> — Presente progressivo de 'rendersi conto'. 'Sto rendendo conto' = estou dando conta. O 'mi' (reflexivo) e 'rendendo' (gerúndio).</p><div class=\"esempio\">Mi sto rendendo conto dell'errore. → Estou me dando conta do erro.</div><p style=\"margin-top:10px\"><strong>Congiuntivo após 'di quanto'</strong> — Após expressões como 'di quanto' (de quanto), usamos o congiuntivo para expressar uma opinião ou percepção subjetiva. 'Migliori' é o congiuntivo presente de 'migliorare' (melhorar).</p><div class=\"esempio\">Vedi quanto sia importante. → Você vê o quanto é importante (congiuntivo).</div>"
+      }
+    }
+  ]
+}

@@ -1,0 +1,652 @@
+{
+  "aula": 5,
+  "titolo": "ITALIANO — La Mentalità del Mondo e la Verità di Cristo",
+  "paragrafi": [
+    {
+      "indice": 0,
+      "riferimento": "Non seguite, dice, la mentalità del mondo. Perché? Perché voi non siete del mondo.",
+      "esercizi": [
+        {
+          "tipo": "multipla",
+          "domanda": "O que significa a expressão 'non seguite' no contexto?",
+          "opzioni": [
+            "Não sigo",
+            "Não sigam (imperativo negativo para 'voi')",
+            "Não seguimos",
+            "Não seguirão"
+          ],
+          "risposta": "Não sigam (imperativo negativo para 'voi')",
+          "spiegazione": "'Non seguite' é o imperativo negativo do verbo 'seguire' para a segunda pessoa do plural ('voi')."
+        },
+        {
+          "tipo": "multipla",
+          "domanda": "O que significa 'essere del mondo'?",
+          "opzioni": [
+            "Ser famoso mundialmente",
+            "Pertenecer à lógica/valores do mundo (em oposição ao espiritual)",
+            "Ser cidadão do mundo",
+            "Ser viajante"
+          ],
+          "risposta": "Pertenecer à lógica/valores do mundo (em oposição ao espiritual)",
+          "spiegazione": "'Essere del mondo' indica pertencimento aos sistemas, valores e mentalidade mundana, em contraste com o divino/espiritual."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciato": "Complete com a forma imperativa correta:",
+          "domanda": "Non ___ troppo! (Não falem demais!)",
+          "risposta": "parlate",
+          "alternative": ["parlate", "Parlate"],
+          "spiegazione": "Imperativo negativo para 'voi': 'non' + presente indicativo ('parlate')."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciato": "Complete a expressão:",
+          "domanda": "Chi è ___ mondo segue le sue regole.",
+          "risposta": "del",
+          "alternative": ["del", "Del"],
+          "spiegazione": "'Essere del mondo' = ser do mundo (preposição 'di' + artigo 'il' = 'del')."
+        },
+        {
+          "tipo": "ordina",
+          "domanda": "Ordene a frase:",
+          "parole": ["siete", "mondo", "non", "del", "voi", "perché"],
+          "risposta": "perché voi non siete del mondo",
+          "spiegazione": "'Perché' + 'voi non siete' + 'del mondo'."
+        },
+        {
+          "tipo": "traduci",
+          "domanda": "Traduza: <em>Non seguite la mentalità del mondo</em>",
+          "risposta": "Não sigam a mentalidade do mundo",
+          "paroleChiave": ["sigam", "mentalidade", "mundo"],
+          "spiegazione": "'Seguite' é imperativo para 'voi'."
+        },
+        {
+          "tipo": "pronuncia",
+          "domanda": "Pratique:",
+          "parole": ["mentalità"],
+          "risposta": "mentalità",
+          "spiegazione": "'Mentalità' (men-ta-li-tà) - 'e' fechada, 'a' aberta, 't' aspirado, 'à' tônica aberta."
+        }
+      ]
+    },
+    {
+      "indice": 1,
+      "riferimento": "Io vi ho scelti dal mondo. In realtà, Gesù dice, io vi ho separato da questo mondo.",
+      "esercizi": [
+        {
+          "tipo": "multipla",
+          "domanda": "Por que 'scelti' termina com 'i' em 'vi ho scelti'?",
+          "opzioni": [
+            "Porque é masculino plural",
+            "Porque concorda com o pronome objeto 'vi' (vocês, masculino plural)",
+            "Porque é passado",
+            "Porque é particípio irregular"
+          ],
+          "risposta": "Porque concorda com o pronome objeto 'vi' (vocês, masculino plural)",
+          "spiegazione": "Quando o objeto direto é um pronome (como 'vi'), o particípio passado concorda em gênero e número com ele."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciato": "Complete com o particípio concordado:",
+          "domanda": "Li ho ___ (vedere) ieri.",
+          "risposta": "visti",
+          "alternative": ["visti", "Visti"],
+          "spiegazione": "O particípio 'visti' concorda com 'li' (masculino plural)."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciato": "Complete a frase:",
+          "domanda": "Separare il bene ___ male.",
+          "risposta": "dal",
+          "alternative": ["dal", "Dal"],
+          "spiegazione": "'Separare dal male' = separar do mal (preposição 'da' + artigo 'il' = 'dal')."
+        },
+        {
+          "tipo": "ordina",
+          "domanda": "Ordene:",
+          "parole": ["dal", "scelti", "ho", "mondo", "vi", "io"],
+          "risposta": "io vi ho scelti dal mondo",
+          "spiegazione": "'Io' + 'vi ho scelti' + 'dal mondo'."
+        },
+        {
+          "tipo": "traduci",
+          "domanda": "Traduza: <em>Vi ho separati dal mondo</em>",
+          "risposta": "Eu vos separei do mundo",
+          "paroleChiave": ["separei", "mundo"],
+          "spiegazione": "O particípio 'separati' concorda com 'vi' (vocês)."
+        },
+        {
+          "tipo": "pronuncia",
+          "domanda": "Pratique:",
+          "parole": ["scelti", "separato"],
+          "risposta": "scelti separato",
+          "spiegazione": "'Scelti' (shél-ti) - 'sc' como 'sh', 'e' aberta, 'ti' como 'ti'. 'Separato' (se-pa-rá-to) - 'e' fechada, 'pa' com 'a' aberta, 'rato' como 'rá-to'."
+        }
+      ]
+    },
+    {
+      "indice": 3,
+      "riferimento": "Dice, ma la verità sta nella tua libertà, in quello che tu decidi, che vuoi fare, il meglio per te, come ti senti bene, come ti senti oggi, come ti senti domani.",
+      "esercizi": [
+        {
+          "tipo": "multipla",
+          "domanda": "O que significa a expressão 'in quello che'?",
+          "opzioni": [
+            "Naquele que",
+            "Naquilo que",
+            "Naquela que",
+            "Naqueles que"
+          ],
+          "risposta": "Naquilo que",
+          "spiegazione": "'In quello che' = naquilo que. 'Quello' é pronome demonstrativo neutro."
+        },
+        {
+          "tipo": "multipla",
+          "domanda": "Qual é o efeito da repetição de 'come ti senti'?",
+          "opzioni": [
+            "Mostra dúvida",
+            "Enfatiza o egocentrismo da mentalidade mundana (tudo gira em torno de como me sinto)",
+            "Cria ritmo poético",
+            "Mostra incerteza"
+          ],
+          "risposta": "Enfatiza o egocentrismo da mentalidade mundana (tudo gira em torno de como me sinto)",
+          "spiegazione": "A repetição critica o 'personalismo' e 'sentimentalismo', onde o centro é o próprio bem-estar subjetivo."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciato": "Complete a estrutura:",
+          "domanda": "Credi in ___ che fai.",
+          "risposta": "quello",
+          "alternative": ["quello", "Quello"],
+          "spiegazione": "'In quello che fai' = naquilo que você faz."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciato": "Complete com a palavra interrogativa:",
+          "domanda": "___ ti senti oggi?",
+          "risposta": "Come",
+          "alternative": ["Come", "come"],
+          "spiegazione": "'Come ti senti?' = como você se sente?"
+        },
+        {
+          "tipo": "ordina",
+          "domanda": "Ordene:",
+          "parole": ["libertà", "sta", "verità", "nella", "tua", "la"],
+          "risposta": "la verità sta nella tua libertà",
+          "spiegazione": "'La verità' + 'sta' + 'nella tua libertà'."
+        },
+        {
+          "tipo": "traduci",
+          "domanda": "Traduza: <em>Il meglio per te</em>",
+          "risposta": "O melhor para você",
+          "paroleChiave": ["melhor", "você"],
+          "spiegazione": "Expressão de autointeresse."
+        },
+        {
+          "tipo": "pronuncia",
+          "domanda": "Pratique:",
+          "parole": ["decidi", "libertà"],
+          "risposta": "decidi libertà",
+          "spiegazione": "'Decidi' (de-tchí-di) - 'de' como 'de', 'ci' como 'tchi', 'di' como 'di'. 'Libertà' (li-ber-tà) - 'i' curto, 'ber' como 'ber', 'tà' tônica."
+        }
+      ]
+    },
+    {
+      "indice": 4,
+      "riferimento": "Capite? È un personalismo, un sentimentalismo che autoafferma un proprio benessere e non va al di là.",
+      "esercizi": [
+        {
+          "tipo": "multipla",
+          "domanda": "O que significa o prefixo 'auto-' em 'autoafferma'?",
+          "opzioni": [
+            "Contra",
+            "Si mesmo / próprio",
+            "Antes",
+            "Depois"
+          ],
+          "risposta": "Si mesmo / próprio",
+          "spiegazione": "O prefixo 'auto-' (do grego) significa 'si mesmo', 'próprio'. 'Autoaffermare' = afirmar a si mesmo."
+        },
+        {
+          "tipo": "multipla",
+          "domanda": "O que significa a expressão 'non va al di là'?",
+          "opzioni": [
+            "Não vai para lá",
+            "Não vai além / não transcende",
+            "Não vai para o lado",
+            "Não vai direito"
+          ],
+          "risposta": "Não vai além / não transcende",
+          "spiegazione": "'Andare al di là' significa 'ir além'. 'Non va al di là' = não vai além (não transcende, não supera os limites)."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciato": "Complete com o verbo com prefixo 'auto-':",
+          "domanda": "___ a tutti i costi. (Autoafirmar-se a qualquer custo.)",
+          "risposta": "Autoaffermarsi",
+          "alternative": ["Autoaffermarsi", "autoaffermarsi"],
+          "spiegazione": "'Autoaffermarsi' = afirmar-se a si mesmo."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciato": "Complete a expressão:",
+          "domanda": "Bisogna andare al di ___ delle apparenze.",
+          "risposta": "là",
+          "alternative": ["là", "La"],
+          "spiegazione": "'Al di là' = além. 'Andare al di là delle apparenze' = ir além das aparências."
+        },
+        {
+          "tipo": "ordina",
+          "domanda": "Ordene:",
+          "parole": ["benessere", "che", "un", "proprio", "autoafferma", "sentimentalismo", "un", "personalismo", "è"],
+          "risposta": "è un personalismo un sentimentalismo che autoafferma un proprio benessere",
+          "spiegazione": "'È un personalismo, un sentimentalismo' + 'che autoafferma un proprio benessere'."
+        },
+        {
+          "tipo": "traduci",
+          "domanda": "Traduza: <em>Andare al di là dei propri limiti</em>",
+          "risposta": "Ir além dos próprios limites",
+          "paroleChiave": ["além", "limites"],
+          "spiegazione": "Expressão de superação."
+        },
+        {
+          "tipo": "pronuncia",
+          "domanda": "Pratique:",
+          "parole": ["personalismo", "sentimentalismo"],
+          "risposta": "personalismo sentimentalismo",
+          "spiegazione": "'Personalismo' (per-so-na-lís-mo) - 'e' fechada, 'lismo' com 'i' tônico. 'Sentimentalismo' (sen-ti-men-ta-lís-mo) - 'e' fechada, 'lismo' tônico."
+        }
+      ]
+    },
+    {
+      "indice": 5,
+      "riferimento": "Ma seguire Gesù non c'entra proprio nulla con tutto questo. Gesù dice, io vi ho scelto, separato dal mondo, vi ho chiamati.",
+      "esercizi": [
+        {
+          "tipo": "multipla",
+          "domanda": "O que significa a expressão idiomática 'non c'entra nulla'?",
+          "opzioni": [
+            "Não entra nada",
+            "Não tem nada a ver",
+            "Não cabe nada",
+            "Não centra nada"
+          ],
+          "risposta": "Não tem nada a ver",
+          "spiegazione": "'Non c'entra nulla' é uma expressão muito comum que significa 'não tem nada a ver', 'não está relacionado'."
+        },
+        {
+          "tipo": "multipla",
+          "domanda": "Por que 'chiamati' termina com 'i'?",
+          "opzioni": [
+            "Porque é masculino plural",
+            "Porque concorda com o pronome objeto 'vi' (vocês)",
+            "Porque é verbo regular",
+            "Porque é particípio presente"
+          ],
+          "risposta": "Porque concorda com o pronome objeto 'vi' (vocês)",
+          "spiegazione": "Assim como 'scelti', o particípio 'chiamati' concorda com o pronome objeto 'vi' (vocês, masculino plural)."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciato": "Complete a expressão:",
+          "domanda": "Questo non ___ con la discussione.",
+          "risposta": "c'entra",
+          "alternative": ["c'entra", "centra"],
+          "spiegazione": "'Non c'entra' = não tem a ver."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciato": "Complete com o particípio concordado:",
+          "domanda": "Le ho ___ (chiamare) tutte. (As chamei todas - feminino plural)",
+          "risposta": "chiamate",
+          "alternative": ["chiamate", "Chiamate"],
+          "spiegazione": "O particípio concorda com o pronome 'le' (feminino plural)."
+        },
+        {
+          "tipo": "ordina",
+          "domanda": "Ordene:",
+          "parole": ["proprio", "non", "nulla", "c'entra", "ma", "questo", "tutto", "con", "seguire", "Gesù"],
+          "risposta": "ma seguire Gesù non c'entra proprio nulla con tutto questo",
+          "spiegazione": "'Ma seguire Gesù' + 'non c'entra proprio nulla' + 'con tutto questo'."
+        },
+        {
+          "tipo": "traduci",
+          "domanda": "Traduza: <em>Questo non c'entra niente</em>",
+          "risposta": "Isso não tem nada a ver",
+          "paroleChiave": ["nada", "ver"],
+          "spiegazione": "Expressão idiomática cotidiana."
+        },
+        {
+          "tipo": "pronuncia",
+          "domanda": "Pratique a expressão:",
+          "parole": ["c'entra"],
+          "risposta": "c'entra",
+          "spiegazione": "'C'entra' (tchén-tra) - 'c' como 'tch', 'e' aberta, 'ntra' como 'ntra'."
+        }
+      ]
+    },
+    {
+      "indice": 7,
+      "riferimento": "Quindi non condanniamo il mondo, ma separiamoci in che modo? Contrastando, cioè con la gioia di Cristo.",
+      "esercizi": [
+        {
+          "tipo": "multipla",
+          "domanda": "O que significa o verbo reflexivo 'separiamoci'?",
+          "opzioni": [
+            "Separamo-nos (nós nos separamos)",
+            "Separem-se (vocês)",
+            "Separar-nos",
+            "Separai-vos"
+          ],
+          "risposta": "Separamo-nos (nós nos separamos)",
+          "spiegazione": "'Separiamoci' é o imperativo afirmativo do verbo reflexivo 'separarsi' na 1ª pessoa do plural: separamo-nos."
+        },
+        {
+          "tipo": "multipla",
+          "domanda": "O que significa 'contrastando'?",
+          "opzioni": [
+            "Contrastando / opondo-se",
+            "Contrastando / comparando",
+            "Contestando",
+            "Contra-atacando"
+          ],
+          "risposta": "Contrastando / opondo-se",
+          "spiegazione": "'Contrastare' significa 'opor-se', 'contrariar', 'contrastar'. 'Contrastando' é o gerúndio."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciato": "Complete com o imperativo reflexivo:",
+          "domanda": "___ qui. (Sentemo-nos aqui.)",
+          "risposta": "Sediamoci",
+          "alternative": ["Sediamoci", "sediamoci"],
+          "spiegazione": "Imperativo de 'sedersi' (sentar-se) na 1ª pessoa do plural."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciato": "Complete com o verbo correto:",
+          "domanda": "___ le ingiustizie. (Opor-se às injustiças.)",
+          "risposta": "Contrastare",
+          "alternative": ["Contrastare", "contrastare"],
+          "spiegazione": "'Contrastare' = opor-se, combater."
+        },
+        {
+          "tipo": "ordina",
+          "domanda": "Ordene:",
+          "parole": ["Cristo", "cioè", "con", "gioia", "la", "di", "contrastando"],
+          "risposta": "contrastando cioè con la gioia di Cristo",
+          "spiegazione": "'Contrastando' + 'cioè' + 'con la gioia di Cristo'."
+        },
+        {
+          "tipo": "traduci",
+          "domanda": "Traduza: <em>Separiamoci dal male</em>",
+          "risposta": "Separemo-nos do mal",
+          "paroleChiave": ["separemos", "mal"],
+          "spiegazione": "Imperativo reflexivo na primeira pessoa do plural."
+        },
+        {
+          "tipo": "pronuncia",
+          "domanda": "Pratique:",
+          "parole": ["separiamoci"],
+          "risposta": "separiamoci",
+          "spiegazione": "'Separiamoci' (se-pa-ri-á-mo-tchi) - 'se' como 'se', 'pa' como 'pa', 'ria' como 'riá', 'moci' como 'mo-tchi'."
+        }
+      ]
+    },
+    {
+      "indice": 8,
+      "riferimento": "La gioia che viene da Lui, che non viene dal piacere effimero.",
+      "esercizi": [
+        {
+          "tipo": "multipla",
+          "domanda": "O que significa 'effimero'?",
+          "opzioni": [
+            "Eficiente",
+            "Efêmero / passageiro / de curta duração",
+            "Efervescente",
+            "Efetivo"
+          ],
+          "risposta": "Efêmero / passageiro / de curta duração",
+          "spiegazione": "'Effimero' vem do grego 'ephémeros' (que dura apenas um dia). Significa algo que dura pouco tempo."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciato": "Complete com a preposição:",
+          "domanda": "La gioia che viene ___ Lui.",
+          "risposta": "da",
+          "alternative": ["da", "Da"],
+          "spiegazione": "'Viene da Lui' = vem d'Ele. 'Lui' com maiúscula refere-se a Cristo."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciato": "Complete com o adjetivo:",
+          "domanda": "La bellezza ___ . (A beleza efêmera.)",
+          "risposta": "effimera",
+          "alternative": ["effimera", "Effimera"],
+          "spiegazione": "Concordância feminina singular com 'bellezza'."
+        },
+        {
+          "tipo": "ordina",
+          "domanda": "Ordene:",
+          "parole": ["effimero", "dal", "viene", "che", "non", "piacere"],
+          "risposta": "che non viene dal piacere effimero",
+          "spiegazione": "'Che non viene' + 'dal piacere effimero'."
+        },
+        {
+          "tipo": "traduci",
+          "domanda": "Traduza: <em>Il piacere effimero</em>",
+          "risposta": "O prazer efêmero",
+          "paroleChiave": ["prazer", "efêmero"],
+          "spiegazione": "Prazer que dura pouco."
+        },
+        {
+          "tipo": "pronuncia",
+          "domanda": "Pratique:",
+          "parole": ["effimero"],
+          "risposta": "effimero",
+          "spiegazione": "'Effimero' (ef-fí-me-ro) - 'e' aberta, 'ff' geminado, 'i' tônico, 'me' como 'me', 'ro' como 'ro'."
+        }
+      ]
+    },
+    {
+      "indice": 9,
+      "riferimento": "Con la pace di Cristo, con la fiducia in Cristo, con una imperturbabilità, perché apparteniamo a Cristo.",
+      "esercizi": [
+        {
+          "tipo": "multipla",
+          "domanda": "O que significa 'imperturbabilità'?",
+          "opzioni": [
+            "Imperturbabilidade / capacidade de não se perturbar",
+            "Impertinência",
+            "Impermeabilidade",
+            "Imparcialidade"
+          ],
+          "risposta": "Imperturbabilidade / capacidade de não se perturbar",
+          "spiegazione": "Substantivo derivado de 'imperturbabile' (imperturbável). Indica a qualidade de manter a calma e serenidade inabaláveis."
+        },
+        {
+          "tipo": "multipla",
+          "domanda": "O que significa 'apparteniamo a'?",
+          "opzioni": [
+            "Aparamos",
+            "Pertencemos a",
+            "Aprendemos",
+            "Aprovamos"
+          ],
+          "risposta": "Pertencemos a",
+          "spiegazione": "'Appartenere a' significa 'pertencer a', ser parte de, ser propriedade de."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciato": "Complete com o substantivo:",
+          "domanda": "La sua ___ è ammirevole. (Sua imperturbabilidade é admirável.)",
+          "risposta": "imperturbabilità",
+          "alternative": ["imperturbabilità", "Imperturbabilità"],
+          "spiegazione": "Substantivo abstrato derivado de 'imperturbabile'."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciato": "Complete com o verbo:",
+          "domanda": "___ a una comunità. (Pertencemos a uma comunidade.)",
+          "risposta": "Apparteniamo",
+          "alternative": ["Apparteniamo", "apparteniamo"],
+          "spiegazione": "'Apparteniamo' é a 1ª pessoa do plural do presente de 'appartenere'."
+        },
+        {
+          "tipo": "ordina",
+          "domanda": "Ordene:",
+          "parole": ["Cristo", "a", "perché", "apparteniamo"],
+          "risposta": "perché apparteniamo a Cristo",
+          "spiegazione": "'Perché' + 'apparteniamo a Cristo'."
+        },
+        {
+          "tipo": "traduci",
+          "domanda": "Traduza: <em>Apparteniamo a una famiglia</em>",
+          "risposta": "Pertencemos a uma família",
+          "paroleChiave": ["pertencemos", "família"],
+          "spiegazione": "Verbo 'appartenere' + preposição 'a'."
+        },
+        {
+          "tipo": "pronuncia",
+          "domanda": "Pratique:",
+          "parole": ["imperturbabilità", "apparteniamo"],
+          "risposta": "imperturbabilità apparteniamo",
+          "spiegazione": "'Imperturbabilità' (im-per-tur-ba-bi-li-tà) - palavra longa, ênfase no 'tà'. 'Apparteniamo' (ap-par-te-ni-á-mo) - 'pp' geminado, 'nia' como 'niá'."
+        }
+      ]
+    },
+    {
+      "indice": 10,
+      "riferimento": "Seguiamo Cristo e lo Spirito Santo è in noi e ci fa andare avanti sereni.",
+      "esercizi": [
+        {
+          "tipo": "multipla",
+          "domanda": "O que significa a expressão 'ci fa andare avanti'?",
+          "opzioni": [
+            "Nos faz andar para frente",
+            "Nos faz seguir em frente / nos dá força para continuar",
+            "Nos faz avançar rapidamente",
+            "Nos faz correr"
+          ],
+          "risposta": "Nos faz seguir em frente / nos dá força para continuar",
+          "spiegazione": "'Andare avanti' significa 'seguir em frente', 'progredir'. 'Ci fa andare avanti' = nos faz seguir em frente."
+        },
+        {
+          "tipo": "multipla",
+          "domanda": "O que significa 'sereni'?",
+          "opzioni": [
+            "Serenos / calmos / tranquilos",
+            "Sérios",
+            "Seguros",
+            "Sinceros"
+          ],
+          "risposta": "Serenos / calmos / tranquilos",
+          "spiegazione": "'Sereno' é um adjetivo que indica calma, tranquilidade, paz interior."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciato": "Complete a expressão:",
+          "domanda": "La speranza ci ___ andare avanti.",
+          "risposta": "fa",
+          "alternative": ["fa", "Fa"],
+          "spiegazione": "'Ci fa andare avanti' = nos faz seguir em frente."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciato": "Complete com o adjetivo:",
+          "domanda": "Sono ___ nonostante le difficoltà.",
+          "risposta": "sereno",
+          "alternative": ["sereno", "Sereno"],
+          "spiegazione": "'Sono sereno' = estou sereno."
+        },
+        {
+          "tipo": "ordina",
+          "domanda": "Ordene:",
+          "parole": ["e", "avanti", "fa", "noi", "andare", "ci", "in", "Spirito", "lo", "è", "Santo"],
+          "risposta": "lo Spirito Santo è in noi e ci fa andare avanti",
+          "spiegazione": "'Lo Spirito Santo è in noi' + 'e ci fa andare avanti'."
+        },
+        {
+          "tipo": "traduci",
+          "domanda": "Traduza: <em>Andare avanti nonostante tutto</em>",
+          "risposta": "Seguir em frente apesar de tudo",
+          "paroleChiave": ["seguir", "frente", "apesar"],
+          "spiegazione": "Expressão de resiliência."
+        },
+        {
+          "tipo": "pronuncia",
+          "domanda": "Pratique:",
+          "parole": ["sereni"],
+          "risposta": "sereni",
+          "spiegazione": "'Sereni' (se-ré-ni) - 'e' aberta na segunda sílaba, 'ni' como 'ni'."
+        }
+      ]
+    },
+    {
+      "indice": 11,
+      "riferimento": "Vivi col pensiero di Cristo.",
+      "esercizi": [
+        {
+          "tipo": "multipla",
+          "domanda": "Qual é o tempo verbal de 'vivi' nesta frase?",
+          "opzioni": [
+            "Presente indicativo",
+            "Imperativo afirmativo (tu)",
+            "Passato remoto",
+            "Futuro"
+          ],
+          "risposta": "Imperativo afirmativo (tu)",
+          "spiegazione": "'Vivi' é a forma do imperativo afirmativo do verbo 'vivere' para a segunda pessoa do singular ('tu')."
+        },
+        {
+          "tipo": "multipla",
+          "domanda": "O que significa 'col' em 'col pensiero'?",
+          "opzioni": [
+            "Com o (preposição 'con' + artigo 'il')",
+            "Com a",
+            "No",
+            "Pelo"
+          ],
+          "risposta": "Com o (preposição 'con' + artigo 'il')",
+          "spiegazione": "'Col' é a preposição articulada de 'con' + 'il' = com o."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciato": "Complete com o imperativo:",
+          "domanda": "___ la vita al massimo! (Viva a vida ao máximo!)",
+          "risposta": "Vivi",
+          "alternative": ["Vivi", "vivi"],
+          "spiegazione": "Imperativo 'vivi' para 'tu'."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciato": "Complete com a preposição articulada:",
+          "domanda": "___ tempo, tutto passa.",
+          "risposta": "Col",
+          "alternative": ["Col", "col"],
+          "spiegazione": "'Col tempo' = com o tempo."
+        },
+        {
+          "tipo": "ordina",
+          "domanda": "Ordene:",
+          "parole": ["pensiero", "Cristo", "col", "vivi", "di"],
+          "risposta": "vivi col pensiero di Cristo",
+          "spiegazione": "Imperativo 'vivi' + 'col pensiero' + 'di Cristo'."
+        },
+        {
+          "tipo": "traduci",
+          "domanda": "Traduza: <em>Vivi con gioia</em>",
+          "risposta": "Viva com alegria",
+          "paroleChiave": ["viva", "alegria"],
+          "spiegazione": "Imperativo para 'tu'."
+        },
+        {
+          "tipo": "pronuncia",
+          "domanda": "Pratique a frase final:",
+          "parole": ["vivi", "pensiero"],
+          "risposta": "vivi pensiero",
+          "spiegazione": "'Vivi' (ví-vi) - 'vi' tônico. 'Pensiero' (pen-sié-ro) - 'pen' com 'e' fechada, 'sie' como 'sié', 'ro' como 'ro'."
+        }
+      ]
+    }
+  ]
+}

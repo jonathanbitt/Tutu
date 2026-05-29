@@ -1,0 +1,38 @@
+{
+  "titolo": "Quizlet — Pokè, Sushi e Sconti al Salone del Libro",
+  "parole": 28,
+  "lezioni": 7,
+  "descrizione": "Vocabulário gastronômico, expressões coloquiais e desconto do Salone del Libro",
+  "contenuto": {
+    "cards": [
+      { "termine": "fare vedere", "definizione": "mostrar", "frase": "Fammi vedere il biglietto.", "difficoltà": 2 },
+      { "termine": "biglietto", "definizione": "ingresso / bilhete", "frase": "Il biglietto del concerto.", "difficoltà": 1 },
+      { "termine": "Salone del Libro", "definizione": "Feira do Livro (evento anual em Torino)", "frase": "Vado al Salone del Libro.", "difficoltà": 2 },
+      { "termine": "sconto", "definizione": "desconto", "frase": "Sconto del 20%.", "difficoltà": 1 },
+      { "termine": "a piedi", "definizione": "a pé", "frase": "Vado a piedi al lavoro.", "difficoltà": 1 },
+      { "termine": "localino", "definizione": "lugarzinho (diminutivo carinhoso)", "frase": "Un bel localino.", "difficoltà": 2 },
+      { "termine": "specializzato in", "definizione": "especializado em", "frase": "Ristorante specializzato in pesce.", "difficoltà": 2 },
+      { "termine": "pokè", "definizione": "pokè (prato hawaiano de arroz e peixe cru)", "frase": "Pokè di salmone.", "difficoltà": 1 },
+      { "termine": "particolare", "definizione": "particular / diferente / único", "frase": "Un gusto particolare.", "difficoltà": 2 },
+      { "termine": "oltre a", "definizione": "além de", "frase": "Oltre al pesce, c'è anche la carne.", "difficoltà": 2 },
+      { "termine": "aprire parentesi", "definizione": "abrir parênteses (fazer um comentário)", "frase": "Apro parentesi, devo dire che...", "difficoltà": 3 },
+      { "termine": "secondo me", "definizione": "na minha opinião", "frase": "Secondo me hai ragione.", "difficoltà": 2 },
+      { "termine": "generoso", "definizione": "farto / bem servido (comida)", "frase": "Porzioni generose.", "difficoltà": 2 },
+      { "termine": "mix", "definizione": "mistura / combinação", "frase": "Un mix di sapori.", "difficoltà": 1 },
+      { "termine": "già tutto un programma", "definizione": "já é todo um programa (algo que promete)", "frase": "Una cena da loro è già tutto un programma.", "difficoltà": 3 },
+      { "termine": "tartare", "definizione": "tartar (carne/peixe cru picado)", "frase": "Tartare di tonno.", "difficoltà": 2 },
+      { "termine": "cipolle caramellate", "definizione": "cebolas caramelizadas", "frase": "Le cipolle caramellate sono dolci.", "difficoltà": 2 },
+      { "termine": "pomodori secchi", "definizione": "tomates secos", "frase": "Pomodori secchi sott'olio.", "difficoltà": 1 },
+      { "termine": "pesto al basilico", "definizione": "pesto de manjericão", "frase": "Pesto fatto in casa.", "difficoltà": 2 },
+      { "termine": "da condividere", "definizione": "para compartilhar", "frase": "Un piatto da condividere.", "difficoltà": 2 },
+      { "termine": "granella", "definizione": "granulado / pedaços pequenos triturados", "frase": "Granella di pistacchio.", "difficoltà": 2 },
+      { "termine": "scottato", "definizione": "selado / escaldado (cozido só por fora)", "frase": "Tonno scottato all'esterno.", "difficoltà": 2 },
+      { "termine": "spicy mayo", "definizione": "maionese picante", "frase": "Sushi con spicy mayo.", "difficoltà": 2 },
+      { "termine": "chips di patate viola", "definizione": "chips de batata roxa", "frase": "Guarnizione con chips viola.", "difficoltà": 2 },
+      { "termine": "spesa minima", "definizione": "gasto mínimo / compra mínima", "frase": "Spesa minima 30 euro.", "difficoltà": 2 },
+      { "termine": "tra una cosa e l'altra", "definizione": "entre uma coisa e outra (somando)", "frase": "Tra una cosa e l'altra ho speso 100 euro.", "difficoltà": 3 },
+      { "termine": "arrivarci", "definizione": "chegar a isso / atingir esse valor", "frase": "Con 20 euro non ci arrivi.", "difficoltà": 2 },
+      { "termine": "seguimi", "definizione": "siga-me / me siga (imperativo)", "frase": "Seguimi sui social!", "difficoltà": 2 }
+    ]
+  }
+}
