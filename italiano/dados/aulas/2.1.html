@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Masterclass Italiano: Viagem ao Sudeste Asiático 🇮🇹✈️</title>
+    <!-- Google Fonts para uma tipografia elegante -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Merriweather:ital@0;1&display=swap" rel="stylesheet">
+    <!-- Font Awesome 6 (free CDN) para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(145deg, #f7f3e9 0%, #fff4e6 100%);
+            font-family: 'Inter', sans-serif;
+            color: #2c2418;
+            line-height: 1.5;
+            padding: 2rem 1.5rem;
+        }
+
+        /* Container principal */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        /* cabeçalho hero */
+        .hero {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 2rem 1rem;
+            background: rgba(255, 248, 235, 0.7);
+            backdrop-filter: blur(4px);
+            border-radius: 3rem;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #c4450c, #e67e22, #d35400);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.5px;
+        }
+
+        .hero .frase-mestra {
+            font-family: 'Merriweather', serif;
+            font-size: 2rem;
+            font-weight: 600;
+            background: #2c3e2f;
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            border-radius: 60px;
+            color: #f9e0b0;
+            margin: 1.5rem 0 1rem;
+            box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #5a4a32;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Grid de cartões */
+        .grid-aula {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 2rem;
+            margin: 2.5rem 0;
+        }
+
+        /* cartão elegante */
+        .card {
+            background: #fffef7;
+            border-radius: 2rem;
+            box-shadow: 0 20px 35px -12px rgba(0,0,0,0.1);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            overflow: hidden;
+            backdrop-filter: blur(2px);
+            border: 1px solid rgba(255,215,170,0.6);
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 28px 40px -14px rgba(0,0,0,0.18);
+        }
+
+        .card-header {
+            background: #fbe9d2;
+            padding: 1.2rem 1.5rem;
+            border-bottom: 2px solid #ffcf9a;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .card-header i {
+            font-size: 2rem;
+            color: #d95b1a;
+        }
+
+        .card-header h2 {
+            font-size: 1.7rem;
+            font-weight: 600;
+            margin: 0;
+            letter-spacing: -0.3px;
+        }
+
+        .card-body {
+            padding: 1.5rem;
+        }
+
+        /* Tabelas e detalhes gramaticais */
+        .word-detail {
+            margin-bottom: 1.8rem;
+            border-left: 4px solid #f0b27a;
+            padding-left: 1rem;
+        }
+
+        .word {
+            font-weight: 700;
+            font-size: 1.3rem;
+            color: #b64926;
+            font-family: monospace;
+            background: #fef3e4;
+            display: inline-block;
+            padding: 0.2rem 0.6rem;
+            border-radius: 20px;
+        }
+
+        .explanation {
+            margin-top: 0.5rem;
+            color: #3e3527;
+        }
+
+        .explanation p {
+            margin-bottom: 0.5rem;
+        }
+
+        .badge {
+            background: #e67e22;
+            color: white;
+            font-size: 0.7rem;
+            padding: 0.2rem 0.6rem;
+            border-radius: 50px;
+            display: inline-block;
+            margin-right: 8px;
+        }
+
+        .verb-table {
+            background: #faf7f0;
+            border-radius: 1rem;
+            padding: 1rem;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        td, th {
+            padding: 8px 6px;
+            border-bottom: 1px solid #ffe0bb;
+        }
+
+        .highlight {
+            background: #ffefdb;
+            font-weight: 600;
+        }
+
+        hr {
+            margin: 1rem 0;
+            border-color: #eedcbc;
+        }
+
+        .footer-note {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 1.5rem;
+            border-top: 1px solid #e9d9c2;
+            color: #7b6b52;
+            font-size: 0.9rem;
+        }
+
+        .btn-extra {
+            background: none;
+            border: 2px solid #e67e22;
+            border-radius: 2rem;
+            padding: 0.5rem 1.2rem;
+            font-weight: 600;
+            color: #c55a0c;
+            cursor: pointer;
+            transition: all 0.2s;
+            margin-top: 0.8rem;
+        }
+
+        .btn-extra:hover {
+            background: #e67e22;
+            color: white;
+        }
+
+        @media (max-width: 680px) {
+            body {
+                padding: 1rem;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .hero .frase-mestra {
+                font-size: 1.3rem;
+                padding: 0.5rem 1rem;
+            }
+            .card-header h2 {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="hero">
+        <h1><i class="fas fa-language"></i> Italiano em Ação: Viagem Radical</h1>
+        <div class="frase-mestra">🇮🇹 “Ok, è fatta. Ho appena comprato un biglietto di sola andata per il sud-est asiatico.”</div>
+        <p>✨ Uma frase espontânea que revela gramática, vocabulário e emoção. Decifre cada detalhe com esta mega aula visual ✨</p>
+    </div>
+
+    <div class="grid-aula">
+        <!-- CARD 1: ANÁLISE GERAL + OK, È FATTA -->
+        <div class="card">
+            <div class="card-header">
+                <i class="fas fa-check-circle"></i>
+                <h2>1. Expressão & Interjeição</h2>
+            </div>
+            <div class="card-body">
+                <div class="word-detail">
+                    <span class="word">Ok</span>
+                    <div class="explanation">
+                        <p><span class="badge">Interjeição / Anglicismo</span> <strong>Significado:</strong> “tudo certo”, “okay”, aceitação ou confirmação. No italiano cotidiano é amplamente usado assim como em português. Indica que o falante está de acordo ou simplesmente inicia o discurso com uma afirmação.</p>
+                        <p><i class="fas fa-volume-up"></i> <em>Pronúncia:</em> /ɔkˈkei/ (igual ao inglês).</p>
+                    </div>
+                </div>
+                <div class="word-detail">
+                    <span class="word">È fatta</span>
+                    <div class="explanation">
+                        <p><span class="badge">Locução verbal</span> <strong>Tradução literal:</strong> “está feita”. É uma expressão idiomática italiana que significa “está feito”, “concluído”, “consegui!”. Transmite alívio, satisfação, realização. </p>
+                        <p><strong>Uso:</strong> usado após realizar algo importante ou tomar uma decisão irreversível. Ex: “Hai prenotato il volo?” – “Sì, è fatta!”</p>
+                        <p><strong>Estrutura:</strong> verbo <em>essere</em> (3ª pessoa sing. presente) + particípio passado <em>fatta</em> (feminino). O gênero feminino surge pois subentende-se “la cosa” (a coisa) ou “l’azione” (a ação).</p>
+                    </div>
+                </div>
+                <div class="verb-table">
+                    <strong><i class="fas fa-genderless"></i> Concordância:</strong> “fatta” (feminino singular). Se a ação fosse referida a um plano masculino? Mas a frase fixa é sempre “è fatta” (coloquialmente invariável).
+                </div>
+            </div>
+        </div>
+
+        <!-- CARD 2: VERBO "COMPRARE" (PASSATO PROSSIMO) -->
+        <div class="card">
+            <div class="card-header">
+                <i class="fas fa-shopping-bag"></i>
+                <h2>2. Verbo Principal: Comprare</h2>
+            </div>
+            <div class="card-body">
+                <div class="word-detail">
+                    <span class="word">Ho appena comprato</span>
+                    <div class="explanation">
+                        <p><span class="badge">Passato Prossimo</span> <strong>Tradução:</strong> “Acabei de comprar / comprei há pouco”. Estrutura típica do passado recente em italiano.</p>
+                        <p><strong>Formação:</strong> verbo auxiliar <strong>AVERE</strong> (ho) + particípio passado de <em>comprare</em> → <strong>comprato</strong>.</p>
+                        <p>➕ <strong>Appena</strong> = “acabado de” / “há pouco”. Juntos: “ho appena comprato” = acabo de comprar.</p>
+                    </div>
+                </div>
+                <div class="verb-table">
+                    <strong>📖 Conjugação de "Comprare" (1ª conjugação - ARE) no Passato Prossimo:</strong>
+                    <table>
+                        <tr><th>Pronome</th><th>Aux. avere</th><th>Particípio</th><th>Tradução</th></tr>
+                        <tr><td>io</td><td>ho</td><td>comprato</td><td>eu comprei</td></tr>
+                        <tr><td>tu</td><td>hai</td><td>comprato</td><td>tu compraste</td></tr>
+                        <tr><td>lui/lei</td><td>ha</td><td>comprato</td><td>ele/ela comprou</td></tr>
+                        <tr class="highlight"><td>noi</td><td>abbiamo</td><td>comprato</td><td>nós compramos</td></tr>
+                        <tr><td>voi</td><td>avete</td><td>comprato</td><td>vós comprastes</td></tr>
+                        <tr><td>loro</td><td>hanno</td><td>comprato</td><td>eles compraram</td></tr>
+                    </table>
+                    <p><i class="fas fa-clock"></i> <em>Appena</em> + passato prossimo = ação finalizada há instantes. Muito comum no italiano falado.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- CARD 3: O BILHETE - "UN BIGLIETTO DI SOLA ANDATA" -->
+        <div class="card">
+            <div class="card-header">
+                <i class="fas fa-ticket-alt"></i>
+                <h2>3. Substantivo + Expressão de Viagem</h2>
+            </div>
+            <div class="card-body">
+                <div class="word-detail">
+                    <span class="word">un biglietto</span>
+                    <div class="explanation">
+                        <p><span class="badge">substantivo masculino</span> “um bilhete / ingresso / passagem”. Plural: <em>biglietti</em>. Proveniente do francês “billet”.</p>
+                        <p>Na frase, está no singular, indeterminado (artigo <strong>un</strong>).</p>
+                    </div>
+                </div>
+                <div class="word-detail">
+                    <span class="word">di sola andata</span>
+                    <div class="explanation">
+                        <p><span class="badge">locução adjetiva</span> <strong>Tradução:</strong> “de ida (somente)”, ou seja, “one-way ticket”.</p>
+                        <p><strong>Sola</strong> = adjetivo “só / somente” (feminino porque concorda com <em>andata</em>). <strong>Andata</strong> = substantivo feminino “ida”. Juntos: “sola andata” = apenas ida. O oposto seria “andata e ritorno” (ida e volta).</p>
+                        <p>Exprime uma decisão ousada: o falante não planeja voltar ou tem uma viagem longa sem data de retorno.</p>
+                    </div>
+                </div>
+                <div class="verb-table">
+                    <p><strong>💡 Outros exemplos:</strong> “Biglietto di andata e ritorno” (round trip), “Vorrei un biglietto di sola andata per Bangkok.”</p>
+                    <p><strong>Curiosidade:</strong> No italiano, o uso de “di” conecta o tipo de bilhete: <em>biglietto di</em> + [tipo viagem].</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- CARD 4: DESTINO "SUD-EST ASIATICO" + PREPOSIÇÃO -->
+        <div class="card">
+            <div class="card-header">
+                <i class="fas fa-map-marked-alt"></i>
+                <h2>4. Destino: Sudeste Asiático</h2>
+            </div>
+            <div class="card-body">
+                <div class="word-detail">
+                    <span class="word">per il sud-est asiatico</span>
+                    <div class="explanation">
+                        <p><span class="badge">preposizione articolata + toponimo</span> <strong>per</strong> = preposição que indica direção/destino (equivalente a “para”). Em italiano, com regiões geográficas amplas, usa-se “per” ou “in”.</p>
+                        <p><strong>il sud-est asiatico</strong> = “o sudeste asiático”. <em>Sud-est</em> é uma palavra composta (sul + est). <em>Asiatico</em> é adjetivo substantivado.</p>
+                        <p>Artigos definidos: <strong>il</strong> (masculino singular) porque “sud-est asiatico” é masculino.</p>
+                    </div>
+                </div>
+                <div class="word-detail">
+                    <span class="word">Sud-est</span>
+                    <div class="explanation">
+                        <p>Ponto cardeal composto: <strong>Sud</strong> (sul) + <strong>Est</strong> (leste). O mesmo que “southeast”. Observe o hífen obrigatório em italiano.</p>
+                        <p><strong>Asiatico</strong> – aggettivo: da Ásia. O continente asiático é “l’Asia”, o adjetivo concorda em gênero/número.</p>
+                    </div>
+                </div>
+                <div class="verb-table">
+                    <p><i class="fas fa-globe-asia"></i> <strong>Uso da preposição “PER”:</strong> Quando se quer dar ênfase ao movimento ou destino final, especialmente com lugares geográficos não urbanos. <br> “Parto per il Giappone” / “Un volo per il sud-est asiatico”. </p>
+                    <p>Alternativa: “in sud-est asiatico” seria menos comum, mas possível. O "il" define a região como entidade geográfica definida.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- CARD 5: GRAMÁTICA COMPLETA & ANÁLISE MORFOSSINTÁTICA -->
+        <div class="card">
+            <div class="card-header">
+                <i class="fas fa-microscope"></i>
+                <h2>5. Dissecando a Frase</h2>
+            </div>
+            <div class="card-body">
+                <p><strong>Frase original:</strong> <span style="background:#ffe1b9; padding:0.2rem 0.4rem; border-radius:12px;">Ok, è fatta. Ho appena comprato un biglietto di sola andata per il sud-est asiatico.</span></p>
+                <hr>
+                <div class="word-detail">
+                    <span class="word">Análise sintática</span>
+                    <div class="explanation">
+                        <p>• <strong>Ok, è fatta</strong> → oração independente exclamativa/assertiva. <em>È</em> verbo essere (presente indicativo 3ª sing), <em>fatta</em> predicato nominale.</p>
+                        <p>• <strong>Ho appena comprato</strong> → predicado verbal (passato prossimo) + avverbio “appena”. Sujeito implícito: “io” (eu).</p>
+                        <p>• <strong>un biglietto</strong> → complemento oggetto diretto (objeto direto).</p>
+                        <p>• <strong>di sola andata</strong> → complemento di specificazione (especifica o tipo do bilhete).</p>
+                        <p>• <strong>per il sud-est asiatico</strong> → complemento di moto a luogo (movimento para lugar).</p>
+                    </div>
+                </div>
+                <div class="verb-table">
+                    <p><strong>📌 Tabela de advérbios e conectores:</strong></p>
+                    <table>
+                        <tr><th>Palavra</th><th>Categoria</th><th>Função</th></tr>
+                        <tr><td>Ok</td><td>interiezione</td><td>marca de aceitação</td></tr>
+                        <tr><td>appena</td><td>avverbio di tempo</td><td>imediatamente antes</td></tr>
+                        <tr><td>di</td><td>preposizione semplice</td><td>liga biglietto ao tipo</td></tr>
+                        <tr><td>sola</td><td>aggettivo</td><td>modifica "andata"</td></tr>
+                        <tr><td>per</td><td>preposizione</td><td>direzione</td></tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- CARD 6: EXPRESSÕES CULTURAIS + SINÔNIMOS -->
+        <div class="card">
+            <div class="card-header">
+                <i class="fas fa-smile-wink"></i>
+                <h2>6. Contexto & Curiosidades</h2>
+            </div>
+            <div class="card-body">
+                <div class="word-detail">
+                    <span class="word">🇮🇹 “È fatta” no dia a dia</span>
+                    <div class="explanation">
+                        <p>Usado ao completar algo importante: uma prova, uma compra, um objetivo. Na Itália, após fazer um brinde às vezes dizem “fatta!”. Transmite emoção. Já “Ok” é internacional, mas os italianos falam “va bene” também.</p>
+                    </div>
+                </div>
+                <div class="word-detail">
+                    <span class="word">Biglietto di sola andata: significado filosófico</span>
+                    <div class="explanation">
+                        <p>Essa expressão carrega um simbolismo poderoso – decisão sem retorno, espírito aventureiro, liberdade. Na música e no cinema italiano, “sola andata” representa mudanças radicais.</p>
+                    </div>
+                </div>
+                <div class="word-detail">
+                    <span class="word">Sud-est asiatico: destinos comuns</span>
+                    <div class="explanation">
+                        <p>Tailândia, Vietnã, Camboja, Indonésia, Filipinas... Os italianos adoram viajar para o sudeste asiático, conhecido como “il sud-est asiatico”. O artigo definido é obrigatório quando se refere à região geográfica.</p>
+                    </div>
+                </div>
+                <button class="btn-extra" id="expandirBtn"><i class="fas fa-plus-circle"></i> Mais exemplos com "appena + passato prossimo"</button>
+                <div id="extraExemplos" style="display: none; margin-top: 1rem; background: #f8f0e3; border-radius: 1rem; padding: 0.8rem;">
+                    <p><strong>✨ Appena + Passato Prossimo (ação recém-concluída):</strong></p>
+                    <ul style="margin-left: 1.2rem;">
+                        <li><i class="fas fa-utensils"></i> Ho appena mangiato una pizza. (Acabei de comer pizza)</li>
+                        <li><i class="fas fa-envelope"></i> Abbiamo appena ricevuto una mail. (Acabamos de receber um e-mail)</li>
+                        <li><i class="fas fa-plane"></i> Loro sono appena partiti per Roma. (Eles acabaram de partir para Roma – com verbo essere).</li>
+                    </ul>
+                    <p><strong>⚠️ Nota:</strong> Appena também pode significar “assim que”, mas no contexto temporal “acabo de” + passato prossimo.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SEÇÃO BÔNUS: CONJUGAÇÃO DIREta do verbo "essere" usado em "è fatta" -->
+    <div style="background: #ffffffd9; border-radius: 2rem; padding: 1.8rem; margin: 2rem 0; box-shadow: 0 12px 28px -8px rgba(0,0,0,0.08);">
+        <h3 style="display: flex; align-items: center; gap: 12px;"><i class="fas fa-brain" style="color:#d95b1a;"></i> Aprofundamento: Verbo ESSERE + particípio passado (voz passiva / espressione idiomatica)</h3>
+        <p>Na expressão <strong>“è fatta”</strong>, o verbo <em>essere</em> não é auxiliar de um passato prossimo ativo, mas sim forma uma construção estativa/passiva resultativa. O particípio <em>fatta</em> concorda com o sujeito implícito (a ação). Veja a conjugação de <strong>essere</strong> no presente indicativo:</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1rem;">
+            <div style="flex:1; min-width: 140px; background:#faf3e8; border-radius: 1rem; padding: 1rem;">
+                <p><strong>io</strong> sono</p>
+                <p><strong>tu</strong> sei</p>
+                <p><strong>lui/lei</strong> <span class="badge" style="background:#b64926;">è</span></p>
+                <p><strong>noi</strong> siamo</p>
+                <p><strong>voi</strong> siete</p>
+                <p><strong>loro</strong> sono</p>
+            </div>
+            <div style="flex:2">
+                <p><i class="fas fa-comment-dots"></i> Outras expressões fixas com “è fatto/a”: “Il lavoro è fatto” (o trabalho está feito), “La scelta è fatta” (a escolha está feita). Em “Ok, è fatta” há um sentido de missão cumprida, frequentemente usado com entusiasmo.</p>
+                <p><strong>🔊 Pronúncia fonética da frase inteira:</strong> /ɔk ˈɛ ˈfat.ta | ˈɔ apˈpɛna komˈpra.to un biʎˈʎet.to di ˈsɔ.la anˈda.ta per il sudˈɛst aˈzja.ti.ko/</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rodapé amigável -->
+    <div class="footer-note">
+        <i class="fas fa-graduation-cap"></i> Aula completa: cada palavra, verbo e expressão explicados. Agora você domina “Ok, è fatta. Ho appena comprato un biglietto di sola andata per il sud-est asiatico.” <br>
+        🇮🇹 Pratique criando novas frases com “appena + comprare” e “di sola andata”. Buono studio e boa viagem!
+    </div>
+</div>
+
+<script>
+    // Interatividade simples para o botão de exemplos extras
+    const expandBtn = document.getElementById('expandirBtn');
+    const extraDiv = document.getElementById('extraExemplos');
+    if(expandBtn && extraDiv) {
+        expandBtn.addEventListener('click', () => {
+            if(extraDiv.style.display === 'none' || extraDiv.style.display === '') {
+                extraDiv.style.display = 'block';
+                expandBtn.innerHTML = '<i class="fas fa-minus-circle"></i> Ocultar exemplos';
+            } else {
+                extraDiv.style.display = 'none';
+                expandBtn.innerHTML = '<i class="fas fa-plus-circle"></i> Mais exemplos com "appena + passato prossimo"';
+            }
+        });
+    }
+</script>
+</body>
+</html>
