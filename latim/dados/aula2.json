@@ -1,0 +1,67 @@
+{
+  "titulo": "LATIM — Credo (Symbolum Apostolorum)",
+  "videoUrl": "dados/videos/video2.mp4",
+  "quizletUrl": "quizlet.html?quizlet=2",
+  "blocos": [
+    {
+      "start": 1,
+      "italian": "Credo in Deum Patrem omnipotentem, Creatorem caeli et terrae, et in Iesum Christum Filium Eius unicum Dominum nostrum.",
+      "translation": "Creio em Deus Pai todo-poderoso, Criador do céu e da terra, e em Jesus Cristo, Seu único Filho, nosso Senhor.",
+      "tip": "<strong>\"Credo in\"</strong> — 'Creio em' (verbo + acusativo). <strong>\"Deum Patrem omnipotentem\"</strong> — Acusativo: Deus Pai todo-poderoso. <strong>\"Creatorem caeli et terrae\"</strong> — 'Criador do céu e da terra' (acusativo, genitivos).",
+      "miniLesson": {
+        "title": "Acusativo com 'Credo in'",
+        "content": "<p><strong>\"Credo in\" + acusativo</strong> — Diferente do português, 'acreditar em' em latim rege o caso acusativo. 'Credo in Deum' = 'creio em Deus'.</p><div class=\"exemplo\">Credo in unum Deum. → Creio em um só Deus.</div><p style=\"margin-top:10px\"><strong>Genitivo de posse</strong> — 'Creatorem caeli et terrae': 'caeli' (do céu) e 'terrae' (da terra) são genitivos indicando posse.</p>"
+      }
+    },
+    {
+      "start": 11,
+      "italian": "qui conceptus est de Spiritu Sancto, natus ex Maria Virgine, passus sub Pontio Pilato, crucifixus mortuus et sepultus.",
+      "translation": "que foi concebido pelo Espírito Santo, nasceu da Virgem Maria, padeceu sob Pôncio Pilatos, foi crucificado, morto e sepultado.",
+      "tip": "<strong>\"qui\"</strong> — Pronome relativo 'que' (referindo-se a Jesus). <strong>\"conceptus est... natus... passus... crucifixus mortuus et sepultus\"</strong> — Verbos no perfeito passivo (forma perifrástica: particípio perfeito + 'est').",
+      "miniLesson": {
+        "title": "Perfeito Passivo em Latim",
+        "content": "<p><strong>Formação do perfeito passivo</strong> — Particípio perfeito + verbo 'esse' no presente. 'Conceptus est' = 'foi concebido'. 'Natus est' = 'nasceu' (literalmente 'foi nascido').</p><div class=\"exemplo\">Amatus est → Ele foi amado.</div><p style=\"margin-top:10px\"><strong>Preposições com ablativo</strong> — 'de Spiritu Sancto' (pelo Espírito Santo), 'ex Maria Virgine' (da Virgem Maria), 'sub Pontio Pilato' (sob Pôncio Pilatos).</p>"
+      }
+    },
+    {
+      "start": 21,
+      "italian": "descendit ad inferos, tertia die resurrexit a mortuis, ascendit ad caelos, sedet ad dexteram Dei Patris omnipotentis.",
+      "translation": "desceu à mansão dos mortos, ao terceiro dia ressuscitou dos mortos, subiu aos céus, está sentado à direita de Deus Pai todo-poderoso.",
+      "tip": "<strong>\"descendit... resurrexit... ascendit... sedet\"</strong> — Verbos no perfeito ativo (exceto 'sedet' = presente). <strong>\"ad inferos\"</strong> — 'Ao inferno' (literalmente 'aos que estão embaixo'). <strong>\"a mortuis\"</strong> — 'Dos mortos' (ablativo).",
+      "miniLesson": {
+        "title": "Perfeito Ativo e Preposições de Lugar",
+        "content": "<p><strong>Perfeito ativo (3ª pessoa singular)</strong> — 'Descendit' = desceu (de 'descendere'), 'resurrexit' = ressuscitou (de 'resurgere'), 'ascendit' = subiu (de 'ascendere').</p><div class=\"exemplo\">Christus resurrexit! → Cristo ressuscitou!</div><p style=\"margin-top:10px\"><strong>\"ad dexteram Dei\"</strong> — 'À direita de Deus' (expressão de honra). 'Dei' é genitivo.</p>"
+      }
+    },
+    {
+      "start": 31,
+      "italian": "inde venturus est iudicare vivos et mortuos.",
+      "translation": "de onde há de vir julgar os vivos e os mortos.",
+      "tip": "<strong>\"inde\"</strong> — Advérbio: 'de onde', 'dali'. <strong>\"venturus est\"</strong> — Perífrase ativa: particípio futuro + 'est' = 'há de vir' (futuro iminente). <strong>\"iudicare\"</strong> — Infinitivo de finalidade: 'para julgar'.",
+      "miniLesson": {
+        "title": "Perífrase Ativa (Particípio Futuro)",
+        "content": "<p><strong>Particípio futuro + 'esse'</strong> — Indica uma ação que está prestes a acontecer. 'Venturus est' = 'ele está para vir', 'há de vir'.</p><div class=\"exemplo\">Dominus venturus est iudicare. → O Senhor há de vir para julgar.</div><p style=\"margin-top:10px\"><strong>Infinitivo de finalidade</strong> — 'Iudicare' (infinitivo) após 'venturus est' indica o propósito da vinda.</p>"
+      }
+    },
+    {
+      "start": 35,
+      "italian": "Credo in Spiritum Sanctum, sanctam Ecclesiam catholicam.",
+      "translation": "Creio no Espírito Santo, na santa Igreja católica.",
+      "tip": "<strong>\"Spiritum Sanctum\"</strong> — Acusativo: 'Espírito Santo'. <strong>\"sanctam Ecclesiam catholicam\"</strong> — Acusativo com 'Credo in' implícito: 'creio na santa Igreja católica'.",
+      "miniLesson": {
+        "title": "O Acusativo nos Artigos de Fé",
+        "content": "<p><strong>Acusativo após 'credo in'</strong> — Cada artigo do Credo que segue 'credo in' exige o acusativo. 'Spiritum Sanctum', 'Ecclesiam catholicam' estão todos no acusativo.</p><div class=\"exemplo\">Credo in Spiritum Sanctum. → Creio no Espírito Santo.</div>"
+      }
+    },
+    {
+      "start": 39,
+      "italian": "sanctorum communionem, remissionem peccatorum, carnis resurrectionem, vitam aeternam. Amen.",
+      "translation": "a comunhão dos santos, a remissão dos pecados, a ressurreição da carne, a vida eterna. Amém.",
+      "tip": "<strong>\"sanctorum communionem\"</strong> — 'A comunhão dos santos' (acusativo). <strong>\"remissionem peccatorum\"</strong> — 'A remissão dos pecados' (acusativo + genitivo). <strong>\"carnis resurrectionem\"</strong> — 'A ressurreição da carne' (acusativo + genitivo).",
+      "miniLesson": {
+        "title": "Genitivos Múltiplos e 'Amen'",
+        "content": "<p><strong>Estrutura do Credo final</strong> — Todos os elementos estão no acusativo por dependerem implicitamente de 'Credo in' ou 'Credo'.</p><div class=\"exemplo\">Sanctorum communionem. → A comunhão dos santos.</div><p style=\"margin-top:10px\"><strong>\"peccatorum\"</strong> — Genitivo plural de 'peccatum' (pecado). 'Remissio peccatorum' = 'remissão de pecados'.</p><p style=\"margin-top:10px\"><strong>\"Amen\"</strong> — Palavra hebraica adotada em latim, significa 'assim seja', 'verdadeiramente'.</p>"
+      }
+    }
+  ]
+}

@@ -12,6 +12,19 @@
       "modules": 11,
       "featured": true,
       "color": "#8b4513"
+    },
+    {
+      "id": 2,
+      "title": "Latim — Credo (Symbolum Apostolorum)",
+      "subtitle": "O Credo dos Apóstolos em latim",
+      "description": "Aprenda a profissão de fé mais antiga da Igreja: o Credo. Texto completo com análise gramatical e vocabulário.",
+      "level": "Iniciante",
+      "thumbnail": "✝️📖",
+      "duration": "~0.5 min",
+      "words": 45,
+      "modules": 12,
+      "featured": true,
+      "color": "#2c5f8a"
     }
   ]
 }

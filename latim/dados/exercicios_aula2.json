@@ -1,0 +1,164 @@
+{
+  "aula": 2,
+  "titulo": "LATIM — Credo (Symbolum Apostolorum)",
+  "paragrafos": [
+    {
+      "indice": 0,
+      "referencia": "Credo in Deum Patrem omnipotentem, Creatorem caeli et terrae.",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "Em qual caso estão <em>Deum, Patrem, Creatorem</em>?",
+          "opcoes": [
+            "Nominativo",
+            "Acusativo",
+            "Genitivo",
+            "Vocativo"
+          ],
+          "resposta": "Acusativo",
+          "explicacao": "Após 'Credo in', usa-se o acusativo: 'creio em Deus, Pai, Criador'."
+        },
+        {
+          "tipo": "multipla",
+          "pergunta": "O que significa <em>caeli et terrae</em>?",
+          "opcoes": [
+            "Céu e terra (sujeitos)",
+            "Do céu e da terra (genitivo)",
+            "Ao céu e à terra (dativo)",
+            "Pelo céu e pela terra (ablativo)"
+          ],
+          "resposta": "Do céu e da terra (genitivo)",
+          "explicacao": "'Creatorem caeli et terrae' = 'Criador do céu e da terra'. 'Caeli' e 'terrae' são genitivos."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete a oração:",
+          "pergunta": "Credo in Deum Patrem ___ (todo-poderoso).",
+          "resposta": "omnipotentem",
+          "alternativas": ["omnipotentem", "Omnipotentem"],
+          "explicacao": "'Omnipotens, -entis' no acusativo singular é 'omnipotentem'."
+        }
+      ]
+    },
+    {
+      "indice": 1,
+      "referencia": "qui conceptus est de Spiritu Sancto, natus ex Maria Virgine.",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "O pronome relativo <em>qui</em> se refere a quem?",
+          "opcoes": [
+            "Deum",
+            "Iesum Christum",
+            "Patrem",
+            "Creatorem"
+          ],
+          "resposta": "Iesum Christum",
+          "explicacao": "'Qui' (que) refere-se a Jesus Cristo, mencionado imediatamente antes."
+        },
+        {
+          "tipo": "multipla",
+          "pergunta": "A expressão <em>conceptus est</em> está em qual voz e tempo?",
+          "opcoes": [
+            "Ativo, presente",
+            "Passivo, perfeito",
+            "Ativo, futuro",
+            "Passivo, imperfeito"
+          ],
+          "resposta": "Passivo, perfeito",
+          "explicacao": "Particípio perfeito 'conceptus' + 'est' = 'foi concebido' (perfeito passivo)."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete:",
+          "pergunta": "natus ___ Maria Virgine (da Virgem Maria)",
+          "resposta": "ex",
+          "alternativas": ["ex", "Ex"],
+          "explicacao": "A preposição 'ex' (seguida de ablativo) indica origem: 'nascido da Virgem Maria'."
+        }
+      ]
+    },
+    {
+      "indice": 2,
+      "referencia": "descendit ad inferos, tertia die resurrexit a mortuis.",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "O significado de <em>descendit ad inferos</em> é:",
+          "opcoes": [
+            "Desceu do inferno",
+            "Desceu à mansão dos mortos",
+            "Subiu ao céu",
+            "Ressuscitou dos mortos"
+          ],
+          "resposta": "Desceu à mansão dos mortos",
+          "explicacao": "'Descendere' = descer, 'ad inferos' = à mansão dos mortos (literalmente 'aos que estão embaixo')."
+        },
+        {
+          "tipo": "lacuna",
+          "pergunta": "Complete o verso: 'tertia die resurrexit ___ mortuis'",
+          "resposta": "a",
+          "alternativas": ["a", "A"],
+          "explicacao": "'A mortuis' = 'dos mortos' (ablativo). 'Resurgere a mortuis' = 'ressuscitar dos mortos'."
+        }
+      ]
+    },
+    {
+      "indice": 3,
+      "referencia": "inde venturus est iudicare vivos et mortuos.",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "O que significa a perífrase <em>venturus est</em>?",
+          "opcoes": [
+            "Ele veio",
+            "Ele está vindo",
+            "Ele há de vir (está para vir)",
+            "Ele teria vindo"
+          ],
+          "resposta": "Ele há de vir (está para vir)",
+          "explicacao": "Particípio futuro ('venturus') + 'est' indica ação iminente no futuro."
+        },
+        {
+          "tipo": "lacuna",
+          "pergunta": "Traduza: 'iudicare vivos et mortuos'",
+          "resposta": "julgar os vivos e os mortos",
+          "alternativas": ["julgar vivos e mortos", "julgar os vivos e os mortos"],
+          "explicacao": "Infinitivo 'iudicare' + acusativo 'vivos et mortuos'."
+        }
+      ]
+    },
+    {
+      "indice": 5,
+      "referencia": "sanctorum communionem, remissionem peccatorum, carnis resurrectionem, vitam aeternam.",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "Todos os elementos finais do Credo estão em qual caso?",
+          "opcoes": [
+            "Nominativo",
+            "Acusativo",
+            "Genitivo",
+            "Ablativo"
+          ],
+          "resposta": "Acusativo",
+          "explicacao": "Dependem de 'Credo' (implícito) e estão no acusativo: 'creio na comunhão dos santos, na remissão...'"
+        },
+        {
+          "tipo": "lacuna",
+          "pergunta": "Complete: 'remissionem ___' (dos pecados)",
+          "resposta": "peccatorum",
+          "alternativas": ["peccatorum", "Peccatorum"],
+          "explicacao": "'Peccatorum' é genitivo plural de 'peccatum' (pecado). 'Remissio peccatorum' = 'remissão de pecados'."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza: <em>carnis resurrectionem</em>",
+          "resposta": "a ressurreição da carne",
+          "palavrasChave": ["ressurreição", "carne"],
+          "explicacao": "'Carnis' = da carne (genitivo), 'resurrectionem' = ressurreição (acusativo)."
+        }
+      ]
+    }
+  ]
+}
