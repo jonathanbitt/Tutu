@@ -1,0 +1,67 @@
+{
+  "titulo": "LATIM — Salve Regina",
+  "videoUrl": "dados/videos/video1.mp4",
+  "quizletUrl": "quizlet.html?quizlet=1",
+  "blocos": [
+    {
+      "start": 0,
+      "italian": "Salve, Regina, Mater misericordiae, vita, dulcedo et spes nostra, salve.",
+      "translation": "Salve, Rainha, Mãe de misericórdia, vida, doçura e esperança nossa, salve.",
+      "tip": "<strong>\"Salve, Regina\"</strong> — Saudação à Virgem Maria. <strong>\"Mater misericordiae\"</strong> — 'Mãe de misericórdia' (genitivo). <strong>\"vita, dulcedo, spes\"</strong> — Três substantivos em nominativo: 'vida, doçura, esperança'.",
+      "miniLesson": {
+        "title": "O Vocativo e o Genitivo",
+        "content": "<p><strong>Vocativo (caso de chamamento)</strong> — 'Regina' (Rainha) está no vocativo, pois Maria está sendo chamada. Em latim, o vocativo muitas vezes é igual ao nominativo, mas em palavras da 2ª declinação como 'filius' (filho), o vocativo é 'fili'.</p><div class=\"exemplo\">Salve, Regina! → Salve, Rainha!</div><p style=\"margin-top:10px\"><strong>Genitivo (caso de posse)</strong> — 'Mater misericordiae' = 'Mãe da misericórdia'. O genitivo 'misericordiae' indica de quem Maria é mãe.</p><div class=\"exemplo\">Pater familias → Pai de família</div>"
+      }
+    },
+    {
+      "start": 0,
+      "italian": "Ad te clamamus, exsules filii Hevae.",
+      "translation": "A vós clamamos, exilados filhos de Eva.",
+      "tip": "<strong>\"Ad te\"</strong> — 'A vós' (preposição + acusativo). <strong>\"clamamus\"</strong> — 1ª pessoa do plural do presente indicativo: 'clamamos'. <strong>\"exsules filii Hevae\"</strong> — 'Exilados filhos de Eva' (Hevae = Eva, genitivo).",
+      "miniLesson": {
+        "title": "Preposições e o Acusativo",
+        "content": "<p><strong>\"Ad\" + acusativo</strong> — A preposição 'ad' (a, para, em direção a) rege o caso acusativo. 'Ad te' = 'a vós'.</p><div class=\"exemplo\">Ad astra → Para as estrelas</div><p style=\"margin-top:10px\"><strong>Verbo 'clamare'</strong> — Significa 'gritar', 'clamar'. É um verbo da 1ª conjugação (amo, amare, amavi, amatum).</p><div class=\"exemplo\">Clamavi ad Dominum → Clamei ao Senhor</div>"
+      }
+    },
+    {
+      "start": 0,
+      "italian": "Ad te suspiramus, gementes et flentes in hac lacrimarum valle.",
+      "translation": "A vós suspiramos, gemendo e chorando neste vale de lágrimas.",
+      "tip": "<strong>\"suspiramus\"</strong> — 'Suspiramos'. <strong>\"gementes et flentes\"</strong> — Particípios presentes: 'gemendo e chorando'. <strong>\"lacrimarum valle\"</strong> — 'Vale de lágrimas' (genitivo: lacrimarum = das lágrimas).",
+      "miniLesson": {
+        "title": "Particípios Presentes",
+        "content": "<p><strong>Particípios presentes</strong> — Terminam em '-ns' no nominativo. 'Gemens, gementis' (gemendo), 'flens, flentis' (chorando). Funcionam como adjetivos verbais.</p><div class=\"exemplo\">Vidimus stellam lucentem. → Vimos a estrela brilhante.</div><p style=\"margin-top:10px\"><strong>\"lacrimarum valle\"</strong> — 'Vallis' (vale) está no ablativo 'valle' (em/localização). 'Lacrimarum' é genitivo plural (das lágrimas).</p>"
+      }
+    },
+    {
+      "start": 13,
+      "italian": "Eia ergo, advocata nostra, illos tuos misericordes oculos ad nos converte; et Iesum, benedictum fructum ventris tui, nobis post hoc exsilium ostende.",
+      "translation": "Eia, pois, advogada nossa, aqueles teus olhos misericordiosos para nós converte; e Jesus, bendito fruto do teu ventre, para nós depois deste exílio mostra.",
+      "tip": "<strong>\"Eia ergo\"</strong> — Interjeição + conjunção: 'Eia, pois' (exortação). <strong>\"advocata nostra\"</strong> — 'Nossa advogada' (vocativo). <strong>\"illos...oculos\"</strong> — 'Aqueles olhos' (acusativo). <strong>\"converte\" / \"ostende\"</strong> — Imperativos: 'converte', 'mostra'.",
+      "miniLesson": {
+        "title": "Imperativos e Estrutura da Oração",
+        "content": "<p><strong>Imperativos</strong> — 'Converte' (2ª pessoa singular, 2ª conjugação: converte, converti, conversum), 'ostende' (mostra). São ordens ou pedidos diretos.</p><div class=\"exemplo\">Domine, miserere nobis! → Senhor, tende piedade de nós!</div><p style=\"margin-top:10px\"><strong>\"ventris tui\"</strong> — 'Do teu ventre' (genitivo). 'Fructus ventris' = 'fruto do ventre' (alusão a Jesus).</p>"
+      }
+    },
+    {
+      "start": 25,
+      "italian": "O clemens, O pia, O dulcis Virgo Maria.",
+      "translation": "Ó clemente, ó piedosa, ó doce Virgem Maria.",
+      "tip": "<strong>\"clemens, pia, dulcis\"</strong> — Três adjetivos em vocativo feminino (concordam com 'Virgo Maria'). <strong>\"Virgo Maria\"</strong> — 'Virgem Maria' (vocativo).",
+      "miniLesson": {
+        "title": "Adjetivos de 3ª Declinação",
+        "content": "<p><strong>Adjetivos como 'clemens, dulcis'</strong> — Pertencem à 3ª declinação. 'Clemens' tem genitivo 'clementis', 'dulcis' tem genitivo 'dulcis'. O vocativo é igual ao nominativo.</p><div class=\"exemplo\">O fortis anima! → Ó alma forte!</div>"
+      }
+    },
+    {
+      "start": 25,
+      "italian": "Ora pro nobis, sancta Dei Genitrix, ut digni efficiamur promissionibus Christi.",
+      "translation": "Orai por nós, santa Mãe de Deus, para que nos tornemos dignos das promessas de Cristo.",
+      "tip": "<strong>\"Ora pro nobis\"</strong> — Imperativo 'ora' (orai) + 'pro' (por) + 'nobis' (nós, ablativo). <strong>\"sancta Dei Genitrix\"</strong> — 'Santa Mãe de Deus' (vocativo). <strong>\"ut digni efficiamur\"</strong> — 'Para que nos tornemos dignos' (subjuntivo).",
+      "miniLesson": {
+        "title": "Oração Final com 'Ut' e Subjuntivo",
+        "content": "<p><strong>\"ut\" + subjuntivo</strong> — Indica finalidade ou propósito: 'para que'. 'Efficiamur' é subjuntivo presente passivo (tornemo-nos).</p><div class=\"exemplo\">Laboro ut discam. → Trabalho para que aprenda.</div><p style=\"margin-top:10px\"><strong>\"promissionibus Christi\"</strong> — Ablativo com 'digni' (digno de algo rege ablativo em latim). 'Christi' é genitivo (de Cristo).</p>"
+      }
+    }
+  ]
+}

@@ -1,0 +1,196 @@
+{
+  "aula": 1,
+  "titulo": "LATIM — Salve Regina",
+  "paragrafos": [
+    {
+      "indice": 0,
+      "referencia": "Salve, Regina, Mater misericordiae, vita, dulcedo et spes nostra, salve.",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "O que significa <em>Mater misericordiae</em>?",
+          "opcoes": [
+            "Mãe amorosa",
+            "Mãe de misericórdia",
+            "Mãe dos homens",
+            "Mãe celeste"
+          ],
+          "resposta": "Mãe de misericórdia",
+          "explicacao": "'Mater' = mãe, 'misericordiae' = de misericórdia (genitivo)."
+        },
+        {
+          "tipo": "multipla",
+          "pergunta": "Em que caso está a palavra <em>Regina</em> na frase?",
+          "opcoes": [
+            "Nominativo",
+            "Genitivo",
+            "Vocativo",
+            "Ablativo"
+          ],
+          "resposta": "Vocativo",
+          "explicacao": "O vocativo é o caso de chamamento. 'Salve, Regina' é uma saudação direta à Rainha."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete a frase:",
+          "pergunta": "Salve, ___, Mater misericordiae.",
+          "resposta": "Regina",
+          "alternativas": ["Regina", "regina"],
+          "explicacao": "A saudação é 'Salve, Regina' (Salve, Rainha)."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene para formar a frase correta:",
+          "palavras": ["Salve", "Mater", "misericordiae", "Regina"],
+          "resposta": "Salve Regina Mater misericordiae",
+          "explicacao": "A ordem original é: saudação + vocativo + sujeito + genitivo."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza para o português: <em>vita, dulcedo et spes nostra</em>",
+          "resposta": "vida, doçura e esperança nossa",
+          "palavrasChave": ["vida", "doçura", "esperança", "nossa"],
+          "explicacao": "Três substantivos em nominativo. 'Spes' = esperança."
+        }
+      ]
+    },
+    {
+      "indice": 1,
+      "referencia": "Ad te clamamus, exsules filii Hevae.",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "O que significa <em>exsules filii Hevae</em>?",
+          "opcoes": [
+            "Os filhos perdidos de Eva",
+            "Exilados filhos de Eva",
+            "Os herdeiros de Eva",
+            "Os eleitos de Eva"
+          ],
+          "resposta": "Exilados filhos de Eva",
+          "explicacao": "'Exsules' = exilados (nominativo plural), 'filii' = filhos, 'Hevae' = de Eva (genitivo)."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete:",
+          "pergunta": "Ad te ___ , exsules filii Hevae.",
+          "resposta": "clamamus",
+          "alternativas": ["clamamus", "Clamamus"],
+          "explicacao": "O verbo 'clamare' (clamar) na 1ª pessoa do plural: 'clamamus' (clamamos)."
+        }
+      ]
+    },
+    {
+      "indice": 2,
+      "referencia": "Ad te suspiramus, gementes et flentes in hac lacrimarum valle.",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "O que significam os particípios <em>gementes et flentes</em>?",
+          "opcoes": [
+            "Rindo e cantando",
+            "Gemendo e chorando",
+            "Correndo e pulando",
+            "Rezando e jejuando"
+          ],
+          "resposta": "Gemendo e chorando",
+          "explicacao": "'Gemens' = gemendo, 'flens' = chorando (particípios presentes)."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete:",
+          "pergunta": "in hac lacrimarum ___ (vale)",
+          "resposta": "valle",
+          "alternativas": ["valle", "Valle"],
+          "explicacao": "'Vallis, -is' (vale) no ablativo singular 'valle' (em/num vale)."
+        }
+      ]
+    },
+    {
+      "indice": 3,
+      "referencia": "Eia ergo, advocata nostra, illos tuos misericordes oculos ad nos converte.",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "O que significa <em>converte</em> nesta frase?",
+          "opcoes": [
+            "Converter (mudar de religião)",
+            "Virar (mudar de direção)",
+            "Transformar (modificar a forma)",
+            "Traduzir (interpretar)"
+          ],
+          "resposta": "Virar (mudar de direção)",
+          "explicacao": "'Converte' é imperativo de 'convertere' = virar, dirigir para. 'Ad nos converte' = 'dirige para nós'."
+        },
+        {
+          "tipo": "lacuna",
+          "pergunta": "A expressão 'advocata nostra' está em qual caso?",
+          "resposta": "Vocativo",
+          "alternativas": ["vocativo", "Vocativo"],
+          "explicacao": "Maria está sendo chamada de 'nossa advogada'."
+        }
+      ]
+    },
+    {
+      "indice": 4,
+      "referencia": "et Iesum, benedictum fructum ventris tui, nobis post hoc exsilium ostende.",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "O que significa <em>fructum ventris tui</em>?",
+          "opcoes": [
+            "O fruto da tua árvore",
+            "O fruto do teu ventre",
+            "A flor do teu jardim",
+            "O fruto da tua fé"
+          ],
+          "resposta": "O fruto do teu ventre",
+          "explicacao": "'Fructus' = fruto, 'ventris' = do ventre (genitivo), 'tui' = teu."
+        }
+      ]
+    },
+    {
+      "indice": 5,
+      "referencia": "O clemens, O pia, O dulcis Virgo Maria.",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "Os adjetivos <em>clemens, pia, dulcis</em> concordam com qual substantivo?",
+          "opcoes": [
+            "Regina",
+            "Virgo Maria",
+            "Mater",
+            "Advocata"
+          ],
+          "resposta": "Virgo Maria",
+          "explicacao": "'O clemens, O pia, O dulcis Virgo Maria' — todos os adjetivos se referem a 'Virgo Maria'."
+        }
+      ]
+    },
+    {
+      "indice": 6,
+      "referencia": "Ora pro nobis, sancta Dei Genitrix, ut digni efficiamur promissionibus Christi.",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "Qual é a função da conjunção <em>ut</em> nesta frase?",
+          "opcoes": [
+            "Indicar causa",
+            "Indicar finalidade (para que)",
+            "Indicar condição (se)",
+            "Indicar tempo (quando)"
+          ],
+          "resposta": "Indicar finalidade (para que)",
+          "explicacao": "'Ut' + subjuntivo ('efficiamur') expressa propósito: 'para que nos tornemos dignos'."
+        },
+        {
+          "tipo": "lacuna",
+          "pergunta": "O verbo <em>efficiamur</em> está em qual modo?",
+          "resposta": "subjuntivo",
+          "alternativas": ["subjuntivo", "Subjuntivo"],
+          "explicacao": "É um subjuntivo presente passivo ('tornemo-nos'), usado após 'ut' final."
+        }
+      ]
+    }
+  ]
+}

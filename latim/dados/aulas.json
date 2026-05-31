@@ -1,0 +1,17 @@
+{
+  "aulas": [
+    {
+      "id": 1,
+      "title": "Latim — Salve Regina",
+      "subtitle": "A mais bela oração mariana em latim",
+      "description": "Aprenda o Salve Regina, uma das orações mais conhecidas da Igreja, com pronúncia clássica e análise gramatical.",
+      "level": "Iniciante",
+      "thumbnail": "🙏📜",
+      "duration": "~0.5 min",
+      "words": 34,
+      "modules": 11,
+      "featured": true,
+      "color": "#8b4513"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "titulo": "Quizlet — Salve Regina (Latim)",
+  "palavras": 15,
+  "licoes": 7,
+  "descricao": "Vocabulário completo da oração",
+  "conteudo": {
+    "cards": [
+      { "termo": "salve", "definicao": "salve (saudação)", "frase": "Salve, Regina!", "dificuldade": 1 },
+      { "termo": "Regina", "definicao": "Rainha", "frase": "Regina caeli", "dificuldade": 1 },
+      { "termo": "misericordia", "definicao": "misericórdia", "frase": "Mater misericordiae", "dificuldade": 2 },
+      { "termo": "vita", "definicao": "vida", "frase": "Vita est dulcis", "dificuldade": 1 },
+      { "termo": "dulcedo", "definicao": "doçura", "frase": "Dulcedo tua nos reficiat", "dificuldade": 2 },
+      { "termo": "spes", "definicao": "esperança", "frase": "Spes nostra, salve", "dificuldade": 1 },
+      { "termo": "clamare", "definicao": "clamar, gritar", "frase": "Ad te clamamus", "dificuldade": 2 },
+      { "termo": "exsul", "definicao": "exilado", "frase": "Exsules filii Hevae", "dificuldade": 2 },
+      { "termo": "gemens", "definicao": "gemendo", "frase": "Gementes et flentes", "dificuldade": 2 },
+      { "termo": "flens", "definicao": "chorando", "frase": "Flentes in valle", "dificuldade": 2 },
+      { "termo": "lacrima", "definicao": "lágrima", "frase": "Lacrimarum vallis", "dificuldade": 1 },
+      { "termo": "vallis", "definicao": "vale", "frase": "In hac lacrimarum valle", "dificuldade": 2 },
+      { "termo": "advocata", "definicao": "advogada, intercessora", "frase": "Advocata nostra", "dificuldade": 2 },
+      { "termo": "convertere", "definicao": "virar, dirigir (para)", "frase": "Ad nos converte", "dificuldade": 3 },
+      { "termo": "ostendere", "definicao": "mostrar", "frase": "Nobis ostende", "dificuldade": 2 },
+      { "termo": "fructus", "definicao": "fruto", "frase": "Fructus ventris tui", "dificuldade": 1 },
+      { "termo": "venter", "definicao": "ventre", "frase": "Ventris tui fructus", "dificuldade": 2 },
+      { "termo": "exsilium", "definicao": "exílio", "frase": "Post hoc exsilium", "dificuldade": 2 },
+      { "termo": "clemens", "definicao": "clemente, misericordioso", "frase": "O clemens Virgo", "dificuldade": 2 },
+      { "termo": "pius", "definicao": "piedoso", "frase": "O pia Maria", "dificuldade": 1 },
+      { "termo": "dulcis", "definicao": "doce", "frase": "O dulcis Virgo", "dificuldade": 1 },
+      { "termo": "Genitrix", "definicao": "Mãe (que gera)", "frase": "Sancta Dei Genitrix", "dificuldade": 2 },
+      { "termo": "dignus", "definicao": "digno", "frase": "Digni efficiamur", "dificuldade": 2 },
+      { "termo": "promissio", "definicao": "promessa", "frase": "Promissionibus Christi", "dificuldade": 2 },
+      { "termo": "Christus", "definicao": "Cristo", "frase": "Promissiones Christi", "dificuldade": 1 }
+    ]
+  }
+}
