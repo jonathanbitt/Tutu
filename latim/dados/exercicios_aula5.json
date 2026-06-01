@@ -1,0 +1,212 @@
+{
+  "aula": 5,
+  "titulo": "LATIM — Ave Maria",
+  "paragrafos": [
+    {
+      "indice": 0,
+      "referencia": "Ave Maria, gratia plena, Dominus tecum.",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "A palavra <em>tecum</em> é uma contração de:",
+          "opcoes": [
+            "Te + cum",
+            "Tu + cum",
+            "Tum + ec",
+            "Tec + um"
+          ],
+          "resposta": "Te + cum",
+          "explicacao": "Em latim, a preposição 'cum' (com) vem depois do pronome: 'tecum' = 'cum te' (contigo)."
+        },
+        {
+          "tipo": "multipla",
+          "pergunta": "O que significa <em>gratia plena</em>?",
+          "opcoes": [
+            "Cheia de graça",
+            "Plena graça",
+            "Graça plena",
+            "Cheia de alegria"
+          ],
+          "resposta": "Cheia de graça",
+          "explicacao": "'Gratia' é o substantivo 'graça' no ablativo ou nominativo; 'plena' é o adjetivo 'cheia'."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete a saudação:",
+          "pergunta": "Ave Maria, gratia ___, Dominus tecum.",
+          "resposta": "plena",
+          "alternativas": ["plena", "Plena"],
+          "explicacao": "'Gratia plena' = 'cheia de graça'."
+        }
+      ]
+    },
+    {
+      "indice": 1,
+      "referencia": "benedicta tu in mulieribus.",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "A palavra <em>benedicta</em> é um:",
+          "opcoes": [
+            "Verbo no presente",
+            "Particípio perfeito (bendita)",
+            "Adjetivo de 3ª declinação",
+            "Substantivo abstrato"
+          ],
+          "resposta": "Particípio perfeito (bendita)",
+          "explicacao": "'Benedicta' é o particípio perfeito do verbo 'benedicere' (bendizer), funcionando como adjetivo."
+        },
+        {
+          "tipo": "multipla",
+          "pergunta": "A expressão <em>in mulieribus</em> está em qual caso?",
+          "opcoes": [
+            "Acusativo",
+            "Genitivo",
+            "Ablativo",
+            "Dativo"
+          ],
+          "resposta": "Ablativo",
+          "explicacao": "'In' + ablativo: 'in mulieribus' = 'entre as mulheres'."
+        },
+        {
+          "tipo": "lacuna",
+          "pergunta": "Complete: 'benedicta tu in ___' (entre as mulheres)",
+          "resposta": "mulieribus",
+          "alternativas": ["mulieribus", "Mulieribus"],
+          "explicacao": "'Mulieri-bus' é o ablativo plural de 'mulier' (mulher)."
+        }
+      ]
+    },
+    {
+      "indice": 2,
+      "referencia": "et benedictus fructus ventris tui, Iesus.",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "A palavra <em>ventris</em> está em qual caso?",
+          "opcoes": [
+            "Nominativo (sujeito)",
+            "Acusativo (objeto)",
+            "Genitivo (posse)",
+            "Ablativo (meio)"
+          ],
+          "resposta": "Genitivo (posse)",
+          "explicacao": "'Fructus ventris' = 'fruto do ventre'. 'Ventris' é genitivo singular."
+        },
+        {
+          "tipo": "multipla",
+          "pergunta": "Qual é a função de <em>Iesus</em> na frase?",
+          "opcoes": [
+            "Sujeito do verbo",
+            "Objeto direto",
+            "Aposição (explica quem é o fruto)",
+            "Vocativo (chamamento)"
+          ],
+          "resposta": "Aposição (explica quem é o fruto)",
+          "explicacao": "'Benedictus fructus... Iesus' = 'bendito é o fruto..., (que é) Jesus'. 'Iesus' está em aposição ao 'fructus'."
+        },
+        {
+          "tipo": "lacuna",
+          "pergunta": "Complete a frase bíblica: 'benedictus fructus ventris ___' (do teu ventre)",
+          "resposta": "tui",
+          "alternativas": ["tui", "Tui"],
+          "explicacao": "'Tui' é o genitivo do pronome 'tu' (teu)."
+        }
+      ]
+    },
+    {
+      "indice": 3,
+      "referencia": "Sancta Maria, Mater Dei.",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "Qual é o genitivo irregular de <em>Deus</em>?",
+          "opcoes": [
+            "Deum",
+            "Dei",
+            "Deo",
+            "Dee"
+          ],
+          "resposta": "Dei",
+          "explicacao": "'Mater Dei' = 'Mãe de Deus'. 'Dei' é a forma do genitivo de 'Deus'."
+        },
+        {
+          "tipo": "lacuna",
+          "pergunta": "Complete o título mariano: 'Sancta Maria, ___ Dei' (Mãe de Deus)",
+          "resposta": "Mater",
+          "alternativas": ["Mater", "mater"],
+          "explicacao": "'Mater' = Mãe (nominativo/vocativo)."
+        }
+      ]
+    },
+    {
+      "indice": 4,
+      "referencia": "ora pro nobis peccatoribus.",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "O verbo <em>ora</em> está no:",
+          "opcoes": [
+            "Indicativo presente (eles oram)",
+            "Imperativo (orai, rogai)",
+            "Subjuntivo (que eles orem)",
+            "Infinitivo (orar)"
+          ],
+          "resposta": "Imperativo (orai, rogai)",
+          "explicacao": "'Ora' é o imperativo presente de 'orare', dirigido a Maria."
+        },
+        {
+          "tipo": "multipla",
+          "pergunta": "A palavra <em>peccatoribus</em> está em aposição a qual termo?",
+          "opcoes": [
+            "Maria",
+            "nobis",
+            "Dei",
+            "mortis"
+          ],
+          "resposta": "nobis",
+          "explicacao": "'Ora pro nobis peccatoribus' = 'rogai por nós, pecadores'. 'Peccatoribus' explica quem são 'nós'."
+        },
+        {
+          "tipo": "lacuna",
+          "pergunta": "Complete: 'ora pro nobis ___' (pecadores)",
+          "resposta": "peccatoribus",
+          "alternativas": ["peccatoribus", "Peccatoribus"],
+          "explicacao": "'Peccatoribus' é o ablativo plural de 'peccator' (pecador)."
+        }
+      ]
+    },
+    {
+      "indice": 5,
+      "referencia": "nunc et in hora mortis nostrae. Amen.",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "A expressão <em>in hora</em> está no caso:",
+          "opcoes": [
+            "Acusativo (direção)",
+            "Ablativo (tempo/lugar)",
+            "Genitivo (posse)",
+            "Vocativo (chamamento)"
+          ],
+          "resposta": "Ablativo (tempo/lugar)",
+          "explicacao": "'In hora' com ablativo indica tempo: 'na hora'."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza a oração completa: <em>Ave Maria, gratia plena, Dominus tecum.</em>",
+          "resposta": "Ave Maria, cheia de graça, o Senhor é convosco.",
+          "palavrasChave": ["Ave Maria", "cheia de graça", "Senhor", "convosco"],
+          "explicacao": "Saudação + atributo + declaração de presença do Senhor."
+        },
+        {
+          "tipo": "lacuna",
+          "pergunta": "Complete o final da oração: 'nunc et in hora mortis ___' (da nossa morte)",
+          "resposta": "nostrae",
+          "alternativas": ["nostrae", "Nostrae"],
+          "explicacao": "'Nostrae' é o genitivo feminino singular do pronome possessivo 'noster' (nosso)."
+        }
+      ]
+    }
+  ]
+}

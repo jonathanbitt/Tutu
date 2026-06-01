@@ -1,0 +1,67 @@
+{
+  "titulo": "LATIM — Sancte Michaël Archangele",
+  "videoUrl": "dados/videos/video3.mp4",
+  "quizletUrl": "quizlet.html?quizlet=3",
+  "blocos": [
+    {
+      "start": 0,
+      "italian": "Sancte Michaël Archangele, defende nos in proelio.",
+      "translation": "São Miguel Arcanjo, defendei-nos no combate.",
+      "tip": "<strong>\"Sancte Michaël Archangele\"</strong> — Vocativo (chamamento): 'São Miguel Arcanjo'. <strong>\"defende nos\"</strong> — Imperativo presente: 'defendei-nos'. <strong>\"in proelio\"</strong> — Ablativo: 'no combate' (lugar onde).",
+      "miniLesson": {
+        "title": "Vocativo em Latim - Nomes da 2ª Declinação",
+        "content": "<p><strong>Vocativo de nomes em -us/-ius</strong> — 'Michaël' é indeclinável (nome hebraico), mas 'Sancte' (em vez de 'Sanctus') é o vocativo da 2ª declinação. 'Archangele' também é vocativo.</p><div class=\"exemplo\">Sancte Petre, ora pro nobis. → São Pedro, rogai por nós.</div><p style=\"margin-top:10px\"><strong>Imperativo 'defende'</strong> — Verbo 'defendere' (defender) na 2ª pessoa singular do imperativo presente ativo. 'Defende nos' = 'defendei-nos' (tratamento de respeito).</p>"
+      }
+    },
+    {
+      "start": 4,
+      "italian": "contra nequitiam et insidias diaboli esto praesidium.",
+      "translation": "contra a malícia e as insídias do demônio, sede o nosso refúgio.",
+      "tip": "<strong>\"contra nequitiam et insidias\"</strong> — Acusativo com preposição 'contra': 'contra a malícia e as armadilhas'. <strong>\"diaboli\"</strong> — Genitivo: 'do demônio'. <strong>\"esto praesidium\"</strong> — Imperativo futuro (forma solene): 'sede o refúgio/proteção'.",
+      "miniLesson": {
+        "title": "Imperativo Futuro ('Esto') e Preposição 'Contra'",
+        "content": "<p><strong>Imperativo futuro 'esto'</strong> — Diferente do imperativo presente ('es', 'sê'), 'esto' tem força de comando duradouro: 'sede (para sempre)'. É comum em orações e textos jurídicos.</p><div class=\"exemplo\">Esto mihi in Deum protectorem. → Sede para mim um Deus protetor.</div><p style=\"margin-top:10px\"><strong>'Contra' + acusativo</strong> — A preposição 'contra' indica oposição e sempre rege o caso acusativo.</p>"
+      }
+    },
+    {
+      "start": 8,
+      "italian": "Imperet illi Deus, supplices deprecamur.",
+      "translation": "Deus lhe imponha (a sua autoridade), suplicantes rogamos.",
+      "tip": "<strong>\"Imperet illi Deus\"</strong> — 'Imperet' é subjuntivo optativo (desejo): 'Que Deus lhe ordene/domine'. <strong>\"supplices deprecamur\"</strong> — 'Suplicantes, rogamos' (nominativo plural do particípio + verbo).",
+      "miniLesson": {
+        "title": "Subjuntivo Optativo (Expressão de Desejo)",
+        "content": "<p><strong>Subjuntivo presente para desejos</strong> — 'Imperet' (que ele ordene/domine) expressa um desejo, não um fato. É o chamado subjuntivo optativo (jussivo).</p><div class=\"exemplo\">Fiat voluntas tua. → Seja feita a vossa vontade.</div><p style=\"margin-top:10px\"><strong>Particípio 'supplices'</strong> — 'Supplex, supplicis' = suplicante, que está de joelhos. Nominativo plural 'supplices' = 'nós, suplicantes'.</p>"
+      }
+    },
+    {
+      "start": 10,
+      "italian": "tuque, Princeps militiae caelestis, Satanam aliosque spiritus malignos, qui ad perditionem animarum pervagantur in mundo, divina virtute, in infernum detrude.",
+      "translation": "e vós, Príncipe da milícia celestial, a Satanás e aos outros espíritos malignos, que vagueiam pelo mundo para a perdição das almas, pela virtude divina, lançai ao inferno.",
+      "tip": "<strong>\"tuque\"</strong> — 'E tu/vós' (ênfase com 'que' = 'et'). <strong>\"Princeps militiae caelestis\"</strong> — Vocativo: 'Príncipe da milícia celestial' (genitivo). <strong>\"Satanam... spiritus malignos\"</strong> — Acusativo (objeto direto de 'detrude'). <strong>\"detrude\"</strong> — Imperativo presente: 'lançai', 'empurrai para baixo'.",
+      "miniLesson": {
+        "title": "Oração Longa: Objetos Diretos e Orações Relativas",
+        "content": "<p><strong>Acusativos múltiplos</strong> — 'Satanam' (Satanás) e 'spiritus malignos' (espíritos malignos) são os dois objetos diretos do verbo 'detrude'.</p><div class=\"exemplo\">Satanam detrude. → Lançai Satanás.</div><p style=\"margin-top:10px\"><strong>Oração relativa com 'qui'</strong> — 'Qui pervagantur' = 'os quais vagueiam'. O antecedente é 'spiritus malignos'.</p><p style=\"margin-top:10px\"><strong>\"divina virtute\"</strong> — Ablativo instrumental: 'pela virtude divina' (por meio do poder de Deus).</p><p style=\"margin-top:10px\"><strong>\"in infernum detrude\"</strong> — 'In infernum' (para o inferno) + 'detrude' (lançai para baixo). 'Detrudere' = 'de' (para baixo) + 'trudere' (empurrar).</p>"
+      }
+    },
+    {
+      "start": 18,
+      "italian": "pervagantur in mundo",
+      "translation": "vagueiam pelo mundo",
+      "tip": "<strong>\"pervagantur\"</strong> — Verbo depoente: 'vagam por', 'percorrem'. Forma passiva com sentido ativo. <strong>\"in mundo\"</strong> — Ablativo: 'no/pelo mundo'.",
+      "miniLesson": {
+        "title": "Verbos Depoentes",
+        "content": "<p><strong>Verbos depoentes</strong> — Têm forma passiva mas sentido ativo. 'Pervagari' = 'percorrer, vaguear'. 'Pervagantur' = 'eles vagueiam' (3ª pessoa plural presente).</p><div class=\"exemplo\">Miles pervagatur agros. → O soldado percorre os campos.</div>"
+      }
+    },
+    {
+      "start": 20,
+      "italian": "in infernum detrude. Amen.",
+      "translation": "lançai ao inferno. Amém.",
+      "tip": "<strong>\"in infernum\"</strong> — 'Ao inferno' (acusativo com preposição 'in' indicando movimento). <strong>\"detrude\"</strong> — Imperativo presente de 'detrudere' (empurrar para baixo, lançar). <strong>\"Amen\"</strong> — 'Assim seja'.",
+      "miniLesson": {
+        "title": "'In' com Acusativo (Movimento) vs Ablativo (Lugar)",
+        "content": "<p><strong>'In' + acusativo</strong> — Indica movimento para dentro de um lugar. 'In infernum' = 'para dentro do inferno' (direção).</p><div class=\"exemplo\">In caelum ascendit. → Subiu ao céu.</div><p style=\"margin-top:10px\"><strong>'In' + ablativo</strong> — Indica posição estática. 'In mundo' (no mundo).</p><div class=\"exemplo\">In mundo est. → Está no mundo.</div>"
+      }
+    }
+  ]
+}

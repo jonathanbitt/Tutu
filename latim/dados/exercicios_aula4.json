@@ -1,0 +1,205 @@
+{
+  "aula": 4,
+  "titulo": "LATIM — Pater Noster",
+  "paragrafos": [
+    {
+      "indice": 0,
+      "referencia": "Pater noster, qui es in caelis, sanctificetur nomen tuum.",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "A forma verbal <em>sanctificetur</em> está em qual modo?",
+          "opcoes": [
+            "Indicativo (fato real)",
+            "Subjuntivo (desejo/ordem indireta)",
+            "Imperativo (comando direto)",
+            "Infinitivo (sem pessoa)"
+          ],
+          "resposta": "Subjuntivo (desejo/ordem indireta)",
+          "explicacao": "'Sanctificetur' é subjuntivo jussivo/optativo: 'que seja santificado', expressando um desejo."
+        },
+        {
+          "tipo": "multipla",
+          "pergunta": "A palavra <em>Pater</em> está em qual caso?",
+          "opcoes": [
+            "Nominativo (sujeito)",
+            "Vocativo (chamamento)",
+            "Genitivo (posse)",
+            "Ablativo (meio)"
+          ],
+          "resposta": "Vocativo (chamamento)",
+          "explicacao": "Quando nos dirigimos a Deus como 'Pai', usamos o vocativo: 'Pater'."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete a frase:",
+          "pergunta": "Pater noster, qui ___ in caelis (que estais nos céus).",
+          "resposta": "es",
+          "alternativas": ["es", "Es"],
+          "explicacao": "O verbo 'esse' no presente, 2ª pessoa singular: 'es' (tu és/estás)."
+        }
+      ]
+    },
+    {
+      "indice": 1,
+      "referencia": "adveniat regnum tuum, fiat voluntas tua, sicut in caelo et in terra.",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "O verbo <em>fiat</em> vem de qual verbo?",
+          "opcoes": [
+            "Facere (fazer)",
+            "Fieri (tornar-se, acontecer)",
+            "Ferre (levar)",
+            "Fidere (confiar)"
+          ],
+          "resposta": "Fieri (tornar-se, acontecer)",
+          "explicacao": "'Fiat' é o subjuntivo presente de 'fieri' (tornar-se, ser feito, acontecer). 'Fiat lux' = 'faça-se a luz'."
+        },
+        {
+          "tipo": "multipla",
+          "pergunta": "A palavra <em>sicut</em> significa:",
+          "opcoes": [
+            "Porque",
+            "Assim como",
+            "Embora",
+            "Se"
+          ],
+          "resposta": "Assim como",
+          "explicacao": "'Sicut' é uma conjunção comparativa: 'assim como', 'bem como'."
+        },
+        {
+          "tipo": "lacuna",
+          "pergunta": "Complete o pedido: '___ voluntas tua' (seja feita a vossa vontade)",
+          "resposta": "fiat",
+          "alternativas": ["fiat", "Fiat"],
+          "explicacao": "'Fiat' é o subjuntivo presente de 'fieri', usado para expressar desejo."
+        }
+      ]
+    },
+    {
+      "indice": 2,
+      "referencia": "Panem nostrum quotidianum da nobis hodie.",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "O verbo <em>da</em> é um imperativo dirigido a:",
+          "opcoes": [
+            "Nós (1ª pessoa plural)",
+            "Tu (2ª pessoa singular)",
+            "Vós (2ª pessoa plural)",
+            "Ele (3ª pessoa singular)"
+          ],
+          "resposta": "Tu (2ª pessoa singular)",
+          "explicacao": "'Da' é a 2ª pessoa singular do imperativo de 'dare'. Em latim, trata-se Deus como 'Tu' (singular)."
+        },
+        {
+          "tipo": "multipla",
+          "pergunta": "A palavra <em>nobis</em> está em qual caso?",
+          "opcoes": [
+            "Acusativo (objeto direto)",
+            "Ablativo (meio)",
+            "Dativo (a nós, para nós)",
+            "Genitivo (posse)"
+          ],
+          "resposta": "Dativo (a nós, para nós)",
+          "explicacao": "'Da nobis' = 'dá a nós'. 'Nobis' é dativo, indicando o beneficiário da ação."
+        },
+        {
+          "tipo": "lacuna",
+          "pergunta": "Complete: 'Panem nostrum ___ da nobis hodie' (de cada dia)",
+          "resposta": "quotidianum",
+          "alternativas": ["quotidianum", "Quotidianum"],
+          "explicacao": "'Panis quotidianus' = pão de cada dia. Acusativo: 'panem quotidianum'."
+        }
+      ]
+    },
+    {
+      "indice": 3,
+      "referencia": "et dimitte nobis debita nostra, sicut et nos dimittimus debitoribus nostris.",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "O verbo <em>dimitte</em> significa:",
+          "opcoes": [
+            "Aumentar",
+            "Perdoar, deixar ir",
+            "Esquecer",
+            "Esconder"
+          ],
+          "resposta": "Perdoar, deixar ir",
+          "explicacao": "'Dimittere' = 'dis-' (para longe) + 'mittere' (enviar) = 'enviar para longe', 'perdoar', 'remitir'."
+        },
+        {
+          "tipo": "multipla",
+          "pergunta": "A palavra <em>debitoribus</em> está no caso:",
+          "opcoes": [
+            "Acusativo",
+            "Dativo",
+            "Genitivo",
+            "Ablativo"
+          ],
+          "resposta": "Dativo",
+          "explicacao": "'Dimittimus debitoribus nostris' = 'perdoamos aos nossos devedores'. O dativo indica a quem perdoamos."
+        },
+        {
+          "tipo": "lacuna",
+          "pergunta": "Complete a frase: 'et dimitte nobis ___ nostra' (nossas dívidas)",
+          "resposta": "debita",
+          "alternativas": ["debita", "Debita"],
+          "explicacao": "'Debita' é o acusativo plural neutro de 'debitum' (dívida)."
+        }
+      ]
+    },
+    {
+      "indice": 4,
+      "referencia": "et ne nos inducas in tentationem.",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "A construção <em>ne nos inducas</em> expressa:",
+          "opcoes": [
+            "Afirmação positiva",
+            "Proibição negativa (não nos deixeis cair)",
+            "Condição (se não nos deixardes)",
+            "Dúvida (talvez nos deixeis)"
+          ],
+          "resposta": "Proibição negativa (não nos deixeis cair)",
+          "explicacao": "'Ne' + subjuntivo é a forma padrão para pedidos negativos em latim."
+        },
+        {
+          "tipo": "lacuna",
+          "pergunta": "Complete: 'ne nos inducas in ___' (em tentação)",
+          "resposta": "tentationem",
+          "alternativas": ["tentationem", "Tentationem"],
+          "explicacao": "'In' + acusativo indica movimento para dentro: 'in tentationem' = 'em tentação' (para dentro da tentação)."
+        }
+      ]
+    },
+    {
+      "indice": 5,
+      "referencia": "sed libera nos a malo. Amen.",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "A preposição <em>a</em> em 'a malo' rege qual caso?",
+          "opcoes": [
+            "Acusativo",
+            "Genitivo",
+            "Dativo",
+            "Ablativo"
+          ],
+          "resposta": "Ablativo",
+          "explicacao": "A preposição 'a/ab' (de, desde, por) sempre rege o caso ablativo: 'a malo' = 'do mal'."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza a primeira frase do Pai Nosso: <em>Pater noster, qui es in caelis, sanctificetur nomen tuum.</em>",
+          "resposta": "Pai nosso, que estais nos céus, santificado seja o vosso nome.",
+          "palavrasChave": ["Pai nosso", "estais", "céus", "santificado", "nome"],
+          "explicacao": "Vocativo + oração relativa + subjuntivo optativo."
+        }
+      ]
+    }
+  ]
+}

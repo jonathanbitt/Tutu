@@ -1,0 +1,39 @@
+{
+  "titulo": "Quizlet — Ave Maria (Latim)",
+  "palavras": 28,
+  "licoes": 7,
+  "descricao": "Vocabulário completo da Ave Maria",
+  "conteudo": {
+    "cards": [
+      { "termo": "Ave", "definicao": "Salve (saudação)", "frase": "Ave Maria", "dificuldade": 1 },
+      { "termo": "Maria", "definicao": "Maria (nome próprio)", "frase": "Ave Maria", "dificuldade": 1 },
+      { "termo": "gratia", "definicao": "graça", "frase": "Gratia plena", "dificuldade": 1 },
+      { "termo": "plenus", "definicao": "cheio, pleno", "frase": "Gratia plena", "dificuldade": 2 },
+      { "termo": "Dominus", "definicao": "Senhor", "frase": "Dominus tecum", "dificuldade": 1 },
+      { "termo": "tecum", "definicao": "contigo (contração de 'cum te')", "frase": "Dominus tecum", "dificuldade": 2 },
+      { "termo": "benedicere", "definicao": "bendizer", "frase": "Benedicta tu", "dificuldade": 2 },
+      { "termo": "benedictus", "definicao": "bendito (particípio perfeito)", "frase": "Benedictus fructus", "dificuldade": 2 },
+      { "termo": "tu", "definicao": "tu, vós", "frase": "Benedicta tu", "dificuldade": 1 },
+      { "termo": "mulier", "definicao": "mulher", "frase": "In mulieribus", "dificuldade": 2 },
+      { "termo": "fructus", "definicao": "fruto", "frase": "Fructus ventris", "dificuldade": 2 },
+      { "termo": "venter", "definicao": "ventre, útero", "frase": "Ventris tui", "dificuldade": 2 },
+      { "termo": "tuus", "definicao": "teu, vosso", "frase": "Ventris tui", "dificuldade": 1 },
+      { "termo": "Iesus", "definicao": "Jesus", "frase": "Fructus ventris, Iesus", "dificuldade": 1 },
+      { "termo": "Sanctus", "definicao": "santo, santa", "frase": "Sancta Maria", "dificuldade": 1 },
+      { "termo": "Mater", "definicao": "Mãe", "frase": "Mater Dei", "dificuldade": 1 },
+      { "termo": "Deus", "definicao": "Deus", "frase": "Mater Dei", "dificuldade": 1 },
+      { "termo": "Dei", "definicao": "de Deus (genitivo de Deus)", "frase": "Mater Dei", "dificuldade": 2 },
+      { "termo": "orare", "definicao": "orar, rogar", "frase": "Ora pro nobis", "dificuldade": 2 },
+      { "termo": "pro", "definicao": "por, em favor de (preposição + ablativo)", "frase": "Ora pro nobis", "dificuldade": 1 },
+      { "termo": "nobis", "definicao": "nós (ablativo/dativo)", "frase": "Pro nobis", "dificuldade": 1 },
+      { "termo": "peccator", "definicao": "pecador", "frase": "Peccatoribus", "dificuldade": 2 },
+      { "termo": "nunc", "definicao": "agora", "frase": "Nunc et in hora", "dificuldade": 1 },
+      { "termo": "hora", "definicao": "hora", "frase": "In hora mortis", "dificuldade": 1 },
+      { "termo": "mors", "definicao": "morte", "frase": "Hora mortis", "dificuldade": 1 },
+      { "termo": "noster", "definicao": "nosso", "frase": "Mortis nostrae", "dificuldade": 1 },
+      { "termo": "Amen", "definicao": "Amém, assim seja", "frase": "Amen", "dificuldade": 1 },
+      { "termo": "tecum", "definicao": "contigo", "frase": "Dominus tecum", "dificuldade": 2 },
+      { "termo": "vobiscum", "definicao": "convosco", "frase": "Dominus vobiscum", "dificuldade": 2 }
+    ]
+  }
+}

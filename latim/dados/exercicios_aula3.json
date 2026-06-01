@@ -1,0 +1,188 @@
+{
+  "aula": 3,
+  "titulo": "LATIM — Sancte Michaël Archangele",
+  "paragrafos": [
+    {
+      "indice": 0,
+      "referencia": "Sancte Michaël Archangele, defende nos in proelio.",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "A forma <em>Sancte</em> (em vez de 'Sanctus') está em qual caso?",
+          "opcoes": [
+            "Nominativo",
+            "Genitivo",
+            "Vocativo",
+            "Ablativo"
+          ],
+          "resposta": "Vocativo",
+          "explicacao": "Quando se chama alguém diretamente, usa-se o vocativo. 'Sancte Michaël' = 'ó São Miguel'."
+        },
+        {
+          "tipo": "multipla",
+          "pergunta": "O que significa a expressão <em>in proelio</em>?",
+          "opcoes": [
+            "Para o combate (direção)",
+            "No combate (lugar onde)",
+            "Pelo combate (causa)",
+            "Contra o combate (oposição)"
+          ],
+          "resposta": "No combate (lugar onde)",
+          "explicacao": "'In' + ablativo indica lugar onde: 'in proelio' = 'no combate'."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete:",
+          "pergunta": "Sancte Michaël ___, defende nos.",
+          "resposta": "Archangele",
+          "alternativas": ["Archangele", "archangele"],
+          "explicacao": "'Archangele' é o vocativo de 'Archangele' ou 'Archangelus'."
+        }
+      ]
+    },
+    {
+      "indice": 1,
+      "referencia": "contra nequitiam et insidias diaboli esto praesidium.",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "A forma verbal <em>esto</em> é um imperativo:",
+          "opcoes": [
+            "Presente (comum)",
+            "Futuro (solenidade)",
+            "Perfeito (ação concluída)",
+            "Particípio (substantivado)"
+          ],
+          "resposta": "Futuro (solenidade)",
+          "explicacao": "'Esto' é o imperativo futuro, usado em contextos solenes como orações e leis. Tem força de comando duradouro."
+        },
+        {
+          "tipo": "multipla",
+          "pergunta": "A palavra <em>diaboli</em> está no caso:",
+          "opcoes": [
+            "Nominativo (sujeito)",
+            "Acusativo (objeto)",
+            "Genitivo (posse)",
+            "Vocativo (chamamento)"
+          ],
+          "resposta": "Genitivo (posse)",
+          "explicacao": "'Insidias diaboli' = 'as insídias do demônio'. 'Diaboli' é genitivo singular."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete:",
+          "pergunta": "contra nequitiam et insidias ___ (do demônio)",
+          "resposta": "diaboli",
+          "alternativas": ["diaboli", "Diaboli"],
+          "explicacao": "'Diaboli' é o genitivo de 'diabolus, -i' (demônio)."
+        }
+      ]
+    },
+    {
+      "indice": 2,
+      "referencia": "Imperet illi Deus, supplices deprecamur.",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "O verbo <em>imperet</em> está em qual modo?",
+          "opcoes": [
+            "Indicativo (fato)",
+            "Subjuntivo (desejo/ordem)",
+            "Imperativo (comando direto)",
+            "Infinitivo (sem pessoa)"
+          ],
+          "resposta": "Subjuntivo (desejo/ordem)",
+          "explicacao": "'Imperet' é subjuntivo optativo/jussivo: 'Que Deus lhe ordene', expressando um desejo ou ordem indireta."
+        },
+        {
+          "tipo": "lacuna",
+          "pergunta": "Traduza a expressão: 'supplices deprecamur'",
+          "resposta": "suplicantes rogamos",
+          "alternativas": ["suplicantes, rogamos", "nós, suplicantes, rogamos"],
+          "explicacao": "'Supplices' (nominativo plural do particípio) + 'deprecamur' (1ª pessoa plural presente, forma depoente)."
+        }
+      ]
+    },
+    {
+      "indice": 3,
+      "referencia": "tuque, Princeps militiae caelestis, Satanam aliosque spiritus malignos ... in infernum detrude.",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "A palavra <em>Princeps</em> está em qual caso?",
+          "opcoes": [
+            "Nominativo",
+            "Vocativo",
+            "Acusativo",
+            "Genitivo"
+          ],
+          "resposta": "Vocativo",
+          "explicacao": "Miguel está sendo chamado diretamente: 'ó Príncipe da milícia celestial'."
+        },
+        {
+          "tipo": "multipla",
+          "pergunta": "O que significa <em>detrude</em>?",
+          "opcoes": [
+            "Levantar, erguer",
+            "Lançar para baixo, empurrar",
+            "Proteger, defender",
+            "Iluminar, clarear"
+          ],
+          "resposta": "Lançar para baixo, empurrar",
+          "explicacao": "'De-' (para baixo) + 'trudere' (empurrar) = 'detrudere' (lançar para baixo, precipitar)."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete:",
+          "pergunta": "Satanam aliosque spiritus ___ (malignos)",
+          "resposta": "malignos",
+          "alternativas": ["malignos", "Malignos"],
+          "explicacao": "'Spiritus malignos' = 'espíritos malignos' (acusativo plural)."
+        }
+      ]
+    },
+    {
+      "indice": 4,
+      "referencia": "pervagantur in mundo",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "O verbo <em>pervagantur</em> é:",
+          "opcoes": [
+            "Ativo (forma normal)",
+            "Passivo (voz passiva)",
+            "Depoente (forma passiva, sentido ativo)",
+            "Reflexivo (ação sobre si mesmo)"
+          ],
+          "resposta": "Depoente (forma passiva, sentido ativo)",
+          "explicacao": "'Pervagari' é um verbo depoente: termina em -or mas tem sentido ativo. 'Pervagantur' = 'eles vagueiam'."
+        }
+      ]
+    },
+    {
+      "indice": 5,
+      "referencia": "in infernum detrude. Amen.",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "Aqui, <em>in infernum</em> usa 'in' com acusativo para indicar:",
+          "opcoes": [
+            "Lugar onde (estático)",
+            "Movimento/direção (para o inferno)",
+            "Causa (por causa do inferno)",
+            "Tempo (no tempo do inferno)"
+          ],
+          "resposta": "Movimento/direção (para o inferno)",
+          "explicacao": "'In' + acusativo indica movimento para dentro de um lugar. 'In infernum detrude' = 'lançai para o inferno'."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza a oração completa: <em>Sancte Michaël Archangele, defende nos in proelio</em>",
+          "resposta": "São Miguel Arcanjo, defendei-nos no combate",
+          "palavrasChave": ["São Miguel", "defendei", "combate"],
+          "explicacao": "Vocativo + imperativo + ablativo de lugar."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "titulo": "Quizlet — Sancte Michaël Archangele",
+  "palavras": 35,
+  "licoes": 7,
+  "descricao": "Vocabulário da oração a São Miguel Arcanjo",
+  "conteudo": {
+    "cards": [
+      { "termo": "Sanctus", "definicao": "santo", "frase": "Sancte Michaël", "dificuldade": 1 },
+      { "termo": "Michaël", "definicao": "Miguel (nome próprio)", "frase": "Sancte Michaël Archangele", "dificuldade": 1 },
+      { "termo": "Archangele", "definicao": "Arcanjo", "frase": "Archangele Dei", "dificuldade": 2 },
+      { "termo": "defendere", "definicao": "defender, proteger", "frase": "Defende nos", "dificuldade": 2 },
+      { "termo": "proelium", "definicao": "combate, batalha", "frase": "In proelio", "dificuldade": 2 },
+      { "termo": "contra", "definicao": "contra (preposição + acusativo)", "frase": "Contra nequitiam", "dificuldade": 1 },
+      { "termo": "nequitia", "definicao": "malícia, perversidade", "frase": "Nequitia diaboli", "dificuldade": 2 },
+      { "termo": "insidiae", "definicao": "insídias, armadilhas", "frase": "Insidias diaboli", "dificuldade": 2 },
+      { "termo": "diabolus", "definicao": "demônio, diabo", "frase": "Diabolus est", "dificuldade": 2 },
+      { "termo": "esse", "definicao": "ser, estar", "frase": "Esto praesidium", "dificuldade": 1 },
+      { "termo": "praesidium", "definicao": "refúgio, proteção, guarnição", "frase": "Esto nobis praesidium", "dificuldade": 2 },
+      { "termo": "imperare", "definicao": "ordenar, comandar, dominar", "frase": "Imperet illi Deus", "dificuldade": 2 },
+      { "termo": "ille", "definicao": "aquele, ele", "frase": "Imperet illi", "dificuldade": 1 },
+      { "termo": "supplex", "definicao": "suplicante, que está de joelhos", "frase": "Supplices deprecamur", "dificuldade": 2 },
+      { "termo": "deprecari", "definicao": "rogardeprecar (verbo depoente)", "frase": "Deprecamur te", "dificuldade": 2 },
+      { "termo": "princeps", "definicao": "príncipe, chefe", "frase": "Princeps militiae", "dificuldade": 2 },
+      { "termo": "militia", "definicao": "milícia, exército", "frase": "Militia caelestis", "dificuldade": 2 },
+      { "termo": "caelestis", "definicao": "celestial", "frase": "Militia caelestis", "dificuldade": 2 },
+      { "termo": "Satanas", "definicao": "Satanás", "frase": "Satanam detrude", "dificuldade": 1 },
+      { "termo": "alius", "definicao": "outro", "frase": "Alios spiritus", "dificuldade": 1 },
+      { "termo": "-que", "definicao": "e (sufixo enclítico)", "frase": "Satanam aliosque", "dificuldade": 2 },
+      { "termo": "spiritus", "definicao": "espírito", "frase": "Spiritus maligni", "dificuldade": 1 },
+      { "termo": "malignus", "definicao": "maligno, mau", "frase": "Spiritus maligni", "dificuldade": 2 },
+      { "termo": "perditio", "definicao": "perdição, ruína", "frase": "Ad perditionem", "dificuldade": 2 },
+      { "termo": "anima", "definicao": "alma", "frase": "Perditio animarum", "dificuldade": 1 },
+      { "termo": "pervagari", "definicao": "percorrer, vaguear (depoente)", "frase": "Pervagantur in mundo", "dificuldade": 2 },
+      { "termo": "mundus", "definicao": "mundo", "frase": "In mundo", "dificuldade": 1 },
+      { "termo": "divinus", "definicao": "divino", "frase": "Divina virtus", "dificuldade": 2 },
+      { "termo": "virtus", "definicao": "virtude, poder, força", "frase": "Divina virtute", "dificuldade": 2 },
+      { "termo": "infernus", "definicao": "inferno", "frase": "In infernum", "dificuldade": 1 },
+      { "termo": "detrudere", "definicao": "lançar para baixo, empurrar", "frase": "In infernum detrude", "dificuldade": 2 },
+      { "termo": "proelium", "definicao": "combate, batalha", "frase": "In proelio", "dificuldade": 2 }
+    ]
+  }
+}

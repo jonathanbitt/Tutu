@@ -1,0 +1,67 @@
+{
+  "titulo": "LATIM — Ave Maria",
+  "videoUrl": "dados/videos/video5.mp4",
+  "quizletUrl": "quizlet.html?quizlet=5",
+  "blocos": [
+    {
+      "start": 0,
+      "italian": "Ave Maria, gratia plena, Dominus tecum.",
+      "translation": "Ave Maria, cheia de graça, o Senhor é convosco.",
+      "tip": "<strong>\"Ave Maria\"</strong> — Saudação (vocativo): 'Salve, Maria'. <strong>\"gratia plena\"</strong> — Ablativo de qualidade ou nominativo predicativo: 'cheia de graça'. <strong>\"Dominus tecum\"</strong> — 'O Senhor está contigo' ('tecum' = 'cum te', com uma contração típica).",
+      "miniLesson": {
+        "title": "Ablativo de Qualidade e Contrações com 'Cum'",
+        "content": "<p><strong>\"gratia plena\"</strong> — Pode ser interpretado como ablativo de qualidade: 'Maria, cheia de graça' (literalmente 'pela graça cheia').</p><div class=\"exemplo\">Virgo plena gratiae. → Virgem cheia de graça.</div><p style=\"margin-top:10px\"><strong>\"tecum\" (contração)</strong> — Em latim, a preposição 'cum' (com) é posposta aos pronomes pessoais: 'mecum' (comigo), 'tecum' (contigo), 'nobiscum' (conosco), 'vobiscum' (convosco). 'Dominus tecum' = 'o Senhor (está) contigo'. O verbo 'est' está implícito.</p>"
+      }
+    },
+    {
+      "start": 4,
+      "italian": "benedicta tu in mulieribus.",
+      "translation": "bendita sois vós entre as mulheres.",
+      "tip": "<strong>\"benedicta tu\"</strong> — 'Bendita és tu' (particípio perfeito passivo + pronome). <strong>\"in mulieribus\"</strong> — Ablativo plural com 'in': 'entre as mulheres'.",
+      "miniLesson": {
+        "title": "Particípio Perfeito como Adjetivo Predicativo",
+        "content": "<p><strong>'Benedicta'</strong> — Particípio perfeito do verbo 'benedicere' (bendizer). Funciona como adjetivo predicativo: 'tu es benedicta' (tu és bendita).</p><div class=\"exemplo\">Benedictus qui venit. → Bendito o que vem.</div><p style=\"margin-top:10px\"><strong>\"in mulieribus\"</strong> — 'Entre as mulheres' (ablativo plural). 'In' + ablativo pode indicar o grupo no qual alguém se destaca.</p>"
+      }
+    },
+    {
+      "start": 6,
+      "italian": "et benedictus fructus ventris tui, Iesus.",
+      "translation": "e bendito é o fruto do vosso ventre, Jesus.",
+      "tip": "<strong>\"benedictus fructus ventris tui\"</strong> — 'Bendito o fruto do teu ventre' (nominativo). <strong>\"Iesus\"</strong> — Em aposição a 'fructus': o fruto é Jesus.",
+      "miniLesson": {
+        "title": "Aposição e Genitivo Possessivo",
+        "content": "<p><strong>Estrutura 'A est B' implícita</strong> — 'Benedictus fructus ventris tui, Iesus' = 'Bendito é o fruto do teu ventre, (que é) Jesus'. 'Iesus' está em aposição (explica quem é o fruto).</p><div class=\"exemplo\">Petrus, apostolus Domini. → Pedro, apóstolo do Senhor.</div><p style=\"margin-top:10px\"><strong>Genitivo 'ventris tui'</strong> — 'Do teu ventre' (genitivo de posse). 'Fructus ventris' = 'fruto do ventre', expressão bíblica que se refere a Jesus.</p>"
+      }
+    },
+    {
+      "start": 9,
+      "italian": "Sancta Maria, Mater Dei.",
+      "translation": "Santa Maria, Mãe de Deus.",
+      "tip": "<strong>\"Sancta Maria\"</strong> — Vocativo ou nominativo? Aqui pode ser entendido como vocativo (chamamento) ou nominativo (sujeito de 'ora', que virá a seguir). <strong>\"Mater Dei\"</strong> — 'Mãe de Deus' (genitivo).",
+      "miniLesson": {
+        "title": "Genitivo 'Dei' - Forma Irregular",
+        "content": "<p><strong>'Deus' (Deus) — 2ª declinação irregular</strong> — Nominativo: Deus; Genitivo: Dei; Dativo: Deo; Acusativo: Deum; Ablativo: Deo; Vocativo: Deus (ou Dee). 'Mater Dei' = 'Mãe de Deus'.</p><div class=\"exemplo\">Filius Dei. → Filho de Deus.</div>"
+      }
+    },
+    {
+      "start": 11,
+      "italian": "ora pro nobis peccatoribus.",
+      "translation": "rogai por nós, pecadores.",
+      "tip": "<strong>\"ora pro nobis\"</strong> — Imperativo 'ora' (orai, rogai) + 'pro' (por) + 'nobis' (nós, ablativo). <strong>\"peccatoribus\"</strong> — Ablativo plural: 'pecadores' (concorda com 'nobis' — 'nós, pecadores').",
+      "miniLesson": {
+        "title": "Imperativo 'Ora' e Aposição no Ablativo",
+        "content": "<p><strong>Imperativo 'ora' (orar, rogar)</strong> — Verbo 'orare' (orar) da 1ª conjugação. 'Ora' é a 2ª pessoa singular do imperativo presente ativo. É dirigido a Maria.</p><div class=\"exemplo\">Ora pro populo. → Rogai pelo povo.</div><p style=\"margin-top:10px\"><strong>'Pro' + ablativo</strong> — A preposição 'pro' significa 'em favor de', 'por' e rege o caso ablativo. 'Pro nobis' = 'por nós'. 'Peccatoribus' está em aposição a 'nobis', explicando quem somos: 'nós, pecadores'.</p>"
+      }
+    },
+    {
+      "start": 13,
+      "italian": "nunc et in hora mortis nostrae. Amen.",
+      "translation": "agora e na hora da nossa morte. Amém.",
+      "tip": "<strong>\"nunc\"</strong> — Advérbio de tempo: 'agora'. <strong>\"in hora mortis nostrae\"</strong> — 'Na hora da nossa morte' (ablativo de tempo). <strong>\"Amen\"</strong> — 'Assim seja'.",
+      "miniLesson": {
+        "title": "Ablativo de Tempo",
+        "content": "<p><strong>Ablativo sem preposição para tempo</strong> — Em latim, muitas vezes o tempo é expresso pelo ablativo sem preposição. Mas aqui se usa 'in' + ablativo: 'in hora' = 'na hora'.</p><div class=\"exemplo\">In illo tempore. → Naquele tempo.</div><p style=\"margin-top:10px\"><strong>Genitivo 'mortis nostrae'</strong> — 'Da nossa morte'. 'Nostrae' concorda com 'mortis' (feminino singular genitivo).</p>"
+      }
+    }
+  ]
+}

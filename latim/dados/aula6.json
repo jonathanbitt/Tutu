@@ -1,0 +1,37 @@
+{
+  "titulo": "LATIM — Gloria Patri",
+  "videoUrl": "dados/videos/video6.mp4",
+  "quizletUrl": "quizlet.html?quizlet=6",
+  "blocos": [
+    {
+      "start": 0,
+      "italian": "Gloria Patri, et Filio, et Spiritui Sancto.",
+      "translation": "Glória ao Pai, e ao Filho, e ao Espírito Santo.",
+      "tip": "<strong>\"Gloria Patri\"</strong> — 'Glória ao Pai' (dativo de posse/benefício). <strong>\"Filio, Spiritui Sancto\"</strong> — Também no dativo: 'ao Filho, ao Espírito Santo'. A preposição 'et' repete-se antes de cada termo para ênfase.",
+      "miniLesson": {
+        "title": "Dativo de Posse e Benefício",
+        "content": "<p><strong>Dativo com 'gloria'</strong> — 'Gloria Patri' significa literalmente 'Glória ao Pai', 'a glória pertença ao Pai'. O dativo indica a quem se dirige ou a quem pertence a glória.</p><div class=\"exemplo\">Honor Deo. → Honra a Deus.</div><p style=\"margin-top:10px\"><strong>Declinação dos nomes</strong> — 'Pater, Patris' (masc., 3ª declinação) → dativo 'Patri'. 'Filius, Filii' (masc., 2ª declinação) → dativo 'Filio'. 'Spiritus Sanctus' (masc., 4ª declinação) → dativo 'Spiritui Sancto'.</p>"
+      }
+    },
+    {
+      "start": 3,
+      "italian": "sicut erat in principio, et nunc, et semper.",
+      "translation": "assim como era no princípio, e agora, e sempre.",
+      "tip": "<strong>\"sicut erat\"</strong> — 'Assim como era' (conjunção comparativa + verbo 'esse' no imperfeito). <strong>\"in principio\"</strong> — Ablativo de tempo: 'no princípio'. <strong>\"et nunc, et semper\"</strong> — 'E agora, e sempre' (ênfase com repetição de 'et').",
+      "miniLesson": {
+        "title": "Imperfeito do Indicativo e Ablativo de Tempo",
+        "content": "<p><strong>Imperfeito 'erat'</strong> — O verbo 'esse' (ser) no imperfeito do indicativo: 'eram, eras, erat, eramus, eratis, erant'. 'Erat' = 'ele/ela era, estava'.</p><div class=\"exemplo\">In principio erat Verbum. → No princípio era o Verbo.</div><p style=\"margin-top:10px\"><strong>Ablativo de tempo 'in principio'</strong> — Para indicar tempo, o latim pode usar 'in' + ablativo (quando o tempo é considerado um ponto ou período).</p><div class=\"exemplo\">In illo tempore. → Naquele tempo.</div>"
+      }
+    },
+    {
+      "start": 3,
+      "italian": "et in saecula saeculorum. Amen.",
+      "translation": "e pelos séculos dos séculos. Amém.",
+      "tip": "<strong>\"in saecula saeculorum\"</strong> — Expressão idiomática que significa 'pelos séculos dos séculos', 'para sempre' (literalmente 'pelos séculos dos séculos'). <strong>\"saeculorum\"</strong> — Genitivo plural de 'saeculum'. <strong>\"Amen\"</strong> — 'Assim seja'.",
+      "miniLesson": {
+        "title": "Acusativo de Extensão com 'In'",
+        "content": "<p><strong>'In' + acusativo (duração/extensão)</strong> — Diferente da expressão de tempo pontual com ablativo, 'in' + acusativo ('in saecula') indica duração no tempo: 'pelos séculos', 'através dos séculos'.</p><div class=\"exemplo\">In aeternum. → Para sempre.</div><p style=\"margin-top:10px\"><strong>Genitivo de relação 'saeculorum'</strong> — 'Saecula saeculorum' é uma expressão hebraica traduzida para o latim: 'séculos de séculos' (ênfase superlativa). 'Saeculorum' é genitivo plural: 'dos séculos'.</p><div class=\"exemplo\">Saecula saeculorum. → Séculos dos séculos (para todo o sempre).</div>"
+      }
+    }
+  ]
+}

@@ -25,6 +25,58 @@
       "modules": 12,
       "featured": true,
       "color": "#2c5f8a"
+    },
+    {
+      "id": 3,
+      "title": "Latim — Sancte Michaël Archangele",
+      "subtitle": "A poderosa oração a São Miguel Arcanjo",
+      "description": "Aprenda a oração a São Miguel Arcanjo, composta pelo Papa Leão XIII, com vocabulário de batalha espiritual e análise gramatical.",
+      "level": "Iniciante",
+      "thumbnail": "⚔️👼",
+      "duration": "~0.5 min",
+      "words": 42,
+      "modules": 10,
+      "featured": true,
+      "color": "#9e2a2a"
+    },
+    {
+      "id": 4,
+      "title": "Latim — Pater Noster",
+      "subtitle": "A oração que o Senhor nos ensinou",
+      "description": "Aprenda o Pai Nosso em latim, a oração mais importante do cristianismo, com análise gramatical completa.",
+      "level": "Iniciante",
+      "thumbnail": "👨‍👧‍👦📿",
+      "duration": "~0.5 min",
+      "words": 38,
+      "modules": 10,
+      "featured": true,
+      "color": "#2d6a4f"
+    },
+    {
+      "id": 5,
+      "title": "Latim — Ave Maria",
+      "subtitle": "A saudação do Anjo à Virgem Maria",
+      "description": "Aprenda a Ave Maria em latim, a mais famosa oração mariana, baseada nas palavras do Anjo Gabriel e de Santa Isabel.",
+      "level": "Iniciante",
+      "thumbnail": "🌹📿",
+      "duration": "~0.5 min",
+      "words": 32,
+      "modules": 9,
+      "featured": true,
+      "color": "#c97e5a"
+    },
+    {
+      "id": 6,
+      "title": "Latim — Gloria Patri",
+      "subtitle": "A pequena doxologia da Trindade",
+      "description": "Aprenda o Gloria Patri (Glória ao Pai), a breve doxologia que louva a Santíssima Trindade, usada no final dos salmos.",
+      "level": "Iniciante",
+      "thumbnail": "✨👑",
+      "duration": "~0.5 min",
+      "words": 18,
+      "modules": 7,
+      "featured": true,
+      "color": "#d4af37"
     }
   ]
 }

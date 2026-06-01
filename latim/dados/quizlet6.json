@@ -1,0 +1,28 @@
+{
+  "titulo": "Quizlet — Gloria Patri (Latim)",
+  "palavras": 18,
+  "licoes": 7,
+  "descricao": "Vocabulário completo da Doxologia Menor",
+  "conteudo": {
+    "cards": [
+      { "termo": "gloria", "definicao": "glória", "frase": "Gloria Patri", "dificuldade": 1 },
+      { "termo": "Pater", "definicao": "Pai", "frase": "Gloria Patri", "dificuldade": 1 },
+      { "termo": "Patri", "definicao": "ao Pai (dativo)", "frase": "Gloria Patri", "dificuldade": 2 },
+      { "termo": "Filius", "definicao": "Filho", "frase": "Et Filio", "dificuldade": 1 },
+      { "termo": "Filio", "definicao": "ao Filho (dativo)", "frase": "Et Filio", "dificuldade": 2 },
+      { "termo": "Spiritus Sanctus", "definicao": "Espírito Santo", "frase": "Spiritui Sancto", "dificuldade": 2 },
+      { "termo": "Spiritui", "definicao": "ao Espírito (dativo de 4ª declinação)", "frase": "Spiritui Sancto", "dificuldade": 2 },
+      { "termo": "Sanctus", "definicao": "santo", "frase": "Spiritus Sanctus", "dificuldade": 1 },
+      { "termo": "sicut", "definicao": "assim como", "frase": "Sicut erat", "dificuldade": 2 },
+      { "termo": "esse", "definicao": "ser, estar", "frase": "Erat in principio", "dificuldade": 1 },
+      { "termo": "erat", "definicao": "era, estava (imperfeito)", "frase": "Sicut erat", "dificuldade": 2 },
+      { "termo": "principium", "definicao": "princípio, começo", "frase": "In principio", "dificuldade": 2 },
+      { "termo": "nunc", "definicao": "agora", "frase": "Et nunc", "dificuldade": 1 },
+      { "termo": "semper", "definicao": "sempre", "frase": "Et semper", "dificuldade": 1 },
+      { "termo": "saeculum", "definicao": "século, era, mundo", "frase": "In saecula", "dificuldade": 2 },
+      { "termo": "saeculorum", "definicao": "dos séculos (genitivo plural)", "frase": "Saecula saeculorum", "dificuldade": 2 },
+      { "termo": "in saecula saeculorum", "definicao": "pelos séculos dos séculos, para sempre", "frase": "In saecula saeculorum", "dificuldade": 3 },
+      { "termo": "Amen", "definicao": "Amém, assim seja", "frase": "Amen", "dificuldade": 1 }
+    ]
+  }
+}

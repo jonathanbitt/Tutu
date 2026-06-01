@@ -1,0 +1,40 @@
+{
+  "titulo": "Quizlet — Pater Noster (Latim)",
+  "palavras": 35,
+  "licoes": 7,
+  "descricao": "Vocabulário completo do Pai Nosso",
+  "conteudo": {
+    "cards": [
+      { "termo": "Pater", "definicao": "Pai (vocativo)", "frase": "Pater noster", "dificuldade": 1 },
+      { "termo": "noster", "definicao": "nosso", "frase": "Pater noster", "dificuldade": 1 },
+      { "termo": "qui", "definicao": "que (pronome relativo)", "frase": "Qui es in caelis", "dificuldade": 1 },
+      { "termo": "esse", "definicao": "ser, estar", "frase": "Es in caelis", "dificuldade": 1 },
+      { "termo": "caelum", "definicao": "céu", "frase": "In caelis", "dificuldade": 1 },
+      { "termo": "sanctificare", "definicao": "santificar", "frase": "Sanctificetur nomen", "dificuldade": 2 },
+      { "termo": "nomen", "definicao": "nome", "frase": "Nomen tuum", "dificuldade": 1 },
+      { "termo": "tuus", "definicao": "teu, vosso", "frase": "Nomen tuum", "dificuldade": 1 },
+      { "termo": "advenire", "definicao": "chegar, vir", "frase": "Adveniat regnum", "dificuldade": 2 },
+      { "termo": "regnum", "definicao": "reino", "frase": "Regnum tuum", "dificuldade": 1 },
+      { "termo": "fieri", "definicao": "tornar-se, acontecer, ser feito", "frase": "Fiat voluntas", "dificuldade": 2 },
+      { "termo": "voluntas", "definicao": "vontade", "frase": "Voluntas tua", "dificuldade": 2 },
+      { "termo": "sicut", "definicao": "assim como", "frase": "Sicut in caelo", "dificuldade": 2 },
+      { "termo": "panis", "definicao": "pão", "frase": "Panem nostrum", "dificuldade": 1 },
+      { "termo": "quotidianus", "definicao": "de cada dia, cotidiano", "frase": "Panis quotidianus", "dificuldade": 2 },
+      { "termo": "dare", "definicao": "dar", "frase": "Da nobis", "dificuldade": 2 },
+      { "termo": "nobis", "definicao": "a nós (dativo)", "frase": "Da nobis", "dificuldade": 1 },
+      { "termo": "hodie", "definicao": "hoje", "frase": "Da nobis hodie", "dificuldade": 1 },
+      { "termo": "dimittere", "definicao": "perdoar, deixar ir, remitir", "frase": "Dimitte nobis", "dificuldade": 2 },
+      { "termo": "debitum", "definicao": "dívida", "frase": "Debita nostra", "dificuldade": 2 },
+      { "termo": "dimittere", "definicao": "perdoar", "frase": "Nos dimittimus", "dificuldade": 2 },
+      { "termo": "debitor", "definicao": "devedor", "frase": "Debitoribus nostris", "dificuldade": 2 },
+      { "termo": "ne", "definicao": "não (em proibições)", "frase": "Ne nos inducas", "dificuldade": 2 },
+      { "termo": "inducere", "definicao": "induzir, fazer entrar", "frase": "Ne nos inducas", "dificuldade": 2 },
+      { "termo": "tentatio", "definicao": "tentação", "frase": "In tentationem", "dificuldade": 2 },
+      { "termo": "sed", "definicao": "mas", "frase": "Sed libera nos", "dificuldade": 1 },
+      { "termo": "liberare", "definicao": "libertar, livrar", "frase": "Libera nos", "dificuldade": 2 },
+      { "termo": "malus", "definicao": "mal, mau", "frase": "A malo", "dificuldade": 1 },
+      { "termo": "Amen", "definicao": "Amém, assim seja", "frase": "Amen", "dificuldade": 1 },
+      { "termo": "es", "definicao": "és, estás (2ª pessoa singular de esse)", "frase": "Tu es", "dificuldade": 2 }
+    ]
+  }
+}

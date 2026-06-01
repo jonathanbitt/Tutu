@@ -1,0 +1,67 @@
+{
+  "titulo": "LATIM — Pater Noster",
+  "videoUrl": "dados/videos/video4.mp4",
+  "quizletUrl": "quizlet.html?quizlet=4",
+  "blocos": [
+    {
+      "start": 0,
+      "italian": "Pater noster, qui es in caelis, sanctificetur nomen tuum.",
+      "translation": "Pai nosso, que estais nos céus, santificado seja o vosso nome.",
+      "tip": "<strong>\"Pater noster\"</strong> — Vocativo: 'Pai nosso'. <strong>\"qui es in caelis\"</strong> — Oração relativa: 'que estais nos céus' (2ª pessoa singular 'es' = tu és/estás). <strong>\"sanctificetur nomen tuum\"</strong> — Subjuntivo passivo (jussivo/optativo): 'seja santificado o vosso nome'.",
+      "miniLesson": {
+        "title": "Subjuntivo Jussivo/Optativo",
+        "content": "<p><strong>Subjuntivo para ordem/desejo (3ª pessoa)</strong> — 'Sanctificetur' = 'seja santificado' (que seja santificado). Não se usa o imperativo (pois não se manda em Deus diretamente).</p><div class=\"exemplo\">Sanctificetur nomen tuum. → Santificado seja o teu nome.</div><p style=\"margin-top:10px\"><strong>Verbo 'esse' no presente</strong> — 'Es' é a 2ª pessoa singular: 'tu es' (tu és). 'Qui es' = 'que és/estás'.</p>"
+      }
+    },
+    {
+      "start": 6,
+      "italian": "adveniat regnum tuum, fiat voluntas tua, sicut in caelo et in terra.",
+      "translation": "venha a nós o vosso reino, seja feita a vossa vontade, assim na terra como no céu.",
+      "tip": "<strong>\"adveniat regnum tuum\"</strong> — Subjuntivo optativo: 'que venha o vosso reino'. <strong>\"fiat voluntas tua\"</strong> — Subjuntivo do verbo 'fieri' (tornar-se, acontecer): 'seja feita a vossa vontade'. <strong>\"sicut... et\"</strong> — 'Assim... como' (comparação).",
+      "miniLesson": {
+        "title": "O Verbo 'Fieri' (tornar-se, acontecer, ser feito)",
+        "content": "<p><strong>'Fiat'</strong> — Subjuntivo presente do verbo depoente 'fieri' (tornar-se, ser feito, acontecer). 'Fiat voluntas tua' = 'seja feita a vossa vontade' (literalmente 'que a vossa vontade aconteça/torne-se').</p><div class=\"exemplo\">Fiat lux. → Faça-se a luz.</div><p style=\"margin-top:10px\"><strong>'Sicut... et'</strong> — Estrutura comparativa: 'sicut in caelo et in terra' = 'assim no céu como na terra'.</p>"
+      }
+    },
+    {
+      "start": 12,
+      "italian": "Panem nostrum quotidianum da nobis hodie.",
+      "translation": "O pão nosso de cada dia dai-nos hoje.",
+      "tip": "<strong>\"Panem nostrum quotidianum\"</strong> — Acusativo (objeto direto de 'da'): 'o pão nosso de cada dia'. <strong>\"da nobis\"</strong> — Imperativo presente (2ª pessoa singular): 'dá/dai-nos' + dativo 'nobis' (a nós). <strong>\"hodie\"</strong> — Advérbio: 'hoje'.",
+      "miniLesson": {
+        "title": "Imperativo 'Da' e Dativo de Interesse",
+        "content": "<p><strong>Imperativo 'da' (dar)</strong> — 'Dare' (dou, das, dat, damus, datis, dant). 'Da' é a 2ª pessoa singular do imperativo presente ativo. Em orações, 'da' trata Deus como 'Tu' (singular).</p><div class=\"exemplo\">Da mihi sapientiam. → Dá-me sabedoria.</div><p style=\"margin-top:10px\"><strong>Dativo 'nobis'</strong> — Indica a quem se dá: 'a nós', 'para nós' (dativo de interesse/benefício).</p>"
+      }
+    },
+    {
+      "start": 15,
+      "italian": "et dimitte nobis debita nostra, sicut et nos dimittimus debitoribus nostris.",
+      "translation": "e perdoai-nos as nossas dívidas, assim como nós perdoamos aos nossos devedores.",
+      "tip": "<strong>\"dimitte nobis debita nostra\"</strong> — Imperativo 'dimitte' (perdoa) + dativo 'nobis' (a nós) + acusativo 'debita' (as dívidas). <strong>\"sicut et nos dimittimus debitoribus nostris\"</strong> — 'Assim como também nós perdoamos aos nossos devedores'.",
+      "miniLesson": {
+        "title": "O Verbo 'Dimittere' e a Estrutura Comparativa",
+        "content": "<p><strong>'Dimittere' (perdoar, deixar ir)</strong> — Composto de 'dis-' (separação) + 'mittere' (enviar). 'Dimitte nobis' = 'enviai para longe de nós' (perdoai-nos).</p><div class=\"exemplo\">Dimitte populum tuum. → Perdoa o teu povo.</div><p style=\"margin-top:10px\"><strong>Dativo 'debitoribus nostris'</strong> — 'Aos nossos devedores' (a quem perdoamos, dativo de referência).</p>"
+      }
+    },
+    {
+      "start": 21,
+      "italian": "et ne nos inducas in tentationem.",
+      "translation": "e não nos deixeis cair em tentação.",
+      "tip": "<strong>\"ne... inducas\"</strong> — 'Ne' + subjuntivo (proibição negativa): 'não nos deixeis cair' (literalmente 'não nos introduzais em tentação'). <strong>\"in tentationem\"</strong> — Acusativo com 'in' indicando movimento: 'em tentação' (para dentro da tentação).",
+      "miniLesson": {
+        "title": "Proibição Negativa com 'Ne' + Subjuntivo",
+        "content": "<p><strong>'Ne' + subjuntivo presente</strong> — Para expressar um pedido negativo (proibição) em latim, usa-se 'ne' + subjuntivo (não o imperativo). 'Ne inducas' = 'não introduzas', 'não deixes cair'.</p><div class=\"exemplo\">Ne nos deseras. → Não nos abandones.</div><p style=\"margin-top:10px\"><strong>'Inducere in' + acusativo</strong> — 'Induzir a', 'fazer entrar em'. 'In tentationem' (para dentro da tentação) usa acusativo com 'in' (movimento).</p>"
+      }
+    },
+    {
+      "start": 23,
+      "italian": "sed libera nos a malo. Amen.",
+      "translation": "mas livrai-nos do mal. Amém.",
+      "tip": "<strong>\"sed libera nos\"</strong> — Conjunção adversativa 'sed' (mas) + imperativo 'libera' (livrai). <strong>\"a malo\"</strong> — Ablativo com a preposição 'ab/a' (de, desde): 'do mal'. <strong>\"Amen\"</strong> — 'Assim seja'.",
+      "miniLesson": {
+        "title": "'Liberare a' + Ablativo",
+        "content": "<p><strong>'Liberare a/ab' (livrar de)</strong> — A preposição 'ab/a' + ablativo indica aquilo de que se é libertado. 'A malo' = 'do mal' (livrai-nos do mal).</p><div class=\"exemplo\">Libera nos a peccatis. → Livrai-nos dos pecados.</div><p style=\"margin-top:10px\"><strong>Estrutura do Pai Nosso</strong> — Três pedidos diretos ('da', 'dimitte', 'libera') e três pedidos indiretos (subjuntivos: 'sanctificetur, adveniat, fiat, ne inducas').</p>"
+      }
+    }
+  ]
+}

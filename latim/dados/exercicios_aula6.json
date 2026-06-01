@@ -1,0 +1,125 @@
+{
+  "aula": 6,
+  "titulo": "LATIM — Gloria Patri",
+  "paragrafos": [
+    {
+      "indice": 0,
+      "referencia": "Gloria Patri, et Filio, et Spiritui Sancto.",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "As palavras <em>Patri, Filio, Spiritui Sancto</em> estão em qual caso?",
+          "opcoes": [
+            "Nominativo (sujeito)",
+            "Genitivo (posse)",
+            "Dativo (a quem se destina)",
+            "Ablativo (meio)"
+          ],
+          "resposta": "Dativo (a quem se destina)",
+          "explicacao": "'Gloria Patri' = 'Glória ao Pai'. O dativo indica a pessoa a quem se dirige o louvor."
+        },
+        {
+          "tipo": "multipla",
+          "pergunta": "A palavra <em>Spiritui</em> é o dativo de qual palavra?",
+          "opcoes": [
+            "Spiritus (4ª declinação)",
+            "Spiritum (2ª declinação)",
+            "Spiritu (3ª declinação)",
+            "Spiritus (2ª declinação)"
+          ],
+          "resposta": "Spiritus (4ª declinação)",
+          "explicacao": "'Spiritus' é da 4ª declinação: Nominativo 'Spiritus', Dativo 'Spiritui'."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete a doxologia:",
+          "pergunta": "Gloria Patri, et Filio, et ___ Sancto.",
+          "resposta": "Spiritui",
+          "alternativas": ["Spiritui", "spiritui"],
+          "explicacao": "'Spiritui Sancto' = 'ao Espírito Santo' (dativo)."
+        }
+      ]
+    },
+    {
+      "indice": 1,
+      "referencia": "sicut erat in principio, et nunc, et semper.",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "O verbo <em>erat</em> está em qual tempo?",
+          "opcoes": [
+            "Presente (é)",
+            "Imperfeito (era, estava)",
+            "Perfeito (foi)",
+            "Futuro (será)"
+          ],
+          "resposta": "Imperfeito (era, estava)",
+          "explicacao": "'Erat' é a 3ª pessoa singular do imperfeito do indicativo do verbo 'esse'."
+        },
+        {
+          "tipo": "multipla",
+          "pergunta": "A palavra <em>principio</em> está em qual caso?",
+          "opcoes": [
+            "Acusativo (direção)",
+            "Ablativo (tempo/lugar)",
+            "Genitivo (posse)",
+            "Nominativo (sujeito)"
+          ],
+          "resposta": "Ablativo (tempo/lugar)",
+          "explicacao": "'In principio' = 'no princípio' (ablativo de tempo)."
+        },
+        {
+          "tipo": "lacuna",
+          "pergunta": "Complete a frase: 'sicut ___ in principio' (assim como era no princípio)",
+          "resposta": "erat",
+          "alternativas": ["erat", "Erat"],
+          "explicacao": "'Erat' é o imperfeito de 'esse' (ser/estar)."
+        }
+      ]
+    },
+    {
+      "indice": 2,
+      "referencia": "et in saecula saeculorum. Amen.",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "Aqui, <em>in saecula</em> usa 'in' com acusativo para indicar:",
+          "opcoes": [
+            "Lugar onde (estático)",
+            "Duração/extensão no tempo (pelos séculos)",
+            "Causa (por causa dos séculos)",
+            "Movimento (para dentro dos séculos)"
+          ],
+          "resposta": "Duração/extensão no tempo (pelos séculos)",
+          "explicacao": "'In' + acusativo indica duração no tempo: 'in saecula' = 'pelos séculos', 'através dos séculos'."
+        },
+        {
+          "tipo": "multipla",
+          "pergunta": "A expressão <em>saecula saeculorum</em> significa literalmente:",
+          "opcoes": [
+            "Séculos e séculos",
+            "Os séculos dos séculos",
+            "Pelos séculos eternos",
+            "Séculos passados"
+          ],
+          "resposta": "Os séculos dos séculos",
+          "explicacao": "'Saecula' (acusativo plural) + 'saeculorum' (genitivo plural) = 'os séculos dos séculos', uma expressão superlativa hebraica."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza a doxologia completa: <em>Gloria Patri, et Filio, et Spiritui Sancto.</em>",
+          "resposta": "Glória ao Pai, e ao Filho, e ao Espírito Santo.",
+          "palavrasChave": ["Glória", "Pai", "Filho", "Espírito Santo"],
+          "explicacao": "Dativo de benefício/destinatário."
+        },
+        {
+          "tipo": "lacuna",
+          "pergunta": "Complete a expressão de eternidade: 'in saecula ___' (dos séculos)",
+          "resposta": "saeculorum",
+          "alternativas": ["saeculorum", "Saeculorum"],
+          "explicacao": "'Saeculorum' é o genitivo plural de 'saeculum' (século)."
+        }
+      ]
+    }
+  ]
+}
