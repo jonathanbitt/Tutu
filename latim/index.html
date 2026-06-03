@@ -147,30 +147,129 @@ details[open] summary::after{ transform:rotate(180deg); }
 }
 .timestamp:hover{ background:var(--verde); color:white; }
 
-.floating-controls{
-    position:fixed; bottom:16px; right:16px; z-index:9999;
-    background:rgba(15,31,23,0.95); padding:6px 12px;
-    border-radius:18px; display:flex; gap:5px; flex-wrap:wrap;
-    align-items:center; box-shadow:0 8px 32px rgba(0,0,0,0.3);
-    border:1px solid #2a4a35;
+/* ========== FLOATING CONTROLS — NOVO DESIGN ========== */
+
+/* Botão de toggle flutuante */
+.fc-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 10000;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: rgba(15,31,23,0.95);
+    border: 1.5px solid #2a4a35;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.35);
+    transition: transform 0.25s ease, background 0.2s;
+    outline: none;
 }
+.fc-toggle:hover {
+    background: #1a3d2b;
+    transform: scale(1.08);
+}
+.fc-toggle.aberto {
+    transform: rotate(45deg) scale(1.05);
+    background: #1a6b4a;
+}
+
+/* Painel expandido */
+.floating-controls {
+    position: fixed;
+    bottom: 78px;
+    right: 20px;
+    z-index: 9999;
+    background: rgba(15,31,23,0.97);
+    padding: 10px 12px;
+    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    align-items: stretch;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.35);
+    border: 1px solid #2a4a35;
+    width: 180px;
+
+    /* Estado retraído */
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(12px) scale(0.96);
+    transform-origin: bottom right;
+    transition: opacity 0.22s ease, transform 0.22s cubic-bezier(.4,0,.2,1);
+}
+.floating-controls.aberto {
+    opacity: 1;
+    pointer-events: all;
+    transform: translateY(0) scale(1);
+}
+
+/* Linha de botões agrupados */
+.fc-row {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+
 .floating-controls button,
-.floating-controls select{
-    border:none; padding:5px 8px; border-radius:8px;
-    cursor:pointer; font-size:12px; background:#2a4a35;
-    color:white; transition:background 0.2s;
+.floating-controls select {
+    border: none;
+    padding: 6px 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 11px;
+    font-weight: 700;
+    background: #2a4a35;
+    color: white;
+    transition: background 0.2s;
+    font-family: 'DM Sans', sans-serif;
+    flex: 1;
+    text-align: center;
+    white-space: nowrap;
 }
-.floating-controls button:hover{ background:var(--verde); }
-.floating-controls select{ background:#2a4a35; color:white; }
+.floating-controls button:hover { background: var(--verde); }
+.floating-controls select {
+    background: #2a4a35;
+    color: white;
+    appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+    width: 100%;
+    flex: unset;
+}
+
+.fc-label {
+    font-size: 0.58rem;
+    color: #5a9a7a;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    font-weight: 700;
+    margin-bottom: 1px;
+    padding: 0 2px;
+}
+.fc-divider {
+    height: 1px;
+    background: rgba(255,255,255,0.07);
+    margin: 2px 0;
+}
+
+.btn-home { background: #1a3a6a !important; }
+.btn-home:hover { background: #1f6feb !important; }
 
 @media(max-width:900px){
     .video-area{ min-height:220px; padding:12px 16px; }
     video{ max-height:calc(33vh - 30px); }
-    .floating-controls{ left:10px; right:10px; bottom:10px; justify-content:center; }
     .texto-area{ padding:12px 16px 80px; }
     .bloco{ padding:12px 14px; margin-bottom:16px; }
     .global-toggles{ margin-bottom:16px; gap:6px; }
     .global-btn{ padding:4px 10px; font-size:0.68rem; }
+    .floating-controls { right: 16px; bottom: 74px; width: 170px; }
+    .fc-toggle { right: 16px; bottom: 16px; }
 }
 
 .quizlet-cta{
@@ -279,9 +378,6 @@ details[open] summary::after{ transform:rotate(180deg); }
     border: none;
     display: block;
 }
-
-.btn-home { background: #58a6ff; }
-.btn-home:hover { background: #1f6feb; }
 
 /* Botão microfone */
 .mic-btn {
@@ -430,7 +526,6 @@ details[open] summary::after{ transform:rotate(180deg); }
 .nota-input, .nota-textarea { width: 100%; border: 1.5px solid #e0d0b8; border-radius: 10px; padding: 9px 12px; font-family: 'DM Sans', sans-serif; font-size: 0.88rem; outline: none; background: white; color: #1c1c1c; transition: border-color 0.2s; resize: none; }
 .nota-input:focus, .nota-textarea:focus { border-color: #f0a050; }
 .nota-textarea { min-height: 80px; line-height: 1.5; }
-.nota-form-hint { font-size: 0.68rem; color: #bbb; margin-top: -4px; }
 .nota-salvar { width: 100%; padding: 10px; border-radius: 12px; border: none; background: #e07010; color: white; font-weight: 700; font-size: 0.88rem; cursor: pointer; font-family: 'DM Sans', sans-serif; transition: background 0.2s; margin-top: 4px; }
 .nota-salvar:hover { background: #c06000; }
 
@@ -514,7 +609,6 @@ details[open] summary::after{ transform:rotate(180deg); }
 .ex-pergunta { font-family: 'Lora', serif; font-size: 1.05rem; line-height: 1.6; color: #1c1c1c; margin-bottom: 18px; }
 .ex-pergunta em { color: var(--verde); font-style: normal; font-weight: 600; }
 
-/* Pronúncia */
 .ex-pronuncia-area {
     text-align: center;
     padding: 20px;
@@ -775,23 +869,39 @@ details[open] summary::after{ transform:rotate(180deg); }
     </div>
 </div>
 
-<div class="floating-controls">
-    <button onclick="video.play()" title="Play">▶</button>
-    <button onclick="video.pause()" title="Pause">⏸</button>
-    <button onclick="video.currentTime -= 5" title="Voltar 5s">⏪ 5s</button>
-    <button onclick="video.currentTime += 5" title="Avançar 5s">⏩ 5s</button>
-    <button onclick="previousParagraph()" title="Parágrafo anterior">⬆</button>
-    <button onclick="nextParagraph()" title="Próximo parágrafo">⬇</button>
-    <button id="toggleScrollBtn" onclick="toggleAutoScroll()">🔒 Auto</button>
+<!-- FLOATING CONTROLS: painel expansível + botão toggle -->
+<div class="floating-controls" id="floatingControls">
+    <div class="fc-label">Reprodução</div>
+    <div class="fc-row">
+        <button onclick="video.play()" title="Play">▶ Play</button>
+        <button onclick="video.pause()" title="Pause">⏸ Pause</button>
+    </div>
+    <div class="fc-row">
+        <button onclick="video.currentTime -= 5" title="Voltar 5s">⏪ −5s</button>
+        <button onclick="video.currentTime += 5" title="Avançar 5s">⏩ +5s</button>
+    </div>
+    <div class="fc-divider"></div>
+    <div class="fc-label">Navegação</div>
+    <div class="fc-row">
+        <button onclick="previousParagraph()" title="Parágrafo anterior">⬆ Anterior</button>
+        <button onclick="nextParagraph()" title="Próximo parágrafo">⬇ Próximo</button>
+    </div>
+    <button id="toggleScrollBtn" onclick="toggleAutoScroll()" style="width:100%">🔒 Auto-scroll</button>
+    <div class="fc-divider"></div>
+    <div class="fc-label">Velocidade</div>
     <select id="speedControl">
-        <option value="0.6">0.6x</option>
-        <option value="0.75">0.75x</option>
-        <option value="1" selected>1x</option>
-        <option value="1.25">1.25x</option>
-        <option value="1.5">1.5x</option>
+        <option value="0.6">0.6×</option>
+        <option value="0.75">0.75×</option>
+        <option value="1" selected>1× (normal)</option>
+        <option value="1.25">1.25×</option>
+        <option value="1.5">1.5×</option>
     </select>
-    <button onclick="voltarHome()" title="Biblioteca de aulas" class="btn-home">📚</button>
+    <div class="fc-divider"></div>
+    <button onclick="voltarHome()" class="btn-home" style="width:100%">📚 Biblioteca</button>
 </div>
+
+<!-- Botão flutuante de toggle -->
+<button class="fc-toggle" id="fcToggle" onclick="toggleControls()" title="Controles">＋</button>
 
 <script>
 // ========== VARIÁVEIS GLOBAIS ==========
@@ -804,6 +914,30 @@ let autoScroll = true;
 let currentBlockIndex = 0;
 let lastActiveIndex = -1;
 let quizletUrlGlobal = '';
+
+// ========== TOGGLE CONTROLES ==========
+window.toggleControls = function() {
+    const painel = document.getElementById('floatingControls');
+    const btn = document.getElementById('fcToggle');
+    const aberto = painel.classList.contains('aberto');
+    painel.classList.toggle('aberto', !aberto);
+    btn.classList.toggle('aberto', !aberto);
+    // Fecha ao clicar fora
+    if (!aberto) {
+        setTimeout(() => {
+            document.addEventListener('click', fecharControlsFora, { once: true });
+        }, 10);
+    }
+};
+
+function fecharControlsFora(e) {
+    const painel = document.getElementById('floatingControls');
+    const btn = document.getElementById('fcToggle');
+    if (!painel.contains(e.target) && !btn.contains(e.target)) {
+        painel.classList.remove('aberto');
+        btn.classList.remove('aberto');
+    }
+}
 
 // ========== FUNÇÕES GLOBAIS ==========
 window.abrirQuizlet = function() {
@@ -846,11 +980,11 @@ window.toggleTodos = function(tipo) {
 }
 window.toggleAutoScroll = function() {
     autoScroll = !autoScroll;
-    document.getElementById("toggleScrollBtn").innerHTML = autoScroll ? "🔒 Auto" : "🔓 Livre";
+    document.getElementById("toggleScrollBtn").innerHTML = autoScroll ? "🔒 Auto-scroll" : "🔓 Scroll livre";
 }
 window.nextParagraph = function() {
     autoScroll = false;
-    document.getElementById("toggleScrollBtn").innerHTML = "🔓 Livre";
+    document.getElementById("toggleScrollBtn").innerHTML = "🔓 Scroll livre";
     const blocos = document.querySelectorAll(".bloco");
     if (currentBlockIndex < blocos.length - 1) {
         currentBlockIndex++;
@@ -859,7 +993,7 @@ window.nextParagraph = function() {
 }
 window.previousParagraph = function() {
     autoScroll = false;
-    document.getElementById("toggleScrollBtn").innerHTML = "🔓 Livre";
+    document.getElementById("toggleScrollBtn").innerHTML = "🔓 Scroll livre";
     if (currentBlockIndex > 0) {
         currentBlockIndex--;
         const blocos = document.querySelectorAll(".bloco");
@@ -1158,163 +1292,78 @@ function atualizarProgresso() { const total = exFila.length; document.getElement
 
 function renderizarExercicio() {
     if (exAtual >= exFila.length) { mostrarPlacar(); return; }
-    
     exRespondido = false;
     exOrdenarSelecionadas = [];
-    
-    if (exPronunciaRecognition) {
-        exPronunciaRecognition.stop();
-        exPronunciaRecognition = null;
-    }
-    
+    if (exPronunciaRecognition) { exPronunciaRecognition.stop(); exPronunciaRecognition = null; }
     atualizarProgresso();
     const ex = exFila[exAtual];
     const corpo = document.getElementById('exCorpo');
-    
-    const badgeClasse = { 
-        'multipla': 'badge-multipla', 
-        'lacuna': 'badge-lacuna', 
-        'ordenar': 'badge-ordenar', 
-        'traduzir': 'badge-traduzir', 
-        'pronuncia': 'badge-pronuncia' 
-    }[ex.tipo] || 'badge-multipla';
-    
-    const badgeLabel = { 
-        'multipla': '🔵 Múltipla escolha', 
-        'lacuna': '🟣 Completar lacuna', 
-        'ordenar': '🟡 Ordenar palavras', 
-        'traduzir': '🟢 Tradução', 
-        'pronuncia': '🎤 Pronúncia' 
-    }[ex.tipo] || ex.tipo;
-    
+    const badgeClasse = { 'multipla': 'badge-multipla', 'lacuna': 'badge-lacuna', 'ordenar': 'badge-ordenar', 'traduzir': 'badge-traduzir', 'pronuncia': 'badge-pronuncia' }[ex.tipo] || 'badge-multipla';
+    const badgeLabel = { 'multipla': '🔵 Múltipla escolha', 'lacuna': '🟣 Completar lacuna', 'ordenar': '🟡 Ordenar palavras', 'traduzir': '🟢 Tradução', 'pronuncia': '🎤 Pronúncia' }[ex.tipo] || ex.tipo;
     let htmlInterativo = '';
-
     if (ex.tipo === 'multipla') {
         const opcoes = embaralhar([...ex.opcoes]);
         htmlInterativo = `<div class="ex-opcoes">${opcoes.map(op => `<button class="ex-opcao" onclick="responderMultipla(this, '${escapar(op)}', '${escapar(ex.resposta)}')">${op}</button>`).join('')}</div>`;
-    } 
-    else if (ex.tipo === 'lacuna') {
+    } else if (ex.tipo === 'lacuna') {
         const partes = ex.pergunta.split('___');
         htmlInterativo = `<div class="ex-lacuna-wrap"><span>${partes[0]}</span><input class="ex-lacuna-input" id="exLacunaInput" type="text" placeholder="..." autocomplete="off" /><span>${partes[1] || ''}</span></div>`;
-    } 
-    else if (ex.tipo === 'ordenar') {
+    } else if (ex.tipo === 'ordenar') {
         const palavras = embaralhar([...ex.palavras]);
         htmlInterativo = `<div class="ex-area-label">Sua resposta</div><div class="ex-palavras-area" id="exOrdenarArea"></div><div class="ex-area-label" style="margin-top:10px">Palavras disponíveis</div><div class="ex-palavra-banco" id="exPalavraBanco">${palavras.map((p, i) => `<button class="ex-palavra" data-idx="${i}" data-palavra="${escapar(p)}" onclick="selecionarPalavra(this)">${p}</button>`).join('')}</div>`;
-    } 
-    else if (ex.tipo === 'traduzir') {
+    } else if (ex.tipo === 'traduzir') {
         htmlInterativo = `<textarea class="ex-textarea" id="exTraduzirInput" rows="3" placeholder="Digite sua tradução em português..."></textarea>`;
-    } 
-    else if (ex.tipo === 'pronuncia') {
+    } else if (ex.tipo === 'pronuncia') {
         const palavras = ex.palavras || [ex.resposta];
-        htmlInterativo = `
-            <div class="ex-pronuncia-area">
-                <div class="ex-palavra-destaque">${palavras.map(p => `<span class="pronuncia-word">${p}</span>`).join(' · ')}</div>
-                <div class="ex-pronuncia-botoes">
-                    <button class="ex-ouvir-btn" onclick="ouvirPronuncia('${escapar(ex.resposta)}')">🔊 Ouvir pronúncia</button>
-                    <button class="ex-gravar-btn" id="exGravarBtn" onclick="gravarPronuncia(this, '${escapar(ex.resposta)}')">🎙️ Gravar minha pronúncia</button>
-                </div>
-                <div class="mic-resultado" id="exPronunciaResultado" style="display:none"></div>
-                <div class="ex-dica-pronuncia">
-                    💡 Dica: Fale claramente e em um ambiente silencioso para melhor reconhecimento.
-                </div>
-            </div>`;
+        htmlInterativo = `<div class="ex-pronuncia-area"><div class="ex-palavra-destaque">${palavras.map(p => `<span class="pronuncia-word">${p}</span>`).join(' · ')}</div><div class="ex-pronuncia-botoes"><button class="ex-ouvir-btn" onclick="ouvirPronuncia('${escapar(ex.resposta)}')">🔊 Ouvir pronúncia</button><button class="ex-gravar-btn" id="exGravarBtn" onclick="gravarPronuncia(this, '${escapar(ex.resposta)}')">🎙️ Gravar minha pronúncia</button></div><div class="mic-resultado" id="exPronunciaResultado" style="display:none"></div><div class="ex-dica-pronuncia">💡 Dica: Fale claramente e em um ambiente silencioso.</div></div>`;
     }
-
     const perguntaHTML = ex.tipo === 'lacuna' ? `<div class="ex-pergunta">${ex.enunciado || 'Complete a frase:'}</div>` : `<div class="ex-pergunta">${ex.pergunta || 'Pratique a pronúncia:'}</div>`;
-    
     corpo.innerHTML = `<span class="ex-tipo-badge ${badgeClasse}">${badgeLabel}</span>${perguntaHTML}${htmlInterativo}<div class="ex-feedback" id="exFeedback"></div><div class="ex-acoes"><button class="ex-confirmar" id="exConfirmar" onclick="confirmarResposta()">Confirmar</button><button class="ex-proximo" id="exProximo" onclick="proximoExercicio()">Próximo →</button></div>`;
-    
-    if (ex.tipo === 'lacuna') { 
-        setTimeout(() => document.getElementById('exLacunaInput')?.focus(), 100); 
-        document.getElementById('exLacunaInput').addEventListener('keydown', e => { 
-            if (e.key === 'Enter' && !exRespondido) confirmarResposta(); 
-        }); 
-    }
-    if (ex.tipo === 'traduzir') {
-        setTimeout(() => document.getElementById('exTraduzirInput')?.focus(), 100);
-    }
-    if (ex.tipo === 'pronuncia') {
-        setTimeout(() => {
-            const confirmBtn = document.getElementById('exConfirmar');
-            if (confirmBtn) confirmBtn.style.display = 'none';
-        }, 100);
-    }
+    if (ex.tipo === 'lacuna') { setTimeout(() => document.getElementById('exLacunaInput')?.focus(), 100); document.getElementById('exLacunaInput').addEventListener('keydown', e => { if (e.key === 'Enter' && !exRespondido) confirmarResposta(); }); }
+    if (ex.tipo === 'traduzir') { setTimeout(() => document.getElementById('exTraduzirInput')?.focus(), 100); }
+    if (ex.tipo === 'pronuncia') { setTimeout(() => { const confirmBtn = document.getElementById('exConfirmar'); if (confirmBtn) confirmBtn.style.display = 'none'; }, 100); }
 }
 
 window.ouvirPronuncia = function(texto) {
     const utterance = new SpeechSynthesisUtterance(texto);
-    utterance.lang = 'it-IT';
-    utterance.rate = 0.8;
-    speechSynthesis.cancel();
-    speechSynthesis.speak(utterance);
+    utterance.lang = 'it-IT'; utterance.rate = 0.8;
+    speechSynthesis.cancel(); speechSynthesis.speak(utterance);
 };
 
 window.gravarPronuncia = function(btn, textoEsperado) {
     const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
     if (!SpeechRecognition) { alert('Seu navegador não suporta reconhecimento de fala.'); return; }
-    
-    if (btn.classList.contains('gravando')) { 
-        if (exPronunciaRecognition) exPronunciaRecognition.stop(); 
-        return; 
-    }
-    
+    if (btn.classList.contains('gravando')) { if (exPronunciaRecognition) exPronunciaRecognition.stop(); return; }
     if (exPronunciaRecognition) exPronunciaRecognition.stop();
-    
     const resultado = document.getElementById('exPronunciaResultado');
     const recognition = new SpeechRecognition();
-    recognition.lang = 'it-IT';
-    recognition.interimResults = false;
+    recognition.lang = 'it-IT'; recognition.interimResults = false;
     exPronunciaRecognition = recognition;
-    
-    btn.classList.add('gravando');
-    btn.innerHTML = '⏹️ Parar';
-    resultado.style.display = 'none';
-    resultado.className = 'mic-resultado';
-    
+    btn.classList.add('gravando'); btn.innerHTML = '⏹️ Parar';
+    resultado.style.display = 'none'; resultado.className = 'mic-resultado';
     recognition.onresult = function(event) {
         const falado = event.results[0][0].transcript.toLowerCase().trim();
         const normalizar = t => t.replace(/[.,!?;:""''\u00E0\u00E8\u00E9\u00EC\u00F2\u00F9]/g,'').trim().toLowerCase();
         const esperadoNorm = normalizar(textoEsperado);
         const faladoNorm = normalizar(falado);
-        
         const palavrasEsperadas = esperadoNorm.split(/\s+/);
         const palavrasFaladas = faladoNorm.split(/\s+/);
         const emComum = palavrasEsperadas.filter(p => palavrasFaladas.includes(p)).length;
         const pct = emComum / palavrasEsperadas.length;
-        
         resultado.style.display = 'block';
-        
         if (pct >= 0.8) {
             resultado.className = 'mic-resultado acerto';
             resultado.innerHTML = `✅ Ótimo! Você disse: "${falado}"<br>🎉 Pronúncia correta!`;
-            if (!exRespondido) {
-                exAcertos++;
-                exRespondido = true;
-                const confirmBtn = document.getElementById('exConfirmar');
-                if (confirmBtn) confirmBtn.style.display = 'none';
-                document.getElementById('exProximo').style.display = 'block';
-            }
+            if (!exRespondido) { exAcertos++; exRespondido = true; const confirmBtn = document.getElementById('exConfirmar'); if (confirmBtn) confirmBtn.style.display = 'none'; document.getElementById('exProximo').style.display = 'block'; }
         } else if (pct >= 0.5) {
             resultado.className = 'mic-resultado parcial';
             resultado.innerHTML = `🟡 Quase lá! Você disse: "${falado}"<br>Esperado: "${textoEsperado}"<br>Tente novamente!`;
         } else {
             resultado.className = 'mic-resultado erro';
-            resultado.innerHTML = `❌ Tente novamente. Você disse: "${falado}"<br>Esperado: "${textoEsperado}"<br>🔁 Clique no microfone para tentar novamente.`;
+            resultado.innerHTML = `❌ Tente novamente. Você disse: "${falado}"<br>Esperado: "${textoEsperado}"`;
         }
     };
-    
-    recognition.onerror = function() {
-        resultado.style.display = 'block';
-        resultado.className = 'mic-resultado erro';
-        resultado.innerHTML = '❌ Erro no microfone. Tente novamente.';
-    };
-    
-    recognition.onend = function() {
-        btn.classList.remove('gravando');
-        btn.innerHTML = '🎙️ Gravar minha pronúncia';
-        exPronunciaRecognition = null;
-    };
-    
+    recognition.onerror = function() { resultado.style.display = 'block'; resultado.className = 'mic-resultado erro'; resultado.innerHTML = '❌ Erro no microfone. Tente novamente.'; };
+    recognition.onend = function() { btn.classList.remove('gravando'); btn.innerHTML = '🎙️ Gravar minha pronúncia'; exPronunciaRecognition = null; };
     recognition.start();
 };
 
@@ -1325,8 +1374,7 @@ window.selecionarPalavra = function(btn) {
     btn.classList.add('usada');
     const area = document.getElementById('exOrdenarArea');
     const chip = document.createElement('button');
-    chip.className = 'ex-palavra selecionada';
-    chip.textContent = palavra;
+    chip.className = 'ex-palavra selecionada'; chip.textContent = palavra;
     chip.onclick = function() {
         if (exRespondido) return;
         const idx = exOrdenarSelecionadas.lastIndexOf(palavra);
@@ -1340,13 +1388,8 @@ window.selecionarPalavra = function(btn) {
 window.confirmarResposta = function() {
     if (exRespondido) return;
     const ex = exFila[exAtual];
-    let certa = false;
-    let feedbackExtra = '';
-    
-    if (ex.tipo === 'multipla') {
-        return;
-    }
-    
+    let certa = false, feedbackExtra = '';
+    if (ex.tipo === 'multipla') return;
     if (ex.tipo === 'lacuna') {
         const input = document.getElementById('exLacunaInput');
         const resposta = input.value.trim().toLowerCase();
@@ -1356,20 +1399,14 @@ window.confirmarResposta = function() {
         if (!certa) feedbackExtra = `<br>Resposta correta: <strong>${ex.resposta}</strong>`;
         if (certa) exAcertos++;
         exRespondido = true;
-    } 
-    else if (ex.tipo === 'ordenar') {
+    } else if (ex.tipo === 'ordenar') {
         const frase = exOrdenarSelecionadas.join(' ').toLowerCase().trim();
-        const esperada = ex.resposta.toLowerCase().trim();
-        certa = frase === esperada;
+        certa = frase === ex.resposta.toLowerCase().trim();
         if (!certa) feedbackExtra = `<br>Resposta correta: <strong>${ex.resposta}</strong>`;
         if (certa) exAcertos++;
         exRespondido = true;
-        document.querySelectorAll('#exOrdenarArea .ex-palavra').forEach(p => {
-            p.style.borderColor = certa ? '#5cb85c' : '#e05c5c';
-            p.style.background = certa ? '#e8f5ef' : '#fff0f0';
-        });
-    } 
-    else if (ex.tipo === 'traduzir') {
+        document.querySelectorAll('#exOrdenarArea .ex-palavra').forEach(p => { p.style.borderColor = certa ? '#5cb85c' : '#e05c5c'; p.style.background = certa ? '#e8f5ef' : '#fff0f0'; });
+    } else if (ex.tipo === 'traduzir') {
         const input = document.getElementById('exTraduzirInput');
         const resposta = input.value.trim().toLowerCase();
         const palavrasChave = ex.palavrasChave || ex.resposta.toLowerCase().split(/\s+/).filter(p => p.length > 3);
@@ -1379,25 +1416,15 @@ window.confirmarResposta = function() {
         feedbackExtra = `<br>Uma tradução válida: <em>${ex.resposta}</em>`;
         if (certa) exAcertos++;
         exRespondido = true;
-    } 
-    else if (ex.tipo === 'pronuncia') {
-        if (!exRespondido) {
-            feedbackExtra = `<br>⚠️ Você precisa gravar sua pronúncia primeiro! Clique no microfone 🎙️ e tente dizer a palavra.`;
-            mostrarFeedback(false, ex.explicacao, feedbackExtra);
-            return;
-        }
+    } else if (ex.tipo === 'pronuncia') {
+        if (!exRespondido) { feedbackExtra = `<br>⚠️ Grave sua pronúncia primeiro!`; mostrarFeedback(false, ex.explicacao, feedbackExtra); return; }
         mostrarFeedback(true, ex.explicacao, '');
         document.getElementById('exConfirmar').style.display = 'none';
         document.getElementById('exProximo').style.display = 'block';
         return;
     }
-    
     mostrarFeedback(certa, ex.explicacao, feedbackExtra);
-    
-    if (exRespondido) {
-        document.getElementById('exConfirmar').style.display = 'none';
-        document.getElementById('exProximo').style.display = 'block';
-    }
+    if (exRespondido) { document.getElementById('exConfirmar').style.display = 'none'; document.getElementById('exProximo').style.display = 'block'; }
 };
 
 window.responderMultipla = function(btn, opcao, resposta) {
