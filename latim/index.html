@@ -71,46 +71,12 @@ video{
 .texto-area::-webkit-scrollbar-track{ background:#f0f0f0; }
 .texto-area::-webkit-scrollbar-thumb{ background:#b5d4c5; border-radius:4px; }
 
-.global-toggles{ 
-    display:flex; 
-    gap:8px; 
-    flex-wrap:wrap; 
-    justify-content:center; 
-    margin-bottom:20px;
-    padding-bottom:12px;
-    border-bottom:1px solid #eee;
-}
-.global-btn{
-    padding:5px 12px; border-radius:20px; border:1.5px solid;
-    cursor:pointer; font-size:0.72rem; font-weight:700;
-    background:transparent; font-family:'DM Sans',sans-serif; transition:all 0.2s;
-}
-.global-btn.trad{ color:#3a7d5f; border-color:#b5d4c5; }
-.global-btn.trad:hover{ background:#e8f5ef; }
-.global-btn.dica-g{ color:#7a6200; border-color:#e0c93a; }
-.global-btn.dica-g:hover{ background:#fffbea; }
-.global-btn.video-toggle { color: #1a6b4a; border-color: #1a6b4a; }
-.global-btn.video-toggle:hover { background: #e8f5ef; }
-
 .bloco{ margin-bottom:20px; padding:14px 16px; border-radius:14px; transition:all 0.35s ease; border:1.5px solid #ebebeb; background:white; }
 .bloco.ativo{ background:var(--amarelo); border-color:#e0c93a; box-shadow:0 4px 20px rgba(224,201,58,0.25); transform:scale(1.01); }
 
 .italian{ margin-bottom:6px; font-family:'Lora',serif; font-size:0.98rem; color:#1c1c1c; }
 
-.toggle-btn{
-    display:inline-flex; align-items:center; gap:4px;
-    margin-top:6px; margin-right:4px;
-    padding:3px 8px; border-radius:20px; border:1.5px solid;
-    cursor:pointer; font-size:0.68rem; font-weight:700;
-    background:transparent; transition:all 0.2s;
-    font-family:'DM Sans',sans-serif; line-height:1.4;
-}
-.toggle-btn.trad-btn{ color:#3a7d5f; border-color:#b5d4c5; }
-.toggle-btn.trad-btn:hover{ background:#e8f5ef; }
-.toggle-btn.dica-btn{ color:#7a6200; border-color:#e0c93a; }
-.toggle-btn.dica-btn:hover{ background:#fffbea; }
-.toggle-btn .seta{ transition:transform 0.25s; display:inline-block; font-size:0.65rem; }
-.toggle-btn.aberto .seta{ transform:rotate(180deg); }
+.toggle-btn{ display:none; }
 
 .colapsavel{ overflow:hidden; max-height:0; opacity:0; transition:max-height 0.4s ease, opacity 0.3s ease; }
 .colapsavel.aberto{ max-height:400px; opacity:1; margin-top:8px; }
@@ -379,26 +345,8 @@ details[open] summary::after{ transform:rotate(180deg); }
     display: block;
 }
 
-/* Botão microfone */
-.mic-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
-    margin-top: 6px;
-    margin-right: 4px;
-    padding: 3px 8px;
-    border-radius: 20px;
-    border: 1.5px solid #c7a0d8;
-    cursor: pointer;
-    font-size: 0.68rem;
-    font-weight: 700;
-    background: transparent;
-    color: #7a3fa0;
-    transition: all 0.2s;
-    font-family: 'DM Sans', sans-serif;
-    line-height: 1.4;
-}
-.mic-btn:hover { background: #f5eaff; }
+/* Botão microfone — oculto inline, usado via painel flutuante */
+.mic-btn { display: none; }
 .mic-btn.gravando {
     background: #ffeaea;
     border-color: #e05c5c;
@@ -422,39 +370,8 @@ details[open] summary::after{ transform:rotate(180deg); }
 .mic-resultado.erro { background: #fff0f0; border: 1px solid #e05c5c; color: #8b1a1a; display: block; }
 .mic-resultado.parcial { background: #fffbea; border: 1px solid #e0c93a; color: #5a4a00; display: block; }
 
-/* Anotações */
-.nota-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
-    margin-top: 6px;
-    margin-right: 4px;
-    padding: 3px 8px;
-    border-radius: 20px;
-    border: 1.5px solid #f0a050;
-    cursor: pointer;
-    font-size: 0.68rem;
-    font-weight: 700;
-    background: transparent;
-    color: #b05000;
-    transition: all 0.2s;
-    font-family: 'DM Sans', sans-serif;
-    line-height: 1.4;
-    position: relative;
-}
-.nota-btn:hover { background: #fff5e8; }
-.nota-btn.tem-nota { background: #fff5e8; border-color: #e07010; }
-.nota-btn .nota-badge {
-    position: absolute;
-    top: -5px; right: -5px;
-    background: #e07010;
-    color: white;
-    border-radius: 50%;
-    width: 14px; height: 14px;
-    font-size: 0.55rem;
-    display: flex; align-items: center; justify-content: center;
-    font-weight: 700;
-}
+/* Anotações — botão inline oculto, usado via painel flutuante */
+.nota-btn { display: none; }
 
 .nota-modal {
     position: fixed;
@@ -529,26 +446,8 @@ details[open] summary::after{ transform:rotate(180deg); }
 .nota-salvar { width: 100%; padding: 10px; border-radius: 12px; border: none; background: #e07010; color: white; font-weight: 700; font-size: 0.88rem; cursor: pointer; font-family: 'DM Sans', sans-serif; transition: background 0.2s; margin-top: 4px; }
 .nota-salvar:hover { background: #c06000; }
 
-/* Exercícios */
-.ex-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
-    margin-top: 6px;
-    margin-right: 4px;
-    padding: 3px 8px;
-    border-radius: 20px;
-    border: 1.5px solid #a0c4f8;
-    cursor: pointer;
-    font-size: 0.68rem;
-    font-weight: 700;
-    background: transparent;
-    color: #1a56a0;
-    transition: all 0.2s;
-    font-family: 'DM Sans', sans-serif;
-    line-height: 1.4;
-}
-.ex-btn:hover { background: #e8f0fe; }
+/* Exercícios — botão inline oculto, usado via painel flutuante */
+.ex-btn { display: none; }
 
 .exmodal {
     position: fixed;
@@ -790,6 +689,156 @@ details[open] summary::after{ transform:rotate(180deg); }
 .ex-placar-score { font-size: 2rem; font-weight: 700; color: var(--verde); margin: 12px 0; }
 .ex-reiniciar { margin-top: 16px; padding: 10px 24px; border-radius: 12px; border: none; background: var(--verde); color: white; font-weight: 700; font-size: 0.9rem; cursor: pointer; font-family: 'DM Sans', sans-serif; transition: background 0.2s; }
 .ex-reiniciar:hover { background: #145c3d; }
+
+/* ========== PAINEL DE AÇÕES — ESQUERDO ========== */
+
+.fa-toggle {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 10000;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: rgba(26,42,90,0.95);
+    border: 1.5px solid #3a5abf;
+    color: white;
+    font-size: 1.15rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.35);
+    transition: transform 0.25s ease, background 0.2s;
+    outline: none;
+}
+.fa-toggle:hover { background: #1a2f80; transform: scale(1.08); }
+.fa-toggle.aberto { transform: rotate(45deg) scale(1.05); background: #1a56a0; }
+
+/* Badge de notas no botão toggle */
+.fa-toggle .fa-badge {
+    position: absolute;
+    top: -3px; right: -3px;
+    background: #e07010;
+    color: white;
+    border-radius: 50%;
+    width: 16px; height: 16px;
+    font-size: 0.6rem;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 700;
+    border: 2px solid white;
+    pointer-events: none;
+}
+
+.fa-painel {
+    position: fixed;
+    bottom: 78px;
+    left: 20px;
+    z-index: 9999;
+    background: rgba(14,22,50,0.97);
+    padding: 10px 12px;
+    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    align-items: stretch;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.35);
+    border: 1px solid #2a3a7a;
+    width: 200px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(12px) scale(0.96);
+    transform-origin: bottom left;
+    transition: opacity 0.22s ease, transform 0.22s cubic-bezier(.4,0,.2,1);
+}
+.fa-painel.aberto {
+    opacity: 1;
+    pointer-events: all;
+    transform: translateY(0) scale(1);
+}
+
+.fa-label {
+    font-size: 0.58rem;
+    color: #7a9adf;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    font-weight: 700;
+    padding: 0 2px;
+    margin-bottom: 1px;
+}
+.fa-divider {
+    height: 1px;
+    background: rgba(255,255,255,0.07);
+    margin: 2px 0;
+}
+.fa-row {
+    display: flex;
+    gap: 4px;
+}
+
+/* Botões do painel de ações */
+.fa-btn {
+    border: none;
+    padding: 7px 10px;
+    border-radius: 9px;
+    cursor: pointer;
+    font-size: 11px;
+    font-weight: 700;
+    background: #1e2f6a;
+    color: white;
+    transition: background 0.2s;
+    font-family: 'DM Sans', sans-serif;
+    text-align: center;
+    width: 100%;
+    white-space: nowrap;
+}
+.fa-btn:hover { background: #2a4ab0; }
+
+/* Cores temáticas por ação */
+.fa-btn.verde   { background: #1a4a30; }
+.fa-btn.verde:hover { background: #1a6b4a; }
+.fa-btn.amarelo { background: #4a3a00; }
+.fa-btn.amarelo:hover { background: #7a6000; }
+.fa-btn.roxo    { background: #3a1a60; }
+.fa-btn.roxo:hover { background: #6a1a9e; }
+.fa-btn.azul    { background: #0f2a60; }
+.fa-btn.azul:hover { background: #1a56a0; }
+.fa-btn.laranja { background: #4a2200; }
+.fa-btn.laranja:hover { background: #b05000; }
+
+/* Indicador do parágrafo ativo */
+.fa-paragrafo-info {
+    font-size: 0.65rem;
+    color: #7a9adf;
+    text-align: center;
+    padding: 4px 6px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 8px;
+    font-style: italic;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Badge de notas no botão de anotações do painel */
+.fa-nota-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #e07010;
+    color: white;
+    border-radius: 50%;
+    width: 14px; height: 14px;
+    font-size: 0.58rem;
+    font-weight: 700;
+    margin-left: 4px;
+    vertical-align: middle;
+}
+
+@media(max-width:900px){
+    .fa-toggle { left: 16px; bottom: 16px; }
+    .fa-painel  { left: 16px; bottom: 74px; width: 190px; }
+}
 </style>
 </head>
 <body>
@@ -803,11 +852,6 @@ details[open] summary::after{ transform:rotate(180deg); }
     </div>
 
     <div class="texto-area" id="texto">
-        <div class="global-toggles">
-            <button class="global-btn trad" id="btnTodasTrad">🌐 Mostrar todas as traduções</button>
-            <button class="global-btn dica-g" id="btnTodasDica">💡 Mostrar todas as dicas</button>
-            <button class="global-btn video-toggle" id="btnToggleVideo">🎥 Ocultar vídeo</button>
-        </div>
         <div id="blocosContainer"></div>
     </div>
 </div>
@@ -898,10 +942,37 @@ details[open] summary::after{ transform:rotate(180deg); }
     </select>
     <div class="fc-divider"></div>
     <button onclick="voltarHome()" class="btn-home" style="width:100%">📚 Biblioteca</button>
+    <div class="fc-divider"></div>
+    <button onclick="toggleVideo()" id="btnToggleVideo" style="width:100%;background:#1a3030">🎥 Ocultar vídeo</button>
 </div>
 
 <!-- Botão flutuante de toggle -->
 <button class="fc-toggle" id="fcToggle" onclick="toggleControls()" title="Controles">＋</button>
+
+<!-- PAINEL DE AÇÕES — ESQUERDO -->
+<div class="fa-painel" id="faPainel">
+    <div class="fa-paragrafo-info" id="faParagrafoInfo">Nenhum parágrafo ativo</div>
+    <div class="fa-divider"></div>
+    <div class="fa-label">Conteúdo</div>
+    <div class="fa-row">
+        <button class="fa-btn verde" id="faBtnTrad" onclick="faToogleTrad()">🌐 Tradução</button>
+        <button class="fa-btn amarelo" id="faBtnDica" onclick="faToogleDica()">💡 Dica</button>
+    </div>
+    <div class="fa-divider"></div>
+    <div class="fa-label">Ações do parágrafo</div>
+    <button class="fa-btn roxo" id="faBtnMic" onclick="faAcaoMic()">🎙️ Praticar Fala</button>
+    <button class="fa-btn azul"  id="faBtnEx"  onclick="faAcaoEx()">✏️ Exercícios</button>
+    <button class="fa-btn laranja" id="faBtnNota" onclick="faAcaoNota()">📝 Anotações</button>
+    <div class="fa-divider"></div>
+    <div class="fa-label">Global</div>
+    <div class="fa-row">
+        <button class="fa-btn verde" onclick="toggleTodos('trad')">🌐 Todas trad.</button>
+        <button class="fa-btn amarelo" onclick="toggleTodos('dica')">💡 Todas dicas</button>
+    </div>
+</div>
+
+<!-- Botão flutuante de ações — esquerdo -->
+<button class="fa-toggle" id="faToggle" onclick="toggleAcoes()" title="Ações do parágrafo">✦</button>
 
 <script>
 // ========== VARIÁVEIS GLOBAIS ==========
@@ -939,6 +1010,149 @@ function fecharControlsFora(e) {
     }
 }
 
+// ========== PAINEL DE AÇÕES ESQUERDO ==========
+window.toggleAcoes = function() {
+    const painel = document.getElementById('faPainel');
+    const btn = document.getElementById('faToggle');
+    const aberto = painel.classList.contains('aberto');
+    painel.classList.toggle('aberto', !aberto);
+    btn.classList.toggle('aberto', !aberto);
+    if (!aberto) {
+        atualizarPainelAcoes();
+        setTimeout(() => {
+            document.addEventListener('click', fecharAcoesFora, { once: true });
+        }, 10);
+    }
+};
+
+function fecharAcoesFora(e) {
+    const painel = document.getElementById('faPainel');
+    const btn = document.getElementById('faToggle');
+    if (!painel.contains(e.target) && !btn.contains(e.target)) {
+        painel.classList.remove('aberto');
+        btn.classList.remove('aberto');
+    }
+}
+
+function atualizarPainelAcoes() {
+    const blocos = document.querySelectorAll('.bloco');
+    const blocoAtivo = blocos[currentBlockIndex];
+    const infoEl = document.getElementById('faParagrafoInfo');
+
+    if (blocoAtivo) {
+        const textoEl = blocoAtivo.querySelector('.italian');
+        const texto = textoEl ? textoEl.innerText.replace(/\(\d+:\d+\)\s*/, '').substring(0, 36) + '…' : `Parágrafo ${currentBlockIndex + 1}`;
+        infoEl.textContent = texto;
+
+        // Estado tradução
+        const tradCol = blocoAtivo.querySelector('.trad-col');
+        const btnTrad = document.getElementById('faBtnTrad');
+        if (tradCol && btnTrad) {
+            const aberta = tradCol.classList.contains('aberto');
+            btnTrad.textContent = aberta ? '🌐 Ocultar trad.' : '🌐 Tradução';
+        }
+
+        // Estado dica
+        const dicaCol = blocoAtivo.querySelector('.dica-col');
+        const btnDica = document.getElementById('faBtnDica');
+        if (dicaCol && btnDica) {
+            const aberta = dicaCol.classList.contains('aberto');
+            btnDica.textContent = aberta ? '💡 Ocultar dica' : '💡 Dica';
+        }
+
+        // Badge de notas
+        atualizarBadgeNotaPainel(currentBlockIndex);
+    } else {
+        infoEl.textContent = 'Nenhum parágrafo ativo';
+    }
+}
+
+function atualizarBadgeNotaPainel(index) {
+    const btn = document.getElementById('faBtnNota');
+    if (!btn) return;
+    const count = Storage.count(notaBlocoKey(index));
+    const badgeExistente = btn.querySelector('.fa-nota-badge');
+    if (count > 0) {
+        if (badgeExistente) badgeExistente.textContent = count;
+        else {
+            const span = document.createElement('span');
+            span.className = 'fa-nota-badge';
+            span.textContent = count;
+            btn.appendChild(span);
+        }
+        btn.textContent = '📝 Anotações ';
+        const span = document.createElement('span');
+        span.className = 'fa-nota-badge';
+        span.textContent = count;
+        btn.appendChild(span);
+    } else {
+        btn.textContent = '📝 Anotações';
+    }
+}
+
+// Toggle tradução do bloco ativo
+window.faToogleTrad = function() {
+    const blocos = document.querySelectorAll('.bloco');
+    const blocoAtivo = blocos[currentBlockIndex];
+    if (!blocoAtivo) return;
+    const col = blocoAtivo.querySelector('.trad-col');
+    const btn = blocoAtivo.querySelector('.trad-btn');
+    if (!col) return;
+    const aberto = col.classList.contains('aberto');
+    col.classList.toggle('aberto', !aberto);
+    if (btn) btn.classList.toggle('aberto', !aberto);
+    atualizarPainelAcoes();
+    if (!aberto) blocoAtivo.scrollIntoView({ behavior: 'smooth', block: 'center' });
+};
+
+// Toggle dica do bloco ativo
+window.faToogleDica = function() {
+    const blocos = document.querySelectorAll('.bloco');
+    const blocoAtivo = blocos[currentBlockIndex];
+    if (!blocoAtivo) return;
+    const col = blocoAtivo.querySelector('.dica-col');
+    const btn = blocoAtivo.querySelector('.dica-btn');
+    if (!col) return;
+    const aberto = col.classList.contains('aberto');
+    col.classList.toggle('aberto', !aberto);
+    if (btn) btn.classList.toggle('aberto', !aberto);
+    atualizarPainelAcoes();
+    if (!aberto) blocoAtivo.scrollIntoView({ behavior: 'smooth', block: 'center' });
+};
+
+// Praticar fala do bloco ativo
+window.faAcaoMic = function() {
+    const blocos = document.querySelectorAll('.bloco');
+    const blocoAtivo = blocos[currentBlockIndex];
+    if (!blocoAtivo) { alert('Nenhum parágrafo ativo.'); return; }
+    const micBtn = blocoAtivo.querySelector('.mic-btn');
+    if (micBtn) {
+        document.getElementById('faPainel').classList.remove('aberto');
+        document.getElementById('faToggle').classList.remove('aberto');
+        blocoAtivo.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        setTimeout(() => iniciarPratica(micBtn), 400);
+    }
+};
+
+// Exercícios do bloco ativo
+window.faAcaoEx = function() {
+    const blocos = document.querySelectorAll('.bloco');
+    const blocoAtivo = blocos[currentBlockIndex];
+    if (!blocoAtivo) { alert('Nenhum parágrafo ativo.'); return; }
+    const exBtn = blocoAtivo.querySelector('.ex-btn');
+    document.getElementById('faPainel').classList.remove('aberto');
+    document.getElementById('faToggle').classList.remove('aberto');
+    if (exBtn) exBtn.click();
+    else abrirExercicios(null, currentBlockIndex);
+};
+
+// Anotações do bloco ativo
+window.faAcaoNota = function() {
+    document.getElementById('faPainel').classList.remove('aberto');
+    document.getElementById('faToggle').classList.remove('aberto');
+    abrirNotas(currentBlockIndex);
+};
+
 // ========== FUNÇÕES GLOBAIS ==========
 window.abrirQuizlet = function() {
     const modal = document.getElementById('quizletModal');
@@ -968,15 +1182,16 @@ window.toggleTodos = function(tipo) {
     const isTrad = tipo === 'trad';
     const colClass = isTrad ? 'trad-col' : 'dica-col';
     const btnClass = isTrad ? 'trad-btn' : 'dica-btn';
-    const globalId = isTrad ? 'btnTodasTrad' : 'btnTodasDica';
     const cols = [...document.querySelectorAll('.' + colClass)];
     const btns = [...document.querySelectorAll('.' + btnClass)];
-    const btnGlobal = document.getElementById(globalId);
     const algumFechado = cols.some(c => !c.classList.contains('aberto'));
     cols.forEach(c => c.classList.toggle('aberto', algumFechado));
     btns.forEach(b => b.classList.toggle('aberto', algumFechado));
-    if (isTrad) { btnGlobal.textContent = algumFechado ? '🌐 Ocultar todas as traduções' : '🌐 Mostrar todas as traduções'; }
-    else { btnGlobal.textContent = algumFechado ? '💡 Ocultar todas as dicas' : '💡 Mostrar todas as dicas'; }
+    // Atualiza estado dos botões globais no painel se existirem
+    const btnGlobalTrad = document.getElementById('btnTodasTrad');
+    const btnGlobalDica = document.getElementById('btnTodasDica');
+    if (isTrad && btnGlobalTrad) btnGlobalTrad.textContent = algumFechado ? '🌐 Ocultar todas' : '🌐 Todas trad.';
+    if (!isTrad && btnGlobalDica) btnGlobalDica.textContent = algumFechado ? '💡 Ocultar todas' : '💡 Todas dicas';
 }
 window.toggleAutoScroll = function() {
     autoScroll = !autoScroll;
@@ -1009,12 +1224,12 @@ window.toggleVideo = function() {
     if (videoArea.classList.contains('oculto')) {
         videoArea.classList.remove('oculto');
         textoArea.classList.remove('expandido');
-        btn.innerHTML = '🎥 Ocultar vídeo';
+        if (btn) btn.textContent = '🎥 Ocultar vídeo';
         localStorage.setItem('videoOculto', 'false');
     } else {
         videoArea.classList.add('oculto');
         textoArea.classList.add('expandido');
-        btn.innerHTML = '🎥 Mostrar vídeo';
+        if (btn) btn.textContent = '🎥 Mostrar vídeo';
         localStorage.setItem('videoOculto', 'true');
         if (video && !video.paused) video.pause();
     }
@@ -1023,7 +1238,8 @@ function carregarPreferenciaVideo() {
     if (localStorage.getItem('videoOculto') === 'true') {
         document.querySelector('.video-area')?.classList.add('oculto');
         document.querySelector('.texto-area')?.classList.add('expandido');
-        document.getElementById('btnToggleVideo').innerHTML = '🎥 Mostrar vídeo';
+        const btn = document.getElementById('btnToggleVideo');
+        if (btn) btn.textContent = '🎥 Mostrar vídeo';
     }
 }
 
@@ -1103,6 +1319,10 @@ function iniciarDestaque() {
                     bloco.classList.add("ativo");
                     progressoLabel.textContent = `Parágrafo ${i+1} de ${blocos.length}`;
                     if (autoScroll) bloco.scrollIntoView({ behavior: "smooth", block: "center" });
+                    // Atualiza info do painel de ações se estiver aberto
+                    if (document.getElementById('faPainel').classList.contains('aberto')) {
+                        atualizarPainelAcoes();
+                    }
                 }
             }
         });
@@ -1111,9 +1331,6 @@ function iniciarDestaque() {
 
 document.getElementById("speedControl").addEventListener("change", function() { video.playbackRate = parseFloat(this.value); });
 document.addEventListener('keydown', function(e) { if (e.key === 'Escape') fecharQuizlet(); });
-document.getElementById('btnTodasTrad').onclick = () => toggleTodos('trad');
-document.getElementById('btnTodasDica').onclick = () => toggleTodos('dica');
-document.getElementById('btnToggleVideo').onclick = () => toggleVideo();
 carregarPreferenciaVideo();
 
 // ========== PRÁTICA DE FALA ==========
