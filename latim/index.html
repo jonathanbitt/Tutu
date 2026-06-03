@@ -77,34 +77,8 @@ video{
 
 .italian{ margin-bottom:6px; font-family:'Lora',serif; font-size:0.98rem; color:#1c1c1c; }
 
-/* ========== TOGGLE BUTTONS — padrão unificado ========== */
-.toggle-btn{
-    display:inline-flex;
-    align-items:center;
-    gap:4px;
-    margin-right:4px;
-    margin-bottom:4px;
-    padding:4px 10px;
-    border-radius:20px;
-    border:1.5px solid #dde;
-    background:#f7f7f5;
-    color:#444;
-    font-size:0.75rem;
-    font-weight:700;
-    cursor:pointer;
-    font-family:'DM Sans',sans-serif;
-    transition:all 0.18s;
-    user-select:none;
-}
-.toggle-btn:hover{ background:#e8f5ef; border-color:#b5d4c5; color:var(--verde); }
-.toggle-btn.aberto{ background:var(--verde-claro); border-color:#7fb99a; color:var(--verde); }
-.toggle-btn .seta{ transition:transform 0.3s; display:inline-block; font-style:normal; }
-.toggle-btn.aberto .seta{ transform:rotate(180deg); }
-
-/* Mini lição — botão com cor própria, mesmo formato */
-.mini-btn{ border-color:#c8d8f0; background:#f0f5ff; color:#1a56a0; }
-.mini-btn:hover{ background:#dce9ff; border-color:#91b4e8; color:#0d3d8a; }
-.mini-btn.aberto{ background:#dce9ff; border-color:#91b4e8; color:#0d3d8a; }
+/* ========== TOGGLE BUTTONS — ocultos inline, acionados pelo painel flutuante ========== */
+.toggle-btn{ display:none; }
 
 .colapsavel{ overflow:hidden; max-height:0; opacity:0; transition:max-height 0.4s ease, opacity 0.3s ease; }
 .colapsavel.aberto{ max-height:600px; opacity:1; margin-top:8px; }
@@ -996,8 +970,9 @@ details[open] summary::after{ transform:rotate(180deg); }
     <div class="fa-divider"></div>
     <div class="fa-label">Conteúdo</div>
     <div class="fa-row">
-        <button class="fa-btn verde" id="faBtnTrad" onclick="faToogleTrad()">🌐 Tradução</button>
+        <button class="fa-btn verde" id="faBtnTrad" onclick="faToogleTrad()">🌐 Trad.</button>
         <button class="fa-btn amarelo" id="faBtnDica" onclick="faToogleDica()">💡 Dica</button>
+        <button class="fa-btn azul" id="faBtnMini" onclick="faToogleMini()">📘 Lição</button>
     </div>
     <div class="fa-divider"></div>
     <div class="fa-label">Ações do parágrafo</div>
@@ -1089,7 +1064,7 @@ function atualizarPainelAcoes() {
         const btnTrad = document.getElementById('faBtnTrad');
         if (tradCol && btnTrad) {
             const aberta = tradCol.classList.contains('aberto');
-            btnTrad.textContent = aberta ? '🌐 Ocultar trad.' : '🌐 Tradução';
+            btnTrad.textContent = aberta ? '🌐 Fechar' : '🌐 Trad.';
         }
 
         // Estado dica
@@ -1097,7 +1072,20 @@ function atualizarPainelAcoes() {
         const btnDica = document.getElementById('faBtnDica');
         if (dicaCol && btnDica) {
             const aberta = dicaCol.classList.contains('aberto');
-            btnDica.textContent = aberta ? '💡 Ocultar dica' : '💡 Dica';
+            btnDica.textContent = aberta ? '💡 Fechar' : '💡 Dica';
+        }
+
+        // Estado mini lição
+        const miniCol = blocoAtivo.querySelector('.mini-col');
+        const btnMini = document.getElementById('faBtnMini');
+        if (btnMini) {
+            if (miniCol) {
+                btnMini.style.display = '';
+                const aberta = miniCol.classList.contains('aberto');
+                btnMini.textContent = aberta ? '📘 Fechar' : '📘 Lição';
+            } else {
+                btnMini.style.display = 'none';
+            }
         }
 
         // Badge de notas
@@ -1157,6 +1145,22 @@ window.faToogleDica = function() {
     col.classList.toggle('aberto', !aberto);
     if (btn) btn.classList.toggle('aberto', !aberto);
     atualizarPainelAcoes();
+    if (!aberto) blocoAtivo.scrollIntoView({ behavior: 'smooth', block: 'center' });
+};
+
+// Toggle mini lição do bloco ativo
+window.faToogleMini = function() {
+    const blocos = document.querySelectorAll('.bloco');
+    const blocoAtivo = blocos[currentBlockIndex];
+    if (!blocoAtivo) return;
+    const col = blocoAtivo.querySelector('.mini-col');
+    const btn = blocoAtivo.querySelector('.mini-btn');
+    if (!col) return; // bloco sem mini lição
+    const aberto = col.classList.contains('aberto');
+    col.classList.toggle('aberto', !aberto);
+    if (btn) btn.classList.toggle('aberto', !aberto);
+    const btnPainel = document.getElementById('faBtnMini');
+    if (btnPainel) btnPainel.textContent = !aberto ? '📘 Fechar' : '📘 Lição';
     if (!aberto) blocoAtivo.scrollIntoView({ behavior: 'smooth', block: 'center' });
 };
 
