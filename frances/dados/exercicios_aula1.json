@@ -1,0 +1,240 @@
+{
+  "aula": 1,
+  "titulo": "Francês — Le Courage de Changer",
+  "paragrafos": [
+    {
+      "indice": 0,
+      "referencia": "Et ce que je remarque, c'est que souvent, on utilise ces moments où on a peur...",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "O que significa a expressão <em>ce que</em> na frase?",
+          "opcoes": [
+            "Porque",
+            "O que (aquilo que)",
+            "Como",
+            "Com que"
+          ],
+          "resposta": "O que (aquilo que)",
+          "explicacao": "'Ce que' introduz uma subordinada substantiva objeto. 'Ce que je remarque' = 'O que eu percebo'."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete a frase:",
+          "pergunta": "Et ___ je remarque, c'est que souvent, on utilise ces moments...",
+          "resposta": "ce que",
+          "alternativas": ["ce que", "ce qui", "ce dont"],
+          "explicacao": "'Ce que' é usado porque 'remarque' tem um objeto direto."
+        }
+      ]
+    },
+    {
+      "indice": 1,
+      "referencia": "on se sent angoissé parce qu'il y a un élément d'inconnu...",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "Qual é o significado de <em>on se sent angoissé</em>?",
+          "opcoes": [
+            "Nós sentimos angústia",
+            "Eles se sentem angustiados",
+            "Você se sente angustiado",
+            "Nós nos sentimos angustiados"
+          ],
+          "resposta": "Nós nos sentimos angustiados",
+          "explicacao": "'On' no francês falado equivale a 'nous'. O verbo é reflexivo: 'se sentir'."
+        },
+        {
+          "tipo": "multipla",
+          "pergunta": "Qual é o tempo verbal de <em>se sent</em>?",
+          "opcoes": [
+            "Futuro",
+            "Presente do indicativo",
+            "Imperfeito",
+            "Passé composé"
+          ],
+          "resposta": "Presente do indicativo",
+          "explicacao": "'Se sent' é a 3ª pessoa do singular do presente de 'se sentir'."
+        }
+      ]
+    },
+    {
+      "indice": 2,
+      "referencia": "derrière cette peur. Ah mais là il y a des obstacles...",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "O verbo <em>s'accrocher</em> é seguido de qual preposição?",
+          "opcoes": [
+            "à",
+            "de",
+            "par",
+            "sur"
+          ],
+          "resposta": "à",
+          "explicacao": "'S'accrocher à' significa 'agarrar-se a'."
+        },
+        {
+          "tipo": "lacuna",
+          "pergunta": "Complete: 'on trouve un moyen ___ s'accrocher'",
+          "resposta": "de",
+          "alternativas": ["de", "à", "pour"],
+          "explicacao": "'Un moyen de' + infinitivo = 'um jeito de'."
+        }
+      ]
+    },
+    {
+      "indice": 3,
+      "referencia": "à ce qui est familier pour nous, plutôt que d'oser aller vers...",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "A expressão <em>plutôt que de</em> significa:",
+          "opcoes": [
+            "Melhor que",
+            "Ao invés de",
+            "Plutão que",
+            "Mais que"
+          ],
+          "resposta": "Ao invés de",
+          "explicacao": "'Plutôt que de' expressa uma alternativa, significando 'em vez de'."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete:",
+          "pergunta": "Plutôt que ___ oser aller vers l'inconnu...",
+          "resposta": "d'",
+          "alternativas": ["d'", "de", "de la"],
+          "explicacao": "'Plutôt que de' é seguido de infinitivo, mas antes de vogal temos 'd''."
+        }
+      ]
+    },
+    {
+      "indice": 4,
+      "referencia": "t'as deux manières de vivre dans la vie...",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "A conjunção <em>soit... soit...</em> introduz:",
+          "opcoes": [
+            "Consequência",
+            "Causa",
+            "Alternativa",
+            "Concessão"
+          ],
+          "resposta": "Alternativa",
+          "explicacao": "'Soit... soit...' significa 'ou... ou...' e apresenta alternativas."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza para o português: <em>tu restes accroché à tes excuses</em>",
+          "resposta": "você permanece agarrado às suas desculpas",
+          "palavrasChave": ["permanece", "agarrado", "desculpas"],
+          "explicacao": "'Accroché à' = agarrado a / preso a."
+        }
+      ]
+    },
+    {
+      "indice": 5,
+      "referencia": "attaché à cet enfer familier que tu connais bien...",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "O verbo <em>emmener</em> é usado para:",
+          "opcoes": [
+            "Levar um objeto",
+            "Levar uma pessoa (acompanhando)",
+            "Trazer uma pessoa",
+            "Trazer um objeto"
+          ],
+          "resposta": "Levar uma pessoa (acompanhando)",
+          "explicacao": "'Emmener' = levar alguém consigo. 'Emporter' = levar um objeto. 'Amener' = trazer alguém."
+        },
+        {
+          "tipo": "ordenar",
+          "pergunta": "Ordene para formar a frase correta:",
+          "palavras": ["t'emmener", "décisions", "vont", "Les", "vers", "paradis", "un"],
+          "resposta": "Les décisions vont t'emmener vers un paradis",
+          "explicacao": "A ordem é sujeito + verbo 'aller' + pronome + infinitivo."
+        }
+      ]
+    },
+    {
+      "indice": 6,
+      "referencia": "Et tu seras constamment testé...",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "A expressão <em>être sur le point de</em> significa:",
+          "opcoes": [
+            "Estar sobre o ponto de",
+            "Estar prestes a",
+            "Estar acima de",
+            "Estar no ponto certo"
+          ],
+          "resposta": "Estar prestes a",
+          "explicacao": "'Être sur le point de + infinitivo' = 'estar prestes a fazer algo'."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete:",
+          "pergunta": "Tu seras constamment testé ___ tu es sur le point de prendre cette décision.",
+          "resposta": "quand",
+          "alternativas": ["quand", "si", "comme", "lors"],
+          "explicacao": "'Quand' é a conjunção temporal que significa 'quando'."
+        }
+      ]
+    },
+    {
+      "indice": 7,
+      "referencia": "par des obstacles, par des peurs qui vont te demander...",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "O futuro próximo (futur proche) é formado por:",
+          "opcoes": [
+            "Verbo 'aller' no presente + infinitivo",
+            "Verbo 'avoir' + particípio",
+            "Verbo 'être' + particípio",
+            "Radical + terminações do futuro"
+          ],
+          "resposta": "Verbo 'aller' no presente + infinitivo",
+          "explicacao": "'Vont te demander' = 'aller' (vont) + infinitivo (demander)."
+        },
+        {
+          "tipo": "traduzir",
+          "pergunta": "Traduza: <em>est-ce que tu es sûr de toi</em>",
+          "resposta": "você tem certeza de si mesmo",
+          "palavrasChave": ["certeza", "si mesmo"],
+          "explicacao": "'Sûr de soi' = seguro de si mesmo / confiante."
+        }
+      ]
+    },
+    {
+      "indice": 8,
+      "referencia": "ou bien est-ce que tu es encore en train de négocier avec toi-même.",
+      "exercises": [
+        {
+          "tipo": "multipla",
+          "pergunta": "A expressão <em>être en train de</em> indica:",
+          "opcoes": [
+            "Uma ação habitual",
+            "Uma ação no futuro",
+            "Uma ação em curso no momento",
+            "Uma ação concluída"
+          ],
+          "resposta": "Uma ação em curso no momento",
+          "explicacao": "'Être en train de' enfatiza que a ação está acontecendo agora."
+        },
+        {
+          "tipo": "lacuna",
+          "enunciado": "Complete com a preposição correta:",
+          "pergunta": "négocier ___ toi-même",
+          "resposta": "avec",
+          "alternativas": ["avec", "pour", "sur", "de"],
+          "explicacao": "'Négocier avec' = negociar com (alguém)."
+        }
+      ]
+    }
+  ]
+}

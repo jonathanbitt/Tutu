@@ -1,0 +1,30 @@
+{
+  "aulas": [
+    {
+      "id": 1,
+      "title": "Francês — Le Courage de Changer",
+      "subtitle": "Peur, obstacles et décisions",
+      "description": "Aprenda francês com um texto motivacional sobre como superar o medo e tomar decisões corajosas na vida.",
+      "level": "Intermediário",
+      "thumbnail": "🇫🇷🦁",
+      "duration": "~1 min",
+      "words": 95,
+      "modules": 7,
+      "featured": true,
+      "color": "#1a6b8a"
+    },
+    {
+      "id": 2,
+      "title": "Francês — Le Pouvoir de la Décision",
+      "subtitle": "Choix et conséquences",
+      "description": "Explore o poder das decisões e como elas moldam nosso destino. Texto autêntico para níveis intermediários.",
+      "level": "Intermediário",
+      "thumbnail": "⚡🇫🇷",
+      "duration": "~1 min",
+      "words": 88,
+      "modules": 7,
+      "featured": false,
+      "color": "#2d6a4f"
+    }
+  ]
+}

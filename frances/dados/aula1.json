@@ -1,0 +1,97 @@
+{
+  "titulo": "Francês — Le Courage de Changer",
+  "videoUrl": "dados/videos/video1.mp4",
+  "quizletUrl": "quizlet.html?quizlet=1",
+  "blocos": [
+    {
+      "start": 0,
+      "italian": "Et ce que je remarque, c'est que souvent, on utilise ces moments où on a peur, où on se sent...",
+      "translation": "E o que eu percebo é que, frequentemente, usamos esses momentos em que temos medo, em que nos sentimos...",
+      "tip": "<strong>\"Ce que je remarque\"</strong> — 'O que eu percebo' (subordinada substantiva). <strong>\"c'est que\"</strong> — 'é que' (estrutura enfática). <strong>\"on utilise\"</strong> — 'nós usamos' (sujeito impessoal 'on' = 'nous' em francês coloquial).",
+      "miniLesson": {
+        "title": "A estrutura 'Ce que'",
+        "content": "<p><strong>'Ce que' vs 'Ce qui'</strong> — 'Ce que' é usado quando a palavra seguinte é um objeto direto. 'Ce que je remarque' = 'Aquilo que eu percebo' (o 'que' é objeto direto de 'remarque').</p><div class=\"exemplo\">Ce que tu dis est vrai. → O que você diz é verdade.</div><div class=\"exemplo\">Ce qui me plaît, c'est la musique. → O que me agrada é a música.</div>"
+      }
+    },
+    {
+      "start": 5,
+      "italian": "on se sent angoissé parce qu'il y a un élément d'inconnu derrière cette décision, comme une excuse pour se cacher",
+      "translation": "nos sentimos angustiados porque há um elemento de desconhecido por trás dessa decisão, como uma desculpa para se esconder",
+      "tip": "<strong>\"on se sent angoissé\"</strong> — 'Nós nos sentimos angustiados' (verbo reflexivo 'se sentir'). <strong>\"parce qu'il y a\"</strong> — 'porque há' (expressão impessoal). <strong>\"un élément d'inconnu\"</strong> — 'um elemento de desconhecido'.",
+      "miniLesson": {
+        "title": "Verbos Pronominais (Reflexivos)",
+        "content": "<p><strong>Verbos reflexivos</strong> — Indicam ação que o sujeito faz sobre si mesmo. 'Se sentir' = sentir-se.</p><div class=\"exemplo\">Je me sens bien. → Eu me sinto bem.</div><div class=\"exemplo\">Tu te sens fatigué. → Você se sente cansado.</div><div class=\"exemplo\">Il se sent perdu. → Ele se sente perdido.</div><p style=\"margin-top:10px\"><strong>Conjugação de 'se sentir'</strong> — je me sens, tu te sens, il se sent, nous nous sentons, vous vous sentez, ils se sentent.</p>"
+      }
+    },
+    {
+      "start": 12,
+      "italian": "derrière cette peur. Ah mais là il y a des obstacles, ah mais là il y a ça, il y a ci, et donc on trouve un moyen de s'accrocher",
+      "translation": "por trás desse medo. Ah, mas aí há obstáculos, ah, mas aí há isso, há aquilo, e então encontramos uma maneira de nos agarrar",
+      "tip": "<strong>\"s'accrocher à\"</strong> — 'agarrar-se a' (verbo pronominal). <strong>\"un moyen de\"</strong> — 'um jeito de' + infinitivo. <strong>\"des obstacles\"</strong> — 'obstáculos' (plural, com artigo partitivo 'des').",
+      "miniLesson": {
+        "title": "Artigo Partitivo 'des'",
+        "content": "<p><strong>O artigo partitivo</strong> — 'Des' é a forma plural de 'un/une' e também a forma plural do partitivo 'du/de la'.</p><div class=\"exemplo\">Il y a des livres sur la table. → Há livros sobre a mesa.</div><div class=\"exemplo\">Je vois des arbres. → Eu vejo árvores.</div><p style=\"margin-top:10px\"><strong>Infinitivo com preposição 'de'</strong> — 'Un moyen de s'accrocher' (um jeito de se agarrar).</p>"
+      }
+    },
+    {
+      "start": 20,
+      "italian": "à ce qui est familier pour nous, plutôt que d'oser aller vers ce qui est complètement inconnu et",
+      "translation": "ao que é familiar para nós, em vez de ousar ir em direção ao que é completamente desconhecido e",
+      "tip": "<strong>\"plutôt que de\"</strong> — 'em vez de' (introduz uma alternativa). <strong>\"oser + infinitif\"</strong> — 'ousar fazer algo'. <strong>\"ce qui est\"</strong> — 'o que é' (sujeito).",
+      "miniLesson": {
+        "title": "Plutôt que / Au lieu de",
+        "content": "<p><strong>'Plutôt que de' / 'Au lieu de'</strong> — Ambas expressões significam 'em vez de'. Seguidas de infinitivo.</p><div class=\"exemplo\">Plutôt que de rester, il est parti. → Em vez de ficar, ele foi embora.</div><div class=\"exemplo\">Au lieu de te plaindre, agis. → Em vez de reclamar, aja.</div>"
+      }
+    },
+    {
+      "start": 27,
+      "italian": "t'as deux manières de vivre dans la vie. Soit tu restes accroché, attaché à tes excuses,",
+      "translation": "você tem duas maneiras de viver na vida. Ou você permanece agarrado, preso às suas desculpas,",
+      "tip": "<strong>\"t'as\"</strong> — Forma coloquial de 'tu as' (você tem). <strong>\"Soit... soit...\"</strong> — 'Ou... ou...' (alternativa). <strong>\"accroché à / attaché à\"</strong> — 'agarrado a / preso a'.",
+      "miniLesson": {
+        "title": "A conjunção 'Soit... soit...'",
+        "content": "<p><strong>'Soit... soit...'</strong> — Apresenta duas alternativas ou possibilidades. Equivale a 'ou bien... ou bien...'.</p><div class=\"exemplo\">Soit tu viens, soit tu restes. → Ou você vem, ou você fica.</div><div class=\"exemplo\">Soit il accepte, soit il refuse. → Ou ele aceita, ou ele recusa.</div>"
+      }
+    },
+    {
+      "start": 34,
+      "italian": "attaché à cet enfer familier que tu connais bien, soit tu as le courage de prendre des décisions qui vont t'emmener vers un paradis inconnu.",
+      "translation": "preso a esse inferno familiar que você conhece bem, ou você tem a coragem de tomar decisões que vão te levar a um paraíso desconhecido.",
+      "tip": "<strong>\"le courage de + infinitif\"</strong> — 'a coragem de fazer algo'. <strong>\"prendre des décisions\"</strong> — 'tomar decisões'. <strong>\"t'emmener\"</strong> — 'te levar' (verbo 'emmener' = levar alguém).",
+      "miniLesson": {
+        "title": "Emmener vs Amener vs Emporter",
+        "content": "<p><strong>Diferenças importantes</strong> — 'Emmener' = levar uma pessoa (acompanhando). 'Amener' = trazer uma pessoa. 'Emporter' = levar um objeto.</p><div class=\"exemplo\">Je t'emmène au cinéma. → Eu te levo ao cinema.</div><div class=\"exemplo\">J'emporte mon sac. → Eu levo minha bolsa.</div>"
+      }
+    },
+    {
+      "start": 44,
+      "italian": "Et tu seras constamment testé quand tu es sur le point de prendre cette décision",
+      "translation": "E você será constantemente testado quando estiver prestes a tomar essa decisão",
+      "tip": "<strong>\"seras testé\"</strong> — Futuro simples + particípio passado (voz passiva). <strong>\"être sur le point de\"</strong> — 'estar prestes a'. <strong>\"quand\"</strong> — 'quando' (conjunção temporal).",
+      "miniLesson": {
+        "title": "Voz Passiva em Francês",
+        "content": "<p><strong>Formação da voz passiva</strong> — Verbo 'être' + particípio passado (concorda com o sujeito em gênero e número). 'Tu seras testé' (você será testado).</p><div class=\"exemplo\">Le livre est écrit par Victor Hugo. → O livro é escrito por Victor Hugo.</div><div class=\"exemplo\">Elle sera aimée. → Ela será amada.</div>"
+      }
+    },
+    {
+      "start": 48,
+      "italian": "par des obstacles, par des peurs qui vont te demander est-ce que tu es sûr de toi, est-ce que la décision a été prise,",
+      "translation": "por obstáculos, por medos que vão te perguntar se você tem certeza de si mesmo, se a decisão foi tomada,",
+      "tip": "<strong>\"vont te demander\"</strong> — Futuro próximo (verbe 'aller' + infinitif). <strong>\"est-ce que\"</strong> — Expressão interrogativa. <strong>\"sûr de soi\"</strong> — 'seguro de si mesmo'.",
+      "miniLesson": {
+        "title": "O Futuro Próximo (Futur Proche)",
+        "content": "<p><strong>Formação</strong> — Verbo 'aller' no presente + infinitivo do verbo principal. 'Ils vont te demander' = 'Eles vão te perguntar'.</p><div class=\"exemplo\">Je vais manger. → Eu vou comer.</div><div class=\"exemplo\">Nous allons partir. → Nós vamos partir.</div>"
+      }
+    },
+    {
+      "start": 55,
+      "italian": "ou bien est-ce que tu es encore en train de négocier avec toi-même.",
+      "translation": "ou se você ainda está negociando consigo mesmo.",
+      "tip": "<strong>\"ou bien\"</strong> — 'ou então'. <strong>\"être en train de\"</strong> — 'estar fazendo algo agora'. <strong>\"négocier avec soi-même\"</strong> — 'negociar consigo mesmo'.",
+      "miniLesson": {
+        "title": "Être en train de + infinitif",
+        "content": "<p><strong>Expressão de ação em curso</strong> — 'Être en train de' indica que a ação está acontecendo exatamente agora, no momento da fala.</p><div class=\"exemplo\">Je suis en train de travailler. → Estou trabalhando (agora).</div><div class=\"exemplo\">Il est en train de manger. → Ele está comendo.</div>"
+      }
+    }
+  ]
+}
