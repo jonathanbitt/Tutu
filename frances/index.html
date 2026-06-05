@@ -1,11 +1,39 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title id="pageTitle">Italiano — Aula</title>
+<title id="pageTitle">Idioma — Aula</title>
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+<!-- Carregar configuração do idioma -->
+<script src="config.js"></script>
+
+<!-- Firebase SDKs -->
+<script type="module">
+  // Importar Firebase
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.0/firebase-app.js";
+  import { getFirestore, doc, getDoc, setDoc, updateDoc, arrayUnion, arrayRemove } from "https://www.gstatic.com/firebasejs/11.0.0/firebase-firestore.js";
+  
+  const firebaseConfig = {
+    apiKey: "AIzaSyDDGUikGRoJoVu3g0tSenKtZHffflApUWQ",
+    authDomain: "agenda-diaria-6c1ac.firebaseapp.com",
+    projectId: "agenda-diaria-6c1ac",
+    storageBucket: "agenda-diaria-6c1ac.firebasestorage.app",
+    messagingSenderId: "38282868914",
+    appId: "1:38282868914:web:a8332ed3fe258a41af71ab",
+    measurementId: "G-3B5J0MLJ7R"
+  };
+  
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+  
+  // Expor globalmente para uso no código não-modular
+  window.FirebaseDB = db;
+  window.FirestoreHelpers = { doc, getDoc, setDoc, updateDoc, arrayUnion, arrayRemove };
+  window.firebaseReady = true;
+</script>
+
 <style>
 /* ========== TODOS OS ESTILOS ========== */
 :root{
@@ -77,7 +105,6 @@ video{
 
 .italian{ margin-bottom:6px; font-family:'Lora',serif; font-size:0.98rem; color:#1c1c1c; }
 
-/* ========== TOGGLE BUTTONS — ocultos inline, acionados pelo painel flutuante ========== */
 .toggle-btn{ display:none; }
 
 .colapsavel{ overflow:hidden; max-height:0; opacity:0; transition:max-height 0.4s ease, opacity 0.3s ease; }
@@ -94,7 +121,6 @@ video{
     font-size:0.82rem; color:#4a3f00; line-height:1.55;
 }
 
-/* Mini lição — conteúdo colapsável */
 .mini-col .mini-aula-corpo{
     background:#f5f8ff;
     border:1px solid #c8d8f0;
@@ -106,7 +132,6 @@ video{
 }
 .mini-col .mini-aula-corpo strong{ color:#1a56a0; }
 
-/* Mantém suporte ao <details> legado caso ainda haja algum */
 details{ border-radius:10px; margin-top:8px; overflow:hidden; border:1px solid #e2ede8; }
 summary{
     cursor:pointer; font-weight:700; font-size:0.82rem;
@@ -128,9 +153,7 @@ details[open] summary::after{ transform:rotate(180deg); }
 }
 .timestamp:hover{ background:var(--verde); color:white; }
 
-/* ========== FLOATING CONTROLS — NOVO DESIGN ========== */
-
-/* Botão de toggle flutuante */
+/* FLOATING CONTROLS */
 .fc-toggle {
     position: fixed;
     bottom: 20px;
@@ -160,7 +183,6 @@ details[open] summary::after{ transform:rotate(180deg); }
     background: #1a6b4a;
 }
 
-/* Painel expandido */
 .floating-controls {
     position: fixed;
     bottom: 78px;
@@ -176,8 +198,6 @@ details[open] summary::after{ transform:rotate(180deg); }
     box-shadow: 0 8px 32px rgba(0,0,0,0.35);
     border: 1px solid #2a4a35;
     width: 180px;
-
-    /* Estado retraído */
     opacity: 0;
     pointer-events: none;
     transform: translateY(12px) scale(0.96);
@@ -190,7 +210,6 @@ details[open] summary::after{ transform:rotate(180deg); }
     transform: translateY(0) scale(1);
 }
 
-/* Linha de botões agrupados */
 .fc-row {
     display: flex;
     gap: 4px;
@@ -247,8 +266,6 @@ details[open] summary::after{ transform:rotate(180deg); }
     video{ max-height:calc(33vh - 30px); }
     .texto-area{ padding:12px 16px 80px; }
     .bloco{ padding:12px 14px; margin-bottom:16px; }
-    .global-toggles{ margin-bottom:16px; gap:6px; }
-    .global-btn{ padding:4px 10px; font-size:0.68rem; }
     .floating-controls { right: 16px; bottom: 74px; width: 170px; }
     .fc-toggle { right: 16px; bottom: 16px; }
 }
@@ -298,7 +315,7 @@ details[open] summary::after{ transform:rotate(180deg); }
     box-shadow: 0 6px 20px rgba(63,185,80,0.35);
 }
 
-/* Modais */
+/* MODAIS */
 .qmodal{
     position: fixed;
     inset: 0;
@@ -360,7 +377,6 @@ details[open] summary::after{ transform:rotate(180deg); }
     display: block;
 }
 
-/* Botão microfone — oculto inline, usado via painel flutuante */
 .mic-btn { display: none; }
 .mic-btn.gravando {
     background: #ffeaea;
@@ -385,7 +401,6 @@ details[open] summary::after{ transform:rotate(180deg); }
 .mic-resultado.erro { background: #fff0f0; border: 1px solid #e05c5c; color: #8b1a1a; display: block; }
 .mic-resultado.parcial { background: #fffbea; border: 1px solid #e0c93a; color: #5a4a00; display: block; }
 
-/* Anotações — botão inline oculto, usado via painel flutuante */
 .nota-btn { display: none; }
 
 .nota-modal {
@@ -461,7 +476,6 @@ details[open] summary::after{ transform:rotate(180deg); }
 .nota-salvar { width: 100%; padding: 10px; border-radius: 12px; border: none; background: #e07010; color: white; font-weight: 700; font-size: 0.88rem; cursor: pointer; font-family: 'DM Sans', sans-serif; transition: background 0.2s; margin-top: 4px; }
 .nota-salvar:hover { background: #c06000; }
 
-/* Exercícios — botão inline oculto, usado via painel flutuante */
 .ex-btn { display: none; }
 
 .exmodal {
@@ -705,8 +719,7 @@ details[open] summary::after{ transform:rotate(180deg); }
 .ex-reiniciar { margin-top: 16px; padding: 10px 24px; border-radius: 12px; border: none; background: var(--verde); color: white; font-weight: 700; font-size: 0.9rem; cursor: pointer; font-family: 'DM Sans', sans-serif; transition: background 0.2s; }
 .ex-reiniciar:hover { background: #145c3d; }
 
-/* ========== PAINEL DE AÇÕES — ESQUERDO ========== */
-
+/* PAINEL DE AÇÕES — ESQUERDO */
 .fa-toggle {
     position: fixed;
     bottom: 20px;
@@ -730,7 +743,6 @@ details[open] summary::after{ transform:rotate(180deg); }
 .fa-toggle:hover { background: #1a2f80; transform: scale(1.08); }
 .fa-toggle.aberto { transform: rotate(45deg) scale(1.05); background: #1a56a0; }
 
-/* Badge de notas no botão toggle */
 .fa-toggle .fa-badge {
     position: absolute;
     top: -3px; right: -3px;
@@ -791,7 +803,6 @@ details[open] summary::after{ transform:rotate(180deg); }
     gap: 4px;
 }
 
-/* Botões do painel de ações */
 .fa-btn {
     border: none;
     padding: 7px 10px;
@@ -809,7 +820,6 @@ details[open] summary::after{ transform:rotate(180deg); }
 }
 .fa-btn:hover { background: #2a4ab0; }
 
-/* Cores temáticas por ação */
 .fa-btn.verde   { background: #1a4a30; }
 .fa-btn.verde:hover { background: #1a6b4a; }
 .fa-btn.amarelo { background: #4a3a00; }
@@ -821,7 +831,6 @@ details[open] summary::after{ transform:rotate(180deg); }
 .fa-btn.laranja { background: #4a2200; }
 .fa-btn.laranja:hover { background: #b05000; }
 
-/* Indicador do parágrafo ativo */
 .fa-paragrafo-info {
     font-size: 0.65rem;
     color: #7a9adf;
@@ -835,7 +844,6 @@ details[open] summary::after{ transform:rotate(180deg); }
     text-overflow: ellipsis;
 }
 
-/* Badge de notas no botão de anotações do painel */
 .fa-nota-badge {
     display: inline-flex;
     align-items: center;
@@ -877,7 +885,7 @@ details[open] summary::after{ transform:rotate(180deg); }
     <div class="nota-modal-box">
         <div class="nota-modal-header">
             <div>
-                <div class="nota-modal-titulo">📝 Anotações</div>
+                <div class="nota-modal-titulo">📝 Anotações (Firebase Cloud)</div>
                 <div class="nota-modal-ref" id="notaModalRef"></div>
             </div>
             <button class="nota-modal-close" onclick="fecharNotas()">✕</button>
@@ -928,7 +936,7 @@ details[open] summary::after{ transform:rotate(180deg); }
     </div>
 </div>
 
-<!-- FLOATING CONTROLS: painel expansível + botão toggle -->
+<!-- FLOATING CONTROLS -->
 <div class="floating-controls" id="floatingControls">
     <div class="fc-label">Reprodução</div>
     <div class="fc-row">
@@ -961,7 +969,6 @@ details[open] summary::after{ transform:rotate(180deg); }
     <button onclick="toggleVideo()" id="btnToggleVideo" style="width:100%;background:#1a3030">🎥 Ocultar vídeo</button>
 </div>
 
-<!-- Botão flutuante de toggle -->
 <button class="fc-toggle" id="fcToggle" onclick="toggleControls()" title="Controles">＋</button>
 
 <!-- PAINEL DE AÇÕES — ESQUERDO -->
@@ -987,10 +994,20 @@ details[open] summary::after{ transform:rotate(180deg); }
     </div>
 </div>
 
-<!-- Botão flutuante de ações — esquerdo -->
 <button class="fa-toggle" id="faToggle" onclick="toggleAcoes()" title="Ações do parágrafo">✦</button>
 
 <script>
+// ========== CONFIGURAÇÃO DO IDIOMA ==========
+const idioma = window.IDIOMA_CONFIG || {
+    nome: 'Idioma',
+    codigo: 'it-IT',
+    slug: 'geral',
+    bandeira: '📚'
+};
+
+// Atualizar título da página
+document.getElementById('pageTitle').textContent = `${idioma.nome} — Aula`;
+
 // ========== VARIÁVEIS GLOBAIS ==========
 const video = document.getElementById("video");
 const videoSource = document.getElementById("videoSource");
@@ -1001,6 +1018,106 @@ let autoScroll = true;
 let currentBlockIndex = 0;
 let lastActiveIndex = -1;
 let quizletUrlGlobal = '';
+
+// ========== FUNÇÕES DO FIREBASE PARA ANOTAÇÕES (OPÇÃO 2) ==========
+function getUserId() {
+    let userId = localStorage.getItem('userId');
+    if (!userId) {
+        userId = 'user_' + Math.random().toString(36).substr(2, 9) + '_' + Date.now();
+        localStorage.setItem('userId', userId);
+    }
+    return userId;
+}
+
+function getNotasDocId() {
+    const aulaId = new URLSearchParams(window.location.search).get('aula') || '1';
+    const userId = getUserId();
+    const idiomaSlug = idioma.slug;
+    
+    // Formato: italiano_aula1_user_abc123
+    return `${idiomaSlug}_aula${aulaId}_${userId}`;
+}
+
+async function carregarNotasPorBloco(blocoIndex) {
+    if (!window.firebaseReady) return [];
+    try {
+        const { doc, getDoc } = window.FirestoreHelpers;
+        const db = window.FirebaseDB;
+        const docId = getNotasDocId();
+        const docRef = doc(db, 'anotacoes', docId);
+        const docSnap = await getDoc(docRef);
+        
+        if (docSnap.exists()) {
+            const data = docSnap.data();
+            return data[`bloco_${blocoIndex}`] || [];
+        }
+        return [];
+    } catch (error) {
+        console.error('Erro ao carregar notas:', error);
+        return [];
+    }
+}
+
+async function salvarNotaFirebase(blocoIndex, nota) {
+    if (!window.firebaseReady) {
+        alert('Firebase ainda não carregado. Tente novamente.');
+        return false;
+    }
+    try {
+        const { doc, getDoc, setDoc, updateDoc, arrayUnion } = window.FirestoreHelpers;
+        const db = window.FirebaseDB;
+        const docId = getNotasDocId();
+        const docRef = doc(db, 'anotacoes', docId);
+        
+        const campo = `bloco_${blocoIndex}`;
+        const docSnap = await getDoc(docRef);
+        
+        if (docSnap.exists()) {
+            await updateDoc(docRef, {
+                [campo]: arrayUnion(nota)
+            });
+        } else {
+            await setDoc(docRef, {
+                [campo]: [nota],
+                usuarioId: getUserId(),
+                aulaId: new URLSearchParams(window.location.search).get('aula') || '1',
+                idioma: idioma.slug,
+                criadoEm: new Date().toISOString()
+            });
+        }
+        return true;
+    } catch (error) {
+        console.error('Erro ao salvar nota:', error);
+        alert('Erro ao salvar anotação: ' + error.message);
+        return false;
+    }
+}
+
+async function deletarNotaFirebase(blocoIndex, notaId) {
+    if (!window.firebaseReady) return false;
+    try {
+        const { doc, getDoc, updateDoc } = window.FirestoreHelpers;
+        const db = window.FirebaseDB;
+        const docId = getNotasDocId();
+        const docRef = doc(db, 'anotacoes', docId);
+        const docSnap = await getDoc(docRef);
+        
+        if (docSnap.exists()) {
+            const data = docSnap.data();
+            const campo = `bloco_${blocoIndex}`;
+            const notasAtuais = data[campo] || [];
+            const notasFiltradas = notasAtuais.filter(n => n.id !== notaId);
+            
+            await updateDoc(docRef, {
+                [campo]: notasFiltradas
+            });
+        }
+        return true;
+    } catch (error) {
+        console.error('Erro ao deletar nota:', error);
+        return false;
+    }
+}
 
 // ========== TOGGLE CONTROLES ==========
 window.toggleControls = function() {
@@ -1059,7 +1176,6 @@ function atualizarPainelAcoes() {
         const texto = textoEl ? textoEl.innerText.replace(/\(\d+:\d+\)\s*/, '').substring(0, 36) + '…' : `Parágrafo ${currentBlockIndex + 1}`;
         infoEl.textContent = texto;
 
-        // Estado tradução
         const tradCol = blocoAtivo.querySelector('.trad-col');
         const btnTrad = document.getElementById('faBtnTrad');
         if (tradCol && btnTrad) {
@@ -1067,7 +1183,6 @@ function atualizarPainelAcoes() {
             btnTrad.textContent = aberta ? '🌐 Fechar' : '🌐 Trad.';
         }
 
-        // Estado dica
         const dicaCol = blocoAtivo.querySelector('.dica-col');
         const btnDica = document.getElementById('faBtnDica');
         if (dicaCol && btnDica) {
@@ -1075,7 +1190,6 @@ function atualizarPainelAcoes() {
             btnDica.textContent = aberta ? '💡 Fechar' : '💡 Dica';
         }
 
-        // Estado mini lição
         const miniCol = blocoAtivo.querySelector('.mini-col');
         const btnMini = document.getElementById('faBtnMini');
         if (btnMini) {
@@ -1088,17 +1202,17 @@ function atualizarPainelAcoes() {
             }
         }
 
-        // Badge de notas
         atualizarBadgeNotaPainel(currentBlockIndex);
     } else {
         infoEl.textContent = 'Nenhum parágrafo ativo';
     }
 }
 
-function atualizarBadgeNotaPainel(index) {
+async function atualizarBadgeNotaPainel(index) {
     const btn = document.getElementById('faBtnNota');
     if (!btn) return;
-    const count = Storage.count(notaBlocoKey(index));
+    const notas = await carregarNotasPorBloco(index);
+    const count = notas.length;
     const badgeExistente = btn.querySelector('.fa-nota-badge');
     if (count > 0) {
         if (badgeExistente) badgeExistente.textContent = count;
@@ -1108,17 +1222,11 @@ function atualizarBadgeNotaPainel(index) {
             span.textContent = count;
             btn.appendChild(span);
         }
-        btn.textContent = '📝 Anotações ';
-        const span = document.createElement('span');
-        span.className = 'fa-nota-badge';
-        span.textContent = count;
-        btn.appendChild(span);
-    } else {
-        btn.textContent = '📝 Anotações';
+    } else if (badgeExistente) {
+        badgeExistente.remove();
     }
 }
 
-// Toggle tradução do bloco ativo
 window.faToogleTrad = function() {
     const blocos = document.querySelectorAll('.bloco');
     const blocoAtivo = blocos[currentBlockIndex];
@@ -1133,7 +1241,6 @@ window.faToogleTrad = function() {
     if (!aberto) blocoAtivo.scrollIntoView({ behavior: 'smooth', block: 'center' });
 };
 
-// Toggle dica do bloco ativo
 window.faToogleDica = function() {
     const blocos = document.querySelectorAll('.bloco');
     const blocoAtivo = blocos[currentBlockIndex];
@@ -1148,14 +1255,13 @@ window.faToogleDica = function() {
     if (!aberto) blocoAtivo.scrollIntoView({ behavior: 'smooth', block: 'center' });
 };
 
-// Toggle mini lição do bloco ativo
 window.faToogleMini = function() {
     const blocos = document.querySelectorAll('.bloco');
     const blocoAtivo = blocos[currentBlockIndex];
     if (!blocoAtivo) return;
     const col = blocoAtivo.querySelector('.mini-col');
     const btn = blocoAtivo.querySelector('.mini-btn');
-    if (!col) return; // bloco sem mini lição
+    if (!col) return;
     const aberto = col.classList.contains('aberto');
     col.classList.toggle('aberto', !aberto);
     if (btn) btn.classList.toggle('aberto', !aberto);
@@ -1164,7 +1270,6 @@ window.faToogleMini = function() {
     if (!aberto) blocoAtivo.scrollIntoView({ behavior: 'smooth', block: 'center' });
 };
 
-// Praticar fala do bloco ativo
 window.faAcaoMic = function() {
     const blocos = document.querySelectorAll('.bloco');
     const blocoAtivo = blocos[currentBlockIndex];
@@ -1178,7 +1283,6 @@ window.faAcaoMic = function() {
     }
 };
 
-// Exercícios do bloco ativo
 window.faAcaoEx = function() {
     const blocos = document.querySelectorAll('.bloco');
     const blocoAtivo = blocos[currentBlockIndex];
@@ -1190,7 +1294,6 @@ window.faAcaoEx = function() {
     else abrirExercicios(null, currentBlockIndex);
 };
 
-// Anotações do bloco ativo
 window.faAcaoNota = function() {
     document.getElementById('faPainel').classList.remove('aberto');
     document.getElementById('faToggle').classList.remove('aberto');
@@ -1231,10 +1334,6 @@ window.toggleTodos = function(tipo) {
     const algumFechado = cols.some(c => !c.classList.contains('aberto'));
     cols.forEach(c => c.classList.toggle('aberto', algumFechado));
     btns.forEach(b => b.classList.toggle('aberto', algumFechado));
-    const btnGlobalTrad = document.getElementById('btnTodasTrad');
-    const btnGlobalDica = document.getElementById('btnTodasDica');
-    if (isTrad && btnGlobalTrad) btnGlobalTrad.textContent = algumFechado ? '🌐 Ocultar todas' : '🌐 Todas trad.';
-    if (!isTrad && btnGlobalDica) btnGlobalDica.textContent = algumFechado ? '💡 Ocultar todas' : '💡 Todas dicas';
 }
 window.toggleAutoScroll = function() {
     autoScroll = !autoScroll;
@@ -1259,7 +1358,6 @@ window.previousParagraph = function() {
     }
 }
 
-// Ocultar/Mostrar vídeo
 window.toggleVideo = function() {
     const videoArea = document.querySelector('.video-area');
     const textoArea = document.querySelector('.texto-area');
@@ -1286,6 +1384,154 @@ function carregarPreferenciaVideo() {
     }
 }
 
+// ========== ANOTAÇÕES ==========
+let notaBlocoAtual = null, notaTabAtual = 'texto';
+
+window.abrirNotas = async function(index) {
+    notaBlocoAtual = index;
+    const blocoEls = document.querySelectorAll('.bloco');
+    const textoEl = blocoEls[index] ? blocoEls[index].querySelector('.italian') : null;
+    const ref = textoEl ? textoEl.innerText.replace(/\(\d+:\d+\)\s*/, '').substring(0, 50) + '…' : ('Parágrafo ' + (index + 1));
+    document.getElementById('notaModalRef').textContent = ref;
+    limparFormNota();
+    await renderizarNotas(index);
+    document.getElementById('notaModal').style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+};
+
+window.fecharNotas = function() { 
+    document.getElementById('notaModal').style.display = 'none'; 
+    document.body.style.overflow = '';
+    if (notaBlocoAtual !== null) {
+        atualizarBadgeNotaPainel(notaBlocoAtual);
+        atualizarBotaoNota(notaBlocoAtual);
+    }
+};
+
+window.trocarTabNota = function(tipo, tabBtn) {
+    notaTabAtual = tipo;
+    document.querySelectorAll('.nota-tab').forEach(t => t.classList.remove('ativo'));
+    document.querySelectorAll('.nota-form-campo').forEach(c => c.classList.remove('ativo'));
+    tabBtn.classList.add('ativo');
+    document.getElementById('nota-campo-' + tipo).classList.add('ativo');
+};
+
+window.salvarNota = async function() {
+    if (notaBlocoAtual === null) return;
+    
+    let nota = null;
+    if (notaTabAtual === 'texto') {
+        let texto = document.getElementById('nota-input-texto').value.trim();
+        if (!texto) { alert('Digite algum texto.'); return; }
+        nota = { id: Date.now(), tipo: 'texto', conteudo: texto, data: dataFormatada() };
+    } else if (notaTabAtual === 'link') {
+        let url = document.getElementById('nota-input-link-url').value.trim();
+        let label = document.getElementById('nota-input-link-label').value.trim() || url;
+        if (!url) { alert('Digite uma URL.'); return; }
+        if (!url.startsWith('http')) url = 'https://' + url;
+        nota = { id: Date.now(), tipo: 'link', url: url, label: label, data: dataFormatada() };
+    } else if (notaTabAtual === 'video') {
+        let ytUrl = document.getElementById('nota-input-yt').value.trim();
+        if (!ytUrl) { alert('Digite um link do YouTube.'); return; }
+        let videoId = extrairYouTubeId(ytUrl);
+        if (!videoId) { alert('Link do YouTube inválido!'); return; }
+        nota = { id: Date.now(), tipo: 'video', videoId: videoId, url: ytUrl, data: dataFormatada() };
+    }
+    
+    if (!nota) return;
+    
+    const sucesso = await salvarNotaFirebase(notaBlocoAtual, nota);
+    if (sucesso) {
+        limparFormNota();
+        await renderizarNotas(notaBlocoAtual);
+        await atualizarBotaoNota(notaBlocoAtual);
+        if (document.getElementById('faPainel').classList.contains('aberto')) {
+            await atualizarBadgeNotaPainel(notaBlocoAtual);
+        }
+        alert('✅ Anotação salva no Firebase!');
+    }
+};
+
+window.apagarNota = async function(notaId) {
+    if (notaBlocoAtual === null) return;
+    if (confirm('Tem certeza que deseja excluir esta anotação?')) {
+        await deletarNotaFirebase(notaBlocoAtual, notaId);
+        await renderizarNotas(notaBlocoAtual);
+        await atualizarBotaoNota(notaBlocoAtual);
+        if (document.getElementById('faPainel').classList.contains('aberto')) {
+            await atualizarBadgeNotaPainel(notaBlocoAtual);
+        }
+    }
+};
+
+async function renderizarNotas(blocoIndex) {
+    const lista = document.getElementById('notaLista');
+    const notas = await carregarNotasPorBloco(blocoIndex);
+    
+    if (notas.length === 0) { 
+        lista.innerHTML = '<div class="nota-vazia"><span>📝</span>Nenhuma anotação ainda.</div>'; 
+        return; 
+    }
+    
+    lista.innerHTML = notas.map(n => {
+        let corpo = '';
+        if (n.tipo === 'texto') corpo = escHtml(n.conteudo).replace(/\n/g, '<br>');
+        else if (n.tipo === 'link') corpo = '<a href="' + escHtml(n.url) + '" target="_blank">' + escHtml(n.label) + '</a>';
+        else if (n.tipo === 'video') corpo = '<div class="yt-embed"><iframe src="https://www.youtube.com/embed/' + escHtml(n.videoId) + '" allowfullscreen loading="lazy"></iframe></div>';
+        const badgeMap = { texto: 'tipo-texto', link: 'tipo-link', video: 'tipo-video' };
+        const labelMap = { texto: '📝 Texto', link: '🔗 Link', video: '▶️ Vídeo' };
+        return `<div class="nota-item"><div class="nota-item-header"><span class="nota-item-tipo ${badgeMap[n.tipo]}">${labelMap[n.tipo]}</span><span class="nota-item-data">${escHtml(n.data)}</span></div><div class="nota-item-conteudo">${corpo}</div><button class="nota-item-apagar" onclick="apagarNota(${n.id})">🗑</button></div>`;
+    }).join('');
+}
+
+async function atualizarBotaoNota(index) {
+    let btn = document.getElementById('nota-btn-' + index);
+    if (!btn) return;
+    const notas = await carregarNotasPorBloco(index);
+    const count = notas.length;
+    btn.classList.toggle('tem-nota', count > 0);
+    let badge = btn.querySelector('.nota-badge');
+    if (count > 0) { 
+        if (badge) badge.textContent = count; 
+        else { 
+            let sp = document.createElement('span'); 
+            sp.className = 'nota-badge'; 
+            sp.textContent = count; 
+            btn.appendChild(sp); 
+        } 
+    } else if (badge) badge.remove();
+}
+
+window.atualizarTodosOsBotoesNota = async function() { 
+    const blocos = document.querySelectorAll('.bloco');
+    for (let i = 0; i < blocos.length; i++) {
+        await atualizarBotaoNota(i);
+    }
+};
+
+function limparFormNota() { 
+    ['nota-input-texto','nota-input-link-url','nota-input-link-label','nota-input-yt'].forEach(id => { 
+        let el = document.getElementById(id); 
+        if (el) el.value = ''; 
+    }); 
+}
+
+function extrairYouTubeId(url) {
+    if (!url) return null;
+    url = url.trim();
+    let patterns = [/(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/|youtube\.com\/shorts\/)([a-zA-Z0-9_-]{11})/, /youtube\.com\/watch\?.*[&?]v=([a-zA-Z0-9_-]{11})/, /^([a-zA-Z0-9_-]{11})$/];
+    for (let p of patterns) { let m = url.match(p); if (m && m[1]) return m[1]; }
+    return null;
+}
+
+function dataFormatada() { 
+    return new Date().toLocaleDateString('pt-BR', { day: '2-digit', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit' }); 
+}
+
+function escHtml(str) { 
+    return String(str || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); 
+}
+
 // ========== CARREGAR AULA ==========
 async function carregarAula() {
     const urlParams = new URLSearchParams(window.location.search);
@@ -1293,8 +1539,7 @@ async function carregarAula() {
     try {
         const response = await fetch(`dados/aula${aulaId}.json`);
         const data = await response.json();
-        document.title = data.titulo;
-        document.getElementById('pageTitle').textContent = data.titulo;
+        document.title = `${idioma.nome} — ${data.titulo}`;
         videoSource.src = data.videoUrl;
         video.load();
         quizletUrlGlobal = data.quizletUrl;
@@ -1315,7 +1560,6 @@ function renderizarBlocos(blocos) {
         const secs = bloco.start % 60;
         const tempo = `${mins}:${secs.toString().padStart(2,'0')}`;
 
-        // Mini lição: botão toggle + colapsável (igual à Tradução e Dica)
         const miniLicaoHTML = bloco.miniLesson ? `
             <button class="toggle-btn mini-btn" onclick="toggleItem(this)">📘 Mini Lição <span class="seta">▾</span></button>
             <div class="colapsavel mini-col"><div class="mini-aula-corpo"><strong>${bloco.miniLesson.title}</strong><br><br>${bloco.miniLesson.content}</div></div>
@@ -1350,7 +1594,7 @@ function renderizarBlocos(blocos) {
         });
     });
     iniciarDestaque();
-    if (typeof atualizarTodosOsBotoesNota === 'function') atualizarTodosOsBotoesNota();
+    setTimeout(() => atualizarTodosOsBotoesNota(), 500);
 }
 
 function iniciarDestaque() {
@@ -1394,7 +1638,7 @@ window.iniciarPratica = function(btn) {
     const textoCompleto = textoItalianoEl.innerText.replace(/\(\d+:\d+\)\s*/,'').trim().toLowerCase();
     const resultado = bloco.querySelector('.mic-resultado');
     const recognition = new SpeechRecognition();
-    recognition.lang = 'it-IT';
+    recognition.lang = idioma.codigo;
     recognition.interimResults = false;
     recognition.maxAlternatives = 3;
     recognitionAtiva = recognition;
@@ -1434,106 +1678,6 @@ window.iniciarPratica = function(btn) {
     recognition.onend = function() { btn.classList.remove('gravando'); btn.innerHTML = '🎙️ Praticar Fala'; recognitionAtiva = null; };
     recognition.start();
 };
-
-// ========== ANOTAÇÕES ==========
-const NOTAS_KEY = 'italian_notes';
-const Storage = {
-    getAll() { try { return JSON.parse(localStorage.getItem(NOTAS_KEY)) || {}; } catch { return {}; } },
-    getBloco(key) { return this.getAll()[key] || []; },
-    add(key, nota) { const all = this.getAll(); if (!all[key]) all[key] = []; all[key].unshift(nota); localStorage.setItem(NOTAS_KEY, JSON.stringify(all)); },
-    remove(key, notaId) { const all = this.getAll(); if (!all[key]) return; all[key] = all[key].filter(n => n.id !== notaId); localStorage.setItem(NOTAS_KEY, JSON.stringify(all)); },
-    count(key) { return (this.getAll()[key] || []).length; }
-};
-let notaBlocoAtual = null, notaTabAtual = 'texto';
-function notaBlocoKey(index) { const aulaId = new URLSearchParams(window.location.search).get('aula') || '1'; return 'aula' + aulaId + '_bloco' + index; }
-window.abrirNotas = function(index) {
-    notaBlocoAtual = index;
-    const key = notaBlocoKey(index);
-    const blocoEls = document.querySelectorAll('.bloco');
-    const textoEl = blocoEls[index] ? blocoEls[index].querySelector('.italian') : null;
-    const ref = textoEl ? textoEl.innerText.replace(/\(\d+:\d+\)\s*/, '').substring(0, 50) + '…' : ('Parágrafo ' + (index + 1));
-    document.getElementById('notaModalRef').textContent = ref;
-    limparFormNota();
-    renderizarNotas(key);
-    document.getElementById('notaModal').style.display = 'flex';
-    document.body.style.overflow = 'hidden';
-};
-window.fecharNotas = function() { document.getElementById('notaModal').style.display = 'none'; document.body.style.overflow = ''; };
-window.trocarTabNota = function(tipo, tabBtn) {
-    notaTabAtual = tipo;
-    document.querySelectorAll('.nota-tab').forEach(t => t.classList.remove('ativo'));
-    document.querySelectorAll('.nota-form-campo').forEach(c => c.classList.remove('ativo'));
-    tabBtn.classList.add('ativo');
-    document.getElementById('nota-campo-' + tipo).classList.add('ativo');
-};
-window.salvarNota = function() {
-    if (notaBlocoAtual === null) return;
-    const key = notaBlocoKey(notaBlocoAtual);
-    let nota = null;
-    if (notaTabAtual === 'texto') {
-        let texto = document.getElementById('nota-input-texto').value.trim();
-        if (!texto) { alert('Digite algum texto.'); return; }
-        nota = { id: Date.now(), tipo: 'texto', conteudo: texto, data: dataFormatada() };
-    } else if (notaTabAtual === 'link') {
-        let url = document.getElementById('nota-input-link-url').value.trim();
-        let label = document.getElementById('nota-input-link-label').value.trim() || url;
-        if (!url) { alert('Digite uma URL.'); return; }
-        if (!url.startsWith('http')) url = 'https://' + url;
-        nota = { id: Date.now(), tipo: 'link', url: url, label: label, data: dataFormatada() };
-    } else if (notaTabAtual === 'video') {
-        let ytUrl = document.getElementById('nota-input-yt').value.trim();
-        if (!ytUrl) { alert('Digite um link do YouTube.'); return; }
-        let videoId = extrairYouTubeId(ytUrl);
-        if (!videoId) { alert('Link do YouTube inválido!'); return; }
-        nota = { id: Date.now(), tipo: 'video', videoId: videoId, url: ytUrl, data: dataFormatada() };
-    }
-    if (!nota) return;
-    Storage.add(key, nota);
-    limparFormNota();
-    renderizarNotas(key);
-    atualizarBotaoNota(notaBlocoAtual);
-    alert('✅ Anotação salva!');
-};
-window.apagarNota = function(notaId) {
-    if (notaBlocoAtual === null) return;
-    Storage.remove(notaBlocoKey(notaBlocoAtual), notaId);
-    renderizarNotas(notaBlocoKey(notaBlocoAtual));
-    atualizarBotaoNota(notaBlocoAtual);
-};
-function renderizarNotas(key) {
-    const lista = document.getElementById('notaLista');
-    const notas = Storage.getBloco(key);
-    if (notas.length === 0) { lista.innerHTML = '<div class="nota-vazia"><span>📝</span>Nenhuma anotação ainda.</div>'; return; }
-    lista.innerHTML = notas.map(n => {
-        let corpo = '';
-        if (n.tipo === 'texto') corpo = escHtml(n.conteudo).replace(/\n/g, '<br>');
-        else if (n.tipo === 'link') corpo = '<a href="' + escHtml(n.url) + '" target="_blank">' + escHtml(n.label) + '</a>';
-        else if (n.tipo === 'video') corpo = '<div class="yt-embed"><iframe src="https://www.youtube.com/embed/' + escHtml(n.videoId) + '" allowfullscreen loading="lazy"></iframe></div>';
-        const badgeMap = { texto: 'tipo-texto', link: 'tipo-link', video: 'tipo-video' };
-        const labelMap = { texto: '📝 Texto', link: '🔗 Link', video: '▶️ Vídeo' };
-        return `<div class="nota-item"><div class="nota-item-header"><span class="nota-item-tipo ${badgeMap[n.tipo]}">${labelMap[n.tipo]}</span><span class="nota-item-data">${escHtml(n.data)}</span></div><div class="nota-item-conteudo">${corpo}</div><button class="nota-item-apagar" onclick="apagarNota(${n.id})">🗑</button></div>`;
-    }).join('');
-}
-function atualizarBotaoNota(index) {
-    let btn = document.getElementById('nota-btn-' + index);
-    if (!btn) return;
-    let count = Storage.count(notaBlocoKey(index));
-    btn.classList.toggle('tem-nota', count > 0);
-    let badge = btn.querySelector('.nota-badge');
-    if (count > 0) { if (badge) badge.textContent = count; else { let sp = document.createElement('span'); sp.className = 'nota-badge'; sp.textContent = count; btn.appendChild(sp); } }
-    else if (badge) badge.remove();
-}
-window.atualizarTodosOsBotoesNota = function() { document.querySelectorAll('.bloco').forEach((_, i) => atualizarBotaoNota(i)); };
-function limparFormNota() { ['nota-input-texto','nota-input-link-url','nota-input-link-label','nota-input-yt'].forEach(id => { let el = document.getElementById(id); if (el) el.value = ''; }); }
-function extrairYouTubeId(url) {
-    if (!url) return null;
-    url = url.trim();
-    let patterns = [/(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/|youtube\.com\/shorts\/)([a-zA-Z0-9_-]{11})/, /youtube\.com\/watch\?.*[&?]v=([a-zA-Z0-9_-]{11})/, /^([a-zA-Z0-9_-]{11})$/];
-    for (let p of patterns) { let m = url.match(p); if (m && m[1]) return m[1]; }
-    return null;
-}
-function dataFormatada() { return new Date().toLocaleDateString('pt-BR', { day: '2-digit', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit' }); }
-function escHtml(str) { return String(str || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
 
 // ========== EXERCÍCIOS ==========
 let exDados = [], exFila = [], exAtual = 0, exAcertos = 0, exRespondido = false, exOrdenarSelecionadas = [], exPronunciaRecognition = null;
@@ -1591,7 +1735,8 @@ function renderizarExercicio() {
 
 window.ouvirPronuncia = function(texto) {
     const utterance = new SpeechSynthesisUtterance(texto);
-    utterance.lang = 'it-IT'; utterance.rate = 0.8;
+    utterance.lang = idioma.codigo;
+    utterance.rate = 0.8;
     speechSynthesis.cancel(); speechSynthesis.speak(utterance);
 };
 
@@ -1602,7 +1747,8 @@ window.gravarPronuncia = function(btn, textoEsperado) {
     if (exPronunciaRecognition) exPronunciaRecognition.stop();
     const resultado = document.getElementById('exPronunciaResultado');
     const recognition = new SpeechRecognition();
-    recognition.lang = 'it-IT'; recognition.interimResults = false;
+    recognition.lang = idioma.codigo;
+    recognition.interimResults = false;
     exPronunciaRecognition = recognition;
     btn.classList.add('gravando'); btn.innerHTML = '⏹️ Parar';
     resultado.style.display = 'none'; resultado.className = 'mic-resultado';
