@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -71,49 +72,16 @@ video{
 .texto-area::-webkit-scrollbar-track{ background:#f0f0f0; }
 .texto-area::-webkit-scrollbar-thumb{ background:#b5d4c5; border-radius:4px; }
 
-.global-toggles{ 
-    display:flex; 
-    gap:8px; 
-    flex-wrap:wrap; 
-    justify-content:center; 
-    margin-bottom:20px;
-    padding-bottom:12px;
-    border-bottom:1px solid #eee;
-}
-.global-btn{
-    padding:5px 12px; border-radius:20px; border:1.5px solid;
-    cursor:pointer; font-size:0.72rem; font-weight:700;
-    background:transparent; font-family:'DM Sans',sans-serif; transition:all 0.2s;
-}
-.global-btn.trad{ color:#3a7d5f; border-color:#b5d4c5; }
-.global-btn.trad:hover{ background:#e8f5ef; }
-.global-btn.dica-g{ color:#7a6200; border-color:#e0c93a; }
-.global-btn.dica-g:hover{ background:#fffbea; }
-.global-btn.video-toggle { color: #1a6b4a; border-color: #1a6b4a; }
-.global-btn.video-toggle:hover { background: #e8f5ef; }
-
 .bloco{ margin-bottom:20px; padding:14px 16px; border-radius:14px; transition:all 0.35s ease; border:1.5px solid #ebebeb; background:white; }
 .bloco.ativo{ background:var(--amarelo); border-color:#e0c93a; box-shadow:0 4px 20px rgba(224,201,58,0.25); transform:scale(1.01); }
 
 .italian{ margin-bottom:6px; font-family:'Lora',serif; font-size:0.98rem; color:#1c1c1c; }
 
-.toggle-btn{
-    display:inline-flex; align-items:center; gap:4px;
-    margin-top:6px; margin-right:4px;
-    padding:3px 8px; border-radius:20px; border:1.5px solid;
-    cursor:pointer; font-size:0.68rem; font-weight:700;
-    background:transparent; transition:all 0.2s;
-    font-family:'DM Sans',sans-serif; line-height:1.4;
-}
-.toggle-btn.trad-btn{ color:#3a7d5f; border-color:#b5d4c5; }
-.toggle-btn.trad-btn:hover{ background:#e8f5ef; }
-.toggle-btn.dica-btn{ color:#7a6200; border-color:#e0c93a; }
-.toggle-btn.dica-btn:hover{ background:#fffbea; }
-.toggle-btn .seta{ transition:transform 0.25s; display:inline-block; font-size:0.65rem; }
-.toggle-btn.aberto .seta{ transform:rotate(180deg); }
+/* ========== TOGGLE BUTTONS — ocultos inline, acionados pelo painel flutuante ========== */
+.toggle-btn{ display:none; }
 
 .colapsavel{ overflow:hidden; max-height:0; opacity:0; transition:max-height 0.4s ease, opacity 0.3s ease; }
-.colapsavel.aberto{ max-height:400px; opacity:1; margin-top:8px; }
+.colapsavel.aberto{ max-height:600px; opacity:1; margin-top:8px; }
 
 .traducao{
     color:#555; font-style:italic; background:#f4f4f0;
@@ -126,6 +94,19 @@ video{
     font-size:0.82rem; color:#4a3f00; line-height:1.55;
 }
 
+/* Mini lição — conteúdo colapsável */
+.mini-col .mini-aula-corpo{
+    background:#f5f8ff;
+    border:1px solid #c8d8f0;
+    border-radius:10px;
+    padding:10px 12px;
+    font-size:0.85rem;
+    line-height:1.65;
+    color:#2a2a2a;
+}
+.mini-col .mini-aula-corpo strong{ color:#1a56a0; }
+
+/* Mantém suporte ao <details> legado caso ainda haja algum */
 details{ border-radius:10px; margin-top:8px; overflow:hidden; border:1px solid #e2ede8; }
 summary{
     cursor:pointer; font-weight:700; font-size:0.82rem;
@@ -147,30 +128,129 @@ details[open] summary::after{ transform:rotate(180deg); }
 }
 .timestamp:hover{ background:var(--verde); color:white; }
 
-.floating-controls{
-    position:fixed; bottom:16px; right:16px; z-index:9999;
-    background:rgba(15,31,23,0.95); padding:6px 12px;
-    border-radius:18px; display:flex; gap:5px; flex-wrap:wrap;
-    align-items:center; box-shadow:0 8px 32px rgba(0,0,0,0.3);
-    border:1px solid #2a4a35;
+/* ========== FLOATING CONTROLS — NOVO DESIGN ========== */
+
+/* Botão de toggle flutuante */
+.fc-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 10000;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: rgba(15,31,23,0.95);
+    border: 1.5px solid #2a4a35;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.35);
+    transition: transform 0.25s ease, background 0.2s;
+    outline: none;
 }
+.fc-toggle:hover {
+    background: #1a3d2b;
+    transform: scale(1.08);
+}
+.fc-toggle.aberto {
+    transform: rotate(45deg) scale(1.05);
+    background: #1a6b4a;
+}
+
+/* Painel expandido */
+.floating-controls {
+    position: fixed;
+    bottom: 78px;
+    right: 20px;
+    z-index: 9999;
+    background: rgba(15,31,23,0.97);
+    padding: 10px 12px;
+    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    align-items: stretch;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.35);
+    border: 1px solid #2a4a35;
+    width: 180px;
+
+    /* Estado retraído */
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(12px) scale(0.96);
+    transform-origin: bottom right;
+    transition: opacity 0.22s ease, transform 0.22s cubic-bezier(.4,0,.2,1);
+}
+.floating-controls.aberto {
+    opacity: 1;
+    pointer-events: all;
+    transform: translateY(0) scale(1);
+}
+
+/* Linha de botões agrupados */
+.fc-row {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+
 .floating-controls button,
-.floating-controls select{
-    border:none; padding:5px 8px; border-radius:8px;
-    cursor:pointer; font-size:12px; background:#2a4a35;
-    color:white; transition:background 0.2s;
+.floating-controls select {
+    border: none;
+    padding: 6px 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 11px;
+    font-weight: 700;
+    background: #2a4a35;
+    color: white;
+    transition: background 0.2s;
+    font-family: 'DM Sans', sans-serif;
+    flex: 1;
+    text-align: center;
+    white-space: nowrap;
 }
-.floating-controls button:hover{ background:var(--verde); }
-.floating-controls select{ background:#2a4a35; color:white; }
+.floating-controls button:hover { background: var(--verde); }
+.floating-controls select {
+    background: #2a4a35;
+    color: white;
+    appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+    width: 100%;
+    flex: unset;
+}
+
+.fc-label {
+    font-size: 0.58rem;
+    color: #5a9a7a;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    font-weight: 700;
+    margin-bottom: 1px;
+    padding: 0 2px;
+}
+.fc-divider {
+    height: 1px;
+    background: rgba(255,255,255,0.07);
+    margin: 2px 0;
+}
+
+.btn-home { background: #1a3a6a !important; }
+.btn-home:hover { background: #1f6feb !important; }
 
 @media(max-width:900px){
     .video-area{ min-height:220px; padding:12px 16px; }
     video{ max-height:calc(33vh - 30px); }
-    .floating-controls{ left:10px; right:10px; bottom:10px; justify-content:center; }
     .texto-area{ padding:12px 16px 80px; }
     .bloco{ padding:12px 14px; margin-bottom:16px; }
     .global-toggles{ margin-bottom:16px; gap:6px; }
     .global-btn{ padding:4px 10px; font-size:0.68rem; }
+    .floating-controls { right: 16px; bottom: 74px; width: 170px; }
+    .fc-toggle { right: 16px; bottom: 16px; }
 }
 
 .quizlet-cta{
@@ -280,29 +360,8 @@ details[open] summary::after{ transform:rotate(180deg); }
     display: block;
 }
 
-.btn-home { background: #58a6ff; }
-.btn-home:hover { background: #1f6feb; }
-
-/* Botão microfone */
-.mic-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
-    margin-top: 6px;
-    margin-right: 4px;
-    padding: 3px 8px;
-    border-radius: 20px;
-    border: 1.5px solid #c7a0d8;
-    cursor: pointer;
-    font-size: 0.68rem;
-    font-weight: 700;
-    background: transparent;
-    color: #7a3fa0;
-    transition: all 0.2s;
-    font-family: 'DM Sans', sans-serif;
-    line-height: 1.4;
-}
-.mic-btn:hover { background: #f5eaff; }
+/* Botão microfone — oculto inline, usado via painel flutuante */
+.mic-btn { display: none; }
 .mic-btn.gravando {
     background: #ffeaea;
     border-color: #e05c5c;
@@ -326,39 +385,8 @@ details[open] summary::after{ transform:rotate(180deg); }
 .mic-resultado.erro { background: #fff0f0; border: 1px solid #e05c5c; color: #8b1a1a; display: block; }
 .mic-resultado.parcial { background: #fffbea; border: 1px solid #e0c93a; color: #5a4a00; display: block; }
 
-/* Anotações */
-.nota-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
-    margin-top: 6px;
-    margin-right: 4px;
-    padding: 3px 8px;
-    border-radius: 20px;
-    border: 1.5px solid #f0a050;
-    cursor: pointer;
-    font-size: 0.68rem;
-    font-weight: 700;
-    background: transparent;
-    color: #b05000;
-    transition: all 0.2s;
-    font-family: 'DM Sans', sans-serif;
-    line-height: 1.4;
-    position: relative;
-}
-.nota-btn:hover { background: #fff5e8; }
-.nota-btn.tem-nota { background: #fff5e8; border-color: #e07010; }
-.nota-btn .nota-badge {
-    position: absolute;
-    top: -5px; right: -5px;
-    background: #e07010;
-    color: white;
-    border-radius: 50%;
-    width: 14px; height: 14px;
-    font-size: 0.55rem;
-    display: flex; align-items: center; justify-content: center;
-    font-weight: 700;
-}
+/* Anotações — botão inline oculto, usado via painel flutuante */
+.nota-btn { display: none; }
 
 .nota-modal {
     position: fixed;
@@ -430,30 +458,11 @@ details[open] summary::after{ transform:rotate(180deg); }
 .nota-input, .nota-textarea { width: 100%; border: 1.5px solid #e0d0b8; border-radius: 10px; padding: 9px 12px; font-family: 'DM Sans', sans-serif; font-size: 0.88rem; outline: none; background: white; color: #1c1c1c; transition: border-color 0.2s; resize: none; }
 .nota-input:focus, .nota-textarea:focus { border-color: #f0a050; }
 .nota-textarea { min-height: 80px; line-height: 1.5; }
-.nota-form-hint { font-size: 0.68rem; color: #bbb; margin-top: -4px; }
 .nota-salvar { width: 100%; padding: 10px; border-radius: 12px; border: none; background: #e07010; color: white; font-weight: 700; font-size: 0.88rem; cursor: pointer; font-family: 'DM Sans', sans-serif; transition: background 0.2s; margin-top: 4px; }
 .nota-salvar:hover { background: #c06000; }
 
-/* Exercícios */
-.ex-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
-    margin-top: 6px;
-    margin-right: 4px;
-    padding: 3px 8px;
-    border-radius: 20px;
-    border: 1.5px solid #a0c4f8;
-    cursor: pointer;
-    font-size: 0.68rem;
-    font-weight: 700;
-    background: transparent;
-    color: #1a56a0;
-    transition: all 0.2s;
-    font-family: 'DM Sans', sans-serif;
-    line-height: 1.4;
-}
-.ex-btn:hover { background: #e8f0fe; }
+/* Exercícios — botão inline oculto, usado via painel flutuante */
+.ex-btn { display: none; }
 
 .exmodal {
     position: fixed;
@@ -514,7 +523,6 @@ details[open] summary::after{ transform:rotate(180deg); }
 .ex-pergunta { font-family: 'Lora', serif; font-size: 1.05rem; line-height: 1.6; color: #1c1c1c; margin-bottom: 18px; }
 .ex-pergunta em { color: var(--verde); font-style: normal; font-weight: 600; }
 
-/* Pronúncia */
 .ex-pronuncia-area {
     text-align: center;
     padding: 20px;
@@ -696,6 +704,156 @@ details[open] summary::after{ transform:rotate(180deg); }
 .ex-placar-score { font-size: 2rem; font-weight: 700; color: var(--verde); margin: 12px 0; }
 .ex-reiniciar { margin-top: 16px; padding: 10px 24px; border-radius: 12px; border: none; background: var(--verde); color: white; font-weight: 700; font-size: 0.9rem; cursor: pointer; font-family: 'DM Sans', sans-serif; transition: background 0.2s; }
 .ex-reiniciar:hover { background: #145c3d; }
+
+/* ========== PAINEL DE AÇÕES — ESQUERDO ========== */
+
+.fa-toggle {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 10000;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: rgba(26,42,90,0.95);
+    border: 1.5px solid #3a5abf;
+    color: white;
+    font-size: 1.15rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.35);
+    transition: transform 0.25s ease, background 0.2s;
+    outline: none;
+}
+.fa-toggle:hover { background: #1a2f80; transform: scale(1.08); }
+.fa-toggle.aberto { transform: rotate(45deg) scale(1.05); background: #1a56a0; }
+
+/* Badge de notas no botão toggle */
+.fa-toggle .fa-badge {
+    position: absolute;
+    top: -3px; right: -3px;
+    background: #e07010;
+    color: white;
+    border-radius: 50%;
+    width: 16px; height: 16px;
+    font-size: 0.6rem;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 700;
+    border: 2px solid white;
+    pointer-events: none;
+}
+
+.fa-painel {
+    position: fixed;
+    bottom: 78px;
+    left: 20px;
+    z-index: 9999;
+    background: rgba(14,22,50,0.97);
+    padding: 10px 12px;
+    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    align-items: stretch;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.35);
+    border: 1px solid #2a3a7a;
+    width: 200px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(12px) scale(0.96);
+    transform-origin: bottom left;
+    transition: opacity 0.22s ease, transform 0.22s cubic-bezier(.4,0,.2,1);
+}
+.fa-painel.aberto {
+    opacity: 1;
+    pointer-events: all;
+    transform: translateY(0) scale(1);
+}
+
+.fa-label {
+    font-size: 0.58rem;
+    color: #7a9adf;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    font-weight: 700;
+    padding: 0 2px;
+    margin-bottom: 1px;
+}
+.fa-divider {
+    height: 1px;
+    background: rgba(255,255,255,0.07);
+    margin: 2px 0;
+}
+.fa-row {
+    display: flex;
+    gap: 4px;
+}
+
+/* Botões do painel de ações */
+.fa-btn {
+    border: none;
+    padding: 7px 10px;
+    border-radius: 9px;
+    cursor: pointer;
+    font-size: 11px;
+    font-weight: 700;
+    background: #1e2f6a;
+    color: white;
+    transition: background 0.2s;
+    font-family: 'DM Sans', sans-serif;
+    text-align: center;
+    width: 100%;
+    white-space: nowrap;
+}
+.fa-btn:hover { background: #2a4ab0; }
+
+/* Cores temáticas por ação */
+.fa-btn.verde   { background: #1a4a30; }
+.fa-btn.verde:hover { background: #1a6b4a; }
+.fa-btn.amarelo { background: #4a3a00; }
+.fa-btn.amarelo:hover { background: #7a6000; }
+.fa-btn.roxo    { background: #3a1a60; }
+.fa-btn.roxo:hover { background: #6a1a9e; }
+.fa-btn.azul    { background: #0f2a60; }
+.fa-btn.azul:hover { background: #1a56a0; }
+.fa-btn.laranja { background: #4a2200; }
+.fa-btn.laranja:hover { background: #b05000; }
+
+/* Indicador do parágrafo ativo */
+.fa-paragrafo-info {
+    font-size: 0.65rem;
+    color: #7a9adf;
+    text-align: center;
+    padding: 4px 6px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 8px;
+    font-style: italic;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Badge de notas no botão de anotações do painel */
+.fa-nota-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #e07010;
+    color: white;
+    border-radius: 50%;
+    width: 14px; height: 14px;
+    font-size: 0.58rem;
+    font-weight: 700;
+    margin-left: 4px;
+    vertical-align: middle;
+}
+
+@media(max-width:900px){
+    .fa-toggle { left: 16px; bottom: 16px; }
+    .fa-painel  { left: 16px; bottom: 74px; width: 190px; }
+}
 </style>
 </head>
 <body>
@@ -709,11 +867,6 @@ details[open] summary::after{ transform:rotate(180deg); }
     </div>
 
     <div class="texto-area" id="texto">
-        <div class="global-toggles">
-            <button class="global-btn trad" id="btnTodasTrad">🌐 Mostrar todas as traduções</button>
-            <button class="global-btn dica-g" id="btnTodasDica">💡 Mostrar todas as dicas</button>
-            <button class="global-btn video-toggle" id="btnToggleVideo">🎥 Ocultar vídeo</button>
-        </div>
         <div id="blocosContainer"></div>
     </div>
 </div>
@@ -775,23 +928,67 @@ details[open] summary::after{ transform:rotate(180deg); }
     </div>
 </div>
 
-<div class="floating-controls">
-    <button onclick="video.play()" title="Play">▶</button>
-    <button onclick="video.pause()" title="Pause">⏸</button>
-    <button onclick="video.currentTime -= 5" title="Voltar 5s">⏪ 5s</button>
-    <button onclick="video.currentTime += 5" title="Avançar 5s">⏩ 5s</button>
-    <button onclick="previousParagraph()" title="Parágrafo anterior">⬆</button>
-    <button onclick="nextParagraph()" title="Próximo parágrafo">⬇</button>
-    <button id="toggleScrollBtn" onclick="toggleAutoScroll()">🔒 Auto</button>
+<!-- FLOATING CONTROLS: painel expansível + botão toggle -->
+<div class="floating-controls" id="floatingControls">
+    <div class="fc-label">Reprodução</div>
+    <div class="fc-row">
+        <button onclick="video.play()" title="Play">▶ Play</button>
+        <button onclick="video.pause()" title="Pause">⏸ Pause</button>
+    </div>
+    <div class="fc-row">
+        <button onclick="video.currentTime -= 5" title="Voltar 5s">⏪ −5s</button>
+        <button onclick="video.currentTime += 5" title="Avançar 5s">⏩ +5s</button>
+    </div>
+    <div class="fc-divider"></div>
+    <div class="fc-label">Navegação</div>
+    <div class="fc-row">
+        <button onclick="previousParagraph()" title="Parágrafo anterior">⬆ Anterior</button>
+        <button onclick="nextParagraph()" title="Próximo parágrafo">⬇ Próximo</button>
+    </div>
+    <button id="toggleScrollBtn" onclick="toggleAutoScroll()" style="width:100%">🔒 Auto-scroll</button>
+    <div class="fc-divider"></div>
+    <div class="fc-label">Velocidade</div>
     <select id="speedControl">
-        <option value="0.6">0.6x</option>
-        <option value="0.75">0.75x</option>
-        <option value="1" selected>1x</option>
-        <option value="1.25">1.25x</option>
-        <option value="1.5">1.5x</option>
+        <option value="0.6">0.6×</option>
+        <option value="0.75">0.75×</option>
+        <option value="1" selected>1× (normal)</option>
+        <option value="1.25">1.25×</option>
+        <option value="1.5">1.5×</option>
     </select>
-    <button onclick="voltarHome()" title="Biblioteca de aulas" class="btn-home">📚</button>
+    <div class="fc-divider"></div>
+    <button onclick="voltarHome()" class="btn-home" style="width:100%">📚 Biblioteca</button>
+    <div class="fc-divider"></div>
+    <button onclick="toggleVideo()" id="btnToggleVideo" style="width:100%;background:#1a3030">🎥 Ocultar vídeo</button>
 </div>
+
+<!-- Botão flutuante de toggle -->
+<button class="fc-toggle" id="fcToggle" onclick="toggleControls()" title="Controles">＋</button>
+
+<!-- PAINEL DE AÇÕES — ESQUERDO -->
+<div class="fa-painel" id="faPainel">
+    <div class="fa-paragrafo-info" id="faParagrafoInfo">Nenhum parágrafo ativo</div>
+    <div class="fa-divider"></div>
+    <div class="fa-label">Conteúdo</div>
+    <div class="fa-row">
+        <button class="fa-btn verde" id="faBtnTrad" onclick="faToogleTrad()">🌐 Trad.</button>
+        <button class="fa-btn amarelo" id="faBtnDica" onclick="faToogleDica()">💡 Dica</button>
+        <button class="fa-btn azul" id="faBtnMini" onclick="faToogleMini()">📘 Lição</button>
+    </div>
+    <div class="fa-divider"></div>
+    <div class="fa-label">Ações do parágrafo</div>
+    <button class="fa-btn roxo" id="faBtnMic" onclick="faAcaoMic()">🎙️ Praticar Fala</button>
+    <button class="fa-btn azul"  id="faBtnEx"  onclick="faAcaoEx()">✏️ Exercícios</button>
+    <button class="fa-btn laranja" id="faBtnNota" onclick="faAcaoNota()">📝 Anotações</button>
+    <div class="fa-divider"></div>
+    <div class="fa-label">Global</div>
+    <div class="fa-row">
+        <button class="fa-btn verde" onclick="toggleTodos('trad')">🌐 Todas trad.</button>
+        <button class="fa-btn amarelo" onclick="toggleTodos('dica')">💡 Todas dicas</button>
+    </div>
+</div>
+
+<!-- Botão flutuante de ações — esquerdo -->
+<button class="fa-toggle" id="faToggle" onclick="toggleAcoes()" title="Ações do parágrafo">✦</button>
 
 <script>
 // ========== VARIÁVEIS GLOBAIS ==========
@@ -804,6 +1001,201 @@ let autoScroll = true;
 let currentBlockIndex = 0;
 let lastActiveIndex = -1;
 let quizletUrlGlobal = '';
+
+// ========== TOGGLE CONTROLES ==========
+window.toggleControls = function() {
+    const painel = document.getElementById('floatingControls');
+    const btn = document.getElementById('fcToggle');
+    const aberto = painel.classList.contains('aberto');
+    painel.classList.toggle('aberto', !aberto);
+    btn.classList.toggle('aberto', !aberto);
+    if (!aberto) {
+        setTimeout(() => {
+            document.addEventListener('click', fecharControlsFora, { once: true });
+        }, 10);
+    }
+};
+
+function fecharControlsFora(e) {
+    const painel = document.getElementById('floatingControls');
+    const btn = document.getElementById('fcToggle');
+    if (!painel.contains(e.target) && !btn.contains(e.target)) {
+        painel.classList.remove('aberto');
+        btn.classList.remove('aberto');
+    }
+}
+
+// ========== PAINEL DE AÇÕES ESQUERDO ==========
+window.toggleAcoes = function() {
+    const painel = document.getElementById('faPainel');
+    const btn = document.getElementById('faToggle');
+    const aberto = painel.classList.contains('aberto');
+    painel.classList.toggle('aberto', !aberto);
+    btn.classList.toggle('aberto', !aberto);
+    if (!aberto) {
+        atualizarPainelAcoes();
+        setTimeout(() => {
+            document.addEventListener('click', fecharAcoesFora, { once: true });
+        }, 10);
+    }
+};
+
+function fecharAcoesFora(e) {
+    const painel = document.getElementById('faPainel');
+    const btn = document.getElementById('faToggle');
+    if (!painel.contains(e.target) && !btn.contains(e.target)) {
+        painel.classList.remove('aberto');
+        btn.classList.remove('aberto');
+    }
+}
+
+function atualizarPainelAcoes() {
+    const blocos = document.querySelectorAll('.bloco');
+    const blocoAtivo = blocos[currentBlockIndex];
+    const infoEl = document.getElementById('faParagrafoInfo');
+
+    if (blocoAtivo) {
+        const textoEl = blocoAtivo.querySelector('.italian');
+        const texto = textoEl ? textoEl.innerText.replace(/\(\d+:\d+\)\s*/, '').substring(0, 36) + '…' : `Parágrafo ${currentBlockIndex + 1}`;
+        infoEl.textContent = texto;
+
+        // Estado tradução
+        const tradCol = blocoAtivo.querySelector('.trad-col');
+        const btnTrad = document.getElementById('faBtnTrad');
+        if (tradCol && btnTrad) {
+            const aberta = tradCol.classList.contains('aberto');
+            btnTrad.textContent = aberta ? '🌐 Fechar' : '🌐 Trad.';
+        }
+
+        // Estado dica
+        const dicaCol = blocoAtivo.querySelector('.dica-col');
+        const btnDica = document.getElementById('faBtnDica');
+        if (dicaCol && btnDica) {
+            const aberta = dicaCol.classList.contains('aberto');
+            btnDica.textContent = aberta ? '💡 Fechar' : '💡 Dica';
+        }
+
+        // Estado mini lição
+        const miniCol = blocoAtivo.querySelector('.mini-col');
+        const btnMini = document.getElementById('faBtnMini');
+        if (btnMini) {
+            if (miniCol) {
+                btnMini.style.display = '';
+                const aberta = miniCol.classList.contains('aberto');
+                btnMini.textContent = aberta ? '📘 Fechar' : '📘 Lição';
+            } else {
+                btnMini.style.display = 'none';
+            }
+        }
+
+        // Badge de notas
+        atualizarBadgeNotaPainel(currentBlockIndex);
+    } else {
+        infoEl.textContent = 'Nenhum parágrafo ativo';
+    }
+}
+
+function atualizarBadgeNotaPainel(index) {
+    const btn = document.getElementById('faBtnNota');
+    if (!btn) return;
+    const count = Storage.count(notaBlocoKey(index));
+    const badgeExistente = btn.querySelector('.fa-nota-badge');
+    if (count > 0) {
+        if (badgeExistente) badgeExistente.textContent = count;
+        else {
+            const span = document.createElement('span');
+            span.className = 'fa-nota-badge';
+            span.textContent = count;
+            btn.appendChild(span);
+        }
+        btn.textContent = '📝 Anotações ';
+        const span = document.createElement('span');
+        span.className = 'fa-nota-badge';
+        span.textContent = count;
+        btn.appendChild(span);
+    } else {
+        btn.textContent = '📝 Anotações';
+    }
+}
+
+// Toggle tradução do bloco ativo
+window.faToogleTrad = function() {
+    const blocos = document.querySelectorAll('.bloco');
+    const blocoAtivo = blocos[currentBlockIndex];
+    if (!blocoAtivo) return;
+    const col = blocoAtivo.querySelector('.trad-col');
+    const btn = blocoAtivo.querySelector('.trad-btn');
+    if (!col) return;
+    const aberto = col.classList.contains('aberto');
+    col.classList.toggle('aberto', !aberto);
+    if (btn) btn.classList.toggle('aberto', !aberto);
+    atualizarPainelAcoes();
+    if (!aberto) blocoAtivo.scrollIntoView({ behavior: 'smooth', block: 'center' });
+};
+
+// Toggle dica do bloco ativo
+window.faToogleDica = function() {
+    const blocos = document.querySelectorAll('.bloco');
+    const blocoAtivo = blocos[currentBlockIndex];
+    if (!blocoAtivo) return;
+    const col = blocoAtivo.querySelector('.dica-col');
+    const btn = blocoAtivo.querySelector('.dica-btn');
+    if (!col) return;
+    const aberto = col.classList.contains('aberto');
+    col.classList.toggle('aberto', !aberto);
+    if (btn) btn.classList.toggle('aberto', !aberto);
+    atualizarPainelAcoes();
+    if (!aberto) blocoAtivo.scrollIntoView({ behavior: 'smooth', block: 'center' });
+};
+
+// Toggle mini lição do bloco ativo
+window.faToogleMini = function() {
+    const blocos = document.querySelectorAll('.bloco');
+    const blocoAtivo = blocos[currentBlockIndex];
+    if (!blocoAtivo) return;
+    const col = blocoAtivo.querySelector('.mini-col');
+    const btn = blocoAtivo.querySelector('.mini-btn');
+    if (!col) return; // bloco sem mini lição
+    const aberto = col.classList.contains('aberto');
+    col.classList.toggle('aberto', !aberto);
+    if (btn) btn.classList.toggle('aberto', !aberto);
+    const btnPainel = document.getElementById('faBtnMini');
+    if (btnPainel) btnPainel.textContent = !aberto ? '📘 Fechar' : '📘 Lição';
+    if (!aberto) blocoAtivo.scrollIntoView({ behavior: 'smooth', block: 'center' });
+};
+
+// Praticar fala do bloco ativo
+window.faAcaoMic = function() {
+    const blocos = document.querySelectorAll('.bloco');
+    const blocoAtivo = blocos[currentBlockIndex];
+    if (!blocoAtivo) { alert('Nenhum parágrafo ativo.'); return; }
+    const micBtn = blocoAtivo.querySelector('.mic-btn');
+    if (micBtn) {
+        document.getElementById('faPainel').classList.remove('aberto');
+        document.getElementById('faToggle').classList.remove('aberto');
+        blocoAtivo.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        setTimeout(() => iniciarPratica(micBtn), 400);
+    }
+};
+
+// Exercícios do bloco ativo
+window.faAcaoEx = function() {
+    const blocos = document.querySelectorAll('.bloco');
+    const blocoAtivo = blocos[currentBlockIndex];
+    if (!blocoAtivo) { alert('Nenhum parágrafo ativo.'); return; }
+    const exBtn = blocoAtivo.querySelector('.ex-btn');
+    document.getElementById('faPainel').classList.remove('aberto');
+    document.getElementById('faToggle').classList.remove('aberto');
+    if (exBtn) exBtn.click();
+    else abrirExercicios(null, currentBlockIndex);
+};
+
+// Anotações do bloco ativo
+window.faAcaoNota = function() {
+    document.getElementById('faPainel').classList.remove('aberto');
+    document.getElementById('faToggle').classList.remove('aberto');
+    abrirNotas(currentBlockIndex);
+};
 
 // ========== FUNÇÕES GLOBAIS ==========
 window.abrirQuizlet = function() {
@@ -834,23 +1226,23 @@ window.toggleTodos = function(tipo) {
     const isTrad = tipo === 'trad';
     const colClass = isTrad ? 'trad-col' : 'dica-col';
     const btnClass = isTrad ? 'trad-btn' : 'dica-btn';
-    const globalId = isTrad ? 'btnTodasTrad' : 'btnTodasDica';
     const cols = [...document.querySelectorAll('.' + colClass)];
     const btns = [...document.querySelectorAll('.' + btnClass)];
-    const btnGlobal = document.getElementById(globalId);
     const algumFechado = cols.some(c => !c.classList.contains('aberto'));
     cols.forEach(c => c.classList.toggle('aberto', algumFechado));
     btns.forEach(b => b.classList.toggle('aberto', algumFechado));
-    if (isTrad) { btnGlobal.textContent = algumFechado ? '🌐 Ocultar todas as traduções' : '🌐 Mostrar todas as traduções'; }
-    else { btnGlobal.textContent = algumFechado ? '💡 Ocultar todas as dicas' : '💡 Mostrar todas as dicas'; }
+    const btnGlobalTrad = document.getElementById('btnTodasTrad');
+    const btnGlobalDica = document.getElementById('btnTodasDica');
+    if (isTrad && btnGlobalTrad) btnGlobalTrad.textContent = algumFechado ? '🌐 Ocultar todas' : '🌐 Todas trad.';
+    if (!isTrad && btnGlobalDica) btnGlobalDica.textContent = algumFechado ? '💡 Ocultar todas' : '💡 Todas dicas';
 }
 window.toggleAutoScroll = function() {
     autoScroll = !autoScroll;
-    document.getElementById("toggleScrollBtn").innerHTML = autoScroll ? "🔒 Auto" : "🔓 Livre";
+    document.getElementById("toggleScrollBtn").innerHTML = autoScroll ? "🔒 Auto-scroll" : "🔓 Scroll livre";
 }
 window.nextParagraph = function() {
     autoScroll = false;
-    document.getElementById("toggleScrollBtn").innerHTML = "🔓 Livre";
+    document.getElementById("toggleScrollBtn").innerHTML = "🔓 Scroll livre";
     const blocos = document.querySelectorAll(".bloco");
     if (currentBlockIndex < blocos.length - 1) {
         currentBlockIndex++;
@@ -859,7 +1251,7 @@ window.nextParagraph = function() {
 }
 window.previousParagraph = function() {
     autoScroll = false;
-    document.getElementById("toggleScrollBtn").innerHTML = "🔓 Livre";
+    document.getElementById("toggleScrollBtn").innerHTML = "🔓 Scroll livre";
     if (currentBlockIndex > 0) {
         currentBlockIndex--;
         const blocos = document.querySelectorAll(".bloco");
@@ -875,12 +1267,12 @@ window.toggleVideo = function() {
     if (videoArea.classList.contains('oculto')) {
         videoArea.classList.remove('oculto');
         textoArea.classList.remove('expandido');
-        btn.innerHTML = '🎥 Ocultar vídeo';
+        if (btn) btn.textContent = '🎥 Ocultar vídeo';
         localStorage.setItem('videoOculto', 'false');
     } else {
         videoArea.classList.add('oculto');
         textoArea.classList.add('expandido');
-        btn.innerHTML = '🎥 Mostrar vídeo';
+        if (btn) btn.textContent = '🎥 Mostrar vídeo';
         localStorage.setItem('videoOculto', 'true');
         if (video && !video.paused) video.pause();
     }
@@ -889,7 +1281,8 @@ function carregarPreferenciaVideo() {
     if (localStorage.getItem('videoOculto') === 'true') {
         document.querySelector('.video-area')?.classList.add('oculto');
         document.querySelector('.texto-area')?.classList.add('expandido');
-        document.getElementById('btnToggleVideo').innerHTML = '🎥 Mostrar vídeo';
+        const btn = document.getElementById('btnToggleVideo');
+        if (btn) btn.textContent = '🎥 Mostrar vídeo';
     }
 }
 
@@ -921,6 +1314,13 @@ function renderizarBlocos(blocos) {
         const mins = Math.floor(bloco.start / 60);
         const secs = bloco.start % 60;
         const tempo = `${mins}:${secs.toString().padStart(2,'0')}`;
+
+        // Mini lição: botão toggle + colapsável (igual à Tradução e Dica)
+        const miniLicaoHTML = bloco.miniLesson ? `
+            <button class="toggle-btn mini-btn" onclick="toggleItem(this)">📘 Mini Lição <span class="seta">▾</span></button>
+            <div class="colapsavel mini-col"><div class="mini-aula-corpo"><strong>${bloco.miniLesson.title}</strong><br><br>${bloco.miniLesson.content}</div></div>
+        ` : '';
+
         blocoDiv.innerHTML = `
             <div class="italian">
                 <span class="timestamp" data-time="${tempo}">(${tempo})</span>
@@ -928,13 +1328,13 @@ function renderizarBlocos(blocos) {
             </div>
             <button class="toggle-btn trad-btn" onclick="toggleItem(this)">🌐 Tradução <span class="seta">▾</span></button>
             <button class="toggle-btn dica-btn" onclick="toggleItem(this)">💡 Dica <span class="seta">▾</span></button>
+            ${miniLicaoHTML}
             <button class="mic-btn" onclick="iniciarPratica(this)">🎙️ Praticar Fala</button>
             <button class="ex-btn" onclick="abrirExercicios(this, ${index})">✏️ Exercícios</button>
             <button class="nota-btn" id="nota-btn-${index}" onclick="abrirNotas(${index})">📝 Anotações</button>
             <div class="colapsavel trad-col"><div class="traducao">${bloco.translation}</div></div>
             <div class="colapsavel dica-col"><div class="dica">${bloco.tip}</div></div>
             <div class="mic-resultado"></div>
-            ${bloco.miniLesson ? `<details><summary>📘 Mini Lição — ${bloco.miniLesson.title}</summary><div class="mini-aula-corpo">${bloco.miniLesson.content}</div></details>` : ''}
         `;
         blocosContainer.appendChild(blocoDiv);
     });
@@ -969,6 +1369,9 @@ function iniciarDestaque() {
                     bloco.classList.add("ativo");
                     progressoLabel.textContent = `Parágrafo ${i+1} de ${blocos.length}`;
                     if (autoScroll) bloco.scrollIntoView({ behavior: "smooth", block: "center" });
+                    if (document.getElementById('faPainel').classList.contains('aberto')) {
+                        atualizarPainelAcoes();
+                    }
                 }
             }
         });
@@ -977,9 +1380,6 @@ function iniciarDestaque() {
 
 document.getElementById("speedControl").addEventListener("change", function() { video.playbackRate = parseFloat(this.value); });
 document.addEventListener('keydown', function(e) { if (e.key === 'Escape') fecharQuizlet(); });
-document.getElementById('btnTodasTrad').onclick = () => toggleTodos('trad');
-document.getElementById('btnTodasDica').onclick = () => toggleTodos('dica');
-document.getElementById('btnToggleVideo').onclick = () => toggleVideo();
 carregarPreferenciaVideo();
 
 // ========== PRÁTICA DE FALA ==========
@@ -1158,163 +1558,78 @@ function atualizarProgresso() { const total = exFila.length; document.getElement
 
 function renderizarExercicio() {
     if (exAtual >= exFila.length) { mostrarPlacar(); return; }
-    
     exRespondido = false;
     exOrdenarSelecionadas = [];
-    
-    if (exPronunciaRecognition) {
-        exPronunciaRecognition.stop();
-        exPronunciaRecognition = null;
-    }
-    
+    if (exPronunciaRecognition) { exPronunciaRecognition.stop(); exPronunciaRecognition = null; }
     atualizarProgresso();
     const ex = exFila[exAtual];
     const corpo = document.getElementById('exCorpo');
-    
-    const badgeClasse = { 
-        'multipla': 'badge-multipla', 
-        'lacuna': 'badge-lacuna', 
-        'ordenar': 'badge-ordenar', 
-        'traduzir': 'badge-traduzir', 
-        'pronuncia': 'badge-pronuncia' 
-    }[ex.tipo] || 'badge-multipla';
-    
-    const badgeLabel = { 
-        'multipla': '🔵 Múltipla escolha', 
-        'lacuna': '🟣 Completar lacuna', 
-        'ordenar': '🟡 Ordenar palavras', 
-        'traduzir': '🟢 Tradução', 
-        'pronuncia': '🎤 Pronúncia' 
-    }[ex.tipo] || ex.tipo;
-    
+    const badgeClasse = { 'multipla': 'badge-multipla', 'lacuna': 'badge-lacuna', 'ordenar': 'badge-ordenar', 'traduzir': 'badge-traduzir', 'pronuncia': 'badge-pronuncia' }[ex.tipo] || 'badge-multipla';
+    const badgeLabel = { 'multipla': '🔵 Múltipla escolha', 'lacuna': '🟣 Completar lacuna', 'ordenar': '🟡 Ordenar palavras', 'traduzir': '🟢 Tradução', 'pronuncia': '🎤 Pronúncia' }[ex.tipo] || ex.tipo;
     let htmlInterativo = '';
-
     if (ex.tipo === 'multipla') {
         const opcoes = embaralhar([...ex.opcoes]);
         htmlInterativo = `<div class="ex-opcoes">${opcoes.map(op => `<button class="ex-opcao" onclick="responderMultipla(this, '${escapar(op)}', '${escapar(ex.resposta)}')">${op}</button>`).join('')}</div>`;
-    } 
-    else if (ex.tipo === 'lacuna') {
+    } else if (ex.tipo === 'lacuna') {
         const partes = ex.pergunta.split('___');
         htmlInterativo = `<div class="ex-lacuna-wrap"><span>${partes[0]}</span><input class="ex-lacuna-input" id="exLacunaInput" type="text" placeholder="..." autocomplete="off" /><span>${partes[1] || ''}</span></div>`;
-    } 
-    else if (ex.tipo === 'ordenar') {
+    } else if (ex.tipo === 'ordenar') {
         const palavras = embaralhar([...ex.palavras]);
         htmlInterativo = `<div class="ex-area-label">Sua resposta</div><div class="ex-palavras-area" id="exOrdenarArea"></div><div class="ex-area-label" style="margin-top:10px">Palavras disponíveis</div><div class="ex-palavra-banco" id="exPalavraBanco">${palavras.map((p, i) => `<button class="ex-palavra" data-idx="${i}" data-palavra="${escapar(p)}" onclick="selecionarPalavra(this)">${p}</button>`).join('')}</div>`;
-    } 
-    else if (ex.tipo === 'traduzir') {
+    } else if (ex.tipo === 'traduzir') {
         htmlInterativo = `<textarea class="ex-textarea" id="exTraduzirInput" rows="3" placeholder="Digite sua tradução em português..."></textarea>`;
-    } 
-    else if (ex.tipo === 'pronuncia') {
+    } else if (ex.tipo === 'pronuncia') {
         const palavras = ex.palavras || [ex.resposta];
-        htmlInterativo = `
-            <div class="ex-pronuncia-area">
-                <div class="ex-palavra-destaque">${palavras.map(p => `<span class="pronuncia-word">${p}</span>`).join(' · ')}</div>
-                <div class="ex-pronuncia-botoes">
-                    <button class="ex-ouvir-btn" onclick="ouvirPronuncia('${escapar(ex.resposta)}')">🔊 Ouvir pronúncia</button>
-                    <button class="ex-gravar-btn" id="exGravarBtn" onclick="gravarPronuncia(this, '${escapar(ex.resposta)}')">🎙️ Gravar minha pronúncia</button>
-                </div>
-                <div class="mic-resultado" id="exPronunciaResultado" style="display:none"></div>
-                <div class="ex-dica-pronuncia">
-                    💡 Dica: Fale claramente e em um ambiente silencioso para melhor reconhecimento.
-                </div>
-            </div>`;
+        htmlInterativo = `<div class="ex-pronuncia-area"><div class="ex-palavra-destaque">${palavras.map(p => `<span class="pronuncia-word">${p}</span>`).join(' · ')}</div><div class="ex-pronuncia-botoes"><button class="ex-ouvir-btn" onclick="ouvirPronuncia('${escapar(ex.resposta)}')">🔊 Ouvir pronúncia</button><button class="ex-gravar-btn" id="exGravarBtn" onclick="gravarPronuncia(this, '${escapar(ex.resposta)}')">🎙️ Gravar minha pronúncia</button></div><div class="mic-resultado" id="exPronunciaResultado" style="display:none"></div><div class="ex-dica-pronuncia">💡 Dica: Fale claramente e em um ambiente silencioso.</div></div>`;
     }
-
     const perguntaHTML = ex.tipo === 'lacuna' ? `<div class="ex-pergunta">${ex.enunciado || 'Complete a frase:'}</div>` : `<div class="ex-pergunta">${ex.pergunta || 'Pratique a pronúncia:'}</div>`;
-    
     corpo.innerHTML = `<span class="ex-tipo-badge ${badgeClasse}">${badgeLabel}</span>${perguntaHTML}${htmlInterativo}<div class="ex-feedback" id="exFeedback"></div><div class="ex-acoes"><button class="ex-confirmar" id="exConfirmar" onclick="confirmarResposta()">Confirmar</button><button class="ex-proximo" id="exProximo" onclick="proximoExercicio()">Próximo →</button></div>`;
-    
-    if (ex.tipo === 'lacuna') { 
-        setTimeout(() => document.getElementById('exLacunaInput')?.focus(), 100); 
-        document.getElementById('exLacunaInput').addEventListener('keydown', e => { 
-            if (e.key === 'Enter' && !exRespondido) confirmarResposta(); 
-        }); 
-    }
-    if (ex.tipo === 'traduzir') {
-        setTimeout(() => document.getElementById('exTraduzirInput')?.focus(), 100);
-    }
-    if (ex.tipo === 'pronuncia') {
-        setTimeout(() => {
-            const confirmBtn = document.getElementById('exConfirmar');
-            if (confirmBtn) confirmBtn.style.display = 'none';
-        }, 100);
-    }
+    if (ex.tipo === 'lacuna') { setTimeout(() => document.getElementById('exLacunaInput')?.focus(), 100); document.getElementById('exLacunaInput').addEventListener('keydown', e => { if (e.key === 'Enter' && !exRespondido) confirmarResposta(); }); }
+    if (ex.tipo === 'traduzir') { setTimeout(() => document.getElementById('exTraduzirInput')?.focus(), 100); }
+    if (ex.tipo === 'pronuncia') { setTimeout(() => { const confirmBtn = document.getElementById('exConfirmar'); if (confirmBtn) confirmBtn.style.display = 'none'; }, 100); }
 }
 
 window.ouvirPronuncia = function(texto) {
     const utterance = new SpeechSynthesisUtterance(texto);
-    utterance.lang = 'it-IT';
-    utterance.rate = 0.8;
-    speechSynthesis.cancel();
-    speechSynthesis.speak(utterance);
+    utterance.lang = 'it-IT'; utterance.rate = 0.8;
+    speechSynthesis.cancel(); speechSynthesis.speak(utterance);
 };
 
 window.gravarPronuncia = function(btn, textoEsperado) {
     const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
     if (!SpeechRecognition) { alert('Seu navegador não suporta reconhecimento de fala.'); return; }
-    
-    if (btn.classList.contains('gravando')) { 
-        if (exPronunciaRecognition) exPronunciaRecognition.stop(); 
-        return; 
-    }
-    
+    if (btn.classList.contains('gravando')) { if (exPronunciaRecognition) exPronunciaRecognition.stop(); return; }
     if (exPronunciaRecognition) exPronunciaRecognition.stop();
-    
     const resultado = document.getElementById('exPronunciaResultado');
     const recognition = new SpeechRecognition();
-    recognition.lang = 'it-IT';
-    recognition.interimResults = false;
+    recognition.lang = 'it-IT'; recognition.interimResults = false;
     exPronunciaRecognition = recognition;
-    
-    btn.classList.add('gravando');
-    btn.innerHTML = '⏹️ Parar';
-    resultado.style.display = 'none';
-    resultado.className = 'mic-resultado';
-    
+    btn.classList.add('gravando'); btn.innerHTML = '⏹️ Parar';
+    resultado.style.display = 'none'; resultado.className = 'mic-resultado';
     recognition.onresult = function(event) {
         const falado = event.results[0][0].transcript.toLowerCase().trim();
         const normalizar = t => t.replace(/[.,!?;:""''\u00E0\u00E8\u00E9\u00EC\u00F2\u00F9]/g,'').trim().toLowerCase();
         const esperadoNorm = normalizar(textoEsperado);
         const faladoNorm = normalizar(falado);
-        
         const palavrasEsperadas = esperadoNorm.split(/\s+/);
         const palavrasFaladas = faladoNorm.split(/\s+/);
         const emComum = palavrasEsperadas.filter(p => palavrasFaladas.includes(p)).length;
         const pct = emComum / palavrasEsperadas.length;
-        
         resultado.style.display = 'block';
-        
         if (pct >= 0.8) {
             resultado.className = 'mic-resultado acerto';
             resultado.innerHTML = `✅ Ótimo! Você disse: "${falado}"<br>🎉 Pronúncia correta!`;
-            if (!exRespondido) {
-                exAcertos++;
-                exRespondido = true;
-                const confirmBtn = document.getElementById('exConfirmar');
-                if (confirmBtn) confirmBtn.style.display = 'none';
-                document.getElementById('exProximo').style.display = 'block';
-            }
+            if (!exRespondido) { exAcertos++; exRespondido = true; const confirmBtn = document.getElementById('exConfirmar'); if (confirmBtn) confirmBtn.style.display = 'none'; document.getElementById('exProximo').style.display = 'block'; }
         } else if (pct >= 0.5) {
             resultado.className = 'mic-resultado parcial';
             resultado.innerHTML = `🟡 Quase lá! Você disse: "${falado}"<br>Esperado: "${textoEsperado}"<br>Tente novamente!`;
         } else {
             resultado.className = 'mic-resultado erro';
-            resultado.innerHTML = `❌ Tente novamente. Você disse: "${falado}"<br>Esperado: "${textoEsperado}"<br>🔁 Clique no microfone para tentar novamente.`;
+            resultado.innerHTML = `❌ Tente novamente. Você disse: "${falado}"<br>Esperado: "${textoEsperado}"`;
         }
     };
-    
-    recognition.onerror = function() {
-        resultado.style.display = 'block';
-        resultado.className = 'mic-resultado erro';
-        resultado.innerHTML = '❌ Erro no microfone. Tente novamente.';
-    };
-    
-    recognition.onend = function() {
-        btn.classList.remove('gravando');
-        btn.innerHTML = '🎙️ Gravar minha pronúncia';
-        exPronunciaRecognition = null;
-    };
-    
+    recognition.onerror = function() { resultado.style.display = 'block'; resultado.className = 'mic-resultado erro'; resultado.innerHTML = '❌ Erro no microfone. Tente novamente.'; };
+    recognition.onend = function() { btn.classList.remove('gravando'); btn.innerHTML = '🎙️ Gravar minha pronúncia'; exPronunciaRecognition = null; };
     recognition.start();
 };
 
@@ -1325,8 +1640,7 @@ window.selecionarPalavra = function(btn) {
     btn.classList.add('usada');
     const area = document.getElementById('exOrdenarArea');
     const chip = document.createElement('button');
-    chip.className = 'ex-palavra selecionada';
-    chip.textContent = palavra;
+    chip.className = 'ex-palavra selecionada'; chip.textContent = palavra;
     chip.onclick = function() {
         if (exRespondido) return;
         const idx = exOrdenarSelecionadas.lastIndexOf(palavra);
@@ -1340,13 +1654,8 @@ window.selecionarPalavra = function(btn) {
 window.confirmarResposta = function() {
     if (exRespondido) return;
     const ex = exFila[exAtual];
-    let certa = false;
-    let feedbackExtra = '';
-    
-    if (ex.tipo === 'multipla') {
-        return;
-    }
-    
+    let certa = false, feedbackExtra = '';
+    if (ex.tipo === 'multipla') return;
     if (ex.tipo === 'lacuna') {
         const input = document.getElementById('exLacunaInput');
         const resposta = input.value.trim().toLowerCase();
@@ -1356,20 +1665,14 @@ window.confirmarResposta = function() {
         if (!certa) feedbackExtra = `<br>Resposta correta: <strong>${ex.resposta}</strong>`;
         if (certa) exAcertos++;
         exRespondido = true;
-    } 
-    else if (ex.tipo === 'ordenar') {
+    } else if (ex.tipo === 'ordenar') {
         const frase = exOrdenarSelecionadas.join(' ').toLowerCase().trim();
-        const esperada = ex.resposta.toLowerCase().trim();
-        certa = frase === esperada;
+        certa = frase === ex.resposta.toLowerCase().trim();
         if (!certa) feedbackExtra = `<br>Resposta correta: <strong>${ex.resposta}</strong>`;
         if (certa) exAcertos++;
         exRespondido = true;
-        document.querySelectorAll('#exOrdenarArea .ex-palavra').forEach(p => {
-            p.style.borderColor = certa ? '#5cb85c' : '#e05c5c';
-            p.style.background = certa ? '#e8f5ef' : '#fff0f0';
-        });
-    } 
-    else if (ex.tipo === 'traduzir') {
+        document.querySelectorAll('#exOrdenarArea .ex-palavra').forEach(p => { p.style.borderColor = certa ? '#5cb85c' : '#e05c5c'; p.style.background = certa ? '#e8f5ef' : '#fff0f0'; });
+    } else if (ex.tipo === 'traduzir') {
         const input = document.getElementById('exTraduzirInput');
         const resposta = input.value.trim().toLowerCase();
         const palavrasChave = ex.palavrasChave || ex.resposta.toLowerCase().split(/\s+/).filter(p => p.length > 3);
@@ -1379,25 +1682,15 @@ window.confirmarResposta = function() {
         feedbackExtra = `<br>Uma tradução válida: <em>${ex.resposta}</em>`;
         if (certa) exAcertos++;
         exRespondido = true;
-    } 
-    else if (ex.tipo === 'pronuncia') {
-        if (!exRespondido) {
-            feedbackExtra = `<br>⚠️ Você precisa gravar sua pronúncia primeiro! Clique no microfone 🎙️ e tente dizer a palavra.`;
-            mostrarFeedback(false, ex.explicacao, feedbackExtra);
-            return;
-        }
+    } else if (ex.tipo === 'pronuncia') {
+        if (!exRespondido) { feedbackExtra = `<br>⚠️ Grave sua pronúncia primeiro!`; mostrarFeedback(false, ex.explicacao, feedbackExtra); return; }
         mostrarFeedback(true, ex.explicacao, '');
         document.getElementById('exConfirmar').style.display = 'none';
         document.getElementById('exProximo').style.display = 'block';
         return;
     }
-    
     mostrarFeedback(certa, ex.explicacao, feedbackExtra);
-    
-    if (exRespondido) {
-        document.getElementById('exConfirmar').style.display = 'none';
-        document.getElementById('exProximo').style.display = 'block';
-    }
+    if (exRespondido) { document.getElementById('exConfirmar').style.display = 'none'; document.getElementById('exProximo').style.display = 'block'; }
 };
 
 window.responderMultipla = function(btn, opcao, resposta) {
