@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quizlet — Vocabolario Italiano</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+
+:root {
+    --bg: #0d1117;
+    --surface: #161b22;
+    --surface2: #21262d;
+    --border: #30363d;
+    --verde: #3fb950;
+    --verde-dim: #1a6b4a;
+    --vermelho: #f85149;
+    --amarelo: #e3b341;
+    --azul: #58a6ff;
+    --texto: #e6edf3;
+    --texto-dim: #8b949e;
+    --radius: 14px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg);
+    color: var(--texto);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px 16px 60px;
+}
+
+/* HEADER */
+.header {
+    width: 100%;
+    max-width: 700px;
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.flag {
+    font-size: 2.5rem;
+    margin-bottom: 8px;
+    display: block;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.08); }
+}
+
+.header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.6rem, 5vw, 2.4rem);
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    color: var(--texto);
+    line-height: 1.1;
+}
+
+.header p {
+    color: var(--texto-dim);
+    font-size: 0.88rem;
+    margin-top: 6px;
+}
+
+/* DIAS NAV */
+.dias-nav {
+    width: 100%;
+    max-width: 700px;
+    display: flex;
+    gap: 6px;
+    margin-bottom: 28px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.dia-btn {
+    flex: 1;
+    min-width: 70px;
+    padding: 10px 8px;
+    border-radius: 10px;
+    border: 1.5px solid var(--border);
+    background: var(--surface);
+    color: var(--texto-dim);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-align: center;
+    line-height: 1.3;
+}
+
+.dia-btn:hover { border-color: var(--azul); color: var(--azul); }
+.dia-btn.ativo { background: var(--azul); border-color: var(--azul); color: #0d1117; }
+.dia-btn.bloqueado { opacity: 0.35; cursor: not-allowed; }
+.dia-btn.concluido { border-color: var(--verde); color: var(--verde); }
+.dia-btn.concluido.ativo { background: var(--verde); color: #0d1117; }
+
+.dia-btn .dia-nome { display: block; font-size: 0.72rem; }
+.dia-btn .dia-num  { display: block; font-size: 1.1rem; }
+
+/* STATS BAR */
+.stats-bar {
+    width: 100%;
+    max-width: 700px;
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.stat {
+    flex: 1;
+    min-width: 100px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 12px 16px;
+    text-align: center;
+}
+
+.stat .val {
+    font-family: 'DM Mono', monospace;
+    font-size: 1.6rem;
+    font-weight: 500;
+    display: block;
+}
+
+.stat .lbl {
+    font-size: 0.72rem;
+    color: var(--texto-dim);
+    margin-top: 2px;
+    display: block;
+}
+
+.stat.verde .val { color: var(--verde); }
+.stat.vermelho .val { color: var(--vermelho); }
+.stat.amarelo .val { color: var(--amarelo); }
+.stat.azul .val { color: var(--azul); }
+
+/* PROGRESSO */
+.progresso-wrap {
+    width: 100%;
+    max-width: 700px;
+    background: var(--surface2);
+    border-radius: 999px;
+    height: 6px;
+    margin-bottom: 28px;
+    overflow: hidden;
+}
+
+.progresso-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--verde-dim), var(--verde));
+    border-radius: 999px;
+    transition: width 0.5s ease;
+}
+
+/* CARD */
+.card-wrap {
+    width: 100%;
+    max-width: 700px;
+    perspective: 1200px;
+    margin-bottom: 24px;
+}
+
+.card {
+    width: 100%;
+    min-height: 260px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.55s cubic-bezier(.4,0,.2,1);
+    cursor: pointer;
+}
+
+.card.virado { transform: rotateY(180deg); }
+
+.card-frente,
+.card-verso {
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 28px;
+    border: 1.5px solid var(--border);
+    gap: 12px;
+}
+
+.card-frente {
+    background: var(--surface);
+}
+
+.card-verso {
+    background: var(--surface2);
+    border-color: var(--verde-dim);
+    transform: rotateY(180deg);
+}
+
+.card-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--texto-dim);
+}
+
+.card-palavra {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 6vw, 3.2rem);
+    font-weight: 900;
+    text-align: center;
+    line-height: 1.1;
+    color: var(--texto);
+}
+
+.card-frase {
+    font-size: 0.88rem;
+    color: var(--texto-dim);
+    font-style: italic;
+    text-align: center;
+    max-width: 420px;
+}
+
+.card-hint {
+    font-size: 0.75rem;
+    color: var(--texto-dim);
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.card-verso .card-palavra { color: var(--verde); }
+
+/* BADGE DIFICULDADE */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 3px 10px;
+    border-radius: 999px;
+    font-size: 0.72rem;
+    font-weight: 700;
+}
+
+.badge.hard { background: rgba(248,81,73,0.15); color: var(--vermelho); border: 1px solid rgba(248,81,73,0.3); }
+.badge.new  { background: rgba(88,166,255,0.12); color: var(--azul);   border: 1px solid rgba(88,166,255,0.25); }
+.badge.rev  { background: rgba(227,179,65,0.12); color: var(--amarelo);border: 1px solid rgba(227,179,65,0.25); }
+
+/* BOTÕES DE RESPOSTA */
+.botoes-resp {
+    width: 100%;
+    max-width: 700px;
+    display: flex;
+    gap: 12px;
+}
+
+.btn-resp {
+    flex: 1;
+    padding: 16px;
+    border-radius: var(--radius);
+    border: 1.5px solid;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.18s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.btn-certo {
+    background: rgba(63,185,80,0.08);
+    border-color: var(--verde-dim);
+    color: var(--verde);
+}
+.btn-certo:hover { background: var(--verde); color: #0d1117; }
+
+.btn-errado {
+    background: rgba(248,81,73,0.08);
+    border-color: rgba(248,81,73,0.4);
+    color: var(--vermelho);
+}
+.btn-errado:hover { background: var(--vermelho); color: white; }
+
+/* TELA INICIAL */
+.tela-inicio {
+    width: 100%;
+    max-width: 700px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 32px 28px;
+    text-align: center;
+}
+
+.tela-inicio h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+
+.tela-inicio p {
+    color: var(--texto-dim);
+    margin-bottom: 24px;
+    font-size: 0.92rem;
+    line-height: 1.6;
+}
+
+.grade-dias {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+.grade-dia {
+    background: var(--surface2);
+    border: 1.5px solid var(--border);
+    border-radius: 10px;
+    padding: 10px 4px;
+    font-size: 0.75rem;
+    text-align: center;
+    color: var(--texto-dim);
+}
+
+.grade-dia .gd-nome { display: block; font-size: 0.68rem; margin-bottom: 4px; }
+.grade-dia .gd-count { display: block; font-size: 1.1rem; font-weight: 700; color: var(--texto); }
+.grade-dia.bloq { opacity: 0.3; }
+.grade-dia.ok { border-color: var(--verde); }
+.grade-dia.ok .gd-count { color: var(--verde); }
+.grade-dia.hoje { border-color: var(--azul); background: rgba(88,166,255,0.07); }
+.grade-dia.hoje .gd-count { color: var(--azul); }
+
+/* BOTÃO PRIMÁRIO */
+.btn-primario {
+    display: inline-block;
+    padding: 14px 36px;
+    background: var(--verde);
+    color: #0d1117;
+    border: none;
+    border-radius: var(--radius);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+    letter-spacing: 0.01em;
+}
+.btn-primario:hover { background: #52d363; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(63,185,80,0.3); }
+
+/* TELA FIM */
+.tela-fim {
+    width: 100%;
+    max-width: 700px;
+    background: var(--surface);
+    border: 1px solid var(--verde-dim);
+    border-radius: 20px;
+    padding: 40px 28px;
+    text-align: center;
+}
+
+.tela-fim .estrelas { font-size: 2.5rem; margin-bottom: 12px; }
+
+.tela-fim h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+}
+
+.tela-fim p { color: var(--texto-dim); margin-bottom: 24px; line-height: 1.6; }
+
+.lista-erros {
+    text-align: left;
+    background: var(--surface2);
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(248,81,73,0.2);
+}
+
+.lista-erros h4 {
+    font-size: 0.78rem;
+    color: var(--vermelho);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 12px;
+}
+
+.erro-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.88rem;
+    gap: 16px;
+}
+.erro-item:last-child { border-bottom: none; }
+.erro-item .it { font-family: 'DM Mono', monospace; color: var(--vermelho); }
+.erro-item .pt { color: var(--texto-dim); font-style: italic; }
+
+/* RESETS LINK */
+.reset-link {
+    display: inline-block;
+    margin-top: 16px;
+    color: var(--texto-dim);
+    font-size: 0.8rem;
+    cursor: pointer;
+    text-decoration: underline;
+    background: none;
+    border: none;
+    font-family: inherit;
+}
+.reset-link:hover { color: var(--vermelho); }
+
+/* MODO */
+.modo-selector {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+.modo-btn {
+    padding: 6px 16px;
+    border-radius: 20px;
+    border: 1.5px solid var(--border);
+    background: transparent;
+    color: var(--texto-dim);
+    font-size: 0.8rem;
+    font-weight: 700;
+    cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    transition: all 0.2s;
+}
+.modo-btn.ativo { border-color: var(--amarelo); color: var(--amarelo); background: rgba(227,179,65,0.08); }
+
+/* MULTIPLA ESCOLHA */
+.opcoes-grid {
+    width: 100%;
+    max-width: 700px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 24px;
+}
+
+.opcao-btn {
+    padding: 16px;
+    border-radius: var(--radius);
+    border: 1.5px solid var(--border);
+    background: var(--surface);
+    color: var(--texto);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.92rem;
+    cursor: pointer;
+    transition: all 0.18s;
+    text-align: left;
+    line-height: 1.4;
+}
+
+.opcao-btn:hover { border-color: var(--azul); background: rgba(88,166,255,0.07); }
+.opcao-btn.certa { border-color: var(--verde); background: rgba(63,185,80,0.12); color: var(--verde); }
+.opcao-btn.errada { border-color: var(--vermelho); background: rgba(248,81,73,0.1); color: var(--vermelho); }
+.opcao-btn:disabled { cursor: default; }
+
+/* BOTÃO VOLTAR */
+.voltar-link {
+    display: inline-block;
+    margin-top: 24px;
+    color: var(--azul);
+    font-size: 0.85rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-family: inherit;
+    text-decoration: underline;
+}
+.voltar-link:hover { color: var(--verde); }
+
+@media(max-width:500px){
+    .grade-dias { grid-template-columns: repeat(4, 1fr); }
+    .opcoes-grid { grid-template-columns: 1fr; }
+    .botoes-resp { flex-direction: column; }
+}
+
+</style>
+</head>
+<body>
+
+<div class="header">
+    <span class="flag">📚🇮🇹</span>
+    <h1 id="headerTitle">Quizlet — Vocabolario Italiano</h1>
+    <p id="headerSubtitle">Carregando...</p>
+</div>
+
+<div id="app"></div>
+
+<script>
+// ========== VARIÁVEIS GLOBAIS ==========
+let VOCAB = [];
+let TOTAL = 0;
+let POR_DIA = 0;
+let DIAS = [];
+let NOMES_DIAS = ["Dia 1","Dia 2","Dia 3","Dia 4","Dia 5","Dia 6","Dia 7"];
+let NOMES_FULL = ["Primeiro Dia","Segundo Dia","Terceiro Dia","Quarto Dia","Quinto Dia","Sexto Dia","Sétimo Dia"];
+
+// Estado do usuário
+let estado = null;
+let diaVisto = 0;
+let modoAtual = "flash";
+let baralhado = [];
+let idxAtual = 0;
+let virado = false;
+let acertosSessao = 0;
+let errosSessao = 0;
+let errosDaSessao = {};
+
+const LS_KEY = "quizlet_italian_dinamico";
+
+// ========== FUNÇÕES DE CARREGAMENTO ==========
+async function carregarQuizlet() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const quizletId = urlParams.get('quizlet') || '1';
+    
+    try {
+        const response = await fetch(`dados/quizlet${quizletId}.json`);
+        const data = await response.json();
+        
+        document.title = data.titulo;
+        document.getElementById('headerTitle').textContent = data.titulo;
+        document.getElementById('headerSubtitle').innerHTML = `${data.palavras} palavras em ${data.licoes} lições · ${data.descricao}`;
+        
+        VOCAB = data.conteudo.cards.map(card => ({
+            termo: card.termo,
+            definicao: card.definicao,
+            frase: card.frase || "",
+            dificuldade: card.dificuldade || 1
+        }));
+        
+        TOTAL = VOCAB.length;
+        POR_DIA = Math.ceil(TOTAL / 7);
+        
+        DIAS = [];
+        for(let i = 0; i < 7; i++){
+            DIAS.push(VOCAB.slice(i * POR_DIA, (i+1) * POR_DIA));
+        }
+        
+        estado = carregarEstado();
+        diaVisto = estado.diaAtual;
+        
+        render();
+        
+    } catch (error) {
+        console.error('Erro ao carregar quizlet:', error);
+        document.getElementById('app').innerHTML = `
+            <div class="tela-inicio">
+                <h2>❌ Erro ao carregar vocabulário</h2>
+                <p>Não foi possível carregar o vocabulário. Verifique se o arquivo JSON existe.</p>
+                <button class="btn-primario" onclick="window.location.href='index.html'">Voltar</button>
+            </div>
+        `;
+    }
+}
+
+// ========== FUNÇÕES DE ESTADO ==========
+function carregarEstado(){
+    try {
+        const raw = localStorage.getItem(LS_KEY);
+        if(raw) return JSON.parse(raw);
+    } catch(e){}
+    return {
+        diaAtual: 0,
+        diasConcluidos: [],
+        erros: {},
+        historico: {},
+        iniciadoEm: Date.now()
+    };
+}
+
+function salvarEstado(st){
+    try { localStorage.setItem(LS_KEY, JSON.stringify(st)); } catch(e){}
+}
+
+function obterCartasDoDia(diaIdx){
+    const base = [...DIAS[diaIdx]];
+    const errosAnteriores = [];
+    for(const [palavra, cnt] of Object.entries(estado.erros)){
+        if(cnt >= 1){
+            const card = VOCAB.find(v => v.termo === palavra);
+            if(card && !base.find(b => b.termo === palavra)){
+                errosAnteriores.push(card);
+            }
+        }
+    }
+    const todas = [...base, ...errosAnteriores];
+    return embaralhar(todas);
+}
+
+function embaralhar(arr){
+    const a = [...arr];
+    for(let i = a.length - 1; i > 0; i--){
+        const j = Math.floor(Math.random() * (i+1));
+        [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+}
+
+function gerarOpcoes(cartaCorreta, pool){
+    const erradas = pool.filter(c => c.termo !== cartaCorreta.termo);
+    const sel = embaralhar(erradas).slice(0, 3);
+    return embaralhar([cartaCorreta, ...sel]);
+}
+
+// ========== RENDER ==========
+const app = document.getElementById("app");
+
+function render(){
+    app.innerHTML = "";
+
+    if(baralhado.length === 0 || idxAtual >= baralhado.length){
+        if(acertosSessao + errosSessao > 0){
+            renderFim();
+        } else {
+            renderInicio();
+        }
+        return;
+    }
+
+    renderDiasNav();
+    renderStats();
+    renderProgresso();
+    renderModoSelector();
+    renderCard();
+    if(modoAtual === "flash"){
+        renderBotoesFlash();
+    }
+}
+
+function renderDiasNav(){
+    const wrap = document.createElement("div");
+    wrap.className = "dias-nav";
+    for(let i = 0; i < 7; i++){
+        const btn = document.createElement("button");
+        btn.className = "dia-btn";
+        const concluido = estado.diasConcluidos.includes(i);
+        const bloqueado = i > estado.diaAtual;
+        if(i === diaVisto) btn.classList.add("ativo");
+        if(concluido) btn.classList.add("concluido");
+        if(bloqueado) btn.classList.add("bloqueado");
+        btn.innerHTML = `<span class="dia-nome">${NOMES_DIAS[i]}</span><span class="dia-num">${i+1}</span>`;
+        if(!bloqueado){
+            btn.onclick = () => { diaVisto = i; iniciarSessao(i); };
+        }
+        wrap.appendChild(btn);
+    }
+    app.appendChild(wrap);
+}
+
+function renderStats(){
+    const wrap = document.createElement("div");
+    wrap.className = "stats-bar";
+    const totalSessao = baralhado.length;
+    const qtdErros = Object.values(estado.erros).filter(v => v > 0).length;
+    wrap.innerHTML = `
+        <div class="stat azul"><span class="val">${idxAtual + 1}/${totalSessao}</span><span class="lbl">carta atual</span></div>
+        <div class="stat verde"><span class="val">${acertosSessao}</span><span class="lbl">corretas</span></div>
+        <div class="stat vermelho"><span class="val">${errosSessao}</span><span class="lbl">erros</span></div>
+        <div class="stat amarelo"><span class="val">${qtdErros}</span><span class="lbl">para revisar</span></div>
+    `;
+    app.appendChild(wrap);
+}
+
+function renderProgresso(){
+    const pct = baralhado.length > 0 ? ((idxAtual) / baralhado.length * 100) : 0;
+    const wrap = document.createElement("div");
+    wrap.className = "progresso-wrap";
+    wrap.innerHTML = `<div class="progresso-fill" style="width:${pct}%"></div>`;
+    app.appendChild(wrap);
+}
+
+function renderModoSelector(){
+    const wrap = document.createElement("div");
+    wrap.className = "modo-selector";
+    wrap.innerHTML = `
+        <button class="modo-btn ${modoAtual==='flash'?'ativo':''}" data-modo="flash">🃏 Flashcard</button>
+        <button class="modo-btn ${modoAtual==='multipla'?'ativo':''}" data-modo="multipla">🎯 Múltipla Escolha</button>
+    `;
+    const btns = wrap.querySelectorAll(".modo-btn");
+    btns.forEach(btn => {
+        btn.addEventListener("click", (e) => {
+            const modo = btn.getAttribute("data-modo");
+            setModo(modo);
+        });
+    });
+    app.appendChild(wrap);
+}
+
+function setModo(m){
+    modoAtual = m;
+    virado = false;
+    render();
+}
+
+function renderCard(){
+    const carta = baralhado[idxAtual];
+    const wrap = document.createElement("div");
+    wrap.className = "card-wrap";
+
+    let badgeHtml = "";
+    if(estado.erros[carta.termo] > 0){
+        const cnt = estado.erros[carta.termo];
+        badgeHtml = `<span class="badge hard">🔴 Difícil (${cnt}x erros)</span>`;
+    } else if(!DIAS[diaVisto].find(c => c.termo === carta.termo)){
+        badgeHtml = `<span class="badge rev">🔄 Revisão</span>`;
+    } else {
+        badgeHtml = `<span class="badge new">✨ Nova</span>`;
+    }
+
+    wrap.innerHTML = `
+        <div class="card ${virado ? 'virado' : ''}" id="cartaEl">
+            <div class="card-frente">
+                ${badgeHtml}
+                <span class="card-label">Italiano</span>
+                <div class="card-palavra">${carta.termo}</div>
+                <div class="card-frase">${carta.frase || ''}</div>
+                <span class="card-hint">👆 Clique para ver a tradução</span>
+            </div>
+            <div class="card-verso">
+                ${badgeHtml}
+                <span class="card-label">Português</span>
+                <div class="card-palavra">${carta.definicao}</div>
+                <div class="card-frase">${carta.frase || ''}</div>
+                ${modoAtual === 'flash' ? '<span class="card-hint">👆 Use os botões abaixo</span>' : ''}
+            </div>
+        </div>
+    `;
+    
+    const cardEl = wrap.querySelector("#cartaEl");
+    cardEl.addEventListener("click", (e) => {
+        if(e.target.closest(".btn-resp")) return;
+        virado = !virado;
+        cardEl.classList.toggle("virado", virado);
+        atualizarBotoesFlash();
+    });
+    
+    app.appendChild(wrap);
+    
+    if(modoAtual === "multipla"){
+        renderOpcoes(carta);
+    }
+}
+
+function atualizarBotoesFlash(){
+    const botoes = document.querySelectorAll(".btn-resp");
+    botoes.forEach(b => {
+        b.disabled = !virado;
+        b.style.opacity = virado ? "1" : "0.3";
+        b.style.cursor = virado ? "pointer" : "not-allowed";
+    });
+}
+
+function renderBotoesFlash(){
+    const wrap = document.createElement("div");
+    wrap.className = "botoes-resp";
+    wrap.innerHTML = `
+        <button class="btn-resp btn-errado" data-resposta="errado">✗ Não sabia</button>
+        <button class="btn-resp btn-certo" data-resposta="certo">✓ Sabia!</button>
+    `;
+    
+    const btnErrado = wrap.querySelector('[data-resposta="errado"]');
+    const btnCerto = wrap.querySelector('[data-resposta="certo"]');
+    
+    btnErrado.addEventListener("click", () => responder(false));
+    btnCerto.addEventListener("click", () => responder(true));
+    
+    btnErrado.disabled = !virado;
+    btnCerto.disabled = !virado;
+    btnErrado.style.opacity = virado ? "1" : "0.3";
+    btnCerto.style.opacity = virado ? "1" : "0.3";
+    btnErrado.style.cursor = virado ? "pointer" : "not-allowed";
+    btnCerto.style.cursor = virado ? "pointer" : "not-allowed";
+    
+    app.appendChild(wrap);
+}
+
+function renderOpcoes(cartaCorreta){
+    const todasDefinicoes = baralhado.map(c => c.definicao);
+    const opcoesDef = embaralhar([cartaCorreta.definicao, ...embaralhar(todasDefinicoes.filter(d => d !== cartaCorreta.definicao)).slice(0, 3)]);
+    
+    const grid = document.createElement("div");
+    grid.className = "opcoes-grid";
+    grid.id = "opcoesGrid";
+
+    opcoesDef.forEach(def => {
+        const btn = document.createElement("button");
+        btn.className = "opcao-btn";
+        btn.textContent = def;
+        btn.addEventListener("click", () => escolherOpcaoMultipla(btn, def, cartaCorreta, grid));
+        grid.appendChild(btn);
+    });
+
+    app.appendChild(grid);
+}
+
+function escolherOpcaoMultipla(btn, escolhaDef, correta, grid){
+    const btns = grid.querySelectorAll(".opcao-btn");
+    btns.forEach(b => b.disabled = true);
+
+    const acertou = escolhaDef === correta.definicao;
+
+    btns.forEach(b => {
+        if(b.textContent === correta.definicao) b.classList.add("certa");
+    });
+
+    if(!acertou){
+        btn.classList.add("errada");
+    }
+
+    virado = true;
+    const el = document.getElementById("cartaEl");
+    if(el) el.classList.add("virado");
+
+    setTimeout(() => responder(acertou), 900);
+}
+
+function responder(acertou){
+    const carta = baralhado[idxAtual];
+
+    if(acertou){
+        acertosSessao++;
+        if(estado.erros[carta.termo] > 0) estado.erros[carta.termo]--;
+    } else {
+        errosSessao++;
+        errosDaSessao[carta.termo] = true;
+        estado.erros[carta.termo] = (estado.erros[carta.termo] || 0) + 1;
+    }
+
+    salvarEstado(estado);
+
+    idxAtual++;
+    virado = false;
+
+    if(idxAtual >= baralhado.length){
+        if(!estado.diasConcluidos.includes(diaVisto)){
+            estado.diasConcluidos.push(diaVisto);
+        }
+        if(diaVisto === estado.diaAtual && estado.diaAtual < 6){
+            estado.diaAtual++;
+        }
+        estado.historico[diaVisto] = { acertos: acertosSessao, erros: errosSessao };
+        salvarEstado(estado);
+        render();
+        return;
+    }
+
+    render();
+}
+
+function renderInicio(){
+    const wrap = document.createElement("div");
+    wrap.className = "tela-inicio";
+
+    const diaHoje = estado.diaAtual;
+    const cartasHoje = obterCartasDoDia(diaHoje);
+    const qtdRevisao = Object.values(estado.erros).filter(v => v > 0).length;
+
+    const gradeHTML = DIAS.map((d, i) => {
+        const bloq = i > estado.diaAtual;
+        const ok   = estado.diasConcluidos.includes(i);
+        const hoje = i === estado.diaAtual;
+        return `
+            <div class="grade-dia ${bloq?'bloq':''} ${ok?'ok':''} ${hoje?'hoje':''}">
+                <span class="gd-nome">${NOMES_DIAS[i]}</span>
+                <span class="gd-count">${DIAS[i].length}${ok?'✓':''}</span>
+            </div>
+        `;
+    }).join("");
+
+    wrap.innerHTML = `
+        <h2>📖 Lição ${estado.diaAtual + 1} — ${NOMES_FULL[estado.diaAtual]}</h2>
+        <p>
+            ${DIAS[estado.diaAtual].length} palavras novas
+            ${qtdRevisao > 0 ? `· <span style="color:var(--vermelho)">+${qtdRevisao} revisões de dias anteriores</span>` : ''}
+            <br>Total de cartões hoje: <strong>${cartasHoje.length}</strong>
+        </p>
+        <div class="grade-dias">${gradeHTML}</div>
+        <button class="btn-primario" id="btnIniciar">▶ Começar lição ${estado.diaAtual + 1}</button>
+        ${estado.diasConcluidos.length > 0 ? `
+            <div style="margin-top:16px">
+                <button class="reset-link" id="btnResetar">🗑 Resetar todo progresso</button>
+            </div>
+        ` : ""}
+        <button class="voltar-link" id="btnVoltarPagina">← Voltar para página da aula</button>
+    `;
+    
+    const btnIniciar = wrap.querySelector("#btnIniciar");
+    if(btnIniciar) btnIniciar.addEventListener("click", () => iniciarSessao(estado.diaAtual));
+    
+    const btnResetar = wrap.querySelector("#btnResetar");
+    if(btnResetar) btnResetar.addEventListener("click", () => resetarProgresso());
+    
+    const btnVoltar = wrap.querySelector("#btnVoltarPagina");
+    if(btnVoltar) btnVoltar.addEventListener("click", () => window.history.back());
+    
+    app.appendChild(wrap);
+}
+
+function iniciarSessao(diaIdx){
+    diaVisto = diaIdx;
+    baralhado = obterCartasDoDia(diaIdx);
+    idxAtual = 0;
+    virado = false;
+    acertosSessao = 0;
+    errosSessao = 0;
+    errosDaSessao = {};
+    render();
+}
+
+function renderFim(){
+    const wrap = document.createElement("div");
+    wrap.className = "tela-fim";
+
+    const total = acertosSessao + errosSessao;
+    const pct = total > 0 ? Math.round(acertosSessao / total * 100) : 0;
+    const estrelas = pct >= 90 ? "⭐⭐⭐" : pct >= 70 ? "⭐⭐" : "⭐";
+    let msg = "";
+    if(pct >= 90) msg = "Excelente! Você dominou esta lição!";
+    else if(pct >= 70) msg = "Bom trabalho! Continue praticando!";
+    else msg = "Não desista — repetição é a chave!";
+
+    const errosLista = Object.keys(errosDaSessao);
+
+    let errosHTML = "";
+    if(errosLista.length > 0){
+        const itens = errosLista.map(p => {
+            const c = VOCAB.find(v => v.termo === p);
+            return `<div class="erro-item"><span class="it">${p}</span><span class="pt">${c ? c.definicao : ""}</span></div>`;
+        }).join("");
+        errosHTML = `
+            <div class="lista-erros">
+                <h4>🔴 Palavras para revisar nos próximos dias</h4>
+                ${itens}
+            </div>
+        `;
+    }
+
+    const proximoDesbloqueado = estado.diaAtual < 7;
+
+    wrap.innerHTML = `
+        <div class="estrelas">${estrelas}</div>
+        <h2>${msg}</h2>
+        <p>
+            Corretas: <strong style="color:var(--verde)">${acertosSessao}</strong> &nbsp;·&nbsp;
+            Erros: <strong style="color:var(--vermelho)">${errosSessao}</strong> &nbsp;·&nbsp;
+            Taxa: <strong style="color:var(--amarelo)">${pct}%</strong>
+        </p>
+        ${errosHTML}
+        ${proximoDesbloqueado && estado.diaAtual <= 6 ? `
+            <button class="btn-primario" id="btnProximo">📚 Lição ${estado.diaAtual + 1} →</button>
+            <br>
+        ` : ""}
+        <button class="btn-primario" id="btnVoltarInicio" style="margin-top:12px;background:var(--surface2);color:var(--texto);border:1.5px solid var(--border);">← Voltar ao início</button>
+    `;
+    
+    const btnProximo = wrap.querySelector("#btnProximo");
+    if(btnProximo) btnProximo.addEventListener("click", () => iniciarSessao(estado.diaAtual));
+    
+    const btnVoltarInicio = wrap.querySelector("#btnVoltarInicio");
+    if(btnVoltarInicio) btnVoltarInicio.addEventListener("click", () => voltarInicio());
+    
+    app.appendChild(wrap);
+}
+
+function voltarInicio(){
+    baralhado = [];
+    idxAtual = 0;
+    acertosSessao = 0;
+    errosSessao = 0;
+    errosDaSessao = {};
+    render();
+}
+
+function resetarProgresso(){
+    if(!confirm("Tem certeza? Todo o progresso será deletado. 🗑️")) return;
+    localStorage.removeItem(LS_KEY);
+    estado = carregarEstado();
+    diaVisto = estado.diaAtual;
+    voltarInicio();
+}
+
+// ========== EXPOR FUNÇÕES GLOBAIS ==========
+window.setModo = setModo;
+window.responder = responder;
+window.iniciarSessao = iniciarSessao;
+window.resetarProgresso = resetarProgresso;
+window.voltarInicio = voltarInicio;
+
+// ========== INICIAR ==========
+carregarQuizlet();
+</script>
+</body>
+</html>
