@@ -361,28 +361,6 @@ details[open] summary::after{ transform:rotate(180deg); }
 
 /* Botão microfone — oculto inline, usado via painel flutuante */
 .mic-btn { display: none; }
-.mic-btn.gravando {
-    background: #ffeaea;
-    border-color: #e05c5c;
-    color: #c0392b;
-    animation: pulso 1s infinite;
-}
-@keyframes pulso {
-    0%, 100% { box-shadow: 0 0 0 0 rgba(224,92,92,0.4); }
-    50% { box-shadow: 0 0 0 6px rgba(224,92,92,0); }
-}
-
-.mic-resultado {
-    margin-top: 8px;
-    padding: 8px 10px;
-    border-radius: 10px;
-    font-size: 0.82rem;
-    line-height: 1.5;
-    display: none;
-}
-.mic-resultado.acerto { background: #e8f5ef; border: 1px solid #5cb85c; color: #1a6b3a; display: block; }
-.mic-resultado.erro { background: #fff0f0; border: 1px solid #e05c5c; color: #8b1a1a; display: block; }
-.mic-resultado.parcial { background: #fffbea; border: 1px solid #e0c93a; color: #5a4a00; display: block; }
 
 /* Anotações — botão inline oculto, usado via painel flutuante */
 .nota-btn { display: none; }
@@ -853,6 +831,171 @@ details[open] summary::after{ transform:rotate(180deg); }
     .fa-toggle { left: 16px; bottom: 16px; }
     .fa-painel  { left: 16px; bottom: 74px; width: 190px; }
 }
+
+/* ========== MODAL DE PRÁTICA DE PRONÚNCIA ========== */
+.pratica-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.2s ease;
+}
+.pratica-modal-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(4px);
+}
+.pratica-modal-box {
+    position: relative;
+    width: 90%;
+    max-width: 550px;
+    background: #fffdf8;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 24px 80px rgba(0,0,0,0.4);
+    animation: slideUp 0.3s cubic-bezier(.4,0,.2,1);
+}
+.pratica-modal-header {
+    padding: 18px 20px 12px;
+    border-bottom: 1px solid #f0e8d8;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fffdf8;
+}
+.pratica-modal-titulo {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #6a1a9e;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+.pratica-modal-ref {
+    font-size: 0.7rem;
+    color: #999;
+    font-style: italic;
+    margin-top: 4px;
+    max-width: 350px;
+}
+.pratica-modal-close {
+    background: #f0e8d8;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+.pratica-modal-close:hover { background: #e0d0b8; }
+.pratica-conteudo { padding: 20px; }
+.pratica-frase-area {
+    background: #f5f0e8;
+    border-radius: 16px;
+    padding: 16px;
+    margin-bottom: 20px;
+}
+.pratica-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #b05000;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 8px;
+}
+.pratica-frase {
+    font-family: 'Lora', serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #1c1c1c;
+    margin-bottom: 12px;
+    padding: 8px;
+    background: white;
+    border-radius: 12px;
+}
+.pratica-ouvir-btn {
+    background: #6a1a9e;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.pratica-ouvir-btn:hover { background: #8b3ac4; transform: scale(1.02); }
+.pratica-gravacao-area {
+    background: #f0f4f8;
+    border-radius: 16px;
+    padding: 16px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.pratica-gravar-btn {
+    background: #1a6b4a;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+    width: 100%;
+}
+.pratica-gravar-btn:hover { background: #145c3d; transform: scale(1.02); }
+.pratica-gravar-btn.gravando {
+    background: #e05c5c;
+    animation: pulso 1s infinite;
+}
+.pratica-status {
+    margin-top: 10px;
+    font-size: 0.8rem;
+    color: #666;
+    font-style: italic;
+}
+.pratica-resultado-area {
+    background: #e8f5ef;
+    border-radius: 16px;
+    padding: 16px;
+    margin-bottom: 20px;
+}
+.pratica-resultado {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #1c1c1c;
+}
+.pratica-resultado.acerto { color: #1a6b3a; font-weight: 600; }
+.pratica-resultado.parcial { color: #7a6000; font-weight: 600; }
+.pratica-resultado.erro { color: #c0392b; font-weight: 600; }
+.pratica-footer {
+    padding: 12px 20px 20px;
+    border-top: 1px solid #f0e8d8;
+    display: flex;
+    justify-content: flex-end;
+}
+.pratica-fechar-btn {
+    background: #e0d0b8;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 10px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.pratica-fechar-btn:hover { background: #d0c0a8; }
+@keyframes pulso {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(224,92,92,0.4); }
+    50% { box-shadow: 0 0 0 6px rgba(224,92,92,0); }
+}
 </style>
 </head>
 <body>
@@ -924,6 +1067,47 @@ details[open] summary::after{ transform:rotate(180deg); }
     <div class="qmodal-box">
         <button class="qmodal-close" onclick="fecharQuizlet()">✕</button>
         <iframe id="quizletFrame" src="" frameborder="0" class="qmodal-frame"></iframe>
+    </div>
+</div>
+
+<!-- MODAL PRÁTICA DE PRONÚNCIA -->
+<div id="praticaModal" class="pratica-modal" style="display:none">
+    <div class="pratica-modal-overlay" onclick="fecharPraticaModal()"></div>
+    <div class="pratica-modal-box">
+        <div class="pratica-modal-header">
+            <div>
+                <div class="pratica-modal-titulo">🎙️ Prática de Pronúncia</div>
+                <div class="pratica-modal-ref" id="praticaModalRef">Frase para praticar</div>
+            </div>
+            <button class="pratica-modal-close" onclick="fecharPraticaModal()">✕</button>
+        </div>
+        
+        <div class="pratica-conteudo">
+            <div class="pratica-frase-area">
+                <div class="pratica-label">🎯 Frase para praticar:</div>
+                <div class="pratica-frase" id="praticaFrase"></div>
+                <button class="pratica-ouvir-btn" onclick="ouvirFrasePratica()">
+                    🔊 Ouvir pronúncia correta
+                </button>
+            </div>
+            
+            <div class="pratica-gravacao-area">
+                <div class="pratica-label">🎤 Sua vez:</div>
+                <button class="pratica-gravar-btn" id="praticaGravarBtn" onclick="iniciarGravacaoPratica()">
+                    🎙️ Clique e fale
+                </button>
+                <div class="pratica-status" id="praticaStatus"></div>
+            </div>
+            
+            <div class="pratica-resultado-area" id="praticaResultadoArea" style="display:none">
+                <div class="pratica-label">📊 Resultado:</div>
+                <div class="pratica-resultado" id="praticaResultado"></div>
+            </div>
+        </div>
+        
+        <div class="pratica-footer">
+            <button class="pratica-fechar-btn" onclick="fecharPraticaModal()">Fechar</button>
+        </div>
     </div>
 </div>
 
@@ -1033,7 +1217,6 @@ async function _persistir(dados) {
     }
 }
 
-
 // ========== APLICAR IDIOMA_CONFIG ==========
 (function aplicarConfig() {
     const cfg = window.IDIOMA_CONFIG || {};
@@ -1042,7 +1225,6 @@ async function _persistir(dados) {
     const root = document.documentElement;
     root.style.setProperty('--verde', cor);
     root.style.setProperty('--verde-claro', corClaro);
-    // Título da aba
     const label = (cfg.bandeira ? cfg.bandeira + ' ' : '') + (cfg.nome || 'Idioma') + ' — Aula';
     document.title = label;
     const titleEl = document.getElementById('pageTitle');
@@ -1117,7 +1299,6 @@ async function atualizarPainelAcoes() {
         const texto = textoEl ? textoEl.innerText.replace(/\(\d+:\d+\)\s*/, '').substring(0, 36) + '…' : `Parágrafo ${currentBlockIndex + 1}`;
         infoEl.textContent = texto;
 
-        // Estado tradução
         const tradCol = blocoAtivo.querySelector('.trad-col');
         const btnTrad = document.getElementById('faBtnTrad');
         if (tradCol && btnTrad) {
@@ -1125,7 +1306,6 @@ async function atualizarPainelAcoes() {
             btnTrad.textContent = aberta ? '🌐 Fechar' : '🌐 Trad.';
         }
 
-        // Estado dica
         const dicaCol = blocoAtivo.querySelector('.dica-col');
         const btnDica = document.getElementById('faBtnDica');
         if (dicaCol && btnDica) {
@@ -1133,7 +1313,6 @@ async function atualizarPainelAcoes() {
             btnDica.textContent = aberta ? '💡 Fechar' : '💡 Dica';
         }
 
-        // Estado mini lição
         const miniCol = blocoAtivo.querySelector('.mini-col');
         const btnMini = document.getElementById('faBtnMini');
         if (btnMini) {
@@ -1146,7 +1325,6 @@ async function atualizarPainelAcoes() {
             }
         }
 
-        // Badge de notas
         await atualizarBadgeNotaPainel(currentBlockIndex);
     } else {
         infoEl.textContent = 'Nenhum parágrafo ativo';
@@ -1169,7 +1347,6 @@ async function atualizarBadgeNotaPainel(index) {
     }
 }
 
-// Toggle tradução do bloco ativo
 window.faToogleTrad = async function() {
     const blocos = document.querySelectorAll('.bloco');
     const blocoAtivo = blocos[currentBlockIndex];
@@ -1184,7 +1361,6 @@ window.faToogleTrad = async function() {
     if (!aberto) blocoAtivo.scrollIntoView({ behavior: 'smooth', block: 'center' });
 };
 
-// Toggle dica do bloco ativo
 window.faToogleDica = async function() {
     const blocos = document.querySelectorAll('.bloco');
     const blocoAtivo = blocos[currentBlockIndex];
@@ -1199,14 +1375,13 @@ window.faToogleDica = async function() {
     if (!aberto) blocoAtivo.scrollIntoView({ behavior: 'smooth', block: 'center' });
 };
 
-// Toggle mini lição do bloco ativo
 window.faToogleMini = async function() {
     const blocos = document.querySelectorAll('.bloco');
     const blocoAtivo = blocos[currentBlockIndex];
     if (!blocoAtivo) return;
     const col = blocoAtivo.querySelector('.mini-col');
     const btn = blocoAtivo.querySelector('.mini-btn');
-    if (!col) return; // bloco sem mini lição
+    if (!col) return;
     const aberto = col.classList.contains('aberto');
     col.classList.toggle('aberto', !aberto);
     if (btn) btn.classList.toggle('aberto', !aberto);
@@ -1215,7 +1390,6 @@ window.faToogleMini = async function() {
     if (!aberto) blocoAtivo.scrollIntoView({ behavior: 'smooth', block: 'center' });
 };
 
-// Praticar fala do bloco ativo
 window.faAcaoMic = async function() {
     const blocos = document.querySelectorAll('.bloco');
     const blocoAtivo = blocos[currentBlockIndex];
@@ -1229,7 +1403,6 @@ window.faAcaoMic = async function() {
     }
 };
 
-// Exercícios do bloco ativo
 window.faAcaoEx = async function() {
     const blocos = document.querySelectorAll('.bloco');
     const blocoAtivo = blocos[currentBlockIndex];
@@ -1241,7 +1414,6 @@ window.faAcaoEx = async function() {
     else abrirExercicios(null, currentBlockIndex);
 };
 
-// Anotações do bloco ativo
 window.faAcaoNota = async function() {
     document.getElementById('faPainel').classList.remove('aberto');
     document.getElementById('faToggle').classList.remove('aberto');
@@ -1310,7 +1482,6 @@ window.previousParagraph = function() {
     }
 }
 
-// Ocultar/Mostrar vídeo
 window.toggleVideo = function() {
     const videoArea = document.querySelector('.video-area');
     const textoArea = document.querySelector('.texto-area');
@@ -1366,7 +1537,6 @@ function renderizarBlocos(blocos) {
         const secs = bloco.start % 60;
         const tempo = `${mins}:${secs.toString().padStart(2,'0')}`;
 
-        // Mini lição: botão toggle + colapsável (igual à Tradução e Dica)
         const miniLicaoHTML = bloco.miniLesson ? `
             <button class="toggle-btn mini-btn" onclick="toggleItem(this)">📘 Mini Lição <span class="seta">▾</span></button>
             <div class="colapsavel mini-col"><div class="mini-aula-corpo"><strong>${bloco.miniLesson.title}</strong><br><br>${bloco.miniLesson.content}</div></div>
@@ -1433,57 +1603,181 @@ document.getElementById("speedControl").addEventListener("change", function() { 
 document.addEventListener('keydown', function(e) { if (e.key === 'Escape') fecharQuizlet(); });
 carregarPreferenciaVideo();
 
-// ========== PRÁTICA DE FALA ==========
-let recognitionAtiva = null;
-window.iniciarPratica = function(btn) {
+// ========== PRÁTICA DE FALA COM MODAL ==========
+let praticaTextoEsperado = '';
+let praticaRecognition = null;
+
+window.abrirPraticaModal = function(textoItaliano) {
+    praticaTextoEsperado = textoItaliano;
+    
+    const fraseEl = document.getElementById('praticaFrase');
+    const refEl = document.getElementById('praticaModalRef');
+    if (fraseEl) fraseEl.innerHTML = `<em>"${textoItaliano}"</em>`;
+    if (refEl) refEl.textContent = 'Frase em ' + ((window.IDIOMA_CONFIG && window.IDIOMA_CONFIG.nome) || 'idioma');
+    
+    const resultadoArea = document.getElementById('praticaResultadoArea');
+    const resultadoEl = document.getElementById('praticaResultado');
+    const statusEl = document.getElementById('praticaStatus');
+    const gravarBtn = document.getElementById('praticaGravarBtn');
+    
+    if (resultadoArea) resultadoArea.style.display = 'none';
+    if (resultadoEl) resultadoEl.innerHTML = '';
+    if (statusEl) statusEl.innerHTML = '';
+    if (gravarBtn) {
+        gravarBtn.innerHTML = '🎙️ Clique e fale';
+        gravarBtn.classList.remove('gravando');
+    }
+    
+    const modal = document.getElementById('praticaModal');
+    if (modal) modal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+};
+
+window.fecharPraticaModal = function() {
+    if (praticaRecognition) {
+        praticaRecognition.stop();
+        praticaRecognition = null;
+    }
+    const modal = document.getElementById('praticaModal');
+    if (modal) modal.style.display = 'none';
+    document.body.style.overflow = '';
+};
+
+window.ouvirFrasePratica = function() {
+    if (!praticaTextoEsperado) return;
+    const utterance = new SpeechSynthesisUtterance(praticaTextoEsperado);
+    utterance.lang = (window.IDIOMA_CONFIG && (window.IDIOMA_CONFIG.codigoVoz || window.IDIOMA_CONFIG.codigo)) || 'pt-BR';
+    utterance.rate = 0.8;
+    speechSynthesis.cancel();
+    speechSynthesis.speak(utterance);
+};
+
+window.iniciarGravacaoPratica = function() {
     const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-    if (!SpeechRecognition) { alert('Seu navegador não suporta reconhecimento de fala.\nTente o Google Chrome.'); return; }
-    if (btn.classList.contains('gravando')) { if (recognitionAtiva) recognitionAtiva.stop(); return; }
-    if (recognitionAtiva) recognitionAtiva.stop();
-    const bloco = btn.closest('.bloco');
-    const textoItalianoEl = bloco.querySelector('.italian');
-    const textoCompleto = textoItalianoEl.innerText.replace(/\(\d+:\d+\)\s*/,'').trim().toLowerCase();
-    const resultado = bloco.querySelector('.mic-resultado');
+    if (!SpeechRecognition) {
+        alert('Seu navegador não suporta reconhecimento de fala.\nTente o Google Chrome.');
+        return;
+    }
+    
+    const btn = document.getElementById('praticaGravarBtn');
+    const statusEl = document.getElementById('praticaStatus');
+    const resultadoArea = document.getElementById('praticaResultadoArea');
+    const resultadoEl = document.getElementById('praticaResultado');
+    
+    if (btn.classList.contains('gravando')) {
+        if (praticaRecognition) praticaRecognition.stop();
+        return;
+    }
+    
+    if (praticaRecognition) praticaRecognition.stop();
+    
+    btn.classList.add('gravando');
+    btn.innerHTML = '⏹️ Parar gravação';
+    if (statusEl) statusEl.innerHTML = '🎤 Ouvindo... fale agora!';
+    if (resultadoArea) resultadoArea.style.display = 'none';
+    
     const recognition = new SpeechRecognition();
     recognition.lang = (window.IDIOMA_CONFIG && (window.IDIOMA_CONFIG.codigoVoz || window.IDIOMA_CONFIG.codigo)) || 'pt-BR';
     recognition.interimResults = false;
     recognition.maxAlternatives = 3;
-    recognitionAtiva = recognition;
-    btn.classList.add('gravando');
-    btn.innerHTML = '⏹️ Parar';
-    resultado.className = 'mic-resultado';
-    resultado.style.display = 'none';
+    praticaRecognition = recognition;
+    
     recognition.onresult = function(event) {
         const alternativas = [...event.results[0]].map(a => a.transcript.toLowerCase().trim());
         const melhor = alternativas[0];
-        const normalizar = t => t.replace(/[.,!?;:""''\u00E0\u00E8\u00E9\u00EC\u00F2\u00F9]/g,'').trim();
-        const textoNorm = normalizar(textoCompleto);
+        
+        const normalizar = t => t.replace(/[.,!?;:""''\u00E0\u00E8\u00E9\u00EC\u00F2\u00F9]/g, '').trim().toLowerCase();
+        const textoNorm = normalizar(praticaTextoEsperado);
         const melhorNorm = normalizar(melhor);
+        
         const palavrasTexto = textoNorm.split(/\s+/);
         const palavrasFala = melhorNorm.split(/\s+/);
         const emComum = palavrasTexto.filter(p => palavrasFala.includes(p)).length;
         const pct = emComum / palavrasTexto.length;
-        resultado.style.display = 'block';
+        
+        let resultadoClass = '';
+        let resultadoHTML = '';
+        
         if (pct >= 0.85) {
-            resultado.className = 'mic-resultado acerto';
-            resultado.innerHTML = `✅ <strong>Ótimo trabalho!</strong> Você disse:<br><em>"${melhor}"</em>`;
+            resultadoClass = 'acerto';
+            resultadoHTML = `
+                ✅ <strong>Ótimo trabalho!</strong><br>
+                Você disse:<br>
+                <em style="font-style:italic; color:#1a6b3a;">"${melhor}"</em><br><br>
+                🎉 Pronúncia correta! Parabéns!
+            `;
         } else if (pct >= 0.5) {
-            resultado.className = 'mic-resultado parcial';
-            resultado.innerHTML = `🟡 <strong>Quase lá!</strong> Você disse:<br><em>"${melhor}"</em><br><span style="font-size:0.78rem;opacity:0.75">Texto esperado: "${textoCompleto}"</span>`;
+            resultadoClass = 'parcial';
+            resultadoHTML = `
+                🟡 <strong>Quase lá! Continue praticando.</strong><br>
+                Você disse:<br>
+                <em style="font-style:italic; color:#7a6000;">"${melhor}"</em><br><br>
+                <span style="font-size:0.85rem;">Frase esperada:<br>
+                <strong>"${praticaTextoEsperado}"</strong></span>
+            `;
         } else {
-            resultado.className = 'mic-resultado erro';
-            resultado.innerHTML = `❌ <strong>Tente novamente.</strong> Você disse:<br><em>"${melhor}"</em><br><span style="font-size:0.78rem;opacity:0.75">Texto esperado: "${textoCompleto}"</span>`;
+            resultadoClass = 'erro';
+            resultadoHTML = `
+                ❌ <strong>Tente novamente.</strong><br>
+                Você disse:<br>
+                <em style="font-style:italic; color:#c0392b;">"${melhor}"</em><br><br>
+                <span style="font-size:0.85rem;">Frase esperada:<br>
+                <strong>"${praticaTextoEsperado}"</strong></span><br><br>
+                💡 Dica: Fale mais devagar e claramente.
+            `;
+        }
+        
+        if (resultadoEl) {
+            resultadoEl.className = 'pratica-resultado ' + resultadoClass;
+            resultadoEl.innerHTML = resultadoHTML;
+        }
+        if (resultadoArea) resultadoArea.style.display = 'block';
+        if (statusEl) statusEl.innerHTML = '✅ Gravação finalizada!';
+        
+        btn.classList.remove('gravando');
+        btn.innerHTML = '🎙️ Tentar novamente';
+        praticaRecognition = null;
+    };
+    
+    recognition.onerror = function(event) {
+        if (resultadoEl) {
+            resultadoEl.className = 'pratica-resultado erro';
+            resultadoEl.innerHTML = `❌ Erro: ${event.error}. Tente novamente.`;
+        }
+        if (resultadoArea) resultadoArea.style.display = 'block';
+        if (statusEl) statusEl.innerHTML = '⚠️ Erro na gravação';
+        btn.classList.remove('gravando');
+        btn.innerHTML = '🎙️ Clique e fale';
+        praticaRecognition = null;
+    };
+    
+    recognition.onend = function() {
+        if (btn.classList.contains('gravando')) {
+            btn.classList.remove('gravando');
+            btn.innerHTML = '🎙️ Clique e fale';
+            if (statusEl && statusEl.innerHTML === '🎤 Ouvindo... fale agora!') {
+                statusEl.innerHTML = '⏱️ Nada detectado. Tente novamente.';
+            }
+            praticaRecognition = null;
         }
     };
-    recognition.onerror = function(event) {
-        resultado.style.display = 'block';
-        resultado.className = 'mic-resultado erro';
-        if (event.error === 'no-speech') resultado.innerHTML = '🎙️ Nenhuma fala detectada. Tente novamente.';
-        else if (event.error === 'not-allowed') resultado.innerHTML = '🔒 Permissão do microfone negada.';
-        else resultado.innerHTML = `⚠️ Erro: ${event.error}`;
-    };
-    recognition.onend = function() { btn.classList.remove('gravando'); btn.innerHTML = '🎙️ Praticar Fala'; recognitionAtiva = null; };
+    
     recognition.start();
+};
+
+window.iniciarPratica = function(btn) {
+    const bloco = btn.closest('.bloco');
+    const textoItalianoEl = bloco.querySelector('.italian');
+    const textoCompleto = textoItalianoEl.innerText.replace(/\(\d+:\d+\)\s*/, '').trim();
+    
+    const faPainel = document.getElementById('faPainel');
+    const faToggle = document.getElementById('faToggle');
+    if (faPainel && faPainel.classList.contains('aberto')) {
+        faPainel.classList.remove('aberto');
+        if (faToggle) faToggle.classList.remove('aberto');
+    }
+    
+    abrirPraticaModal(textoCompleto);
 };
 
 // ========== ANOTAÇÕES — Storage com Firebase ==========
@@ -1793,5 +2087,4 @@ function escapar(str) { return (str || '').replace(/'/g, "\\'").replace(/"/g, '&
 carregarAula();
 </script>
 </body>
-</html>
-
+    </html>
