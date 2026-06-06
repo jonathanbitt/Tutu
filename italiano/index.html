@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title id="pageTitle">Italiano — Aula</title>
+<title id="pageTitle">Aula</title>
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
 /* ========== TODOS OS ESTILOS ========== */
@@ -989,6 +989,7 @@ details[open] summary::after{ transform:rotate(180deg); }
 <!-- Botão flutuante de ações — esquerdo -->
 <button class="fa-toggle" id="faToggle" onclick="toggleAcoes()" title="Ações do parágrafo">✦</button>
 
+<script src="config.js"></script>
 <script type="module">
 // ========== FIREBASE ==========
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.8.1/firebase-app.js";
@@ -1012,24 +1013,41 @@ let _notasCache = null;
 async function _carregarCache() {
     if (_notasCache !== null) return _notasCache;
     try {
-        const snap = await getDoc(doc(db, 'notas_idiomas', 'italiano'));
+        const slug = (window.IDIOMA_CONFIG && window.IDIOMA_CONFIG.slug) || 'idioma';
+        const snap = await getDoc(doc(db, 'notas_idiomas', slug));
         _notasCache = snap.exists() ? (snap.data() || {}) : {};
     } catch (e) {
         console.warn('Firebase offline, usando cache local.', e);
-        try { _notasCache = JSON.parse(localStorage.getItem('italian_notes_backup')) || {}; } catch { _notasCache = {}; }
+        try { _notasCache = JSON.parse(localStorage.getItem((window.IDIOMA_CONFIG && window.IDIOMA_CONFIG.slug || 'idioma') + '_notes_backup')) || {}; } catch { _notasCache = {}; }
     }
     return _notasCache;
 }
 
 async function _persistir(dados) {
     _notasCache = dados;
-    try { localStorage.setItem('italian_notes_backup', JSON.stringify(dados)); } catch {}
+    try { localStorage.setItem((window.IDIOMA_CONFIG && window.IDIOMA_CONFIG.slug || 'idioma') + '_notes_backup', JSON.stringify(dados)); } catch {}
     try {
-        await setDoc(doc(db, 'notas_idiomas', 'italiano'), dados);
+        await setDoc(doc(db, 'notas_idiomas', (window.IDIOMA_CONFIG && window.IDIOMA_CONFIG.slug) || 'idioma'), dados);
     } catch (e) {
         console.error('Erro ao salvar no Firebase:', e);
     }
 }
+
+
+// ========== APLICAR IDIOMA_CONFIG ==========
+(function aplicarConfig() {
+    const cfg = window.IDIOMA_CONFIG || {};
+    const cor = cfg.cor || '#1a6b4a';
+    const corClaro = cfg.corClaro || (cor + '22');
+    const root = document.documentElement;
+    root.style.setProperty('--verde', cor);
+    root.style.setProperty('--verde-claro', corClaro);
+    // Título da aba
+    const label = (cfg.bandeira ? cfg.bandeira + ' ' : '') + (cfg.nome || 'Idioma') + ' — Aula';
+    document.title = label;
+    const titleEl = document.getElementById('pageTitle');
+    if (titleEl) titleEl.textContent = label;
+})();
 
 // ========== VARIÁVEIS GLOBAIS ==========
 const video = document.getElementById("video");
@@ -1427,7 +1445,7 @@ window.iniciarPratica = function(btn) {
     const textoCompleto = textoItalianoEl.innerText.replace(/\(\d+:\d+\)\s*/,'').trim().toLowerCase();
     const resultado = bloco.querySelector('.mic-resultado');
     const recognition = new SpeechRecognition();
-    recognition.lang = 'it-IT';
+    recognition.lang = (window.IDIOMA_CONFIG && (window.IDIOMA_CONFIG.codigoVoz || window.IDIOMA_CONFIG.codigo)) || 'pt-BR';
     recognition.interimResults = false;
     recognition.maxAlternatives = 3;
     recognitionAtiva = recognition;
@@ -1640,7 +1658,7 @@ function renderizarExercicio() {
 
 window.ouvirPronuncia = function(texto) {
     const utterance = new SpeechSynthesisUtterance(texto);
-    utterance.lang = 'it-IT'; utterance.rate = 0.8;
+    utterance.lang = (window.IDIOMA_CONFIG && (window.IDIOMA_CONFIG.codigoVoz || window.IDIOMA_CONFIG.codigo)) || 'pt-BR'; utterance.rate = 0.8;
     speechSynthesis.cancel(); speechSynthesis.speak(utterance);
 };
 
@@ -1651,7 +1669,7 @@ window.gravarPronuncia = function(btn, textoEsperado) {
     if (exPronunciaRecognition) exPronunciaRecognition.stop();
     const resultado = document.getElementById('exPronunciaResultado');
     const recognition = new SpeechRecognition();
-    recognition.lang = 'it-IT'; recognition.interimResults = false;
+    recognition.lang = (window.IDIOMA_CONFIG && (window.IDIOMA_CONFIG.codigoVoz || window.IDIOMA_CONFIG.codigo)) || 'pt-BR'; recognition.interimResults = false;
     exPronunciaRecognition = recognition;
     btn.classList.add('gravando'); btn.innerHTML = '⏹️ Parar';
     resultado.style.display = 'none'; resultado.className = 'mic-resultado';
