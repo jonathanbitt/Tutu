@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Masterclass Italiano: Ebbene sì, anche se... 🇮🇹🎯</title>
+    <!-- Google Fonts para uma tipografia elegante -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Merriweather:ital@0;1&display=swap" rel="stylesheet">
+    <!-- Font Awesome 6 (free CDN) para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(145deg, #f0f2f5 0%, #e8edf2 100%);
+            font-family: 'Inter', sans-serif;
+            color: #1e2a3a;
+            line-height: 1.5;
+            padding: 2rem 1.5rem;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .hero {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 2rem 1rem;
+            background: rgba(30, 42, 58, 0.08);
+            backdrop-filter: blur(4px);
+            border-radius: 3rem;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #1e5631, #4c9a6e, #2c7a4b);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.5px;
+        }
+
+        .hero .frase-mestra {
+            font-family: 'Merriweather', serif;
+            font-size: 1.6rem;
+            font-weight: 600;
+            background: #1e3a5f;
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            border-radius: 60px;
+            color: #e8d5a8;
+            margin: 1.5rem 0 1rem;
+            box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #3a546d;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .grid-aula {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 2rem;
+            margin: 2.5rem 0;
+        }
+
+        .card {
+            background: #ffffff;
+            border-radius: 2rem;
+            box-shadow: 0 20px 35px -12px rgba(0,0,0,0.1);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            overflow: hidden;
+            border: 1px solid rgba(100, 150, 130, 0.2);
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 28px 40px -14px rgba(0,0,0,0.18);
+        }
+
+        .card-header {
+            background: #e8f0e6;
+            padding: 1.2rem 1.5rem;
+            border-bottom: 2px solid #9bc4a0;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .card-header i {
+            font-size: 2rem;
+            color: #2c7a4b;
+        }
+
+        .card-header h2 {
+            font-size: 1.7rem;
+            font-weight: 600;
+            margin: 0;
+            letter-spacing: -0.3px;
+        }
+
+        .card-body {
+            padding: 1.5rem;
+        }
+
+        .word-detail {
+            margin-bottom: 1.8rem;
+            border-left: 4px solid #7fae7a;
+            padding-left: 1rem;
+        }
+
+        .word {
+            font-weight: 700;
+            font-size: 1.3rem;
+            color: #2c6e3c;
+            font-family: 'Courier New', monospace;
+            background: #ecf7e8;
+            display: inline-block;
+            padding: 0.2rem 0.6rem;
+            border-radius: 20px;
+        }
+
+        .explanation {
+            margin-top: 0.5rem;
+            color: #2c3e3a;
+        }
+
+        .explanation p {
+            margin-bottom: 0.5rem;
+        }
+
+        .badge {
+            background: #3a7b54;
+            color: white;
+            font-size: 0.7rem;
+            padding: 0.2rem 0.6rem;
+            border-radius: 50px;
+            display: inline-block;
+            margin-right: 8px;
+        }
+
+        .badge-contrast {
+            background: #c98a2e;
+        }
+
+        .verb-table {
+            background: #f3f7f0;
+            border-radius: 1rem;
+            padding: 1rem;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        td, th {
+            padding: 8px 6px;
+            border-bottom: 1px solid #d4e2ca;
+        }
+
+        .highlight {
+            background: #e2f0db;
+            font-weight: 600;
+        }
+
+        hr {
+            margin: 1rem 0;
+            border-color: #d4e0ce;
+        }
+
+        .footer-note {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 1.5rem;
+            border-top: 1px solid #cbdcd0;
+            color: #5c6e66;
+            font-size: 0.9rem;
+        }
+
+        .btn-extra {
+            background: none;
+            border: 2px solid #3a7b54;
+            border-radius: 2rem;
+            padding: 0.5rem 1.2rem;
+            font-weight: 600;
+            color: #2c6e3c;
+            cursor: pointer;
+            transition: all 0.2s;
+            margin-top: 0.8rem;
+        }
+
+        .btn-extra:hover {
+            background: #3a7b54;
+            color: white;
+        }
+
+        .timeline-box {
+            background: #eef3ea;
+            border-radius: 1rem;
+            padding: 1rem;
+            margin-top: 1rem;
+            text-align: center;
+        }
+
+        @media (max-width: 680px) {
+            body {
+                padding: 1rem;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .hero .frase-mestra {
+                font-size: 1.1rem;
+                padding: 0.5rem 1rem;
+            }
+            .card-header h2 {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="hero">
+        <h1><i class="fas fa-language"></i> Italiano em Camadas: Concessão, Ênfase e Passado</h1>
+        <div class="frase-mestra">🇮🇹 “Ebbene sì, anche se devo dire che questa volta ci avevo provato davvero.”</div>
+        <p>✨ Uma frase rica que esconde <strong>trapassato prossimo</strong>, <strong>concessão real</strong>, <strong>verbo servile</strong> e a <strong>particella "ci"</strong> — tudo em italiano autêntico ✨</p>
+    </div>
+
+    <div class="grid-aula">
+        <!-- CARD 1: EBBENE SÌ -->
+        <div class="card">
+            <div class="card-header">
+                <i class="fas fa-comment-dots"></i>
+                <h2>1. Marcador Discursivo</h2>
+            </div>
+            <div class="card-body">
+                <div class="word-detail">
+                    <span class="word">Ebbene</span>
+                    <div class="explanation">
+                        <p><span class="badge">Congiunzione / interiezione</span> <strong>Significato:</strong> “pois bem”, “bem”, “então”. É usado para retomar o discurso, introduzir uma conclusão ou uma constatação enfática. Tem um tom ligeiramente formal, mas muito usado na fala emotiva.</p>
+                        <p><i class="fas fa-volume-up"></i> <em>Exemplo:</em> “Ebbene, che cosa facciamo adesso?” (Bem, o que fazemos agora?)</p>
+                    </div>
+                </div>
+                <div class="word-detail">
+                    <span class="word">sì</span>
+                    <div class="explanation">
+                        <p><span class="badge">Avverbio di affermazione</span> <strong>Tradução:</strong> “sim”. Aqui, “ebbene sì” forma uma expressão idiomática que significa “pois é, sim”, “sim, realmente”, com um tom de confirmação até mesmo surpresa ou resignação.</p>
+                        <p><strong>Uso combinado:</strong> “Ebbene sì, hai ragione tu.” (Pois é, sim, você tem razão). A expressão inteira carrega um leve suspiro ou aceitação.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CARD 2: ANCHE SE (CONCESSÃO REAL) -->
+        <div class="card">
+            <div class="card-header">
+                <i class="fas fa-code-branch"></i>
+                <h2>2. Concessão: Anche se</h2>
+            </div>
+            <div class="card-body">
+                <div class="word-detail">
+                    <span class="word">anche se</span>
+                    <div class="explanation">
+                        <p><span class="badge">Congiunzione concessiva</span> <strong>Significato:</strong> “mesmo que / ainda que / apesar de”. Diferente de <em>benché</em> ou <em>sebbene</em> (que pedem congiuntivo), <strong>anche se</strong> é seguido por <strong>indicativo</strong> porque indica um fato real, não hipotético.</p>
+                        <p><strong>Tradução da frase:</strong> “apesar de eu ter que dizer que desta vez eu tinha tentado de verdade”. O falante reconhece que está afirmando algo (a tentativa real) e introduz uma concessão.</p>
+                    </div>
+                </div>
+                <div class="verb-table">
+                    <strong>📌 Confronto crucial:</strong>
+                    <ul style="margin-left: 1.2rem; margin-top: 0.5rem;">
+                        <li><i class="fas fa-check-circle" style="color:#2c6e3c;"></i> <strong>Anche se piove, esco.</strong> (Está chovendo mesmo → indicativo)</li>
+                        <li><i class="fas fa-cloud-rain"></i> <strong>Benché piova, esco.</strong> (Embora esteja chovendo — subjuntivo, incerteza ou ênfase na hipótese)</li>
+                    </ul>
+                    <p>Na nossa frase, <strong>devo dire</strong> é uma ação real: o falante realmente precisa dizer aquilo. Por isso, <strong>anche se + indicativo</strong>.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- CARD 3: DEVO DIRE (VERBO SERVIL + INFINITO) -->
+        <div class="card">
+            <div class="card-header">
+                <i class="fas fa-gavel"></i>
+                <h2>3. Dovere + infinito</h2>
+            </div>
+            <div class="card-body">
+                <div class="word-detail">
+                    <span class="word">devo dire</span>
+                    <div class="explanation">
+                        <p><span class="badge">Verbo servile (dovere) + infinito</span> <strong>Tradução:</strong> “preciso dizer / tenho que dizer / devo dizer”. O verbo <strong>dovere</strong> expressa obrigação ou necessidade.</p>
+                        <p><strong>Conjugação de DOVERE no presente indicativo:</strong></p>
+                    </div>
+                </div>
+                <div class="verb-table">
+                    <table>
+                        <tr><th>io devo</th><th>noi dobbiamo</th></tr>
+                        <tr><th>tu devi</th><th>voi dovete</th></tr>
+                        <tr class="highlight"><th>lui/lei deve</th><th>loro devono</th></tr>
+                    </table>
+                    <p><strong>devo dire</strong> → é uma construção fixa para introduzir uma opinião sincera ou uma confissão. Ex: “Devo dire che non mi piace.” (Preciso dizer que não gosto).</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- CARD 4: CHE (CONGIUNZIONE) + QUESTA VOLTA -->
+        <div class="card">
+            <div class="card-header">
+                <i class="fas fa-link"></i>
+                <h2>4. Conjunção e Advérbio</h2>
+            </div>
+            <div class="card-body">
+                <div class="word-detail">
+                    <span class="word">che</span>
+                    <div class="explanation">
+                        <p><span class="badge">Congiunzione subordinativa</span> Introduz a oração subordinada objetiva direta: “devo dire <strong>che</strong> ...”. Equivalente ao português “que”.</p>
+                    </div>
+                </div>
+                <div class="word-detail">
+                    <span class="word">questa volta</span>
+                    <div class="explanation">
+                        <p><span class="badge">Locuzione avverbiale temporale</span> “desta vez”. <em>Questa</em> (demonstrativo feminino porque <em>volta</em> é feminino). Indica que esta tentativa em particular é diferente das anteriores — confere ênfase emocional.</p>
+                        <p><strong>Exemplo:</strong> “Questa volta vinco io!” (Desta vez ganho eu!)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CARD 5: CI + TRAPASSATO PROSSIMO (AVEVO PROVATO) -->
+        <div class="card">
+            <div class="card-header">
+                <i class="fas fa-hourglass-half"></i>
+                <h2>5. Trapassato Prossimo e "CI"</h2>
+            </div>
+            <div class="card-body">
+                <div class="word-detail">
+                    <span class="word">ci avevo provato</span>
+                    <div class="explanation">
+                        <p><span class="badge">Verbo pronominale "provarci" + trapassato prossimo</span> <strong>Significado:</strong> “(eu) tinha tentado (aquilo)”. <strong>Provarci</strong> significa “tentar (algo), especialmente com esforço ou em relacionamentos”.</p>
+                        <p><strong>Ci</strong> = partícula pronominal que faz parte do verbo e indica o objeto indireto implícito (a coisa tentada).</p>
+                    </div>
+                </div>
+                <div class="verb-table">
+                    <p><strong>📖 Trapassato prossimo = imperfetto di avere/essere + participio passato</strong></p>
+                    <table>
+                        <tr><th>io avevo provato</th><td>eu tinha tentado</td></tr>
+                        <tr><th>tu avevi provato</th><td>tu tinhas tentado</td></tr>
+                        <tr class="highlight"><th>lui/lei aveva provato</th><td>ele/ela tinha tentado</td></tr>
+                        <tr><th>noi avevamo provato</th><td>nós tínhamos tentado</td></tr>
+                        <tr><th>voi avevate provato</th><td>vós tínheis tentado</td></tr>
+                        <tr><th>loro avevano provato</th><td>eles tinham tentado</td></tr>
+                    </table>
+                    <p><i class="fas fa-clock"></i> O trapassato prossimo indica uma ação passada que ocorreu <strong>antes</strong> de outra ação passada. Aqui: “ci avevo provato” (tinha tentado) em relação ao momento em que o falante toma a decisão ou narra.</p>
+                    <p>➕ <strong>Com ci:</strong> “provarci” → “ci provo” (eu tento), “ci abbiamo provato” (nós tentamos). Na frase, “ci avevo provato” = eu tinha tentado (aquilo, com afinco).</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- CARD 6: DAVVERO (INTENSIFICADOR) + ANÁLISE COMPLETA -->
+        <div class="card">
+            <div class="card-header">
+                <i class="fas fa-microphone-alt"></i>
+                <h2>6. Intensificador + Síntese</h2>
+            </div>
+            <div class="card-body">
+                <div class="word-detail">
+                    <span class="word">davvero</span>
+                    <div class="explanation">
+                        <p><span class="badge">Avverbio di intensità</span> “realmente / de verdade / mesmo”. Reforça a sinceridade da tentativa. <strong>Davvero</strong> é um dos advérbios mais usados no italiano falado para dar ênfase emocional.</p>
+                        <p>Ex: “Mi piace davvero!” (Eu realmente gosto!)</p>
+                    </div>
+                </div>
+                <div class="word-detail">
+                    <span class="word">Análise sintática completa</span>
+                    <div class="explanation">
+                        <p><strong>Ebbene sì</strong> → interjeição/marcador afirmativo.<br>
+                        <strong>anche se</strong> → conjunção concessiva (fato real).<br>
+                        <strong>devo dire che</strong> → oração principal com verbo servile + subordinada.<br>
+                        <strong>questa volta</strong> → adjunto adverbial de tempo.<br>
+                        <strong>ci avevo provato</strong> → predicado verbal (trapassato prossimo, 1ª pessoa, verbo pronominale).<br>
+                        <strong>davvero</strong> → adjunto adverbial de modo/intensidade.</p>
+                    </div>
+                </div>
+                <div class="timeline-box">
+                    <i class="fas fa-chart-line"></i> <strong>Linha do tempo implícita:</strong><br>
+                    [Tentativa no passado distante] → (ci avevo provato) <br> ↓ <br> [Momento em que o falante reconhece e diz “devo dire”] <br> ↓ <br> [Presente: confissão com “ebbene sì, anche se...”]
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SEÇÃO BÔNUS: TABELA DE VERBOS E CONCESSÃO -->
+    <div style="background: #ffffffd9; border-radius: 2rem; padding: 1.8rem; margin: 2rem 0; box-shadow: 0 12px 28px -8px rgba(0,0,0,0.08);">
+        <h3 style="display: flex; align-items: center; gap: 12px;"><i class="fas fa-brain" style="color:#3a7b54;"></i> Aprofundamento: Trapassato Prossimo vs Passato Prossimo</h3>
+        <p>A frase usa <strong>“avevo provato”</strong> (trapassato) e não “ho provato” (passato prossimo) porque o falante quer situar a tentativa <strong>antes</strong> do momento da fala ou antes de outra ação implícita (ex: antes de decidir deixar tudo). O trapassato prossimo é o “pretérito mais-que-perfeito” do italiano, formado por imperfeito do auxiliar + particípio.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1rem;">
+            <div style="flex:1; background:#f2f7ef; border-radius: 1rem; padding: 1rem;">
+                <p><strong>⚡ Comparação rápida:</strong></p>
+                <p><em>“Ho provato”</em> → eu tentei (passado recente/pontual).</p>
+                <p><em>“Avevo provato”</em> → eu tinha tentado (anterioridade em relação a outro evento passado).</p>
+                <p><strong>Na frase:</strong> “questa volta <strong>ci avevo provato</strong> davvero” enfatiza que <strong>já antes</strong> (da decisão ou do discurso atual) existia uma tentativa genuína.</p>
+            </div>
+            <div style="flex:1.5">
+                <p><i class="fas fa-comment-dots"></i> <strong>Expressão completa em português natural:</strong></p>
+                <p style="background:#e6efdf; padding: 0.8rem; border-radius: 1rem; font-style: italic;">“Pois é, sim, mesmo tendo que dizer que desta vez eu tinha tentado de verdade.”</p>
+                <p><strong>Variação coloquial brasileira:</strong> “É, sim, mesmo precisando admitir que dessa vez eu tinha tentado pra valer.”</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- SEÇÃO DE TABELA FINAL: RESGATE DOS PRONOMES -->
+    <div style="background: #e6ede1; border-radius: 2rem; padding: 1.5rem; margin: 2rem 0;">
+        <h4><i class="fas fa-table"></i> Glossário dos elementos-chave</h4>
+        <table style="background: white; border-radius: 1rem; overflow: hidden;">
+            <thead><tr style="background:#3a7b54; color:white;"><th>Elemento</th><th>Função</th><th>Equivalente PT</th></tr></thead>
+            <tbody>
+                <tr><td>ebbene sì</td><td>marcador conclusivo/afirmativo enfático</td><td>pois é, sim</td></tr>
+                <tr><td>anche se</td><td>concessão + indicativo (fato real)</td><td>mesmo que / apesar de</td></tr>
+                <tr><td>devo dire che</td><td>verbo servile + conjunção integrante</td><td>preciso dizer que</td></tr>
+                <tr><td>questa volta</td><td>locução temporal com demostrativo</td><td>desta vez</td></tr>
+                <tr><td>ci (prov)</td><td>partícula pronominal (provarci)</td><td>tentar algo/aquilo</td></tr>
+                <tr><td>avevo provato</td><td>trapassato prossimo</td><td>tinha tentado</td></tr>
+                <tr><td>davvero</td><td>advérbio de intensidade</td><td>realmente, de verdade</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Rodapé + botão interativo opcional -->
+    <div class="footer-note">
+        <i class="fas fa-graduation-cap"></i> Aula completa: cada palavra e estrutura gramatical dissecada. Agora você domina <strong>concessão com "anche se"</strong>, <strong>"trapassato prossimo"</strong> e o verbo <strong>"provarci"</strong>.<br>
+        🇮🇹 Pratique: construa frases usando "ebbene sì", "anche se + indicativo" e "ci avevo provato". Buon proseguimento e ótimos estudos!
+    </div>
+</div>
+
+<script>
+    // Não há necessidade de interatividade extra, mas mantemos o padrão
+    console.log("Masterclass Italiano carregada: Ebbene sì, anche se...");
+</script>
+</body>
+</html>
