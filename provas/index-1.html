@@ -91,6 +91,22 @@ header{display:flex;align-items:center;justify-content:space-between;padding:14p
 .btn-auth.primario{background:linear-gradient(135deg,var(--roxo),var(--rosa));}
 .btn-auth.secundario{background:linear-gradient(135deg,var(--azul),#6FE3D6);}
 .erro-txt{color:var(--erro);font-size:.9rem;font-weight:700;margin-top:10px;min-height:20px;}
+.auth-divisor{
+.auth-divisor::before,.auth-divisor::after{
+  content:'';position:absolute;top:50%;width:28%;height:1px;background:#E0D6FF;
+}
+.auth-divisor::before{left:0;}
+.auth-divisor::after{right:0;}
+
+/* MODAL */
+.modal-overlay{
+  position:fixed;inset:0;background:rgba(60,40,100,.45);
+  backdrop-filter:blur(3px);z-index:200;
+}
+.modal-box{
+  position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);
+  z-index:201;width:min(420px,92vw);animation:entrar .3s ease;
+}
 
 /* FILTROS */
 .filtros-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin:20px 0;}
@@ -219,7 +235,10 @@ header{display:flex;align-items:center;justify-content:space-between;padding:14p
     <span id="user-email"></span>
     <button class="btn-sm cinza" id="btn-sair">Sair</button>
   </div>
-  <button class="btn-sm" id="header-login-btn">Entrar</button>
+  <div id="header-anonimo" class="escondido">
+    <span style="font-size:.8rem;font-weight:700;color:#aaa">Modo visitante</span>
+    <button class="btn-sm" id="btn-criar-conta-header">💾 Salvar progresso</button>
+  </div>
 </header>
 
 <div class="container">
@@ -227,8 +246,17 @@ header{display:flex;align-items:center;justify-content:space-between;padding:14p
   <!-- TELA AUTH -->
   <div id="tela-auth" class="escondido auth-wrap">
     <div class="card">
-      <h2>📚 EduQuest</h2>
-      <p>Entre para estudar e acompanhar seu progresso</p>
+      <h2 id="auth-titulo">📚 EduQuest</h2>
+      <p id="auth-subtitulo">Entre para estudar e acompanhar seu progresso</p>
+
+      <!-- Botão entrar como visitante -->
+      <div id="auth-anonimo-bloco">
+        <button class="btn-auth primario" id="btn-anonimo" style="width:100%;margin-bottom:16px">
+          🚀 Entrar como visitante
+        </button>
+        <div class="auth-divisor">ou crie uma conta para salvar seu progresso</div>
+      </div>
+
       <div class="campo">
         <label>E-mail</label>
         <input type="email" id="input-email" placeholder="seu@email.com" autocomplete="email">
@@ -238,10 +266,34 @@ header{display:flex;align-items:center;justify-content:space-between;padding:14p
         <input type="password" id="input-senha" placeholder="••••••••" autocomplete="current-password">
       </div>
       <div class="auth-btns">
-        <button class="btn-auth primario" id="btn-login">Entrar</button>
+        <button class="btn-auth primario"   id="btn-login">Entrar</button>
         <button class="btn-auth secundario" id="btn-cadastro">Criar conta</button>
       </div>
       <div class="erro-txt" id="auth-erro"></div>
+    </div>
+  </div>
+
+  <!-- MODAL VINCULAR CONTA -->
+  <div id="modal-vincular" class="escondido">
+    <div class="modal-overlay" id="modal-overlay"></div>
+    <div class="modal-box card">
+      <h3 style="color:var(--roxo);margin-bottom:8px">💾 Salvar seu progresso</h3>
+      <p style="color:#6B5B95;font-weight:700;margin-bottom:20px;font-size:.95rem">
+        Crie uma conta para manter seu histórico em qualquer dispositivo
+      </p>
+      <div class="campo">
+        <label>E-mail</label>
+        <input type="email" id="vincular-email" placeholder="seu@email.com">
+      </div>
+      <div class="campo">
+        <label>Senha (mín. 6 caracteres)</label>
+        <input type="password" id="vincular-senha" placeholder="••••••••">
+      </div>
+      <div class="auth-btns">
+        <button class="btn-auth secundario" id="btn-vincular-cancelar">Cancelar</button>
+        <button class="btn-auth primario"   id="btn-vincular-salvar">Criar e salvar</button>
+      </div>
+      <div class="erro-txt" id="vincular-erro"></div>
     </div>
   </div>
 
@@ -354,6 +406,7 @@ header{display:flex;align-items:center;justify-content:space-between;padding:14p
 import { initializeApp }
   from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
 import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword,
+  signInAnonymously, linkWithCredential, EmailAuthProvider,
   signOut, onAuthStateChanged }
   from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
 import { getFirestore, collection, doc, getDoc, getDocs, query, where,
@@ -400,6 +453,7 @@ const ocultar = id => $(id).classList.add('escondido');
 function tela(nome) {
   ['tela-auth','tela-filtros','tela-questao','tela-resultado']
     .forEach(t => ocultar(t));
+  ocultar('modal-vincular');
   mostrar(nome);
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
@@ -416,21 +470,46 @@ function formatarLabel(v) {
 /* ================================================================
    AUTENTICAÇÃO
    ================================================================ */
+/* ================================================================
+   AUTENTICAÇÃO
+   ================================================================ */
 onAuthStateChanged(auth, user => {
   E.user = user;
   if (user) {
-    $('user-email').textContent = user.email;
-    mostrar('header-user');
-    ocultar('header-login-btn');
+    if (user.isAnonymous) {
+      // Modo visitante
+      ocultar('header-user');
+      mostrar('header-anonimo');
+    } else {
+      // Conta permanente
+      $('user-email').textContent = user.email;
+      mostrar('header-user');
+      ocultar('header-anonimo');
+    }
     tela('tela-filtros');
     carregarOpcoesFiltros();
   } else {
     ocultar('header-user');
-    mostrar('header-login-btn');
+    ocultar('header-anonimo');
     tela('tela-auth');
   }
 });
 
+// Entrar como visitante (anônimo)
+$('btn-anonimo').addEventListener('click', async () => {
+  $('auth-erro').textContent = '';
+  $('btn-anonimo').disabled = true;
+  $('btn-anonimo').textContent = 'Entrando… ⏳';
+  try {
+    await signInAnonymously(auth);
+  } catch(e) {
+    $('auth-erro').textContent = traduzirErro(e.code);
+    $('btn-anonimo').disabled = false;
+    $('btn-anonimo').textContent = '🚀 Entrar como visitante';
+  }
+});
+
+// Login com e-mail existente
 $('btn-login').addEventListener('click', async () => {
   const email = $('input-email').value.trim();
   const senha = $('input-senha').value;
@@ -440,6 +519,7 @@ $('btn-login').addEventListener('click', async () => {
   } catch(e) { $('auth-erro').textContent = traduzirErro(e.code); }
 });
 
+// Cadastro novo com e-mail
 $('btn-cadastro').addEventListener('click', async () => {
   const email = $('input-email').value.trim();
   const senha = $('input-senha').value;
@@ -450,18 +530,63 @@ $('btn-cadastro').addEventListener('click', async () => {
   } catch(e) { $('auth-erro').textContent = traduzirErro(e.code); }
 });
 
+// Abrir modal de vinculação (anônimo → conta permanente)
+$('btn-criar-conta-header').addEventListener('click', () => {
+  $('vincular-email').value = '';
+  $('vincular-senha').value = '';
+  $('vincular-erro').textContent = '';
+  mostrar('modal-vincular');
+});
+
+$('btn-vincular-cancelar').addEventListener('click', () => ocultar('modal-vincular'));
+$('modal-overlay').addEventListener('click', () => ocultar('modal-vincular'));
+
+// Vincular conta anônima a e-mail/senha
+$('btn-vincular-salvar').addEventListener('click', async () => {
+  const email = $('vincular-email').value.trim();
+  const senha = $('vincular-senha').value;
+  $('vincular-erro').textContent = '';
+
+  if (senha.length < 6) { $('vincular-erro').textContent = 'Senha precisa ter ao menos 6 caracteres.'; return; }
+
+  $('btn-vincular-salvar').disabled = true;
+  $('btn-vincular-salvar').textContent = 'Salvando… ⏳';
+
+  try {
+    const credencial = EmailAuthProvider.credential(email, senha);
+    await linkWithCredential(auth.currentUser, credencial);
+    ocultar('modal-vincular');
+    // Atualiza header
+    $('user-email').textContent = email;
+    ocultar('header-anonimo');
+    mostrar('header-user');
+    alert('✅ Conta criada! Seu progresso está salvo.');
+  } catch(e) {
+    $('vincular-erro').textContent = traduzirErro(e.code);
+  } finally {
+    $('btn-vincular-salvar').disabled = false;
+    $('btn-vincular-salvar').textContent = 'Criar e salvar';
+  }
+});
+
 $('btn-sair').addEventListener('click', () => signOut(auth));
-$('header-login-btn').addEventListener('click', () => tela('tela-auth'));
 
 function traduzirErro(code) {
+  console.log('Firebase error code:', code);
   return {
-    'auth/user-not-found': 'E-mail não encontrado.',
-    'auth/wrong-password': 'Senha incorreta.',
-    'auth/invalid-credential': 'E-mail ou senha incorretos.',
-    'auth/email-already-in-use': 'Este e-mail já está cadastrado.',
-    'auth/invalid-email': 'E-mail inválido.',
-    'auth/too-many-requests': 'Muitas tentativas. Tente mais tarde.',
-  }[code] || 'Erro ao entrar. Verifique seus dados.';
+    'auth/user-not-found':           'E-mail não encontrado.',
+    'auth/wrong-password':           'Senha incorreta.',
+    'auth/invalid-credential':       'E-mail ou senha incorretos.',
+    'auth/invalid-email':            'E-mail inválido.',
+    'auth/email-already-in-use':     'Este e-mail já está cadastrado.',
+    'auth/too-many-requests':        'Muitas tentativas. Tente mais tarde.',
+    'auth/user-disabled':            'Este usuário foi desativado.',
+    'auth/network-request-failed':   'Erro de conexão. Verifique sua internet.',
+    'auth/operation-not-allowed':    'Este método de login não está ativado no Firebase.',
+    'auth/weak-password':            'Senha muito fraca. Use ao menos 6 caracteres.',
+    'auth/credential-already-in-use':'Este e-mail já está vinculado a outra conta.',
+    'auth/provider-already-linked':  'Conta já vinculada a um e-mail.',
+  }[code] || `Erro: ${code}`;
 }
 
 /* ================================================================
