@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -7,612 +8,177 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --roxo:#7C4DFF;
-    --roxo-claro:#B388FF;
-    --rosa:#FF5C8A;
-    --laranja:#FFA94D;
-    --verde:#4CD964;
-    --azul:#4DA6FF;
-    --bg:#F4F1FF;
-    --texto:#3A2E5C;
-    --branco:#FFFFFF;
-    --erro:#FF5C5C;
-    --sombra: 0 8px 24px rgba(124,77,255,0.18);
-  }
+:root{
+  --roxo:#7C4DFF;--roxo-claro:#B388FF;--rosa:#FF5C8A;--laranja:#FFA94D;
+  --verde:#4CD964;--azul:#4DA6FF;--bg:#F4F1FF;--texto:#3A2E5C;
+  --branco:#FFFFFF;--erro:#FF5C5C;
+  --sombra:0 8px 24px rgba(124,77,255,0.18);
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Nunito',sans-serif;background:linear-gradient(160deg,#EFE9FF 0%,#FFE9F2 50%,#FFF3E0 100%);color:var(--texto);min-height:100vh;padding-bottom:40px;}
+h1,h2,h3,.titulo-font{font-family:'Fredoka One',cursive;}
 
-  *{ box-sizing:border-box; margin:0; padding:0; }
+header{display:flex;justify-content:space-between;align-items:center;padding:18px 24px;background:rgba(255,255,255,0.95);backdrop-filter:blur(10px);box-shadow:var(--sombra);position:sticky;top:0;z-index:100;flex-wrap:wrap;gap:12px;}
+.logo h1{font-size:clamp(1.3rem,4vw,1.8rem);color:var(--roxo);}
+.logo span{color:var(--rosa);}
+.logo p{font-size:0.7rem;color:#6B5B95;margin-top:2px;}
+.user-area{display:flex;align-items:center;gap:12px;background:#F4F1FF;padding:6px 16px;border-radius:40px;}
+.user-email{font-weight:700;font-size:0.85rem;color:var(--roxo);}
+.btn-sm{padding:6px 14px;border:none;border-radius:30px;font-family:'Fredoka One',cursive;font-size:0.8rem;cursor:pointer;transition:transform 0.15s;background:var(--roxo);color:white;}
+.btn-sm:hover{transform:scale(1.03);}
+.btn-sm.cinza{background:#aaa;}
+.container{max-width:1000px;margin:0 auto;padding:0 20px;}
 
-  body{
-    font-family:'Nunito', sans-serif;
-    background: linear-gradient(160deg, #EFE9FF 0%, #FFE9F2 50%, #FFF3E0 100%);
-    color: var(--texto);
-    min-height:100vh;
-    padding-bottom: 40px;
-  }
+/* MODAL */
+.modal-overlay{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);backdrop-filter:blur(4px);z-index:200;}
+.modal-box{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:white;border-radius:28px;padding:28px;width:min(400px,90vw);z-index:201;box-shadow:var(--sombra);}
+.modal-box h3{color:var(--roxo);margin-bottom:6px;}
+.campo{margin-bottom:16px;}
+.campo label{display:block;font-weight:800;font-size:0.85rem;margin-bottom:5px;color:var(--roxo);}
+.campo input{width:100%;padding:12px;border:2px solid #E0D6FF;border-radius:16px;font-family:'Nunito',sans-serif;outline:none;}
+.campo input:focus{border-color:var(--roxo);}
+.auth-btns{display:flex;gap:12px;margin-top:8px;}
+.btn-auth{flex:1;padding:12px;border:none;border-radius:40px;font-family:'Fredoka One',cursive;cursor:pointer;background:var(--roxo);color:white;}
+.btn-auth.secundario{background:#6B5B95;}
+.erro-txt{color:var(--erro);font-size:0.8rem;font-weight:bold;margin-top:12px;text-align:center;}
+.escondido{display:none!important;}
 
-  h1, h2, h3, .titulo-font{
-    font-family:'Fredoka One', cursive;
-  }
+/* TELA INICIAL */
+.boas-vindas{padding:32px 0 8px;text-align:center;}
+.boas-vindas h2{color:var(--roxo);font-size:clamp(1.4rem,4vw,2rem);margin-bottom:8px;}
+.boas-vindas p{color:#6B5B95;font-weight:700;font-size:1rem;}
+.btn-ir-filtros{display:inline-block;margin-top:20px;padding:14px 32px;border:none;border-radius:999px;background:linear-gradient(135deg,var(--roxo),var(--rosa));color:#fff;font-family:'Fredoka One',cursive;font-size:1.1rem;cursor:pointer;box-shadow:var(--sombra);transition:transform .2s;}
+.btn-ir-filtros:hover{transform:translateY(-3px);}
 
-  header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 18px 24px;
-    background: rgba(255,255,255,0.95);
-    backdrop-filter: blur(10px);
-    box-shadow: var(--sombra);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    flex-wrap: wrap;
-    gap: 12px;
-  }
-  .logo h1{
-    font-size: clamp(1.3rem, 4vw, 1.8rem);
-    color: var(--roxo);
-  }
-  .logo span{ color: var(--rosa); }
-  .logo p{
-    font-size: 0.7rem;
-    color: #6B5B95;
-    margin-top: 2px;
-  }
-  .user-area{
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    background: #F4F1FF;
-    padding: 6px 16px;
-    border-radius: 40px;
-  }
-  .user-email{
-    font-weight: 700;
-    font-size: 0.85rem;
-    color: var(--roxo);
-  }
-  .btn-sm{
-    padding: 6px 14px;
-    border: none;
-    border-radius: 30px;
-    font-family: 'Fredoka One', cursive;
-    font-size: 0.8rem;
-    cursor: pointer;
-    transition: transform 0.15s;
-    background: var(--roxo);
-    color: white;
-  }
-  .btn-sm:hover{ transform: scale(1.03); }
-  .btn-sm.cinza{ background: #aaa; }
+#tela-inicial .grid-materias{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-top:24px;}
+.card-materia{background:var(--branco);border-radius:28px;padding:24px 20px;box-shadow:var(--sombra);cursor:pointer;text-align:center;transition:transform 0.25s ease,box-shadow 0.25s ease;border:3px solid transparent;position:relative;overflow:hidden;}
+.card-materia::before{content:"";position:absolute;top:-50%;right:-50%;width:140%;height:140%;background:linear-gradient(135deg,var(--roxo-claro),transparent 70%);opacity:0.1;transform:rotate(15deg);pointer-events:none;}
+.card-materia:hover{transform:translateY(-6px) scale(1.02);box-shadow:0 18px 32px rgba(124,77,255,0.28);border-color:var(--roxo-claro);}
+.card-materia .icone-grande{font-size:2.8rem;display:block;margin-bottom:10px;}
+.card-materia h3{color:var(--roxo);font-size:1.15rem;margin-bottom:6px;}
+.card-materia p{font-size:0.85rem;color:#6B5B95;line-height:1.4;margin-bottom:12px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;}
+.card-materia .badge-series{display:inline-block;padding:3px 10px;border-radius:20px;background:#E0D6FF;color:var(--roxo);font-size:0.72rem;font-weight:800;}
+.card-materia .botao-entrar{display:inline-block;padding:7px 20px;border-radius:999px;background:var(--rosa);color:#fff;font-weight:800;font-size:0.82rem;margin-top:10px;}
+.carregando{text-align:center;padding:40px;font-weight:800;color:var(--roxo);}
 
-  .container{
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
+/* FILTROS */
+.filtros-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin:20px 0;}
+.filtro-grupo label{display:block;font-weight:800;font-size:0.88rem;margin-bottom:6px;color:var(--roxo);}
+.filtro-grupo select{width:100%;padding:10px 14px;border:2px solid #E0D6FF;border-radius:12px;font-family:'Nunito',sans-serif;font-size:0.95rem;outline:none;background:#fff;}
+.revisao-row{display:flex;align-items:center;gap:10px;margin:10px 0 20px;padding:14px 16px;background:#F1ECFF;border-radius:14px;}
+.revisao-row input[type=checkbox]{width:20px;height:20px;accent-color:var(--roxo);cursor:pointer;}
+.revisao-row label{font-weight:800;color:var(--roxo);cursor:pointer;}
+.revisao-row small{color:#6B5B95;font-size:0.85rem;}
+.qtd-row{display:flex;align-items:center;gap:12px;margin-bottom:8px;}
+.qtd-row label{font-weight:800;color:var(--roxo);}
+.qtd-row input[type=number]{width:80px;padding:8px 12px;border:2px solid #E0D6FF;border-radius:12px;font-family:'Nunito',sans-serif;font-size:1rem;text-align:center;outline:none;}
 
-  .modal-overlay{
-    position: fixed;
-    top:0; left:0; right:0; bottom:0;
-    background: rgba(0,0,0,0.5);
-    backdrop-filter: blur(4px);
-    z-index: 200;
-  }
-  .modal-box{
-    position: fixed;
-    top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
-    background: white;
-    border-radius: 28px;
-    padding: 28px;
-    width: min(400px, 90vw);
-    z-index: 201;
-    box-shadow: var(--sombra);
-  }
-  .modal-box h3{
-    color: var(--roxo);
-    margin-bottom: 6px;
-  }
-  .campo{
-    margin-bottom: 16px;
-  }
-  .campo label{
-    display: block;
-    font-weight: 800;
-    font-size: 0.85rem;
-    margin-bottom: 5px;
-    color: var(--roxo);
-  }
-  .campo input{
-    width: 100%;
-    padding: 12px;
-    border: 2px solid #E0D6FF;
-    border-radius: 16px;
-    font-family: 'Nunito', sans-serif;
-    outline: none;
-  }
-  .campo input:focus{ border-color: var(--roxo); }
-  .auth-btns{
-    display: flex;
-    gap: 12px;
-    margin-top: 8px;
-  }
-  .btn-auth{
-    flex:1;
-    padding: 12px;
-    border: none;
-    border-radius: 40px;
-    font-family: 'Fredoka One', cursive;
-    font-weight: bold;
-    cursor: pointer;
-    background: var(--roxo);
-    color: white;
-  }
-  .btn-auth.secundario{
-    background: #6B5B95;
-  }
-  .erro-txt{
-    color: var(--erro);
-    font-size: 0.8rem;
-    font-weight: bold;
-    margin-top: 12px;
-    text-align: center;
-  }
-  .escondido{ display: none !important; }
+/* PROGRESSO */
+.prog-wrap{margin-bottom:14px;}
+.prog-info{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;flex-wrap:wrap;gap:8px;}
+.prog-label{font-weight:800;color:var(--roxo);font-size:0.9rem;}
+.pills{display:flex;gap:8px;}
+.pill{padding:4px 12px;border-radius:999px;font-weight:800;font-size:0.85rem;color:#fff;}
+.pill.a{background:var(--verde);}
+.pill.e{background:var(--erro);}
+.barra{height:14px;background:#E4DBFF;border-radius:999px;overflow:hidden;}
+.barra-fill{height:100%;width:0%;border-radius:999px;background:linear-gradient(90deg,var(--roxo),var(--rosa),var(--laranja));transition:width 0.4s ease;}
 
-  /* TELA INICIAL */
-  #tela-inicial .grid-materias{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 24px;
-    margin-top: 28px;
-  }
-  .card-materia{
-    background: var(--branco);
-    border-radius: 28px;
-    padding: 28px 20px;
-    box-shadow: var(--sombra);
-    cursor: pointer;
-    text-align: center;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-    border: 3px solid transparent;
-    position: relative;
-    overflow: hidden;
-  }
-  .card-materia::before{
-    content: "";
-    position: absolute;
-    top: -50%; right: -50%;
-    width: 140%; height: 140%;
-    background: linear-gradient(135deg, var(--roxo-claro), transparent 70%);
-    opacity: 0.1;
-    transform: rotate(15deg);
-    pointer-events: none;
-  }
-  .card-materia:hover{
-    transform: translateY(-6px) scale(1.02);
-    box-shadow: 0 18px 32px rgba(124,77,255,0.28);
-    border-color: var(--roxo-claro);
-  }
-  .card-materia .icone-grande{
-    font-size: 3rem;
-    display: block;
-    margin-bottom: 12px;
-  }
-  .card-materia h3{
-    color: var(--roxo);
-    font-size: 1.3rem;
-    margin-bottom: 8px;
-  }
-  .card-materia p{
-    font-size: 0.9rem;
-    color: #6B5B95;
-    line-height: 1.4;
-    margin-bottom: 16px;
-  }
-  .card-materia .badge-series{
-    display: inline-block;
-    padding: 4px 12px;
-    border-radius: 20px;
-    background: #E0D6FF;
-    color: var(--roxo);
-    font-size: 0.75rem;
-    font-weight: 800;
-    margin-top: 8px;
-  }
-  .card-materia .botao-entrar{
-    display: inline-block;
-    padding: 8px 24px;
-    border-radius: 999px;
-    background: var(--rosa);
-    color: #fff;
-    font-weight: 800;
-    font-size: 0.85rem;
-    margin-top: 12px;
-  }
+/* BADGES */
+.badges-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px;}
+.badge{padding:4px 12px;border-radius:999px;font-size:0.78rem;font-weight:800;color:#fff;}
+.badge:empty{display:none;}
+.badge-serie{background:var(--azul);}
+.badge-assunto{background:var(--roxo);}
+.badge-topico{background:#9B59B6;}
+.badge-dif.facil{background:var(--verde);}
+.badge-dif.medio{background:var(--laranja);}
+.badge-dif.dificil{background:var(--erro);}
+.badge-origem{background:#555;}
+.badge-ano{background:#888;}
 
-  /* FILTROS */
-  .filtros-grid{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 14px;
-    margin: 20px 0;
-  }
-  .filtro-grupo label{
-    display: block;
-    font-weight: 800;
-    font-size: 0.88rem;
-    margin-bottom: 6px;
-    color: var(--roxo);
-  }
-  .filtro-grupo select{
-    width: 100%;
-    padding: 10px 14px;
-    border: 2px solid #E0D6FF;
-    border-radius: 12px;
-    font-family: 'Nunito', sans-serif;
-    font-size: 0.95rem;
-    outline: none;
-    background: #fff;
-  }
-  .revisao-row{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin: 10px 0 20px;
-    padding: 14px 16px;
-    background: #F1ECFF;
-    border-radius: 14px;
-  }
-  .revisao-row input[type=checkbox]{
-    width: 20px;
-    height: 20px;
-    accent-color: var(--roxo);
-    cursor: pointer;
-  }
-  .revisao-row label{
-    font-weight: 800;
-    color: var(--roxo);
-    cursor: pointer;
-  }
-  .revisao-row small{ color: #6B5B95; font-size: 0.85rem; }
-  .qtd-row{
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 8px;
-  }
-  .qtd-row label{ font-weight: 800; color: var(--roxo); }
-  .qtd-row input[type=number]{
-    width: 80px;
-    padding: 8px 12px;
-    border: 2px solid #E0D6FF;
-    border-radius: 12px;
-    font-family: 'Nunito', sans-serif;
-    font-size: 1rem;
-    text-align: center;
-    outline: none;
-  }
+#hist-info{font-size:0.82rem;font-weight:700;color:#6B5B95;background:#F4F1FF;padding:6px 12px;border-radius:10px;margin-bottom:12px;display:inline-block;}
+.tags-row{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px;}
+.tag{padding:3px 10px;border-radius:999px;background:#EDE7FF;color:var(--roxo);font-size:0.78rem;font-weight:800;border:1.5px solid #D1C4FF;}
 
-  /* PROGRESSO */
-  .prog-wrap{ margin-bottom: 14px; }
-  .prog-info{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 6px;
-    flex-wrap: wrap;
-    gap: 8px;
-  }
-  .prog-label{ font-weight: 800; color: var(--roxo); font-size: 0.9rem; }
-  .pills{ display: flex; gap: 8px; }
-  .pill{
-    padding: 4px 12px;
-    border-radius: 999px;
-    font-weight: 800;
-    font-size: 0.85rem;
-    color: #fff;
-  }
-  .pill.a{ background: var(--verde); }
-  .pill.e{ background: var(--erro); }
-  .barra{
-    height: 14px;
-    background: #E4DBFF;
-    border-radius: 999px;
-    overflow: hidden;
-  }
-  .barra-fill{
-    height: 100%;
-    width: 0%;
-    border-radius: 999px;
-    background: linear-gradient(90deg, var(--roxo), var(--rosa), var(--laranja));
-    transition: width 0.4s ease;
-  }
+/* CARD */
+.card{background:var(--branco);border-radius:28px;padding:28px 24px;box-shadow:var(--sombra);animation:entrar 0.35s ease;}
+@keyframes entrar{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+#questao-enunciado{font-size:1.05rem;font-weight:700;line-height:1.7;margin-bottom:18px;color:var(--texto);}
 
-  /* BADGES */
-  .badges-row{
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-    margin-bottom: 14px;
-  }
-  .badge{
-    padding: 4px 12px;
-    border-radius: 999px;
-    font-size: 0.78rem;
-    font-weight: 800;
-    color: #fff;
-  }
-  .badge-serie{ background: var(--azul); }
-  .badge-assunto{ background: var(--roxo); }
-  .badge-topico{ background: #9B59B6; }
-  .badge-dif.facil{ background: var(--verde); }
-  .badge-dif.medio{ background: var(--laranja); }
-  .badge-dif.dificil{ background: var(--erro); }
-  .badge-origem{ background: #555; }
-  .badge-ano{ background: #888; }
+/* OPÇÕES */
+.opcoes{display:flex;flex-direction:column;gap:10px;margin-bottom:16px;}
+.opcao{text-align:left;width:100%;padding:13px 18px;border-radius:14px;border:2px solid #E0D6FF;background:#fff;font-size:0.98rem;font-weight:700;font-family:'Nunito',sans-serif;color:var(--texto);cursor:pointer;transition:all 0.18s;line-height:1.5;}
+.opcao:hover:not(:disabled){border-color:var(--roxo);background:#F6F1FF;transform:translateX(4px);}
+.opcao:disabled{cursor:default;}
+.opcao.correta{border-color:var(--verde);background:#E8FCEF;color:#1E8E3E;}
+.opcao.errada{border-color:var(--erro);background:#FFEDED;color:#C62828;}
 
-  #hist-info{
-    font-size: 0.82rem;
-    font-weight: 700;
-    color: #6B5B95;
-    background: #F4F1FF;
-    padding: 6px 12px;
-    border-radius: 10px;
-    margin-bottom: 12px;
-    display: inline-block;
-  }
-  .tags-row{
-    display: flex;
-    gap: 6px;
-    flex-wrap: wrap;
-    margin-bottom: 14px;
-  }
-  .tag{
-    padding: 3px 10px;
-    border-radius: 999px;
-    background: #EDE7FF;
-    color: var(--roxo);
-    font-size: 0.78rem;
-    font-weight: 800;
-    border: 1.5px solid #D1C4FF;
-  }
+/* FEEDBACK */
+.feedback{border-radius:16px;padding:0;max-height:0;overflow:hidden;transition:max-height 0.35s ease,padding 0.25s ease;}
+.feedback.show{max-height:300px;padding:16px;}
+.feedback.acerto{background:#E8FCEF;border:2px solid var(--verde);}
+.feedback.erro{background:#FFEDED;border:2px solid var(--erro);}
+.titulo-feedback{font-family:'Fredoka One',cursive;font-size:1.1rem;display:block;margin-bottom:6px;}
+.acerto .titulo-feedback{color:#1E8E3E;}
+.erro .titulo-feedback{color:#C62828;}
 
-  /* CARD */
-  .card{
-    background: var(--branco);
-    border-radius: 28px;
-    padding: 28px 24px;
-    box-shadow: var(--sombra);
-    animation: entrar 0.35s ease;
-  }
-  @keyframes entrar{
-    from{ opacity: 0; transform: translateY(14px); }
-    to{ opacity: 1; transform: translateY(0); }
-  }
+/* ACCORDION */
+.secao{margin-bottom:10px;border-radius:16px;overflow:hidden;}
+.secao-explicacao{background:#F1ECFF;border-left:5px solid var(--roxo);}
+.secao-exemplo{background:#E6F7FF;border-left:5px solid var(--azul);}
+.secao-dica{background:#FFF3E0;border-left:5px solid var(--laranja);}
+.secao-header{display:flex;justify-content:space-between;align-items:center;padding:12px 16px;cursor:pointer;user-select:none;gap:8px;}
+.secao-header:hover{filter:brightness(0.96);}
+.secao strong.rotulo{font-family:'Fredoka One',cursive;font-size:0.98rem;flex:1;}
+.secao-explicacao .rotulo{color:var(--roxo);}
+.secao-exemplo .rotulo{color:#1F8FE0;}
+.secao-dica .rotulo{color:#E08A00;}
+.secao-chevron{font-size:0.8rem;opacity:0.55;transition:transform 0.25s;}
+.secao.aberto .secao-chevron{transform:rotate(180deg);}
+.secao-corpo{max-height:0;overflow:hidden;padding:0 16px;transition:max-height 0.32s ease,padding 0.22s ease;line-height:1.65;font-size:0.97rem;}
+.secao.aberto .secao-corpo{max-height:600px;padding:0 16px 14px;}
 
-  #questao-enunciado{
-    font-size: 1.05rem;
-    font-weight: 700;
-    line-height: 1.7;
-    margin-bottom: 18px;
-    color: var(--texto);
-  }
+/* BOTÕES */
+.acoes{display:flex;gap:12px;margin-top:18px;flex-wrap:wrap;}
+.btn{flex:1;min-width:140px;padding:13px 18px;border:none;border-radius:16px;font-family:'Fredoka One',cursive;font-size:1rem;color:#fff;cursor:pointer;box-shadow:0 5px 14px rgba(0,0,0,0.12);transition:transform 0.15s;}
+.btn:hover{transform:translateY(-2px);}
+.btn:disabled{opacity:0.5;cursor:not-allowed;transform:none;}
+.btn-primario{background:linear-gradient(135deg,var(--roxo),var(--rosa));}
+.btn-secundario{background:linear-gradient(135deg,var(--azul),#6FE3D6);}
+.btn-voltar{background:linear-gradient(135deg,#aaa,#888);}
+.btn-laranja{background:linear-gradient(135deg,var(--laranja),#FF7A7A);}
+.btn-full{width:100%;margin-top:8px;}
 
-  /* OPÇÕES */
-  .opcoes{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-bottom: 16px;
-  }
-  .opcao{
-    text-align: left;
-    width: 100%;
-    padding: 13px 18px;
-    border-radius: 14px;
-    border: 2px solid #E0D6FF;
-    background: #fff;
-    font-size: 0.98rem;
-    font-weight: 700;
-    font-family: 'Nunito', sans-serif;
-    color: var(--texto);
-    cursor: pointer;
-    transition: all 0.18s;
-    line-height: 1.5;
-  }
-  .opcao:hover:not(:disabled){
-    border-color: var(--roxo);
-    background: #F6F1FF;
-    transform: translateX(4px);
-  }
-  .opcao:disabled{ cursor: default; }
-  .opcao.correta{
-    border-color: var(--verde);
-    background: #E8FCEF;
-    color: #1E8E3E;
-  }
-  .opcao.errada{
-    border-color: var(--erro);
-    background: #FFEDED;
-    color: #C62828;
-  }
+/* RESULTADO */
+.resultado-emoji{font-size:3.5rem;display:block;text-align:center;margin-bottom:8px;}
+.resultado-titulo{text-align:center;color:var(--roxo);font-size:2rem;}
+.resultado-msg{text-align:center;font-weight:700;color:#6B5B95;margin:8px 0 20px;}
+.stats-row{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-bottom:20px;}
+.stat-box{background:#F4F1FF;border-radius:16px;padding:14px 20px;text-align:center;min-width:90px;}
+.stat-num{font-family:'Fredoka One',cursive;font-size:1.7rem;color:var(--roxo);display:block;}
+.stat-label{font-size:0.82rem;font-weight:700;color:#6B5B95;}
+.item-revisao{background:#FFF6F6;border:2px solid #FFD6D6;border-radius:14px;padding:14px 16px;margin-bottom:12px;}
+.rev-meta{font-size:0.8rem;font-weight:800;color:#9B59B6;margin-bottom:4px;}
+.rev-enunciado{font-weight:700;margin-bottom:6px;line-height:1.5;}
+.rev-sua,.rev-certa{font-size:0.9rem;font-weight:700;}
+.errada-txt{color:var(--erro);}
+.certa-txt{color:var(--verde);}
+.rev-exp{margin-top:6px;font-size:0.88rem;color:#6B5B95;font-style:italic;line-height:1.5;}
+.sem-erros{text-align:center;font-weight:800;color:var(--verde);padding:16px;}
+.divider{height:1px;background:#EDE7FF;margin:20px 0;}
+.apoio-label{font-size:0.82rem;font-weight:800;color:#bbb;margin-bottom:8px;letter-spacing:0.04em;}
 
-  /* FEEDBACK */
-  .feedback{
-    border-radius: 16px;
-    padding: 0;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.35s ease, padding 0.25s ease;
-  }
-  .feedback.show{
-    max-height: 300px;
-    padding: 16px;
-  }
-  .feedback.acerto{
-    background: #E8FCEF;
-    border: 2px solid var(--verde);
-  }
-  .feedback.erro{
-    background: #FFEDED;
-    border: 2px solid var(--erro);
-  }
-  .titulo-feedback{
-    font-family: 'Fredoka One', cursive;
-    font-size: 1.1rem;
-    display: block;
-    margin-bottom: 6px;
-  }
-  .acerto .titulo-feedback{ color: #1E8E3E; }
-  .erro .titulo-feedback{ color: #C62828; }
+/* CONFETES */
+.confete{position:fixed;top:-20px;border-radius:2px;opacity:0.9;z-index:9999;animation:cair linear forwards;}
+@keyframes cair{to{transform:translateY(110vh) rotate(540deg);opacity:0.3}}
 
-  /* ACCORDION */
-  .secao{
-    margin-bottom: 10px;
-    border-radius: 16px;
-    overflow: hidden;
-  }
-  .secao-explicacao{ background: #F1ECFF; border-left: 5px solid var(--roxo); }
-  .secao-exemplo{ background: #E6F7FF; border-left: 5px solid var(--azul); }
-  .secao-dica{ background: #FFF3E0; border-left: 5px solid var(--laranja); }
-  .secao-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 12px 16px;
-    cursor: pointer;
-    user-select: none;
-    gap: 8px;
-  }
-  .secao-header:hover{ filter: brightness(0.96); }
-  .secao strong.rotulo{
-    font-family: 'Fredoka One', cursive;
-    font-size: 0.98rem;
-    flex: 1;
-  }
-  .secao-explicacao .rotulo{ color: var(--roxo); }
-  .secao-exemplo .rotulo{ color: #1F8FE0; }
-  .secao-dica .rotulo{ color: #E08A00; }
-  .secao-chevron{
-    font-size: 0.8rem;
-    opacity: 0.55;
-    transition: transform 0.25s;
-  }
-  .secao.aberto .secao-chevron{ transform: rotate(180deg); }
-  .secao-corpo{
-    max-height: 0;
-    overflow: hidden;
-    padding: 0 16px;
-    transition: max-height 0.32s ease, padding 0.22s ease;
-    line-height: 1.65;
-    font-size: 0.97rem;
-  }
-  .secao.aberto .secao-corpo{
-    max-height: 600px;
-    padding: 0 16px 14px;
-  }
-
-  /* BOTÕES */
-  .acoes{
-    display: flex;
-    gap: 12px;
-    margin-top: 18px;
-    flex-wrap: wrap;
-  }
-  .btn{
-    flex: 1;
-    min-width: 140px;
-    padding: 13px 18px;
-    border: none;
-    border-radius: 16px;
-    font-family: 'Fredoka One', cursive;
-    font-size: 1rem;
-    color: #fff;
-    cursor: pointer;
-    box-shadow: 0 5px 14px rgba(0,0,0,0.12);
-    transition: transform 0.15s;
-  }
-  .btn:hover{ transform: translateY(-2px); }
-  .btn:disabled{
-    opacity: 0.5;
-    cursor: not-allowed;
-    transform: none;
-  }
-  .btn-primario{ background: linear-gradient(135deg, var(--roxo), var(--rosa)); }
-  .btn-secundario{ background: linear-gradient(135deg, var(--azul), #6FE3D6); }
-  .btn-voltar{ background: linear-gradient(135deg, #aaa, #888); }
-  .btn-laranja{ background: linear-gradient(135deg, var(--laranja), #FF7A7A); }
-  .btn-full{ width: 100%; margin-top: 8px; }
-
-  /* RESULTADO */
-  .resultado-emoji{ font-size: 3.5rem; display: block; text-align: center; margin-bottom: 8px; }
-  .resultado-titulo{ text-align: center; color: var(--roxo); font-size: 2rem; }
-  .resultado-msg{ text-align: center; font-weight: 700; color: #6B5B95; margin: 8px 0 20px; }
-  .stats-row{
-    display: flex;
-    justify-content: center;
-    gap: 14px;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
-  }
-  .stat-box{
-    background: #F4F1FF;
-    border-radius: 16px;
-    padding: 14px 20px;
-    text-align: center;
-    min-width: 90px;
-  }
-  .stat-num{
-    font-family: 'Fredoka One', cursive;
-    font-size: 1.7rem;
-    color: var(--roxo);
-    display: block;
-  }
-  .stat-label{ font-size: 0.82rem; font-weight: 700; color: #6B5B95; }
-  .item-revisao{
-    background: #FFF6F6;
-    border: 2px solid #FFD6D6;
-    border-radius: 14px;
-    padding: 14px 16px;
-    margin-bottom: 12px;
-  }
-  .rev-meta{ font-size: 0.8rem; font-weight: 800; color: #9B59B6; margin-bottom: 4px; }
-  .rev-enunciado{ font-weight: 700; margin-bottom: 6px; line-height: 1.5; }
-  .rev-sua, .rev-certa{ font-size: 0.9rem; font-weight: 700; }
-  .errada-txt{ color: var(--erro); }
-  .certa-txt{ color: var(--verde); }
-  .rev-exp{ margin-top: 6px; font-size: 0.88rem; color: #6B5B95; font-style: italic; line-height: 1.5; }
-  .sem-erros{ text-align: center; font-weight: 800; color: var(--verde); padding: 16px; }
-  .divider{ height: 1px; background: #EDE7FF; margin: 20px 0; }
-  .apoio-label{ font-size: 0.82rem; font-weight: 800; color: #bbb; margin-bottom: 8px; letter-spacing: 0.04em; }
-  .carregando{
-    text-align: center;
-    padding: 40px;
-    font-weight: 800;
-    color: var(--roxo);
-  }
-
-  /* CONFETES */
-  .confete{
-    position: fixed;
-    top: -20px;
-    border-radius: 2px;
-    opacity: 0.9;
-    z-index: 9999;
-    animation: cair linear forwards;
-  }
-  @keyframes cair{
-    to{ transform: translateY(110vh) rotate(540deg); opacity: 0.3; }
-  }
-
-  @media(max-width: 550px){
-    .acoes{ flex-direction: column; }
-    .btn{ width: 100%; }
-    header{ justify-content: center; text-align: center; }
-    .grid-materias{ grid-template-columns: 1fr; }
-  }
+@media(max-width:550px){
+  .acoes{flex-direction:column;}
+  .btn{width:100%;}
+  header{justify-content:center;text-align:center;}
+  .grid-materias{grid-template-columns:1fr;}
+}
 </style>
 </head>
 <body>
@@ -629,15 +195,23 @@
 
   <!-- TELA INICIAL -->
   <section id="tela-inicial">
+    <div class="boas-vindas">
+      <h2>Bem-vindo ao EduQuest! 🎓</h2>
+      <p>Escolha um tópico abaixo ou inicie uma prova com todos os assuntos</p>
+      <button class="btn-ir-filtros" id="btn-ir-filtros">Montar Prova 🚀</button>
+    </div>
     <div class="grid-materias" id="grid-materias">
-      <div class="carregando">Carregando conteúdos do Firestore... ⏳</div>
+      <div class="carregando">Carregando conteúdos... ⏳</div>
     </div>
   </section>
 
   <!-- TELA FILTROS -->
   <div id="tela-filtros" class="escondido">
+    <div style="padding:24px 0 12px;display:flex;align-items:center;gap:12px;">
+      <button class="btn-sm cinza" id="btn-voltar-inicio">⬅️ Início</button>
+      <h2 class="titulo-font" style="color:var(--roxo)">🎯 Montar Prova</h2>
+    </div>
     <div class="card">
-      <h2 class="titulo-font" style="color:var(--roxo);margin-bottom:6px">🎯 Montar Prova</h2>
       <p style="color:#6B5B95;font-weight:700;margin-bottom:18px">Filtre as questões ou deixe em branco para sortear de tudo</p>
       <div class="filtros-grid">
         <div class="filtro-grupo"><label>📚 Série</label><select id="filtro-serie"></select></div>
@@ -657,7 +231,7 @@
         <input type="checkbox" id="filtro-revisao">
         <div>
           <label for="filtro-revisao">🧠 Revisão inteligente</label><br>
-          <small>Prioriza questões que você nunca fez ou erra com mais frequência</small>
+          <small>Prioriza questões que você nunca fez ou erra mais</small>
         </div>
       </div>
       <div class="qtd-row">
@@ -683,16 +257,16 @@
     </div>
     <div class="card">
       <div class="badges-row">
-        <span class="badge badge-serie" id="badge-serie"></span>
+        <span class="badge badge-serie"   id="badge-serie"></span>
         <span class="badge badge-assunto" id="badge-assunto"></span>
-        <span class="badge badge-topico" id="badge-topico"></span>
-        <span class="badge badge-dif" id="badge-dificuldade"></span>
-        <span class="badge badge-origem" id="badge-origem"></span>
-        <span class="badge badge-ano" id="badge-ano"></span>
+        <span class="badge badge-topico"  id="badge-topico"></span>
+        <span class="badge badge-dif"     id="badge-dificuldade"></span>
+        <span class="badge badge-origem"  id="badge-origem"></span>
+        <span class="badge badge-ano"     id="badge-ano"></span>
       </div>
       <div id="hist-info" class="escondido"></div>
       <div class="tags-row" id="questao-tags"></div>
-      <img id="questao-img" class="escondido" alt="Imagem da questão">
+      <img id="questao-img" class="escondido" alt="">
       <div id="questao-enunciado"></div>
       <div class="opcoes" id="lista-opcoes"></div>
       <div class="feedback" id="feedback-box"></div>
@@ -731,20 +305,20 @@
       </div>
       <div id="lista-erros"></div>
       <div class="acoes">
-        <button class="btn btn-laranja" id="btn-refazer">🔄 Refazer</button>
+        <button class="btn btn-laranja"  id="btn-refazer">🔄 Refazer</button>
         <button class="btn btn-primario" id="btn-nova-prova">🏠 Nova Prova</button>
       </div>
     </div>
   </div>
 
-  <!-- MODAL AUTH -->
+  <!-- MODAL SALVAR CONTA -->
   <div id="modal-auth" class="escondido">
     <div class="modal-overlay" id="modal-overlay"></div>
     <div class="modal-box">
       <h3>💾 Salvar seu progresso</h3>
-      <p style="margin-bottom:16px;">Crie uma conta para manter seu histórico em qualquer dispositivo</p>
+      <p style="margin-bottom:16px;color:#6B5B95;font-weight:700;font-size:.9rem">Crie uma conta para manter seu histórico em qualquer dispositivo</p>
       <div class="campo"><label>E-mail</label><input type="email" id="modal-email" placeholder="seu@email.com"></div>
-      <div class="campo"><label>Senha (mín. 6)</label><input type="password" id="modal-senha" placeholder="••••••"></div>
+      <div class="campo"><label>Senha (mín. 6 caracteres)</label><input type="password" id="modal-senha" placeholder="••••••••"></div>
       <div class="auth-btns">
         <button class="btn-auth secundario" id="btn-cancelar-modal">Cancelar</button>
         <button class="btn-auth" id="btn-salvar-conta">Criar e salvar</button>
@@ -756,543 +330,499 @@
 </div>
 
 <script type="module">
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
-import { getAuth, signInAnonymously, signOut, onAuthStateChanged, linkWithCredential, EmailAuthProvider } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
-import { getFirestore, collection, doc, getDoc, getDocs, query, where, updateDoc, setDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+import { initializeApp }
+  from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+import { getAuth, signInAnonymously, signOut, onAuthStateChanged,
+  linkWithCredential, EmailAuthProvider }
+  from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
+import { getFirestore, collection, doc, getDoc, getDocs,
+  query, where, updateDoc, setDoc, serverTimestamp }
+  from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
 
+/* ── CONFIG ── */
 const firebaseConfig = {
-  apiKey: "AIzaSyDDGUikGRoJoVu3g0tSenKtZHffflApUWQ",
-  authDomain: "agenda-diaria-6c1ac.firebaseapp.com",
-  projectId: "agenda-diaria-6c1ac",
-  storageBucket: "agenda-diaria-6c1ac.firebasestorage.app",
+  apiKey:            "AIzaSyDDGUikGRoJoVu3g0tSenKtZHffflApUWQ",
+  authDomain:        "agenda-diaria-6c1ac.firebaseapp.com",
+  projectId:         "agenda-diaria-6c1ac",
+  storageBucket:     "agenda-diaria-6c1ac.firebasestorage.app",
   messagingSenderId: "38282868914",
-  appId: "1:38282868914:web:a8332ed3fe258a41af71ab"
+  appId:             "1:38282868914:web:a8332ed3fe258a41af71ab"
 };
 
-const app = initializeApp(firebaseConfig);
+const app  = initializeApp(firebaseConfig);
 const auth = getAuth(app);
-const db = getFirestore(app);
+const db   = getFirestore(app);
 
-let currentUser = null;
-let questoesAtuais = [];
-let indiceAtual = 0;
-let acertos = 0;
-let erros = 0;
+/* ── ESTADO ── */
+let currentUser        = null;
+let questoesAtuais     = [];
+let indiceAtual        = 0;
+let acertos            = 0;
+let erros              = 0;
 let historicoRespostas = [];
-let conteudoCache = {};
+let conteudoCache      = {};
 
-const $ = id => document.getElementById(id);
-const mostrar = id => { const el = $(id); if(el) el.classList.remove('escondido'); };
-const ocultar = id => { const el = $(id); if(el) el.classList.add('escondido'); };
+/* ── UTILITÁRIOS ── */
+const $       = id => document.getElementById(id);
+const mostrar = id => $(id)?.classList.remove('escondido');
+const ocultar = id => $(id)?.classList.add('escondido');
 
 function tela(nome) {
-  ['tela-inicial', 'tela-filtros', 'tela-questao', 'tela-resultado'].forEach(t => ocultar(t));
+  ['tela-inicial','tela-filtros','tela-questao','tela-resultado'].forEach(ocultar);
   ocultar('modal-auth');
   mostrar(nome);
   window.scrollTo(0, 0);
 }
 
 function formatarLabel(v) {
-  const map = { '4ano':'4º Ano','5ano':'5º Ano','6ano':'6º Ano', 'facil':'Fácil','medio':'Médio','dificil':'Difícil' };
-  return map[v] || v;
+  return {'4ano':'4º Ano','5ano':'5º Ano','6ano':'6º Ano',
+          'facil':'Fácil','medio':'Médio','dificil':'Difícil'}[v] || v;
 }
 
-// ======================= CARREGAR CONTEÚDOS DO FIRESTORE COMO CARDS =======================
-async function carregarConteudosDoFirestore() {
-  const grid = $('#grid-materias');
-  if(!grid) return;
-  
-  grid.innerHTML = '<div class="carregando">Carregando conteúdos do Firestore... ⏳</div>';
-  
+/* ── TELA INICIAL: CARDS DE CONTEÚDOS ── */
+async function carregarConteudos() {
+  const grid = $('grid-materias');
+  if (!grid) return;
+
+  const icones = { 'Matemática':'🧮','Português':'📖','Ciências':'🔬' };
+
   try {
-    const snapshot = await getDocs(collection(db, 'conteudos'));
-    const conteudos = [];
-    snapshot.forEach(doc => {
-      conteudos.push({ id: doc.id, ...doc.data() });
-    });
-    
-    if (conteudos.length === 0) {
-      grid.innerHTML = '<div class="carregando">⚠️ Nenhum conteúdo encontrado no Firestore. Execute o seed primeiro!</div>';
+    const snap = await getDocs(collection(db, 'conteudos'));
+
+    if (snap.empty) {
+      grid.innerHTML = '<div class="carregando">⚠️ Nenhum conteúdo no Firestore. Importe o seed primeiro!</div>';
       return;
     }
-    
-    const icones = {
-      'Matemática': '🧮',
-      'Português': '📖',
-      'Ciências': '🔬',
-      'default': '📚'
-    };
-    
+
     grid.innerHTML = '';
-    for (const conteudo of conteudos) {
+    snap.forEach(docSnap => {
+      const c  = docSnap.data();
+      const ic = icones[c.assunto] || '📚';
+      const series = Array.isArray(c.serie) ? c.serie.map(formatarLabel).join(' · ') : formatarLabel(c.serie || '');
+
       const card = document.createElement('div');
       card.className = 'card-materia';
-      
-      const icone = icones[conteudo.assunto] || icones.default;
-      const series = conteudo.serie ? conteudo.serie.join(', ') : 'Várias séries';
-      
       card.innerHTML = `
-        <span class="icone-grande">${icone}</span>
-        <h3>${conteudo.titulo}</h3>
-        <p>${conteudo.explicacao?.substring(0, 100) || 'Conteúdo educativo'}...</p>
+        <span class="icone-grande">${ic}</span>
+        <h3>${c.titulo || docSnap.id}</h3>
+        <p>${(c.explicacao || '').replace(/<[^>]+>/g,'').substring(0,110)}…</p>
         <div class="badge-series">📚 ${series}</div>
         <div class="botao-entrar">Praticar 🚀</div>
       `;
-      
+
       card.addEventListener('click', () => {
-        // Preencher filtro com o tópico deste conteúdo
-        const selectTopico = $('#filtro-topico');
-        if(selectTopico && conteudo.topico){
-          setTimeout(() => {
-            for (let i = 0; i < selectTopico.options.length; i++) {
-              if (selectTopico.options[i].value === conteudo.topico) {
-                selectTopico.value = conteudo.topico;
-                break;
-              }
-            }
-          }, 100);
-        }
-        // Ir para tela de filtros
-        tela('tela-filtros');
-        carregarOpcoesFiltros();
+        // Pré-filtra pelo tópico deste conteúdo
+        irParaFiltros(c.topico || '', c.assunto || '');
       });
-      
+
       grid.appendChild(card);
-    }
-  } catch(e) {
+    });
+
+  } catch (e) {
     console.error('Erro ao carregar conteúdos:', e);
-    grid.innerHTML = '<div class="carregando">❌ Erro ao carregar dados do Firestore. Verifique sua conexão e as regras de segurança.</div>';
+    grid.innerHTML = `<div class="carregando">❌ Erro: ${e.message}</div>`;
   }
 }
 
-// ======================= FILTROS =======================
+/* ── FILTROS ── */
 async function carregarOpcoesFiltros() {
   try {
     const snap = await getDocs(collection(db, 'questoes'));
     const series = new Set(), assuntos = new Set(), topicos = new Set();
     snap.forEach(d => {
       const q = d.data();
-      if (q.serie) series.add(q.serie);
+      if (q.serie)   series.add(q.serie);
       if (q.assunto) assuntos.add(q.assunto);
-      if (q.topico) topicos.add(q.topico);
+      if (q.topico)  topicos.add(q.topico);
     });
-    preencher('filtro-serie', [...series].sort(), 'Todas as séries');
+    preencher('filtro-serie',   [...series].sort(),   'Todas as séries');
     preencher('filtro-assunto', [...assuntos].sort(), 'Todos os assuntos');
-    preencher('filtro-topico', [...topicos].sort(), 'Todos os tópicos');
-  } catch(e) { console.error('Erro carregar opções filtros:', e); }
+    preencher('filtro-topico',  [...topicos].sort(),  'Todos os tópicos');
+  } catch(e) { console.error('Filtros:', e); }
 }
 
 function preencher(id, valores, placeholder) {
   const sel = $(id);
-  if(!sel) return;
+  if (!sel) return;
   sel.innerHTML = `<option value="">${placeholder}</option>`;
   valores.forEach(v => {
     const o = document.createElement('option');
-    o.value = v;
-    o.textContent = formatarLabel(v);
+    o.value = v; o.textContent = formatarLabel(v);
     sel.appendChild(o);
   });
 }
 
-// ======================= BUSCAR QUESTÕES =======================
+async function irParaFiltros(topico = '', assunto = '') {
+  await carregarOpcoesFiltros();
+  tela('tela-filtros');
+  // Pré-seleciona os filtros se vieram de um card
+  if (assunto) { const s = $('filtro-assunto'); if (s) s.value = assunto; }
+  if (topico)  { const s = $('filtro-topico');  if (s) s.value = topico;  }
+}
+
+/* ── BUSCAR QUESTÕES ── */
 async function buscarQuestoes(filtros, qtd) {
   const constraints = [];
-  if (filtros.serie) constraints.push(where('serie', '==', filtros.serie));
-  if (filtros.assunto) constraints.push(where('assunto', '==', filtros.assunto));
-  if (filtros.topico) constraints.push(where('topico', '==', filtros.topico));
+  if (filtros.serie)       constraints.push(where('serie',       '==', filtros.serie));
+  if (filtros.assunto)     constraints.push(where('assunto',     '==', filtros.assunto));
+  if (filtros.topico)      constraints.push(where('topico',      '==', filtros.topico));
   if (filtros.dificuldade) constraints.push(where('dificuldade', '==', filtros.dificuldade));
-  
+
   const snap = await getDocs(query(collection(db, 'questoes'), ...constraints));
-  let lista = snap.docs.map(d => ({ id: d.id, ...d.data() }));
+  let lista  = snap.docs.map(d => ({ id: d.id, ...d.data() }));
   if (!lista.length) return [];
-  
+
   if (filtros.revisao && currentUser && !currentUser.isAnonymous) {
     const hSnap = await getDocs(collection(db, 'historico', currentUser.uid, 'questoes'));
-    const hist = {};
+    const hist  = {};
     hSnap.forEach(d => { hist[d.id] = d.data(); });
     lista = lista.map(q => {
-      const h = hist[q.id];
+      const h   = hist[q.id];
       const pct = h ? (h.total_acertos / h.total_tentativas) : -1;
       return { ...q, _pct: pct };
-    }).sort((a,b) => a._pct - b._pct);
+    }).sort((a, b) => a._pct - b._pct);
   } else {
     lista = lista.sort(() => Math.random() - 0.5);
   }
   return lista.slice(0, qtd);
 }
 
-// ======================= RENDERIZAR QUESTÃO =======================
+/* ── RENDERIZAR QUESTÃO ── */
 async function renderQuestao() {
-  const q = questoesAtuais[indiceAtual];
+  const q   = questoesAtuais[indiceAtual];
   const num = indiceAtual + 1;
   const tot = questoesAtuais.length;
-  
-  const barraFill = $('#barra-fill');
-  if(barraFill) barraFill.style.width = ((indiceAtual / tot) * 100) + '%';
-  const progTexto = $('#prog-texto');
-  if(progTexto) progTexto.textContent = `${num} de ${tot}`;
-  const pillAcertos = $('#pill-acertos');
-  if(pillAcertos) pillAcertos.textContent = `✅ ${acertos}`;
-  const pillErros = $('#pill-erros');
-  if(pillErros) pillErros.textContent = `❌ ${erros}`;
-  
-  const badgeSerie = $('#badge-serie');
-  if(badgeSerie) badgeSerie.textContent = formatarLabel(q.serie || '');
-  const badgeAssunto = $('#badge-assunto');
-  if(badgeAssunto) badgeAssunto.textContent = q.assunto || '';
-  const badgeTopico = $('#badge-topico');
-  if(badgeTopico) badgeTopico.textContent = q.topico || '';
-  const badgeDificuldade = $('#badge-dificuldade');
-  if(badgeDificuldade){
-    badgeDificuldade.textContent = formatarLabel(q.dificuldade || '');
-    badgeDificuldade.className = 'badge badge-dif ' + (q.dificuldade || '');
-  }
-  const badgeOrigem = $('#badge-origem');
-  if(badgeOrigem) badgeOrigem.textContent = q.origem || '';
-  const badgeAno = $('#badge-ano');
-  if(badgeAno) badgeAno.textContent = q.ano_prova ? `📅 ${q.ano_prova}` : '';
-  
+
+  // Progresso
+  $('barra-fill').style.width  = ((indiceAtual / tot) * 100) + '%';
+  $('prog-texto').textContent  = `${num} de ${tot}`;
+  $('pill-acertos').textContent = `✅ ${acertos}`;
+  $('pill-erros').textContent   = `❌ ${erros}`;
+
+  // Badges
+  $('badge-serie').textContent       = formatarLabel(q.serie || '');
+  $('badge-assunto').textContent     = q.assunto || '';
+  $('badge-topico').textContent      = q.topico  || '';
+  $('badge-dificuldade').textContent = formatarLabel(q.dificuldade || '');
+  $('badge-dificuldade').className   = 'badge badge-dif ' + (q.dificuldade || '');
+  $('badge-origem').textContent      = q.origem   || '';
+  $('badge-ano').textContent         = q.ano_prova ? `📅 ${q.ano_prova}` : '';
+
+  // Histórico
   ocultar('hist-info');
   if (currentUser && !currentUser.isAnonymous) {
     try {
       const hSnap = await getDoc(doc(db, 'historico', currentUser.uid, 'questoes', q.id));
-      const histInfo = $('#hist-info');
-      if (histInfo){
-        if (hSnap.exists()) {
-          const h = hSnap.data();
-          const pct = Math.round((h.total_acertos / h.total_tentativas) * 100);
-          histInfo.textContent = `Você já fez esta questão ${h.total_tentativas}× — ${pct}% de acerto`;
-          mostrar('hist-info');
-        } else {
-          histInfo.textContent = '🆕 Primeira vez que você faz esta questão';
-          mostrar('hist-info');
-        }
+      const hi    = $('hist-info');
+      if (hSnap.exists()) {
+        const h   = hSnap.data();
+        const pct = Math.round((h.total_acertos / h.total_tentativas) * 100);
+        hi.textContent = `Você já fez esta questão ${h.total_tentativas}× — ${pct}% de acerto`;
+      } else {
+        hi.textContent = '🆕 Primeira vez que você faz esta questão';
       }
+      mostrar('hist-info');
     } catch(_) {}
   }
-  
-  const tagsEl = $('#questao-tags');
-  if(tagsEl){
-    tagsEl.innerHTML = '';
-    (q.tags || []).forEach(t => {
-      const s = document.createElement('span');
-      s.className = 'tag';
-      s.textContent = t;
-      tagsEl.appendChild(s);
-    });
-  }
-  
-  const questaoImg = $('#questao-img');
-  if(questaoImg){
-    if (q.imagem_url) { questaoImg.src = q.imagem_url; mostrar('questao-img'); }
-    else ocultar('questao-img');
-  }
-  
-  const questaoEnunciado = $('#questao-enunciado');
-  if(questaoEnunciado) questaoEnunciado.innerHTML = q.enunciado || '';
-  
-  const opcoesEl = $('#lista-opcoes');
-  if(opcoesEl){
-    opcoesEl.innerHTML = '';
-    (q.opcoes || []).forEach(op => {
-      const btn = document.createElement('button');
-      btn.className = 'opcao';
-      btn.innerHTML = op;
-      btn.addEventListener('click', () => responder(btn, op, q));
-      opcoesEl.appendChild(btn);
-    });
-  }
-  
-  const fb = $('#feedback-box');
-  if(fb){
-    fb.className = 'feedback';
-    fb.innerHTML = '';
-  }
-  
-  const btnProxima = $('#btn-proxima');
-  if(btnProxima){
-    btnProxima.disabled = true;
-    btnProxima.textContent = (num === tot) ? 'Ver Resultado 🏆' : 'Próxima ➡️';
-  }
-  
-  // Carregar conteúdo de apoio
+
+  // Tags
+  const tagsEl = $('questao-tags');
+  tagsEl.innerHTML = '';
+  (q.tags || []).forEach(t => {
+    const s = document.createElement('span');
+    s.className = 'tag'; s.textContent = t;
+    tagsEl.appendChild(s);
+  });
+
+  // Imagem
+  if (q.imagem_url) { $('questao-img').src = q.imagem_url; mostrar('questao-img'); }
+  else ocultar('questao-img');
+
+  // Enunciado
+  $('questao-enunciado').innerHTML = q.enunciado || '';
+
+  // Opções
+  const opcoesEl = $('lista-opcoes');
+  opcoesEl.innerHTML = '';
+  (q.opcoes || []).forEach(op => {
+    const btn = document.createElement('button');
+    btn.className = 'opcao';
+    btn.innerHTML = op;
+    btn.addEventListener('click', () => responder(btn, op, q));
+    opcoesEl.appendChild(btn);
+  });
+
+  // Reset feedback
+  const fb = $('feedback-box');
+  fb.className = 'feedback';
+  fb.innerHTML = '';
+
+  // Botão próxima
+  $('btn-proxima').disabled    = true;
+  $('btn-proxima').textContent = (num === tot) ? 'Ver Resultado 🏆' : 'Próxima ➡️';
+
+  // Accordion fechado
+  ['secao-explicacao','secao-dica','secao-exemplo'].forEach(id => {
+    const el = $(id);
+    el.classList.remove('aberto');
+    el.querySelector('.secao-corpo').innerHTML = '<em style="color:#ccc">Carregando…</em>';
+  });
+
+  // Conteúdo de apoio
   const refId = q.conteudo_ref;
   if (refId) {
-    if (conteudoCache[refId]) {
-      aplicarConteudo(conteudoCache[refId]);
-    } else {
+    let conteudo = conteudoCache[refId];
+    if (!conteudo) {
       try {
         const snap = await getDoc(doc(db, 'conteudos', refId));
-        if (snap.exists()) {
-          conteudoCache[refId] = snap.data();
-          aplicarConteudo(conteudoCache[refId]);
-        } else { aplicarConteudo(null); }
-      } catch(e) { aplicarConteudo(null); }
+        if (snap.exists()) { conteudo = snap.data(); conteudoCache[refId] = conteudo; }
+      } catch(_) {}
     }
-  } else { aplicarConteudo(null); }
+    aplicarConteudo(conteudo);
+  } else {
+    aplicarConteudo(null);
+  }
 }
 
-function aplicarConteudo(conteudo) {
+function aplicarConteudo(c) {
   const sem = '<em style="color:#aaa">Não disponível.</em>';
-  const secaoExplicacao = $('#secao-explicacao');
-  if(secaoExplicacao){
-    const corpo = secaoExplicacao.querySelector('.secao-corpo');
-    if(corpo) corpo.innerHTML = conteudo?.explicacao || sem;
-  }
-  const secaoDica = $('#secao-dica');
-  if(secaoDica){
-    const corpo = secaoDica.querySelector('.secao-corpo');
-    if(corpo) corpo.innerHTML = conteudo?.dica || sem;
-  }
-  const secaoExemplo = $('#secao-exemplo');
-  if(secaoExemplo){
-    const corpo = secaoExemplo.querySelector('.secao-corpo');
-    if(corpo) corpo.innerHTML = conteudo?.exemplo || sem;
-  }
+  $('secao-explicacao').querySelector('.secao-corpo').innerHTML = c?.explicacao || sem;
+  $('secao-dica').querySelector('.secao-corpo').innerHTML       = c?.dica       || sem;
+  $('secao-exemplo').querySelector('.secao-corpo').innerHTML    = c?.exemplo    || sem;
 }
 
-// Accordion
-document.addEventListener('click', function(e) {
-  const secao = e.target.closest('.secao');
-  if(secao) secao.classList.toggle('aberto');
+// Accordion delegado
+document.addEventListener('click', e => {
+  const header = e.target.closest('.secao-header');
+  if (header) header.closest('.secao').classList.toggle('aberto');
 });
 
+/* ── RESPONDER ── */
 async function responder(btnClicado, opcaoEscolhida, q) {
-  const listaOpcoes = $('#lista-opcoes');
-  if(listaOpcoes && listaOpcoes.querySelector('.correta, .errada')) return;
+  if ($('lista-opcoes').querySelector('.correta, .errada')) return;
   const correta = opcaoEscolhida === q.resposta;
-  
-  if(listaOpcoes){
-    listaOpcoes.querySelectorAll('.opcao').forEach(btn => {
-      btn.disabled = true;
-      if (btn.innerHTML === q.resposta) btn.classList.add('correta');
-      if (btn === btnClicado && !correta) btn.classList.add('errada');
-    });
-  }
-  
-  const fb = $('#feedback-box');
-  if(fb){
-    fb.className = 'feedback show ' + (correta ? 'acerto' : 'erro');
-    fb.innerHTML = `<span class="titulo-feedback">${correta ? '✅ Correto!' : `❌ Resposta: ${q.resposta}`}</span><div>${q.explicacao_resposta || ''}</div>`;
-  }
-  
-  if (correta) acertos++;
-  else erros++;
-  
-  const pillAcertos = $('#pill-acertos');
-  if(pillAcertos) pillAcertos.textContent = `✅ ${acertos}`;
-  const pillErros = $('#pill-erros');
-  if(pillErros) pillErros.textContent = `❌ ${erros}`;
-  
+
+  $('lista-opcoes').querySelectorAll('.opcao').forEach(btn => {
+    btn.disabled = true;
+    if (btn.innerHTML === q.resposta) btn.classList.add('correta');
+    if (btn === btnClicado && !correta) btn.classList.add('errada');
+  });
+
+  const fb = $('feedback-box');
+  fb.className = 'feedback show ' + (correta ? 'acerto' : 'erro');
+  fb.innerHTML = `<span class="titulo-feedback">${correta ? '✅ Correto!' : `❌ Resposta: ${q.resposta}`}</span><div>${q.explicacao_resposta || ''}</div>`;
+
+  if (correta) acertos++; else erros++;
+  $('pill-acertos').textContent = `✅ ${acertos}`;
+  $('pill-erros').textContent   = `❌ ${erros}`;
+
   historicoRespostas.push({ questao: q, opcaoEscolhida, correta });
-  
+
+  // Salva histórico apenas para usuário com conta
   if (currentUser && !currentUser.isAnonymous) {
-    const ref = doc(db, 'historico', currentUser.uid, 'questoes', q.id);
-    const snap = await getDoc(ref);
-    if (snap.exists()) {
-      const d = snap.data();
-      await updateDoc(ref, {
-        total_tentativas: d.total_tentativas + 1,
-        total_acertos: d.total_acertos + (correta ? 1 : 0),
-        percentual_acerto: Math.round(((d.total_acertos + (correta ? 1 : 0)) / (d.total_tentativas + 1)) * 100),
-        ultima_vez: serverTimestamp()
-      });
-    } else {
-      await setDoc(ref, {
-        total_tentativas: 1,
-        total_acertos: correta ? 1 : 0,
-        percentual_acerto: correta ? 100 : 0,
-        ultima_vez: serverTimestamp()
-      });
-    }
+    try {
+      const ref  = doc(db, 'historico', currentUser.uid, 'questoes', q.id);
+      const snap = await getDoc(ref);
+      if (snap.exists()) {
+        const d = snap.data();
+        const novoAcertos    = d.total_acertos + (correta ? 1 : 0);
+        const novoTentativas = d.total_tentativas + 1;
+        await updateDoc(ref, {
+          total_tentativas:  novoTentativas,
+          total_acertos:     novoAcertos,
+          percentual_acerto: Math.round((novoAcertos / novoTentativas) * 100),
+          ultima_vez:        serverTimestamp()
+        });
+      } else {
+        await setDoc(ref, {
+          total_tentativas:  1,
+          total_acertos:     correta ? 1 : 0,
+          percentual_acerto: correta ? 100 : 0,
+          ultima_vez:        serverTimestamp()
+        });
+      }
+    } catch(e) { console.error('Histórico:', e); }
   }
-  
-  const btnProxima = $('#btn-proxima');
-  if(btnProxima) btnProxima.disabled = false;
+
+  $('btn-proxima').disabled = false;
 }
 
+/* ── RESULTADO ── */
 function mostrarResultado() {
   const tot = questoesAtuais.length;
   const pct = Math.round((acertos / tot) * 100);
-  const resAcertos = $('#res-acertos');
-  if(resAcertos) resAcertos.textContent = acertos;
-  const resErros = $('#res-erros');
-  if(resErros) resErros.textContent = erros;
-  const resTotal = $('#res-total');
-  if(resTotal) resTotal.textContent = tot;
-  const resPct = $('#res-pct');
-  if(resPct) resPct.textContent = pct + '%';
-  
-  const cfg = pct === 100 ? ['🏆', 'Nota máxima!', 'Você acertou tudo! Incrível!']
-    : pct >= 70 ? ['🎉', 'Muito bem!', 'Ótimo desempenho!']
-    : pct >= 50 ? ['📚', 'Bom esforço!', 'Revise os erros abaixo!']
-    : ['🌱', 'Continue praticando!', 'A prática leva à perfeição!'];
-  
-  const resEmoji = $('#res-emoji');
-  if(resEmoji) resEmoji.textContent = cfg[0];
-  const resTitulo = $('#res-titulo');
-  if(resTitulo) resTitulo.textContent = cfg[1];
-  const resMsg = $('#res-msg');
-  if(resMsg) resMsg.textContent = cfg[2];
-  
+
+  $('barra-fill').style.width  = '100%';
+  $('res-acertos').textContent = acertos;
+  $('res-erros').textContent   = erros;
+  $('res-total').textContent   = tot;
+  $('res-pct').textContent     = pct + '%';
+
+  const [emoji, titulo, msg] =
+    pct === 100 ? ['🏆','Nota máxima!','Você acertou tudo! Incrível! 🌟']
+    : pct >= 70 ? ['🎉','Muito bem!','Ótimo desempenho! Continue assim! 💪']
+    : pct >= 50 ? ['📚','Bom esforço!','Revise os erros abaixo! 💡']
+    :             ['🌱','Continue praticando!','A prática leva à perfeição! 🚀'];
+
+  $('res-emoji').textContent  = emoji;
+  $('res-titulo').textContent = titulo;
+  $('res-msg').textContent    = msg;
+
   const errosList = historicoRespostas.filter(h => !h.correta);
-  const listaErros = $('#lista-erros');
-  if(listaErros){
-    listaErros.innerHTML = errosList.length === 0
-      ? '<p class="sem-erros">🌟 Nenhum erro! Parabéns!</p>'
-      : '<h3 style="margin-bottom:12px;color:var(--rosa)">📝 Questões para revisar:</h3>' + errosList.map(h => `
+  $('lista-erros').innerHTML  = errosList.length === 0
+    ? '<p class="sem-erros">🌟 Nenhum erro! Parabéns!</p>'
+    : '<h3 style="margin-bottom:12px;color:var(--rosa)">📝 Questões para revisar:</h3>'
+      + errosList.map(h => `
         <div class="item-revisao">
-          <div class="rev-meta">${h.questao.assunto || ''} › ${h.questao.topico || ''}</div>
+          <div class="rev-meta">${h.questao.assunto||''} › ${h.questao.topico||''}</div>
           <div class="rev-enunciado">${h.questao.enunciado}</div>
           <div class="rev-sua">Sua resposta: <span class="errada-txt">${h.opcaoEscolhida}</span></div>
           <div class="rev-certa">Resposta certa: <span class="certa-txt">${h.questao.resposta}</span></div>
-          <div class="rev-exp">${h.questao.explicacao_resposta || ''}</div>
+          <div class="rev-exp">${h.questao.explicacao_resposta||''}</div>
         </div>`).join('');
-  }
-  
+
   if (pct >= 70) confetes();
   tela('tela-resultado');
 }
 
 function confetes() {
-  const cores = ['#7C4DFF', '#FF5C8A', '#FFA94D', '#4CD964', '#4DA6FF'];
+  const cores = ['#7C4DFF','#FF5C8A','#FFA94D','#4CD964','#4DA6FF'];
   for (let i = 0; i < 90; i++) {
     const el = document.createElement('div');
     el.className = 'confete';
-    el.style.cssText = `left:${Math.random()*100}vw;background:${cores[Math.floor(Math.random()*cores.length)]};animation-duration:${2.5+Math.random()*2}s;width:${6+Math.random()*7}px;height:${10+Math.random()*10}px`;
+    el.style.cssText = `left:${Math.random()*100}vw;background:${cores[~~(Math.random()*cores.length)]};animation-duration:${2.5+Math.random()*2}s;width:${6+Math.random()*7}px;height:${10+Math.random()*10}px`;
     document.body.appendChild(el);
     setTimeout(() => el.remove(), 5000);
   }
 }
 
-// ======================= EVENTOS =======================
-const btnIniciar = $('#btn-iniciar');
-if(btnIniciar){
-  btnIniciar.addEventListener('click', async () => {
-    const filtros = {
-      serie: $('#filtro-serie')?.value || '',
-      assunto: $('#filtro-assunto')?.value || '',
-      topico: $('#filtro-topico')?.value || '',
-      dificuldade: $('#filtro-dificuldade')?.value || '',
-      revisao: $('#filtro-revisao')?.checked || false
-    };
-    const qtd = Math.min(50, Math.max(1, parseInt($('#filtro-qtd')?.value) || 10));
-    
-    const filtrosErro = $('#filtros-erro');
-    if(filtrosErro) filtrosErro.textContent = '';
-    btnIniciar.disabled = true;
-    btnIniciar.textContent = 'Carregando… ⏳';
-    
-    try {
-      const questoes = await buscarQuestoes(filtros, qtd);
-      if (!questoes.length) {
-        if(filtrosErro) filtrosErro.textContent = '⚠️ Nenhuma questão encontrada com esses filtros.';
-        return;
-      }
-      questoesAtuais = questoes;
-      indiceAtual = 0;
-      acertos = 0;
-      erros = 0;
-      historicoRespostas = [];
-      tela('tela-questao');
-      await renderQuestao();
-    } catch(e) {
-      if(filtrosErro) filtrosErro.textContent = '❌ Erro ao carregar questões.';
-    } finally {
-      btnIniciar.disabled = false;
-      btnIniciar.textContent = 'Iniciar Prova 🚀';
+/* ── EVENTOS ── */
+$('btn-ir-filtros').addEventListener('click',       () => irParaFiltros());
+$('btn-voltar-inicio').addEventListener('click',    () => tela('tela-inicial'));
+$('btn-voltar-filtros').addEventListener('click',   () => tela('tela-filtros'));
+$('btn-nova-prova').addEventListener('click',       () => { tela('tela-filtros'); carregarOpcoesFiltros(); });
+$('btn-refazer').addEventListener('click', async () => {
+  indiceAtual = 0; acertos = 0; erros = 0; historicoRespostas = [];
+  tela('tela-questao');
+  await renderQuestao();
+});
+
+$('btn-iniciar').addEventListener('click', async () => {
+  const filtros = {
+    serie:       $('filtro-serie')?.value       || '',
+    assunto:     $('filtro-assunto')?.value     || '',
+    topico:      $('filtro-topico')?.value      || '',
+    dificuldade: $('filtro-dificuldade')?.value || '',
+    revisao:     $('filtro-revisao')?.checked   || false
+  };
+  const qtd = Math.min(50, Math.max(1, parseInt($('filtro-qtd')?.value) || 10));
+  const errEl = $('filtros-erro');
+  errEl.textContent = '';
+  $('btn-iniciar').disabled    = true;
+  $('btn-iniciar').textContent = 'Carregando… ⏳';
+
+  try {
+    const questoes = await buscarQuestoes(filtros, qtd);
+    if (!questoes.length) {
+      errEl.textContent = '⚠️ Nenhuma questão encontrada com esses filtros.';
+      return;
     }
-  });
-}
-
-const btnProxima = $('#btn-proxima');
-if(btnProxima){
-  btnProxima.addEventListener('click', async () => {
-    if (indiceAtual < questoesAtuais.length - 1) {
-      indiceAtual++;
-      await renderQuestao();
-    } else {
-      mostrarResultado();
-    }
-  });
-}
-
-const btnVoltarFiltros = $('#btn-voltar-filtros');
-if(btnVoltarFiltros) btnVoltarFiltros.addEventListener('click', () => tela('tela-filtros'));
-
-const btnNovaProva = $('#btn-nova-prova');
-if(btnNovaProva) btnNovaProva.addEventListener('click', () => { tela('tela-filtros'); carregarOpcoesFiltros(); });
-
-const btnRefazer = $('#btn-refazer');
-if(btnRefazer){
-  btnRefazer.addEventListener('click', async () => {
-    indiceAtual = 0;
-    acertos = 0;
-    erros = 0;
-    historicoRespostas = [];
+    questoesAtuais = questoes; indiceAtual = 0;
+    acertos = 0; erros = 0; historicoRespostas = [];
     tela('tela-questao');
     await renderQuestao();
-  });
-}
+  } catch(e) {
+    errEl.textContent = `❌ Erro: ${e.message}`;
+  } finally {
+    $('btn-iniciar').disabled    = false;
+    $('btn-iniciar').textContent = 'Iniciar Prova 🚀';
+  }
+});
 
-// ======================= AUTENTICAÇÃO =======================
+$('btn-proxima').addEventListener('click', async () => {
+  if (indiceAtual < questoesAtuais.length - 1) {
+    indiceAtual++;
+    await renderQuestao();
+  } else {
+    mostrarResultado();
+  }
+});
+
+/* ── MODAL CONTA ── */
+$('btn-cancelar-modal').addEventListener('click', () => ocultar('modal-auth'));
+$('modal-overlay').addEventListener('click',      () => ocultar('modal-auth'));
+
+$('btn-salvar-conta').addEventListener('click', async () => {
+  const email = $('modal-email').value.trim();
+  const senha = $('modal-senha').value;
+  const errEl = $('modal-erro');
+  if (senha.length < 6) { errEl.textContent = 'Senha precisa ter ao menos 6 caracteres.'; return; }
+  try {
+    const cred = EmailAuthProvider.credential(email, senha);
+    await linkWithCredential(auth.currentUser, cred);
+    ocultar('modal-auth');
+    alert('✅ Conta criada! Seu progresso será salvo.');
+  } catch(e) {
+    errEl.textContent = e.code === 'auth/email-already-in-use'
+      ? 'Este e-mail já está cadastrado.'
+      : e.message;
+  }
+});
+
+/* ── AUTENTICAÇÃO ── */
 function atualizarUIUsuario(user) {
   currentUser = user;
-  const authArea = $('#auth-area');
-  if(!authArea) return;
-  if (user) {
-    if (user.isAnonymous) {
-      authArea.innerHTML = `<div class="user-area"><span class="user-email">👤 Visitante</span><button id="btn-criar-conta-header" class="btn-sm">💾 Salvar</button></div>`;
-      const btnCriar = $('#btn-criar-conta-header');
-      if(btnCriar) btnCriar.addEventListener('click', () => mostrar('modal-auth'));
-    } else {
-      authArea.innerHTML = `<div class="user-area"><span class="user-email">${user.email}</span><button id="btn-sair" class="btn-sm cinza">Sair</button></div>`;
-      const btnSair = $('#btn-sair');
-      if(btnSair) btnSair.addEventListener('click', () => signOut(auth));
-    }
+  const authArea = $('auth-area');
+  if (!authArea) return;
+
+  if (!user) {
+    authArea.innerHTML = '';
+    return;
+  }
+
+  if (user.isAnonymous) {
+    authArea.innerHTML = `
+      <div class="user-area">
+        <span class="user-email">👤 Visitante</span>
+        <button id="btn-salvar-header" class="btn-sm">💾 Salvar progresso</button>
+      </div>`;
+    $('btn-salvar-header')?.addEventListener('click', () => {
+      $('modal-email').value = '';
+      $('modal-senha').value = '';
+      $('modal-erro').textContent = '';
+      mostrar('modal-auth');
+    });
   } else {
-    authArea.innerHTML = `<div class="user-area"><span class="user-email">📖 Convidado</span><button id="btn-login-visitante" class="btn-sm">Entrar</button></div>`;
-    const btnLogin = $('#btn-login-visitante');
-    if(btnLogin) btnLogin.addEventListener('click', async () => { await signInAnonymously(auth); });
+    authArea.innerHTML = `
+      <div class="user-area">
+        <span class="user-email">${user.email}</span>
+        <button id="btn-sair" class="btn-sm cinza">Sair</button>
+      </div>`;
+    $('btn-sair')?.addEventListener('click', () => signOut(auth));
   }
 }
 
-const btnCancelarModal = $('#btn-cancelar-modal');
-if(btnCancelarModal) btnCancelarModal.addEventListener('click', () => ocultar('modal-auth'));
-
-const modalOverlay = $('#modal-overlay');
-if(modalOverlay) modalOverlay.addEventListener('click', () => ocultar('modal-auth'));
-
-const btnSalvarConta = $('#btn-salvar-conta');
-if(btnSalvarConta){
-  btnSalvarConta.addEventListener('click', async () => {
-    const email = $('#modal-email')?.value.trim() || '';
-    const senha = $('#modal-senha')?.value || '';
-    const erroDiv = $('#modal-erro');
-    if(!erroDiv) return;
-    if (senha.length < 6) { erroDiv.textContent = 'Senha precisa ter 6+ caracteres'; return; }
-    try {
-      const credential = EmailAuthProvider.credential(email, senha);
-      await linkWithCredential(auth.currentUser, credential);
-      ocultar('modal-auth');
-      alert('✅ Conta criada! Seu progresso será salvo.');
-    } catch(e) { erroDiv.textContent = e.message; }
-  });
-}
-
-// Inicialização - fica sempre na tela inicial até clicar em um card
-onAuthStateChanged(auth, user => {
-  currentUser = user;
+/* ── INICIALIZAÇÃO ── */
+onAuthStateChanged(auth, async user => {
   atualizarUIUsuario(user);
-  carregarConteudosDoFirestore(); // Carrega os cards
-  // FICA NA TELA INICIAL! Só vai para filtros quando clicar em um card
-  tela('tela-inicial');
+  if (user) {
+    // Usuário pronto: carrega conteúdos da tela inicial
+    await carregarConteudos();
+  } else {
+    // Sem usuário: faz login anônimo silencioso
+    try { await signInAnonymously(auth); }
+    catch(e) {
+      // Login anônimo não ativado: mostra aviso mas deixa a tela funcionar
+      console.warn('Login anônimo não disponível:', e.message);
+      $('grid-materias').innerHTML = `
+        <div class="carregando">
+          ⚠️ Ative o login anônimo no Firebase Console<br>
+          <small>Authentication → Sign-in method → Anônimo → Ativar</small><br><br>
+          <button onclick="window.location.reload()" style="margin-top:10px;padding:8px 20px;border:none;border-radius:999px;background:var(--roxo);color:#fff;font-family:'Fredoka One',cursive;cursor:pointer;">Tentar novamente</button>
+        </div>`;
+    }
+  }
 });
-
-// Se não estiver logado, faz login anônimo automaticamente
-if (!auth.currentUser) {
-  signInAnonymously(auth).catch(e => console.warn('Erro no login anônimo:', e));
-}
 </script>
 </body>
 </html>
