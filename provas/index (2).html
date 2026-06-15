@@ -287,7 +287,7 @@ header{display:flex;justify-content:space-between;align-items:center;padding:18p
   </div>
 
   <!-- TELA INICIAL -->
-  <section id="tela-inicial">
+  <section id="tela-inicial" class="escondido">
     <div class="boas-vindas">
       <h2>Bem-vindo ao EduQuest! 🎓</h2>
       <p>Escolha um tópico abaixo ou inicie uma prova com todos os assuntos</p>
@@ -863,7 +863,6 @@ $('btn-salvar-conta').addEventListener('click', async () => {
 });
 
 /* ── AUTENTICAÇÃO ── */
-/* ── AUTENTICAÇÃO ── */
 function atualizarUIUsuario(user) {
   currentUser = user;
   const authArea = $('auth-area');
@@ -933,9 +932,13 @@ $('btn-visitante').addEventListener('click', async () => {
   $('btn-visitante').disabled    = true;
   $('btn-visitante').textContent = 'Entrando… ⏳';
   try {
+    // Se já existe um usuário (anônimo ou não), desloga primeiro
+    if (auth.currentUser) {
+      await signOut(auth);
+    }
     await signInAnonymously(auth);
   } catch(e) {
-    $('login-erro').textContent    = 'Login anônimo não ativado no Firebase. Ative em Authentication → Sign-in method → Anônimo.';
+    $('login-erro').textContent = 'Login anônimo não ativado no Firebase. Ative em Authentication → Sign-in method → Anônimo.';
     $('btn-visitante').disabled    = false;
     $('btn-visitante').textContent = '👤 Continuar como visitante';
   }
@@ -956,12 +959,12 @@ function traduzirErroAuth(code) {
 /* ── INICIALIZAÇÃO ── */
 onAuthStateChanged(auth, async user => {
   atualizarUIUsuario(user);
-  if (user) {
-    // Logado: vai direto para a tela de conteúdos
+  if (user && !user.isAnonymous) {
+    // Só usuários com conta (email) vão direto para a tela inicial
     tela('tela-inicial');
     await carregarConteudos();
   } else {
-    // Não logado: mostra tela de login
+    // Anônimo ou sem usuário → mostra tela de login
     tela('tela-login');
   }
 });
