@@ -816,7 +816,6 @@ async function carregarConteudosDoFirestore() {
       return;
     }
     
-    // Mapear ícones baseado no assunto/tópico
     const icones = {
       'Matemática': '🧮',
       'Português': '📖',
@@ -835,7 +834,7 @@ async function carregarConteudosDoFirestore() {
       card.innerHTML = `
         <span class="icone-grande">${icone}</span>
         <h3>${conteudo.titulo}</h3>
-        <p>${conteudo.explicacao?.substring(0, 100) || 'Conteúdo educativo'}</p>
+        <p>${conteudo.explicacao?.substring(0, 100) || 'Conteúdo educativo'}...</p>
         <div class="badge-series">📚 ${series}</div>
         <div class="botao-entrar">Praticar 🚀</div>
       `;
@@ -853,6 +852,7 @@ async function carregarConteudosDoFirestore() {
             }
           }, 100);
         }
+        // Ir para tela de filtros
         tela('tela-filtros');
         carregarOpcoesFiltros();
       });
@@ -861,7 +861,7 @@ async function carregarConteudosDoFirestore() {
     }
   } catch(e) {
     console.error('Erro ao carregar conteúdos:', e);
-    grid.innerHTML = '<div class="carregando">❌ Erro ao carregar dados do Firestore. Verifique sua conexão.</div>';
+    grid.innerHTML = '<div class="carregando">❌ Erro ao carregar dados do Firestore. Verifique sua conexão e as regras de segurança.</div>';
   }
 }
 
@@ -879,7 +879,7 @@ async function carregarOpcoesFiltros() {
     preencher('filtro-serie', [...series].sort(), 'Todas as séries');
     preencher('filtro-assunto', [...assuntos].sort(), 'Todos os assuntos');
     preencher('filtro-topico', [...topicos].sort(), 'Todos os tópicos');
-  } catch(e) { console.error(e); }
+  } catch(e) { console.error('Erro carregar opções filtros:', e); }
 }
 
 function preencher(id, valores, placeholder) {
@@ -1280,14 +1280,19 @@ if(btnSalvarConta){
   });
 }
 
+// Inicialização - fica sempre na tela inicial até clicar em um card
 onAuthStateChanged(auth, user => {
+  currentUser = user;
   atualizarUIUsuario(user);
-  carregarConteudosDoFirestore();
-  if(user) carregarOpcoesFiltros();
+  carregarConteudosDoFirestore(); // Carrega os cards
+  // FICA NA TELA INICIAL! Só vai para filtros quando clicar em um card
+  tela('tela-inicial');
 });
 
-// Inicialização
-if (!auth.currentUser) signInAnonymously(auth).catch(console.warn);
+// Se não estiver logado, faz login anônimo automaticamente
+if (!auth.currentUser) {
+  signInAnonymously(auth).catch(e => console.warn('Erro no login anônimo:', e));
+}
 </script>
 </body>
 </html>
