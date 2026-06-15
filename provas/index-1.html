@@ -35,7 +35,6 @@
     font-family:'Fredoka One', cursive;
   }
 
-  /* ===== HEADER ===== */
   header{
     display: flex;
     justify-content: space-between;
@@ -47,6 +46,8 @@
     position: sticky;
     top: 0;
     z-index: 100;
+    flex-wrap: wrap;
+    gap: 12px;
   }
   .logo h1{
     font-size: clamp(1.3rem, 4vw, 1.8rem);
@@ -91,7 +92,6 @@
     padding: 0 20px;
   }
 
-  /* ===== MODAL ===== */
   .modal-overlay{
     position: fixed;
     top:0; left:0; right:0; bottom:0;
@@ -161,7 +161,7 @@
   }
   .escondido{ display: none !important; }
 
-  /* ===== TELA INICIAL COM MATÉRIAS ===== */
+  /* TELA INICIAL */
   #tela-inicial .grid-materias{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -211,6 +211,16 @@
     line-height: 1.4;
     margin-bottom: 16px;
   }
+  .card-materia .badge-series{
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    background: #E0D6FF;
+    color: var(--roxo);
+    font-size: 0.75rem;
+    font-weight: 800;
+    margin-top: 8px;
+  }
   .card-materia .botao-entrar{
     display: inline-block;
     padding: 8px 24px;
@@ -219,9 +229,10 @@
     color: #fff;
     font-weight: 800;
     font-size: 0.85rem;
+    margin-top: 12px;
   }
 
-  /* ===== TELA FILTROS ===== */
+  /* FILTROS */
   .filtros-grid{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -245,7 +256,6 @@
     outline: none;
     background: #fff;
   }
-  .filtro-grupo select:focus{ border-color: var(--roxo); }
   .revisao-row{
     display: flex;
     align-items: center;
@@ -285,7 +295,7 @@
     outline: none;
   }
 
-  /* ===== PROGRESSO ===== */
+  /* PROGRESSO */
   .prog-wrap{ margin-bottom: 14px; }
   .prog-info{
     display: flex;
@@ -320,7 +330,7 @@
     transition: width 0.4s ease;
   }
 
-  /* ===== BADGES ===== */
+  /* BADGES */
   .badges-row{
     display: flex;
     gap: 8px;
@@ -369,7 +379,7 @@
     border: 1.5px solid #D1C4FF;
   }
 
-  /* ===== CARD ===== */
+  /* CARD */
   .card{
     background: var(--branco);
     border-radius: 28px;
@@ -577,7 +587,12 @@
   .sem-erros{ text-align: center; font-weight: 800; color: var(--verde); padding: 16px; }
   .divider{ height: 1px; background: #EDE7FF; margin: 20px 0; }
   .apoio-label{ font-size: 0.82rem; font-weight: 800; color: #bbb; margin-bottom: 8px; letter-spacing: 0.04em; }
-  .loading-txt{ color: #aaa; font-style: italic; font-size: 0.9rem; }
+  .carregando{
+    text-align: center;
+    padding: 40px;
+    font-weight: 800;
+    color: var(--roxo);
+  }
 
   /* CONFETES */
   .confete{
@@ -595,7 +610,7 @@
   @media(max-width: 550px){
     .acoes{ flex-direction: column; }
     .btn{ width: 100%; }
-    header{ flex-direction: column; gap: 12px; text-align: center; }
+    header{ justify-content: center; text-align: center; }
     .grid-materias{ grid-template-columns: 1fr; }
   }
 </style>
@@ -605,17 +620,17 @@
 <header>
   <div class="logo">
     <h1>Edu<span>Quest</span> 📚</h1>
-    <p>Questões do Firestore + Histórico personalizado</p>
+    <p>Questões e conteúdos do Firestore</p>
   </div>
   <div id="auth-area"></div>
 </header>
 
 <div class="container">
 
-  <!-- TELA INICIAL COM MATÉRIAS (CARDS) -->
+  <!-- TELA INICIAL -->
   <section id="tela-inicial">
     <div class="grid-materias" id="grid-materias">
-      <div class="carregando" style="text-align:center; padding:40px;">Carregando matérias... ⏳</div>
+      <div class="carregando">Carregando conteúdos do Firestore... ⏳</div>
     </div>
   </section>
 
@@ -741,10 +756,9 @@
 </div>
 
 <script type="module">
-// Import Firebase
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
-import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword, signInAnonymously, linkWithCredential, EmailAuthProvider, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
-import { getFirestore, collection, doc, getDoc, getDocs, query, where, updateDoc, setDoc, increment, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+import { getAuth, signInAnonymously, signOut, onAuthStateChanged, linkWithCredential, EmailAuthProvider } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
+import { getFirestore, collection, doc, getDoc, getDocs, query, where, updateDoc, setDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
 
 const firebaseConfig = {
   apiKey: "AIzaSyDDGUikGRoJoVu3g0tSenKtZHffflApUWQ",
@@ -759,7 +773,6 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
 
-// Estado
 let currentUser = null;
 let questoesAtuais = [];
 let indiceAtual = 0;
@@ -768,7 +781,6 @@ let erros = 0;
 let historicoRespostas = [];
 let conteudoCache = {};
 
-// Elementos
 const $ = id => document.getElementById(id);
 const mostrar = id => { const el = $(id); if(el) el.classList.remove('escondido'); };
 const ocultar = id => { const el = $(id); if(el) el.classList.add('escondido'); };
@@ -781,43 +793,75 @@ function tela(nome) {
 }
 
 function formatarLabel(v) {
-  const map = { '4ano':'4º Ano','5ano':'5º Ano','6ano':'6º Ano', 'facil':'Fácil','medio':'Médio','dificil':'Difícil', 'OBMEP':'OBMEP','ENEM':'ENEM','Professor':'Professor' };
+  const map = { '4ano':'4º Ano','5ano':'5º Ano','6ano':'6º Ano', 'facil':'Fácil','medio':'Médio','dificil':'Difícil' };
   return map[v] || v;
 }
 
-// ======================= MATÉRIAS (cards) =======================
-const MATERIAS = [
-  { id: "matematica", nome: "🧮 Matemática", descricao: "Números, álgebra, geometria e raciocínio lógico", icone: "🧮", filtros: {} },
-  { id: "portugues", nome: "📖 Português", descricao: "Gramática, interpretação e vocabulário", icone: "📖", filtros: { assunto: "Português" } },
-  { id: "ciencias", nome: "🔬 Ciências", descricao: "Corpo humano, meio ambiente e astronomia", icone: "🔬", filtros: { assunto: "Ciências" } }
-];
-
-async function carregarMaterias() {
+// ======================= CARREGAR CONTEÚDOS DO FIRESTORE COMO CARDS =======================
+async function carregarConteudosDoFirestore() {
   const grid = $('#grid-materias');
   if(!grid) return;
-  grid.innerHTML = '';
-  for (const mat of MATERIAS) {
-    const card = document.createElement('div');
-    card.className = 'card-materia';
-    card.innerHTML = `<span class="icone-grande">${mat.icone}</span><h3>${mat.nome}</h3><p>${mat.descricao}</p><span class="botao-entrar">Começar 🚀</span>`;
-    card.addEventListener('click', () => {
-      if (mat.filtros.assunto) {
-        const selectAssunto = $('#filtro-assunto');
-        if(selectAssunto){
+  
+  grid.innerHTML = '<div class="carregando">Carregando conteúdos do Firestore... ⏳</div>';
+  
+  try {
+    const snapshot = await getDocs(collection(db, 'conteudos'));
+    const conteudos = [];
+    snapshot.forEach(doc => {
+      conteudos.push({ id: doc.id, ...doc.data() });
+    });
+    
+    if (conteudos.length === 0) {
+      grid.innerHTML = '<div class="carregando">⚠️ Nenhum conteúdo encontrado no Firestore. Execute o seed primeiro!</div>';
+      return;
+    }
+    
+    // Mapear ícones baseado no assunto/tópico
+    const icones = {
+      'Matemática': '🧮',
+      'Português': '📖',
+      'Ciências': '🔬',
+      'default': '📚'
+    };
+    
+    grid.innerHTML = '';
+    for (const conteudo of conteudos) {
+      const card = document.createElement('div');
+      card.className = 'card-materia';
+      
+      const icone = icones[conteudo.assunto] || icones.default;
+      const series = conteudo.serie ? conteudo.serie.join(', ') : 'Várias séries';
+      
+      card.innerHTML = `
+        <span class="icone-grande">${icone}</span>
+        <h3>${conteudo.titulo}</h3>
+        <p>${conteudo.explicacao?.substring(0, 100) || 'Conteúdo educativo'}</p>
+        <div class="badge-series">📚 ${series}</div>
+        <div class="botao-entrar">Praticar 🚀</div>
+      `;
+      
+      card.addEventListener('click', () => {
+        // Preencher filtro com o tópico deste conteúdo
+        const selectTopico = $('#filtro-topico');
+        if(selectTopico && conteudo.topico){
           setTimeout(() => {
-            for (let i = 0; i < selectAssunto.options.length; i++) {
-              if (selectAssunto.options[i].value === mat.filtros.assunto) {
-                selectAssunto.value = mat.filtros.assunto;
+            for (let i = 0; i < selectTopico.options.length; i++) {
+              if (selectTopico.options[i].value === conteudo.topico) {
+                selectTopico.value = conteudo.topico;
                 break;
               }
             }
           }, 100);
         }
-      }
-      tela('tela-filtros');
-      carregarOpcoesFiltros();
-    });
-    grid.appendChild(card);
+        tela('tela-filtros');
+        carregarOpcoesFiltros();
+      });
+      
+      grid.appendChild(card);
+    }
+  } catch(e) {
+    console.error('Erro ao carregar conteúdos:', e);
+    grid.innerHTML = '<div class="carregando">❌ Erro ao carregar dados do Firestore. Verifique sua conexão.</div>';
   }
 }
 
@@ -1007,7 +1051,7 @@ function aplicarConteudo(conteudo) {
   }
 }
 
-// Accordion manual
+// Accordion
 document.addEventListener('click', function(e) {
   const secao = e.target.closest('.secao');
   if(secao) secao.classList.toggle('aberto');
@@ -1067,7 +1111,6 @@ async function responder(btnClicado, opcaoEscolhida, q) {
   if(btnProxima) btnProxima.disabled = false;
 }
 
-// ======================= RESULTADO =======================
 function mostrarResultado() {
   const tot = questoesAtuais.length;
   const pct = Math.round((acertos / tot) * 100);
@@ -1080,10 +1123,10 @@ function mostrarResultado() {
   const resPct = $('#res-pct');
   if(resPct) resPct.textContent = pct + '%';
   
-  const cfg = pct === 100 ? ['🏆', 'Nota máxima!', 'Você acertou tudo! Incrível! 🌟']
-    : pct >= 70 ? ['🎉', 'Muito bem!', 'Ótimo desempenho! Continue assim! 💪']
-    : pct >= 50 ? ['📚', 'Bom esforço!', 'Revise os erros abaixo e tente de novo! 💡']
-    : ['🌱', 'Continue praticando!', 'Não desanime! A prática leva à perfeição. 🚀'];
+  const cfg = pct === 100 ? ['🏆', 'Nota máxima!', 'Você acertou tudo! Incrível!']
+    : pct >= 70 ? ['🎉', 'Muito bem!', 'Ótimo desempenho!']
+    : pct >= 50 ? ['📚', 'Bom esforço!', 'Revise os erros abaixo!']
+    : ['🌱', 'Continue praticando!', 'A prática leva à perfeição!'];
   
   const resEmoji = $('#res-emoji');
   if(resEmoji) resEmoji.textContent = cfg[0];
@@ -1239,18 +1282,11 @@ if(btnSalvarConta){
 
 onAuthStateChanged(auth, user => {
   atualizarUIUsuario(user);
-  if (user) {
-    tela('tela-inicial');
-    carregarMaterias();
-    carregarOpcoesFiltros();
-  } else {
-    tela('tela-inicial');
-    carregarMaterias();
-  }
+  carregarConteudosDoFirestore();
+  if(user) carregarOpcoesFiltros();
 });
 
 // Inicialização
-carregarMaterias();
 if (!auth.currentUser) signInAnonymously(auth).catch(console.warn);
 </script>
 </body>
