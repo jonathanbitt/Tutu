@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<!--
+================================================================
+  EduQuest — arquivo único para GitHub
+  Projeto Firebase: agenda-diaria-6c1ac
+================================================================
+
+── FIRESTORE RULES ─────────────────────────────────────────────
+Cole o conteúdo abaixo em:
+  Firebase Console → Firestore → Regras
+
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /questoes/{id} {
+      allow read: if request.auth != null;
+      allow write: if false;
+    }
+    match /conteudos/{id} {
+      allow read: if request.auth != null;
+      allow write: if false;
+    }
+    match /historico/{userId}/questoes/{questaoId} {
+      allow read, write: if request.auth != null
+                         && request.auth.uid == userId;
+    }
+  }
+}
+
+── FIRESTORE INDEXES ────────────────────────────────────────────
+Cole o conteúdo abaixo em:
+  Firebase Console → Firestore → Índices → Adicionar índice composto
+
+Coleção: questoes
+  serie ASC + dificuldade ASC
+  serie ASC + assunto ASC
+  assunto ASC + topico ASC
+  serie ASC + assunto ASC + topico ASC
+  serie ASC + assunto ASC + dificuldade ASC
+  assunto ASC + topico ASC + dificuldade ASC
+  serie ASC + assunto ASC + topico ASC + dificuldade ASC
+
+── DEPLOY ───────────────────────────────────────────────────────
+  firebase login
+  firebase use agenda-diaria-6c1ac
+  firebase deploy --only hosting
+================================================================
+-->
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EduQuest 📚</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --roxo:#7C4DFF;--roxo-c:#B388FF;--rosa:#FF5C8A;--laranja:#FFA94D;
+  --verde:#4CD964;--azul:#4DA6FF;--erro:#FF5C5C;
+  --bg:#F4F1FF;--texto:#3A2E5C;--branco:#fff;
+  --sombra:0 8px 24px rgba(124,77,255,.15);
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Nunito',sans-serif;background:linear-gradient(160deg,#EFE9FF 0%,#FFE9F2 50%,#FFF3E0 100%);color:var(--texto);min-height:100vh;}
+h1,h2,h3,.ff{font-family:'Fredoka One',cursive;}
+.escondido{display:none!important;}
+
+header{display:flex;align-items:center;justify-content:space-between;padding:14px 20px;background:var(--branco);box-shadow:0 2px 12px rgba(124,77,255,.12);position:sticky;top:0;z-index:100;}
+.logo{font-family:'Fredoka One',cursive;font-size:1.4rem;color:var(--roxo);}
+.logo span{color:var(--rosa);}
+#header-user{display:flex;align-items:center;gap:10px;font-size:.9rem;font-weight:700;color:#6B5B95;}
+.btn-sm{padding:7px 16px;border:none;border-radius:999px;cursor:pointer;font-family:'Fredoka One',cursive;font-size:.9rem;color:#fff;background:linear-gradient(135deg,var(--roxo),var(--rosa));transition:transform .15s;}
+.btn-sm:hover{transform:scale(1.04);}
+.btn-sm.cinza{background:linear-gradient(135deg,#aaa,#888);}
+
+.container{max-width:820px;margin:0 auto;padding:24px 16px 60px;}
+.card{background:var(--branco);border-radius:24px;padding:28px 24px;box-shadow:var(--sombra);animation:entrar .35s ease;}
+@keyframes entrar{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+
+/* AUTH */
+.auth-wrap{max-width:400px;margin:40px auto;}
+.auth-wrap h2{color:var(--roxo);font-size:1.8rem;text-align:center;margin-bottom:6px;}
+.auth-wrap p{text-align:center;color:#6B5B95;font-weight:700;margin-bottom:24px;}
+.campo{margin-bottom:16px;}
+.campo label{display:block;font-weight:800;font-size:.9rem;margin-bottom:6px;color:var(--roxo);}
+.campo input{width:100%;padding:12px 16px;border:2px solid #E0D6FF;border-radius:14px;font-size:1rem;font-family:'Nunito',sans-serif;outline:none;transition:border-color .18s;}
+.campo input:focus{border-color:var(--roxo);}
+.auth-btns{display:flex;gap:10px;margin-top:4px;}
+.btn-auth{flex:1;padding:13px;border:none;border-radius:16px;cursor:pointer;font-family:'Fredoka One',cursive;font-size:1rem;color:#fff;transition:transform .15s,box-shadow .15s;box-shadow:0 4px 12px rgba(0,0,0,.12);}
+.btn-auth:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,0,0,.15);}
+.btn-auth.primario{background:linear-gradient(135deg,var(--roxo),var(--rosa));}
+.btn-auth.secundario{background:linear-gradient(135deg,var(--azul),#6FE3D6);}
+.erro-txt{color:var(--erro);font-size:.9rem;font-weight:700;margin-top:10px;min-height:20px;}
+
+/* FILTROS */
+.filtros-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin:20px 0;}
+.filtro-grupo label{display:block;font-weight:800;font-size:.88rem;margin-bottom:6px;color:var(--roxo);}
+.filtro-grupo select{width:100%;padding:10px 14px;border:2px solid #E0D6FF;border-radius:12px;font-family:'Nunito',sans-serif;font-size:.95rem;outline:none;background:#fff;}
+.filtro-grupo select:focus{border-color:var(--roxo);}
+.revisao-row{display:flex;align-items:center;gap:10px;margin:10px 0 20px;padding:14px 16px;background:#F1ECFF;border-radius:14px;}
+.revisao-row input[type=checkbox]{width:20px;height:20px;accent-color:var(--roxo);cursor:pointer;}
+.revisao-row label{font-weight:800;color:var(--roxo);cursor:pointer;}
+.revisao-row small{color:#6B5B95;font-size:.85rem;}
+.qtd-row{display:flex;align-items:center;gap:12px;margin-bottom:8px;}
+.qtd-row label{font-weight:800;color:var(--roxo);}
+.qtd-row input[type=number]{width:80px;padding:8px 12px;border:2px solid #E0D6FF;border-radius:12px;font-family:'Nunito',sans-serif;font-size:1rem;text-align:center;outline:none;}
+.qtd-row input:focus{border-color:var(--roxo);}
+
+/* PROGRESSO */
+.prog-wrap{margin-bottom:14px;}
+.prog-info{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;flex-wrap:wrap;gap:8px;}
+.prog-label{font-weight:800;color:var(--roxo);font-size:.9rem;}
+.pills{display:flex;gap:8px;}
+.pill{padding:4px 12px;border-radius:999px;font-weight:800;font-size:.85rem;color:#fff;}
+.pill.a{background:var(--verde);}
+.pill.e{background:var(--erro);}
+.barra{height:14px;background:#E4DBFF;border-radius:999px;overflow:hidden;}
+.barra-fill{height:100%;width:0%;border-radius:999px;background:linear-gradient(90deg,var(--roxo),var(--rosa),var(--laranja));transition:width .4s ease;}
+
+/* BADGES */
+.badges-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px;}
+.badge{padding:4px 12px;border-radius:999px;font-size:.78rem;font-weight:800;color:#fff;}
+.badge:empty{display:none;}
+.badge-serie{background:var(--azul);}
+.badge-assunto{background:var(--roxo);}
+.badge-topico{background:#9B59B6;}
+.badge-dif.facil{background:var(--verde);}
+.badge-dif.medio{background:var(--laranja);}
+.badge-dif.dificil{background:var(--erro);}
+.badge-origem{background:#555;}
+.badge-ano{background:#888;}
+
+#hist-info{font-size:.82rem;font-weight:700;color:#6B5B95;background:#F4F1FF;padding:6px 12px;border-radius:10px;margin-bottom:12px;display:inline-block;}
+.tags-row{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px;}
+.tag{padding:3px 10px;border-radius:999px;background:#EDE7FF;color:var(--roxo);font-size:.78rem;font-weight:800;border:1.5px solid #D1C4FF;}
+#questao-img{max-width:100%;border-radius:14px;margin-bottom:14px;border:2px solid #E0D6FF;}
+#questao-enunciado{font-size:1.05rem;font-weight:700;line-height:1.7;margin-bottom:18px;color:var(--texto);}
+
+/* OPÇÕES */
+.opcoes{display:flex;flex-direction:column;gap:10px;margin-bottom:16px;}
+.opcao{text-align:left;width:100%;padding:13px 18px;border-radius:14px;border:2px solid #E0D6FF;background:#fff;font-size:.98rem;font-weight:700;font-family:'Nunito',sans-serif;color:var(--texto);cursor:pointer;transition:all .18s;line-height:1.5;}
+.opcao:hover:not(:disabled){border-color:var(--roxo);background:#F6F1FF;transform:translateX(4px);}
+.opcao:disabled{cursor:default;}
+.opcao.correta{border-color:var(--verde);background:#E8FCEF;color:#1E8E3E;}
+.opcao.errada{border-color:var(--erro);background:#FFEDED;color:#C62828;}
+
+/* FEEDBACK */
+.feedback{border-radius:16px;padding:0;max-height:0;overflow:hidden;transition:max-height .35s ease,padding .25s ease;}
+.feedback.show{max-height:300px;padding:16px;}
+.feedback.acerto{background:#E8FCEF;border:2px solid var(--verde);}
+.feedback.erro{background:#FFEDED;border:2px solid var(--erro);}
+.titulo-feedback{font-family:'Fredoka One',cursive;font-size:1.1rem;display:block;margin-bottom:6px;}
+.acerto .titulo-feedback{color:#1E8E3E;}
+.erro   .titulo-feedback{color:#C62828;}
+
+/* ACCORDION */
+.secao{margin-bottom:10px;border-radius:16px;overflow:hidden;}
+.secao-explicacao{background:#F1ECFF;border-left:5px solid var(--roxo);}
+.secao-exemplo{background:#E6F7FF;border-left:5px solid var(--azul);}
+.secao-dica{background:#FFF3E0;border-left:5px solid var(--laranja);}
+.secao-header{display:flex;justify-content:space-between;align-items:center;padding:12px 16px;cursor:pointer;user-select:none;gap:8px;}
+.secao-header:hover{filter:brightness(.96);}
+.secao strong.rotulo{font-family:'Fredoka One',cursive;font-size:.98rem;flex:1;}
+.secao-explicacao .rotulo{color:var(--roxo);}
+.secao-exemplo    .rotulo{color:#1F8FE0;}
+.secao-dica       .rotulo{color:#E08A00;}
+.secao-chevron{font-size:.8rem;opacity:.55;transition:transform .25s;}
+.secao.aberto .secao-chevron{transform:rotate(180deg);}
+.secao-corpo{max-height:0;overflow:hidden;padding:0 16px;transition:max-height .32s ease,padding .22s ease;line-height:1.65;font-size:.97rem;}
+.secao.aberto .secao-corpo{max-height:600px;padding:0 16px 14px;}
+.loading-txt{color:#aaa;font-style:italic;font-size:.9rem;}
+
+/* BOTÕES */
+.acoes{display:flex;gap:12px;margin-top:18px;flex-wrap:wrap;}
+.btn{flex:1;min-width:140px;padding:13px 18px;border:none;border-radius:16px;font-family:'Fredoka One',cursive;font-size:1rem;color:#fff;cursor:pointer;box-shadow:0 5px 14px rgba(0,0,0,.12);transition:transform .15s;}
+.btn:hover{transform:translateY(-2px);}
+.btn:disabled{opacity:.5;cursor:not-allowed;transform:none;}
+.btn-primario{background:linear-gradient(135deg,var(--roxo),var(--rosa));}
+.btn-secundario{background:linear-gradient(135deg,var(--azul),#6FE3D6);}
+.btn-voltar{background:linear-gradient(135deg,#aaa,#888);}
+.btn-laranja{background:linear-gradient(135deg,var(--laranja),#FF7A7A);}
+.btn-full{width:100%;margin-top:8px;}
+
+/* RESULTADO */
+.resultado-emoji{font-size:3.5rem;display:block;text-align:center;margin-bottom:8px;}
+.resultado-titulo{text-align:center;color:var(--roxo);font-size:2rem;}
+.resultado-msg{text-align:center;font-weight:700;color:#6B5B95;margin:8px 0 20px;}
+.stats-row{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-bottom:20px;}
+.stat-box{background:#F4F1FF;border-radius:16px;padding:14px 20px;text-align:center;min-width:90px;}
+.stat-num{font-family:'Fredoka One',cursive;font-size:1.7rem;color:var(--roxo);display:block;}
+.stat-label{font-size:.82rem;font-weight:700;color:#6B5B95;}
+.item-revisao{background:#FFF6F6;border:2px solid #FFD6D6;border-radius:14px;padding:14px 16px;margin-bottom:12px;}
+.rev-meta{font-size:.8rem;font-weight:800;color:#9B59B6;margin-bottom:4px;}
+.rev-enunciado{font-weight:700;margin-bottom:6px;line-height:1.5;}
+.rev-sua,.rev-certa{font-size:.9rem;font-weight:700;}
+.errada-txt{color:var(--erro);}
+.certa-txt{color:var(--verde);}
+.rev-exp{margin-top:6px;font-size:.88rem;color:#6B5B95;font-style:italic;line-height:1.5;}
+.sem-erros{text-align:center;font-weight:800;color:var(--verde);padding:16px;}
+.divider{height:1px;background:#EDE7FF;margin:20px 0;}
+.apoio-label{font-size:.82rem;font-weight:800;color:#bbb;margin-bottom:8px;letter-spacing:.04em;}
+
+/* CONFETES */
+.confete{position:fixed;top:-20px;border-radius:2px;opacity:.9;z-index:9999;animation:cair linear forwards;}
+@keyframes cair{to{transform:translateY(110vh) rotate(540deg);opacity:.3}}
+
+@media(max-width:480px){
+  .acoes{flex-direction:column;}
+  .btn{width:100%;}
+  .auth-btns{flex-direction:column;}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">Edu<span>Quest</span> 📚</div>
+  <div id="header-user" class="escondido">
+    <span id="user-email"></span>
+    <button class="btn-sm cinza" id="btn-sair">Sair</button>
+  </div>
+  <button class="btn-sm" id="header-login-btn">Entrar</button>
+</header>
+
+<div class="container">
+
+  <!-- TELA AUTH -->
+  <div id="tela-auth" class="escondido auth-wrap">
+    <div class="card">
+      <h2>📚 EduQuest</h2>
+      <p>Entre para estudar e acompanhar seu progresso</p>
+      <div class="campo">
+        <label>E-mail</label>
+        <input type="email" id="input-email" placeholder="seu@email.com" autocomplete="email">
+      </div>
+      <div class="campo">
+        <label>Senha</label>
+        <input type="password" id="input-senha" placeholder="••••••••" autocomplete="current-password">
+      </div>
+      <div class="auth-btns">
+        <button class="btn-auth primario" id="btn-login">Entrar</button>
+        <button class="btn-auth secundario" id="btn-cadastro">Criar conta</button>
+      </div>
+      <div class="erro-txt" id="auth-erro"></div>
+    </div>
+  </div>
+
+  <!-- TELA FILTROS -->
+  <div id="tela-filtros" class="escondido">
+    <div class="card">
+      <h2 class="ff" style="color:var(--roxo);margin-bottom:6px">🎯 Montar Prova</h2>
+      <p style="color:#6B5B95;font-weight:700;margin-bottom:18px">Filtre as questões ou deixe em branco para sortear de tudo</p>
+      <div class="filtros-grid">
+        <div class="filtro-grupo"><label>📚 Série</label><select id="filtro-serie"></select></div>
+        <div class="filtro-grupo"><label>📖 Assunto</label><select id="filtro-assunto"></select></div>
+        <div class="filtro-grupo"><label>🔖 Tópico</label><select id="filtro-topico"></select></div>
+        <div class="filtro-grupo">
+          <label>⚡ Dificuldade</label>
+          <select id="filtro-dificuldade">
+            <option value="">Qualquer dificuldade</option>
+            <option value="facil">Fácil</option>
+            <option value="medio">Médio</option>
+            <option value="dificil">Difícil</option>
+          </select>
+        </div>
+      </div>
+      <div class="revisao-row">
+        <input type="checkbox" id="filtro-revisao">
+        <div>
+          <label for="filtro-revisao">🧠 Revisão inteligente</label><br>
+          <small>Prioriza questões que você nunca fez ou erra com mais frequência</small>
+        </div>
+      </div>
+      <div class="qtd-row">
+        <label>Número de questões:</label>
+        <input type="number" id="filtro-qtd" value="10" min="1" max="50">
+      </div>
+      <div class="erro-txt" id="filtros-erro"></div>
+      <button class="btn btn-primario btn-full" id="btn-iniciar">Iniciar Prova 🚀</button>
+    </div>
+  </div>
+
+  <!-- TELA QUESTÃO -->
+  <div id="tela-questao" class="escondido">
+    <div class="prog-wrap">
+      <div class="prog-info">
+        <span class="prog-label">Questão <span id="prog-texto">1 de 10</span></span>
+        <div class="pills">
+          <span class="pill a" id="pill-acertos">✅ 0</span>
+          <span class="pill e" id="pill-erros">❌ 0</span>
+        </div>
+      </div>
+      <div class="barra"><div class="barra-fill" id="barra-fill"></div></div>
+    </div>
+    <div class="card">
+      <div class="badges-row">
+        <span class="badge badge-serie"    id="badge-serie"></span>
+        <span class="badge badge-assunto"  id="badge-assunto"></span>
+        <span class="badge badge-topico"   id="badge-topico"></span>
+        <span class="badge badge-dif"      id="badge-dificuldade"></span>
+        <span class="badge badge-origem"   id="badge-origem"></span>
+        <span class="badge badge-ano"      id="badge-ano"></span>
+      </div>
+      <div id="hist-info" class="escondido"></div>
+      <div class="tags-row" id="questao-tags"></div>
+      <img id="questao-img" class="escondido" alt="Imagem da questão">
+      <div id="questao-enunciado"></div>
+      <div class="opcoes" id="lista-opcoes"></div>
+      <div class="feedback" id="feedback-box"></div>
+      <div class="divider"></div>
+      <p class="apoio-label">CONTEÚDO DE APOIO</p>
+      <div class="secao secao-explicacao" id="secao-explicacao" onclick="toggleSecao(this)">
+        <div class="secao-header"><strong class="rotulo">🧠 Explicação</strong><span class="secao-chevron">▼</span></div>
+        <div class="secao-corpo"></div>
+      </div>
+      <div class="secao secao-dica" id="secao-dica" onclick="toggleSecao(this)">
+        <div class="secao-header"><strong class="rotulo">💡 Dica</strong><span class="secao-chevron">▼</span></div>
+        <div class="secao-corpo"></div>
+      </div>
+      <div class="secao secao-exemplo" id="secao-exemplo" onclick="toggleSecao(this)">
+        <div class="secao-header"><strong class="rotulo">📚 Exemplo</strong><span class="secao-chevron">▼</span></div>
+        <div class="secao-corpo"></div>
+      </div>
+      <div class="acoes">
+        <button class="btn btn-voltar" id="btn-voltar-filtros">⬅️ Filtros</button>
+        <button class="btn btn-primario" id="btn-proxima" disabled>Próxima ➡️</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- TELA RESULTADO -->
+  <div id="tela-resultado" class="escondido">
+    <div class="card">
+      <span class="resultado-emoji" id="res-emoji">🎉</span>
+      <h2 class="resultado-titulo" id="res-titulo"></h2>
+      <p class="resultado-msg" id="res-msg"></p>
+      <div class="stats-row">
+        <div class="stat-box"><span class="stat-num" id="res-acertos">0</span><span class="stat-label">Acertos ✅</span></div>
+        <div class="stat-box"><span class="stat-num" id="res-erros">0</span><span class="stat-label">Erros ❌</span></div>
+        <div class="stat-box"><span class="stat-num" id="res-total">0</span><span class="stat-label">Total</span></div>
+        <div class="stat-box"><span class="stat-num" id="res-pct">0%</span><span class="stat-label">Aproveitamento</span></div>
+      </div>
+      <div id="lista-erros"></div>
+      <div class="acoes">
+        <button class="btn btn-laranja"  id="btn-refazer">🔄 Refazer</button>
+        <button class="btn btn-primario" id="btn-nova-prova">🏠 Nova Prova</button>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /container -->
+
+<script type="module">
+import { initializeApp }
+  from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword,
+  signOut, onAuthStateChanged }
+  from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
+import { getFirestore, collection, doc, getDoc, getDocs, query, where,
+  updateDoc, setDoc, increment, serverTimestamp }
+  from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+
+/* ================================================================
+   🔥 CONFIGURAÇÃO — substitua pelos dados do seu projeto Firebase
+   Console: https://console.firebase.google.com
+   ================================================================ */
+const firebaseConfig = {
+  apiKey:            "AIzaSyDDGUikGRoJoVu3g0tSenKtZHffflApUWQ",
+  authDomain:        "agenda-diaria-6c1ac.firebaseapp.com",
+  projectId:         "agenda-diaria-6c1ac",
+  storageBucket:     "agenda-diaria-6c1ac.firebasestorage.app",
+  messagingSenderId: "38282868914",
+  appId:             "1:38282868914:web:a8332ed3fe258a41af71ab"
+};
+
+const app  = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const db   = getFirestore(app);
+
+/* ================================================================
+   ESTADO GLOBAL
+   ================================================================ */
+const E = {
+  user: null,
+  questoes: [],
+  conteudoCache: {},
+  indice: 0,
+  acertos: 0,
+  erros: 0,
+  historico: []
+};
+
+/* ================================================================
+   UTILITÁRIOS
+   ================================================================ */
+const $ = id => document.getElementById(id);
+const mostrar = id => $(id).classList.remove('escondido');
+const ocultar = id => $(id).classList.add('escondido');
+
+function tela(nome) {
+  ['tela-auth','tela-filtros','tela-questao','tela-resultado']
+    .forEach(t => ocultar(t));
+  mostrar(nome);
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function formatarLabel(v) {
+  const map = {
+    '4ano':'4º Ano','5ano':'5º Ano','6ano':'6º Ano',
+    'facil':'Fácil','medio':'Médio','dificil':'Difícil',
+    'OBMEP':'OBMEP','ENEM':'ENEM','IA':'Gerada por IA','Professor':'Professor'
+  };
+  return map[v] || v;
+}
+
+/* ================================================================
+   AUTENTICAÇÃO
+   ================================================================ */
+onAuthStateChanged(auth, user => {
+  E.user = user;
+  if (user) {
+    $('user-email').textContent = user.email;
+    mostrar('header-user');
+    ocultar('header-login-btn');
+    tela('tela-filtros');
+    carregarOpcoesFiltros();
+  } else {
+    ocultar('header-user');
+    mostrar('header-login-btn');
+    tela('tela-auth');
+  }
+});
+
+$('btn-login').addEventListener('click', async () => {
+  const email = $('input-email').value.trim();
+  const senha = $('input-senha').value;
+  $('auth-erro').textContent = '';
+  try {
+    await signInWithEmailAndPassword(auth, email, senha);
+  } catch(e) { $('auth-erro').textContent = traduzirErro(e.code); }
+});
+
+$('btn-cadastro').addEventListener('click', async () => {
+  const email = $('input-email').value.trim();
+  const senha = $('input-senha').value;
+  $('auth-erro').textContent = '';
+  if (senha.length < 6) { $('auth-erro').textContent = 'Senha precisa ter ao menos 6 caracteres.'; return; }
+  try {
+    await createUserWithEmailAndPassword(auth, email, senha);
+  } catch(e) { $('auth-erro').textContent = traduzirErro(e.code); }
+});
+
+$('btn-sair').addEventListener('click', () => signOut(auth));
+$('header-login-btn').addEventListener('click', () => tela('tela-auth'));
+
+function traduzirErro(code) {
+  return {
+    'auth/user-not-found': 'E-mail não encontrado.',
+    'auth/wrong-password': 'Senha incorreta.',
+    'auth/invalid-credential': 'E-mail ou senha incorretos.',
+    'auth/email-already-in-use': 'Este e-mail já está cadastrado.',
+    'auth/invalid-email': 'E-mail inválido.',
+    'auth/too-many-requests': 'Muitas tentativas. Tente mais tarde.',
+  }[code] || 'Erro ao entrar. Verifique seus dados.';
+}
+
+/* ================================================================
+   FILTROS — carrega opções distintas do Firestore
+   ================================================================ */
+async function carregarOpcoesFiltros() {
+  try {
+    const snap = await getDocs(collection(db, 'questoes'));
+    const series = new Set(), assuntos = new Set(), topicos = new Set();
+    snap.forEach(d => {
+      const q = d.data();
+      if (q.serie)   series.add(q.serie);
+      if (q.assunto) assuntos.add(q.assunto);
+      if (q.topico)  topicos.add(q.topico);
+    });
+    preencher('filtro-serie',   [...series].sort(),   'Todas as séries');
+    preencher('filtro-assunto', [...assuntos].sort(), 'Todos os assuntos');
+    preencher('filtro-topico',  [...topicos].sort(),  'Todos os tópicos');
+  } catch(e) { console.error('Erro ao carregar filtros', e); }
+}
+
+function preencher(id, valores, placeholder) {
+  const sel = $(id);
+  sel.innerHTML = `<option value="">${placeholder}</option>`;
+  valores.forEach(v => {
+    const o = document.createElement('option');
+    o.value = v; o.textContent = formatarLabel(v);
+    sel.appendChild(o);
+  });
+}
+
+/* ================================================================
+   INICIAR PROVA
+   ================================================================ */
+$('btn-iniciar').addEventListener('click', async () => {
+  const filtros = {
+    serie:       $('filtro-serie').value,
+    assunto:     $('filtro-assunto').value,
+    topico:      $('filtro-topico').value,
+    dificuldade: $('filtro-dificuldade').value,
+    revisao:     $('filtro-revisao').checked
+  };
+  const qtd = Math.min(50, Math.max(1, parseInt($('filtro-qtd').value) || 10));
+
+  $('filtros-erro').textContent = '';
+  $('btn-iniciar').disabled = true;
+  $('btn-iniciar').textContent = 'Carregando… ⏳';
+
+  try {
+    const questoes = await buscarQuestoes(filtros, qtd);
+    if (!questoes.length) {
+      $('filtros-erro').textContent = '⚠️ Nenhuma questão encontrada com esses filtros.';
+      return;
+    }
+    E.questoes = questoes; E.indice = 0; E.acertos = 0; E.erros = 0; E.historico = [];
+    tela('tela-questao');
+    await renderQuestao();
+  } catch(e) {
+    console.error(e);
+    $('filtros-erro').textContent = '❌ Erro ao carregar questões. Verifique sua conexão.';
+  } finally {
+    $('btn-iniciar').disabled = false;
+    $('btn-iniciar').textContent = 'Iniciar Prova 🚀';
+  }
+});
+
+async function buscarQuestoes(filtros, qtd) {
+  const constraints = [];
+  if (filtros.serie)       constraints.push(where('serie',       '==', filtros.serie));
+  if (filtros.assunto)     constraints.push(where('assunto',     '==', filtros.assunto));
+  if (filtros.topico)      constraints.push(where('topico',      '==', filtros.topico));
+  if (filtros.dificuldade) constraints.push(where('dificuldade', '==', filtros.dificuldade));
+
+  const snap = await getDocs(query(collection(db, 'questoes'), ...constraints));
+  let lista = snap.docs.map(d => ({ id: d.id, ...d.data() }));
+  if (!lista.length) return [];
+
+  if (filtros.revisao && E.user) {
+    // Carrega histórico do usuário e ordena por menor % de acerto
+    const hSnap = await getDocs(collection(db, 'historico', E.user.uid, 'questoes'));
+    const hist = {};
+    hSnap.forEach(d => { hist[d.id] = d.data(); });
+
+    lista = lista.map(q => {
+      const h = hist[q.id];
+      // -1 = nunca feita → prioridade máxima
+      const pct = h ? (h.total_acertos / h.total_tentativas) : -1;
+      return { ...q, _pct: pct };
+    }).sort((a, b) => a._pct - b._pct);
+  } else {
+    lista = lista.sort(() => Math.random() - 0.5);
+  }
+
+  return lista.slice(0, qtd);
+}
+
+/* ================================================================
+   RENDERIZAR QUESTÃO
+   ================================================================ */
+async function renderQuestao() {
+  const q   = E.questoes[E.indice];
+  const num = E.indice + 1;
+  const tot = E.questoes.length;
+
+  // Progresso
+  $('barra-fill').style.width = ((E.indice / tot) * 100) + '%';
+  $('prog-texto').textContent = `${num} de ${tot}`;
+  $('pill-acertos').textContent = `✅ ${E.acertos}`;
+  $('pill-erros').textContent   = `❌ ${E.erros}`;
+
+  // Badges
+  $('badge-serie').textContent       = formatarLabel(q.serie || '');
+  $('badge-assunto').textContent     = q.assunto || '';
+  $('badge-topico').textContent      = q.topico  || '';
+  $('badge-dificuldade').textContent = formatarLabel(q.dificuldade || '');
+  $('badge-dificuldade').className   = 'badge badge-dif ' + (q.dificuldade || '');
+  $('badge-origem').textContent      = q.origem   || '';
+  $('badge-ano').textContent         = q.ano_prova ? `📅 ${q.ano_prova}` : '';
+
+  // Histórico pessoal
+  ocultar('hist-info');
+  if (E.user) {
+    try {
+      const hSnap = await getDoc(doc(db, 'historico', E.user.uid, 'questoes', q.id));
+      if (hSnap.exists()) {
+        const h = hSnap.data();
+        const pct = Math.round((h.total_acertos / h.total_tentativas) * 100);
+        $('hist-info').textContent = `Você já fez esta questão ${h.total_tentativas}× — ${pct}% de acerto`;
+      } else {
+        $('hist-info').textContent = '🆕 Primeira vez que você faz esta questão';
+      }
+      mostrar('hist-info');
+    } catch(_) {}
+  }
+
+  // Tags
+  const tagsEl = $('questao-tags');
+  tagsEl.innerHTML = '';
+  (q.tags || []).forEach(t => {
+    const s = document.createElement('span');
+    s.className = 'tag'; s.textContent = t;
+    tagsEl.appendChild(s);
+  });
+
+  // Imagem
+  if (q.imagem_url) { $('questao-img').src = q.imagem_url; mostrar('questao-img'); }
+  else ocultar('questao-img');
+
+  // Enunciado
+  $('questao-enunciado').innerHTML = q.enunciado || '';
+
+  // Opções
+  const opcoesEl = $('lista-opcoes');
+  opcoesEl.innerHTML = '';
+  (q.opcoes || []).forEach(op => {
+    const btn = document.createElement('button');
+    btn.className = 'opcao';
+    btn.innerHTML = op;
+    btn.addEventListener('click', () => responder(btn, op, q));
+    opcoesEl.appendChild(btn);
+  });
+
+  // Reset feedback
+  const fb = $('feedback-box');
+  fb.className = 'feedback';
+  fb.innerHTML = '';
+
+  // Botão próxima
+  $('btn-proxima').disabled = true;
+  $('btn-proxima').textContent = (num === tot) ? 'Ver Resultado 🏆' : 'Próxima ➡️';
+
+  // Conteúdo de apoio (accordion sempre fechado)
+  ['secao-explicacao','secao-dica','secao-exemplo'].forEach(id => {
+    const el = $(id);
+    el.classList.remove('aberto');
+    el.querySelector('.secao-corpo').innerHTML = '<span class="loading-txt">Carregando…</span>';
+  });
+  await carregarConteudo(q);
+}
+
+/* ================================================================
+   CONTEÚDO REUTILIZÁVEL — busca uma vez e faz cache em memória
+   ================================================================ */
+async function carregarConteudo(q) {
+  let conteudo = null;
+  const refId = q.conteudo_ref
+    ? (typeof q.conteudo_ref === 'string' ? q.conteudo_ref : q.conteudo_ref.id)
+    : null;
+
+  if (refId) {
+    if (E.conteudoCache[refId]) {
+      conteudo = E.conteudoCache[refId];
+    } else {
+      try {
+        const snap = await getDoc(doc(db, 'conteudos', refId));
+        if (snap.exists()) {
+          conteudo = snap.data();
+          E.conteudoCache[refId] = conteudo;
+        }
+      } catch(e) { console.error('Erro ao carregar conteúdo', e); }
+    }
+  }
+
+  const sem = '<em style="color:#aaa">Não disponível.</em>';
+  $('secao-explicacao').querySelector('.secao-corpo').innerHTML = conteudo?.explicacao || sem;
+  $('secao-dica').querySelector('.secao-corpo').innerHTML       = conteudo?.dica       || sem;
+  $('secao-exemplo').querySelector('.secao-corpo').innerHTML    = conteudo?.exemplo    || sem;
+}
+
+window.toggleSecao = el => el.classList.toggle('aberto');
+
+/* ================================================================
+   RESPONDER
+   ================================================================ */
+async function responder(btnClicado, opcaoEscolhida, q) {
+  if ($('lista-opcoes').querySelector('.correta, .errada')) return;
+
+  const correta = opcaoEscolhida === q.resposta;
+
+  $('lista-opcoes').querySelectorAll('.opcao').forEach(btn => {
+    btn.disabled = true;
+    if (btn.innerHTML === q.resposta) btn.classList.add('correta');
+    if (btn === btnClicado && !correta) btn.classList.add('errada');
+  });
+
+  const fb = $('feedback-box');
+  fb.className = 'feedback show ' + (correta ? 'acerto' : 'erro');
+  fb.innerHTML = `
+    <span class="titulo-feedback">${correta ? '✅ Correto!' : `❌ Resposta: ${q.resposta}`}</span>
+    <div>${q.explicacao_resposta || ''}</div>
+  `;
+
+  if (correta) E.acertos++; else E.erros++;
+  $('pill-acertos').textContent = `✅ ${E.acertos}`;
+  $('pill-erros').textContent   = `❌ ${E.erros}`;
+
+  E.historico.push({ questao: q, opcaoEscolhida, correta });
+
+  if (E.user) salvarHistorico(q.id, correta).catch(console.error);
+
+  $('btn-proxima').disabled = false;
+}
+
+/* ================================================================
+   SALVAR HISTÓRICO NO FIRESTORE
+   ================================================================ */
+async function salvarHistorico(questaoId, correta) {
+  const ref  = doc(db, 'historico', E.user.uid, 'questoes', questaoId);
+  const snap = await getDoc(ref);
+
+  if (snap.exists()) {
+    const d = snap.data();
+    const novosAcertos    = d.total_acertos + (correta ? 1 : 0);
+    const novasTentativas = d.total_tentativas + 1;
+    await updateDoc(ref, {
+      total_tentativas:  novasTentativas,
+      total_acertos:     novosAcertos,
+      percentual_acerto: Math.round((novosAcertos / novasTentativas) * 100),
+      ultima_vez:        serverTimestamp(),
+      sequencia_acertos: correta ? increment(1) : 0
+    });
+  } else {
+    await setDoc(ref, {
+      total_tentativas:  1,
+      total_acertos:     correta ? 1 : 0,
+      percentual_acerto: correta ? 100 : 0,
+      ultima_vez:        serverTimestamp(),
+      sequencia_acertos: correta ? 1 : 0
+    });
+  }
+}
+
+/* ================================================================
+   NAVEGAÇÃO
+   ================================================================ */
+$('btn-proxima').addEventListener('click', async () => {
+  if (E.indice < E.questoes.length - 1) {
+    E.indice++;
+    await renderQuestao();
+  } else {
+    mostrarResultado();
+  }
+});
+
+$('btn-voltar-filtros').addEventListener('click', () => tela('tela-filtros'));
+
+/* ================================================================
+   RESULTADO
+   ================================================================ */
+function mostrarResultado() {
+  const tot = E.questoes.length;
+  const pct = Math.round((E.acertos / tot) * 100);
+
+  $('barra-fill').style.width   = '100%';
+  $('res-acertos').textContent  = E.acertos;
+  $('res-erros').textContent    = E.erros;
+  $('res-total').textContent    = tot;
+  $('res-pct').textContent      = pct + '%';
+
+  const cfg = pct === 100 ? ['🏆','Nota máxima!','Você acertou tudo! Incrível! 🌟']
+    : pct >= 70 ? ['🎉','Muito bem!','Ótimo desempenho! Continue assim! 💪']
+    : pct >= 50 ? ['📚','Bom esforço!','Revise os erros abaixo e tente de novo! 💡']
+    :             ['🌱','Continue praticando!','Não desanime! A prática leva à perfeição. 🚀'];
+
+  $('res-emoji').textContent  = cfg[0];
+  $('res-titulo').textContent = cfg[1];
+  $('res-msg').textContent    = cfg[2];
+
+  const erros = E.historico.filter(h => !h.correta);
+  $('lista-erros').innerHTML = erros.length === 0
+    ? '<p class="sem-erros">🌟 Nenhum erro! Parabéns!</p>'
+    : '<h3 style="margin-bottom:12px;color:var(--rosa)">📝 Questões para revisar:</h3>'
+      + erros.map(h => `
+        <div class="item-revisao">
+          <div class="rev-meta">${h.questao.assunto || ''} › ${h.questao.topico || ''}</div>
+          <div class="rev-enunciado">${h.questao.enunciado}</div>
+          <div class="rev-sua">Sua resposta: <span class="errada-txt">${h.opcaoEscolhida}</span></div>
+          <div class="rev-certa">Resposta certa: <span class="certa-txt">${h.questao.resposta}</span></div>
+          <div class="rev-exp">${h.questao.explicacao_resposta || ''}</div>
+        </div>`).join('');
+
+  if (pct >= 70) confetes();
+  tela('tela-resultado');
+}
+
+$('btn-nova-prova').addEventListener('click', () => { tela('tela-filtros'); carregarOpcoesFiltros(); });
+$('btn-refazer').addEventListener('click', async () => {
+  E.indice = 0; E.acertos = 0; E.erros = 0; E.historico = [];
+  tela('tela-questao');
+  await renderQuestao();
+});
+
+/* ================================================================
+   CONFETES
+   ================================================================ */
+function confetes() {
+  const cores = ['#7C4DFF','#FF5C8A','#FFA94D','#4CD964','#4DA6FF','#FFD54F'];
+  for (let i = 0; i < 90; i++) {
+    const el = document.createElement('div');
+    el.className = 'confete';
+    el.style.cssText = `left:${Math.random()*100}vw;background:${cores[~~(Math.random()*cores.length)]};`
+      + `animation-duration:${2.5+Math.random()*2}s;animation-delay:${Math.random()*1.2}s;`
+      + `width:${6+Math.random()*7}px;height:${10+Math.random()*10}px`;
+    document.body.appendChild(el);
+    setTimeout(() => el.remove(), 5000);
+  }
+}
+</script>
+</body>
+</html>
