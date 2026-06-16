@@ -131,6 +131,7 @@ header{display:flex;justify-content:space-between;align-items:center;padding:18p
 .filtros-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin:20px 0;}
 .filtro-grupo label{display:block;font-weight:800;font-size:0.88rem;margin-bottom:6px;color:var(--roxo);}
 .filtro-grupo select{width:100%;padding:10px 14px;border:2px solid #E0D6FF;border-radius:12px;font-family:'Nunito',sans-serif;font-size:0.95rem;outline:none;background:#fff;}
+.filtro-grupo select:disabled{opacity:0.6;cursor:not-allowed;}
 .revisao-row{display:flex;align-items:center;gap:10px;margin:10px 0 20px;padding:14px 16px;background:#F1ECFF;border-radius:14px;}
 .revisao-row input[type=checkbox]{width:20px;height:20px;accent-color:var(--roxo);cursor:pointer;}
 .revisao-row label{font-weight:800;color:var(--roxo);cursor:pointer;}
@@ -138,6 +139,8 @@ header{display:flex;justify-content:space-between;align-items:center;padding:18p
 .qtd-row{display:flex;align-items:center;gap:12px;margin-bottom:8px;}
 .qtd-row label{font-weight:800;color:var(--roxo);}
 .qtd-row input[type=number]{width:80px;padding:8px 12px;border:2px solid #E0D6FF;border-radius:12px;font-family:'Nunito',sans-serif;font-size:1rem;text-align:center;outline:none;}
+.filtros-acoes{display:flex;gap:12px;margin-top:8px;flex-wrap:wrap;}
+.filtros-acoes .btn{flex:1;min-width:120px;}
 
 /* PROGRESSO */
 .prog-wrap{margin-bottom:14px;}
@@ -244,6 +247,7 @@ header{display:flex;justify-content:space-between;align-items:center;padding:18p
   .btn{width:100%;}
   header{justify-content:center;text-align:center;}
   .grid-materias{grid-template-columns:1fr;}
+  .filtros-acoes{flex-direction:column;}
 }
 </style>
 </head>
@@ -331,8 +335,11 @@ header{display:flex;justify-content:space-between;align-items:center;padding:18p
         <label>Número de questões:</label>
         <input type="number" id="filtro-qtd" value="10" min="1" max="50">
       </div>
+      <div class="filtros-acoes">
+        <button class="btn btn-voltar" id="btn-limpar-filtros">🧹 Limpar Filtros</button>
+        <button class="btn btn-primario" id="btn-iniciar">Iniciar Prova 🚀</button>
+      </div>
       <div class="erro-txt" id="filtros-erro"></div>
-      <button class="btn btn-primario btn-full" id="btn-iniciar">Iniciar Prova 🚀</button>
     </div>
   </div>
 
@@ -454,6 +461,7 @@ let acertos            = 0;
 let erros              = 0;
 let historicoRespostas = [];
 let conteudoCache      = {};
+let isUpdating = false;
 
 /* ── UTILITÁRIOS ── */
 const $       = id => document.getElementById(id);
@@ -504,7 +512,6 @@ async function carregarConteudos() {
       `;
 
       card.addEventListener('click', () => {
-        // Pré-filtra pelo tópico deste conteúdo
         irParaFiltros(c.topico || '', c.assunto || '');
       });
 
@@ -517,68 +524,130 @@ async function carregarConteudos() {
   }
 }
 
-/* ── FILTROS COM TÓPICOS RELACIONADOS AO ASSUNTO ── */
+/* ── FILTROS DINÂMICOS BASEADOS EM QUESTÕES EXISTENTES ── */
 
-// Busca os tópicos da coleção conteudos, filtrando pelo assunto se fornecido
-async function buscarTopicosPorAssunto(assunto) {
+// Busca os valores disponíveis para um campo específico
+async function buscarValoresDisponiveis(campo, filtros = {}) {
   const constraints = [];
-  if (assunto && assunto !== '') {
-    constraints.push(where('assunto', '==', assunto));
+  if (filtros.serie && filtros.serie !== '') {
+    constraints.push(where('serie', '==', filtros.serie));
   }
-  const snap = await getDocs(query(collection(db, 'conteudos'), ...constraints));
-  const topicos = new Set();
-  snap.forEach(docSnap => {
-    const c = docSnap.data();
-    if (c.topico) topicos.add(c.topico);
-  });
-  return [...topicos].sort();
-}
+  if (filtros.assunto && filtros.assunto !== '') {
+    constraints.push(where('assunto', '==', filtros.assunto));
+  }
+  if (filtros.topico && filtros.topico !== '') {
+    constraints.push(where('topico', '==', filtros.topico));
+  }
+  if (filtros.dificuldade && filtros.dificuldade !== '') {
+    constraints.push(where('dificuldade', '==', filtros.dificuldade));
+  }
 
-// Busca os assuntos da coleção conteudos
-async function buscarAssuntos() {
-  const snap = await getDocs(collection(db, 'conteudos'));
-  const assuntos = new Set();
-  snap.forEach(docSnap => {
-    const c = docSnap.data();
-    if (c.assunto) assuntos.add(c.assunto);
-  });
-  return [...assuntos].sort();
-}
-
-// Busca as séries da coleção questoes
-async function buscarSeries() {
-  const snap = await getDocs(collection(db, 'questoes'));
-  const series = new Set();
+  let snap;
+  if (constraints.length === 0) {
+    snap = await getDocs(collection(db, 'questoes'));
+  } else {
+    snap = await getDocs(query(collection(db, 'questoes'), ...constraints));
+  }
+  
+  const valores = new Set();
   snap.forEach(d => {
     const q = d.data();
-    if (q.serie) series.add(q.serie);
+    if (q[campo]) valores.add(q[campo]);
   });
-  return [...series].sort();
+  return [...valores].sort();
 }
 
 // Carrega todos os selects de filtro (inicial)
 async function carregarOpcoesFiltros() {
   try {
-    // Carrega séries das questões
-    const series = await buscarSeries();
+    const series = await buscarValoresDisponiveis('serie');
     preencher('filtro-serie', series, 'Todas as séries');
     
-    // Carrega assuntos dos conteúdos
-    const assuntos = await buscarAssuntos();
+    const assuntos = await buscarValoresDisponiveis('assunto');
     preencher('filtro-assunto', assuntos, 'Todos os assuntos');
     
-    // Carrega todos os tópicos (sem filtro de assunto inicialmente)
-    const todosTopicos = await buscarTopicosPorAssunto('');
-    preencher('filtro-topico', todosTopicos, 'Todos os tópicos');
+    const topicos = await buscarValoresDisponiveis('topico');
+    preencher('filtro-topico', topicos, 'Todos os tópicos');
+    
+    const dificuldades = await buscarValoresDisponiveis('dificuldade');
+    preencher('filtro-dificuldade', dificuldades, 'Qualquer dificuldade');
     
   } catch(e) { console.error('Erro ao carregar filtros:', e); }
 }
 
-// Evento: quando o assunto mudar, atualiza os tópicos disponíveis
-$('filtro-assunto')?.addEventListener('change', async () => {
-  const assunto = $('filtro-assunto').value;
-  const topicos = await buscarTopicosPorAssunto(assunto);
-  preencher('filtro-topico', topicos, assunto ? 'Todos os tópicos deste assunto' : 'Todos os tópicos');
+// Atualiza os selects baseado nos filtros selecionados
+async function atualizarFiltros(campoIgnorado = '') {
+  if (isUpdating) return;
+  isUpdating = true;
+
+  try {
+    const serieAtual = $('filtro-serie')?.value || '';
+    const assuntoAtual = $('filtro-assunto')?.value || '';
+    const topicoAtual = $('filtro-topico')?.value || '';
+    const dificuldadeAtual = $('filtro-dificuldade')?.value || '';
+
+    const filtros = {};
+    if (serieAtual && campoIgnorado !== 'serie') filtros.serie = serieAtual;
+    if (assuntoAtual && campoIgnorado !== 'assunto') filtros.assunto = assuntoAtual;
+    if (topicoAtual && campoIgnorado !== 'topico') filtros.topico = topicoAtual;
+    if (dificuldadeAtual && campoIgnorado !== 'dificuldade') filtros.dificuldade = dificuldadeAtual;
+
+    const series = await buscarValoresDisponiveis('serie', filtros);
+    const assuntos = await buscarValoresDisponiveis('assunto', filtros);
+    const topicos = await buscarValoresDisponiveis('topico', filtros);
+    const dificuldades = await buscarValoresDisponiveis('dificuldade', filtros);
+
+    preencher('filtro-serie', series, 'Todas as séries');
+    preencher('filtro-assunto', assuntos, 'Todos os assuntos');
+    preencher('filtro-topico', topicos, 'Todos os tópicos');
+    preencher('filtro-dificuldade', dificuldades, 'Qualquer dificuldade');
+
+    if (serieAtual && series.includes(serieAtual)) {
+      $('filtro-serie').value = serieAtual;
+    }
+    if (assuntoAtual && assuntos.includes(assuntoAtual)) {
+      $('filtro-assunto').value = assuntoAtual;
+    }
+    if (topicoAtual && topicos.includes(topicoAtual)) {
+      $('filtro-topico').value = topicoAtual;
+    }
+    if (dificuldadeAtual && dificuldades.includes(dificuldadeAtual)) {
+      $('filtro-dificuldade').value = dificuldadeAtual;
+    }
+
+  } catch(e) {
+    console.error('Erro ao atualizar filtros:', e);
+  } finally {
+    isUpdating = false;
+  }
+}
+
+// LIMPAR FILTROS
+async function limparFiltros() {
+  const selects = ['filtro-serie', 'filtro-assunto', 'filtro-topico', 'filtro-dificuldade'];
+  selects.forEach(id => {
+    const sel = $(id);
+    if (sel) sel.value = '';
+  });
+  const revisao = $('filtro-revisao');
+  if (revisao) revisao.checked = false;
+  
+  // Recarrega todas as opções
+  await carregarOpcoesFiltros();
+}
+
+// Eventos
+$('filtro-serie')?.addEventListener('change', () => {
+  if (!isUpdating) atualizarFiltros('serie');
+});
+$('filtro-assunto')?.addEventListener('change', () => {
+  if (!isUpdating) atualizarFiltros('assunto');
+});
+$('filtro-topico')?.addEventListener('change', () => {
+  if (!isUpdating) atualizarFiltros('topico');
+});
+$('filtro-dificuldade')?.addEventListener('change', () => {
+  if (!isUpdating) atualizarFiltros('dificuldade');
 });
 
 function preencher(id, valores, placeholder) {
@@ -595,18 +664,31 @@ function preencher(id, valores, placeholder) {
 async function irParaFiltros(topico = '', assunto = '') {
   await carregarOpcoesFiltros();
   tela('tela-filtros');
-  // Pré-seleciona os filtros se vieram de um card
+  
   if (assunto) { 
     const s = $('filtro-assunto'); 
-    if (s) s.value = assunto;
-    // Dispara o evento de mudança para carregar os tópicos relacionados
-    s.dispatchEvent(new Event('change'));
-  }
-  if (topico) { 
-    const s = $('filtro-topico');  
     if (s) {
-      // Aguarda os tópicos carregarem e depois seleciona
-      setTimeout(() => { s.value = topico; }, 100);
+      s.value = assunto;
+      setTimeout(async () => {
+        await atualizarFiltros('assunto');
+        if (topico) {
+          const t = $('filtro-topico');
+          if (t) {
+            setTimeout(() => {
+              const options = t.querySelectorAll('option');
+              for (let i = 0; i < options.length; i++) {
+                if (options[i].value === topico) {
+                  t.value = topico;
+                  break;
+                }
+              }
+              setTimeout(() => {
+                atualizarFiltros('topico');
+              }, 50);
+            }, 100);
+          }
+        }
+      }, 50);
     }
   }
 }
@@ -614,12 +696,26 @@ async function irParaFiltros(topico = '', assunto = '') {
 /* ── BUSCAR QUESTÕES ── */
 async function buscarQuestoes(filtros, qtd) {
   const constraints = [];
-  if (filtros.serie)       constraints.push(where('serie',       '==', filtros.serie));
-  if (filtros.assunto)     constraints.push(where('assunto',     '==', filtros.assunto));
-  if (filtros.topico)      constraints.push(where('topico',      '==', filtros.topico));
-  if (filtros.dificuldade) constraints.push(where('dificuldade', '==', filtros.dificuldade));
+  if (filtros.serie && filtros.serie !== '') {
+    constraints.push(where('serie', '==', filtros.serie));
+  }
+  if (filtros.assunto && filtros.assunto !== '') {
+    constraints.push(where('assunto', '==', filtros.assunto));
+  }
+  if (filtros.topico && filtros.topico !== '') {
+    constraints.push(where('topico', '==', filtros.topico));
+  }
+  if (filtros.dificuldade && filtros.dificuldade !== '') {
+    constraints.push(where('dificuldade', '==', filtros.dificuldade));
+  }
 
-  const snap = await getDocs(query(collection(db, 'questoes'), ...constraints));
+  let snap;
+  if (constraints.length === 0) {
+    snap = await getDocs(collection(db, 'questoes'));
+  } else {
+    snap = await getDocs(query(collection(db, 'questoes'), ...constraints));
+  }
+  
   let lista  = snap.docs.map(d => ({ id: d.id, ...d.data() }));
   if (!lista.length) return [];
 
@@ -644,13 +740,11 @@ async function renderQuestao() {
   const num = indiceAtual + 1;
   const tot = questoesAtuais.length;
 
-  // Progresso
   $('barra-fill').style.width  = ((indiceAtual / tot) * 100) + '%';
   $('prog-texto').textContent  = `${num} de ${tot}`;
   $('pill-acertos').textContent = `✅ ${acertos}`;
   $('pill-erros').textContent   = `❌ ${erros}`;
 
-  // Badges
   $('badge-serie').textContent       = formatarLabel(q.serie || '');
   $('badge-assunto').textContent     = q.assunto || '';
   $('badge-topico').textContent      = q.topico  || '';
@@ -659,7 +753,6 @@ async function renderQuestao() {
   $('badge-origem').textContent      = q.origem   || '';
   $('badge-ano').textContent         = q.ano_prova ? `📅 ${q.ano_prova}` : '';
 
-  // Histórico
   ocultar('hist-info');
   if (currentUser && !currentUser.isAnonymous) {
     try {
@@ -676,7 +769,6 @@ async function renderQuestao() {
     } catch(_) {}
   }
 
-  // Tags
   const tagsEl = $('questao-tags');
   tagsEl.innerHTML = '';
   (q.tags || []).forEach(t => {
@@ -685,14 +777,11 @@ async function renderQuestao() {
     tagsEl.appendChild(s);
   });
 
-  // Imagem
   if (q.imagem_url) { $('questao-img').src = q.imagem_url; mostrar('questao-img'); }
   else ocultar('questao-img');
 
-  // Enunciado
   $('questao-enunciado').innerHTML = q.enunciado || '';
 
-  // Opções
   const opcoesEl = $('lista-opcoes');
   opcoesEl.innerHTML = '';
   (q.opcoes || []).forEach(op => {
@@ -703,23 +792,19 @@ async function renderQuestao() {
     opcoesEl.appendChild(btn);
   });
 
-  // Reset feedback
   const fb = $('feedback-box');
   fb.className = 'feedback';
   fb.innerHTML = '';
 
-  // Botão próxima
   $('btn-proxima').disabled    = true;
   $('btn-proxima').textContent = (num === tot) ? 'Ver Resultado 🏆' : 'Próxima ➡️';
 
-  // Accordion fechado
   ['secao-explicacao','secao-dica','secao-exemplo'].forEach(id => {
     const el = $(id);
     el.classList.remove('aberto');
     el.querySelector('.secao-corpo').innerHTML = '<em style="color:#ccc">Carregando…</em>';
   });
 
-  // Conteúdo de apoio
   const refId = q.conteudo_ref;
   if (refId) {
     let conteudo = conteudoCache[refId];
@@ -742,7 +827,6 @@ function aplicarConteudo(c) {
   $('secao-exemplo').querySelector('.secao-corpo').innerHTML    = c?.exemplo    || sem;
 }
 
-// Accordion delegado
 document.addEventListener('click', e => {
   const header = e.target.closest('.secao-header');
   if (header) header.closest('.secao').classList.toggle('aberto');
@@ -769,7 +853,6 @@ async function responder(btnClicado, opcaoEscolhida, q) {
 
   historicoRespostas.push({ questao: q, opcaoEscolhida, correta });
 
-  // Salva histórico apenas para usuário com conta
   if (currentUser && !currentUser.isAnonymous) {
     try {
       const ref  = doc(db, 'historico', currentUser.uid, 'questoes', q.id);
@@ -856,6 +939,11 @@ $('btn-refazer').addEventListener('click', async () => {
   indiceAtual = 0; acertos = 0; erros = 0; historicoRespostas = [];
   tela('tela-questao');
   await renderQuestao();
+});
+
+// Botão Limpar Filtros
+$('btn-limpar-filtros').addEventListener('click', async () => {
+  await limparFiltros();
 });
 
 $('btn-iniciar').addEventListener('click', async () => {
@@ -954,8 +1042,6 @@ function atualizarUIUsuario(user) {
 }
 
 /* ── EVENTOS DA TELA DE LOGIN ── */
-
-// Permite login pressionando Enter nos campos
 ['login-email','login-senha'].forEach(id => {
   $(id)?.addEventListener('keydown', e => {
     if (e.key === 'Enter') $('btn-entrar').click();
