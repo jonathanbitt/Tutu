@@ -287,7 +287,7 @@ header{display:flex;justify-content:space-between;align-items:center;padding:18p
   </div>
 
   <!-- TELA INICIAL -->
-  <section id="tela-inicial">
+  <section id="tela-inicial" class="escondido">
     <div class="boas-vindas">
       <h2>Bem-vindo ao EduQuest! 🎓</h2>
       <p>Escolha um tópico abaixo ou inicie uma prova com todos os assuntos</p>
@@ -517,22 +517,69 @@ async function carregarConteudos() {
   }
 }
 
-/* ── FILTROS ── */
+/* ── FILTROS COM TÓPICOS RELACIONADOS AO ASSUNTO ── */
+
+// Busca os tópicos da coleção conteudos, filtrando pelo assunto se fornecido
+async function buscarTopicosPorAssunto(assunto) {
+  const constraints = [];
+  if (assunto && assunto !== '') {
+    constraints.push(where('assunto', '==', assunto));
+  }
+  const snap = await getDocs(query(collection(db, 'conteudos'), ...constraints));
+  const topicos = new Set();
+  snap.forEach(docSnap => {
+    const c = docSnap.data();
+    if (c.topico) topicos.add(c.topico);
+  });
+  return [...topicos].sort();
+}
+
+// Busca os assuntos da coleção conteudos
+async function buscarAssuntos() {
+  const snap = await getDocs(collection(db, 'conteudos'));
+  const assuntos = new Set();
+  snap.forEach(docSnap => {
+    const c = docSnap.data();
+    if (c.assunto) assuntos.add(c.assunto);
+  });
+  return [...assuntos].sort();
+}
+
+// Busca as séries da coleção questoes
+async function buscarSeries() {
+  const snap = await getDocs(collection(db, 'questoes'));
+  const series = new Set();
+  snap.forEach(d => {
+    const q = d.data();
+    if (q.serie) series.add(q.serie);
+  });
+  return [...series].sort();
+}
+
+// Carrega todos os selects de filtro (inicial)
 async function carregarOpcoesFiltros() {
   try {
-    const snap = await getDocs(collection(db, 'questoes'));
-    const series = new Set(), assuntos = new Set(), topicos = new Set();
-    snap.forEach(d => {
-      const q = d.data();
-      if (q.serie)   series.add(q.serie);
-      if (q.assunto) assuntos.add(q.assunto);
-      if (q.topico)  topicos.add(q.topico);
-    });
-    preencher('filtro-serie',   [...series].sort(),   'Todas as séries');
-    preencher('filtro-assunto', [...assuntos].sort(), 'Todos os assuntos');
-    preencher('filtro-topico',  [...topicos].sort(),  'Todos os tópicos');
-  } catch(e) { console.error('Filtros:', e); }
+    // Carrega séries das questões
+    const series = await buscarSeries();
+    preencher('filtro-serie', series, 'Todas as séries');
+    
+    // Carrega assuntos dos conteúdos
+    const assuntos = await buscarAssuntos();
+    preencher('filtro-assunto', assuntos, 'Todos os assuntos');
+    
+    // Carrega todos os tópicos (sem filtro de assunto inicialmente)
+    const todosTopicos = await buscarTopicosPorAssunto('');
+    preencher('filtro-topico', todosTopicos, 'Todos os tópicos');
+    
+  } catch(e) { console.error('Erro ao carregar filtros:', e); }
 }
+
+// Evento: quando o assunto mudar, atualiza os tópicos disponíveis
+$('filtro-assunto')?.addEventListener('change', async () => {
+  const assunto = $('filtro-assunto').value;
+  const topicos = await buscarTopicosPorAssunto(assunto);
+  preencher('filtro-topico', topicos, assunto ? 'Todos os tópicos deste assunto' : 'Todos os tópicos');
+});
 
 function preencher(id, valores, placeholder) {
   const sel = $(id);
@@ -540,7 +587,7 @@ function preencher(id, valores, placeholder) {
   sel.innerHTML = `<option value="">${placeholder}</option>`;
   valores.forEach(v => {
     const o = document.createElement('option');
-    o.value = v; o.textContent = formatarLabel(v);
+    o.value = v; o.textContent = formatarLabel(v) || v;
     sel.appendChild(o);
   });
 }
@@ -549,8 +596,19 @@ async function irParaFiltros(topico = '', assunto = '') {
   await carregarOpcoesFiltros();
   tela('tela-filtros');
   // Pré-seleciona os filtros se vieram de um card
-  if (assunto) { const s = $('filtro-assunto'); if (s) s.value = assunto; }
-  if (topico)  { const s = $('filtro-topico');  if (s) s.value = topico;  }
+  if (assunto) { 
+    const s = $('filtro-assunto'); 
+    if (s) s.value = assunto;
+    // Dispara o evento de mudança para carregar os tópicos relacionados
+    s.dispatchEvent(new Event('change'));
+  }
+  if (topico) { 
+    const s = $('filtro-topico');  
+    if (s) {
+      // Aguarda os tópicos carregarem e depois seleciona
+      setTimeout(() => { s.value = topico; }, 100);
+    }
+  }
 }
 
 /* ── BUSCAR QUESTÕES ── */
@@ -863,7 +921,6 @@ $('btn-salvar-conta').addEventListener('click', async () => {
 });
 
 /* ── AUTENTICAÇÃO ── */
-/* ── AUTENTICAÇÃO ── */
 function atualizarUIUsuario(user) {
   currentUser = user;
   const authArea = $('auth-area');
@@ -921,7 +978,6 @@ $('btn-entrar').addEventListener('click', async () => {
 
   try {
     await signInWithEmailAndPassword(auth, email, senha);
-    // onAuthStateChanged cuida do redirecionamento
   } catch(e) {
     errEl.textContent = traduzirErroAuth(e.code);
     $('btn-entrar').disabled    = false;
@@ -933,9 +989,12 @@ $('btn-visitante').addEventListener('click', async () => {
   $('btn-visitante').disabled    = true;
   $('btn-visitante').textContent = 'Entrando… ⏳';
   try {
+    if (auth.currentUser) {
+      await signOut(auth);
+    }
     await signInAnonymously(auth);
   } catch(e) {
-    $('login-erro').textContent    = 'Login anônimo não ativado no Firebase. Ative em Authentication → Sign-in method → Anônimo.';
+    $('login-erro').textContent = 'Login anônimo não ativado no Firebase. Ative em Authentication → Sign-in method → Anônimo.';
     $('btn-visitante').disabled    = false;
     $('btn-visitante').textContent = '👤 Continuar como visitante';
   }
@@ -956,12 +1015,10 @@ function traduzirErroAuth(code) {
 /* ── INICIALIZAÇÃO ── */
 onAuthStateChanged(auth, async user => {
   atualizarUIUsuario(user);
-  if (user) {
-    // Logado: vai direto para a tela de conteúdos
+  if (user && !user.isAnonymous) {
     tela('tela-inicial');
     await carregarConteudos();
   } else {
-    // Não logado: mostra tela de login
     tela('tela-login');
   }
 });
