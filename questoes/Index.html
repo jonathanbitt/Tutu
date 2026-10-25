@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#142b4a">
+  <title>Banco de Questões — Auditor</title>
+  <style>
+    :root {
+      --navy: #142b4a; --blue: #245ca6; --bg: #f3f6fa; --card: #fff;
+      --text: #1e293b; --muted: #64748b; --line: #dbe3ed;
+      --green: #147d4b; --red: #b42332; --amber: #8a5a00;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--text); font-family: system-ui, -apple-system, Segoe UI, sans-serif; }
+    header { background: var(--navy); color: white; padding: 1.25rem max(1rem, calc((100% - 1100px)/2)); }
+    header h1 { margin: 0 0 .25rem; font-size: clamp(1.25rem, 3vw, 1.8rem); }
+    header p { margin: 0; color: #d8e5f5; }
+    main { max-width: 1100px; margin: 1.25rem auto; padding: 0 1rem 2rem; }
+    .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: .75rem; margin-bottom: 1rem; }
+    .stat, .panel { background: var(--card); border: 1px solid var(--line); border-radius: 12px; }
+    .stat { padding: .9rem 1rem; }
+    .stat span { display: block; color: var(--muted); font-size: .85rem; }
+    .stat strong { display: block; font-size: 1.45rem; margin-top: .2rem; }
+    .filters { padding: 1rem; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .75rem; margin-bottom: 1rem; }
+    label { display: block; font-size: .83rem; font-weight: 650; color: #344256; margin-bottom: .3rem; }
+    input, select, textarea { width: 100%; min-width: 0; border: 1px solid #cbd5e1; border-radius: 8px; padding: .65rem .7rem; background: white; color: var(--text); font: inherit; }
+    textarea { min-height: 190px; resize: vertical; line-height: 1.55; }
+    .lesson-panel { margin-top: 1rem; padding: 1rem; border: 1px solid var(--line); border-radius: 10px; background: #fbfcfe; }
+    .lesson-panel h2 { margin: 0 0 .4rem; font-size: 1.08rem; }
+    .lesson-help { color: var(--muted); font-size: .88rem; line-height: 1.5; margin: 0 0 .8rem; }
+    .lesson-grid { display: grid; grid-template-columns: 1fr; gap: .75rem; }
+    .question { padding: clamp(1rem, 3vw, 1.5rem); }
+    .meta { display: flex; flex-wrap: wrap; gap: .4rem; margin-bottom: 1rem; }
+    .chip { font-size: .78rem; padding: .25rem .55rem; background: #edf3fb; color: #234b7b; border-radius: 999px; }
+    #question-title { color: var(--muted); font-size: .88rem; margin-bottom: .65rem; }
+    #enunciado { white-space: pre-wrap; line-height: 1.65; font-size: 1.03rem; overflow-wrap: anywhere; }
+    #alternativas { display: grid; gap: .65rem; margin-top: 1.25rem; }
+    .option { display: flex; gap: .7rem; align-items: flex-start; text-align: left; width: 100%; padding: .85rem .9rem; border: 1px solid var(--line); background: #fff; border-radius: 9px; color: var(--text); cursor: pointer; font: inherit; line-height: 1.5; white-space: pre-wrap; }
+    .option:hover { border-color: var(--blue); background: #f7faff; }
+    .option.selected { border: 2px solid var(--blue); padding: calc(.85rem - 1px) calc(.9rem - 1px); background: #eef5ff; }
+    .option.correct { border-color: var(--green); background: #edf9f1; }
+    .option.wrong { border-color: var(--red); background: #fff0f1; }
+    .letter { flex: 0 0 1.7rem; font-weight: 750; }
+    .actions { display: flex; flex-wrap: wrap; gap: .6rem; align-items: center; margin-top: 1.25rem; }
+    button.action, a.action { border: 0; border-radius: 8px; padding: .7rem 1rem; font: inherit; font-weight: 650; cursor: pointer; text-decoration: none; display: inline-block; }
+    .primary { background: var(--blue); color: white; }
+    .secondary { background: #e8edf4; color: #25364d; }
+    button:disabled { opacity: .45; cursor: not-allowed; }
+    #feedback { margin-top: 1rem; border-radius: 8px; padding: .8rem; white-space: pre-wrap; line-height: 1.5; }
+    #feedback:empty { display: none; }
+    #feedback.ok { color: var(--green); background: #edf9f1; }
+    #feedback.bad { color: var(--red); background: #fff0f1; }
+    #feedback.neutral { color: var(--amber); background: #fff8e6; }
+    #status { white-space: pre-wrap; color: var(--muted); margin: .75rem 0; font-size: .9rem; }
+    .bottom { display: flex; justify-content: space-between; align-items: center; gap: .7rem; margin-top: .9rem; }
+    #position { color: var(--muted); font-size: .9rem; }
+    .footnote { color: var(--muted); font-size: .82rem; line-height: 1.5; margin-top: 1rem; }
+    .list-panel { margin-top: 1rem; padding: 1rem; border: 1px solid var(--line); border-radius: 10px; background: #fbfcfe; }
+    .list-panel h2 { margin: 0 0 .6rem; font-size: 1.08rem; }
+    .list-row { display: flex; flex-wrap: wrap; gap: .75rem; align-items: flex-end; margin-top: .5rem; }
+    .list-row > div { flex: 1 1 220px; min-width: 0; }
+    .list-row > div[hidden] { display: none; }
+    .list-row button { flex: 0 0 auto; }
+    .chip-list { display: inline-flex; align-items: center; gap: .3rem; }
+    .chip-remove { border: 0; background: transparent; color: #234b7b; font-weight: 700; cursor: pointer; padding: 0 .15rem; font-size: .95rem; line-height: 1; }
+    .chip-remove:hover { color: var(--red); }
+    .chip-empty { background: transparent; color: var(--muted); padding-left: 0; }
+    @media (max-width: 760px) { .filters { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+    @media (max-width: 480px) { .stats { gap: .45rem; } .stat { padding: .7rem; } .stat strong { font-size: 1.15rem; } .filters { grid-template-columns: 1fr; } .bottom { flex-direction: column; align-items: stretch; } .bottom button { width: 100%; } }
+  </style>
+</head>
+<body>
+<header>
+  <h1>Banco de Questões — Auditor</h1>
+  <p>Resolva questões, registre suas tentativas e acompanhe seu desempenho.</p>
+</header>
+<main>
+  <section class="stats" aria-label="Estatísticas">
+    <div class="stat"><span>Questões no filtro</span><strong id="stat-total">—</strong></div>
+    <div class="stat"><span>Tentativas registradas</span><strong id="stat-attempts">—</strong></div>
+    <div class="stat"><span>Acertos nas questões corrigíveis</span><strong id="stat-accuracy">—</strong></div>
+  </section>
+
+  <section class="panel filters">
+    <div><label for="search">Buscar no enunciado</label><input id="search" type="search" placeholder="Digite uma palavra..."></div>
+    <div><label for="number-search">Pesquisar questão por número</label><input id="number-search" type="search" inputmode="numeric" placeholder="Ex.: 100"></div>
+    <div><label for="discipline">Disciplina</label><select id="discipline"><option value="">Todas</option></select></div>
+    <div><label for="subject">Assunto</label><select id="subject"><option value="">Todos</option></select></div>
+    <div><label for="board">Banca</label><select id="board"><option value="">Todas</option></select></div>
+    <div><label for="year">Ano</label><select id="year"><option value="">Todos</option></select></div>
+    <div><label for="exam">Prova</label><select id="exam"><option value="">Todas</option></select></div>
+    <div><label for="key-status">Situação do gabarito</label><select id="key-status"><option value="">Todas</option><option value="missing">Sem gabarito</option><option value="available">Com gabarito</option></select></div>
+    <div><label for="study-status">Situação dos estudos</label><select id="study-status"><option value="">Todas</option><option value="unanswered">Ainda não respondidas</option><option value="answered">Já respondidas</option><option value="correct">Última tentativa: acerto</option><option value="wrong">Última tentativa: erro</option><option value="pending">Respondidas sem gabarito</option></select></div>
+    <div><label for="order">Ordem</label><select id="order"><option value="original">Código (A–Z)</option><option value="random">Aleatória</option><option value="year-desc">Ano (mais recente)</option></select></div>
+    <div><label for="list-filter">Lista de favoritos</label><select id="list-filter"><option value="">Todas as questões</option></select></div>
+    <div style="display:flex;align-items:end"><button class="action secondary" id="clear-filters" type="button">Limpar filtros</button></div>
+  </section>
+
+  <section class="panel question">
+    <div id="question-title">Carregando questões do Firebase…</div>
+    <div class="meta" id="meta"></div>
+    <div id="enunciado"></div>
+    <div id="alternativas"></div>
+    <div class="actions">
+      <button class="action primary" id="submit" type="button" disabled>Registrar resposta</button>
+      <button class="action secondary" id="show-source" type="button" disabled>Ver questão original</button>
+    </div>
+    <div id="feedback" role="status" aria-live="polite"></div>
+
+    <section class="list-panel" aria-labelledby="list-heading">
+      <h2 id="list-heading">Listas de favoritos</h2>
+      <div class="meta" id="question-lists" style="margin-bottom:.4rem"></div>
+      <div class="list-row">
+        <div>
+          <label for="list-select">Adicionar esta questão a uma lista</label>
+          <select id="list-select" disabled></select>
+        </div>
+        <div id="new-list-box" hidden>
+          <label for="new-list-name">Nome da nova lista</label>
+          <input id="new-list-name" type="text" maxlength="60" placeholder="Ex.: Questões tops" autocomplete="off" disabled>
+        </div>
+        <button class="action primary" id="add-to-list" type="button" disabled>Adicionar</button>
+      </div>
+      <p id="list-status" class="footnote" aria-live="polite" style="margin:.6rem 0 0"></p>
+    </section>
+
+    <section class="lesson-panel" aria-labelledby="lesson-heading">
+      <h2 id="lesson-heading">Mini-aula da correção</h2>
+      <p class="lesson-help">Depois de conferir a questão com a IA, cole aqui a explicação didática: regra jurídica, fundamento legal, análise das alternativas e por que a resposta correta é a correta. O texto ficará salvo no cadastro desta questão no Firebase.</p>
+      <div class="lesson-grid">
+        <div>
+          <label for="mini-lesson">Mini-aula / comentário da correção</label>
+          <textarea id="mini-lesson" placeholder="Cole ou escreva aqui a mini-aula da correção..." disabled></textarea>
+        </div>
+        <div>
+          <label for="lesson-source">Fonte / fundamento (opcional)</label>
+          <input id="lesson-source" type="text" placeholder="Ex.: CTN, art. 142; Constituição, art. ..." disabled>
+        </div>
+      </div>
+      <div class="actions">
+        <button class="action primary" id="save-lesson" type="button" disabled>Salvar mini-aula</button>
+        <span id="lesson-status" class="footnote" aria-live="polite"></span>
+      </div>
+    </section>
+
+    <div class="bottom">
+      <button class="action secondary" id="previous" type="button" disabled>← Anterior</button>
+      <span id="position">0 de 0</span>
+      <button class="action secondary" id="next" type="button" disabled>Próxima →</button>
+    </div>
+  </section>
+  <div id="status" role="status" aria-live="polite"></div>
+  <p class="footnote">As situações são independentes: uma questão pode estar sem gabarito e já ter sido respondida. Sem gabarito, a plataforma registra a alternativa e mantém o resultado como “aguardando gabarito”; quando o gabarito for cadastrado, as tentativas antigas não são corrigidas retroativamente nesta versão, mas as novas tentativas serão corrigidas automaticamente.</p>
+</main>
+
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+  import {
+    getFirestore, collection, getDocs, addDoc, doc, updateDoc, serverTimestamp, arrayUnion, arrayRemove
+  } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+
+  // Mesma configuração usada no importar.html
+  const firebaseConfig = {
+    apiKey: "AIzaSyB6kyGrO37UJTEH9uYRvR5FxRaTMi6adcc",
+    authDomain: "auditor-bc89a.firebaseapp.com",
+    projectId: "auditor-bc89a",
+    storageBucket: "auditor-bc89a.firebasestorage.app",
+    messagingSenderId: "1067095614198",
+    appId: "1:1067095614198:web:9cf97fb7b7a58eabafc2d7",
+    measurementId: "G-SZKENSWN96"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+  const $ = id => document.getElementById(id);
+
+  let allQuestions = [];
+  let filteredQuestions = [];
+  let currentIndex = 0;
+  let selectedLetter = null;
+  let answerSubmitted = false;
+  let attempts = [];
+  const sessionChoices = new Map();
+
+  const fields = {
+    search: $("search"), discipline: $("discipline"), subject: $("subject"),
+    board: $("board"), year: $("year"), exam: $("exam"),
+    keyStatus: $("key-status"), studyStatus: $("study-status"), order: $("order")
+  };
+  const listFields = { listFilter: $("list-filter"), numberSearch: $("number-search") };
+
+  // Listas de favoritos (coleção "listas": { nome, questoes: [IDs dos documentos de "questoes"] })
+  let lists = [];
+  let listsState = "loading"; // "loading" | "ok" | "error"
+  let listsErrorMessage = "";
+  const NEW_LIST = "__nova__";
+
+  function clean(value) {
+    if (value === null || value === undefined || value === "") return "";
+    return String(value);
+  }
+  function normalizeAnswer(value) {
+    // Aceita "A", "A)", "A.", etc.; não tenta inferir gabarito ausente.
+    const match = clean(value).trim().match(/^([A-Z])(?:[\).:\s-]|$)/i);
+    return match ? match[1].toUpperCase() : clean(value).trim().toUpperCase();
+  }
+  function questionId(q) { return q.id || q.codigoOriginal || ""; }
+  function currentQuestion() { return filteredQuestions[currentIndex] || null; }
+  function questionAttempts(q) {
+    const id = questionId(q);
+    return attempts.filter(a => (a.questaoId || a.codigoOriginal) === id)
+      .sort((a, b) => attemptTime(b) - attemptTime(a));
+  }
+  function attemptTime(a) {
+    const value = a.respondidaEm;
+    if (value && typeof value.toDate === "function") return value.toDate().getTime();
+    if (value instanceof Date) return value.getTime();
+    if (typeof value === "string") return new Date(value).getTime() || 0;
+    if (value && typeof value.seconds === "number") return value.seconds * 1000;
+    return 0;
+  }
+  function latestAttempt(q) { return questionAttempts(q)[0] || null; }
+  function hasAnswerKey(q) { return Boolean(q.gabarito && normalizeAnswer(q.gabarito)); }
+
+  function fillSelect(select, values, firstLabel) {
+    const previous = select.value;
+    select.replaceChildren(new Option(firstLabel, ""));
+    [...new Set(values.map(clean).filter(Boolean))]
+      .sort((a,b) => a.localeCompare(b, "pt-BR", {numeric:true, sensitivity:"base"}))
+      .forEach(value => select.add(new Option(value, value)));
+    if ([...select.options].some(o => o.value === previous)) select.value = previous;
+  }
+
+  function populateFilters() {
+    fillSelect(fields.discipline, allQuestions.map(q => q.disciplina), "Todas");
+    fillSelect(fields.subject, allQuestions.map(q => q.assunto), "Todos");
+    fillSelect(fields.board, allQuestions.map(q => q.banca), "Todas");
+    fillSelect(fields.year, allQuestions.map(q => q.ano), "Todos");
+    fillSelect(fields.exam, allQuestions.map(q => q.prova), "Todas");
+  }
+
+  function applyFilters(resetIndex = true) {
+    const search = fields.search.value.trim().toLocaleLowerCase("pt-BR");
+    // Busca por número: só dígitos; compara com numeroQuestao exatamente (100 não casa com 1000)
+    const number = listFields.numberSearch.value.replace(/\D/g, "").replace(/^0+(?=\d)/, "");
+    const selectedList = listFields.listFilter.value ? lists.find(l => l.id === listFields.listFilter.value) : null;
+    const listIds = selectedList ? new Set(selectedList.questoes) : null;
+    filteredQuestions = allQuestions.filter(q => {
+      const haystack = [q.enunciado, q.codigoOriginal, q.assunto, q.prova].map(clean).join(" ").toLocaleLowerCase("pt-BR");
+      return (!search || haystack.includes(search))
+        && (!number || clean(q.numeroQuestao) === number)
+        && (!listIds || listIds.has(questionId(q)))
+        && (!fields.discipline.value || clean(q.disciplina) === fields.discipline.value)
+        && (!fields.subject.value || clean(q.assunto) === fields.subject.value)
+        && (!fields.board.value || clean(q.banca) === fields.board.value)
+        && (!fields.year.value || clean(q.ano) === fields.year.value)
+        && (!fields.exam.value || clean(q.prova) === fields.exam.value)
+        && (!fields.keyStatus.value || (fields.keyStatus.value === "missing" ? !hasAnswerKey(q) : hasAnswerKey(q)))
+        && matchesStudyStatus(q, fields.studyStatus.value);
+    });
+
+    if (fields.order.value === "random") {
+      // Randomiza somente quando a ordem é selecionada ou filtros mudam.
+      filteredQuestions.sort(() => Math.random() - 0.5);
+    } else if (fields.order.value === "year-desc") {
+      filteredQuestions.sort((a,b) => Number(b.ano || 0) - Number(a.ano || 0));
+    } else {
+      filteredQuestions.sort((a,b) => clean(a.codigoOriginal).localeCompare(clean(b.codigoOriginal), "pt-BR", {numeric:true}));
+    }
+    if (resetIndex) currentIndex = 0;
+    else currentIndex = Math.min(currentIndex, Math.max(0, filteredQuestions.length - 1));
+    renderQuestion();
+    updateStats();
+  }
+
+  function matchesStudyStatus(q, status) {
+    if (!status) return true;
+    const latest = latestAttempt(q);
+    if (status === "unanswered") return !latest;
+    if (status === "answered") return Boolean(latest);
+    if (status === "correct") return Boolean(latest && latest.acertou === true);
+    if (status === "wrong") return Boolean(latest && latest.acertou === false);
+    if (status === "pending") return Boolean(latest && typeof latest.acertou !== "boolean");
+    return true;
+  }
+
+  function renderQuestion() {
+    const q = currentQuestion();
+    $("meta").replaceChildren();
+    $("alternativas").replaceChildren();
+    $("feedback").textContent = "";
+    $("feedback").className = "";
+    selectedLetter = null;
+    answerSubmitted = false;
+    $("submit").disabled = !q;
+    $("show-source").disabled = !q || !q.urlOriginal;
+    $("mini-lesson").disabled = !q;
+    $("lesson-source").disabled = !q;
+    $("save-lesson").disabled = !q;
+    $("mini-lesson").value = q ? clean(q.miniAulaCorrecao) : "";
+    $("lesson-source").value = q ? clean(q.fonteMiniAula) : "";
+    $("lesson-status").textContent = q && q.miniAulaAtualizadaEm ? "Mini-aula já cadastrada. Você pode editá-la e salvar novamente." : "Ainda não há mini-aula salva para esta questão.";
+    $("previous").disabled = !q || currentIndex <= 0;
+    $("next").disabled = !q || currentIndex >= filteredQuestions.length - 1;
+    $("position").textContent = q ? `${currentIndex + 1} de ${filteredQuestions.length}` : "0 de 0";
+    $("list-status").textContent = "";
+    renderListPanel();
+
+    if (!q) {
+      $("question-title").textContent = allQuestions.length ? "Nenhuma questão corresponde aos filtros." : "Nenhuma questão encontrada.";
+      $("enunciado").textContent = "";
+      return;
+    }
+
+    $("question-title").textContent = `Questão ${q.numeroQuestao ?? "—"} · Código ${q.codigoOriginal || q.id}`;
+    const metadata = [
+      ["Disciplina", q.disciplina], ["Assunto", q.assunto], ["Banca", q.banca],
+      ["Ano", q.ano], ["Prova", q.prova]
+    ];
+    metadata.forEach(([label, value]) => {
+      if (!clean(value)) return;
+      const chip = document.createElement("span");
+      chip.className = "chip";
+      chip.textContent = `${label}: ${value}`;
+      $("meta").append(chip);
+    });
+    const latest = latestAttempt(q);
+    const stateChip = document.createElement("span");
+    stateChip.className = "chip";
+    stateChip.textContent = hasAnswerKey(q) ? "Gabarito cadastrado" : "Sem gabarito";
+    $("meta").append(stateChip);
+    const progressChip = document.createElement("span");
+    progressChip.className = "chip";
+    progressChip.textContent = !latest ? "Ainda não respondida" :
+      (latest.acertou === true ? "Última tentativa: acerto" :
+       latest.acertou === false ? "Última tentativa: erro" : "Respondida · aguardando gabarito");
+    $("meta").append(progressChip);
+    $("enunciado").textContent = clean(q.enunciado) || "(Enunciado não disponível.)";
+
+    const options = Array.isArray(q.alternativas) ? q.alternativas : [];
+    options.forEach((raw, idx) => {
+      const text = clean(raw);
+      const letter = normalizeAnswer(text) || String.fromCharCode(65 + idx);
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "option";
+      button.dataset.letter = letter;
+      const letterSpan = document.createElement("span");
+      letterSpan.className = "letter";
+      letterSpan.textContent = `${letter})`;
+      const textSpan = document.createElement("span");
+      textSpan.textContent = text.replace(/^[A-Z][\).:\s-]*/i, "").trim() || text;
+      button.append(letterSpan, textSpan);
+      button.addEventListener("click", () => {
+        if (answerSubmitted) return;
+        selectedLetter = letter;
+        sessionChoices.set(questionId(q), letter);
+        document.querySelectorAll(".option").forEach(el => el.classList.toggle("selected", el.dataset.letter === letter));
+        $("feedback").textContent = "";
+        $("feedback").className = "";
+      });
+      $("alternativas").append(button);
+    });
+
+    const savedChoice = sessionChoices.get(questionId(q));
+    if (savedChoice) {
+      selectedLetter = savedChoice;
+      document.querySelectorAll(".option").forEach(el => el.classList.toggle("selected", el.dataset.letter === savedChoice));
+    }
+  }
+
+  async function loadAttempts() {
+    try {
+      const snap = await getDocs(collection(db, "tentativas"));
+      attempts = snap.docs.map(d => ({ id: d.id, ...d.data() }));
+    } catch (error) {
+      console.warn("Não foi possível ler o histórico de tentativas:", error);
+      attempts = [];
+      $("status").textContent = "As questões foram carregadas, mas não foi possível ler o histórico de tentativas. Confira as regras do Firestore.";
+    }
+  }
+
+  function updateStats() {
+    $("stat-total").textContent = filteredQuestions.length.toLocaleString("pt-BR");
+    $("stat-attempts").textContent = attempts.length.toLocaleString("pt-BR");
+    const graded = attempts.filter(a => typeof a.acertou === "boolean");
+    if (!graded.length) $("stat-accuracy").textContent = "—";
+    else {
+      const correct = graded.filter(a => a.acertou).length;
+      $("stat-accuracy").textContent = `${Math.round(correct / graded.length * 100)}%`;
+    }
+  }
+
+  async function saveMiniLesson() {
+    const q = currentQuestion();
+    if (!q) return;
+    const lesson = $("mini-lesson").value.trim();
+    const source = $("lesson-source").value.trim();
+    if (!lesson) {
+      $("lesson-status").textContent = "Escreva ou cole a mini-aula antes de salvar.";
+      $("mini-lesson").focus();
+      return;
+    }
+    $("save-lesson").disabled = true;
+    $("lesson-status").textContent = "Salvando mini-aula no Firebase…";
+    try {
+      await updateDoc(doc(db, "questoes", questionId(q)), {
+        miniAulaCorrecao: lesson,
+        fonteMiniAula: source || null,
+        miniAulaAtualizadaEm: serverTimestamp()
+      });
+      q.miniAulaCorrecao = lesson;
+      q.fonteMiniAula = source || null;
+      q.miniAulaAtualizadaEm = new Date();
+      $("lesson-status").textContent = "Mini-aula salva. Ela ficará associada a esta questão.";
+      $("status").textContent = `Mini-aula salva para a questão ${q.codigoOriginal || q.id}.`;
+    } catch (error) {
+      console.error(error);
+      $("lesson-status").textContent = `Não foi possível salvar: ${error.code || ""} ${error.message || error}. Confira as regras do Firestore.`;
+    } finally {
+      $("save-lesson").disabled = false;
+    }
+  }
+
+  async function submitAnswer() {
+    const q = currentQuestion();
+    if (!q || !selectedLetter || answerSubmitted) {
+      $("feedback").className = "neutral";
+      $("feedback").textContent = !q ? "Não há questão selecionada." : "Selecione uma alternativa antes de registrar.";
+      return;
+    }
+
+    const answerKey = q.gabarito ? normalizeAnswer(q.gabarito) : null;
+    const isGraded = Boolean(answerKey);
+    const isCorrect = isGraded ? selectedLetter === answerKey : null;
+    $("submit").disabled = true;
+    $("status").textContent = "Registrando tentativa no Firebase…";
+
+    const attempt = {
+      questaoId: questionId(q),
+      codigoOriginal: q.codigoOriginal || q.id || null,
+      alternativaEscolhida: selectedLetter,
+      gabarito: answerKey,
+      acertou: isGraded ? isCorrect : null,
+      disciplina: q.disciplina || null,
+      assunto: q.assunto || null,
+      respondidaEm: serverTimestamp(),
+      uidUsuario: "anonimo"
+    };
+
+    try {
+      const ref = await addDoc(collection(db, "tentativas"), attempt);
+      attempts.push({ ...attempt, id: ref.id, respondidaEm: new Date() });
+      answerSubmitted = true;
+      document.querySelectorAll(".option").forEach(el => {
+        el.disabled = true;
+        if (isGraded && el.dataset.letter === answerKey) el.classList.add("correct");
+        if (isGraded && el.dataset.letter === selectedLetter && !isCorrect) el.classList.add("wrong");
+      });
+      if (!isGraded) {
+        $("feedback").className = "neutral";
+        $("feedback").textContent = `Resposta registrada: ${selectedLetter}.\nEsta questão ainda não tem gabarito cadastrado, então não é possível confirmar acerto ou erro.`;
+      } else if (isCorrect) {
+        $("feedback").className = "ok";
+        $("feedback").textContent = `Resposta registrada. Você acertou! Gabarito: ${answerKey}.`;
+      } else {
+        $("feedback").className = "bad";
+        $("feedback").textContent = `Resposta registrada. Você errou. Gabarito: ${answerKey}.`;
+      }
+      $("status").textContent = "Tentativa salva.";
+      updateStats();
+    } catch (error) {
+      console.error(error);
+      $("feedback").className = "bad";
+      $("feedback").textContent = `Não foi possível salvar a tentativa.\n${error.code || ""} ${error.message || error}\n\nConfira a conexão e as regras da coleção "tentativas" no Firestore.`;
+      $("submit").disabled = false;
+      $("status").textContent = "Falha ao salvar tentativa.";
+    }
+  }
+
+  fields.search.addEventListener("input", () => applyFilters());
+  listFields.numberSearch.addEventListener("input", () => applyFilters());
+  listFields.listFilter.addEventListener("change", () => applyFilters());
+  $("list-select").addEventListener("change", () => {
+    const isNew = $("list-select").value === NEW_LIST;
+    $("new-list-box").hidden = !isNew;
+    if (isNew) $("new-list-name").focus();
+  });
+  $("add-to-list").addEventListener("click", addCurrentToList);
+  $("new-list-name").addEventListener("keydown", e => { if (e.key === "Enter") { e.preventDefault(); addCurrentToList(); } });
+  [fields.discipline, fields.subject, fields.board, fields.year, fields.exam,
+    fields.keyStatus, fields.studyStatus, fields.order]
+    .forEach(el => el.addEventListener("change", () => applyFilters()));
+  $("clear-filters").addEventListener("click", () => {
+    fields.search.value = "";
+    listFields.numberSearch.value = "";
+    listFields.listFilter.value = "";
+    [fields.discipline, fields.subject, fields.board, fields.year, fields.exam,
+      fields.keyStatus, fields.studyStatus].forEach(el => el.value = "");
+    fields.order.value = "original";
+    applyFilters();
+  });
+  $("previous").addEventListener("click", () => { if (currentIndex > 0) { currentIndex--; renderQuestion(); } });
+  $("next").addEventListener("click", () => { if (currentIndex < filteredQuestions.length - 1) { currentIndex++; renderQuestion(); } });
+  $("submit").addEventListener("click", submitAnswer);
+  $("save-lesson").addEventListener("click", saveMiniLesson);
+  $("show-source").addEventListener("click", () => {
+    const q = currentQuestion();
+    if (q?.urlOriginal) window.open(q.urlOriginal, "_blank", "noopener,noreferrer");
+  });
+
+  // ===================== LISTAS DE FAVORITOS =====================
+  function sortLists() {
+    lists.sort((a, b) => a.nome.localeCompare(b.nome, "pt-BR", { sensitivity: "base" }));
+  }
+
+  function listsOf(q) {
+    const id = questionId(q);
+    return lists.filter(l => l.questoes.includes(id));
+  }
+
+  async function loadLists() {
+    listsState = "loading";
+    try {
+      const snap = await getDocs(collection(db, "listas"));
+      lists = snap.docs.map(d => {
+        const data = d.data();
+        return {
+          id: d.id,
+          nome: clean(data.nome).trim() || "(sem nome)",
+          questoes: Array.isArray(data.questoes) ? data.questoes.map(String) : []
+        };
+      });
+      sortLists();
+      listsState = "ok";
+      listsErrorMessage = "";
+    } catch (error) {
+      console.error(error);
+      lists = [];
+      listsState = "error";
+      listsErrorMessage = `Não foi possível carregar as listas (${error.code || ""} ${error.message || error}). Confira se as regras do Firestore permitem ler e gravar a coleção "listas".`;
+    }
+  }
+
+  function populateListFilter() {
+    const select = listFields.listFilter;
+    const previous = select.value;
+    const existing = new Set(allQuestions.map(questionId));
+    select.replaceChildren(new Option("Todas as questões", ""));
+    lists.forEach(l => {
+      const count = l.questoes.filter(id => existing.has(id)).length;
+      select.add(new Option(`${l.nome} (${count})`, l.id));
+    });
+    if ([...select.options].some(o => o.value === previous)) select.value = previous;
+  }
+
+  function renderListPanel() {
+    const q = currentQuestion();
+    const select = $("list-select");
+    const previous = select.value;
+    const mine = q ? new Set(listsOf(q).map(l => l.id)) : new Set();
+
+    select.replaceChildren(new Option("Escolha uma lista…", ""));
+    lists.forEach(l => select.add(new Option((mine.has(l.id) ? "✓ " : "") + l.nome, l.id)));
+    select.add(new Option("➕ Criar nova lista…", NEW_LIST));
+    if ([...select.options].some(o => o.value === previous)) select.value = previous;
+
+    const enabled = Boolean(q) && listsState === "ok";
+    select.disabled = !enabled;
+    $("new-list-name").disabled = !enabled;
+    $("add-to-list").disabled = !enabled;
+    $("new-list-box").hidden = select.value !== NEW_LIST;
+
+    const chips = $("question-lists");
+    chips.replaceChildren();
+    if (q) {
+      const own = listsOf(q);
+      if (!own.length) {
+        const empty = document.createElement("span");
+        empty.className = "chip chip-empty";
+        empty.textContent = listsState === "ok" ? "Esta questão não está em nenhuma lista." : "";
+        chips.append(empty);
+      }
+      own.forEach(l => {
+        const chip = document.createElement("span");
+        chip.className = "chip chip-list";
+        const label = document.createElement("span");
+        label.textContent = l.nome;
+        const remove = document.createElement("button");
+        remove.type = "button";
+        remove.className = "chip-remove";
+        remove.textContent = "×";
+        remove.title = `Remover desta lista: ${l.nome}`;
+        remove.setAttribute("aria-label", `Remover a questão da lista ${l.nome}`);
+        remove.addEventListener("click", () => removeFromList(l, q, remove));
+        chip.append(label, remove);
+        chips.append(chip);
+      });
+    }
+
+    if (listsState === "error") $("list-status").textContent = listsErrorMessage;
+    else if (listsState === "loading") $("list-status").textContent = "Carregando listas…";
+  }
+
+  async function addCurrentToList() {
+    const q = currentQuestion();
+    if (!q || listsState !== "ok") return;
+    const choice = $("list-select").value;
+    const status = $("list-status");
+    if (!choice) { status.textContent = "Escolha uma lista ou selecione “Criar nova lista…”."; return; }
+
+    const qid = questionId(q);
+    const code = q.codigoOriginal || q.id;
+    const button = $("add-to-list");
+    button.disabled = true;
+    try {
+      let target;
+      if (choice === NEW_LIST) {
+        const nome = $("new-list-name").value.replace(/\s+/g, " ").trim();
+        if (!nome) { status.textContent = "Digite o nome da nova lista."; $("new-list-name").focus(); return; }
+        target = lists.find(l => l.nome.toLocaleLowerCase("pt-BR") === nome.toLocaleLowerCase("pt-BR"));
+        if (!target) {
+          status.textContent = "Criando lista…";
+          const ref = await addDoc(collection(db, "listas"), {
+            nome, questoes: [qid], criadaEm: serverTimestamp(), atualizadaEm: serverTimestamp()
+          });
+          target = { id: ref.id, nome, questoes: [qid] };
+          lists.push(target);
+          sortLists();
+          $("new-list-name").value = "";
+          $("list-select").value = target.id;
+          populateListFilter();
+          renderListPanel();
+          status.textContent = `Lista “${nome}” criada e questão ${code} adicionada.`;
+          return;
+        }
+        // O nome já existe: usa a lista existente em vez de criar outra com o mesmo nome.
+        $("new-list-name").value = "";
+        $("list-select").value = target.id;
+      } else {
+        target = lists.find(l => l.id === choice);
+      }
+      if (!target) { status.textContent = "Lista não encontrada. Recarregue a página."; return; }
+      if (target.questoes.includes(qid)) {
+        renderListPanel();
+        status.textContent = `A questão ${code} já está na lista “${target.nome}”.`;
+        return;
+      }
+      status.textContent = "Salvando…";
+      await updateDoc(doc(db, "listas", target.id), { questoes: arrayUnion(qid), atualizadaEm: serverTimestamp() });
+      target.questoes.push(qid);
+      populateListFilter();
+      renderListPanel();
+      status.textContent = `Questão ${code} adicionada à lista “${target.nome}”.`;
+    } catch (error) {
+      console.error(error);
+      status.textContent = `Não foi possível salvar na lista: ${error.code || ""} ${error.message || error}. Confira as regras da coleção "listas" no Firestore.`;
+    } finally {
+      button.disabled = !(currentQuestion() && listsState === "ok");
+    }
+  }
+
+  async function removeFromList(list, q, removeButton) {
+    const qid = questionId(q);
+    const code = q.codigoOriginal || q.id;
+    removeButton.disabled = true;
+    try {
+      await updateDoc(doc(db, "listas", list.id), { questoes: arrayRemove(qid), atualizadaEm: serverTimestamp() });
+      list.questoes = list.questoes.filter(id => id !== qid);
+      populateListFilter();
+      if (listFields.listFilter.value === list.id) {
+        // Está filtrando por esta lista: tira a questão da visão atual sem embaralhar de novo.
+        const idx = filteredQuestions.indexOf(q);
+        if (idx >= 0) filteredQuestions.splice(idx, 1);
+        currentIndex = Math.min(currentIndex, Math.max(0, filteredQuestions.length - 1));
+        renderQuestion();
+        updateStats();
+      } else {
+        renderListPanel();
+      }
+      $("list-status").textContent = `Questão ${code} removida da lista “${list.nome}”.`;
+    } catch (error) {
+      console.error(error);
+      removeButton.disabled = false;
+      $("list-status").textContent = `Não foi possível remover da lista: ${error.code || ""} ${error.message || error}.`;
+    }
+  }
+
+  async function start() {
+    try {
+      $("status").textContent = "Conectando ao Firebase…";
+      const snap = await getDocs(collection(db, "questoes"));
+      allQuestions = snap.docs.map(d => ({ id: d.id, ...d.data() }));
+      populateFilters();
+      applyFilters();
+      await loadAttempts();
+      await loadLists();
+      populateListFilter();
+      renderListPanel();
+      updateStats();
+      $("status").textContent = `Carregamento concluído: ${allQuestions.length} questão(ões) encontrada(s).`;
+    } catch (error) {
+      console.error(error);
+      $("question-title").textContent = "Não foi possível carregar as questões.";
+      $("status").textContent = `Erro ao acessar o Firestore: ${error.code || ""} ${error.message || error}\nConfira se o projeto Firebase está correto e se as regras permitem leitura da coleção "questoes".`;
+    }
+  }
+  start();
+</script>
+</body>
+</html>

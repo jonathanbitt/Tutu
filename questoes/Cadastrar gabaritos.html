@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#142b4a">
+<title>Cadastro de Gabaritos — Auditor</title>
+<style>
+:root{--navy:#142b4a;--blue:#245ca6;--bg:#f3f6fa;--line:#dbe3ed;--text:#1e293b;--muted:#64748b;--green:#147d4b;--red:#b42332}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,sans-serif}
+header{background:var(--navy);color:white;padding:1.25rem max(1rem,calc((100% - 950px)/2))}
+header h1{margin:0 0 .25rem;font-size:1.6rem}header p{margin:0;color:#d8e5f5}
+main{max-width:950px;margin:1.25rem auto;padding:0 1rem 2rem}
+.panel{background:white;border:1px solid var(--line);border-radius:12px;padding:1.1rem;margin-bottom:1rem}
+label{display:block;font-size:.86rem;font-weight:650;margin-bottom:.35rem;color:#344256}
+input,select,textarea{width:100%;padding:.7rem;border:1px solid #cbd5e1;border-radius:8px;font:inherit;background:white;color:var(--text)}
+.grid{display:grid;grid-template-columns:2fr 1fr;gap:.8rem}.row{display:flex;gap:.6rem;flex-wrap:wrap;align-items:center}
+button{border:0;border-radius:8px;padding:.7rem 1rem;font:inherit;font-weight:650;cursor:pointer}
+.primary{background:var(--blue);color:white}.secondary{background:#e8edf4;color:#25364d}button:disabled{opacity:.45;cursor:not-allowed}
+#enunciado{white-space:pre-wrap;line-height:1.6;margin:.75rem 0;overflow-wrap:anywhere}
+.meta{font-size:.85rem;color:var(--muted);line-height:1.6}
+.options{display:grid;gap:.55rem;margin:1rem 0}.option{display:flex;gap:.6rem;align-items:flex-start;border:1px solid var(--line);border-radius:8px;padding:.75rem;cursor:pointer;line-height:1.5;white-space:pre-wrap}.option input{width:auto;margin-top:.35rem}.option:has(input:checked){border-color:var(--blue);background:#eef5ff}
+.status{white-space:pre-wrap;margin-top:.8rem;line-height:1.5}.ok{color:var(--green)}.error{color:var(--red)}.muted{color:var(--muted);font-size:.85rem}
+#question-count{font-weight:700}.saved{color:var(--green);font-weight:650}
+@media(max-width:600px){.grid{grid-template-columns:1fr}header h1{font-size:1.35rem}}
+</style>
+</head>
+<body>
+<header><h1>Cadastro de Gabaritos</h1><p>Informe e salve a resposta correta de cada questão no Firestore.</p></header>
+<main>
+  <section class="panel">
+    <div class="grid">
+      <div><label for="search">Buscar questão</label><input id="search" type="search" placeholder="Código, enunciado, assunto, banca ou prova"></div>
+      <div><label for="status-filter">Situação do gabarito</label><select id="status-filter"><option value="all">Todas</option><option value="missing">Sem gabarito</option><option value="saved">Com gabarito</option></select></div>
+    </div>
+    <div class="row" style="margin-top:.8rem">
+      <button class="secondary" id="prev" disabled>← Anterior</button>
+      <span id="question-count">Carregando…</span>
+      <button class="secondary" id="next" disabled>Próxima →</button>
+    </div>
+  </section>
+
+  <section class="panel">
+    <div id="title" class="meta">Conectando ao Firebase…</div>
+    <h3>Enunciado</h3>
+    <div id="enunciado"></div>
+    <div id="alternatives" class="options"></div>
+    <div class="grid">
+      <div><label for="source">Fonte do gabarito (opcional)</label><input id="source" placeholder="Ex.: gabarito definitivo da banca"></div>
+      <div><label for="note">Observação (opcional)</label><input id="note" placeholder="Ex.: questão anulada ou recurso"></div>
+    </div>
+    <div class="row" style="margin-top:1rem">
+      <button class="primary" id="save" disabled>Salvar gabarito</button>
+      <button class="secondary" id="open-source" disabled>Abrir questão original</button>
+    </div>
+    <div id="status" class="status" role="status" aria-live="polite"></div>
+  </section>
+  <p class="muted">Esta página altera apenas os campos de gabarito do documento selecionado; não reimporta nem substitui o enunciado ou as alternativas. Use o gabarito oficial/validado. A página exige que as regras atuais do Firestore permitam leitura da coleção <code>questoes</code> e atualização de documentos.</p>
+</main>
+
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+import { getFirestore, collection, getDocs, doc, updateDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyB6kyGrO37UJTEH9uYRvR5FxRaTMi6adcc",
+  authDomain: "auditor-bc89a.firebaseapp.com",
+  projectId: "auditor-bc89a",
+  storageBucket: "auditor-bc89a.firebasestorage.app",
+  messagingSenderId: "1067095614198",
+  appId: "1:1067095614198:web:9cf97fb7b7a58eabafc2d7",
+  measurementId: "G-SZKENSWN96"
+};
+const db = getFirestore(initializeApp(firebaseConfig));
+const $ = id => document.getElementById(id);
+let all = [], filtered = [], index = 0, selected = null, saving = false;
+
+function str(v){return v == null ? "" : String(v)}
+function letter(v){
+  const m = str(v).trim().match(/^([A-E])(?:[\).:\s-]|$)/i);
+  return m ? m[1].toUpperCase() : "";
+}
+function current(){return filtered[index] || null}
+function applyFilter(reset=true){
+  const term = $("search").value.trim().toLocaleLowerCase("pt-BR");
+  const status = $("status-filter").value;
+  filtered = all.filter(q=>{
+    const hay=[q.codigoOriginal,q.enunciado,q.assunto,q.banca,q.prova,q.disciplina].map(str).join(" ").toLocaleLowerCase("pt-BR");
+    const hasKey=!!letter(q.gabarito);
+    return (!term || hay.includes(term)) && (status==="all" || (status==="missing" ? !hasKey : hasKey));
+  }).sort((a,b)=>str(a.codigoOriginal).localeCompare(str(b.codigoOriginal),"pt-BR",{numeric:true}));
+  if(reset) index=0; else index=Math.min(index,Math.max(0,filtered.length-1));
+  render();
+}
+function render(){
+  const q=current();
+  selected=null;
+  $("alternatives").replaceChildren();
+  $("status").textContent="";
+  $("save").disabled=!q || saving;
+  $("prev").disabled=!q || index===0;
+  $("next").disabled=!q || index===filtered.length-1;
+  $("open-source").disabled=!q || !q.urlOriginal;
+  $("question-count").textContent=q ? `${index+1} de ${filtered.length} questões filtradas` : `0 de ${filtered.length} questões`;
+  if(!q){$("title").textContent=all.length?"Nenhuma questão corresponde à busca.":"Nenhuma questão carregada."; $("enunciado").textContent=""; return;}
+  $("title").textContent=`Código: ${q.codigoOriginal || q.id} · ${q.disciplina || "Sem disciplina"} · ${q.assunto || "Sem assunto"}`;
+  $("enunciado").textContent=str(q.enunciado);
+  $("source").value=str(q.fonteGabarito);
+  $("note").value=str(q.observacaoGabarito);
+  const currentKey=letter(q.gabarito);
+  (Array.isArray(q.alternativas)?q.alternativas:[]).forEach((raw,i)=>{
+    const rawText=str(raw), l=letter(rawText)||String.fromCharCode(65+i);
+    const label=document.createElement("label"); label.className="option";
+    const radio=document.createElement("input"); radio.type="radio"; radio.name="answer"; radio.value=l; radio.checked=l===currentKey;
+    const text=document.createElement("span"); text.textContent=rawText;
+    radio.addEventListener("change",()=>{selected=l; $("status").textContent="";});
+    label.append(radio,text); $("alternatives").append(label);
+  });
+  selected=currentKey || null;
+}
+async function save(){
+  const q=current(); if(!q || !selected || saving)return;
+  if(!["A","B","C","D","E"].includes(selected)){ $("status").textContent="Selecione uma alternativa válida."; $("status").className="status error"; return; }
+  saving=true; $("save").disabled=true; $("status").className="status"; $("status").textContent="Salvando gabarito…";
+  try{
+    const ref=doc(db,"questoes",q.id);
+    await updateDoc(ref,{
+      gabarito:selected,
+      fonteGabarito:$("source").value.trim() || null,
+      observacaoGabarito:$("note").value.trim() || null,
+      gabaritoAtualizadoEm:serverTimestamp()
+    });
+    q.gabarito=selected;
+    q.fonteGabarito=$("source").value.trim() || null;
+    q.observacaoGabarito=$("note").value.trim() || null;
+    $("status").className="status ok";
+    $("status").textContent=`Gabarito ${selected} salvo para ${q.codigoOriginal || q.id}.`;
+    if($("status-filter").value==="missing"){ filtered=filtered.filter(item=>item.id!==q.id); index=Math.min(index,Math.max(0,filtered.length-1)); render(); $("status").className="status ok"; $("status").textContent=`Gabarito ${selected} salvo. A questão saiu do filtro “Sem gabarito”.`; }
+  }catch(e){
+    console.error(e); $("status").className="status error";
+    $("status").textContent=`Não foi possível salvar.\n${e.code || ""} ${e.message || e}\nConfira se as regras do Firestore permitem atualizar a coleção "questoes".`;
+  }finally{saving=false; $("save").disabled=!current();}
+}
+$("search").addEventListener("input",()=>applyFilter());
+$("status-filter").addEventListener("change",()=>applyFilter());
+$("prev").addEventListener("click",()=>{if(index>0){index--;render()}});
+$("next").addEventListener("click",()=>{if(index<filtered.length-1){index++;render()}});
+$("save").addEventListener("click",save);
+$("open-source").addEventListener("click",()=>{const q=current();if(q?.urlOriginal)window.open(q.urlOriginal,"_blank","noopener,noreferrer")});
+async function start(){
+  try{
+    $("status").textContent="Carregando questões…";
+    const snap=await getDocs(collection(db,"questoes"));
+    all=snap.docs.map(d=>({id:d.id,...d.data()}));
+    applyFilter();
+    $("status").textContent=`Carregadas ${all.length} questões.`;
+  }catch(e){
+    console.error(e); $("title").textContent="Falha ao carregar questões.";
+    $("status").className="status error";
+    $("status").textContent=`${e.code || ""} ${e.message || e}\nConfira as regras do Firestore para leitura da coleção "questoes".`;
+  }
+}
+start();
+</script>
+</body>
+</html>

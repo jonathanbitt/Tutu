@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Importar Questões — Auditor</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 960px; margin: 2rem auto; padding: 0 1rem; }
+    #preview { background: #f5f5f5; padding: 1rem; border-radius: 8px; font-size: 0.85rem; max-height: 560px; overflow: auto; white-space: pre-wrap; }
+    button { padding: 0.6rem 1.2rem; font-size: 1rem; cursor: pointer; }
+    button:disabled { cursor: not-allowed; opacity: 0.6; }
+    input[type="text"] { padding: 0.5rem; font-size: 1rem; width: 100%; max-width: 520px; box-sizing: border-box; }
+    label { font-weight: 600; }
+    .campo { margin: 0 0 1rem 0; }
+    .dica { font-size: 0.8rem; color: #555; margin-top: 0.2rem; }
+    #status { margin-top: 1rem; white-space: pre-wrap; }
+    #barra-container { width: 100%; height: 18px; background: #e0e0e0; border-radius: 9px; overflow: hidden; margin-top: 0.5rem; display: none; }
+    #barra { height: 100%; width: 0%; background: #1976d2; transition: width 0.2s; }
+    .erro { color: #b00020; }
+    .ok { color: #0a7a2f; }
+    .aviso { color: #9a5b00; }
+    .rejeitadas { color: #b00020; font-size: 0.85rem; margin-top: 0.75rem; }
+    .resumo { background: #fff; border: 1px solid #ddd; border-radius: 6px; padding: 0.6rem 0.8rem; margin-bottom: 0.75rem; }
+    .q { background: #fff; border: 1px solid #ddd; border-left: 4px solid #0a7a2f; border-radius: 6px; padding: 0.5rem 0.7rem; margin-bottom: 0.5rem; }
+    .q.problema { border-left-color: #b00020; }
+    .q.duplicada { border-left-color: #9a5b00; opacity: 0.75; }
+    .q .topo { font-weight: 600; }
+    .q .meta { color: #555; font-size: 0.78rem; margin: 0.15rem 0 0.4rem 0; }
+    .q .enun { margin-bottom: 0.4rem; }
+    .q .alt { margin-left: 0.8rem; }
+    .badge { display: inline-block; font-size: 0.72rem; font-weight: 600; padding: 0 0.4rem; border-radius: 4px; margin-left: 0.4rem; }
+    .badge.b-erro { background: #fde7ea; color: #b00020; }
+    .badge.b-aviso { background: #fff1d6; color: #9a5b00; }
+  </style>
+</head>
+<body>
+  <h1>Importar Questões (TXT)</h1>
+
+  <div class="campo">
+    <label for="assunto-input">Assunto das questões importadas</label><br>
+    <input type="text" id="assunto-input" value="Conceito de Tributo" autocomplete="off">
+    <div class="dica">Será gravado no campo <code>assunto</code> de todas as questões <b>novas</b> desta importação. Se ficar vazio, será usado o assunto presente no arquivo (se houver).</div>
+  </div>
+
+  <p><input type="file" id="file-input" accept=".txt,text/plain"></p>
+
+  <p>
+    <label><input type="checkbox" id="chk-incompletas"> Importar também questões com estrutura incompleta (sem alternativas, com uma só alternativa ou com avisos)</label>
+  </p>
+
+  <p>
+    <button id="btn-preview" disabled>Analisar arquivo</button>
+    <button id="btn-importar" disabled>Importar para o Firestore</button>
+  </p>
+
+  <h3>Pré-visualização (<span id="qtd-preview">0</span> questões identificadas)</h3>
+  <div id="preview">Nenhum arquivo carregado.</div>
+
+  <div id="barra-container"><div id="barra"></div></div>
+
+  <div id="status"></div>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+    import {
+      getFirestore, doc, getDoc, setDoc, writeBatch
+    } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+
+    // Configuração real do Firebase (projeto auditor-bc89a)
+    const firebaseConfig = {
+      apiKey: "AIzaSyB6kyGrO37UJTEH9uYRvR5FxRaTMi6adcc",
+      authDomain: "auditor-bc89a.firebaseapp.com",
+      projectId: "auditor-bc89a",
+      storageBucket: "auditor-bc89a.firebasestorage.app",
+      messagingSenderId: "1067095614198",
+      appId: "1:1067095614198:web:9cf97fb7b7a58eabafc2d7",
+      measurementId: "G-SZKENSWN96"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+
+    const ASSUNTO_PADRAO = 'Conceito de Tributo';
+
+    // @@PARSER-INICIO  (código puro, sem DOM nem Firebase: testável isoladamente)
+
+    // Cabeçalhos aceitos: [Q123]()  [Q123](url)  [Q123]\()  [Q123]  (com barras de escape opcionais)
+    const RE_CAB_PAREN  = /^\s*\\?\[\s*([A-Za-z]{1,4}\d+)\s*\\?\]\s*\\?\(\s*(.*?)\s*\\?\)\s*$/;
+    const RE_CAB_SIMPLES = /^\s*\\?\[\s*(Q\d+)\s*\\?\]\s*$/i;
+    // Alternativa: A)  (A)  A.  A -  A –  (letra A–J, maiúscula ou minúscula)
+    const RE_ALT = /^\(?([A-Ja-j])(?:\)|\s*[.–—−-](?=\s|$))\s*(.*)$/;
+    const RE_ROTULO = /^(Quest[ãa]o|Disciplina|Assunto|Ano|Banca|Prova)\s*:\s*(.*)$/i;
+    const RE_ROTULO_SOZINHO = /^(Ano|Banca|Prova)$/i;
+    const RE_ROTULO_ABP = /^(Ano|Banca|Prova)\s*(:|$)/i;
+
+    // Remove UMA barra invertida final (marcador de quebra de linha do DeepSeek).
+    // Número par de barras finais é preservado (barra literal escapada).
+    function limparLinha(l) {
+      let s = l.replace(/ /g, ' ').replace(/\s+$/, '');
+      const m = s.match(/\\+$/);
+      if (m && m[0].length % 2 === 1) s = s.slice(0, -1).replace(/\s+$/, '');
+      return s;
+    }
+
+    function semAcento(s) {
+      return s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+    }
+
+    function dividirEmBlocos(texto) {
+      const linhas = texto.replace(/^﻿/, '').replace(/\r\n?/g, '\n').split('\n').map(limparLinha);
+      const blocos = [];
+      const antes = [];
+      let atual = null;
+      for (const l of linhas) {
+        let codigo = null, url = '';
+        let m = l.match(RE_CAB_PAREN);
+        if (m) { codigo = m[1]; url = m[2]; }
+        else {
+          m = l.match(RE_CAB_SIMPLES);
+          if (m) { codigo = m[1]; url = ''; }
+        }
+        if (codigo) {
+          atual = { codigo, url, linhas: [] };
+          blocos.push(atual);
+        } else if (atual) {
+          atual.linhas.push(l);
+        } else if (l.trim()) {
+          antes.push(l);
+        }
+      }
+      // remove linhas vazias e separadores "---" no fim de cada bloco
+      for (const b of blocos) {
+        while (b.linhas.length && (!b.linhas[b.linhas.length - 1].trim() || /^\s*-{3,}\s*$/.test(b.linhas[b.linhas.length - 1]))) {
+          b.linhas.pop();
+        }
+      }
+      return { blocos, textoAntesDoPrimeiroCabecalho: antes };
+    }
+
+    function parseBloco(b) {
+      const L = b.linhas;
+      const n = L.length;
+      let i = 0;
+      const pular = () => { while (i < n && !L[i].trim()) i++; };
+      const meta = { numero: null, disciplina: null, assunto: null, ano: null, banca: null, prova: null };
+
+      if (b.codigo.indexOf('/') !== -1) {
+        return { ok: false, codigo: b.codigo, motivo: 'Código inválido para ID de documento (contém "/")', amostra: L.join(' ').slice(0, 300) };
+      }
+
+      function consumirRotulos() {
+        for (;;) {
+          pular();
+          if (i >= n) break;
+          const t = L[i].trim();
+          let m = t.match(/^QUEST[ÃA]O\s*:?\s*(\d+)\s*$/i);
+          if (m) { meta.numero = Number(m[1]); i++; continue; }
+          let chave, valor;
+          m = t.match(RE_ROTULO);
+          if (m) { chave = m[1]; valor = m[2].trim(); }
+          else {
+            const mb = t.match(RE_ROTULO_SOZINHO);
+            if (mb) { chave = mb[1]; valor = ''; } else break;
+          }
+          chave = semAcento(chave);
+          i++;
+          if (chave === 'questao') {
+            const d = valor.match(/\d+/);
+            if (d) meta.numero = Number(d[0]);
+            continue;
+          }
+          // formato antigo: "Ano:" numa linha e o valor na próxima
+          if (!valor && (chave === 'ano' || chave === 'banca' || chave === 'prova')) {
+            let j = i;
+            while (j < n && !L[j].trim()) j++;
+            if (j < n) { valor = L[j].trim(); i = j + 1; }
+          }
+          if (chave === 'ano') meta.ano = /^\d+$/.test(valor) ? Number(valor) : (valor || null);
+          else meta[chave] = valor || null;
+        }
+      }
+
+      consumirRotulos();
+
+      // Formato antigo sem rótulos: 1–2 linhas (disciplina, assunto) seguidas de "Ano:/Banca:/Prova:"
+      if (meta.disciplina === null && meta.assunto === null) {
+        const idxs = [];
+        for (let j = i; j < n && idxs.length < 4; j++) if (L[j].trim()) idxs.push(j);
+        const p = idxs.findIndex(j => RE_ROTULO_ABP.test(L[j].trim()));
+        if (p >= 1 && p <= 2) {
+          const livres = idxs.slice(0, p);
+          if (!livres.some(j => RE_ALT.test(L[j].trim()))) {
+            meta.disciplina = L[livres[0]].trim();
+            meta.assunto = livres[1] !== undefined ? L[livres[1]].trim() : null;
+            i = idxs[p];
+            consumirRotulos();
+          }
+        }
+      }
+
+      // Enunciado + alternativas
+      const enun = [];
+      let alts = [];
+      const avisos = [];
+      for (; i < n; i++) {
+        const t = L[i].trim();
+        if (!t) {
+          if (!alts.length && enun.length && enun[enun.length - 1] !== '') enun.push('');
+          continue;
+        }
+        const m = t.match(RE_ALT);
+        if (m) {
+          const idx = m[1].toUpperCase().charCodeAt(0) - 65;
+          if (idx === alts.length) {
+            alts.push({ letra: m[1].toUpperCase(), texto: m[2].trim() });
+            continue;
+          }
+          if (idx === 0 && alts.length > 0) {
+            // "A)" reapareceu: o que veio antes eram itens do enunciado, não alternativas
+            for (const a of alts) enun.push(a.letra + ') ' + a.texto);
+            enun.push('');
+            alts = [{ letra: 'A', texto: m[2].trim() }];
+            continue;
+          }
+          if (alts.length > 0) avisos.push('Linha fora de sequência de alternativas: "' + t.slice(0, 40) + '"');
+        }
+        if (alts.length) {
+          const a = alts[alts.length - 1];
+          a.texto += (a.texto ? '\n' : '') + t;
+        } else {
+          enun.push(t);
+        }
+      }
+
+      while (enun.length && !enun[0]) enun.shift();
+      while (enun.length && !enun[enun.length - 1]) enun.pop();
+      const enunciado = enun.join('\n').trim();
+
+      if (!enunciado) {
+        return { ok: false, codigo: b.codigo, motivo: 'Bloco sem enunciado identificável', amostra: L.join(' ').slice(0, 300) };
+      }
+
+      const problemas = [];
+      if (alts.length === 0) problemas.push('sem alternativas');
+      else if (alts.length === 1) problemas.push('apenas uma alternativa');
+      for (const a of alts) if (!a.texto.trim()) problemas.push('alternativa ' + a.letra + ' vazia');
+      problemas.push(...avisos);
+
+      return {
+        ok: true,
+        questao: {
+          codigoOriginal: b.codigo,
+          urlOriginal: b.url || null,
+          numeroQuestao: meta.numero,
+          disciplina: meta.disciplina,
+          assunto: meta.assunto,
+          ano: meta.ano,
+          banca: meta.banca,
+          prova: meta.prova,
+          enunciado,
+          alternativas: alts.map(a => a.letra + ') ' + a.texto.trim()),
+          gabarito: null,
+          nivel: null,
+          problemas
+        }
+      };
+    }
+
+    function parseTxt(texto) {
+      const { blocos, textoAntesDoPrimeiroCabecalho } = dividirEmBlocos(texto);
+      const questoes = [];
+      const rejeitadas = [];
+      for (const b of blocos) {
+        const r = parseBloco(b);
+        if (r.ok) questoes.push(r.questao);
+        else rejeitadas.push({ codigo: r.codigo, motivo: r.motivo, amostra: r.amostra });
+      }
+      return { questoes, rejeitadas, totalBlocos: blocos.length, textoIgnorado: textoAntesDoPrimeiroCabecalho.length };
+    }
+
+    // Documento exatamente como será gravado (exceto criadoEm, acrescentado no momento da gravação).
+    function montarDocumento(q, assuntoManual) {
+      const manual = (assuntoManual || '').trim();
+      return {
+        codigoOriginal: q.codigoOriginal,
+        urlOriginal: q.urlOriginal || null,
+        numeroQuestao: q.numeroQuestao || null,
+        disciplina: q.disciplina || null,
+        assunto: manual || q.assunto || null,
+        ano: q.ano || null,
+        banca: q.banca || null,
+        prova: q.prova || null,
+        enunciado: q.enunciado,
+        alternativas: q.alternativas.slice(),
+        gabarito: q.gabarito || null,
+        nivel: q.nivel || null
+      };
+    }
+
+    // Aplica deduplicação, filtro de incompletas e assunto. Usada tanto na prévia quanto na importação.
+    function prepararLista(parsed, assuntoManual, incluirIncompletas) {
+      const vistos = new Set();
+      const lista = [];
+      const duplicadas = [];
+      const incompletasExcluidas = [];
+      let incompletasIncluidas = 0;
+      for (const q of parsed.questoes) {
+        if (vistos.has(q.codigoOriginal)) { duplicadas.push(q.codigoOriginal); continue; }
+        vistos.add(q.codigoOriginal);
+        if (q.problemas.length) {
+          if (!incluirIncompletas) { incompletasExcluidas.push(q.codigoOriginal); continue; }
+          incompletasIncluidas++;
+        }
+        lista.push(montarDocumento(q, assuntoManual));
+      }
+      return { lista, duplicadas, incompletasExcluidas, incompletasIncluidas };
+    }
+    // @@PARSER-FIM
+
+    // ===================== INTERFACE =====================
+    const fileInput = document.getElementById('file-input');
+    const assuntoInput = document.getElementById('assunto-input');
+    const chkIncompletas = document.getElementById('chk-incompletas');
+    const btnPreview = document.getElementById('btn-preview');
+    const btnImportar = document.getElementById('btn-importar');
+    const previewDiv = document.getElementById('preview');
+    const qtdPreview = document.getElementById('qtd-preview');
+    const statusDiv = document.getElementById('status');
+    const barraContainer = document.getElementById('barra-container');
+    const barra = document.getElementById('barra');
+
+    let parsed = null;       // resultado da última análise
+    let importando = false;
+    let timerPreview = null;
+
+    function el(tag, classe, texto) {
+      const e = document.createElement(tag);
+      if (classe) e.className = classe;
+      if (texto != null) e.textContent = texto;
+      return e;
+    }
+
+    function resetarAnalise() {
+      parsed = null;
+      btnImportar.disabled = true;
+      previewDiv.textContent = 'Arquivo selecionado. Clique em "Analisar arquivo".';
+      qtdPreview.textContent = '0';
+      statusDiv.textContent = '';
+      barraContainer.style.display = 'none';
+      barra.style.width = '0%';
+    }
+
+    fileInput.addEventListener('change', () => {
+      btnPreview.disabled = !fileInput.files.length || importando;
+      resetarAnalise();
+    });
+
+    assuntoInput.addEventListener('input', () => {
+      clearTimeout(timerPreview);
+      timerPreview = setTimeout(renderPreview, 250);
+    });
+    chkIncompletas.addEventListener('change', renderPreview);
+
+    function renderPreview() {
+      if (!parsed || importando) return;
+      const assunto = assuntoInput.value;
+      const prep = prepararLista(parsed, assunto, chkIncompletas.checked);
+      qtdPreview.textContent = parsed.questoes.length;
+      previewDiv.replaceChildren();
+
+      const resumo = el('div', 'resumo');
+      const assuntoEfetivo = assunto.trim();
+      const linhasResumo = [
+        'Blocos identificados no arquivo: ' + parsed.totalBlocos,
+        'Questões interpretadas: ' + parsed.questoes.length,
+        'Serão enviadas ao Firestore (se ainda não existirem): ' + prep.lista.length,
+        'Assunto que será atribuído: ' + (assuntoEfetivo ? '"' + assuntoEfetivo + '"' : '(campo vazio — será usado o assunto do arquivo, se houver)')
+      ];
+      if (prep.incompletasExcluidas.length) linhasResumo.push('Com estrutura incompleta e NÃO incluídas: ' + prep.incompletasExcluidas.length);
+      if (prep.incompletasIncluidas) linhasResumo.push('Com estrutura incompleta e incluídas: ' + prep.incompletasIncluidas);
+      if (prep.duplicadas.length) linhasResumo.push('Códigos repetidos no arquivo (só a 1ª ocorrência é usada): ' + prep.duplicadas.length);
+      if (parsed.rejeitadas.length) linhasResumo.push('Blocos rejeitados: ' + parsed.rejeitadas.length);
+      if (parsed.textoIgnorado) linhasResumo.push('Linhas antes do primeiro cabeçalho (ignoradas): ' + parsed.textoIgnorado);
+      linhasResumo.forEach(t => resumo.appendChild(el('div', null, t)));
+      previewDiv.appendChild(resumo);
+
+      if (prep.duplicadas.length) {
+        const cont = {};
+        prep.duplicadas.forEach(c => { cont[c] = (cont[c] || 1) + 1; });
+        previewDiv.appendChild(el('div', 'aviso', 'Códigos duplicados: ' +
+          Object.entries(cont).slice(0, 30).map(([c, k]) => c + ' (' + k + 'x)').join(', ') +
+          (Object.keys(cont).length > 30 ? ' …' : '')));
+      }
+
+      const vistos = new Set();
+      const frag = document.createDocumentFragment();
+      for (const q of parsed.questoes) {
+        const dup = vistos.has(q.codigoOriginal);
+        vistos.add(q.codigoOriginal);
+        const d = montarDocumento(q, assunto);
+        const card = el('div', 'q' + (dup ? ' duplicada' : (q.problemas.length ? ' problema' : '')));
+
+        const topo = el('div', 'topo', d.codigoOriginal);
+        if (dup) topo.appendChild(el('span', 'badge b-aviso', 'repetida no arquivo — ignorada'));
+        q.problemas.forEach(p => topo.appendChild(el('span', 'badge b-erro', p)));
+        card.appendChild(topo);
+
+        card.appendChild(el('div', 'meta',
+          'Nº: ' + (d.numeroQuestao ?? '—') +
+          ' | Disciplina: ' + (d.disciplina || '—') +
+          ' | Assunto: ' + (d.assunto || '—') +
+          ' | Banca: ' + (d.banca || '—') +
+          ' | Ano: ' + (d.ano || '—') +
+          ' | Prova: ' + (d.prova || '—') +
+          ' | URL: ' + (d.urlOriginal || '—')));
+        card.appendChild(el('div', 'enun', d.enunciado));
+        d.alternativas.forEach(a => card.appendChild(el('div', 'alt', a)));
+        frag.appendChild(card);
+      }
+      previewDiv.appendChild(frag);
+
+      if (parsed.rejeitadas.length) {
+        const rej = el('div', 'rejeitadas');
+        rej.appendChild(el('div', null, parsed.rejeitadas.length + ' bloco(s) não puderam ser interpretados:'));
+        parsed.rejeitadas.slice(0, 20).forEach((r, k) => {
+          rej.appendChild(el('div', null, '[' + (k + 1) + '] ' + (r.codigo || '?') + ' — ' + r.motivo + '. Amostra: ' + (r.amostra || '').slice(0, 160) + '…'));
+        });
+        if (parsed.rejeitadas.length > 20) rej.appendChild(el('div', null, '... e mais ' + (parsed.rejeitadas.length - 20) + '.'));
+        previewDiv.appendChild(rej);
+      }
+
+      btnImportar.disabled = importando || prep.lista.length === 0;
+    }
+
+    // ===================== ANÁLISE =====================
+    btnPreview.addEventListener('click', () => {
+      if (importando) return;
+      const file = fileInput.files[0];
+      if (!file) return;
+
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        try {
+          const texto = String(e.target.result || '');
+          parsed = parseTxt(texto);
+          statusDiv.textContent = '';
+          if (texto.indexOf('�') !== -1) {
+            statusDiv.className = 'aviso';
+            statusDiv.textContent = 'Atenção: o arquivo contém caracteres inválidos (�). Verifique se foi salvo em UTF-8.';
+          } else {
+            statusDiv.className = '';
+          }
+          if (parsed.totalBlocos === 0) {
+            previewDiv.replaceChildren(el('span', 'erro', 'Nenhum cabeçalho de questão ([Q1234]() ou [Q1234](url)) foi encontrado no arquivo.'));
+            qtdPreview.textContent = '0';
+            btnImportar.disabled = true;
+            return;
+          }
+          renderPreview();
+        } catch (err) {
+          parsed = null;
+          btnImportar.disabled = true;
+          previewDiv.replaceChildren(el('span', 'erro', 'Erro ao analisar o arquivo: ' + err.message));
+        }
+      };
+      reader.onerror = () => {
+        previewDiv.replaceChildren(el('span', 'erro', 'Erro ao ler o arquivo. Tente novamente.'));
+      };
+      reader.readAsText(file, 'UTF-8');
+    });
+
+    // ===================== IMPORTAÇÃO EM LOTES =====================
+    const TAMANHO_LOTE = 400;     // limite do Firestore: 500 operações por lote
+    const CONSULTAS_PARALELAS = 25;
+
+    function bloquearUI(bloqueado) {
+      btnImportar.disabled = bloqueado;
+      btnPreview.disabled = bloqueado || !fileInput.files.length;
+      fileInput.disabled = bloqueado;
+      assuntoInput.disabled = bloqueado;
+      chkIncompletas.disabled = bloqueado;
+    }
+
+    function avisoSaida(ev) { ev.preventDefault(); ev.returnValue = ''; }
+
+    btnImportar.addEventListener('click', async () => {
+      if (importando || !parsed) return;
+      importando = true;
+      window.addEventListener('beforeunload', avisoSaida);
+
+      // Congela os valores usados nesta operação (os mesmos exibidos na prévia)
+      const assunto = assuntoInput.value;
+      const prep = prepararLista(parsed, assunto, chkIncompletas.checked);
+      const lista = prep.lista;
+      const total = lista.length;
+
+      bloquearUI(true);
+      barraContainer.style.display = 'block';
+      barra.style.width = '0%';
+      statusDiv.className = '';
+      statusDiv.textContent = 'Iniciando importação...';
+
+      let importadas = 0, jaExistentes = 0, erros = 0, processadas = 0;
+      const detalhesErro = [];
+      let falhaGeral = null;
+
+      const gravarUm = async (d) => {
+        await setDoc(doc(db, 'questoes', d.codigoOriginal), { ...d, criadoEm: new Date().toISOString() });
+      };
+
+      try {
+        for (let inicio = 0; inicio < total; inicio += TAMANHO_LOTE) {
+          const lote = lista.slice(inicio, inicio + TAMANHO_LOTE);
+
+          // 1) Verifica quais já existem (nunca sobrescreve)
+          const novos = [];
+          for (let k = 0; k < lote.length; k += CONSULTAS_PARALELAS) {
+            const grupo = lote.slice(k, k + CONSULTAS_PARALELAS);
+            const res = await Promise.all(grupo.map(async (d) => {
+              try {
+                const snap = await getDoc(doc(db, 'questoes', d.codigoOriginal));
+                return { d, existe: snap.exists() };
+              } catch (e) {
+                return { d, erro: e };
+              }
+            }));
+            for (const r of res) {
+              if (r.erro) { erros++; detalhesErro.push('Leitura de ' + r.d.codigoOriginal + ': ' + (r.erro.code || '') + ' ' + r.erro.message); }
+              else if (r.existe) jaExistentes++;
+              else novos.push(r.d);
+            }
+          }
+
+          // 2) Grava as novas em um único lote; se falhar, tenta uma a uma
+          if (novos.length) {
+            const batch = writeBatch(db);
+            const criadoEm = new Date().toISOString();
+            for (const d of novos) batch.set(doc(db, 'questoes', d.codigoOriginal), { ...d, criadoEm });
+            try {
+              await batch.commit();
+              importadas += novos.length;
+            } catch (errLote) {
+              for (const d of novos) {
+                try { await gravarUm(d); importadas++; }
+                catch (e2) { erros++; detalhesErro.push('Gravação de ' + d.codigoOriginal + ': ' + (e2.code || '') + ' ' + e2.message); }
+              }
+            }
+          }
+
+          processadas += lote.length;
+          barra.style.width = Math.round((processadas / total) * 100) + '%';
+          statusDiv.textContent =
+            'Processando... ' + processadas + '/' + total +
+            ' (importadas: ' + importadas + ', já existentes: ' + jaExistentes + ', erros: ' + erros + ')';
+        }
+      } catch (err) {
+        falhaGeral = err;
+      }
+
+      // ---------- Resumo final (somente após todas as operações terminarem) ----------
+      statusDiv.replaceChildren();
+      const concluiuTudo = !falhaGeral && processadas === total;
+      let titulo, classe;
+      if (falhaGeral) { titulo = 'Importação INTERROMPIDA: ' + (falhaGeral.code || '') + ' ' + falhaGeral.message; classe = 'erro'; }
+      else if (erros > 0) { titulo = 'Importação finalizada COM ERROS.'; classe = 'erro'; }
+      else if (total === 0) { titulo = 'Nada a importar.'; classe = 'aviso'; }
+      else { titulo = 'Importação concluída.'; classe = 'ok'; }
+      statusDiv.appendChild(el('div', classe, titulo));
+
+      const linhas = [
+        'Assunto atribuído às novas questões: ' + (assunto.trim() ? '"' + assunto.trim() + '"' : '(do arquivo, se houver)'),
+        'Blocos identificados no arquivo: ' + parsed.totalBlocos,
+        'Questões interpretadas: ' + parsed.questoes.length,
+        'Novas questões importadas: ' + importadas,
+        'Já existentes no Firestore (ignoradas, não alteradas): ' + jaExistentes,
+        'Repetidas no próprio arquivo (ignoradas): ' + prep.duplicadas.length,
+        'Com problemas de estrutura (não incluídas): ' + prep.incompletasExcluidas.length,
+        'Blocos rejeitados na análise: ' + parsed.rejeitadas.length,
+        'Erros: ' + erros
+      ];
+      if (!concluiuTudo && total > 0) linhas.push('Processadas até a interrupção: ' + processadas + '/' + total);
+      linhas.forEach(t => statusDiv.appendChild(el('div', null, t)));
+      if (detalhesErro.length) {
+        statusDiv.appendChild(el('div', 'erro', '\nDetalhes dos erros:\n' + detalhesErro.slice(0, 50).join('\n') +
+          (detalhesErro.length > 50 ? '\n... e mais ' + (detalhesErro.length - 50) + '.' : '')));
+        statusDiv.appendChild(el('div', 'erro', '\nVerifique as regras do Firestore e sua conexão. Reimportar é seguro: questões já gravadas serão ignoradas.'));
+      }
+
+      window.removeEventListener('beforeunload', avisoSaida);
+      importando = false;
+      bloquearUI(false);
+      btnImportar.disabled = prepararLista(parsed, assuntoInput.value, chkIncompletas.checked).lista.length === 0;
+    });
+
+    // ===== Teste do parser no console (não acessa o Firestore) =====
+    // Uso: _testarParser()
+    window._testarParser = () => {
+      const exemploDeepSeek = String.raw`[Q3946636]\()
+
+O tributo é uma obrigação pecuniária imposta por lei, sem natureza de sanção, enquanto o imposto é uma espécie tributária não vinculada, cuja cobrança independe de qualquer contraprestação direta ao contribuinte.\
+
+A) Certo
+B) Errado\
+
+[Q4345409]\()
+
+De acordo com o Código Tributário Brasileiro (CTN), o tributo\
+
+A) é constituído pela penalização da prática de ato ilícito.
+B) está sob a guarida do princípio da reserva legal.
+C) é cobrado por meio de atividade legislativa plenamente vinculada.
+D) é prestação pecuniária discricionária.
+E) pode ser pago por meio de atividades compensatórias, como, por exemplo, prestação de bens ou serviços in natura ou in Labore.`;
+
+      const exemploLegado = `[Q4363182](https://questoes.grancursosonline.com.br/questoes-de-concursos/direito-tributario-407143/4363182)
+
+QUESTÃO 1
+
+Direito Tributário
+Lançamento
+Ano:
+2026
+Banca:
+Fundação para o Vestibular da Universidade Estadual Paulista - VUNESP
+Prova:
+VUNESP - UNIFESP / UFSP - Contador - 2026
+
+Enunciado da primeira questão.
+
+A) Primeira alternativa.
+B) Segunda alternativa.
+
+------------------------------------------------------------
+
+[Q4734528](https://questoes.grancursosonline.com.br/x/4734528)
+
+QUESTÃO 2
+
+Direito Tributário
+Lançamento
+Ano:
+2026
+
+Enunciado da segunda questão.
+
+A) Alt A
+B) Alt B`;
+
+      const exemploRotulado = `[Q555](https://questoes.grancursosonline.com.br/q/555)
+Questão: 7
+Disciplina: Direito Tributário
+Assunto: Conceito de tributo
+Ano: 2025
+Banca: FGV
+Prova: Auditor Fiscal
+
+I) Primeiro item do enunciado.
+II) Segundo item do enunciado.
+Assinale a correta.
+
+A) Alt A
+B) Alt B
+C) Alt C`;
+
+      const testes = [];
+      const t = (nome, cond) => testes.push({ teste: nome, resultado: cond ? 'OK' : 'FALHOU' });
+
+      const r = parseTxt(exemploDeepSeek);
+      const [q1, q2] = r.questoes;
+      t('identifica 2 questões', r.questoes.length === 2 && r.rejeitadas.length === 0);
+      t('Q3946636 com A) Certo / B) Errado', q1 && q1.codigoOriginal === 'Q3946636' && q1.alternativas.join('|') === 'A) Certo|B) Errado');
+      t('Q4345409 com 5 alternativas', q2 && q2.codigoOriginal === 'Q4345409' && q2.alternativas.length === 5);
+      t('alternativa E preservada integralmente', q2 && q2.alternativas[4].endsWith('in natura ou in Labore.'));
+      t('sem barras invertidas finais', r.questoes.every(q => !/\\$/.test(q.enunciado) && q.alternativas.every(a => !/\\$/.test(a))));
+      t('questão sem URL aceita (urlOriginal = null)', q1 && q1.urlOriginal === null);
+      t('segunda questão não incorporada à primeira', q1 && !q1.enunciado.includes('Q4345409') && !q1.enunciado.includes('Código Tributário'));
+      t('gabarito nulo', r.questoes.every(q => q.gabarito === null));
+      t('enunciado da Q4345409 termina em "o tributo"', q2 && q2.enunciado === 'De acordo com o Código Tributário Brasileiro (CTN), o tributo');
+      t('sem problemas de estrutura', r.questoes.every(q => q.problemas.length === 0));
+      t('assunto padrão é "' + ASSUNTO_PADRAO + '"', assuntoInput.defaultValue === ASSUNTO_PADRAO && montarDocumento(q1, ASSUNTO_PADRAO).assunto === 'Conceito de Tributo');
+      t('assunto manual sobrescreve', montarDocumento(q1, 'Competência Tributária').assunto === 'Competência Tributária');
+
+      const rl = parseTxt(exemploLegado);
+      t('formato antigo: 2 questões', rl.questoes.length === 2);
+      t('formato antigo: metadados', rl.questoes[0] && rl.questoes[0].numeroQuestao === 1 && rl.questoes[0].disciplina === 'Direito Tributário' &&
+        rl.questoes[0].assunto === 'Lançamento' && rl.questoes[0].ano === 2026 && /VUNESP$/.test(rl.questoes[0].banca) && /Contador - 2026$/.test(rl.questoes[0].prova));
+      t('formato antigo: enunciado correto', rl.questoes[0] && rl.questoes[0].enunciado === 'Enunciado da primeira questão.');
+      t('formato antigo: assunto manual vazio mantém o do arquivo', rl.questoes[0] && montarDocumento(rl.questoes[0], '').assunto === 'Lançamento');
+
+      const rr = parseTxt(exemploRotulado);
+      const qr = rr.questoes[0];
+      t('formato rotulado: metadados', qr && qr.numeroQuestao === 7 && qr.disciplina === 'Direito Tributário' && qr.assunto === 'Conceito de tributo' && qr.ano === 2025 && qr.banca === 'FGV' && qr.prova === 'Auditor Fiscal');
+      t('numeração romana "I)" não vira alternativa', qr && qr.alternativas.length === 3 && qr.enunciado.startsWith('I) Primeiro item'));
+
+      console.table(testes);
+      const falhas = testes.filter(x => x.resultado !== 'OK').length;
+      console.log(falhas ? falhas + ' teste(s) FALHARAM' : 'Todos os testes do parser passaram (nenhuma gravação no Firestore).');
+      return { testes, falhas, deepseek: r, legado: rl, rotulado: rr };
+    };
+  </script>
+</body>
+</html>
