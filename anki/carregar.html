@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Carregar cartões — Flashcards</title>
+<link rel="stylesheet" href="css/style.css">
+<script type="importmap">
+{ "imports": {
+  "ts-fsrs": "https://cdn.jsdelivr.net/npm/ts-fsrs@5.4.1/dist/index.mjs",
+  "firebase/app": "https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js",
+  "firebase/firestore": "https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js"
+} }
+</script>
+</head>
+<body>
+<header class="top">
+  <h1>Carregar cartões</h1>
+  <nav><a href="index.html">← Disciplinas</a><a id="link-cards" href="anki.html">Ir para os cartões</a><a id="link-topics" href="assuntos.html">Assuntos</a></nav>
+</header>
+<main>
+  <div id="banner"></div>
+  <section class="panel">
+    <div class="row">
+      <label class="grow">Disciplina de destino
+        <select id="l-subject"></select>
+      </label>
+    </div>
+    <label style="margin-top:.75rem">Assunto padrão para as linhas sem assunto (opcional)
+      <input id="l-topic" list="dl-paths" maxlength="400" placeholder="Tributos > Impostos > Impostos em espécie" autocomplete="off">
+    </label>
+    <datalist id="dl-paths"></datalist>
+  </section>
+
+  <section class="panel">
+    <h2 style="margin-top:0">1. Cole o texto ou escolha um arquivo</h2>
+    <p class="muted">Uma linha por cartão, colunas: <b>frente ; verso ; assunto ; subtópico</b> (assunto e subtópico são opcionais). O <b>assunto pode ser um caminho</b> com níveis separados por <code>&gt;</code>, ex.: <code>Tributos &gt; Impostos &gt; Impostos em espécie</code>; o que não existir é criado automaticamente. O subtópico, se houver, vira um nível a mais. Aceita separador <code>;</code>, vírgula ou tabulação (colar direto de uma planilha). Use aspas <code>"…"</code> para textos com quebra de linha ou com o separador. Cabeçalho <code>frente;verso;assunto;subtopico</code> é opcional.</p>
+    <textarea id="l-text" style="min-height:11rem" placeholder='Qual o fato gerador do ITBI?;Transmissão inter vivos de bens imóveis.;Impostos municipais;ITBI&#10;"Defina tributo";"Art. 3º do CTN: prestação pecuniária compulsória…";Conceitos;'></textarea>
+    <div class="row" style="margin-top:.5rem">
+      <input id="l-file" type="file" accept=".csv,.txt,.tsv,text/csv,text/plain" class="grow">
+      <button id="l-sample" class="small">Inserir exemplo</button>
+      <button id="l-clear" class="small">Limpar</button>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2 style="margin-top:0">2. Prévia</h2>
+    <div class="row"><button id="l-check" class="primary">Validar e mostrar prévia</button></div>
+    <div id="l-preview" style="margin-top:.75rem"></div>
+  </section>
+
+  <section class="panel">
+    <h2 style="margin-top:0">3. Importar</h2>
+    <p class="muted">Só cartões novos são criados. Frentes iguais a cartões já existentes (ou repetidas no próprio texto) são ignoradas. Se qualquer linha for inválida, nada é gravado.</p>
+    <div class="row"><button id="l-go" class="primary" disabled>Importar cartões</button><span id="l-msg" class="muted"></span></div>
+  </section>
+</main>
+<script type="module" src="js/page-carregar.js"></script>
+</body>
+</html>

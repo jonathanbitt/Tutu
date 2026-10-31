@@ -1,0 +1,22 @@
+rules_version = '2';
+
+// =====================================================================
+// REGRAS TOTALMENTE ABERTAS — FASE DE DESENVOLVIMENTO (decisão do proprietário)
+// =====================================================================
+// Qualquer pessoa com o endereço do site pode ler, criar, alterar e excluir
+// TUDO em subjects/**. Sem validação e sem login. Endureça antes de usar
+// dados importantes (ver README, seção Segurança). Faça backups.
+// Diferente do "modo de teste" do console, estas regras NÃO expiram em 30 dias.
+// =====================================================================
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /subjects/{document=**} {
+      allow read, write: if true;
+    }
+    // Todo o resto do banco continua negado.
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

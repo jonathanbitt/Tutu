@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flashcards</title>
+<link rel="stylesheet" href="css/style.css">
+<script type="importmap">
+{ "imports": {
+  "ts-fsrs": "https://cdn.jsdelivr.net/npm/ts-fsrs@5.4.1/dist/index.mjs",
+  "firebase/app": "https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js",
+  "firebase/firestore": "https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js"
+} }
+</script>
+</head>
+<body>
+<header class="top">
+  <h1 id="title">Flashcards</h1>
+  <nav><a href="index.html">← Disciplinas</a><a id="link-topics" href="assuntos.html">Assuntos</a><a id="link-load" href="carregar.html">Carregar</a><a id="link-reports" href="relatorios.html">Relatórios</a></nav>
+</header>
+<main>
+  <div id="banner"></div>
+  <div id="migrate-box"></div>
+  <div class="tabs" role="tablist">
+    <button role="tab" id="tab-review" aria-selected="true">Revisar</button>
+    <button role="tab" id="tab-cards" aria-selected="false">Cartões</button>
+    <button role="tab" id="tab-backup" aria-selected="false">Backup</button>
+  </div>
+
+  <!-- REVISAR -->
+  <section id="view-review">
+    <div id="review-home">
+      <label style="margin-bottom:.75rem">Assunto da sessão <select id="r-topic"><option value="">Todos os assuntos</option></select></label>
+      <div id="home-stats" class="stats"></div>
+      <div class="row" style="margin-top:1rem">
+        <button id="btn-start" class="primary" disabled>Iniciar revisão</button>
+        <span id="home-msg" class="muted"></span>
+      </div>
+    </div>
+    <div id="review-session" hidden>
+      <div class="review-meta"><span id="sess-progress"></span><span id="sess-state"></span></div>
+      <div class="progress"><div id="sess-bar"></div></div>
+      <div id="flash" class="flash" aria-live="polite"></div>
+      <div class="answer-bar">
+        <button id="btn-show" class="show-answer primary">Mostrar resposta</button>
+        <div id="rate" class="rate" hidden></div>
+        <div class="row" style="margin-top:.5rem; justify-content:space-between"><button id="btn-end" class="small">Encerrar sessão</button><span id="sess-msg" class="muted"></span></div>
+      </div>
+    </div>
+    <div id="review-summary" hidden></div>
+  </section>
+
+  <!-- CARTÕES -->
+  <section id="view-cards" hidden>
+    <div class="row" style="margin-bottom:.75rem">
+      <input id="f-search" class="grow" type="search" placeholder="Pesquisar na frente ou no verso…">
+      <button id="btn-new" class="primary">+ Novo cartão</button>
+    </div>
+    <div class="row" style="margin-bottom:.75rem">
+      <select id="f-topic" class="grow"><option value="">Todos os assuntos</option></select>
+      <select id="f-status" class="grow">
+        <option value="">Todos</option><option value="new">Novos</option><option value="learning">Em aprendizagem</option>
+        <option value="review">Em revisão</option><option value="suspended">Suspensos</option><option value="history">Com histórico</option>
+      </select>
+    </div>
+    <p id="cards-count" class="muted"></p>
+    <div id="cards-list"></div>
+  </section>
+
+  <!-- BACKUP -->
+  <section id="view-backup" hidden>
+    <div class="panel">
+      <h2 style="margin-top:0">Exportar</h2>
+      <p class="muted"><b>Cartões</b>: conteúdo + agendamento, sem histórico. <b>Backup completo</b>: cartões + todo o histórico de revisões (use este para segurança).</p>
+      <div class="row">
+        <button id="exp-full" class="primary">Backup completo (JSON)</button>
+        <button id="exp-cards">Só cartões (JSON)</button>
+        <button id="exp-csv">Só cartões (CSV)</button>
+      </div>
+    </div>
+    <div class="panel">
+      <h2 style="margin-top:0">Importar</h2>
+      <p class="muted">JSON (backup deste sistema, inclusive os antigos) ou CSV (colunas: frente;verso;assunto;subtopico — o assunto pode ser um caminho “A &gt; B &gt; C”; cria cartões e assuntos novos). Nada é gravado antes de você confirmar a prévia; cartões existentes nunca são sobrescritos sem escolha explícita.</p>
+      <input id="imp-file" type="file" accept=".json,.csv,application/json,text/csv">
+      <div id="imp-preview" style="margin-top:.75rem"></div>
+    </div>
+    <div class="panel"><h2 style="margin-top:0">Preferências (neste aparelho)</h2><div class="row" id="prefs"></div></div>
+  </section>
+</main>
+
+<dialog id="dlg-card">
+  <form method="dialog" id="card-form">
+    <h2 id="dlg-title" style="margin:0">Novo cartão</h2>
+    <label>Frente <textarea id="c-front" required maxlength="20000"></textarea></label>
+    <label>Verso <textarea id="c-back" required maxlength="20000"></textarea></label>
+    <label>Assunto <select id="c-topic"></select></label>
+    <label>Ou crie um novo caminho (opcional) <input id="c-newpath" maxlength="400" placeholder="Tributos > Impostos > Impostos em espécie" autocomplete="off"></label>
+    <p class="muted" style="margin:0">Separe os níveis com “&gt;”. Se preencher, o caminho é criado (ou reaproveitado) e vale no lugar da lista. Para organizar a estrutura toda, use a página <a id="dlg-topics-link" href="assuntos.html">Assuntos</a>.</p>
+    <label class="inline" id="reset-wrap" hidden><input type="checkbox" id="c-reset"> Reiniciar agendamento (o histórico é mantido)</label>
+    <p class="muted">Formatação: **negrito**, *itálico*, `código`. Quebras de linha são preservadas. HTML não é interpretado.</p>
+    <div id="dlg-error" class="banner error" hidden></div>
+    <div class="row" style="justify-content:flex-end">
+      <button type="button" id="dlg-cancel">Cancelar</button>
+      <button type="submit" id="dlg-save" class="primary">Salvar</button>
+    </div>
+  </form>
+</dialog>
+<script type="module" src="js/page-anki.js"></script>
+</body>
+</html>

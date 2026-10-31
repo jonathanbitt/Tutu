@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Assuntos — Flashcards</title>
+<link rel="stylesheet" href="css/style.css">
+<script type="importmap">
+{ "imports": {
+  "ts-fsrs": "https://cdn.jsdelivr.net/npm/ts-fsrs@5.4.1/dist/index.mjs",
+  "firebase/app": "https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js",
+  "firebase/firestore": "https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js"
+} }
+</script>
+</head>
+<body>
+<header class="top">
+  <h1>Assuntos</h1>
+  <nav><a href="index.html">← Disciplinas</a><a id="link-cards" href="anki.html">Cartões</a><a id="link-load" href="carregar.html">Carregar</a><a href="limpar.html">Limpar dados</a></nav>
+</header>
+<main>
+  <div id="banner"></div>
+  <section class="panel">
+    <label>Disciplina <select id="a-subject"></select></label>
+    <p class="muted">Organize os assuntos em níveis (ex.: Tributos › Impostos › Impostos em espécie). Cada cartão fica em um assunto; estudar um assunto inclui todos os subassuntos dele.</p>
+  </section>
+
+  <div id="migrate-box"></div>
+
+  <div id="a-body" hidden>
+    <section class="panel">
+      <h2 style="margin-top:0">Criar vários de uma vez</h2>
+      <p class="muted">Digite um assunto por linha; use recuo (espaços ou Tab) para criar subassuntos. O que já existe é reaproveitado.</p>
+      <textarea id="o-text" style="min-height:9rem; font-family: ui-monospace, Menlo, Consolas, monospace" placeholder="Tributos&#10;  Impostos&#10;    Impostos em espécie&#10;  Taxas&#10;Princípios"></textarea>
+      <div class="row" style="margin-top:.5rem"><button id="o-go" class="primary">Criar estrutura</button><button id="o-clear" class="small">Limpar</button><span id="o-msg" class="muted"></span></div>
+    </section>
+
+    <section class="panel">
+      <div class="row" style="justify-content:space-between; margin-bottom:.5rem">
+        <h2 style="margin:0">Estrutura</h2>
+        <div class="row"><button id="t-add-root" class="small primary">+ Assunto principal</button><button id="t-expand" class="small">Expandir tudo</button><button id="t-collapse" class="small">Recolher tudo</button></div>
+      </div>
+      <div id="tree"><div class="empty"><span class="spinner"></span> Carregando…</div></div>
+    </section>
+
+    <section class="panel" id="cards-panel" hidden>
+      <h2 style="margin-top:0" id="cp-title">Cartões</h2>
+      <div class="row" style="margin-bottom:.5rem">
+        <label class="inline"><input type="checkbox" id="cp-sub" checked> Incluir subassuntos</label>
+        <button id="cp-all" class="small">Selecionar todos</button>
+        <button id="cp-none" class="small">Limpar seleção</button>
+        <a id="cp-study" class="btn small" href="anki.html">Estudar este assunto</a>
+      </div>
+      <div id="cp-list"></div>
+      <div class="sel-bar">
+        <span id="cp-count" class="muted"></span>
+        <label class="inline" style="flex:1 1 14rem">Mover para <select id="cp-dest"></select></label>
+        <button id="cp-move" class="primary" disabled>Mover selecionados</button>
+      </div>
+    </section>
+  </div>
+</main>
+
+<dialog id="dlg-move">
+  <form method="dialog" id="move-form">
+    <h2 style="margin:0" id="mv-title">Mover assunto</h2>
+    <label>Novo local <select id="mv-dest"></select></label>
+    <div id="mv-error" class="banner error" hidden></div>
+    <div class="row" style="justify-content:flex-end"><button type="button" id="mv-cancel">Cancelar</button><button type="submit" id="mv-ok" class="primary">Mover</button></div>
+  </form>
+</dialog>
+<script type="module" src="js/page-assuntos.js"></script>
+</body>
+</html>

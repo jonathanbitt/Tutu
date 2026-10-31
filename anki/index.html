@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flashcards — Disciplinas</title>
+<link rel="stylesheet" href="css/style.css">
+<script type="importmap">
+{ "imports": {
+  "ts-fsrs": "https://cdn.jsdelivr.net/npm/ts-fsrs@5.4.1/dist/index.mjs",
+  "firebase/app": "https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js",
+  "firebase/firestore": "https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js"
+} }
+</script>
+</head>
+<body>
+<header class="top">
+  <h1>Flashcards</h1>
+  <nav><a href="carregar.html">Carregar cartões</a><a href="assuntos.html">Assuntos</a><a href="relatorios.html">Relatórios</a><a href="limpar.html">Limpar dados</a></nav>
+</header>
+<main>
+  <div id="banner"></div>
+  <section class="panel">
+    <label>Escolha a disciplina
+      <select id="subject-select"><option value="">Selecione…</option></select>
+    </label>
+    <p class="muted">Ao escolher, a página de cartões da disciplina é aberta.</p>
+  </section>
+  <h2>Resumo geral</h2>
+  <div id="summary" class="subject-grid"><div class="empty"><span class="spinner"></span> Carregando…</div></div>
+  <h2>Preferências (neste aparelho)</h2>
+  <div class="panel row" id="prefs"></div>
+</main>
+<script type="module" src="js/page-index.js"></script>
+</body>
+</html>

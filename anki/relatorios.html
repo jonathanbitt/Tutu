@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Relatórios — Flashcards</title>
+<link rel="stylesheet" href="css/style.css">
+<script type="importmap">
+{ "imports": {
+  "ts-fsrs": "https://cdn.jsdelivr.net/npm/ts-fsrs@5.4.1/dist/index.mjs",
+  "firebase/app": "https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js",
+  "firebase/firestore": "https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js"
+} }
+</script>
+</head>
+<body>
+<header class="top">
+  <h1>Relatórios</h1>
+  <nav><a href="index.html">← Disciplinas</a></nav>
+</header>
+<main>
+  <div id="banner"></div>
+  <section class="panel">
+    <div class="row">
+      <label class="grow">Disciplina <select id="r-subject"></select></label>
+      <label class="grow">De <input type="date" id="r-from"></label>
+      <label class="grow">Até <input type="date" id="r-to"></label>
+      <button id="r-go" class="primary">Atualizar</button>
+    </div>
+    <p class="muted" id="r-note"></p>
+  </section>
+
+  <div id="r-loading" class="empty" hidden><span class="spinner"></span> Calculando…</div>
+  <div id="r-body" hidden>
+    <h2>Por disciplina — situação atual dos cartões</h2>
+    <div class="panel table-wrap"><table id="t-cards"></table></div>
+    <h2>Por disciplina — revisões no período</h2>
+    <div class="panel table-wrap"><table id="t-period"></table></div>
+    <h2>Evolução</h2>
+    <div class="row" style="margin-bottom:.5rem">
+      <label class="inline">Agrupar por <select id="r-gran" style="width:auto"><option value="day">Dia</option><option value="week">Semana</option><option value="month">Mês</option></select></label>
+    </div>
+    <div class="panel table-wrap"><table id="t-series"></table></div>
+    <h2>Definições</h2>
+    <div class="panel muted">
+      <p><b>Acerto</b>: avaliação Difícil, Bom ou Fácil. <b>Erro</b>: De novo. “Difícil” não é erro.</p>
+      <p><b>Taxa de acerto</b>: acertos ÷ todas as avaliações do período. <b>Retenção</b>: acertos ÷ avaliações de cartões que já estavam no estado Revisão (exclui novos e em aprendizagem).</p>
+      <p><b>Dia</b>: dia local do seu aparelho (fuso do navegador). <b>Tempo</b>: soma só das avaliações com tempo confiável (aba sempre visível, até 10 min por cartão).</p>
+      <p><b>Vencidos</b>: data de revisão anterior ao início de hoje. <b>Previstos hoje</b>: até o fim de hoje. <b>Pendentes agora</b>: data ≤ agora.</p>
+    </div>
+  </div>
+</main>
+<script type="module" src="js/page-relatorios.js"></script>
+</body>
+</html>

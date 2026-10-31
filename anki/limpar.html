@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Limpar dados — Flashcards</title>
+<link rel="stylesheet" href="css/style.css">
+<script type="importmap">
+{ "imports": {
+  "ts-fsrs": "https://cdn.jsdelivr.net/npm/ts-fsrs@5.4.1/dist/index.mjs",
+  "firebase/app": "https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js",
+  "firebase/firestore": "https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js"
+} }
+</script>
+</head>
+<body>
+<header class="top">
+  <h1>Limpar dados</h1>
+  <nav><a href="index.html">← Disciplinas</a><a href="assuntos.html">Assuntos</a><a href="carregar.html">Carregar</a></nav>
+</header>
+<main>
+  <div id="banner"></div>
+  <div class="banner warn">
+    <b>Atenção: apagar é definitivo.</b> Não existe lixeira nem desfazer. Por isso a página exige baixar um backup completo antes. Se você só quer reorganizar, não precisa apagar: em <a href="assuntos.html">Assuntos</a> dá para criar, renomear, mover assuntos e mover cartões em lote, mantendo o histórico.
+  </div>
+
+  <section class="panel">
+    <h2 style="margin-top:0">1. O que apagar</h2>
+    <div class="row" style="margin-bottom:.5rem">
+      <label class="inline"><input type="radio" name="scope" value="one" checked> Uma disciplina:</label>
+      <select id="x-subject" style="width:auto"></select>
+    </div>
+    <label class="inline" style="margin-bottom:.75rem"><input type="radio" name="scope" value="all"> <b>TODAS</b> as disciplinas</label>
+    <div style="display:grid; gap:.4rem">
+      <label class="inline"><input type="checkbox" id="x-cards" checked> Cartões (inclui o agendamento FSRS)</label>
+      <label class="inline"><input type="checkbox" id="x-events" checked> Histórico de revisões (estatísticas e relatórios)</label>
+      <label class="inline"><input type="checkbox" id="x-topics" checked> Assuntos e subassuntos</label>
+    </div>
+    <p class="muted" id="x-note"></p>
+    <div id="x-counts" style="margin-top:.5rem"></div>
+  </section>
+
+  <section class="panel">
+    <h2 style="margin-top:0">2. Baixar o backup completo</h2>
+    <p class="muted">Gera um arquivo JSON por disciplina que tenha dados (cartões, agendamento, histórico e assuntos). Dá para restaurar depois em <a href="anki.html">Backup → Importar</a>. Confira se o navegador salvou todos os arquivos.</p>
+    <div class="row"><button id="x-backup" class="primary">Baixar backup</button><span id="x-backup-msg" class="muted"></span></div>
+  </section>
+
+  <section class="panel danger-zone">
+    <h2 style="margin-top:0">3. Apagar</h2>
+    <label class="inline" style="margin-bottom:.5rem"><input type="checkbox" id="x-saved"> Conferi que o(s) arquivo(s) de backup foram salvos no meu computador.</label>
+    <label>Digite <b>APAGAR</b> para confirmar <input id="x-phrase" autocomplete="off" placeholder="APAGAR"></label>
+    <div class="row" style="margin-top:.75rem"><button id="x-go" class="danger-fill" disabled>Apagar definitivamente</button></div>
+    <div id="x-progress" class="muted" style="margin-top:.75rem" aria-live="polite"></div>
+  </section>
+</main>
+<script type="module" src="js/page-limpar.js"></script>
+</body>
+</html>
